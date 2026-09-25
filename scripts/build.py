@@ -294,6 +294,9 @@ for u in D['universities']:
     extra='<div class="facts-grid">'+''.join(f'<div class="fact-tile"><small>{k}</small><strong>{v}</strong></div>' for k,v in [('과정',E(value(p['duration_label']))),('캠퍼스',E(value(u['campus']))),('입학시기',E(value(it['label']))),('유학생 모집',E(value(p['international_recruitment']))),('연간 학비',E(money(t['annual']))),('자료 업데이트',DATE)])+'</div>'
     body=pagehero(E(u['name_ko'])+' 약대',E(u['name'])+' · '+E(value(p['name'])),u['name_ko'],extra)
     intro='<p>'+E(p['editorial'])+'</p><div class="chips">'+''.join(f'<span class="chip">{E(h)}</span>' for h in p['highlights'])+'</div>'
+    lens=p.get('decision_lens') or {}
+    if lens:
+        intro+='<div class="decision-lens"><div><span>이 학교의 차이</span><ul>'+''.join('<li>'+E(x)+'</li>' for x in lens.get('why',[]))+'</ul></div><div class="watch"><span>지원 전 체크</span><ul>'+''.join('<li>'+E(x)+'</li>' for x in lens.get('watch',[]))+'</ul></div></div>'
     if p['review_items']:intro+=callout('<strong>2027 업데이트 대기</strong><ul>'+''.join('<li>'+E(x)+'</li>' for x in p['review_items'])+'</ul>',True)
     anatomy=structure(pid)
     if len(pp)>1:
