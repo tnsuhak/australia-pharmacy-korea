@@ -31,7 +31,6 @@
 | rmit-english | [RMIT · Minimum English language requirements](https://www.rmit.edu.au/study-with-us/applying-to-rmit/local-student-applications/entry-requirements/minimum-english-language-requirement) | 페이지별 확인 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
 | sydney-structure | [Sydney Pharmacy · Course resolutions](https://www.sydney.edu.au/handbooks/medicine-health/coursework/pharmacy/course-resolutions.html) | 페이지별 확인 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
 | sydney-guide | [Sydney international guide](https://www.sydney.edu.au/dam/corporate/documents/study/guides/usyd-international-guide.pdf) | 2027 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
-| griffith-korea | [Griffith · UniCentre South Korea articulation 107341](https://credit-precedent.sds.na.ce.griffith.edu.au/credit_detail.php?pk1=107341) | 2027 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
 | griffith-college | [Griffith · College articulation 107343](https://credit-precedent.sds.na.ce.griffith.edu.au/credit_detail.php?pk1=107343) | 2027 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
 | curtin-college | [Curtin College · Pharmacy Diploma](https://www.curtincollege.edu.au/courses/diplomas/health-sciences/pharmacy/) | 페이지별 확인 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
 | curtin-old | [Curtin College · 旧 course information](https://sites.google.com/a/study.curtincollege.edu.au/courseinformation/Courses/testdhsi/pharmacy) | 페이지별 확인 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
@@ -67,7 +66,6 @@
 | 호주 약대 입학조건 / 수능 / IB / SAT | /admission-requirements/ | 2027 자료가 적은 수능 단독 thin page 보류 |
 | 호주 3년 약대 | /3-year-pharmacy/ | 압축 학위와 졸업 후 인턴십 구분 |
 | 호주 약대 파운데이션 | /foundation/ | 입학과 본과 진급 조건 분리 |
-| 호주 약대 디플로마 / 한국에서 Griffith 약대 | /diploma/, /diploma/griffith-korea/ | 입학경로와 협약 차이 중심 |
 | 호주 약대 학비 / 장학금 | /tuition-scholarships/ | 수강량·장학 자격·숙소 계약 분리 |
 | 호주 약사 / 한국 약사면허 | /pharmacist-registration/, /korea-pharmacist/ | 서로 다른 국가의 등록 절차 |
 | 대학명 + 약대 | /universities/{university}-pharmacy/ | 대학별 과정과 경로 통합 |
