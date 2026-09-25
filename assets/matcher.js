@@ -6,22 +6,22 @@
   function classify(p,f){
     const unknown=[],matches=[],misses=[];
     const check=(v,test,label)=>{if(v===null)unknown.push(label+' 정보 대기');else if(test(v))matches.push(label);else misses.push(label);};
-    if(read(p.international_recruitment)!==true)unknown.push('2027 모집 발표 대기');
+    if(read(p.international_recruitment)!==true)unknown.push('2027 모집 확인 중');
     if(p.accreditation.status==='pending_2027')unknown.push('APC·Board 승인 대기');
     const routeType=f.qualification==='graduate'?'graduate':f.route||'';
     const routes=p.entry_routes.filter(r=>!routeType||r.type===routeType);
     if(routeType&&routes.length===0)misses.push('선택한 입학방법 없음');
     if(routeType&&routes.length){
-      if(!routes.some(r=>read(r.availability)===true))unknown.push('진학조건 발표 대기');
+      if(!routes.some(r=>read(r.availability)===true))unknown.push('진학조건 확인 중');
       else matches.push(routeType==='graduate'?'Graduate Entry 가능':'선택한 입학방법 가능');
     }
     const pathway=routeType&&routeType!=='direct';
     if(f.qualification&&f.qualification!=='graduate'){
-      if(pathway)unknown.push('준비과정 학력조건 발표 대기');
+      if(pathway)unknown.push('준비과정 학력조건 확인 중');
       else{
         const q=p.qualifications.find(q=>q.qualification===f.qualification);const qv=q?read(q.score):null;
         if(qv===false)misses.push('해당 학력의 Direct 평가 불가');
-        else if(qv===null)unknown.push('약대 성적기준 발표 대기');
+        else if(qv===null)unknown.push('약대 성적기준 확인 중');
         else if(q.score.source_year&&q.score.source_year<2027)unknown.push('성적표 '+q.score.source_year+' 참고 · 2027 재확인');
         else if(f.score!==''&&f.score!==undefined){
           if(!Number.isFinite(Number(f.score))||Number(f.score)<0)unknown.push('유효한 성적 입력 필요');
@@ -31,7 +31,7 @@
     }
     if(f.qualification==='graduate'&&routes.length)unknown.push('관련 전공·대학 과목·성적 심사 필요');
     if(f.chemistry==='no'){
-      if(pathway)unknown.push('준비과정 화학·진급조건 발표 대기');
+      if(pathway)unknown.push('준비과정 화학·진급조건 확인 중');
       else check(read(p.requirements.chemistry),v=>['recommended','not_required','assumed'].includes(v),'화학 필수 아님');
     }
     if(f.chemistry==='yes')matches.push('화학 이수 · 과목 동등성 별도');
@@ -40,7 +40,7 @@
       if(pathway){
         const starts=routes.map(r=>read(r.intake_months));
         if(starts.some(x=>Array.isArray(x)&&x.includes(Number(f.intake))))matches.push('선택한 입학월 가능');
-        else if(starts.some(x=>x===null))unknown.push('시작월 발표 대기');
+        else if(starts.some(x=>x===null))unknown.push('시작월 확인 중');
         else misses.push('선택한 입학월 가능');
       }else check(read(p.intakes.months),v=>v.includes(Number(f.intake)),'본과 시작월');
     }
