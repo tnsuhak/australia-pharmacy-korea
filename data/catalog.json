@@ -2373,23 +2373,23 @@
       },
       "highlights": [
         "4년 Bachelor + PharmD",
-        "고교 졸업 후 진학",
-        "졸업 후 Internship"
+        "ATAR 85 · CBM WAM 65 assurance",
+        "2027 Global Excellence 10~20%"
       ],
-      "editorial": "고교 졸업 후 4년 동안 Bachelor + Doctor of Pharmacy를 함께 취득합니다. 졸업 후 인턴십은 따로 합니다.",
+      "editorial": "고교 졸업 후 4년 동안 Bachelor of Human Sciences (Pharmaceutical Health) + Doctor of Pharmacy를 함께 이수하는 combined degree입니다. 공식 과정 페이지는 ATAR 85 입학과 combined degree 내 65% WAM assurance를 명시하며, 졸업 후에는 별도 internship과 Pharmacy Board 시험이 필요합니다.",
       "review_items": [
-        "2027 국제학생 학비",
-        "Foundation·브리징 경로 세부조건"
+        "2027 국제학생 학비"
       ],
       "decision_lens": {
         "why": [
           "고교 졸업 후 4년 Bachelor + PharmD",
-          "UWA College Foundation → 약대 1학년",
-          "Perth 지역요건 충족 시 두 번째 485 +1년"
+          "ATAR 85 equivalent · CSAT 329 · IB 30 · SAT 1220",
+          "2027 Global Excellence: ATAR 85~89.95=10%, 90+=20% 자동심사"
         ],
         "watch": [
-          "졸업 후 인턴십은 별도",
-          "2027 국제학생 학비·Global Excellence 세부표 업데이트 대기"
+          "Combined degree 내 Doctor of Pharmacy progression assurance는 WAM 65%",
+          "졸업 후 internship + Pharmacy Board 시험 별도",
+          "2027 국제학생 학비는 아직 공식 fee table 미확인"
         ]
       }
     }
@@ -5196,15 +5196,15 @@
         "note": ""
       },
       "progression": {
-        "value": null,
+        "value": "Combined degree 내 Doctor of Pharmacy assurance: WAM 65%",
         "academic_year": 2027,
         "source_year": null,
         "source_id": "uwa",
         "source_url": "https://www.uwa.edu.au/study/courses/bachelor-of-human-sciences-pharmaceutical-health-and-doctor-of-pharmacy",
         "source_type": "official_course",
         "verified_date": "2026-09-25",
-        "status": "pending_2027",
-        "note": ""
+        "status": "latest_published",
+        "note": "UWA course page states an 85 ATAR entry and 65% WAM assurance in this combined degree."
       },
       "english": {
         "value": "IELTS 7.0 · 각 영역 7.0",
@@ -5218,7 +5218,7 @@
         "note": ""
       },
       "qualification": {
-        "value": "CSAT 329 · IB 30 · A-level 10 · SAT 1220 등",
+        "value": "ATAR 85 equivalent · CSAT 329 · IB 30 · A-level 10 · SAT 1220 · UWAC Foundation 70",
         "academic_year": 2027,
         "source_year": null,
         "source_id": "uwa",
@@ -5228,7 +5228,7 @@
         "status": "latest_published",
         "note": ""
       },
-      "note": "고교 졸업 후 4년 Bachelor + PharmD로 시작합니다. 화학·수학이 부족한 학생은 bridging/foundation 과목 대상입니다.",
+      "note": "고교 졸업 후 4년 combined degree로 시작합니다. Doctor of Pharmacy progression assurance는 WAM 65% 조건이며 졸업 후 internship과 Pharmacy Board 시험이 별도입니다.",
       "intake_months": {
         "value": [
           2
@@ -5336,7 +5336,7 @@
         "status": "pending_2027",
         "note": ""
       },
-      "note": "Foundation 수료 후 UWA 약대 1학년으로 진학합니다. UWA 약대 공식 페이지에 UWA College Foundation 70이 입학점수로 공개돼 있습니다.",
+      "note": "Foundation 수료 후 UWA 약대 1학년으로 진학합니다. UWA 약대 공식 페이지에 UWAC Foundation 70이 입학점수로 공개돼 있습니다. Combined degree 내 Doctor of Pharmacy progression은 65% WAM assurance 조건을 별도로 확인해야 합니다.",
       "intake_months": {
         "value": null,
         "academic_year": 2027,
@@ -13433,18 +13433,21 @@
       "university_id": "uwa",
       "name": "UWA Global Excellence Scholarship",
       "amount": {
-        "value": 20,
+        "value": [
+          10,
+          20
+        ],
         "academic_year": 2027,
         "source_year": 2027,
         "source_id": "uwa-scholarship-current",
         "source_url": "https://www.uwa.edu.au/study/scholarships-and-fees/scholarships/international-scholarships/global-excellence-scholarship",
         "source_type": "official_scholarship",
         "verified_date": "2026-09-25",
-        "status": "pending_2027",
+        "status": "confirmed_2027",
         "note": ""
       },
       "award_type": "percentage",
-      "assessment": "pending",
+      "assessment": "automatic",
       "automatic_assessment": {
         "value": true,
         "academic_year": 2027,
@@ -13501,7 +13504,7 @@
         "note": ""
       },
       "academic_threshold": {
-        "value": "2027 세부 점수표 업데이트 대기",
+        "value": "2027: equivalent ATAR 85~89.95 = 10% · ATAR 90+ = 20%",
         "academic_year": 2027,
         "source_year": 2027,
         "source_id": "uwa-scholarship-current",
@@ -13512,7 +13515,7 @@
         "note": ""
       },
       "renewal_condition": {
-        "value": "장학 약관의 continuation 기준",
+        "value": "장학 약관 continuation 기준",
         "academic_year": 2027,
         "source_year": 2027,
         "source_id": "uwa-scholarship-current",
@@ -13534,14 +13537,14 @@
         "note": ""
       },
       "course_exclusion": {
-        "value": null,
+        "value": "Assured Pathway to Medicine/Dental Medicine 제외 · combined bachelor degrees eligible",
         "academic_year": 2027,
         "source_year": 2027,
         "source_id": "uwa-scholarship-current",
         "source_url": "https://www.uwa.edu.au/study/scholarships-and-fees/scholarships/international-scholarships/global-excellence-scholarship",
         "source_type": "official_scholarship",
         "verified_date": "2026-09-25",
-        "status": "pending_2027",
+        "status": "confirmed_2027",
         "note": ""
       },
       "pharmacy_eligible": {
@@ -13555,7 +13558,7 @@
         "status": "confirmed_2027",
         "note": ""
       },
-      "note": "현재 UWA 2027 안내는 최대 20% tuition discount로 표시됩니다. 상세 2027 점수구간 표가 완전히 반영되면 확정값으로 전환합니다."
+      "note": "2027 공식 장학 페이지 기준. 모든 국가 대상이며 eligible combined bachelor degree도 포함됩니다. 별도 장학 신청 없이 final transcript 기준 자동 심사됩니다."
     },
     {
       "id": "latrobe-health-innovation-30",
