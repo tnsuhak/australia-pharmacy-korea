@@ -1417,7 +1417,6 @@
       ],
       "editorial": "영어조건 자료가 서로 달라 2027 기준 발표를 기다리고 있습니다.",
       "review_items": [
-        "Pharmacy 영어조건 자료 충돌",
         "2027 CSAT·SAT·IB course-specific 값",
         "APC 인증 갱신: 현재 목록 종료일 2026-12-31"
       ]
@@ -8287,26 +8286,26 @@
     {
       "program_id": "newcastle-bpharm-hons",
       "chemistry": {
-        "value": null,
+        "value": "assumed",
         "academic_year": 2027,
-        "source_year": null,
-        "source_id": "newcastle",
-        "source_url": "https://www.newcastle.edu.au/degrees/bachelor-of-pharmacy-honours",
-        "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
+        "source_year": 2026,
+        "source_id": "newcastle-2026-ug",
+        "source_url": "https://www.newcastle.edu.au/__data/assets/pdf_file/0012/978438/2026-1088_UG-Prospectus_v3.6_WEB.pdf",
+        "source_type": "official_guide",
+        "verified_date": "2026-09-25",
+        "status": "latest_published",
         "note": ""
       },
       "mathematics": {
-        "value": null,
+        "value": "assumed",
         "academic_year": 2027,
-        "source_year": null,
-        "source_id": "newcastle",
-        "source_url": "https://www.newcastle.edu.au/degrees/bachelor-of-pharmacy-honours",
-        "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
-        "note": ""
+        "source_year": 2026,
+        "source_id": "newcastle-2026-ug",
+        "source_url": "https://www.newcastle.edu.au/__data/assets/pdf_file/0012/978438/2026-1088_UG-Prospectus_v3.6_WEB.pdf",
+        "source_type": "official_guide",
+        "verified_date": "2026-09-25",
+        "status": "latest_published",
+        "note": "Mathematics Extension 1/2 또는 Mathematics Band 5/6"
       },
       "biology": {
         "value": null,
@@ -8320,26 +8319,26 @@
         "note": ""
       },
       "physics": {
-        "value": null,
+        "value": "assumed",
         "academic_year": 2027,
-        "source_year": null,
-        "source_id": "newcastle",
-        "source_url": "https://www.newcastle.edu.au/degrees/bachelor-of-pharmacy-honours",
-        "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
+        "source_year": 2026,
+        "source_id": "newcastle-2026-ug",
+        "source_url": "https://www.newcastle.edu.au/__data/assets/pdf_file/0012/978438/2026-1088_UG-Prospectus_v3.6_WEB.pdf",
+        "source_type": "official_guide",
+        "verified_date": "2026-09-25",
+        "status": "latest_published",
         "note": ""
       },
       "minimum_grade": {
-        "value": null,
+        "value": "Assumed knowledge: Mathematics, English Advanced, Chemistry, Physics",
         "academic_year": 2027,
-        "source_year": null,
-        "source_id": "newcastle",
-        "source_url": "https://www.newcastle.edu.au/degrees/bachelor-of-pharmacy-honours",
-        "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
-        "note": ""
+        "source_year": 2026,
+        "source_id": "newcastle-2026-ug",
+        "source_url": "https://www.newcastle.edu.au/__data/assets/pdf_file/0012/978438/2026-1088_UG-Prospectus_v3.6_WEB.pdf",
+        "source_type": "official_guide",
+        "verified_date": "2026-09-25",
+        "status": "latest_published",
+        "note": "입학 필수 prerequisite가 아니라 수업 준비를 위한 assumed knowledge입니다."
       }
     },
     {
@@ -8577,25 +8576,25 @@
     {
       "program_id": "unsw-bpharm-hons",
       "chemistry": {
-        "value": null,
+        "value": "assumed",
         "academic_year": 2027,
         "source_year": null,
         "source_id": "unsw",
         "source_url": "https://www.unsw.edu.au/study/undergraduate/bachelor-of-pharmaceutical-medicine-master-of-pharmacy",
         "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
+        "verified_date": "2026-09-25",
+        "status": "latest_published",
         "note": ""
       },
       "mathematics": {
-        "value": null,
+        "value": "assumed",
         "academic_year": 2027,
         "source_year": null,
         "source_id": "unsw",
         "source_url": "https://www.unsw.edu.au/study/undergraduate/bachelor-of-pharmaceutical-medicine-master-of-pharmacy",
         "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
+        "verified_date": "2026-09-25",
+        "status": "latest_published",
         "note": ""
       },
       "biology": {
@@ -8621,15 +8620,15 @@
         "note": ""
       },
       "minimum_grade": {
-        "value": null,
+        "value": "Assumed knowledge: Chemistry, Mathematics Advanced",
         "academic_year": 2027,
         "source_year": null,
         "source_id": "unsw",
         "source_url": "https://www.unsw.edu.au/study/undergraduate/bachelor-of-pharmaceutical-medicine-master-of-pharmacy",
         "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
-        "note": ""
+        "verified_date": "2026-09-25",
+        "status": "latest_published",
+        "note": "선수과목 미이수를 자동 불합격으로 처리하지 않습니다."
       }
     },
     {
@@ -8753,47 +8752,52 @@
     {
       "program_id": "jcu-bpharm-hons",
       "ielts_overall": {
-        "value": null,
+        "value": 7,
         "academic_year": 2027,
-        "source_year": null,
-        "source_id": "jcu",
-        "source_url": "https://www.jcu.edu.au/courses/bachelor-of-pharmacy-honours",
-        "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
+        "source_year": 2027,
+        "source_id": "jcu-guide",
+        "source_url": "https://www.jcu.edu.au/__data/assets/pdf_file/0010/2316889/2027-Undergraduate-Guide.pdf",
+        "source_type": "official_guide",
+        "verified_date": "2026-09-25",
+        "status": "confirmed_2027",
         "note": ""
       },
       "ielts_bands": {
-        "value": null,
+        "value": {
+          "L": 6.5,
+          "R": 6.5,
+          "W": 6.5,
+          "S": 6.5
+        },
         "academic_year": 2027,
-        "source_year": null,
-        "source_id": "jcu",
-        "source_url": "https://www.jcu.edu.au/courses/bachelor-of-pharmacy-honours",
-        "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
-        "note": ""
+        "source_year": 2027,
+        "source_id": "jcu-guide",
+        "source_url": "https://www.jcu.edu.au/__data/assets/pdf_file/0010/2316889/2027-Undergraduate-Guide.pdf",
+        "source_type": "official_guide",
+        "verified_date": "2026-09-25",
+        "status": "confirmed_2027",
+        "note": "2027 Pharmacy requires JCU Band 3a. Current JCU Schedule II maps Band 3a to IELTS 7.0 overall with no component below 6.5."
       },
       "pte_overall": {
-        "value": null,
+        "value": 65,
         "academic_year": 2027,
-        "source_year": null,
-        "source_id": "jcu",
-        "source_url": "https://www.jcu.edu.au/courses/bachelor-of-pharmacy-honours",
-        "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
+        "source_year": 2027,
+        "source_id": "jcu-guide",
+        "source_url": "https://www.jcu.edu.au/__data/assets/pdf_file/0010/2316889/2027-Undergraduate-Guide.pdf",
+        "source_type": "official_guide",
+        "verified_date": "2026-09-25",
+        "status": "confirmed_2027",
         "note": ""
       },
       "pte_each": {
-        "value": null,
+        "value": 58,
         "academic_year": 2027,
-        "source_year": null,
-        "source_id": "jcu",
-        "source_url": "https://www.jcu.edu.au/courses/bachelor-of-pharmacy-honours",
-        "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
+        "source_year": 2027,
+        "source_id": "jcu-guide",
+        "source_url": "https://www.jcu.edu.au/__data/assets/pdf_file/0010/2316889/2027-Undergraduate-Guide.pdf",
+        "source_type": "official_guide",
+        "verified_date": "2026-09-25",
+        "status": "confirmed_2027",
         "note": ""
       },
       "toefl": {
@@ -9319,13 +9323,13 @@
       "ielts_overall": {
         "value": 7,
         "academic_year": 2027,
-        "source_year": null,
-        "source_id": "newcastle",
+        "source_year": 2027,
+        "source_id": "newcastle-2027-course",
         "source_url": "https://www.newcastle.edu.au/degrees/bachelor-of-pharmacy-honours",
         "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "source_conflict",
-        "note": "과정 페이지 국제학생 상세 7.0/각7.0, 다른 표시 6.5. 2027 입학팀 서면 확인 필요."
+        "verified_date": "2026-09-25",
+        "status": "confirmed_2027",
+        "note": ""
       },
       "ielts_bands": {
         "value": {
@@ -9335,13 +9339,13 @@
           "S": 7
         },
         "academic_year": 2027,
-        "source_year": null,
-        "source_id": "newcastle",
+        "source_year": 2027,
+        "source_id": "newcastle-2027-course",
         "source_url": "https://www.newcastle.edu.au/degrees/bachelor-of-pharmacy-honours",
         "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "source_conflict",
-        "note": "과정 페이지 국제학생 상세 7.0/각7.0, 다른 표시 6.5. 2027 입학팀 서면 확인 필요."
+        "verified_date": "2026-09-25",
+        "status": "confirmed_2027",
+        "note": ""
       },
       "pte_overall": {
         "value": null,
@@ -9506,47 +9510,52 @@
     {
       "program_id": "monash-bpharm-hons",
       "ielts_overall": {
-        "value": null,
+        "value": 6.5,
         "academic_year": 2027,
-        "source_year": 2027,
-        "source_id": "monash",
-        "source_url": "https://www.monash.edu/study/courses/find-a-course/pharmacy-p6007",
-        "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
+        "source_year": 2026,
+        "source_id": "monash-pps-2026",
+        "source_url": "https://www.monash.edu/__data/assets/pdf_file/0004/4091809/Monash-University-PPS-International-UG-Course-Guide-2026.pdf",
+        "source_type": "official_guide",
+        "verified_date": "2026-09-25",
+        "status": "latest_published",
         "note": ""
       },
       "ielts_bands": {
-        "value": null,
+        "value": {
+          "L": 6,
+          "R": 6,
+          "W": 6,
+          "S": 6
+        },
         "academic_year": 2027,
-        "source_year": 2027,
-        "source_id": "monash",
-        "source_url": "https://www.monash.edu/study/courses/find-a-course/pharmacy-p6007",
-        "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
+        "source_year": 2026,
+        "source_id": "monash-pps-2026",
+        "source_url": "https://www.monash.edu/__data/assets/pdf_file/0004/4091809/Monash-University-PPS-International-UG-Course-Guide-2026.pdf",
+        "source_type": "official_guide",
+        "verified_date": "2026-09-25",
+        "status": "latest_published",
         "note": ""
       },
       "pte_overall": {
-        "value": null,
+        "value": 58,
         "academic_year": 2027,
-        "source_year": 2027,
-        "source_id": "monash",
-        "source_url": "https://www.monash.edu/study/courses/find-a-course/pharmacy-p6007",
-        "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
+        "source_year": 2026,
+        "source_id": "monash-pps-2026",
+        "source_url": "https://www.monash.edu/__data/assets/pdf_file/0004/4091809/Monash-University-PPS-International-UG-Course-Guide-2026.pdf",
+        "source_type": "official_guide",
+        "verified_date": "2026-09-25",
+        "status": "latest_published",
         "note": ""
       },
       "pte_each": {
-        "value": null,
+        "value": 50,
         "academic_year": 2027,
-        "source_year": 2027,
-        "source_id": "monash",
-        "source_url": "https://www.monash.edu/study/courses/find-a-course/pharmacy-p6007",
-        "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
+        "source_year": 2026,
+        "source_id": "monash-pps-2026",
+        "source_url": "https://www.monash.edu/__data/assets/pdf_file/0004/4091809/Monash-University-PPS-International-UG-Course-Guide-2026.pdf",
+        "source_type": "official_guide",
+        "verified_date": "2026-09-25",
+        "status": "latest_published",
         "note": ""
       },
       "toefl": {
@@ -10077,23 +10086,23 @@
           2
         ],
         "academic_year": 2027,
-        "source_year": null,
-        "source_id": "newcastle",
+        "source_year": 2027,
+        "source_id": "newcastle-2027-course",
         "source_url": "https://www.newcastle.edu.au/degrees/bachelor-of-pharmacy-honours",
         "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "latest_published",
+        "verified_date": "2026-09-25",
+        "status": "confirmed_2027",
         "note": ""
       },
       "label": {
-        "value": "Semester 1 · 2월",
+        "value": "Semester 1 · 2027년 2월 22일",
         "academic_year": 2027,
-        "source_year": null,
-        "source_id": "newcastle",
+        "source_year": 2027,
+        "source_id": "newcastle-2027-course",
         "source_url": "https://www.newcastle.edu.au/degrees/bachelor-of-pharmacy-honours",
         "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "latest_published",
+        "verified_date": "2026-09-25",
+        "status": "confirmed_2027",
         "note": ""
       }
     },
@@ -16583,6 +16592,30 @@
       "title": "Curtin · Pharmacy English requirement guide",
       "url": "https://publications.curtin.edu.au/chinese-student-guide/page/28-29",
       "source_year": null,
+      "source_type": "official_guide",
+      "verified_date": "2026-09-25"
+    },
+    {
+      "id": "newcastle-2027-course",
+      "title": "University of Newcastle · Bachelor of Pharmacy (Honours) current 2027 entry",
+      "url": "https://www.newcastle.edu.au/degrees/bachelor-of-pharmacy-honours",
+      "source_year": 2027,
+      "source_type": "official_course",
+      "verified_date": "2026-09-25"
+    },
+    {
+      "id": "newcastle-2026-ug",
+      "title": "University of Newcastle · 2026 Undergraduate Degrees guide",
+      "url": "https://www.newcastle.edu.au/__data/assets/pdf_file/0012/978438/2026-1088_UG-Prospectus_v3.6_WEB.pdf",
+      "source_year": 2026,
+      "source_type": "official_guide",
+      "verified_date": "2026-09-25"
+    },
+    {
+      "id": "monash-pps-2026",
+      "title": "Monash Pharmacy and Pharmaceutical Sciences · International UG Course Guide 2026",
+      "url": "https://www.monash.edu/__data/assets/pdf_file/0004/4091809/Monash-University-PPS-International-UG-Course-Guide-2026.pdf",
+      "source_year": 2026,
       "source_type": "official_guide",
       "verified_date": "2026-09-25"
     }
