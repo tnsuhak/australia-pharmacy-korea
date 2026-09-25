@@ -1116,15 +1116,15 @@
         "note": ""
       },
       "international_recruitment": {
-        "value": null,
+        "value": true,
         "academic_year": 2027,
-        "source_year": null,
-        "source_id": "latrobe",
+        "source_year": 2027,
+        "source_id": "latrobe-2027-course",
         "source_url": "https://www.latrobe.edu.au/courses/bachelor-of-pharmacy-honours",
         "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
-        "note": "2027 국제학생 모집·대면 과정 최종 확인 중"
+        "verified_date": "2026-09-25",
+        "status": "latest_published",
+        "note": "현재 Pharmacy course page는 국제학생이 연중 지원 가능하다고 안내합니다. 2027 국제학생 학비는 별도 확인 중입니다."
       },
       "accreditation": {
         "value": "APC accredited",
@@ -1140,9 +1140,9 @@
       "highlights": [
         "Bendigo",
         "4년 학사",
-        "숙소 2026 참고"
+        "국제학생 지원 가능"
       ],
-      "editorial": "Bendigo 캠퍼스 4년 약대입니다. 현재 과정 페이지는 2027년 3월 시작을 표시하지만 국제학생 2027 학비는 아직 확정 표시가 없어 계속 확인 중입니다.",
+      "editorial": "Bendigo 캠퍼스 4년 약대입니다. 현재 과정 페이지는 2027년 3월 시작과 국제학생 연중 지원 가능을 안내하지만, 2027 국제학생 학비는 아직 확정 표시가 없어 계속 확인 중입니다.",
       "review_items": [
         "2027 국제학생 학비"
       ],
@@ -17199,6 +17199,14 @@
       "url": "https://www.monashcollege.edu.au/study/courses/foundation-year/dates-and-fees",
       "source_year": 2027,
       "source_type": "official_pathway",
+      "verified_date": "2026-09-25"
+    },
+    {
+      "id": "migration-qld-2026-consultation",
+      "title": "Migration Queensland · 2026-27 QSOL consultation status",
+      "url": "https://migration.qld.gov.au/dama-consultation",
+      "source_year": 2026,
+      "source_type": "government",
       "verified_date": "2026-09-25"
     }
   ],
