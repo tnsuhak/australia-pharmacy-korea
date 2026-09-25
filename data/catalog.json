@@ -1384,17 +1384,17 @@
         "RMIT Foundation 가능",
         "2027 학비 A$49,920"
       ],
-      "editorial": "Bundoora 캠퍼스 4년 약대입니다. 2027 본과 학비 A$49,920, 3월 1일 시작, IELTS 7.0/각 6.5를 공식 확인했습니다. Foundation Studies 또는 2년 Associate Degree packaged pathway로도 준비할 수 있습니다.",
+      "editorial": "Bundoora 캠퍼스 4년 약대입니다. 2027 본과 학비 A$49,920, 3월 1일 시작, IELTS 7.0/각6.5를 공식 확인했습니다. Foundation 또는 AD012P24 Biomedicine Associate packaged pathway(96CP 인정)로도 준비할 수 있습니다.",
       "review_items": [],
       "decision_lens": {
         "why": [
-          "한국 고교 75% 또는 고교 졸업 + 수능 300부터 Direct 기준",
-          "RMIT Foundation → 약대 1학년 가능",
-          "2027 학비 A$49,920"
+          "2027 본과 학비 A$49,920 · 3월 시작",
+          "한국 고교/수능 Direct 환산 + RMIT Foundation",
+          "Associate Degree Biomedicine 2년 → Pharmacy 96CP 인정 · Bachelor 3년"
         ],
         "watch": [
           "Chemistry + Mathematics prerequisite 필요",
-          "Associate Degree 경로는 1년 Diploma와 다름",
+          "Associate 2027 연간 학비 A$38,400 · 2년 총액은 단순 곱으로 표시하지 않음",
           "약대 학위 장학은 별도 확인 중"
         ]
       }
@@ -4898,26 +4898,26 @@
         "note": ""
       },
       "credit": {
-        "value": null,
+        "value": 96,
         "academic_year": 2027,
-        "source_year": 2026,
-        "source_id": "rmit-pathway",
-        "source_url": "https://www.rmit.edu.au/content/dam/rmit/au/en/docs/study/career-advisers/brochures/2026-degree-diploma-guide-rmit-university.pdf",
-        "source_type": "official_guide",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
-        "note": ""
+        "source_year": null,
+        "source_id": "rmit-associate-current",
+        "source_url": "https://www.rmit.edu.au/study-with-us/levels-of-study/undergraduate-study/associate-degrees/ad012",
+        "source_type": "official_pathway",
+        "verified_date": "2026-09-25",
+        "status": "latest_published",
+        "note": "two semesters of credit · 96 credit points"
       },
       "entry_year": {
-        "value": null,
+        "value": 2,
         "academic_year": 2027,
-        "source_year": 2026,
-        "source_id": "rmit-pathway",
-        "source_url": "https://www.rmit.edu.au/content/dam/rmit/au/en/docs/study/career-advisers/brochures/2026-degree-diploma-guide-rmit-university.pdf",
-        "source_type": "official_guide",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
-        "note": ""
+        "source_year": null,
+        "source_id": "rmit-associate-current",
+        "source_url": "https://www.rmit.edu.au/study-with-us/levels-of-study/undergraduate-study/associate-degrees/ad012",
+        "source_type": "official_pathway",
+        "verified_date": "2026-09-25",
+        "status": "latest_published",
+        "note": "96 credit points = Bachelor full-time 1년 상당"
       },
       "duration": {
         "value": "총 5년 · Associate Degree 2년 + Bachelor of Pharmacy 3년",
@@ -4931,36 +4931,36 @@
         "note": ""
       },
       "intake": {
-        "value": null,
+        "value": "Associate Semester 1 · 2027년 2월 8일 수업 시작",
         "academic_year": 2027,
-        "source_year": 2026,
-        "source_id": "rmit-pathway",
-        "source_url": "https://www.rmit.edu.au/content/dam/rmit/au/en/docs/study/career-advisers/brochures/2026-degree-diploma-guide-rmit-university.pdf",
-        "source_type": "official_guide",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
+        "source_year": 2027,
+        "source_id": "rmit-associate-2027",
+        "source_url": "https://www.rmit.edu.au/study-with-us/levels-of-study/undergraduate-study/associate-degrees/associate-degree-in-applied-science-ad012/apply-now",
+        "source_type": "official_pathway",
+        "verified_date": "2026-09-25",
+        "status": "confirmed_2027",
         "note": ""
       },
       "progression": {
-        "value": null,
+        "value": "AD012P24 Biomedicine option 수료 + IELTS 7.0 / 각 6.5 → Pharmacy guaranteed entry",
         "academic_year": 2027,
-        "source_year": 2026,
-        "source_id": "rmit-pathway",
-        "source_url": "https://www.rmit.edu.au/content/dam/rmit/au/en/docs/study/career-advisers/brochures/2026-degree-diploma-guide-rmit-university.pdf",
-        "source_type": "official_guide",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
+        "source_year": null,
+        "source_id": "rmit-associate-current",
+        "source_url": "https://www.rmit.edu.au/study-with-us/levels-of-study/undergraduate-study/associate-degrees/ad012",
+        "source_type": "official_pathway",
+        "verified_date": "2026-09-25",
+        "status": "latest_published",
         "note": ""
       },
       "english": {
-        "value": null,
+        "value": "Pharmacy 진급: IELTS 7.0 / 각 6.5 또는 동등점수",
         "academic_year": 2027,
-        "source_year": 2026,
-        "source_id": "rmit-pathway",
-        "source_url": "https://www.rmit.edu.au/content/dam/rmit/au/en/docs/study/career-advisers/brochures/2026-degree-diploma-guide-rmit-university.pdf",
-        "source_type": "official_guide",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
+        "source_year": null,
+        "source_id": "rmit-associate-current",
+        "source_url": "https://www.rmit.edu.au/study-with-us/levels-of-study/undergraduate-study/associate-degrees/ad012",
+        "source_type": "official_pathway",
+        "verified_date": "2026-09-25",
+        "status": "latest_published",
         "note": ""
       },
       "qualification": {
@@ -4974,17 +4974,30 @@
         "status": "pending_2027",
         "note": ""
       },
-      "note": "2027 BH102 apply 페이지에 Packaged Pathway가 확인됩니다. 총 5년 경로이며 exact credit/진입학년은 별도 확인합니다.",
+      "note": "2027 BH102 packaged pathway가 공식 확인됩니다. AD012P24 Biomedicine option 완료 시 Bachelor of Pharmacy에 96 credit points(2 semesters) 인정되어 Bachelor 단계 3년이 남습니다.",
       "intake_months": {
-        "value": null,
+        "value": [
+          2
+        ],
         "academic_year": 2027,
-        "source_year": 2026,
-        "source_id": "rmit-pathway",
-        "source_url": "https://www.rmit.edu.au/content/dam/rmit/au/en/docs/study/career-advisers/brochures/2026-degree-diploma-guide-rmit-university.pdf",
-        "source_type": "official_guide",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
+        "source_year": 2027,
+        "source_id": "rmit-associate-2027",
+        "source_url": "https://www.rmit.edu.au/study-with-us/levels-of-study/undergraduate-study/associate-degrees/associate-degree-in-applied-science-ad012/apply-now",
+        "source_type": "official_pathway",
+        "verified_date": "2026-09-25",
+        "status": "confirmed_2027",
         "note": ""
+      },
+      "pathway_fee": {
+        "value": 38400,
+        "academic_year": 2027,
+        "source_year": 2027,
+        "source_id": "rmit-associate-2027",
+        "source_url": "https://www.rmit.edu.au/study-with-us/levels-of-study/undergraduate-study/associate-degrees/associate-degree-in-applied-science-ad012/apply-now",
+        "source_type": "official_pathway",
+        "verified_date": "2026-09-25",
+        "status": "confirmed_2027",
+        "note": "2027 Associate Degree 국제학생 연간 학비 · 2년 총액 아님"
       }
     },
     {
@@ -17284,6 +17297,22 @@
       "id": "griffith-college-dates-2027",
       "title": "Griffith College · 2027 key dates",
       "url": "https://www.griffithcollege.edu.au/student-life/key-dates/",
+      "source_year": 2027,
+      "source_type": "official_pathway",
+      "verified_date": "2026-09-25"
+    },
+    {
+      "id": "rmit-associate-current",
+      "title": "RMIT Associate Degree in Applied Science · Pharmacy further study credit",
+      "url": "https://www.rmit.edu.au/study-with-us/levels-of-study/undergraduate-study/associate-degrees/ad012",
+      "source_year": null,
+      "source_type": "official_pathway",
+      "verified_date": "2026-09-25"
+    },
+    {
+      "id": "rmit-associate-2027",
+      "title": "RMIT Associate Degree in Applied Science · 2027 international fee/intake",
+      "url": "https://www.rmit.edu.au/study-with-us/levels-of-study/undergraduate-study/associate-degrees/associate-degree-in-applied-science-ad012/apply-now",
       "source_year": 2027,
       "source_type": "official_pathway",
       "verified_date": "2026-09-25"
