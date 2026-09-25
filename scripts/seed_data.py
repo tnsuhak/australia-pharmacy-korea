@@ -233,7 +233,7 @@ setp('newcastle',highlights=['4년 학사','Foundation 연계','영어 재확인
 eng('newcastle',7,{'L':7,'R':7,'W':7,'S':7},src='newcastle-2027-course',status='source_conflict');
 for k in ['ielts_overall','ielts_bands']:row(english,'newcastle')[k]['note']='공식 과정페이지에 6.5/6.5와 7.0/7.0 표기가 함께 노출되고 공식 국제 가이드도 연도별 차이가 있어 2027 지원 전 서면 확인 필요.'
 intake('newcastle',[2],'Semester 1 · 2027년 2월 22일',src='newcastle-2027-course'); req('newcastle','assumed','assumed',physics='assumed',grade='Assumed knowledge: Mathematics, English Advanced, Chemistry, Physics',src='newcastle-2026-ug'); fee('newcastle',49205,src='newcastle-fee-2027',year=2027,load='80 units 기준')
-setp('canberra',highlights=['Canberra','학부 약학 과정','모집 확인 중'],editorial='APC 학부 약학 인증 목록과 실제 국제학생 모집은 서로 다른 확인 항목입니다. 2027 국제학생 course offer를 확인 중입니다.'); fee('canberra',42500,src='canberra-guide-2027',year=2027)
+setp('canberra',highlights=['Canberra','학부 약학 과정','모집 확인 중'],editorial='APC 학부 약학 인증 목록과 실제 국제학생 모집은 서로 다른 확인 항목입니다. 2027 국제학생 course offer를 확인 중입니다.'); fee('canberra',42500,src='canberra-guide-2027',year=2026)
 setp('unisq',highlights=['T1 only','Toowoomba','2027 개설표'],editorial='2027 국제학생 대면 수업은 Trimester 1에 표시됩니다. 개설 안내서는 9월 28일 확정 예정이므로 최종 일정 확인이 필요합니다.')
 intake('unisq',[2],'Trimester 1 · 2027년 2월 15일',src='unisq-pharmacy-current'); req('unisq','accepted','assumed','accepted','accepted','수학 + Biology/Chemistry/Physics 중 1과목에서 Year 12 C 수준 assumed knowledge',src='unisq-pharmacy-current'); eng('unisq',7.0,{'L':7,'R':7,'W':6.5,'S':7},src='unisq-pharmacy-current')
 setp('monash',highlights=['4년 Exit','5년 PharmD','Internship 통합'],editorial='4년 후 BPharm(Hons)로 졸업하거나 5년째 PharmD까지 이어갈 수 있습니다. 관련 학사 졸업자는 Graduate Entry도 있습니다.')
@@ -347,7 +347,7 @@ conflicts=[
 ]
 # Canberra 2027 course PDF verified after initial seed.
 source('canberra-2027','Canberra Bachelor of Pharmacy HLB301 · 2027','https://www.canberra.edu.au/course/HLB301/1/2027.pdf',2027,'official_course')
-setp('canberra',name=fact('Bachelor of Pharmacy','canberra-2027'),final_degree=fact('Bachelor of Pharmacy; embedded Honours option','canberra-2027'),international_recruitment=fact(True,'canberra-2027'),highlights=['4년 학사','2월 입학','IELTS 각 7.0'],editorial='2027 Bruce 캠퍼스 유학생 모집이 확인됐습니다. Honours는 성적 기준을 충족한 학생이 선택합니다.')
+setp('canberra',name=fact('Bachelor of Pharmacy · Honours option','canberra-2027'),final_degree=fact('Bachelor of Pharmacy · Honours option available','canberra-2027'),international_recruitment=fact(True,'canberra-2027'),highlights=['4년 Bachelor of Pharmacy','Honours 선택 가능','Canberra · Regional'],editorial='4년 Bachelor of Pharmacy 과정입니다. 성적과 Honours 요건을 충족하면 Bachelor of Pharmacy (Honours)로 졸업할 수 있습니다.')
 eng('canberra',7,{'L':7,'R':7,'W':7,'S':7},src='canberra-2027');intake('canberra',[2],'2027-02-15 · Semester 1','canberra-2027')
 req('canberra','assumed','assumed','assumed','assumed','수학 + Biology/Human Movement, Chemistry/Physics는 assumed knowledge로 안내. 필수 prerequisite와 구분.',src='canberra-2027')
 for route_record in routes:
@@ -355,7 +355,7 @@ for route_record in routes:
 
 # Additional course-specific official checks, 2026-09-24.
 source('curtin-structure','Curtin · 2026 개편 Pharmacy 구조','https://www.curtin.edu.au/news/advice/how-to-become-a-pharmacist/',2026,'official_course')
-setp('curtin',duration_years=fact(3.75,'curtin-structure'),duration_label=fact('3년 9개월','curtin-structure'),bachelor_award_year=fact(3.75,'curtin-structure'),highlights=['3년 9개월','College → Year 2','인턴십 별도'],review_items=['국제학생 2027 학비','Global Merit의 Pharmacy 제외 여부'])
+setp('curtin',duration_years=fact(3.75,'curtin-structure'),duration_label=fact('3년 9개월','curtin-structure'),bachelor_award_year=fact(3.75,'curtin-structure'),highlights=['3년 9개월','Diploma → 2학년','Perth · Regional'],editorial='Bachelor of Pharmacy (Honours)는 3년 9개월입니다. Curtin College Pharmacy Diploma 후에는 약대 2학년으로 진학합니다.',review_items=['2027 국제학생 학비']); intake('curtin',[2],'Semester 1 · 2월',src='curtin')
 req('curtin','required','required','recommended',grade='Chemistry와 Mathematics ATAR 또는 인정 동등 과목. Biology/Human Biology는 권장.',src='curtin-structure')
 row(registration,'curtin').update(supervised_practice_in_degree=fact(False,'curtin-structure'),post_graduation_internship=fact(True,'curtin-structure'))
 source('unisq-course','UniSQ · International Bachelor of Pharmacy (Honours)','https://www.unisq.edu.au/study/degrees-and-courses/bachelor-of-pharmacy-honours?studentType=international',None,'official_course')
@@ -385,6 +385,177 @@ for route_record in routes:
 # A blocked source is not a completed verification.
 sources['board']['verified_date']=None
 sources['board']['retrieval_status']='blocked_403'
+
+decision_lenses={
+  "jcu": {
+    "why": [
+      "3년 Fast-track",
+      "Townsville·Cairns·Mackay 모두 Regional",
+      "화학은 권장, 수학은 필요"
+    ],
+    "watch": [
+      "2027 국제학생 학비 발표 대기"
+    ]
+  },
+  "utas": {
+    "why": [
+      "3년 Fast-track",
+      "Tasmania 요건 충족 시 두 번째 485 +2년",
+      "2027 국제장학 30% 자동심사"
+    ],
+    "watch": [
+      "Foundation의 2027 약대 진급조건 발표 대기"
+    ]
+  },
+  "curtin": {
+    "why": [
+      "3년 9개월",
+      "Curtin College Diploma → 약대 2학년",
+      "Perth 지역요건 충족 시 두 번째 485 +1년"
+    ],
+    "watch": [
+      "2027 국제학생 학비 발표 대기"
+    ]
+  },
+  "uq": {
+    "why": [
+      "2월 4년 · 7월 약 3.5년",
+      "Accelerated Foundation → 7월 BPharm 연결",
+      "2027 국제장학 25% 경쟁 선발"
+    ],
+    "watch": [
+      "신설 5년 PharmD는 APC·Pharmacy Board 승인 진행 중"
+    ]
+  },
+  "adelaide": {
+    "why": [
+      "4년 Bachelor of Pharmacy (Honours)",
+      "7월은 학점 인정 학생 개별 심사",
+      "Adelaide 지역요건 충족 시 두 번째 485 +1년"
+    ],
+    "watch": [
+      "7월 입학을 일반 고졸 Direct 입학으로 보면 안 됨"
+    ]
+  },
+  "griffith": {
+    "why": [
+      "Griffith College Diploma → 약대 2학년",
+      "Gold Coast Regional",
+      "2027 International Academic Merit 20%"
+    ],
+    "watch": [
+      "2027 Direct 학비·국제학생 입학점수 최종 업데이트 대기"
+    ]
+  },
+  "latrobe": {
+    "why": [
+      "Bendigo Regional · Category 3",
+      "과학 선수과목 별도 요구 없음",
+      "2027 High Achiever 20~25%"
+    ],
+    "watch": [
+      "2027 국제학생 학비 발표 대기"
+    ]
+  },
+  "qut": {
+    "why": [
+      "Chemistry·Math는 필수가 아니라 assumed knowledge",
+      "QUT College Foundation 경로",
+      "2027 International Merit 25%"
+    ],
+    "watch": [
+      "Brisbane은 지역 추가 485 대상 아님"
+    ]
+  },
+  "rmit": {
+    "why": [
+      "2027 학비 A$49,920",
+      "Bundoora 캠퍼스",
+      "Pharmacy 영어 IELTS 7.0 / 각 6.5"
+    ],
+    "watch": [
+      "Associate Degree 경로는 1년 Diploma와 다름",
+      "약대 학위 장학은 별도 확인 중"
+    ]
+  },
+  "newcastle": {
+    "why": [
+      "2027 학비 A$49,205",
+      "Newcastle Regional",
+      "Foundation 경로 있음"
+    ],
+    "watch": [
+      "공식 영어자료가 6.5와 7.0으로 충돌해 지원 전 서면 확인 필요",
+      "2027 20% International Excellence는 Pharmacy 제외"
+    ]
+  },
+  "canberra": {
+    "why": [
+      "4년 Bachelor of Pharmacy",
+      "Honours 선택 가능",
+      "Canberra Regional + ACT 약사 직종 nomination list 포함"
+    ],
+    "watch": [
+      "2027 가이드의 A$42,500은 2026 Annual Fee 표기",
+      "장학 10~30%의 Pharmacy/Korea 적용 최종 확인 필요"
+    ]
+  },
+  "unisq": {
+    "why": [
+      "Toowoomba Category 3",
+      "2027 국제학생 Trimester 1",
+      "2027 국제장학 10% 조건 충족 시 자동"
+    ],
+    "watch": [
+      "3년 가속과정은 2028부터이며 2027에는 적용하지 않음"
+    ]
+  },
+  "monash": {
+    "why": [
+      "4년 BPharm(Hons) Exit + 5년 PharmD",
+      "5년차 paid supervised practice",
+      "Graduate Entry 있음"
+    ],
+    "watch": [
+      "2027 Foundation → 새 P6007 진급점수 발표 대기",
+      "Melbourne은 지역 추가 485 대상 아님"
+    ]
+  },
+  "sydney": {
+    "why": [
+      "5년 BPharm(Hons) / Master of Pharmacy Practice",
+      "2027 수능·IB·SAT·A-level 공식 점수 공개",
+      "USFP Foundation 경로"
+    ],
+    "watch": [
+      "Sydney는 지역 추가 485 대상 아님"
+    ]
+  },
+  "unsw": {
+    "why": [
+      "2027부터 Doctor of Pharmacy 명칭",
+      "5년 통합 과정",
+      "2027 IB·A-level 기준 확인"
+    ],
+    "watch": [
+      "졸업 후 인턴십은 별도",
+      "2027 학비 발표 대기"
+    ]
+  },
+  "uwa": {
+    "why": [
+      "고교 졸업 후 4년 Bachelor + PharmD",
+      "UWA College Foundation → 약대 1학년",
+      "Perth 지역요건 충족 시 두 번째 485 +1년"
+    ],
+    "watch": [
+      "졸업 후 인턴십은 별도",
+      "2027 국제학생 학비·Global Excellence 세부표 업데이트 대기"
+    ]
+  }
+}
+for p in programs:
+ if p['university_id'] in decision_lenses:p['decision_lens']=decision_lenses[p['university_id']]
 
 data=dict(schema_version='1.0.0',academic_year=2027,verified_date=DATE,universities=universities,programs=programs,entry_routes=routes,qualifications=qualifications,requirements=requirements,english=english,intakes=intakes,tuition=tuition,scholarships=scholarships,accommodation=accommodation,professional_registration=registration,sources=list(sources.values()),conflicts=conflicts)
 (ROOT/'data/catalog.json').write_text(json.dumps(data,ensure_ascii=False,indent=2)+'\n')
