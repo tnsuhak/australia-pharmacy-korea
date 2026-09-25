@@ -15344,6 +15344,102 @@
       "source_year": 2027,
       "source_type": "official_course",
       "verified_date": "2026-09-25"
+    },
+    {
+      "id": "migration-nsw-skills",
+      "title": "NSW Government · NSW Skills Lists",
+      "url": "https://www.nsw.gov.au/visas-and-migration/skilled-visas/nsw-skills-lists",
+      "source_year": 2026,
+      "source_type": "government",
+      "verified_date": "2026-09-25"
+    },
+    {
+      "id": "migration-qld-list",
+      "title": "Migration Queensland · Queensland onshore skilled occupation list",
+      "url": "https://migration.qld.gov.au/occupation-lists/queensland-onshore-skilled-occupation-list",
+      "source_year": 2026,
+      "source_type": "government",
+      "verified_date": "2026-09-25"
+    },
+    {
+      "id": "migration-qld-status",
+      "title": "Migration Queensland · Skilled migration ROI status",
+      "url": "https://migration.qld.gov.au/visa-options/skilled-visas/registering-your-interest-in-queenslands-migration-program",
+      "source_year": 2026,
+      "source_type": "government",
+      "verified_date": "2026-09-25"
+    },
+    {
+      "id": "migration-vic-status",
+      "title": "Victoria · Skilled visa nomination program status",
+      "url": "https://liveinmelbourne.vic.gov.au/migrate/skilled-migration-visas/2025-26-skilled-migration-visa-nomination-program",
+      "source_year": 2026,
+      "source_type": "government",
+      "verified_date": "2026-09-25"
+    },
+    {
+      "id": "migration-tas-program",
+      "title": "Migration Tasmania · 2026-27 Program Opening",
+      "url": "https://www.migration.tas.gov.au/news/2024-25_program_open_to_rois",
+      "source_year": 2026,
+      "source_type": "government",
+      "verified_date": "2026-09-25"
+    },
+    {
+      "id": "migration-tas-health",
+      "title": "Migration Tasmania · Health, Allied Health and Teaching Occupations",
+      "url": "https://www.migration.tas.gov.au/skilled_migration/health%2C-allied-health-and-teaching-occupations",
+      "source_year": 2026,
+      "source_type": "government",
+      "verified_date": "2026-09-25"
+    },
+    {
+      "id": "migration-act-list",
+      "title": "ACT Government · Nominated Migration Program Occupation List",
+      "url": "https://www.act.gov.au/migration/skilled-migrants/act-nominated-migration-program-occupation-list",
+      "source_year": 2026,
+      "source_type": "government",
+      "verified_date": "2026-09-25"
+    },
+    {
+      "id": "migration-act-program",
+      "title": "ACT Government · ACT nomination pathways",
+      "url": "https://www.act.gov.au/migration/skilled-migrants/act-government-nomination/act-nomination-pathways",
+      "source_year": 2026,
+      "source_type": "government",
+      "verified_date": "2026-09-25"
+    },
+    {
+      "id": "migration-sa-list",
+      "title": "South Australia · Skilled Occupation List",
+      "url": "https://migration.sa.gov.au/before-applying/work-in-sa/occupation-lists/occupations-list",
+      "source_year": 2026,
+      "source_type": "government",
+      "verified_date": "2026-09-25"
+    },
+    {
+      "id": "migration-sa-status",
+      "title": "South Australia · 2026-27 program status",
+      "url": "https://migration.sa.gov.au/news/registrations-of-interest-closing-2-june-2026",
+      "source_year": 2026,
+      "source_type": "government",
+      "verified_date": "2026-09-25"
+    },
+    {
+      "id": "migration-wa-criteria",
+      "title": "WA Government · 2025-26 State Nominated Migration Program criteria",
+      "url": "https://migration.wa.gov.au/sites/default/files/2025-09/2025-26%20WA%20SNMP%20Criteria%20-%20July%202025.pdf",
+      "source_year": 2025,
+      "source_type": "government",
+      "verified_date": "2026-09-25"
+    },
+    {
+      "id": "migration-wa-pharmacist",
+      "title": "WA Government · December 2025 SNMP invited EOIs by occupation",
+      "url": "https://migration.wa.gov.au/sites/default/files/2025-12/SNMP%20Invite%20Round%20-%20December%202025.pdf",
+      "source_year": 2025,
+      "source_type": "government",
+      "verified_date": "2026-09-25"
     }
   ],
   "conflicts": [
