@@ -129,7 +129,9 @@ source('curtin-college-english','Curtin College · English requirements · Pharm
 source('uq-foundation','UQ College · Foundation progression','https://uqcollege.uq.edu.au/study/pathways-uq/foundation-program',None,'official_pathway')
 source('uq-accelerated','UQ College · Accelerated Foundation','https://uqcollege.uq.edu.au/study/pathways-uq/foundation-program/accelerated-foundation-program',2027,'official_pathway')
 source('uq-calendar','UQ College · Academic calendar','https://uqcollege.uq.edu.au/current-students/academic-calendar',2027,'official_calendar')
-source('monash-foundation','Monash Pathway Programs 2027 · 과정 코드 재확인 필요','https://www.monashcollege.edu.au/__data/assets/pdf_file/0005/4349102/2027-Monash-Pathway-Programs.pdf',2027,'official_pathway')
+source('monash-foundation','Monash Pathway Programs 2027 · Pharmacy section still shows legacy P6001','https://www.monashcollege.edu.au/__data/assets/pdf_file/0005/4349102/2027-Monash-Pathway-Programs.pdf',2027,'official_pathway')
+source('monash-foundation-p6007-current','Monash College · Foundation Year destination degree · Pharmacy P6007','https://www.monashcollege.edu.au/study/courses/foundation-year/fy-data/destination-degrees-2026-single-degrees/pharmacy-and-pharmaceutical-science',None,'official_pathway')
+source('monash-foundation-dates-2027','Monash College · Foundation Year 2027 dates','https://www.monashcollege.edu.au/study/courses/foundation-year/dates-and-fees',2027,'official_pathway')
 source('newcastle-foundation','University of Newcastle College of International Education · Foundation Studies','https://internationalcollege.newcastle.edu.au/foundation-studies',None,'official_pathway')
 source('newcastle-foundation-entry','Newcastle CIE · Foundation Studies entry requirements','https://internationalcollege.newcastle.edu.au/entry-requirements',None,'official_pathway')
 source('newcastle-foundation-fee-2027','Newcastle CIE · 2027 Foundation Studies fees','https://internationalcollege.newcastle.edu.au/fees',2027,'official_pathway')
@@ -306,7 +308,13 @@ route('uwa','uwa-foundation','foundation','UWA College · Foundation Program','u
 routes[-1]['progression']=fact('UWA College Foundation 70 + Pharmacy 입학·영어조건','uwa')
 route('qut','qut-foundation','foundation','QUT College · Foundation','qut-college-foundation',0,1,'6개월 Intensive 또는 12개월 Standard','QUT College 일정','Foundation 수료 + QUT Pharmacy 입학조건 충족','Foundation 후 QUT Bachelor 1학년으로 진학하는 경로입니다. Pharmacy 선수과목과 영어조건은 별도로 맞춰야 합니다.')
 route('sydney','sydney-usfp','foundation','USFP · University of Sydney Foundation Program','sydney',0,1,None,None,'Pharmacy GPA 7.3 / English C','2027 Pharmacy 진학 기준입니다. 수학과 Foundation 입학조건을 충족해야 합니다.')
-route('monash','monash-foundation','foundation','Monash University Foundation Year','monash-foundation',0,1,None,None,None,'새 P6007 진급점수는 아직 발표되지 않았습니다.',False)
+route('monash','monash-foundation','foundation','Monash University Foundation Year','monash-foundation-p6007-current',0,1,'Standard 약 12개월','2월 · 8월','P6007: Foundation score 75% · English 65% · Maths 50% + Chemistry 50%','현재 Monash College destination-degree 페이지는 새 P6007을 75%/English 65%로 안내하지만, 2027 Pathway Programs PDF의 Pharmacy 표에는 아직 P6001이 남아 있어 2027 확정 자동판정에는 사용하지 않습니다.')
+routes[-1]['availability']=fact(True,'monash-foundation-p6007-current')
+routes[-1]['duration']=fact('Standard 약 12개월','monash-foundation-dates-2027')
+routes[-1]['intake']=fact('2월 · 8월','monash-foundation-dates-2027')
+routes[-1]['intake_months']=fact([2,8],'monash-foundation-dates-2027')
+routes[-1]['progression']=fact('P6007: Foundation score 75% · English 65% · Maths 50% + Chemistry 50%','monash-foundation-p6007-current',status='source_conflict',note='2027 Pathway Programs PDF는 Pharmacy 표에 legacy P6001을 유지하고 있어 P6007 live page와 코드가 불일치합니다.')
+routes[-1]['english']=fact('P6007 진급 English 65%','monash-foundation-p6007-current',status='source_conflict',note='Foundation 입학 영어조건이 아니라 Monash University Pharmacy 진급용 Foundation English 점수입니다.')
 route('newcastle','newcastle-foundation','foundation','Newcastle CIE · Foundation Studies','newcastle-foundation',0,1,'11개월 · Pharmacy 목적 2월 시작','2월 · Pharmacy는 본과 중간입학 없음','전체 평균 65%+ · Academic English A&B 평균 75%+','Foundation을 마치면 Bachelor of Pharmacy (Honours) 1학년으로 진학합니다. 2027 Foundation Studies 학비는 A$31,400입니다.')
 routes[-1]['english']=fact('Foundation 입학: IELTS 5.5 / 각 5.0 · 본과 진급: Academic English A&B 평균 75%+','newcastle-foundation-entry')
 routes[-1]['qualification']=fact('한국: 고2 수료(pass grades)부터 Foundation Studies 입학 가능','newcastle-foundation-entry')
@@ -366,7 +374,7 @@ housing('uwa','uwa-trinity-2027','Trinity Residential College · Standard Room',
 
 conflicts=[
  dict(id='newcastle-english',entity_id='newcastle-bpharm-hons',field='english',source_ids=['newcastle-2027-course','newcastle-fee-2027'],status='source_conflict',summary='Newcastle 2027 Degree Guide는 IELTS 6.5/각6.5, 현재 과정 페이지 English proficiency section은 7.0/각7.0으로 표기',decision='같은 대학의 2027 공식자료 간 차이이므로 자동 충족 판정에서 제외. 지원 전 Newcastle Admissions 서면 확인.'),
- dict(id='monash-foundation-version',entity_id='monash-foundation',field='progression',source_ids=['monash-foundation','monash'],status='pending_2027',summary='Pathway guide 구 P6001과 새 P6007 과정 코드 차이',decision='기존 progression 점수 이식 금지.'),
+ dict(id='monash-foundation-version',entity_id='monash-foundation',field='progression',source_ids=['monash-foundation','monash-foundation-p6007-current'],status='source_conflict',summary='2027 Pathway Programs PDF Pharmacy 표는 P6001을 유지하지만, 현재 Monash College destination-degree 페이지는 새 P6007과 75%/English 65%/Maths·Chemistry 50%를 표시',decision='P6007 live 값을 최신 공개 참고값으로 보여주되 2027 확정 자동판정에는 사용하지 않음.'),
 ]
 # Canberra 2027 course PDF verified after initial seed.
 source('canberra-2027','Canberra Bachelor of Pharmacy HLB301 · 2027','https://www.canberra.edu.au/course/HLB301/1/2027.pdf',2027,'official_course')
