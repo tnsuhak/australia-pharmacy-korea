@@ -26,7 +26,11 @@ source('homeaffairs-485','Australian Home Affairs · Temporary Graduate visa (su
 source('homeaffairs-second485','Australian Home Affairs · Second Post-Higher Education Work stream','https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/temporary-graduate-485/second-post-higher-education-work',2026,'government')
 source('homeaffairs-regional','Australian Home Affairs · Designated regional area postcodes','https://immi.homeaffairs.gov.au/supporting/Pages/Work/187-regional-postcodes.aspx',2026,'government')
 source('jcu-2027-campus','JCU · 2027 course changes · Pharmacy campuses','https://www.jcu.edu.au/future-students/schools/2027-course-changes',2027,'official_course')
+source('jcu-english-band3a','JCU · Admissions Policy Schedule II · Band 3a English equivalencies','https://www.jcu.edu.au/policy/academic-governance/student-experience/admissions-policy-schedule-ii',None,'official_admissions')
+source('jcu-prep-current','JCU Prep · current eligibility and pathway guidance','https://study.jcu.edu.au/jcu-prep',None,'official_pathway')
 source('utas-2027-campus','University of Tasmania · Bachelor of Pharmacy with Honours 2027','https://www.utas.edu.au/courses/health/courses/54d-bachelor-of-pharmacy-with-honours',2027,'official_course')
+source('utas-entry-country-current','UTas · Entry requirements by country','https://www.utas.edu.au/study/apply/admission-requirements/entry-requirements-by-country',None,'official_admissions')
+source('utas-atar-equiv-current','UTas · Equivalent undergraduate entry requirements · current linked ATAR equivalency table','https://www.utas.edu.au/__data/assets/pdf_file/0011/1673759/MST-ISR-ATAR_Equivilance-Table.pdf',2023,'official_admissions')
 source('uwa-dpharm','UWA · Doctor of Pharmacy graduate entry','https://www.uwa.edu.au/study/courses/doctor-of-pharmacy',2027,'official_course')
 source('migration-nsw-skills','NSW Government · NSW Skills Lists','https://www.nsw.gov.au/visas-and-migration/skilled-visas/nsw-skills-lists',2026,'government')
 source('migration-qld-list','Migration Queensland · Queensland onshore skilled occupation list','https://migration.qld.gov.au/occupation-lists/queensland-onshore-skilled-occupation-list',2026,'government')
@@ -76,6 +80,9 @@ source('uwa-scholarship-current','UWA Global Excellence Scholarship','https://ww
 source('newcastle-scholarship-2027-terms','Newcastle International Excellence Scholarship 2027 · Terms & Conditions · excluded programs','https://www.newcastle.edu.au/__data/assets/pdf_file/0014/1136300/UNI_053-International-Excellence-Scholarship-2027-T-and-Cs-07072026.pdf',2027,'official_scholarship')
 source('uwa-foundation','UWA College · UWA Foundation Program','https://www.uwa.edu.au/uwa-college/Study/UWA-Foundation-Program',None,'official_pathway')
 source('qut-college-foundation','QUT College · Foundation programs','https://www.qut.edu.au/study/qut-college/international/english-language-programs',None,'official_pathway')
+source('qut-foundation-standard-2027','QUT College · Standard Foundation Program · 2027 fee and entry','https://www.qut.edu.au/courses/standard-foundation',2027,'official_pathway')
+source('qut-foundation-intensive-2027','QUT College · Intensive Program · 2027 fee and entry','https://www.qut.edu.au/courses/intensive-program',2027,'official_pathway')
+source('qut-college-merit-current','QUT College Merit Scholarship · South Korea criteria','https://www.qut.edu.au/study/fees-and-scholarships/scholarships/qut-college-merit-scholarship',None,'official_scholarship')
 source('qut-fee-2027','QUT · Bachelor of Pharmacy (Honours) 2027 fee','https://www.qut.edu.au/courses/bachelor-of-pharmacy-honours',2027,'official_course')
 source('newcastle-fee-2027','University of Newcastle · 2027 International Student Degree Guide · Pharmacy','https://www.newcastle.edu.au/__data/assets/pdf_file/0020/1102565/2025-1079-International-Prospectus-2027-ROW_V27.pdf',2027,'official_guide')
 source('monash-fee-2027','Monash · Pharmacy P6007 2027 fee','https://www.monash.edu/study/courses/find-a-course/pharmacy-p6007',2027,'official_course')
@@ -185,6 +192,7 @@ university_rows=[
  ('uwa','The University of Western Australia','서호주대학교','WA','Perth · Crawley','UWA')]
 universities=[dict(id=i,name=n,name_ko=k,state=s,campus=fact(c,'apc' if i not in ['uq','qut','monash'] else i),short=short,slug=i+'-pharmacy') for i,n,k,s,c,short in university_rows]
 next(u for u in universities if u['id']=='jcu')['campus']=fact('Townsville · Cairns · Mackay','jcu-2027-campus')
+next(u for u in universities if u['id']=='utas')['campus']=fact('Cradle Coast · Hobart · Launceston','utas-2027-campus')
 source('unisq-pharmacy-current','UniSQ · Bachelor of Pharmacy (Honours) current international entry requirements','https://www.unisq.edu.au/study/degrees-and-courses/bachelor-of-pharmacy-honours?studentType=international',2027,'official_course')
 programs=[]; qualifications=[]; requirements=[]; english=[]; intakes=[]; tuition=[]; registration=[]; routes=[]; scholarships=[]; accommodation=[]
 for u in universities:
@@ -242,10 +250,11 @@ def qual(i,q,score,scale,calc=''):
  r=next(x for x in qualifications if x['program_id']==i+'-bpharm-hons' and x['qualification']==q)
  r.update(score=fact(score,i),scale=scale,calculation=calc)
 
-setp('jcu',highlights=['3년 Fast-track','Townsville · Cairns · Mackay','화학 권장 · 수학 필수'],editorial='2027 공식 course changes에서 Townsville·Cairns·Mackay 모두 2월 시작의 3년 Trimester 과정으로 확인됩니다. 현재 국제학생 course page도 세 캠퍼스를 모두 표시하지만 학비는 아직 2026 A$31,710을 보여주므로 2027 학비로 승격하지 않습니다.',review_items=['2027 국제학생 학비','한국 학력 환산표'])
+setp('jcu',highlights=['3년 Fast-track','Townsville · Cairns · Mackay','화학 권장 · 수학 필수'],editorial='2027 공식 course changes에서 Townsville·Cairns·Mackay 모두 2월 시작의 3년 Trimester 과정으로 확인됩니다. 현재 국제학생 course page도 세 캠퍼스를 모두 표시하지만 학비는 아직 2026 A$31,710을 보여주므로 2027 학비로 승격하지 않습니다.',review_items=['2027 국제학생 학비','한국 학력 환산표','JCU Prep의 국제학생 packaged pathway 적용 여부'])
 req('jcu','recommended','required',grade='English와 General Mathematics 또는 동등 수준. Chemistry 권장.',src='jcu-guide'); intake('jcu',[2],'2월','jcu-guide'); fee('jcu',31710,src='jcu-fee-2026',year=2026); eng('jcu',7.0,{'L':6.5,'R':6.5,'W':6.5,'S':6.5},src='jcu-guide',pte=65,pte_each=58)
-setp('utas',highlights=['3년 Fast-track','2027 학비 공개','Hobart 숙소'],editorial='4년 약학과를 3년에 압축해 공부합니다. 1년 수강량이 많습니다.')
-fee('utas',61267,total=198050,load='연간 133 credit points 기준'); eng('utas',6.5,{'L':6,'R':6,'W':6,'S':6},src='utas'); intake('utas',None,'Semester 1 · Cradle Coast / Hobart / Launceston',src='utas'); req('utas','required','required','recommended','accepted','수학 1과목 + Chemistry 또는 Physical Sciences에서 satisfactory achievement',src='utas')
+row(english,'jcu')['pte_overall']=fact(65,'jcu-english-band3a'); row(english,'jcu')['pte_each']=fact(58,'jcu-english-band3a'); row(english,'jcu')['toefl']=fact({'overall':94,'L':23,'R':23,'W':23,'S':23},'jcu-english-band3a')
+setp('utas',highlights=['3년 Fast-track','Cradle Coast · Hobart · Launceston','2027 학비·30% Merit'],editorial='2027 과정은 Cradle Coast·Hobart·Launceston 세 캠퍼스에서 국제학생이 전체 3년을 이수할 수 있습니다. 일반 4년 약학과 분량을 3년에 압축해 연간 수강량이 많은 편입니다.')
+fee('utas',61267,total=198050,load='연간 133 credit points 기준'); eng('utas',6.5,{'L':6,'R':6,'W':6,'S':6},src='utas'); intake('utas',None,'Semester 1 · Cradle Coast / Hobart / Launceston',src='utas'); req('utas','Chemistry 또는 Physical Sciences 중 1과목','required','not_required','not_required','Mathematics 1과목 + Chemistry 또는 Physical Sciences에서 satisfactory achievement',src='utas-2027-campus')
 setp('curtin',highlights=['College → Year 2','175 credits','진급 CWA 확인'],editorial='Curtin College Diploma 후 약대 2학년으로 진학합니다. Stage 2 CWA 70%와 PHAR1002가 필요합니다.',review_items=['국제학생 2027 학비','2027 국제학생 Direct 시작월','Global Merit의 Pharmacy 제외 여부']); eng('curtin',7.0,{'L':7,'R':7,'W':7,'S':7},src='curtin')
 setp('uq',duration_label=fact('2월 4년 · 7월 약 3.5년','uq'),highlights=['2월 4년','7월 3.5년','Accelerated Foundation'],editorial='2월 입학은 4년, 7월 입학은 약 3.5년입니다. 새 5년 PharmD와는 다른 과정입니다.')
 req('uq','required','required','recommended',grade='English·수학·Chemistry: Queensland Year 12 C 또는 동등 수준.'); intake('uq',[2,7],'2월 22일 / 7월 26일'); fee('uq',60952,load='16 units 기준')
@@ -298,6 +307,10 @@ q=next(x for x in qualifications if x['program_id']=='newcastle-bpharm-hons' and
 q=next(x for x in qualifications if x['program_id']=='uq-bpharm-hons' and x['qualification']=='ib'); q.update(score=fact(30.25,'uq',2026,status='latest_published',note='2027 program page의 최신 threshold이며 Semester 1, 2026 offer 기준'),scale='45')
 for qt,val,scale in [('ib',27,'45'),('sat',1020,'1600')]:
  q=next(x for x in qualifications if x['program_id']=='jcu-bpharm-hons' and x['qualification']==qt); q.update(score=fact(val,'jcu-intl-2025',2025,status='latest_published',note='2025 International Guide 참고값 · 2027 국제환산표 확인 전'),scale=scale)
+# UTas 2027 Pharmacy minimum ATAR 70 mapped through the current official equivalency table linked by UTas admissions.
+for qt,val,scale,calc in [('csat',305,'CSAT overall score','Upper Secondary Certificate + CSAT'),('ib',25,'45',''),('alevel',8,'UTas A-level points','2 or 3 H2 subjects'),('ossd',70,'best six Grade 12 subjects %','workplace/open 제외'),('sat',980,'1600','US High School completion also required')]:
+ q=next(x for x in qualifications if x['program_id']=='utas-bpharm-hons' and x['qualification']==qt); q.update(score=fact(val,'utas-atar-equiv-current',2023,status='latest_published',note='현재 UTas country-entry 페이지가 연결하는 ATAR equivalency table의 ATAR 70 열 기준'),scale=scale,calculation=calc)
+q=next(x for x in qualifications if x['program_id']=='utas-bpharm-hons' and x['qualification']=='korean_high_school'); q.update(score=fact(False,'utas-atar-equiv-current',2023,status='latest_published',note='한국 일반고는 Upper Secondary Certificate와 CSAT를 함께 요구하는 ATAR 환산표를 사용합니다.'),scale='고교 졸업장 단독 Direct 아님',calculation='')
 
 
 # New UQ program remains a separate record with accreditation gate.
@@ -344,7 +357,16 @@ _uwa_direct['progression']=fact('Combined degree 내 Doctor of Pharmacy assuranc
 _uwa_direct['qualification']=fact('ATAR 85 equivalent · CSAT 329 · IB 30 · A-level 10 · SAT 1220 · UWAC Foundation 70','uwa')
 _uwa_direct['english']=fact('IELTS 7.0 · 각 영역 7.0','uwa')
 _uwa_direct['note']='고교 졸업 후 4년 combined degree로 시작합니다. Doctor of Pharmacy progression assurance는 WAM 65% 조건이며 졸업 후 internship과 Pharmacy Board 시험이 별도입니다.'
-route('qut','qut-foundation','foundation','QUT College · Foundation','qut-college-foundation',0,1,'6개월 Intensive 또는 12개월 Standard','QUT College 일정','Foundation 수료 + QUT Pharmacy 입학조건 충족','Foundation 후 QUT Bachelor 1학년으로 진학하는 경로입니다. Pharmacy 선수과목과 영어조건은 별도로 맞춰야 합니다.')
+route('qut','qut-foundation-standard','foundation','QUT College · Standard Foundation','qut-foundation-standard-2027',0,1,'12개월','2월 · 7월','Foundation 수료 + Pharmacy package offer의 faculty progression 조건 충족','국제학생 전용 12개월 Foundation입니다. 수료 후 승인된 QUT Bachelor 1학년으로 연결되며 Pharmacy 패키지의 개별 progression 조건을 충족해야 합니다.')
+routes[-1]['intake_months']=fact([2,7],'qut-foundation-standard-2027')
+routes[-1]['english']=fact('IELTS 5.5 / 각 5.0 · PTE 46 / 각 38 · TOEFL 56 (L10/R10/W15/S14)','qut-foundation-standard-2027')
+routes[-1]['qualification']=fact('Year 11 또는 Year 12 동등 학력 · 한국 학력은 QUT country-specific 심사','qut-foundation-standard-2027',note='QUT College Merit 장학의 한국 고2 5등급/80% 기준은 장학 기준이므로 일반 입학점수로 사용하지 않습니다.')
+routes[-1]['pathway_fee']=fact(25536,'qut-foundation-standard-2027',year=2027,note='2027 Standard Foundation 전체 96 credit points 학비')
+route('qut','qut-foundation-intensive','foundation','QUT College · Intensive Program','qut-foundation-intensive-2027',0,1,'6개월','2월 · 7월','Intensive 수료 + Pharmacy package offer의 faculty progression 조건 충족','고교 Year 12 동등 학력을 마치고 목표 QUT 학사 입학조건에 거의 도달한 학생을 위한 6개월 가속 Foundation입니다.')
+routes[-1]['intake_months']=fact([2,7],'qut-foundation-intensive-2027')
+routes[-1]['english']=fact('IELTS 6.0 / 각 5.0 · PTE 50 / 각 38 · TOEFL 71 (L10/R10/W15/S14)','qut-foundation-intensive-2027')
+routes[-1]['qualification']=fact('Year 12 동등 학력 · 목표 Bachelor 입학조건에 거의 도달한 학생용','qut-foundation-intensive-2027')
+routes[-1]['pathway_fee']=fact(12768,'qut-foundation-intensive-2027',year=2027,note='2027 Intensive Program 전체 48 credit points 학비')
 route('sydney','sydney-usfp','foundation','USFP · University of Sydney Foundation Program','sydney',0,1,None,None,'Pharmacy GPA 7.3 / English C','2027 Pharmacy 진학 기준입니다. 수학과 Foundation 입학조건을 충족해야 합니다.')
 route('monash','monash-foundation','foundation','Monash University Foundation Year','monash-foundation-p6007-current',0,1,'Standard 약 12개월','2월 · 8월','P6007: Foundation score 75% · English 65% · Maths 50% + Chemistry 50%','현재 Monash College destination-degree 페이지는 새 P6007을 75%/English 65%로 안내하지만, 2027 Pathway Programs PDF의 Pharmacy 표에는 아직 P6001이 남아 있어 2027 확정 자동판정에는 사용하지 않습니다.')
 routes[-1]['availability']=fact(True,'monash-foundation-p6007-current')
@@ -492,6 +514,10 @@ for route_record in routes:
   route_record['note']='아래 표에 성적·선수과목·영어 기준을 정리했습니다.'
 
 # Keep high-value Direct route summaries synchronized with verified course facts.
+_utas_direct=next(r for r in routes if r['id']=='utas-bpharm-hons-direct')
+_utas_direct['english']=fact('IELTS 6.5 / 각 6.0','utas')
+_utas_direct['qualification']=fact('2027 minimum ATAR 70 상당 · CSAT 305 · IB 25 · A-level 8 · OSSD 70% · SAT 980','utas-atar-equiv-current',2023,status='latest_published',note='현재 UTas 공식 country-entry 페이지가 링크하는 equivalency table의 ATAR 70 열 기준')
+_utas_direct['note']='2027 minimum ATAR 70 상당 학력 + Mathematics + Chemistry 또는 Physical Sciences 요건을 충족해야 합니다.'
 for uid in ['adelaide','qut','canberra','unisq','unsw']:
  dr=next(r for r in routes if r['id']==uid+'-bpharm-hons-direct')
  er=row(english,uid); rr=row(requirements,uid)
@@ -531,7 +557,8 @@ decision_lenses={
       "화학은 권장, 수학은 필요"
     ],
     "watch": [
-      "2027 국제학생 학비 발표 대기"
+      "현재 국제학생 course page 학비 A$31,710은 2026 표시값",
+      "JCU Prep은 국내학생 안내가 중심이라 한국 국제학생 pathway로 확정하지 않음"
     ]
   },
   "utas": {
@@ -541,7 +568,8 @@ decision_lenses={
       "2027 국제장학 30% 자동심사"
     ],
     "watch": [
-      "Foundation의 2027 약대 진급조건 발표 대기"
+      "3년에 압축해 연간 수강량이 많음",
+      "Foundation 시작시점과 다음 Pharmacy 입학시기 조합 확인 필요"
     ]
   },
   "curtin": {
@@ -597,10 +625,11 @@ decision_lenses={
   "qut": {
     "why": [
       "Chemistry·Math는 필수가 아니라 assumed knowledge",
-      "QUT College Foundation 경로",
+      "QUT College Standard 12개월 / Intensive 6개월",
       "2027 International Merit 25%"
     ],
     "watch": [
+      "Foundation 수료 후 Pharmacy package offer의 개별 progression 조건 확인",
       "Brisbane은 지역 추가 485 대상 아님"
     ]
   },
