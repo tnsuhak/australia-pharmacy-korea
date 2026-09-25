@@ -341,9 +341,8 @@ housing('uwa','uwa-trinity-2027','Trinity Residential College · Standard Room',
 
 conflicts=[
  dict(id='curtin-progression',entity_id='curtin-college',field='progression',source_ids=['curtin-college','curtin-old'],status='source_conflict',summary='Stage 2 CWA: 현재 College 70% / 구 과정 안내 65%',decision='현재 메인 College 70% 우선. 입학팀 확인 전 충돌 기록 유지.'),
- dict(id='newcastle-english',entity_id='newcastle-bpharm-hons',field='english',source_ids=['newcastle'],status='source_conflict',summary='국제학생 상세 IELTS 7.0/각7.0과 다른 페이지 표시 6.5',decision='필터 충족 판정에서 제외. 2027 prospectus·입학팀 서면 대조 필요.'),
+ dict(id='newcastle-english',entity_id='newcastle-bpharm-hons',field='english',source_ids=['newcastle-2027-course','newcastle-2026-ug'],status='source_conflict',summary='Newcastle 공식 자료에서 Pharmacy IELTS 6.5/각6.5와 7.0/각7.0 표기가 충돌',decision='자동 충족 판정에서 제외. 2027 지원 전 Newcastle Admissions 서면 확인.'),
  dict(id='monash-foundation-version',entity_id='monash-foundation',field='progression',source_ids=['monash-foundation','monash'],status='pending_2027',summary='Pathway guide 구 P6001과 새 P6007 과정 코드 차이',decision='기존 progression 점수 이식 금지.'),
- dict(id='rmit-english-scope',entity_id='rmit-bpharm-hons',field='english',source_ids=['rmit-english','rmit'],status='pending_2027',summary='Pharmacy 전용 영어표의 국제학생 적용 범위 대조 필요',decision='수치는 참고값으로 표시. 자동 충족 판정 제외.'),
 ]
 # Canberra 2027 course PDF verified after initial seed.
 source('canberra-2027','Canberra Bachelor of Pharmacy HLB301 · 2027','https://www.canberra.edu.au/course/HLB301/1/2027.pdf',2027,'official_course')
