@@ -3,7 +3,7 @@ import json
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-DATE = '2026-09-24'
+DATE = '2026-09-25'
 sources = {}
 def source(key, title, url, year=None, kind='official_course'):
     sources[key] = dict(id=key, title=title, url=url, source_year=year,
@@ -38,7 +38,8 @@ course_urls={
  'unisq':'https://course-offer-guide.unisq.edu.au/2027/BPHH.html',
  'monash':'https://www.monash.edu/study/courses/find-a-course/pharmacy-p6007',
  'sydney':'https://www.sydney.edu.au/dam/corporate/documents/study/how-to-apply/international-admission-guide.pdf',
- 'unsw':'https://www.unsw.edu.au/study/undergraduate/bachelor-of-pharmaceutical-medicine-master-of-pharmacy'}
+ 'unsw':'https://www.unsw.edu.au/study/undergraduate/bachelor-of-pharmaceutical-medicine-master-of-pharmacy',
+ 'uwa':'https://www.uwa.edu.au/study/courses/bachelor-of-human-sciences-pharmaceutical-health-and-doctor-of-pharmacy'}
 for k,v in course_urls.items(): source(k,k.upper()+' Pharmacy · 공식 과정/입학 안내',v,2027 if k in ['utas','uq','uq-pharmd','unisq','monash','sydney'] else None)
 source('jcu-guide','JCU 2027 Undergraduate Guide','https://www.jcu.edu.au/__data/assets/pdf_file/0010/2316889/2027-Undergraduate-Guide.pdf',2027,'official_guide')
 source('utas-2026','UTas 2026 Pharmacy course','https://www.utas.edu.au/courses/health/courses/54d-bachelor-of-pharmacy-with-honours?year=2026',2026)
@@ -82,7 +83,8 @@ university_rows=[
  ('unisq','University of Southern Queensland','서던퀸즐랜드대학교','QLD','Toowoomba','UniSQ'),
  ('monash','Monash University','모나쉬대학교','VIC','Melbourne · Parkville','Monash'),
  ('sydney','University of Sydney','시드니대학교','NSW','Sydney · Camperdown','Sydney'),
- ('unsw','UNSW Sydney','뉴사우스웨일스대학교','NSW','Sydney · Kensington','UNSW')]
+ ('unsw','UNSW Sydney','뉴사우스웨일스대학교','NSW','Sydney · Kensington','UNSW'),
+ ('uwa','The University of Western Australia','서호주대학교','WA','Perth · Crawley','UWA')]
 universities=[dict(id=i,name=n,name_ko=k,state=s,campus=fact(c,'apc' if i not in ['uq','qut','monash'] else i),short=short,slug=i+'-pharmacy') for i,n,k,s,c,short in university_rows]
 programs=[]; qualifications=[]; requirements=[]; english=[]; intakes=[]; tuition=[]; registration=[]; routes=[]; scholarships=[]; accommodation=[]
 for u in universities:
@@ -92,15 +94,16 @@ for u in universities:
  if i=='monash': title='Bachelor of Pharmacy (Honours) / Doctor of Pharmacy'
  if i=='sydney': title='Bachelor of Pharmacy (Honours) / Master of Pharmacy Practice'
  if i=='unsw': title='Bachelor of Pharmaceutical Medicine / Doctor of Pharmacy'
+ if i=='uwa': title='Bachelor of Human Sciences (Pharmaceutical Health) / Doctor of Pharmacy'
  duration=3 if i in ['jcu','utas'] else 5 if i in ['monash','sydney','unsw'] else 4
- src='jcu-guide' if i=='jcu' else i if i in ['utas','uq','monash','sydney'] else 'apc'
+ src='jcu-guide' if i=='jcu' else i if i in ['utas','uq','monash','sydney','uwa'] else 'apc'
  programs.append(dict(id=p,university_id=i,name=fact(title,i),duration_years=fact(duration,src),
    duration_label=fact('3년 Fast-track' if duration==3 else '5년 통합' if duration==5 else '4년',src),
    bachelor_award_year=fact(4,'monash') if i=='monash' else fact(None,i,note='학사 수여 시점과 통합과정 종료를 별도 확인') if duration==5 else fact(duration,src),
    four_year_exit=fact(True,'monash') if i=='monash' else fact(None,i) if duration==5 else fact(False,src,note='통합 5년 과정의 중간 Exit와 구분'),
    exit_degree=fact('Bachelor of Pharmacy (Honours)','monash') if i=='monash' else fact(None,i),
    final_degree=fact(title,i),
-   international_recruitment=fact(True,i) if i in ['jcu','utas','uq','adelaide','griffith','qut','rmit','newcastle','unisq','monash','sydney','unsw','curtin'] else fact(None,i,note='2027 국제학생 모집·대면 과정 최종 확인 중'),
+   international_recruitment=fact(True,i) if i in ['jcu','utas','uq','adelaide','griffith','qut','rmit','newcastle','unisq','monash','sydney','unsw','curtin','uwa'] else fact(None,i,note='2027 국제학생 모집·대면 과정 최종 확인 중'),
    accreditation=fact('APC accredited with conditions' if i in ['curtin','qut','newcastle','unisq','unsw'] else 'APC accredited','apc',note='2026-07-08 목록. 학위명 변경·캠퍼스·갱신은 지원 전 재확인.'),
    highlights=[], editorial='', review_items=[]))
  for q in ['csat','sat','ib','alevel','ossd','korean_high_school','ged','other']:
@@ -110,10 +113,10 @@ for u in universities:
  intakes.append(dict(program_id=p,route_id=p+'-direct',months=fact(None,i),label=fact(None,i)))
  tuition.append(dict(program_id=p,annual=fact(None,i),official_total=fact(None,i),currency='AUD',load_basis=fact(None,i),increase_note='연도별 인상 및 실제 수강량에 따라 달라질 수 있습니다.'))
  integrated=i in ['monash','sydney']
- rsrc=i if integrated or i in ['uq','rmit','newcastle','utas','unsw'] else 'apc'
- registration.append(dict(program_id=p,supervised_practice_in_degree=fact(integrated,rsrc) if integrated or i in ['uq','utas','rmit','unsw'] else fact(None,i),
-   itp_in_degree=fact(integrated,rsrc) if integrated or i in ['uq','utas','rmit','unsw'] else fact(None,i),
-   post_graduation_internship=fact(not integrated,rsrc) if integrated or i in ['uq','utas','rmit','unsw'] else fact(None,i),
+ rsrc=i if integrated or i in ['uq','rmit','newcastle','utas','unsw','uwa'] else 'apc'
+ registration.append(dict(program_id=p,supervised_practice_in_degree=fact(integrated,rsrc) if integrated or i in ['uq','utas','rmit','unsw','uwa'] else fact(None,i),
+   itp_in_degree=fact(integrated,rsrc) if integrated or i in ['uq','utas','rmit','unsw','uwa'] else fact(None,i),
+   post_graduation_internship=fact(not integrated,rsrc) if integrated or i in ['uq','utas','rmit','unsw','uwa'] else fact(None,i),
    provisional_registration=fact('실습 시작 전 Board 승인·등록 요건 확인','apc-exam'),
    exams=fact('등록 필기·구술시험 및 일반등록 심사 별도','apc-exam'),
    note='학위 취득만으로 호주 약사 일반등록이 자동 완료되지는 않습니다.'))
@@ -173,6 +176,9 @@ qual('sydney','csat',346,'표준점수 4개 합','국어 + 수학 + 사회/과�
 qual('sydney','sat',1300,'1600'); qual('sydney','ib',31,'45'); qual('sydney','alevel',14,'대학 환산점수','3과목/4과목 각각 14. A-level 성적을 대학 공식 환산식으로 계산해야 합니다.')
 q=next(x for x in qualifications if x['program_id']=='sydney-bpharm-hons' and x['qualification']=='korean_high_school');q['score']=fact(False,'sydney',note='Korean Senior High School Diploma는 이 Direct 환산표에서 assessable qualification이 아님')
 setp('unsw',highlights=['2027 PharmD 전환','5년 학위','졸업 후 Internship'],editorial='2027 학위명 변경과 인턴십 통합은 같은 의미가 아닙니다. 현재 과정 안내는 학위 후 별도 supervised internship을 설명합니다.',review_items=['새 PharmD 명칭의 APC/Board 승인 반영','신규 과정 2027 국가별 환산·학비'])
+setp('uwa',highlights=['4년 Bachelor + PharmD','고교 졸업 후 진학','졸업 후 Internship'],editorial='고교 졸업 후 시작하는 4년 통합 Bachelor + Doctor of Pharmacy 과정입니다. 학위 안의 실습과 졸업 후 Pharmacy Board 등록을 위한 supervised internship year를 구분해야 하며, 별도의 2년 Graduate Entry Doctor of Pharmacy 과정과도 다릅니다.',review_items=['2027 국제학생 학비','Foundation·브리징 경로 세부조건'])
+req('uwa','assumed','assumed',grade='Chemistry 및 Mathematics Applications/Methods 수준을 권장하며, 미충족 시 UWA 규정에 따라 foundation/bridging units가 요구될 수 있습니다.'); eng('uwa',7,{'L':7,'R':7,'W':7,'S':7}); intake('uwa',[2],'Semester 1 · 2월')
+qual('uwa','csat',329,'UWA 국제학력 환산점수'); qual('uwa','sat',1220,'1600'); qual('uwa','ib',30,'45'); qual('uwa','alevel',10,'UWA A-level 환산점수')
 
 # New UQ program remains a separate record with accreditation gate.
 import copy
