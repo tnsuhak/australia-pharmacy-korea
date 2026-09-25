@@ -1926,36 +1926,36 @@
         "note": ""
       },
       "bachelor_award_year": {
-        "value": null,
+        "value": 4,
         "academic_year": 2027,
-        "source_year": 2027,
-        "source_id": "sydney",
-        "source_url": "https://www.sydney.edu.au/dam/corporate/documents/study/how-to-apply/international-admission-guide.pdf",
-        "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
-        "note": "학사 수여 시점과 통합과정 종료를 별도 확인"
+        "source_year": 2026,
+        "source_id": "sydney-structure",
+        "source_url": "https://www.sydney.edu.au/handbooks/medicine-health/coursework/pharmacy/course-resolutions.html",
+        "source_type": "official_handbook",
+        "verified_date": "2026-09-25",
+        "status": "latest_published",
+        "note": ""
       },
       "four_year_exit": {
-        "value": null,
+        "value": true,
         "academic_year": 2027,
-        "source_year": 2027,
-        "source_id": "sydney",
-        "source_url": "https://www.sydney.edu.au/dam/corporate/documents/study/how-to-apply/international-admission-guide.pdf",
-        "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
+        "source_year": 2026,
+        "source_id": "sydney-structure",
+        "source_url": "https://www.sydney.edu.au/handbooks/medicine-health/coursework/pharmacy/course-resolutions.html",
+        "source_type": "official_handbook",
+        "verified_date": "2026-09-25",
+        "status": "latest_published",
         "note": ""
       },
       "exit_degree": {
-        "value": null,
+        "value": "Bachelor of Pharmacy (Honours)",
         "academic_year": 2027,
-        "source_year": 2027,
-        "source_id": "sydney",
-        "source_url": "https://www.sydney.edu.au/dam/corporate/documents/study/how-to-apply/international-admission-guide.pdf",
-        "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
+        "source_year": 2026,
+        "source_id": "sydney-structure",
+        "source_url": "https://www.sydney.edu.au/handbooks/medicine-health/coursework/pharmacy/course-resolutions.html",
+        "source_type": "official_handbook",
+        "verified_date": "2026-09-25",
+        "status": "latest_published",
         "note": ""
       },
       "final_degree": {
@@ -1993,20 +1993,18 @@
       },
       "highlights": [
         "5년 통합",
-        "2027 환산표",
+        "4년 BPharm(Hons) Exit",
         "Internship 통합"
       ],
-      "editorial": "5년 BPharm(Hons) / Master of Pharmacy Practice 과정입니다. 4년 후 학사 Exit가 있습니다.",
+      "editorial": "5년 Bachelor of Pharmacy (Honours) + Master of Pharmacy Practice 통합과정입니다. 현재 Course Resolutions는 1~4학년 192cp를 충족하면 Bachelor of Pharmacy (Honours)를 수여할 수 있고, 5학년 48cp가 Master of Pharmacy Practice임을 명시합니다.",
       "review_items": [
-        "4년 학사 Exit 조건과 학위명",
         "2027 Mathematics prerequisite 적용 여부",
         "USFP 수학 progression 조건"
       ],
       "decision_lens": {
         "why": [
-          "5년 BPharm(Hons) / Master of Pharmacy Practice",
-          "2027 수능·IB·SAT·A-level 공식 점수 공개",
-          "USFP Foundation 경로"
+          "4년 BPharm(Hons) 학사 Exit 가능 · 5학년 Master of Pharmacy Practice",
+          "5년 BPharm(Hons) / Master of Pharmacy Practice"
         ],
         "watch": [
           "Sydney는 지역 추가 485 대상 아님"
@@ -16355,11 +16353,11 @@
     },
     {
       "id": "sydney-structure",
-      "title": "Sydney Pharmacy · Course resolutions",
+      "title": "Sydney Pharmacy · current course resolutions",
       "url": "https://www.sydney.edu.au/handbooks/medicine-health/coursework/pharmacy/course-resolutions.html",
-      "source_year": null,
+      "source_year": 2026,
       "source_type": "official_handbook",
-      "verified_date": "2026-09-24"
+      "verified_date": "2026-09-25"
     },
     {
       "id": "sydney-guide",
