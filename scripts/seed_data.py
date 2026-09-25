@@ -100,7 +100,7 @@ source('griffith-2026-guide','Griffith University · 2026 International Student 
 course_urls={
  'jcu':'https://www.jcu.edu.au/courses/bachelor-of-pharmacy-honours',
  'utas':'https://www.utas.edu.au/courses/health/courses/54d-bachelor-of-pharmacy-with-honours',
- 'curtin':'https://www.curtin.edu.au/study/offering/course-ug-bachelor-of-pharmacy-honours--bh-pharm/?region=int',
+ 'curtin':'https://www.curtin.edu.au/study/offering/course-ug-bachelor-of-pharmacy-honours--bh-pharma/',
  'uq':'https://study.uq.edu.au/study-options/programs/bachelor-pharmacy-honours-2373',
  'uq-pharmd':'https://study.uq.edu.au/study-options/programs/bachelor-pharmaceutics-and-therapeutic-science-doctor-pharmacy-2577?year=2027',
  'adelaide':'https://adelaide.edu.au/study/degrees/bachelor-of-pharmacy-honours/',
@@ -224,7 +224,7 @@ setp('jcu',highlights=['3년 Fast-track','화학 권장','2월 입학'],editoria
 req('jcu','recommended','required',grade='English와 General Mathematics 또는 동등 수준. Chemistry 권장.',src='jcu-guide'); intake('jcu',[2],'2월','jcu-guide'); fee('jcu',31710,src='jcu-fee-2026',year=2026); eng('jcu',7.0,{'L':6.5,'R':6.5,'W':6.5,'S':6.5},src='jcu-guide',pte=65,pte_each=58)
 setp('utas',highlights=['3년 Fast-track','2027 학비 공개','Hobart 숙소'],editorial='4년 약학과를 3년에 압축해 공부합니다. 1년 수강량이 많습니다.')
 fee('utas',61267,total=198050,load='연간 133 credit points 기준'); eng('utas',6.5,{'L':6,'R':6,'W':6,'S':6},src='utas'); intake('utas',None,'Semester 1 · Cradle Coast / Hobart / Launceston',src='utas'); req('utas','required','required','recommended','accepted','수학 1과목 + Chemistry 또는 Physical Sciences에서 satisfactory achievement',src='utas')
-setp('curtin',highlights=['College → Year 2','175 credits','진급 CWA 확인'],editorial='Curtin College Diploma 후 약대 2학년으로 진학합니다. Stage 2 CWA 70%와 PHAR1002가 필요합니다.',review_items=['약 3년 9개월 운영 일정 재확인','국제학생 2027 학비','Global Merit의 Pharmacy 제외 여부']); eng('curtin',7.0,{'L':7,'R':7,'W':7,'S':7},src='curtin-pharmacy-current-guide')
+setp('curtin',highlights=['College → Year 2','175 credits','진급 CWA 확인'],editorial='Curtin College Diploma 후 약대 2학년으로 진학합니다. Stage 2 CWA 70%와 PHAR1002가 필요합니다.',review_items=['국제학생 2027 학비','2027 국제학생 Direct 시작월','Global Merit의 Pharmacy 제외 여부']); eng('curtin',7.0,{'L':7,'R':7,'W':7,'S':7},src='curtin')
 setp('uq',duration_label=fact('2월 4년 · 7월 약 3.5년','uq'),highlights=['2월 4년','7월 3.5년','Accelerated Foundation'],editorial='2월 입학은 4년, 7월 입학은 약 3.5년입니다. 새 5년 PharmD와는 다른 과정입니다.')
 req('uq','required','required','recommended',grade='English·수학·Chemistry: Queensland Year 12 C 또는 동등 수준.'); intake('uq',[2,7],'2월 22일 / 7월 26일'); fee('uq',60952,load='16 units 기준')
 eng('uq',6.5,{'L':6,'R':6,'W':6,'S':6},pte=64,pte_each=60,toefl={'overall':87,'L':19,'R':19,'W':21,'S':19})
@@ -378,8 +378,8 @@ for route_record in routes:
 
 # Additional course-specific official checks, 2026-09-24.
 source('curtin-structure','Curtin · 2026 개편 Pharmacy 구조','https://www.curtin.edu.au/news/advice/how-to-become-a-pharmacist/',2026,'official_course')
-setp('curtin',duration_years=fact(3.75,'curtin-structure'),duration_label=fact('3년 9개월','curtin-structure'),bachelor_award_year=fact(3.75,'curtin-structure'),highlights=['3년 9개월','Diploma → 2학년','Perth · Regional'],editorial='Bachelor of Pharmacy (Honours)는 3년 9개월입니다. Curtin College Pharmacy Diploma 후에는 약대 2학년으로 진학합니다.',review_items=['2027 국제학생 학비']); intake('curtin',[2],'Semester 1 · 2월',src='curtin')
-req('curtin','required','required','recommended',grade='Chemistry와 Mathematics ATAR 또는 인정 동등 과목. Biology/Human Biology는 권장.',src='curtin-structure')
+setp('curtin',duration_years=fact(3.75,'curtin'),duration_label=fact('3년 9개월','curtin'),bachelor_award_year=fact(3.75,'curtin'),highlights=['3년 9개월','Diploma → 2학년','Perth · Regional'],editorial='현재 Curtin 공식 과정 페이지는 Bachelor of Pharmacy (Honours)를 3년 9개월로 안내합니다. 2027 국제학생 Direct 시작월과 학비는 아직 과정 페이지에 표시되지 않아 확인 중입니다.',review_items=['2027 국제학생 학비','2027 국제학생 Direct 시작월']); intake('curtin',None,None,src='curtin')
+req('curtin','required','required','recommended',grade='Chemistry와 Mathematics Applications 또는 인정 동등 과목. Biology/Human Biology는 권장.',src='curtin')
 row(registration,'curtin').update(supervised_practice_in_degree=fact(False,'curtin-structure'),post_graduation_internship=fact(True,'curtin-structure'))
 source('unisq-course','UniSQ · International Bachelor of Pharmacy (Honours)','https://www.unisq.edu.au/study/degrees-and-courses/bachelor-of-pharmacy-honours?studentType=international',None,'official_course')
 eng('unisq',7,{'L':7,'R':7,'W':6.5,'S':7},src='unisq-course')
