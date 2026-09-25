@@ -227,10 +227,11 @@ setp('qut',highlights=['수학 + 화학','4년 학사','영어 조건 비교'],e
 req('qut','assumed','assumed',grade='Chemistry + Mathematical Methods/Specialist Mathematics는 assumed knowledge',src='qut-fee-2027'); eng('qut',6.5,{'L':6,'R':6,'W':6,'S':6},pte=58,pte_each=50,toefl={'overall':79,'L':16,'R':16,'W':21,'S':18}); intake('qut',[2],'2월',src='qut-fee-2027'); fee('qut',46200,src='qut-fee-2027',year=2027,load='96 credit points 기준')
 setp('rmit',highlights=['4년 학사','2027 학비 공개','Other Pathway'],editorial='약대 영어기준을 따로 봅니다. Associate Degree는 1년 Diploma와 다른 경로입니다.')
 req('rmit','required','required',grade='VCE Chemistry 25, Mathematics 25 또는 인정되는 동등 수준.'); fee('rmit',49920,year=2027); intake('rmit',[2],'Semester 1 · 2027년 3월 1일 수업 시작',src='rmit-2027-apply')
-eng('rmit',7,{'L':6.5,'R':6.5,'W':6.5,'S':6.5},src='rmit-english',status='pending_2027')
-for k in ['ielts_overall','ielts_bands']:row(english,'rmit')[k]['note']='Pharmacy 전용 표는 확인. 국제학생 course 조건과 적용 범위 대조 완료 전 자동 충족 판정 제외.'
+eng('rmit',7,{'L':6.5,'R':6.5,'W':6.5,'S':6.5},src='rmit-english',pte=65,pte_each=58,toefl={'overall':94,'R':19,'L':20,'S':20,'W':24})
 setp('newcastle',highlights=['4년 학사','Foundation 연계','영어 재확인'],editorial='영어조건 자료가 서로 달라 2027 기준 발표를 기다리고 있습니다.',review_items=['Pharmacy 영어조건 자료 충돌','2027 CSAT·SAT·IB course-specific 값','APC 인증 갱신: 현재 목록 종료일 2026-12-31'])
-eng('newcastle',7,{'L':7,'R':7,'W':7,'S':7},src='newcastle-2027-course'); intake('newcastle',[2],'Semester 1 · 2027년 2월 22일',src='newcastle-2027-course'); req('newcastle','assumed','assumed',physics='assumed',grade='Assumed knowledge: Mathematics, English Advanced, Chemistry, Physics',src='newcastle-2026-ug'); fee('newcastle',49205,src='newcastle-fee-2027',year=2027,load='80 units 기준')
+eng('newcastle',7,{'L':7,'R':7,'W':7,'S':7},src='newcastle-2027-course',status='source_conflict');
+for k in ['ielts_overall','ielts_bands']:row(english,'newcastle')[k]['note']='공식 과정페이지에 6.5/6.5와 7.0/7.0 표기가 함께 노출되고 공식 국제 가이드도 연도별 차이가 있어 2027 지원 전 서면 확인 필요.'
+intake('newcastle',[2],'Semester 1 · 2027년 2월 22일',src='newcastle-2027-course'); req('newcastle','assumed','assumed',physics='assumed',grade='Assumed knowledge: Mathematics, English Advanced, Chemistry, Physics',src='newcastle-2026-ug'); fee('newcastle',49205,src='newcastle-fee-2027',year=2027,load='80 units 기준')
 setp('canberra',highlights=['Canberra','학부 약학 과정','모집 확인 중'],editorial='APC 학부 약학 인증 목록과 실제 국제학생 모집은 서로 다른 확인 항목입니다. 2027 국제학생 course offer를 확인 중입니다.'); fee('canberra',42500,src='canberra-guide-2027',year=2027)
 setp('unisq',highlights=['T1 only','Toowoomba','2027 개설표'],editorial='2027 국제학생 대면 수업은 Trimester 1에 표시됩니다. 개설 안내서는 9월 28일 확정 예정이므로 최종 일정 확인이 필요합니다.')
 intake('unisq',None,'2027 국제학생 Trimester 1 only · 최종 개설 확정 대기')
