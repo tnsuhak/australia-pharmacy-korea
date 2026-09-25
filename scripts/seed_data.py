@@ -86,6 +86,8 @@ source('curtin-pharmacy-current-guide','Curtin · Pharmacy English requirement g
 source('newcastle-2027-course','University of Newcastle · Bachelor of Pharmacy (Honours) current 2027 entry','https://www.newcastle.edu.au/degrees/bachelor-of-pharmacy-honours',2027,'official_course')
 source('newcastle-2026-ug','University of Newcastle · 2026 Undergraduate Degrees guide','https://www.newcastle.edu.au/__data/assets/pdf_file/0012/978438/2026-1088_UG-Prospectus_v3.6_WEB.pdf',2026,'official_guide')
 source('monash-pps-2026','Monash Pharmacy and Pharmaceutical Sciences · International UG Course Guide 2026','https://www.monash.edu/__data/assets/pdf_file/0004/4091809/Monash-University-PPS-International-UG-Course-Guide-2026.pdf',2026,'official_guide')
+source('latrobe-health-guide','La Trobe · International Health Discipline Handbook · Pharmacy','https://www.latrobe.edu.au/international/documents/international-handbooks/LTU-Health-Discipline-Handbook.pdf',2026,'official_guide')
+source('griffith-2026-guide','Griffith University · 2026 International Student Guide · Pharmacy','https://www.griffith.edu.au/__data/assets/pdf_file/0035/2193587/Griffith-University-2026-International-Study-Guide-Digital.pdf',2026,'official_guide')
 course_urls={
  'jcu':'https://www.jcu.edu.au/courses/bachelor-of-pharmacy-honours',
  'utas':'https://www.utas.edu.au/courses/health/courses/54d-bachelor-of-pharmacy-with-honours',
@@ -216,10 +218,10 @@ req('uq','required','required','recommended',grade='English·수학·Chemistry: 
 eng('uq',6.5,{'L':6,'R':6,'W':6,'S':6},pte=64,pte_each=60,toefl={'overall':87,'L':19,'R':19,'W':21,'S':19})
 setp('adelaide',highlights=['4년 학사','7월은 학점인정 조건부'],editorial='일반 Direct는 2월 시작입니다. 7월 입학은 학점이 인정된 국제학생을 개별 심사합니다.')
 intake('adelaide',[2],'2월 · 7월은 학점 인정 시 개별 심사'); fee('adelaide',54300,src='adelaide-fee-current'); req('adelaide','accepted','not_required','accepted','accepted','Biology, Chemistry 또는 Physics 중 1과목 또는 동등 수준',src='adelaide'); eng('adelaide',6.5,{'L':6,'R':6,'W':6,'S':6},src='adelaide')
-setp('griffith',highlights=['Diploma → 2학년','80CP 인정','20% 자동심사'],editorial='Direct 입학과 Griffith College Diploma 경로가 있습니다. Griffith College Diploma 후 80CP를 인정받고 약대 2학년으로 진학합니다.')
-setp('latrobe',highlights=['Bendigo','4년 학사','숙소 2026 참고'],editorial='Bendigo 캠퍼스 약대입니다. 2027 선수과목은 업데이트 대기입니다.',review_items=['2027 국제학생 모집','2027 선수과목·영어·학비','Health Innovation 및 High Achiever 약대 적용']); intake('latrobe',[3],'Semester 1 · 2027년 3월',src='latrobe-2027-course')
+setp('griffith',highlights=['Diploma → 2학년','80CP 인정','20% 자동심사'],editorial='Direct 입학과 Griffith College Diploma 경로가 있습니다. Griffith College Diploma 후 80CP를 인정받고 약대 2학년으로 진학합니다.'); intake('griffith',[3,7],'3월 · 7월 (2026 공개 기준)',src='griffith-2026-guide'); eng('griffith',7.0,None,src='griffith-2026-guide')
+setp('latrobe',highlights=['Bendigo','4년 학사','숙소 2026 참고'],editorial='Bendigo 캠퍼스 약대입니다. 2027 학비는 업데이트 대기입니다.',review_items=['2027 국제학생 학비']); intake('latrobe',[3],'Semester 1 · 2027년 3월',src='latrobe-2027-course'); req('latrobe','not_required','not_required','not_required','not_required','별도 과학 선수과목 없음 · 영어 prerequisite만 적용',src='latrobe-health-guide'); eng('latrobe',6.5,{'L':6.5,'R':6.5,'W':6.5,'S':6.5},src='latrobe-health-guide')
 setp('qut',highlights=['수학 + 화학','4년 학사','영어 조건 비교'],editorial='수학과 화학이 필요합니다. 영어는 약대 기준을 적용합니다.')
-req('qut','required','required',grade='Mathematical Methods 계열 및 Chemistry 동등 과목 확인',src='qut-guide'); eng('qut',6.5,{'L':6,'R':6,'W':6,'S':6},pte=58,pte_each=50,toefl={'overall':79,'L':16,'R':16,'W':21,'S':18}); fee('qut',46200,src='qut-fee-2027',year=2027,load='96 credit points 기준')
+req('qut','assumed','assumed',grade='Chemistry + Mathematical Methods/Specialist Mathematics는 assumed knowledge',src='qut-fee-2027'); eng('qut',6.5,{'L':6,'R':6,'W':6,'S':6},pte=58,pte_each=50,toefl={'overall':79,'L':16,'R':16,'W':21,'S':18}); intake('qut',[2],'2월',src='qut-fee-2027'); fee('qut',46200,src='qut-fee-2027',year=2027,load='96 credit points 기준')
 setp('rmit',highlights=['4년 학사','2027 학비 공개','Other Pathway'],editorial='약대 영어기준을 따로 봅니다. Associate Degree는 1년 Diploma와 다른 경로입니다.')
 req('rmit','required','required',grade='VCE Chemistry 25, Mathematics 25 또는 인정되는 동등 수준.'); fee('rmit',49920,year=2027); intake('rmit',[2],'Semester 1 · 2027년 3월 1일 수업 시작',src='rmit-2027-apply')
 eng('rmit',7,{'L':6.5,'R':6.5,'W':6.5,'S':6.5},src='rmit-english',status='pending_2027')
