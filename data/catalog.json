@@ -9267,9 +9267,9 @@
         "source_id": "rmit-english",
         "source_url": "https://www.rmit.edu.au/study-with-us/applying-to-rmit/local-student-applications/entry-requirements/minimum-english-language-requirement",
         "source_type": "official_admissions",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
-        "note": "Pharmacy 전용 표는 확인. 국제학생 course 조건과 적용 범위 대조 완료 전 자동 충족 판정 제외."
+        "verified_date": "2026-09-25",
+        "status": "latest_published",
+        "note": "RMIT current Pharmacy-specific English exception."
       },
       "ielts_bands": {
         "value": {
@@ -9283,41 +9283,47 @@
         "source_id": "rmit-english",
         "source_url": "https://www.rmit.edu.au/study-with-us/applying-to-rmit/local-student-applications/entry-requirements/minimum-english-language-requirement",
         "source_type": "official_admissions",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
-        "note": "Pharmacy 전용 표는 확인. 국제학생 course 조건과 적용 범위 대조 완료 전 자동 충족 판정 제외."
+        "verified_date": "2026-09-25",
+        "status": "latest_published",
+        "note": "No individual IELTS band below 6.5."
       },
       "pte_overall": {
-        "value": null,
+        "value": 65,
         "academic_year": 2027,
         "source_year": null,
         "source_id": "rmit",
         "source_url": "https://www.rmit.edu.au/study-with-us/levels-of-study/undergraduate-study/honours-degrees/bachelor-of-pharmacy-honours-bh102",
         "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
+        "verified_date": "2026-09-25",
+        "status": "latest_published",
         "note": ""
       },
       "pte_each": {
-        "value": null,
+        "value": 58,
         "academic_year": 2027,
         "source_year": null,
         "source_id": "rmit",
         "source_url": "https://www.rmit.edu.au/study-with-us/levels-of-study/undergraduate-study/honours-degrees/bachelor-of-pharmacy-honours-bh102",
         "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
+        "verified_date": "2026-09-25",
+        "status": "latest_published",
         "note": ""
       },
       "toefl": {
-        "value": null,
+        "value": {
+          "overall": 94,
+          "R": 19,
+          "L": 20,
+          "S": 20,
+          "W": 24
+        },
         "academic_year": 2027,
         "source_year": null,
         "source_id": "rmit",
         "source_url": "https://www.rmit.edu.au/study-with-us/levels-of-study/undergraduate-study/honours-degrees/bachelor-of-pharmacy-honours-bh102",
         "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
+        "verified_date": "2026-09-25",
+        "status": "latest_published",
         "note": ""
       }
     },
@@ -9331,8 +9337,8 @@
         "source_url": "https://www.newcastle.edu.au/degrees/bachelor-of-pharmacy-honours",
         "source_type": "official_course",
         "verified_date": "2026-09-25",
-        "status": "confirmed_2027",
-        "note": ""
+        "status": "source_conflict",
+        "note": "Newcastle 공식 과정페이지에 6.5/6.5와 7.0/7.0 표기가 함께 노출되고 공식 국제 가이드도 연도별 차이가 있어, 2027 지원 전 서면 확인이 필요합니다."
       },
       "ielts_bands": {
         "value": {
@@ -9347,8 +9353,8 @@
         "source_url": "https://www.newcastle.edu.au/degrees/bachelor-of-pharmacy-honours",
         "source_type": "official_course",
         "verified_date": "2026-09-25",
-        "status": "confirmed_2027",
-        "note": ""
+        "status": "source_conflict",
+        "note": "Newcastle 공식 과정페이지에 6.5/6.5와 7.0/7.0 표기가 함께 노출되고 공식 국제 가이드도 연도별 차이가 있어, 2027 지원 전 서면 확인이 필요합니다."
       },
       "pte_overall": {
         "value": null,
