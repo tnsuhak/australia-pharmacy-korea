@@ -144,6 +144,8 @@
 | griffith-college-2027-guide | [Griffith College · International Quick Guide 2026–2027 · Health Sciences to Pharmacy](https://www.griffithcollege.edu.au/wp-content/uploads/Griffith-College-International-Quick-Guide-2026-2027.pdf) | 2027 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
 | griffith-college-health | [Griffith College · Diploma of Health Sciences](https://www.griffithcollege.edu.au/study-options/diploma/health-sciences/) | 페이지별 확인 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
 | griffith-college-dates-2027 | [Griffith College · 2027 key dates](https://www.griffithcollege.edu.au/student-life/key-dates/) | 2027 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
+| rmit-associate-current | [RMIT Associate Degree in Applied Science · Pharmacy further study credit](https://www.rmit.edu.au/study-with-us/levels-of-study/undergraduate-study/associate-degrees/ad012) | 페이지별 확인 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
+| rmit-associate-2027 | [RMIT Associate Degree in Applied Science · 2027 international fee/intake](https://www.rmit.edu.au/study-with-us/levels-of-study/undergraduate-study/associate-degrees/associate-degree-in-applied-science-ad012/apply-now) | 2027 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
 
 ## 운영 메모
 
