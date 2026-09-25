@@ -118,3 +118,9 @@ Newcastle 영어의 2개 fact가 source_conflict 상태입니다. Curtin progres
 ## 검토본 열기
 
 ZIP 압축을 푼 뒤 `offline-preview/index.html`을 브라우저에서 여세요. 내부 페이지, CSS, 폰트, 필터 스크립트가 함께 들어 있습니다. `dist`는 호스팅용, `offline-preview`는 상대경로 검토용입니다. 어느 쪽도 실제 Netlify Deploy Preview URL을 대체했다고 보고하지 않습니다.
+
+
+## Netlify preview trigger
+
+- Netlify project linked to GitHub after PR creation.
+- This feature-branch update is intended to trigger a Deploy Preview only; do not merge to main yet.
