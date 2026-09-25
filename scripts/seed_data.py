@@ -175,6 +175,7 @@ university_rows=[
  ('unsw','UNSW Sydney','뉴사우스웨일스대학교','NSW','Sydney · Kensington','UNSW'),
  ('uwa','The University of Western Australia','서호주대학교','WA','Perth · Crawley','UWA')]
 universities=[dict(id=i,name=n,name_ko=k,state=s,campus=fact(c,'apc' if i not in ['uq','qut','monash'] else i),short=short,slug=i+'-pharmacy') for i,n,k,s,c,short in university_rows]
+next(u for u in universities if u['id']=='jcu')['campus']=fact('Townsville · Cairns · Mackay','jcu-2027-campus')
 source('unisq-pharmacy-current','UniSQ · Bachelor of Pharmacy (Honours) current international entry requirements','https://www.unisq.edu.au/study/degrees-and-courses/bachelor-of-pharmacy-honours?studentType=international',2027,'official_course')
 programs=[]; qualifications=[]; requirements=[]; english=[]; intakes=[]; tuition=[]; registration=[]; routes=[]; scholarships=[]; accommodation=[]
 for u in universities:
@@ -232,7 +233,7 @@ def qual(i,q,score,scale,calc=''):
  r=next(x for x in qualifications if x['program_id']==i+'-bpharm-hons' and x['qualification']==q)
  r.update(score=fact(score,i),scale=scale,calculation=calc)
 
-setp('jcu',highlights=['3년 Fast-track','화학 권장','2월 입학'],editorial='화학은 필수가 아닙니다. 3년 Fast-track이라 학업 속도가 빠릅니다.',review_items=['2027 국제학생 학비','한국 학력 환산표'])
+setp('jcu',highlights=['3년 Fast-track','Townsville · Cairns · Mackay','화학 권장 · 수학 필수'],editorial='2027 공식 course changes에서 Townsville·Cairns·Mackay 모두 2월 시작의 3년 Trimester 과정으로 확인됩니다. 현재 국제학생 course page도 세 캠퍼스를 모두 표시하지만 학비는 아직 2026 A$31,710을 보여주므로 2027 학비로 승격하지 않습니다.',review_items=['2027 국제학생 학비','한국 학력 환산표'])
 req('jcu','recommended','required',grade='English와 General Mathematics 또는 동등 수준. Chemistry 권장.',src='jcu-guide'); intake('jcu',[2],'2월','jcu-guide'); fee('jcu',31710,src='jcu-fee-2026',year=2026); eng('jcu',7.0,{'L':6.5,'R':6.5,'W':6.5,'S':6.5},src='jcu-guide',pte=65,pte_each=58)
 setp('utas',highlights=['3년 Fast-track','2027 학비 공개','Hobart 숙소'],editorial='4년 약학과를 3년에 압축해 공부합니다. 1년 수강량이 많습니다.')
 fee('utas',61267,total=198050,load='연간 133 credit points 기준'); eng('utas',6.5,{'L':6,'R':6,'W':6,'S':6},src='utas'); intake('utas',None,'Semester 1 · Cradle Coast / Hobart / Launceston',src='utas'); req('utas','required','required','recommended','accepted','수학 1과목 + Chemistry 또는 Physical Sciences에서 satisfactory achievement',src='utas')
