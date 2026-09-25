@@ -5,13 +5,13 @@
 | ID | 자료 | 출처 연도 | 원문 상태 |
 |---|---|---|---|
 | apc | [APC 호주 약학 학위 인증 목록 · 2026-07-08 기준](https://www.pharmacycouncil.org.au/education-provider/accreditation/pharmacy-degree-programs-australia/accredited-pharmacy-degree-programs/) | 2026 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
-| board | [Pharmacy Board · Internships](https://www.pharmacyboard.gov.au/Registration/Internships.aspx) | 페이지별 확인 | 공식 regulator · 접근 제한 가능 |
+| board | [Pharmacy Board · Internships](https://www.pharmacyboard.gov.au/Registration/Internships.aspx) | 페이지별 확인 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
 | apc-exam | [APC · Intern written examination](https://www.pharmacycouncil.org.au/pharmacist/skills-assessment/intern-written-exam/) | 페이지별 확인 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
 | korea-law | [약사법 제3조 · 2026-09-11 시행](https://law.go.kr/lsLawLinkInfo.do?chrClsCd=010202&lsJoLnkSeq=1000328184) | 2026 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
 | kuksiwon | [국시원 · 외국대학 인정기준](https://www.kuksiwon.or.kr/infoOpen/list.do?seq=82) | 페이지별 확인 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
 | jcu | [JCU Pharmacy · 공식 과정/입학 안내](https://www.jcu.edu.au/courses/bachelor-of-pharmacy-honours) | 페이지별 확인 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
 | utas | [UTAS Pharmacy · 공식 과정/입학 안내](https://www.utas.edu.au/courses/health/courses/54d-bachelor-of-pharmacy-with-honours) | 2027 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
-| curtin | [CURTIN Pharmacy · 공식 과정/입학 안내](https://www.curtin.edu.au/study/offering/course-ug-bachelor-of-pharmacy-honours--bh-pharm/?region=int) | 페이지별 확인 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
+| curtin | [CURTIN Pharmacy · Bachelor of Pharmacy (Honours) · 공식 과정/입학 안내](https://www.curtin.edu.au/study/offering/course-ug-bachelor-of-pharmacy-honours--bh-pharma/) | 페이지별 확인 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
 | uq | [UQ Pharmacy · 공식 과정/입학 안내](https://study.uq.edu.au/study-options/programs/bachelor-pharmacy-honours-2373) | 2027 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
 | uq-pharmd | [UQ-PHARMD Pharmacy · 공식 과정/입학 안내](https://study.uq.edu.au/study-options/programs/bachelor-pharmaceutics-and-therapeutic-science-doctor-pharmacy-2577?year=2027) | 2027 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
 | adelaide | [ADELAIDE Pharmacy · 공식 과정/입학 안내](https://adelaide.edu.au/study/degrees/bachelor-of-pharmacy-honours/) | 페이지별 확인 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
