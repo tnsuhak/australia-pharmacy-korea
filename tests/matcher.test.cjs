@@ -22,7 +22,7 @@ test('4년 Exit 미확인 Sydney를 자동 통과시키지 않음',()=>{assert.e
 test('졸업자는 Monash GE도 추가 대학 과목 심사 필요',()=>{assert.equal(check('monash-bpharm-hons',{qualification:'graduate'}).state,'pending');assert.equal(check('jcu-bpharm-hons',{qualification:'graduate'}).state,'excluded');});
 test('UNSW 20%는 한국 국적 기본 장학 필터에 포함되지 않음',()=>{assert.equal(check('unsw-bpharm-hons',{cost:'20'}).state,'excluded');assert.equal(check('sydney-bpharm-hons',{cost:'20'}).state,'match');});
 test('장학 적용 미확인은 할인 가능으로 통과하지 않음',()=>assert.equal(check('curtin-bpharm-hons',{cost:'20'}).state,'pending'));
-test('Griffith Diploma와 2개 협약이 유지됨',()=>{assert.equal(check('griffith-bpharm-hons',{route:'diploma'}).state,'match');const r=catalog.entry_routes.filter(x=>x.program_id==='griffith-bpharm-hons'&&x.type==='diploma');assert.equal(r.length,2);assert.ok(r.every(x=>x.credit.value===80));});
+test('Griffith 공개 Diploma 경로는 Griffith College만 유지',()=>{assert.equal(check('griffith-bpharm-hons',{route:'diploma'}).state,'match');const r=catalog.entry_routes.filter(x=>x.program_id==='griffith-bpharm-hons'&&x.type==='diploma');assert.equal(r.length,1);assert.equal(r[0].id,'griffith-college');assert.equal(r[0].credit.value,80);assert.equal(catalog.entry_routes.some(x=>x.id==='unicentre-korea'),false);});
 test('RMIT Associate Degree는 1년 Diploma가 아님',()=>{const r=catalog.entry_routes.find(x=>x.id==='rmit-associate');assert.equal(r.type,'other');assert.equal(r.availability.status,'pending_2027');});
 test('공식 총학비를 연간금액×기간으로 생성하지 않음',()=>{assert.equal(catalog.tuition.find(x=>x.program_id==='utas-bpharm-hons').official_total.value,198050);assert.equal(catalog.tuition.find(x=>x.program_id==='sydney-bpharm-hons').official_total.value,null);});
 
