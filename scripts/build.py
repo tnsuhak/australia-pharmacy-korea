@@ -25,7 +25,7 @@ QUAL={'csat':'수능 CSAT','ib':'IB','alevel':'A-level','sat':'SAT','ossd':'OSSD
 ROUTE={'direct':'Direct Entry','foundation':'Foundation','diploma':'Diploma / IYO','graduate':'Graduate Entry','other':'기타 입학방법'}
 MAIN_ROUTE={'foundation':'Foundation','diploma':'1학년 Diploma / IYO','direct':'Direct Entry'}
 PREREQ={'required':'필수','recommended':'권장','not_required':'필수 아님','accepted':'인정','assumed':'선행지식 · 브리징 가능'}
-ASSESS={'automatic':'자동심사형','application':'신청·서류심사형','competitive':'경쟁형','guaranteed':'보장형','not_eligible':'한국 국적 대상 아님','pending':'적용 확인 중'}
+ASSESS={'automatic':'자동심사','application':'별도 신청','competitive':'경쟁 선발','guaranteed':'조건 충족 시 자동','course_excluded':'약대 제외','not_eligible':'한국 국적 대상 아님','pending':'2027 확인 중'}
 pages={}
 def E(x):return esc(str(x),quote=True)
 def value(f,default='확인 중'):
@@ -245,9 +245,14 @@ def routecards(rs):
 def scholarcards(ss):
     out=''
     for s in ss:
-        amount='확인 중' if s['amount']['value'] is None else value(s['amount'])+'%'
-        fields=[('금액',fv(s['amount'],lambda _:amount)),('심사',ASSESS[s['assessment']]),('자동심사',fv(s['automatic_assessment'])),('별도 신청',fv(s['separate_application'])),('경쟁 선발',fv(s['competitive'])),('기간',fv(s['duration'])),('학업 기준',fv(s['academic_threshold'])),('유지 조건',fv(s['renewal_condition'])),('한국 국적 대상',fv(s['country_eligibility'])),('약대 적용',fv(s['pharmacy_eligible'])),('인원',fv(s['number_available'])),('과정 제외',fv(s['course_exclusion']))]
-        out+=f'<article class="route-detail"><span class="pill-label">{ASSESS[s["assessment"]]}</span><h3>{E(s["name"])}</h3><dl>'+''.join(f'<dt>{k}</dt><dd>{v}</dd>' for k,v in fields)+f'</dl><p>{E(s["note"])}</p></article>'
+        av=s['amount']['value']
+        if av is None:amount='2027 발표 대기'
+        elif isinstance(av,list):amount=' / '.join(str(x)+'%' for x in av)
+        else:amount=str(av)+'%'
+        fields=[('장학금',fv(s['amount'],lambda _:amount)),('심사방식',ASSESS[s['assessment']])]
+        optional=[('자동심사',s['automatic_assessment']),('별도 신청',s['separate_application']),('경쟁 선발',s['competitive']),('적용 기간',s['duration']),('성적 기준',s['academic_threshold']),('유지 조건',s['renewal_condition']),('한국 학생',s['country_eligibility']),('약대 적용',s['pharmacy_eligible']),('선발 인원',s['number_available']),('제외 과정',s['course_exclusion'])]
+        fields += [(label,fv(f)) for label,f in optional if f.get('value') is not None]
+        out+=f'<article class="route-detail scholarship-card"><span class="pill-label">{ASSESS[s["assessment"]]}</span><h3>{E(s["name"])}</h3><dl>'+''.join(f'<dt>{k}</dt><dd>{v}</dd>' for k,v in fields)+f'</dl><p>{E(s["note"])}</p></article>'
     return '<div class="route-cards">'+out+'</div>'
 def housingcards(hh):
     out=''
