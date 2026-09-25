@@ -86,6 +86,9 @@ source('curtin-pharmacy-current-guide','Curtin · Pharmacy English requirement g
 source('newcastle-2027-course','University of Newcastle · Bachelor of Pharmacy (Honours) current 2027 entry','https://www.newcastle.edu.au/degrees/bachelor-of-pharmacy-honours',2027,'official_course')
 source('newcastle-2026-ug','University of Newcastle · 2026 Undergraduate Degrees guide','https://www.newcastle.edu.au/__data/assets/pdf_file/0012/978438/2026-1088_UG-Prospectus_v3.6_WEB.pdf',2026,'official_guide')
 source('monash-pps-2026','Monash Pharmacy and Pharmaceutical Sciences · International UG Course Guide 2026','https://www.monash.edu/__data/assets/pdf_file/0004/4091809/Monash-University-PPS-International-UG-Course-Guide-2026.pdf',2026,'official_guide')
+source('jcu-intl-2025','JCU 2025 International Guide · Pharmacy entry scores','https://www.jcu.edu.au/__data/assets/pdf_file/0018/2205414/2025-International-Guide.pdf',2025,'official_guide')
+source('newcastle-prospectus-2027','University of Newcastle · 2027 International Prospectus','https://www.newcastle.edu.au/__data/assets/pdf_file/0020/1102565/2025-1079-International-Prospectus-2027-ROW.pdf',2027,'official_guide')
+source('adelaide-pharmacy-current','Adelaide University · Bachelor of Pharmacy (Honours) international entry requirements','https://adelaide.edu.au/study/degrees/bachelor-of-pharmacy-honours/',None,'official_course')
 source('latrobe-health-guide','La Trobe · International Health Discipline Handbook · Pharmacy','https://www.latrobe.edu.au/international/documents/international-handbooks/LTU-Health-Discipline-Handbook.pdf',2026,'official_guide')
 source('griffith-2026-guide','Griffith University · 2026 International Student Guide · Pharmacy','https://www.griffith.edu.au/__data/assets/pdf_file/0035/2193587/Griffith-University-2026-International-Study-Guide-Digital.pdf',2026,'official_guide')
 course_urls={
@@ -243,6 +246,16 @@ setp('unsw',highlights=['2027 PharmD 전환','5년 학위','졸업 후 Internshi
 setp('uwa',highlights=['4년 Bachelor + PharmD','고교 졸업 후 진학','졸업 후 Internship'],editorial='고교 졸업 후 4년 동안 Bachelor + Doctor of Pharmacy를 함께 취득합니다. 졸업 후 인턴십은 따로 합니다.',review_items=['2027 국제학생 학비'])
 req('uwa','assumed','assumed',grade='Chemistry 및 Mathematics Applications/Methods 수준을 권장하며, 미충족 시 UWA 규정에 따라 foundation/bridging units가 요구될 수 있습니다.'); eng('uwa',7,{'L':7,'R':7,'W':7,'S':7}); intake('uwa',[2],'Semester 1 · 2월')
 qual('uwa','csat',329,'UWA 국제학력 환산점수'); qual('uwa','sat',1220,'1600'); qual('uwa','ib',30,'45'); qual('uwa','alevel',10,'UWA A-level 환산점수'); fee('uwa',46000,src='uwa-fee-2026',year=2026,load='48 points 기준')
+# Additional international qualification scores verified for 2027 site.
+for qt,val,scale in [('csat',340,'대학 공식 CSAT 기준'),('ib',30,'45'),('sat',1220,'1600'),('alevel',10,'UK / Global GCE A-level 환산점수'),('ossd',80,'Ontario Secondary School Diploma 평균 %')]:
+ q=next(x for x in qualifications if x['program_id']=='adelaide-bpharm-hons' and x['qualification']==qt); q.update(score=fact(val,'adelaide-pharmacy-current'),scale=scale)
+for qt,val,scale in [('ib',36,'45'),('alevel',15,'UNSW A-level aggregate')]:
+ q=next(x for x in qualifications if x['program_id']=='unsw-bpharm-hons' and x['qualification']==qt); q.update(score=fact(val,'unsw-2027-course'),scale=scale,calculation='2027 PharmD 명칭 변경에도 입학기준은 동일하다는 UNSW 안내 기준')
+q=next(x for x in qualifications if x['program_id']=='newcastle-bpharm-hons' and x['qualification']=='ib'); q.update(score=fact(28,'newcastle-prospectus-2027'),scale='45')
+q=next(x for x in qualifications if x['program_id']=='uq-bpharm-hons' and x['qualification']=='ib'); q.update(score=fact(30.25,'uq',2026,status='latest_published',note='2027 program page의 최신 threshold이며 Semester 1, 2026 offer 기준'),scale='45')
+for qt,val,scale in [('ib',27,'45'),('sat',1020,'1600')]:
+ q=next(x for x in qualifications if x['program_id']=='jcu-bpharm-hons' and x['qualification']==qt); q.update(score=fact(val,'jcu-intl-2025',2025,status='latest_published',note='2025 International Guide 참고값 · 2027 국제환산표 확인 전'),scale=scale)
+
 
 # New UQ program remains a separate record with accreditation gate.
 import copy
