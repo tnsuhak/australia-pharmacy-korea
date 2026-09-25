@@ -28,6 +28,18 @@ source('homeaffairs-regional','Australian Home Affairs · Designated regional ar
 source('jcu-2027-campus','JCU · 2027 course changes · Pharmacy campuses','https://www.jcu.edu.au/future-students/schools/2027-course-changes',2027,'official_course')
 source('utas-2027-campus','University of Tasmania · Bachelor of Pharmacy with Honours 2027','https://www.utas.edu.au/courses/health/courses/54d-bachelor-of-pharmacy-with-honours',2027,'official_course')
 source('uwa-dpharm','UWA · Doctor of Pharmacy graduate entry','https://www.uwa.edu.au/study/courses/doctor-of-pharmacy',2027,'official_course')
+source('migration-nsw-skills','NSW Government · NSW Skills Lists','https://www.nsw.gov.au/visas-and-migration/skilled-visas/nsw-skills-lists',2026,'government')
+source('migration-qld-list','Migration Queensland · Queensland onshore skilled occupation list','https://migration.qld.gov.au/occupation-lists/queensland-onshore-skilled-occupation-list',2026,'government')
+source('migration-qld-status','Migration Queensland · Skilled migration ROI status','https://migration.qld.gov.au/visa-options/skilled-visas/registering-your-interest-in-queenslands-migration-program',2026,'government')
+source('migration-vic-status','Victoria · Skilled visa nomination program status','https://liveinmelbourne.vic.gov.au/migrate/skilled-migration-visas/2025-26-skilled-migration-visa-nomination-program',2026,'government')
+source('migration-tas-program','Migration Tasmania · 2026-27 Program Opening','https://www.migration.tas.gov.au/news/2024-25_program_open_to_rois',2026,'government')
+source('migration-tas-health','Migration Tasmania · Health, Allied Health and Teaching Occupations','https://www.migration.tas.gov.au/skilled_migration/health%2C-allied-health-and-teaching-occupations',2026,'government')
+source('migration-act-list','ACT Government · Nominated Migration Program Occupation List','https://www.act.gov.au/migration/skilled-migrants/act-nominated-migration-program-occupation-list',2026,'government')
+source('migration-act-program','ACT Government · ACT nomination pathways','https://www.act.gov.au/migration/skilled-migrants/act-government-nomination/act-nomination-pathways',2026,'government')
+source('migration-sa-list','South Australia · Skilled Occupation List','https://migration.sa.gov.au/before-applying/work-in-sa/occupation-lists/occupations-list',2026,'government')
+source('migration-sa-status','South Australia · 2026-27 program status','https://migration.sa.gov.au/news/registrations-of-interest-closing-2-june-2026',2026,'government')
+source('migration-wa-criteria','WA Government · 2025-26 State Nominated Migration Program criteria','https://migration.wa.gov.au/sites/default/files/2025-09/2025-26%20WA%20SNMP%20Criteria%20-%20July%202025.pdf',2025,'government')
+source('migration-wa-pharmacist','WA Government · December 2025 SNMP invited EOIs by occupation','https://migration.wa.gov.au/sites/default/files/2025-12/SNMP%20Invite%20Round%20-%20December%202025.pdf',2025,'government')
 course_urls={
  'jcu':'https://www.jcu.edu.au/courses/bachelor-of-pharmacy-honours',
  'utas':'https://www.utas.edu.au/courses/health/courses/54d-bachelor-of-pharmacy-with-honours',
