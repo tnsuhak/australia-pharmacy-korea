@@ -1994,20 +1994,21 @@
       "highlights": [
         "5년 통합",
         "4년 BPharm(Hons) Exit",
-        "Internship 통합"
+        "Mathematics prerequisite"
       ],
-      "editorial": "5년 Bachelor of Pharmacy (Honours) + Master of Pharmacy Practice 통합과정입니다. 현재 Course Resolutions는 1~4학년 192cp를 충족하면 Bachelor of Pharmacy (Honours)를 수여할 수 있고, 5학년 48cp가 Master of Pharmacy Practice임을 명시합니다.",
+      "editorial": "5년 Bachelor of Pharmacy (Honours) + Master of Pharmacy Practice 통합과정입니다. 현재 Course Resolutions는 1~4학년 192cp를 충족하면 Bachelor of Pharmacy (Honours)를 수여할 수 있고, 5학년 48cp가 Master of Pharmacy Practice임을 명시합니다. Mathematics는 공식 course prerequisite이며 Chemistry·Biology는 assumed knowledge, Physics는 recommended study입니다.",
       "review_items": [
-        "2027 Mathematics prerequisite 적용 여부",
         "USFP 수학 progression 조건"
       ],
       "decision_lens": {
         "why": [
           "4년 BPharm(Hons) 학사 Exit 가능 · 5학년 Master of Pharmacy Practice",
-          "5년 BPharm(Hons) / Master of Pharmacy Practice"
+          "Mathematics prerequisite · Chemistry/Biology assumed knowledge",
+          "2027 국제학생 학비 A$63,600"
         ],
         "watch": [
-          "Sydney는 지역 추가 485 대상 아님"
+          "Sydney는 지역 추가 485 대상 아님",
+          "USFP 경로의 수학 progression 세부조건 별도 확인"
         ]
       }
     },
@@ -8863,54 +8864,54 @@
       "chemistry": {
         "value": "assumed",
         "academic_year": 2027,
-        "source_year": null,
-        "source_id": "sydney-structure",
-        "source_url": "https://www.sydney.edu.au/handbooks/medicine-health/coursework/pharmacy/course-resolutions.html",
-        "source_type": "official_handbook",
+        "source_year": 2025,
+        "source_id": "sydney-prereqs-current",
+        "source_url": "https://www.sydney.edu.au/content/dam/corporate/documents/about-us/governance-and-structure/academic-board/ab-standards---guidelines-/course-prerquisite-assumed-knowledge-recommended-studies-table.pdf",
+        "source_type": "official_admissions",
         "verified_date": "2026-09-25",
         "status": "latest_published",
-        "note": "미이수 학생에게 Chemistry bridging course 권장"
+        "note": ""
       },
       "mathematics": {
-        "value": "assumed",
+        "value": "required",
         "academic_year": 2027,
-        "source_year": null,
-        "source_id": "sydney-structure",
-        "source_url": "https://www.sydney.edu.au/handbooks/medicine-health/coursework/pharmacy/course-resolutions.html",
-        "source_type": "official_handbook",
+        "source_year": 2025,
+        "source_id": "sydney-prereqs-current",
+        "source_url": "https://www.sydney.edu.au/content/dam/corporate/documents/about-us/governance-and-structure/academic-board/ab-standards---guidelines-/course-prerquisite-assumed-knowledge-recommended-studies-table.pdf",
+        "source_type": "official_admissions",
         "verified_date": "2026-09-25",
         "status": "latest_published",
-        "note": "Mathematics Advanced (2U) 수준 assumed knowledge"
+        "note": "Current Academic Board prerequisite standard: Mathematics Advanced Band 4 or Mathematics Extension 1/2 Band E3; international/equivalent study assessed under University equivalency rules."
       },
       "biology": {
-        "value": "recommended",
+        "value": "assumed",
         "academic_year": 2027,
-        "source_year": null,
-        "source_id": "sydney-structure",
-        "source_url": "https://www.sydney.edu.au/handbooks/medicine-health/coursework/pharmacy/course-resolutions.html",
-        "source_type": "official_handbook",
+        "source_year": 2025,
+        "source_id": "sydney-prereqs-current",
+        "source_url": "https://www.sydney.edu.au/content/dam/corporate/documents/about-us/governance-and-structure/academic-board/ab-standards---guidelines-/course-prerquisite-assumed-knowledge-recommended-studies-table.pdf",
+        "source_type": "official_admissions",
         "verified_date": "2026-09-25",
         "status": "latest_published",
-        "note": "미이수 학생에게 Biology bridging course 권장"
+        "note": ""
       },
       "physics": {
-        "value": null,
+        "value": "recommended",
         "academic_year": 2027,
-        "source_year": 2027,
-        "source_id": "sydney",
-        "source_url": "https://www.sydney.edu.au/dam/corporate/documents/study/how-to-apply/international-admission-guide.pdf",
-        "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
+        "source_year": 2025,
+        "source_id": "sydney-prereqs-current",
+        "source_url": "https://www.sydney.edu.au/content/dam/corporate/documents/about-us/governance-and-structure/academic-board/ab-standards---guidelines-/course-prerquisite-assumed-knowledge-recommended-studies-table.pdf",
+        "source_type": "official_admissions",
+        "verified_date": "2026-09-25",
+        "status": "latest_published",
         "note": ""
       },
       "minimum_grade": {
-        "value": "Mathematics admission prerequisite와 Chemistry/Math assumed knowledge를 별도로 확인",
+        "value": "Mathematics Advanced Band 4 또는 Mathematics Extension 1/2 Band E3 상당 prerequisite · Chemistry와 Biology는 assumed knowledge · Physics 권장",
         "academic_year": 2027,
-        "source_year": null,
-        "source_id": "sydney-structure",
-        "source_url": "https://www.sydney.edu.au/handbooks/medicine-health/coursework/pharmacy/course-resolutions.html",
-        "source_type": "official_handbook",
+        "source_year": 2025,
+        "source_id": "sydney-prereqs-current",
+        "source_url": "https://www.sydney.edu.au/content/dam/corporate/documents/about-us/governance-and-structure/academic-board/ab-standards---guidelines-/course-prerquisite-assumed-knowledge-recommended-studies-table.pdf",
+        "source_type": "official_admissions",
         "verified_date": "2026-09-25",
         "status": "latest_published",
         "note": ""
@@ -17315,6 +17316,14 @@
       "url": "https://www.rmit.edu.au/study-with-us/levels-of-study/undergraduate-study/associate-degrees/associate-degree-in-applied-science-ad012/apply-now",
       "source_year": 2027,
       "source_type": "official_pathway",
+      "verified_date": "2026-09-25"
+    },
+    {
+      "id": "sydney-prereqs-current",
+      "title": "Sydney Academic Board · Pharmacy course prerequisites and assumed knowledge",
+      "url": "https://www.sydney.edu.au/content/dam/corporate/documents/about-us/governance-and-structure/academic-board/ab-standards---guidelines-/course-prerquisite-assumed-knowledge-recommended-studies-table.pdf",
+      "source_year": 2025,
+      "source_type": "official_admissions",
       "verified_date": "2026-09-25"
     }
   ],
