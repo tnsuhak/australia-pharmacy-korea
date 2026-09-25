@@ -146,11 +146,14 @@
 | griffith-college-dates-2027 | [Griffith College · 2027 key dates](https://www.griffithcollege.edu.au/student-life/key-dates/) | 2027 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
 | rmit-associate-current | [RMIT Associate Degree in Applied Science · Pharmacy further study credit](https://www.rmit.edu.au/study-with-us/levels-of-study/undergraduate-study/associate-degrees/ad012) | 페이지별 확인 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
 | rmit-associate-2027 | [RMIT Associate Degree in Applied Science · 2027 international fee/intake](https://www.rmit.edu.au/study-with-us/levels-of-study/undergraduate-study/associate-degrees/associate-degree-in-applied-science-ad012/apply-now) | 2027 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
+| sydney-prereqs-current | [Sydney Academic Board · Pharmacy course prerequisites and assumed knowledge](https://www.sydney.edu.au/content/dam/corporate/documents/about-us/governance-and-structure/academic-board/ab-standards---guidelines-/course-prerquisite-assumed-knowledge-recommended-studies-table.pdf) | 2025 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
 
 ## 운영 메모
 
 - `data/catalog.json`의 각 fact가 적용 상태(`confirmed_2027`, `latest_published`, `pending_2027`, `source_conflict`)와 출처를 보유합니다.
 - 2027 값이 확인되지 않은 경우 최신 공개연도를 2027 확정값으로 바꾸지 않습니다.
+- JCU 2027 course changes에서 Townsville·Cairns·Mackay의 2월 시작을 확인했습니다. 현재 국제학생 course page의 A$31,710은 명시적으로 2026 fee이므로 2027 학비로 승격하지 않습니다.
+- Sydney Pharmacy는 current Academic Board prerequisite table에 따라 Mathematics를 prerequisite, Chemistry·Biology를 assumed knowledge, Physics를 recommended study로 분류합니다.
 - Newcastle 영어는 2027 공식자료끼리 6.5/각6.5와 7.0/각7.0이 달라 `source_conflict`로 유지합니다.
 - Monash Foundation은 live P6007 destination page와 2027 Pathway Programs PDF의 legacy P6001 표기가 달라 `source_conflict`로 유지합니다.
 - Curtin Pharmacy 최신 BH-PHARMA 페이지는 2027 fee/intake를 현재 제공하지 않아 추정하지 않습니다.
