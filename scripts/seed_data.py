@@ -253,7 +253,7 @@ setp('adelaide',highlights=['4년 학사','7월은 학점인정 조건부'],edit
 intake('adelaide',[2],'2월 · 7월은 학점 인정 시 개별 심사'); fee('adelaide',54300,src='adelaide-fee-current'); req('adelaide','accepted','not_required','accepted','accepted','Biology, Chemistry 또는 Physics 중 1과목 또는 동등 수준',src='adelaide'); eng('adelaide',6.5,{'L':6,'R':6,'W':6,'S':6},src='adelaide')
 setp('griffith',highlights=['Diploma → 2학년','80CP 인정','20% 자동심사'],editorial='Direct 입학과 Griffith College Diploma 경로가 있습니다. Griffith College Diploma 후 80CP를 인정받고 약대 2학년으로 진학합니다.'); intake('griffith',[3,7],'3월 · 7월 (2026 공개 기준)',src='griffith-2026-guide'); eng('griffith',7.0,None,src='griffith-2026-guide')
 setp('latrobe',international_recruitment=fact(True,'latrobe-2027-course',status='latest_published',note='현재 Pharmacy course page는 국제학생이 연중 지원 가능하다고 안내합니다. 2027 국제학생 학비는 별도 확인 중입니다.'),highlights=['Bendigo','4년 학사','국제학생 지원 가능'],editorial='Bendigo 캠퍼스 4년 약대입니다. 현재 과정 페이지는 2027년 3월 시작과 국제학생 연중 지원 가능을 안내하지만, 2027 국제학생 학비는 아직 확정 표시가 없어 계속 확인 중입니다.',review_items=['2027 국제학생 학비']); intake('latrobe',[3],'Semester 1 · 2027년 3월',src='latrobe-2027-course'); req('latrobe','not_required','not_required','not_required','not_required','별도 과학 선수과목 없음 · 영어 prerequisite만 적용',src='latrobe-health-guide'); eng('latrobe',6.5,{'L':6.5,'R':6.5,'W':6.5,'S':6.5},src='latrobe-health-guide')
-setp('qut',highlights=['수학 + 화학','4년 학사','영어 조건 비교'],editorial='수학과 화학이 필요합니다. 영어는 약대 기준을 적용합니다.')
+setp('qut',highlights=['수학·화학 assumed knowledge','4년 학사','2027 학비 A$46,200'],editorial='QUT Pharmacy는 Chemistry와 Mathematical Methods/Specialist Mathematics를 필수 prerequisite가 아니라 assumed knowledge로 안내합니다. 미이수 학생은 지원 자체가 막히는 것으로 표시하지 않고 bridging study 안내와 함께 구분합니다.')
 req('qut','assumed','assumed',grade='Chemistry + Mathematical Methods/Specialist Mathematics는 assumed knowledge',src='qut-fee-2027'); eng('qut',6.5,{'L':6,'R':6,'W':6,'S':6},pte=58,pte_each=50,toefl={'overall':79,'L':16,'R':16,'W':21,'S':18}); intake('qut',[2],'2월',src='qut-fee-2027'); fee('qut',46200,src='qut-fee-2027',year=2027,load='96 credit points 기준')
 setp('rmit',highlights=['4년','RMIT Foundation 가능','2027 학비 A$49,920'],editorial='Bundoora 캠퍼스 4년 약대입니다. 한국 고교·수능 환산표가 명확하고 RMIT Foundation으로도 준비할 수 있습니다.')
 req('rmit','required','required',grade='VCE Chemistry 25, Mathematics 25 또는 인정되는 동등 수준.'); fee('rmit',49920,year=2027); intake('rmit',[2],'Semester 1 · 2027년 3월 1일 수업 시작',src='rmit-2027-apply')
@@ -473,6 +473,27 @@ for route_record in routes:
   route_record['intake']=copy.deepcopy(start['label'])
   route_record['intake_months']=copy.deepcopy(start['months'])
   route_record['note']='아래 표에 성적·선수과목·영어 기준을 정리했습니다.'
+
+# Keep high-value Direct route summaries synchronized with verified course facts.
+for uid in ['adelaide','qut','canberra','unisq']:
+ dr=next(r for r in routes if r['id']==uid+'-bpharm-hons-direct')
+ er=row(english,uid); rr=row(requirements,uid)
+ if uid=='adelaide':
+  dr['english']=fact('IELTS 6.5 / 각 6.0','adelaide')
+  dr['qualification']=fact('SACE Stage 2 Biology, Chemistry 또는 Physics 중 1과목(또는 동등 수준) + 학력별 입학점수','adelaide')
+  dr['note']='일반 Direct 시작은 2월입니다. 7월은 학점 인정이 있는 국제학생을 case-by-case로 심사합니다.'
+ elif uid=='qut':
+  dr['english']=fact('IELTS 6.5 / 각 6.0 · PTE 58 / 각 50 · TOEFL 79','qut')
+  dr['qualification']=fact('Chemistry + Mathematical Methods/Specialist Mathematics는 assumed knowledge · 필수 prerequisite와 구분','qut-fee-2027')
+  dr['note']='2027 본과는 2월 시작입니다. 수학·화학은 assumed knowledge이며 미이수 학생은 bridging study 안내를 확인합니다.'
+ elif uid=='canberra':
+  dr['english']=fact('IELTS 7.0 / 각 7.0','canberra-2027')
+  dr['qualification']=fact('수학 + Biology/Human Movement, Chemistry/Physics는 assumed knowledge · 필수 prerequisite와 구분','canberra-2027')
+  dr['note']='2027 Semester 1은 2월 15일 시작입니다. Honours는 성적·과정요건을 충족한 학생에게 제공되는 option으로 구분합니다.'
+ elif uid=='unisq':
+  dr['english']=fact('IELTS 7.0 · Speaking/Reading/Listening 7.0 · Writing 6.5','unisq-pharmacy-current')
+  dr['qualification']=fact('Mathematics + Biology/Chemistry/Physics 중 1과목 Year 12 C 수준 assumed knowledge','unisq-pharmacy-current')
+  dr['note']='2027 국제학생은 Trimester 1 한 번만 입학하며 수업 시작은 2월 15일입니다. 3년 accelerated pathway는 2028부터입니다.'
 # A blocked source is not a completed verification.
 sources['board']['verified_date']=None
 sources['board']['retrieval_status']='blocked_403'
