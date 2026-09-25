@@ -5097,6 +5097,218 @@
         "status": "latest_published",
         "note": ""
       }
+    },
+    {
+      "id": "uwa-foundation",
+      "program_id": "uwa-bpharm-hons",
+      "type": "foundation",
+      "title": "UWA College · Foundation Program",
+      "availability": {
+        "value": true,
+        "academic_year": 2027,
+        "source_year": null,
+        "source_id": "uwa-foundation",
+        "source_url": "https://www.uwa.edu.au/uwa-college/Study/UWA-Foundation-Program",
+        "source_type": "official_pathway",
+        "verified_date": "2026-09-25",
+        "status": "latest_published",
+        "note": ""
+      },
+      "credit": {
+        "value": 0,
+        "academic_year": 2027,
+        "source_year": null,
+        "source_id": "uwa-foundation",
+        "source_url": "https://www.uwa.edu.au/uwa-college/Study/UWA-Foundation-Program",
+        "source_type": "official_pathway",
+        "verified_date": "2026-09-25",
+        "status": "latest_published",
+        "note": ""
+      },
+      "entry_year": {
+        "value": 1,
+        "academic_year": 2027,
+        "source_year": null,
+        "source_id": "uwa-foundation",
+        "source_url": "https://www.uwa.edu.au/uwa-college/Study/UWA-Foundation-Program",
+        "source_type": "official_pathway",
+        "verified_date": "2026-09-25",
+        "status": "latest_published",
+        "note": ""
+      },
+      "duration": {
+        "value": "8개월 또는 12개월",
+        "academic_year": 2027,
+        "source_year": null,
+        "source_id": "uwa-foundation",
+        "source_url": "https://www.uwa.edu.au/uwa-college/Study/UWA-Foundation-Program",
+        "source_type": "official_pathway",
+        "verified_date": "2026-09-25",
+        "status": "latest_published",
+        "note": ""
+      },
+      "intake": {
+        "value": "UWA College 일정",
+        "academic_year": 2027,
+        "source_year": null,
+        "source_id": "uwa-foundation",
+        "source_url": "https://www.uwa.edu.au/uwa-college/Study/UWA-Foundation-Program",
+        "source_type": "official_pathway",
+        "verified_date": "2026-09-25",
+        "status": "latest_published",
+        "note": ""
+      },
+      "progression": {
+        "value": "UWA College Foundation 70 + Pharmacy 입학·영어조건",
+        "academic_year": 2027,
+        "source_year": null,
+        "source_id": "uwa",
+        "source_url": "https://www.uwa.edu.au/study/courses/bachelor-of-human-sciences-pharmaceutical-health-and-doctor-of-pharmacy",
+        "source_type": "official_course",
+        "verified_date": "2026-09-25",
+        "status": "latest_published",
+        "note": ""
+      },
+      "english": {
+        "value": null,
+        "academic_year": 2027,
+        "source_year": null,
+        "source_id": "uwa-foundation",
+        "source_url": "https://www.uwa.edu.au/uwa-college/Study/UWA-Foundation-Program",
+        "source_type": "official_pathway",
+        "verified_date": "2026-09-25",
+        "status": "pending_2027",
+        "note": ""
+      },
+      "qualification": {
+        "value": null,
+        "academic_year": 2027,
+        "source_year": null,
+        "source_id": "uwa-foundation",
+        "source_url": "https://www.uwa.edu.au/uwa-college/Study/UWA-Foundation-Program",
+        "source_type": "official_pathway",
+        "verified_date": "2026-09-25",
+        "status": "pending_2027",
+        "note": ""
+      },
+      "note": "Foundation 수료 후 UWA 약대 1학년으로 진학합니다. UWA 약대 공식 페이지에 UWA College Foundation 70이 입학점수로 공개돼 있습니다.",
+      "intake_months": {
+        "value": null,
+        "academic_year": 2027,
+        "source_year": null,
+        "source_id": "uwa-foundation",
+        "source_url": "https://www.uwa.edu.au/uwa-college/Study/UWA-Foundation-Program",
+        "source_type": "official_pathway",
+        "verified_date": "2026-09-25",
+        "status": "pending_2027",
+        "note": ""
+      }
+    },
+    {
+      "id": "qut-foundation",
+      "program_id": "qut-bpharm-hons",
+      "type": "foundation",
+      "title": "QUT College · Foundation",
+      "availability": {
+        "value": true,
+        "academic_year": 2027,
+        "source_year": null,
+        "source_id": "qut-college-foundation",
+        "source_url": "https://www.qut.edu.au/study/qut-college/international/english-language-programs",
+        "source_type": "official_pathway",
+        "verified_date": "2026-09-25",
+        "status": "latest_published",
+        "note": ""
+      },
+      "credit": {
+        "value": 0,
+        "academic_year": 2027,
+        "source_year": null,
+        "source_id": "qut-college-foundation",
+        "source_url": "https://www.qut.edu.au/study/qut-college/international/english-language-programs",
+        "source_type": "official_pathway",
+        "verified_date": "2026-09-25",
+        "status": "latest_published",
+        "note": ""
+      },
+      "entry_year": {
+        "value": 1,
+        "academic_year": 2027,
+        "source_year": null,
+        "source_id": "qut-college-foundation",
+        "source_url": "https://www.qut.edu.au/study/qut-college/international/english-language-programs",
+        "source_type": "official_pathway",
+        "verified_date": "2026-09-25",
+        "status": "latest_published",
+        "note": ""
+      },
+      "duration": {
+        "value": "6개월 Intensive 또는 12개월 Standard",
+        "academic_year": 2027,
+        "source_year": null,
+        "source_id": "qut-college-foundation",
+        "source_url": "https://www.qut.edu.au/study/qut-college/international/english-language-programs",
+        "source_type": "official_pathway",
+        "verified_date": "2026-09-25",
+        "status": "latest_published",
+        "note": ""
+      },
+      "intake": {
+        "value": "QUT College 일정",
+        "academic_year": 2027,
+        "source_year": null,
+        "source_id": "qut-college-foundation",
+        "source_url": "https://www.qut.edu.au/study/qut-college/international/english-language-programs",
+        "source_type": "official_pathway",
+        "verified_date": "2026-09-25",
+        "status": "latest_published",
+        "note": ""
+      },
+      "progression": {
+        "value": "Foundation 수료 + QUT Pharmacy 입학조건 충족",
+        "academic_year": 2027,
+        "source_year": null,
+        "source_id": "qut-college-foundation",
+        "source_url": "https://www.qut.edu.au/study/qut-college/international/english-language-programs",
+        "source_type": "official_pathway",
+        "verified_date": "2026-09-25",
+        "status": "latest_published",
+        "note": ""
+      },
+      "english": {
+        "value": null,
+        "academic_year": 2027,
+        "source_year": null,
+        "source_id": "qut-college-foundation",
+        "source_url": "https://www.qut.edu.au/study/qut-college/international/english-language-programs",
+        "source_type": "official_pathway",
+        "verified_date": "2026-09-25",
+        "status": "pending_2027",
+        "note": ""
+      },
+      "qualification": {
+        "value": null,
+        "academic_year": 2027,
+        "source_year": null,
+        "source_id": "qut-college-foundation",
+        "source_url": "https://www.qut.edu.au/study/qut-college/international/english-language-programs",
+        "source_type": "official_pathway",
+        "verified_date": "2026-09-25",
+        "status": "pending_2027",
+        "note": ""
+      },
+      "note": "Foundation 후 QUT Bachelor 1학년으로 진학하는 경로입니다. Pharmacy 선수과목과 영어조건은 별도로 맞춰야 합니다.",
+      "intake_months": {
+        "value": null,
+        "academic_year": 2027,
+        "source_year": null,
+        "source_id": "qut-college-foundation",
+        "source_url": "https://www.qut.edu.au/study/qut-college/international/english-language-programs",
+        "source_type": "official_pathway",
+        "verified_date": "2026-09-25",
+        "status": "pending_2027",
+        "note": ""
+      }
     }
   ],
   "qualifications": [
@@ -16239,6 +16451,22 @@
       "url": "https://www.newcastle.edu.au/__data/assets/pdf_file/0018/1035117/UNI_054_International-Excellence-Scholarship.pdf",
       "source_year": 2027,
       "source_type": "official_scholarship",
+      "verified_date": "2026-09-25"
+    },
+    {
+      "id": "uwa-foundation",
+      "title": "UWA College · UWA Foundation Program",
+      "url": "https://www.uwa.edu.au/uwa-college/Study/UWA-Foundation-Program",
+      "source_year": null,
+      "source_type": "official_pathway",
+      "verified_date": "2026-09-25"
+    },
+    {
+      "id": "qut-college-foundation",
+      "title": "QUT College · Foundation programs",
+      "url": "https://www.qut.edu.au/study/qut-college/international/english-language-programs",
+      "source_year": null,
+      "source_type": "official_pathway",
       "verified_date": "2026-09-25"
     }
   ],
