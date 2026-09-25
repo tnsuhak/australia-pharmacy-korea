@@ -26,9 +26,9 @@ UWA는 비교 대학에 포함하며, 고교 졸업자용 4년 Bachelor of Human
 
 ## 데이터 상태
 
-- 2027 확인: 401
-- 최신 공개 기준: 409
-- 2027 확인 중: 429
+- 2027 확인: 404
+- 최신 공개 기준: 413
+- 2027 확인 중: 423
 - source_conflict fact: 4
 - active conflict record: 2
 
@@ -75,7 +75,7 @@ UWA는 비교 대학에 포함하며, 고교 졸업자용 4년 Bachelor of Human
 - Pharmacy 영어: IELTS 7.0/각6.5 · PTE 65/각58 · TOEFL 94(R19/L20/S20/W24).
 - 한국 학력 Direct 기준과 Chemistry + Mathematics prerequisite를 route에 동기화.
 - RMIT Foundation Studies 2027: **A$34,250**, 1년, 2월/7월 시작, IELTS 5.5/각5.0, Year 11 동등 학력 + 평균 50%/pass average + 만 16세.
-- 2027 BH102 apply page에서 Associate Degree in Applied Science packaged pathway 확인. 총 5년(Associate 2년 + Pharmacy 3년); exact credit/진입학년은 별도 확인.
+- 2027 BH102 packaged pathway + current Associate Degree further-study page 확인: AD012P24 Biomedicine 수료 시 Pharmacy **96CP(2 semesters)** 인정, Bachelor 단계 3년. Pharmacy 진급은 IELTS 7.0/각6.5 또는 동등조건. Associate 2027 국제학생 연간 학비 A$38,400, 2월 8일 수업 시작.
 
 ### Sydney
 - 현재 Pharmacy Course Resolutions 기준 1~4학년 192cp 완료 시 **Bachelor of Pharmacy (Honours)** 수여 가능.
@@ -132,7 +132,7 @@ RMIT 영어는 더 이상 conflict/pending 항목이 아니다. 현재 공식 Ph
 1. 최신 HEAD의 GitHub Preview QA + Netlify Deploy Preview 재검증.
 2. Griffith·Curtin·La Trobe의 2027 국제학생 본과 학비 공식값이 새로 공개됐는지 계속 확인.
 3. Monash Foundation P6007 vs 2027 PDF conflict 해소 여부 모니터링.
-4. RMIT Associate packaged pathway exact credit/진입학년 및 Foundation stream 세부 선수과목 보강.
+4. RMIT Foundation stream 세부 선수과목과 Associate 2년 총비용(연도별 fee 변동) 추적. 96CP/진입학년은 확인 완료.
 5. UQ 신설 PharmD APC/Pharmacy Board 승인 상태 확인.
 6. 대학별 2027 숙소 실비와 남은 qualification 환산값 보강.
 7. 모바일/데스크톱 Preview 실제 시각 QA 후 사용자 확인.
