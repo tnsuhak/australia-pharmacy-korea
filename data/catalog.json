@@ -1150,7 +1150,7 @@
         "why": [
           "Bendigo Regional · Category 3",
           "과학 선수과목 별도 요구 없음",
-          "2027 High Achiever 20~25%"
+          "2027 Health Innovation 30% · High Achiever 20~25%"
         ],
         "watch": [
           "2027 국제학생 학비 발표 대기"
@@ -13325,6 +13325,135 @@
         "note": ""
       },
       "note": "현재 UWA 2027 안내는 최대 20% tuition discount로 표시됩니다. 상세 2027 점수구간 표가 완전히 반영되면 확정값으로 전환합니다."
+    },
+    {
+      "id": "latrobe-health-innovation-30",
+      "university_id": "latrobe",
+      "name": "La Trobe Health Innovation Scholarship · 30%",
+      "amount": {
+        "value": 30,
+        "academic_year": 2027,
+        "source_year": 2027,
+        "source_id": "latrobe-health-innovation-2027",
+        "source_url": "https://www.latrobe.edu.au/international/applying/scholarships",
+        "source_type": "official_scholarship",
+        "verified_date": "2026-09-25",
+        "status": "confirmed_2027",
+        "note": ""
+      },
+      "award_type": "percentage",
+      "assessment": "pending",
+      "automatic_assessment": {
+        "value": null,
+        "academic_year": 2027,
+        "source_year": 2027,
+        "source_id": "latrobe-health-innovation-2027",
+        "source_url": "https://www.latrobe.edu.au/international/applying/scholarships",
+        "source_type": "official_scholarship",
+        "verified_date": "2026-09-25",
+        "status": "pending_2027",
+        "note": ""
+      },
+      "separate_application": {
+        "value": null,
+        "academic_year": 2027,
+        "source_year": 2027,
+        "source_id": "latrobe-health-innovation-2027",
+        "source_url": "https://www.latrobe.edu.au/international/applying/scholarships",
+        "source_type": "official_scholarship",
+        "verified_date": "2026-09-25",
+        "status": "pending_2027",
+        "note": ""
+      },
+      "competitive": {
+        "value": null,
+        "academic_year": 2027,
+        "source_year": 2027,
+        "source_id": "latrobe-health-innovation-2027",
+        "source_url": "https://www.latrobe.edu.au/international/applying/scholarships",
+        "source_type": "official_scholarship",
+        "verified_date": "2026-09-25",
+        "status": "pending_2027",
+        "note": ""
+      },
+      "country_eligibility": {
+        "value": true,
+        "academic_year": 2027,
+        "source_year": 2027,
+        "source_id": "latrobe-health-innovation-2027",
+        "source_url": "https://www.latrobe.edu.au/international/applying/scholarships",
+        "source_type": "official_scholarship",
+        "verified_date": "2026-09-25",
+        "status": "confirmed_2027",
+        "note": ""
+      },
+      "duration": {
+        "value": null,
+        "academic_year": 2027,
+        "source_year": 2027,
+        "source_id": "latrobe-health-innovation-2027",
+        "source_url": "https://www.latrobe.edu.au/international/applying/scholarships",
+        "source_type": "official_scholarship",
+        "verified_date": "2026-09-25",
+        "status": "pending_2027",
+        "note": ""
+      },
+      "academic_threshold": {
+        "value": "Minimum WAM 75+",
+        "academic_year": 2027,
+        "source_year": 2027,
+        "source_id": "latrobe-health-innovation-2027",
+        "source_url": "https://www.latrobe.edu.au/international/applying/scholarships",
+        "source_type": "official_scholarship",
+        "verified_date": "2026-09-25",
+        "status": "confirmed_2027",
+        "note": ""
+      },
+      "renewal_condition": {
+        "value": "장학 약관 및 Offer 조건 충족",
+        "academic_year": 2027,
+        "source_year": 2027,
+        "source_id": "latrobe-health-innovation-2027",
+        "source_url": "https://www.latrobe.edu.au/international/applying/scholarships",
+        "source_type": "official_scholarship",
+        "verified_date": "2026-09-25",
+        "status": "confirmed_2027",
+        "note": ""
+      },
+      "number_available": {
+        "value": null,
+        "academic_year": 2027,
+        "source_year": 2027,
+        "source_id": "latrobe-health-innovation-2027",
+        "source_url": "https://www.latrobe.edu.au/international/applying/scholarships",
+        "source_type": "official_scholarship",
+        "verified_date": "2026-09-25",
+        "status": "pending_2027",
+        "note": ""
+      },
+      "course_exclusion": {
+        "value": null,
+        "academic_year": 2027,
+        "source_year": 2027,
+        "source_id": "latrobe-health-innovation-2027",
+        "source_url": "https://www.latrobe.edu.au/international/applying/scholarships",
+        "source_type": "official_scholarship",
+        "verified_date": "2026-09-25",
+        "status": "pending_2027",
+        "note": ""
+      },
+      "pharmacy_eligible": {
+        "value": true,
+        "academic_year": 2027,
+        "source_year": 2027,
+        "source_id": "latrobe-health-innovation-2027",
+        "source_url": "https://www.latrobe.edu.au/international/applying/scholarships",
+        "source_type": "official_scholarship",
+        "verified_date": "2026-09-25",
+        "status": "confirmed_2027",
+        "note": ""
+      },
+      "note": "La Trobe Pharmacy 과정 페이지에 Future undergraduate · International 대상 30% Health Innovation Scholarship이 표시됩니다. 2026/2027 intake 약관이 적용되며 최종 수여·중복 가능 여부는 Offer에서 확인합니다."
     }
   ],
   "accommodation": [
@@ -17006,6 +17135,14 @@
       "url": "https://www.rmit.edu.au/study-with-us/international-students/apply-to-rmit-international-students/entry-requirements/country-equivalency/foundation-equivalencies",
       "source_year": 2027,
       "source_type": "official_pathway",
+      "verified_date": "2026-09-25"
+    },
+    {
+      "id": "latrobe-health-innovation-2027",
+      "title": "La Trobe Health Innovation Scholarship · 30% · 2026/2027 intakes",
+      "url": "https://www.latrobe.edu.au/international/applying/scholarships",
+      "source_year": 2027,
+      "source_type": "official_scholarship",
       "verified_date": "2026-09-25"
     }
   ],
