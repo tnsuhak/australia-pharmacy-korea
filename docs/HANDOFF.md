@@ -26,9 +26,9 @@ UWA는 비교 대학에 포함하며, 고교 졸업자용 4년 Bachelor of Human
 
 ## 데이터 상태
 
-- 2027 확인: 404
+- 2027 확인: 405
 - 최신 공개 기준: 413
-- 2027 확인 중: 423
+- 2027 확인 중: 422
 - source_conflict fact: 4
 - active conflict record: 2
 
@@ -41,6 +41,12 @@ UWA는 비교 대학에 포함하며, 고교 졸업자용 4년 Bachelor of Human
 - 2027 Degree Guide IELTS 6.5/각6.5 vs 현재 과정 페이지 7.0/각7.0 → `source_conflict`, 자동 판정 금지.
 - 2027 International Excellence Scholarship 20%는 Bachelor of Pharmacy (Honours) 제외.
 - CIE Foundation: 한국 고2 수료부터, IELTS 5.5/각5.0, Pharmacy 진급 전체 65%+ 및 Academic English A&B 평균 75%+, 2027 학비 A$31,400.
+
+### JCU
+- 2027 official course changes: Townsville·Cairns·Mackay 모두 February 시작, 3년 Trimester 과정.
+- Current international course page도 세 캠퍼스를 표시.
+- 현재 공개 학비 **A$31,710은 2026 fee**라고 페이지가 명시하므로 2027 학비로 승격하지 않음.
+- 남은 확인: 2027 국제학생 학비, 한국 학력 환산표.
 
 ### Curtin
 - 최신 BH-PHARMA 공식 페이지 기준: 3년 9개월, ATAR/Selection Rank 80, Chemistry + Mathematics Applications, IELTS 7.0/각7.0.
@@ -81,7 +87,8 @@ UWA는 비교 대학에 포함하며, 고교 졸업자용 4년 Bachelor of Human
 - 현재 Pharmacy Course Resolutions 기준 1~4학년 192cp 완료 시 **Bachelor of Pharmacy (Honours)** 수여 가능.
 - 따라서 `bachelor_award_year=4`, `four_year_exit=true`, `exit_degree=Bachelor of Pharmacy (Honours)`로 확정.
 - 5학년 48cp는 Master of Pharmacy Practice.
-- 남은 확인: 2027 Mathematics prerequisite 적용 및 USFP 수학 progression.
+- Mathematics는 current Academic Board 기준 **prerequisite**로 확인: Mathematics Advanced Band 4 또는 Mathematics Extension 1/2 Band E3 상당. Chemistry·Biology는 assumed knowledge, Physics는 recommended study.
+- 남은 확인: USFP 수학 progression 조건.
 
 ### UQ 신설 PharmD
 - 2027 Bachelor of Pharmaceutics and Therapeutic Science / Doctor of Pharmacy 국제학생 모집 확인.
@@ -130,7 +137,7 @@ RMIT 영어는 더 이상 conflict/pending 항목이 아니다. 현재 공식 Ph
 ## 다음 우선순위
 
 1. 최신 HEAD의 GitHub Preview QA + Netlify Deploy Preview 재검증.
-2. Griffith·Curtin·La Trobe의 2027 국제학생 본과 학비 공식값이 새로 공개됐는지 계속 확인.
+2. JCU·Griffith·Curtin·La Trobe의 2027 국제학생 본과 학비 공식값이 새로 공개됐는지 계속 확인. JCU A$31,710은 2026 표시값으로 유지.
 3. Monash Foundation P6007 vs 2027 PDF conflict 해소 여부 모니터링.
 4. RMIT Foundation stream 세부 선수과목과 Associate 2년 총비용(연도별 fee 변동) 추적. 96CP/진입학년은 확인 완료.
 5. UQ 신설 PharmD APC/Pharmacy Board 승인 상태 확인.
