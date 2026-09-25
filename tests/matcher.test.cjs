@@ -8,7 +8,7 @@ test('화학 없음: JCU는 검토 가능, Monash Direct는 제외',()=>{assert.
 test('화학 미확인 대학은 필수 아님으로 통과시키지 않음',()=>assert.equal(check('latrobe-bpharm-hons',{chemistry:'no'}).state,'pending'));
 test('IELTS 6.5 필터 실제 차등: UQ 통과, Canberra 7.0 제외',()=>{assert.equal(check('uq-bpharm-hons',{english:'6.5'}).state,'match');assert.equal(check('canberra-bpharm-hons',{english:'6.5'}).state,'excluded');});
 test('Newcastle 영어 자료충돌은 통과가 아닌 pending',()=>assert.equal(check('newcastle-bpharm-hons',{english:'7'}).state,'pending'));
-test('이전 연도 UTas 영어는 2027 통과로 간주하지 않음',()=>assert.equal(check('utas-bpharm-hons',{english:'6.5'}).state,'pending'));
+test('UTas 2027 영어 IELTS 6.5는 공식 확인값으로 필터 통과',()=>assert.equal(check('utas-bpharm-hons',{english:'6.5'}).state,'match'));
 test('Sydney CSAT Pharmacy 346 경계값',()=>{assert.equal(check('sydney-bpharm-hons',{qualification:'csat',score:'346',route:'direct'}).state,'match');assert.equal(check('sydney-bpharm-hons',{qualification:'csat',score:'345',route:'direct'}).state,'excluded');});
 test('전체 경로 모드: 낮은 Direct 점수라도 Foundation은 별도 검토',()=>{const r=check('sydney-bpharm-hons',{qualification:'csat',score:'345'});assert.equal(r.state,'pending');assert.ok(r.unknown.some(x=>x.includes('Direct 조건 미충족')));});
 test('모든 학교에 수능 숫자를 채우지 않음',()=>assert.equal(check('uq-bpharm-hons',{qualification:'csat',score:'500',route:'direct'}).state,'pending'));
