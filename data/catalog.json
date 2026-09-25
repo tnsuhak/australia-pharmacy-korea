@@ -971,7 +971,7 @@
         "80CP 인정",
         "20% 자동심사"
       ],
-      "editorial": "Griffith College Diploma 후 80CP를 인정받고 약대 2학년으로 진학합니다.",
+      "editorial": "Direct 입학과 Griffith College Diploma 경로가 있습니다. Griffith College Diploma 후 80CP를 인정받고 약대 2학년으로 진학합니다.",
       "review_items": []
     },
     {
@@ -10276,15 +10276,15 @@
     {
       "program_id": "jcu-bpharm-hons",
       "annual": {
-        "value": null,
+        "value": 31710,
         "academic_year": 2027,
-        "source_year": null,
-        "source_id": "jcu",
+        "source_year": 2026,
+        "source_id": "jcu-fee-2026",
         "source_url": "https://www.jcu.edu.au/courses/bachelor-of-pharmacy-honours",
         "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
-        "note": ""
+        "verified_date": "2026-09-25",
+        "status": "latest_published",
+        "note": "JCU course page currently displays 2026 fee. 2027 fee not yet shown."
       },
       "official_total": {
         "value": null,
@@ -10299,14 +10299,14 @@
       },
       "currency": "AUD",
       "load_basis": {
-        "value": null,
+        "value": "24 credit points 기준",
         "academic_year": 2027,
-        "source_year": null,
-        "source_id": "jcu",
+        "source_year": 2026,
+        "source_id": "jcu-fee-2026",
         "source_url": "https://www.jcu.edu.au/courses/bachelor-of-pharmacy-honours",
         "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
+        "verified_date": "2026-09-25",
+        "status": "latest_published",
         "note": ""
       },
       "increase_note": "연도별 인상 및 실제 수강량에 따라 달라질 수 있습니다."
@@ -10428,15 +10428,15 @@
     {
       "program_id": "adelaide-bpharm-hons",
       "annual": {
-        "value": null,
+        "value": 54300,
         "academic_year": 2027,
         "source_year": null,
-        "source_id": "adelaide",
+        "source_id": "adelaide-fee-current",
         "source_url": "https://adelaide.edu.au/study/degrees/bachelor-of-pharmacy-honours/",
         "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
-        "note": ""
+        "verified_date": "2026-09-25",
+        "status": "latest_published",
+        "note": "Current international course page value; page does not label the fee year."
       },
       "official_total": {
         "value": null,
@@ -10451,14 +10451,14 @@
       },
       "currency": "AUD",
       "load_basis": {
-        "value": null,
+        "value": "full-time annual load",
         "academic_year": 2027,
         "source_year": null,
-        "source_id": "adelaide",
+        "source_id": "adelaide-fee-current",
         "source_url": "https://adelaide.edu.au/study/degrees/bachelor-of-pharmacy-honours/",
         "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
+        "verified_date": "2026-09-25",
+        "status": "latest_published",
         "note": ""
       },
       "increase_note": "연도별 인상 및 실제 수강량에 따라 달라질 수 있습니다."
@@ -10542,14 +10542,14 @@
     {
       "program_id": "qut-bpharm-hons",
       "annual": {
-        "value": null,
+        "value": 46200,
         "academic_year": 2027,
-        "source_year": null,
-        "source_id": "qut",
+        "source_year": 2027,
+        "source_id": "qut-fee-2027",
         "source_url": "https://www.qut.edu.au/courses/bachelor-of-pharmacy-honours",
         "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
+        "verified_date": "2026-09-25",
+        "status": "confirmed_2027",
         "note": ""
       },
       "official_total": {
@@ -10565,14 +10565,14 @@
       },
       "currency": "AUD",
       "load_basis": {
-        "value": null,
+        "value": "96 credit points 기준",
         "academic_year": 2027,
-        "source_year": null,
-        "source_id": "qut",
+        "source_year": 2027,
+        "source_id": "qut-fee-2027",
         "source_url": "https://www.qut.edu.au/courses/bachelor-of-pharmacy-honours",
         "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
+        "verified_date": "2026-09-25",
+        "status": "confirmed_2027",
         "note": ""
       },
       "increase_note": "연도별 인상 및 실제 수강량에 따라 달라질 수 있습니다."
@@ -10618,14 +10618,14 @@
     {
       "program_id": "newcastle-bpharm-hons",
       "annual": {
-        "value": null,
+        "value": 49205,
         "academic_year": 2027,
-        "source_year": null,
-        "source_id": "newcastle",
+        "source_year": 2027,
+        "source_id": "newcastle-fee-2027",
         "source_url": "https://www.newcastle.edu.au/degrees/bachelor-of-pharmacy-honours",
         "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
+        "verified_date": "2026-09-25",
+        "status": "confirmed_2027",
         "note": ""
       },
       "official_total": {
@@ -10641,14 +10641,14 @@
       },
       "currency": "AUD",
       "load_basis": {
-        "value": null,
+        "value": "80 units 기준",
         "academic_year": 2027,
-        "source_year": null,
-        "source_id": "newcastle",
+        "source_year": 2027,
+        "source_id": "newcastle-fee-2027",
         "source_url": "https://www.newcastle.edu.au/degrees/bachelor-of-pharmacy-honours",
         "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
+        "verified_date": "2026-09-25",
+        "status": "confirmed_2027",
         "note": ""
       },
       "increase_note": "연도별 인상 및 실제 수강량에 따라 달라질 수 있습니다."
@@ -10732,14 +10732,14 @@
     {
       "program_id": "monash-bpharm-hons",
       "annual": {
-        "value": null,
+        "value": 49740,
         "academic_year": 2027,
         "source_year": 2027,
-        "source_id": "monash",
+        "source_id": "monash-fee-2027",
         "source_url": "https://www.monash.edu/study/courses/find-a-course/pharmacy-p6007",
         "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
+        "verified_date": "2026-09-25",
+        "status": "confirmed_2027",
         "note": ""
       },
       "official_total": {
@@ -10755,14 +10755,14 @@
       },
       "currency": "AUD",
       "load_basis": {
-        "value": null,
+        "value": "48 credit points 기준",
         "academic_year": 2027,
         "source_year": 2027,
-        "source_id": "monash",
+        "source_id": "monash-fee-2027",
         "source_url": "https://www.monash.edu/study/courses/find-a-course/pharmacy-p6007",
         "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
+        "verified_date": "2026-09-25",
+        "status": "confirmed_2027",
         "note": ""
       },
       "increase_note": "연도별 인상 및 실제 수강량에 따라 달라질 수 있습니다."
@@ -10808,37 +10808,37 @@
     {
       "program_id": "unsw-bpharm-hons",
       "annual": {
-        "value": null,
+        "value": 63000,
         "academic_year": 2027,
-        "source_year": null,
-        "source_id": "unsw",
+        "source_year": 2026,
+        "source_id": "unsw-fee-2026",
         "source_url": "https://www.unsw.edu.au/study/undergraduate/bachelor-of-pharmaceutical-medicine-master-of-pharmacy",
         "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
-        "note": ""
+        "verified_date": "2026-09-25",
+        "status": "latest_published",
+        "note": "2027 PharmD naming is announced, but current fee shown on the course page is 2026."
       },
       "official_total": {
-        "value": null,
+        "value": 349000,
         "academic_year": 2027,
-        "source_year": null,
-        "source_id": "unsw",
+        "source_year": 2026,
+        "source_id": "unsw-fee-2026",
         "source_url": "https://www.unsw.edu.au/study/undergraduate/bachelor-of-pharmaceutical-medicine-master-of-pharmacy",
         "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
+        "verified_date": "2026-09-25",
+        "status": "latest_published",
         "note": ""
       },
       "currency": "AUD",
       "load_basis": {
-        "value": null,
+        "value": "first-year full-time fee",
         "academic_year": 2027,
-        "source_year": null,
-        "source_id": "unsw",
+        "source_year": 2026,
+        "source_id": "unsw-fee-2026",
         "source_url": "https://www.unsw.edu.au/study/undergraduate/bachelor-of-pharmaceutical-medicine-master-of-pharmacy",
         "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
+        "verified_date": "2026-09-25",
+        "status": "latest_published",
         "note": ""
       },
       "increase_note": "연도별 인상 및 실제 수강량에 따라 달라질 수 있습니다."
@@ -10884,15 +10884,15 @@
     {
       "program_id": "uwa-bpharm-hons",
       "annual": {
-        "value": null,
+        "value": 46000,
         "academic_year": 2027,
-        "source_year": null,
-        "source_id": "uwa",
-        "source_url": "https://www.uwa.edu.au/study/courses/bachelor-of-human-sciences-pharmaceutical-health-and-doctor-of-pharmacy",
-        "source_type": "official_course",
+        "source_year": 2026,
+        "source_id": "uwa-fee-2026",
+        "source_url": "https://www.fees.uwa.edu.au/Browse/BrowseCourses?feeType=INTUG&feeYear=2026",
+        "source_type": "official_fee",
         "verified_date": "2026-09-25",
-        "status": "pending_2027",
-        "note": "2027 국제학생 학비 최종 확인 전 미표시. 이전 연도 수치를 2027 확정값으로 사용하지 않음."
+        "status": "latest_published",
+        "note": "2026 international fee. 2027 fee table not yet confirmed."
       },
       "official_total": {
         "value": null,
@@ -10907,14 +10907,14 @@
       },
       "currency": "AUD",
       "load_basis": {
-        "value": null,
+        "value": "48 points 기준",
         "academic_year": 2027,
-        "source_year": null,
-        "source_id": "uwa",
-        "source_url": "https://www.uwa.edu.au/study/courses/bachelor-of-human-sciences-pharmaceutical-health-and-doctor-of-pharmacy",
-        "source_type": "official_course",
+        "source_year": 2026,
+        "source_id": "uwa-fee-2026",
+        "source_url": "https://www.fees.uwa.edu.au/Browse/BrowseCourses?feeType=INTUG&feeYear=2026",
+        "source_type": "official_fee",
         "verified_date": "2026-09-25",
-        "status": "pending_2027",
+        "status": "latest_published",
         "note": ""
       },
       "increase_note": "연도별 인상 및 실제 수강량에 따라 달라질 수 있습니다."
@@ -16467,6 +16467,62 @@
       "url": "https://www.qut.edu.au/study/qut-college/international/english-language-programs",
       "source_year": null,
       "source_type": "official_pathway",
+      "verified_date": "2026-09-25"
+    },
+    {
+      "id": "qut-fee-2027",
+      "title": "QUT · Bachelor of Pharmacy (Honours) 2027 fee",
+      "url": "https://www.qut.edu.au/courses/bachelor-of-pharmacy-honours",
+      "source_year": 2027,
+      "source_type": "official_course",
+      "verified_date": "2026-09-25"
+    },
+    {
+      "id": "newcastle-fee-2027",
+      "title": "University of Newcastle · Bachelor of Pharmacy (Honours) 2027 fee",
+      "url": "https://www.newcastle.edu.au/degrees/bachelor-of-pharmacy-honours",
+      "source_year": 2027,
+      "source_type": "official_course",
+      "verified_date": "2026-09-25"
+    },
+    {
+      "id": "monash-fee-2027",
+      "title": "Monash · Pharmacy P6007 2027 fee",
+      "url": "https://www.monash.edu/study/courses/find-a-course/pharmacy-p6007",
+      "source_year": 2027,
+      "source_type": "official_course",
+      "verified_date": "2026-09-25"
+    },
+    {
+      "id": "jcu-fee-2026",
+      "title": "JCU · Bachelor of Pharmacy (Honours) 2026 fee",
+      "url": "https://www.jcu.edu.au/courses/bachelor-of-pharmacy-honours",
+      "source_year": 2026,
+      "source_type": "official_course",
+      "verified_date": "2026-09-25"
+    },
+    {
+      "id": "unsw-fee-2026",
+      "title": "UNSW · Pharmaceutical Medicine / Pharmacy 2026 fee",
+      "url": "https://www.unsw.edu.au/study/undergraduate/bachelor-of-pharmaceutical-medicine-master-of-pharmacy",
+      "source_year": 2026,
+      "source_type": "official_course",
+      "verified_date": "2026-09-25"
+    },
+    {
+      "id": "uwa-fee-2026",
+      "title": "UWA · 2026 international undergraduate fees CM039",
+      "url": "https://www.fees.uwa.edu.au/Browse/BrowseCourses?feeType=INTUG&feeYear=2026",
+      "source_year": 2026,
+      "source_type": "official_fee",
+      "verified_date": "2026-09-25"
+    },
+    {
+      "id": "adelaide-fee-current",
+      "title": "Adelaide University · Bachelor of Pharmacy (Honours) international fee",
+      "url": "https://adelaide.edu.au/study/degrees/bachelor-of-pharmacy-honours/",
+      "source_year": null,
+      "source_type": "official_course",
       "verified_date": "2026-09-25"
     }
   ],
