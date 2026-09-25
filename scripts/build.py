@@ -117,7 +117,7 @@ def card(p):
 
 REGIONAL_485={
  'jcu':dict(category='Category 3',area='Townsville · Cairns · Mackay',extra='두 번째 485 +2년 가능',total='요건 충족 시 총 4년'),
- 'utas':dict(category='캠퍼스별 다름',area='Hobart: Category 2 · Launceston/Cradle Coast: Category 3',extra='Hobart +1년 · Launceston/Cradle Coast +2년',total='요건 충족 시 총 3~4년'),
+ 'utas':dict(category='Tasmania 특례',area='Hobart · Launceston · Cradle Coast',extra='두 번째 485 +2년 가능',total='요건 충족 시 총 4년'),
  'curtin':dict(category='Category 2',area='Perth · Bentley',extra='두 번째 485 +1년 가능',total='요건 충족 시 총 3년'),
  'uq':dict(category='Major city',area='Brisbane',extra='지역 추가 485 없음',total='기본 485 2년'),
  'adelaide':dict(category='Category 2',area='Adelaide',extra='두 번째 485 +1년 가능',total='요건 충족 시 총 3년'),
@@ -132,6 +132,16 @@ REGIONAL_485={
  'sydney':dict(category='Major city',area='Sydney',extra='지역 추가 485 없음',total='기본 485 2년'),
  'unsw':dict(category='Major city',area='Sydney',extra='지역 추가 485 없음',total='기본 485 2년'),
  'uwa':dict(category='Category 2',area='Perth · Crawley',extra='두 번째 485 +1년 가능',total='요건 충족 시 총 3년')
+}
+
+STATE_NOMINATION={
+ 'WA':dict(status='2026-27 발표 대기',headline='WA 190·491 · 새 기준 발표 대기',detail='2025-26에는 healthcare and social assistance가 우선 업종이었고 Hospital·Industrial·Retail Pharmacist 초청 사례가 있습니다. 2026-27 직업목록과 조건은 새 공고가 나온 뒤 적용합니다.',sources=['migration-wa-criteria','migration-wa-pharmacist']),
+ 'SA':dict(status='2026-27 발표 대기',headline='SA 190·491 · 새 프로그램 개시 대기',detail='2025-26 ROI는 종료됐고 2026-27 프로그램이 시작되면 새 occupation list와 stream 조건을 적용합니다.',sources=['migration-sa-list','migration-sa-status']),
+ 'QLD':dict(status='2026-27 발표 대기',headline='QLD 190·491 · 새 occupation list 대기',detail='2025-26에는 Hospital Pharmacist와 Retail Pharmacist가 491 대상이었고 190에는 표시되지 않았습니다. 2026-27 새 QSOL이 발표되면 교체합니다.',sources=['migration-qld-list','migration-qld-status']),
+ 'VIC':dict(status='2026-27 발표 대기',headline='Victoria 190·491 · 새 프로그램 발표 대기',detail='2025-26 프로그램은 마감됐습니다. 2026-27 nomination 조건은 공식 발표 후 업데이트합니다.',sources=['migration-vic-status']),
+ 'NSW':dict(status='현재 리스트 포함',headline='NSW 190·491 · Pharmacists 2515 포함',detail='현재 NSW Skills List에 Pharmacists(ANZSCO unit group 2515)가 190과 Regional 491 모두 포함돼 있습니다. 실제 초청은 EOI 순위와 NSW 선발기준을 따릅니다.',sources=['migration-nsw-skills']),
+ 'TAS':dict(status='2026-27 운영 중',headline='Tasmania 190·491 · 약사 3개 직종 포함',detail='2026-27 프로그램은 2026년 8월 개시됐습니다. Hospital Pharmacist 251511, Industrial Pharmacist 251512, Retail Pharmacist 251513이 Health/Allied Health 목록에 포함돼 있습니다.',sources=['migration-tas-program','migration-tas-health']),
+ 'ACT':dict(status='현재 리스트 포함',headline='ACT 190·491 · 약사 3개 직종 포함',detail='현재 ACT occupation list에 Hospital·Industrial·Retail Pharmacist가 포함돼 있으며 Canberra Matrix로 경쟁합니다. 2026-27 nomination allocation은 아직 발표 대기입니다.',sources=['migration-act-list','migration-act-program'])
 }
 
 def university_programs(uid):return [p for p in D['programs'] if p['university_id']==uid]
@@ -170,9 +180,14 @@ def directory_card(u):
     region=REGIONAL_485[u['id']]
     headline=E(ps[0]['editorial'])
     return f'''<article class="pharmacy-school-card"><div class="school-card-head"><div><span class="school-state">{E(u['state'])} · {E(region['area'])}</span><h3>{E(u['name_ko'])}<small>{E(u['name'])}</small></h3></div><span class="school-monogram large">{E(u['short'])}</span></div><p class="school-summary">{headline}</p><div class="path-badges">{pathway_badges(u['id'])}</div><dl class="school-keyfacts"><div><dt>과정</dt><dd>{E(duration)}</dd></div><div><dt>입학</dt><dd>{E(intake_text(u['id']))}</dd></div><div><dt>인턴십</dt><dd>{E(internship_label(u['id']))}</dd></div><div><dt>485</dt><dd>{E(region['total'])}</dd></div></dl><a class="school-detail-link" href="/universities/{E(ps[0]['id'].replace('-bpharm-hons','').replace('-pharmd',''))}-pharmacy/" data-fallback="{E(purl(ps[0]))}">이 약대 상세분석 →</a></article>'''
+def state_nomination_html(u):
+    s=STATE_NOMINATION.get(u['state'])
+    if not s:return '<p>주정부 nomination 정보 업데이트 중입니다.</p>'
+    return '<div class="state-nomination-card"><span class="state-status">'+E(s['status'])+'</span><h3>'+E(s['headline'])+'</h3><p>'+E(s['detail'])+'</p></div>'+sources(s['sources'])
+
 def poststudy_html(u):
     r=REGIONAL_485[u['id']]
-    return facts([('약대 캠퍼스',E(r['area'])),('485 기본기간','2년'),('지역 분류',E(r['category'])),('지역 추가 485',E(r['extra'])),('가능 총기간',E(r['total'])),('주정부',E(u['state'])+' 주 기준 별도 업데이트')])+callout('지역 추가 485는 자동으로 받는 기간이 아닙니다. 지역캠퍼스 졸업, 첫 485 기간 중 지역 거주 등 Second Post-Higher Education Work stream 요건을 충족해야 합니다.')+link('/after-graduation/','485·Regional 기준 자세히 →','btn text')
+    return facts([('약대 캠퍼스',E(r['area'])),('첫 485','2년'),('지역 분류',E(r['category'])),('두 번째 485',E(r['extra'])),('가능 총기간',E(r['total']))])+callout('두 번째 485는 자동 연장이 아닙니다. 지역캠퍼스 졸업과 지역 거주 등 Second Post-Higher Education Work stream 요건을 충족해야 합니다.')+'<h3>주정부 nomination</h3>'+state_nomination_html(u)+link('/after-graduation/','485·Regional 전체 기준 →','btn text')
 
 home=f'''<section class="hero school-first-hero"><div class="wrap hero-grid"><div><span class="eyebrow">2027 AUSTRALIA PHARMACY GUIDE</span><h1>호주 약대는<br><em>학교마다 다릅니다.</em></h1><p class="hero-copy">약대 수는 많지 않지만 과정은 제각각입니다.<br>3년·4년·5년, 2월·7월 입학, Foundation·Diploma,<br>인턴십과 졸업 후 485 지역조건까지 대학별로 봐야 합니다.</p><div class="button-row"><a class="btn" href="#all-schools">대학별 약대 보기 <span>↓</span></a><a class="btn secondary" href="/admission-pathways/">입학방법으로 보기 →</a></div><div class="hero-meta"><span>{len(U)}개 대학</span><span>{len(P)}개 학부 시작 과정</span><span>대학별 상세분석</span></div></div><div class="route-illustration difference-panel"><div class="top"><h2>학교마다 무엇이 다른가요?</h2><span class="live-dot">SCHOOL BY SCHOOL</span></div><div class="difference-list"><div><b>기간</b><span>3년 · 3.5년 · 4년 · 5년</span></div><div><b>입학월</b><span>2월 · 7월 · 대학별 다름</span></div><div><b>입학방법</b><span>Direct · Foundation · Diploma</span></div><div><b>졸업 후</b><span>인턴십 · 485 · Regional · 주정부</span></div></div></div></div></section>'''
 
@@ -203,7 +218,7 @@ regional_rows=[]
 for u in D['universities']:
     r=REGIONAL_485[u['id']]
     regional_rows.append((link('/universities/'+university_programs(u['id'])[0]['id'].replace('-bpharm-hons','').replace('-pharmd','')+'-pharmacy/',E(u['short'])),E(r['area']),E(r['category']),E(r['total'])))
-after_items=[('rule','485 기본기간','<p>현재 Home Affairs 기준으로 Bachelor와 Masters coursework/extended의 Post-Higher Education Work stream은 기본 2년입니다.</p>'),('regional','Regional이면 두 번째 485가 추가될 수 있습니다',table([('Category 2','+1년','요건 충족 시 총 3년'),('Category 3','+2년','요건 충족 시 총 4년')],['지역','두 번째 485','가능 총기간'],True)+callout('두 번째 485는 자동 연장이 아닙니다. 지역 교육기관에서 학위를 받고, 첫 485 기간 중 지정 지역에서 최소 2년 거주하는 등 별도 요건을 충족해야 합니다.')),('schools','약대별 캠퍼스와 485',table(regional_rows,['대학','약대 캠퍼스','지역 분류','485'],True)),('state','주정부 이민은 별도로 봅니다','<p>주정부 nomination은 직업목록, 경력, 거주조건, 초청방식이 주마다 다르고 자주 바뀝니다. 대학이 Regional에 있다는 이유만으로 주정부 이민이 자동으로 되는 것은 아닙니다. 대학 상세페이지에서는 주(State)를 표시하고, 주정부 조건은 최신 공고를 기준으로 별도 업데이트합니다.</p>'),('sources','자료 출처',sources(['homeaffairs-485','homeaffairs-second485','homeaffairs-regional','jcu-2027-campus','utas-2027-campus']))]
+after_items=[('rule','485 기본기간','<p>현재 Home Affairs 기준으로 Bachelor와 Masters coursework/extended의 Post-Higher Education Work stream은 기본 2년입니다.</p>'),('regional','Regional이면 두 번째 485가 추가될 수 있습니다',table([('Category 2','+1년','요건 충족 시 총 3년'),('Category 3','+2년','요건 충족 시 총 4년'),('Tasmania','+2년','요건 충족 시 총 4년')],['지역','두 번째 485','가능 총기간'],True)+callout('Tasmania는 Second 485 전용 규칙에서 Category 2·3 모두 +2년으로 처리됩니다. 두 번째 485는 자동 연장이 아니며 지역캠퍼스 졸업과 지역 거주 등 별도 요건을 충족해야 합니다.')),('schools','약대별 캠퍼스와 485',table(regional_rows,['대학','약대 캠퍼스','지역 분류','485'],True)),('state','주정부 nomination','<p>주정부 nomination은 485와 별개입니다. NSW·Tasmania·ACT처럼 약사 직종이 현재 리스트에 확인되는 곳도 있고, 2026-27 새 기준 발표를 기다리는 주도 있습니다. 각 대학 상세페이지에 해당 주의 현재 상태를 표시합니다.</p>'),('sources','자료 출처',sources(['homeaffairs-485','homeaffairs-second485','homeaffairs-regional','jcu-2027-campus','utas-2027-campus','migration-nsw-skills','migration-tas-program','migration-tas-health','migration-act-list','migration-qld-status','migration-vic-status','migration-sa-status','migration-wa-criteria']))]
 register('/after-graduation/','호주 약대 졸업 후 485 · Regional · 주정부 이민 | TNS','호주 약대 졸업 후 485 기본 2년과 Regional Category 2·3의 두 번째 485, 대학별 캠퍼스 지역을 정리합니다.',pagehero('호주 약대 졸업 후 485·Regional','약대가 있는 도시와 캠퍼스에 따라 졸업 후 체류조건이 달라질 수 있습니다.','졸업 후')+article(after_items))
 
 comp=pagehero('2027 호주 약대 비교',f'학력·선수과목·입학시기로 {len(U)}개 대학의 {len(P)}개 과정을 비교합니다.','전체 약대 비교')
@@ -267,6 +282,7 @@ for u in D['universities']:
     routes_html=routecards(rs)
     if u['id']=='uwa':routes_html+=callout('<strong>대졸자 별도 과정</strong><p>UWA에는 학사 졸업자가 지원하는 2년 Doctor of Pharmacy도 있습니다. 2027년 1월 시작, sWAM 65+와 Chemistry·Math/Statistics·Microbiology·Pharmacology가 필요합니다.</p>'+link('/graduate-entry/','UWA Graduate Entry 보기 →','btn text'))
     allids|={'homeaffairs-485','homeaffairs-second485','homeaffairs-regional'}
+    allids|=set(STATE_NOMINATION.get(u['state'],{}).get('sources',[]))
     if u['id']=='jcu':allids|={'jcu-2027-campus'}
     if u['id']=='utas':allids|={'utas-2027-campus'}
     if u['id']=='uwa':allids|={'uwa-dpharm'}
