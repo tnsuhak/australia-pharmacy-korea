@@ -110,7 +110,7 @@
 | jcu-fee-2026 | [JCU · Bachelor of Pharmacy (Honours) 2026 fee](https://www.jcu.edu.au/courses/bachelor-of-pharmacy-honours) | 2026 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
 | unsw-fee-2026 | [UNSW · Pharmaceutical Medicine / Pharmacy 2026 fee](https://www.unsw.edu.au/study/undergraduate/bachelor-of-pharmaceutical-medicine-master-of-pharmacy) | 2026 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
 | uwa-fee-2026 | [UWA · 2026 international undergraduate fees CM039](https://www.fees.uwa.edu.au/Browse/BrowseCourses?feeType=INTUG&feeYear=2026) | 2026 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
-| adelaide-fee-current | [Adelaide University · Bachelor of Pharmacy (Honours) international fee](https://adelaide.edu.au/study/degrees/bachelor-of-pharmacy-honours/) | 페이지별 확인 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
+| adelaide-fee-current | [Adelaide University · Bachelor of Pharmacy (Honours) · published 2026 international fee](https://adelaide.edu.au/study/degrees/bachelor-of-pharmacy-honours/) | 2026 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
 | rmit-2027-apply | [RMIT Bachelor of Pharmacy (Honours) · 2027 intake](https://www.rmit.edu.au/study-with-us/levels-of-study/undergraduate-study/honours-degrees/bachelor-of-pharmacy-honours-bh102/apply-now) | 2027 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
 | unsw-2027-course | [UNSW Pharmaceutical Medicine / Doctor of Pharmacy · 2027](https://www.unsw.edu.au/study/undergraduate/bachelor-of-pharmaceutical-medicine-master-of-pharmacy) | 2027 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
 | unsw-english-current | [UNSW · English language requirements](https://www.unsw.edu.au/study/how-to-apply/english-language-requirements) | 페이지별 확인 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
@@ -147,17 +147,24 @@
 | rmit-associate-current | [RMIT Associate Degree in Applied Science · Pharmacy further study credit](https://www.rmit.edu.au/study-with-us/levels-of-study/undergraduate-study/associate-degrees/ad012) | 페이지별 확인 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
 | rmit-associate-2027 | [RMIT Associate Degree in Applied Science · 2027 international fee/intake](https://www.rmit.edu.au/study-with-us/levels-of-study/undergraduate-study/associate-degrees/associate-degree-in-applied-science-ad012/apply-now) | 2027 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
 | sydney-prereqs-current | [Sydney Academic Board · Pharmacy course prerequisites and assumed knowledge](https://www.sydney.edu.au/content/dam/corporate/documents/about-us/governance-and-structure/academic-board/ab-standards---guidelines-/course-prerquisite-assumed-knowledge-recommended-studies-table.pdf) | 2025 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
+| latrobe-foundation-current | [La Trobe College · Foundation Studies Health, Life Sciences and Engineering](https://www.latrobecollegeaustralia.edu.au/study-options/foundation-studies/health-life-sciences/) | 페이지별 확인 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
+| latrobe-foundation-transfer | [La Trobe College · Foundation Studies transfer criteria](https://www.latrobecollegeaustralia.edu.au/study-options/transferring-university/) | 페이지별 확인 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
+| latrobe-foundation-plan | [La Trobe College · Foundation Health and Life Sciences study plan](https://www.latrobecollegeaustralia.edu.au/wp-content/uploads/webpage-study-plan-guide.pdf) | 페이지별 확인 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
+| latrobe-foundation-fee-2026 | [La Trobe College · 2026 Foundation Studies fee](https://www.latrobecollegeaustralia.edu.au/how-apply/fees/) | 2026 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
+| latrobe-foundation-english-2026 | [La Trobe College · 2026 international English entry requirements](https://www.latrobecollegeaustralia.edu.au/wp-content/uploads/LTCA260107-1149-International-Guide-2026-Update-FAW_Web.pdf) | 2026 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
+| utas-ipc-fees-2027 | [UTas International Pathway College · 2027 Foundation fees and intakes](https://utas.up.education/fees-and-intakes/) | 2027 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
+| utas-ipc-foundation | [UTas International Pathway College · Foundation Pharmacy progression](https://utas.up.education/foundation-studies/) | 페이지별 확인 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
+| utas-ipc-entry | [UTas International Pathway College · country and English entry requirements](https://utas.up.education/applying/entry-requirements/) | 페이지별 확인 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
 
 ## 운영 메모
 
-- `data/catalog.json`의 각 fact가 적용 상태(`confirmed_2027`, `latest_published`, `pending_2027`, `source_conflict`)와 출처를 보유합니다.
+- `data/catalog.json`의 각 fact가 실제 적용 상태(`confirmed_2027`, `latest_published`, `pending_2027`, `source_conflict`)와 출처를 보유합니다.
 - 2027 값이 확인되지 않은 경우 최신 공개연도를 2027 확정값으로 바꾸지 않습니다.
-- JCU 2027 course changes에서 Townsville·Cairns·Mackay의 2월 시작을 확인했습니다. 현재 국제학생 course page의 A$31,710은 명시적으로 2026 fee이므로 2027 학비로 승격하지 않습니다.
-- Sydney Pharmacy는 current Academic Board prerequisite table에 따라 Mathematics를 prerequisite, Chemistry·Biology를 assumed knowledge, Physics를 recommended study로 분류합니다.
-- Newcastle 영어는 2027 공식자료끼리 6.5/각6.5와 7.0/각7.0이 달라 `source_conflict`로 유지합니다.
-- Monash Foundation은 live P6007 destination page와 2027 Pathway Programs PDF의 legacy P6001 표기가 달라 `source_conflict`로 유지합니다.
-- Curtin Pharmacy 최신 BH-PHARMA 페이지는 2027 fee/intake를 현재 제공하지 않아 추정하지 않습니다.
-- Griffith College Diploma of Health Sciences → Pharmacy는 2027 공식 가이드/credit precedent/current entry requirements를 사용합니다. 공개 경로는 Griffith College만 유지하며 경쟁사 한국 경로는 source registry·SEO·CTA에서 제외합니다.
-- UQ 2027 신설 PharmD는 국제학생 모집 자체는 확인됐지만 APC accreditation 및 Pharmacy Board approval이 아직 완료되지 않았으므로 모집 여부와 전문인증 상태를 분리합니다.
-- Queensland 2026-27 QSOL은 consultation 종료 후 새 목록이 아직 공개되지 않아 2025-26 약사 491 범위를 2026-27로 자동 이식하지 않습니다.
+- Adelaide Pharmacy 현재 국제학생 페이지는 South Korea CSAT **345**를 표시합니다. 동일 페이지의 A$54,300 학비는 **2026 입학생 학비**라고 명시하므로 2027 학비로 승격하지 않습니다.
+- Griffith College 2027 intake 날짜는 현재 live Key Dates 페이지를 사용합니다. 2027 Quick Guide는 T2/T3 날짜가 다르므로 오래된 PDF보다 live 페이지를 우선합니다.
+- Curtin Pharmacy 최신 BH-PHARMA 페이지는 fee가 unavailable, intake는 no intakes available로 표시하므로 2027 국제학생 학비·시작월을 추정하지 않습니다.
+- La Trobe Pharmacy는 2027년 3월 시작과 국제학생 연중 지원 가능을 안내하지만, 국제학생 2027 학비는 확정값을 넣지 않습니다.
+- Monash Foundation은 live destination-degree 페이지의 P6007 값과 2027 Pathway Programs PDF의 legacy P6001이 충돌하므로 source_conflict로 유지합니다.
+- Queensland 2026-27 QSOL은 consultation이 종료됐지만 새 목록이 아직 공개되지 않아 2025-26 약사 491 범위를 새 회계연도 자격으로 이식하지 않습니다.
+- 경쟁사 한국 경로는 source registry와 공개 페이지에서 제외합니다.
 - Apply / How to apply / Application Portal은 공개 상담 퍼널의 기본 외부 링크로 사용하지 않습니다.
