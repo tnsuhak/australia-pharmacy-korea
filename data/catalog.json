@@ -28,14 +28,14 @@
       "name_ko": "태즈메이니아대학교",
       "state": "TAS",
       "campus": {
-        "value": "Tasmania · 국제학생 캠퍼스 확인",
+        "value": "Cradle Coast · Hobart · Launceston",
         "academic_year": 2027,
-        "source_year": 2026,
-        "source_id": "apc",
-        "source_url": "https://www.pharmacycouncil.org.au/education-provider/accreditation/pharmacy-degree-programs-australia/accredited-pharmacy-degree-programs/",
-        "source_type": "accreditation",
-        "verified_date": "2026-09-24",
-        "status": "latest_published",
+        "source_year": 2027,
+        "source_id": "utas-2027-campus",
+        "source_url": "https://www.utas.edu.au/courses/health/courses/54d-bachelor-of-pharmacy-with-honours",
+        "source_type": "official_course",
+        "verified_date": "2026-09-26",
+        "status": "confirmed_2027",
         "note": ""
       },
       "short": "UTas",
@@ -419,17 +419,18 @@
       "editorial": "2027 공식 course changes에서 Townsville·Cairns·Mackay 모두 2월 시작의 3년 Trimester 과정으로 확인됩니다. 현재 국제학생 course page도 세 캠퍼스를 모두 표시하지만 학비는 아직 2026 A$31,710을 보여주므로 2027 학비로 승격하지 않습니다.",
       "review_items": [
         "2027 국제학생 학비",
-        "한국 학력 환산표"
+        "한국 학력 환산표",
+        "JCU Prep의 국제학생 packaged pathway 적용 여부"
       ],
       "decision_lens": {
         "why": [
           "3년 Fast-track",
-          "2027 Townsville·Cairns·Mackay 모두 2월 시작",
-          "화학은 권장 · General Mathematics 필요"
+          "Townsville·Cairns·Mackay 모두 Regional",
+          "화학은 권장, 수학은 필요"
         ],
         "watch": [
           "현재 국제학생 course page 학비 A$31,710은 2026 표시값",
-          "2027 국제학생 학비·한국 학력 환산표 발표 대기"
+          "JCU Prep은 국내학생 안내가 중심이라 한국 국제학생 pathway로 확정하지 않음"
         ]
       }
     },
@@ -537,21 +538,20 @@
       },
       "highlights": [
         "3년 Fast-track",
-        "2027 학비 공개",
-        "Hobart 숙소"
+        "Cradle Coast · Hobart · Launceston",
+        "2027 학비·30% Merit"
       ],
-      "editorial": "3년 Fast-track 약대입니다. Direct 외에 UTas International Pathway College의 Standard(8–9개월)와 Fast-track(4–5개월) Foundation이 있으며, Pharmacy 진급은 Physical Science stream FCWAM 60%, Chemistry+Statistics, Foundation English 평균 65% 조건을 적용합니다.",
+      "editorial": "2027 과정은 Cradle Coast·Hobart·Launceston 세 캠퍼스에서 국제학생이 전체 3년을 이수할 수 있습니다. 일반 4년 약학과 분량을 3년에 압축해 연간 수강량이 많은 편입니다.",
       "review_items": [],
       "decision_lens": {
         "why": [
-          "3년 Fast-track 본과",
-          "2027 본과 학비 A$61,267 · 총액 A$198,050",
-          "UTas IPC Standard/Fast-track Foundation에서 Pharmacy 진학 가능",
-          "Hobart·Launceston·Cradle Coast 모두 Tasmania Regional"
+          "3년 Fast-track",
+          "Tasmania 요건 충족 시 두 번째 485 +2년",
+          "2027 국제장학 30% 자동심사"
         ],
         "watch": [
-          "Foundation 시작월에 따라 Pharmacy 다음 HSP1까지 대기기간이 달라질 수 있음",
-          "Foundation 2027 fee는 Standard A$21,975 / Fast-track A$25,450"
+          "3년에 압축해 연간 수강량이 많음",
+          "Foundation 시작시점과 다음 Pharmacy 입학시기 조합 확인 필요"
         ]
       }
     },
@@ -1282,10 +1282,11 @@
       "decision_lens": {
         "why": [
           "Chemistry·Math는 필수가 아니라 assumed knowledge",
-          "QUT College Foundation 경로",
+          "QUT College Standard 12개월 / Intensive 6개월",
           "2027 International Merit 25%"
         ],
         "watch": [
+          "Foundation 수료 후 Pharmacy package offer의 개별 progression 조건 확인",
           "Brisbane은 지역 추가 485 대상 아님"
         ]
       }
@@ -2580,28 +2581,28 @@
         "note": ""
       },
       "english": {
-        "value": null,
+        "value": "IELTS 6.5 / 각 6.0",
         "academic_year": 2027,
         "source_year": 2027,
         "source_id": "utas",
         "source_url": "https://www.utas.edu.au/courses/health/courses/54d-bachelor-of-pharmacy-with-honours",
         "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
+        "verified_date": "2026-09-26",
+        "status": "confirmed_2027",
         "note": ""
       },
       "qualification": {
-        "value": null,
+        "value": "2027 minimum ATAR 70 상당 · CSAT 305 · IB 25 · A-level 8 · OSSD 70% · SAT 980",
         "academic_year": 2027,
-        "source_year": 2027,
-        "source_id": "utas",
-        "source_url": "https://www.utas.edu.au/courses/health/courses/54d-bachelor-of-pharmacy-with-honours",
-        "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
-        "note": ""
+        "source_year": 2023,
+        "source_id": "utas-atar-equiv-current",
+        "source_url": "https://www.utas.edu.au/__data/assets/pdf_file/0011/1673759/MST-ISR-ATAR_Equivilance-Table.pdf",
+        "source_type": "official_admissions",
+        "verified_date": "2026-09-26",
+        "status": "latest_published",
+        "note": "현재 UTas 공식 country-entry 페이지가 링크하는 equivalency table의 ATAR 70 열 기준"
       },
-      "note": "아래 표에 성적·선수과목·영어 기준을 정리했습니다.",
+      "note": "2027 minimum ATAR 70 상당 학력 + Mathematics + Chemistry 또는 Physical Sciences 요건을 충족해야 합니다.",
       "intake_months": {
         "value": null,
         "academic_year": 2027,
@@ -3260,6 +3261,246 @@
         "verified_date": "2026-09-25",
         "status": "confirmed_2027",
         "note": ""
+      }
+    },
+    {
+      "id": "qut-foundation-standard",
+      "program_id": "qut-bpharm-hons",
+      "type": "foundation",
+      "title": "QUT College · Standard Foundation",
+      "availability": {
+        "value": true,
+        "academic_year": 2027,
+        "source_year": 2027,
+        "source_id": "qut-foundation-standard-2027",
+        "source_url": "https://www.qut.edu.au/courses/standard-foundation",
+        "source_type": "official_pathway",
+        "verified_date": "2026-09-26",
+        "status": "confirmed_2027",
+        "note": ""
+      },
+      "credit": {
+        "value": 0,
+        "academic_year": 2027,
+        "source_year": 2027,
+        "source_id": "qut-foundation-standard-2027",
+        "source_url": "https://www.qut.edu.au/courses/standard-foundation",
+        "source_type": "official_pathway",
+        "verified_date": "2026-09-26",
+        "status": "confirmed_2027",
+        "note": ""
+      },
+      "entry_year": {
+        "value": 1,
+        "academic_year": 2027,
+        "source_year": 2027,
+        "source_id": "qut-foundation-standard-2027",
+        "source_url": "https://www.qut.edu.au/courses/standard-foundation",
+        "source_type": "official_pathway",
+        "verified_date": "2026-09-26",
+        "status": "confirmed_2027",
+        "note": ""
+      },
+      "duration": {
+        "value": "12개월",
+        "academic_year": 2027,
+        "source_year": 2027,
+        "source_id": "qut-foundation-standard-2027",
+        "source_url": "https://www.qut.edu.au/courses/standard-foundation",
+        "source_type": "official_pathway",
+        "verified_date": "2026-09-26",
+        "status": "confirmed_2027",
+        "note": ""
+      },
+      "intake": {
+        "value": "2월 · 7월",
+        "academic_year": 2027,
+        "source_year": 2027,
+        "source_id": "qut-foundation-standard-2027",
+        "source_url": "https://www.qut.edu.au/courses/standard-foundation",
+        "source_type": "official_pathway",
+        "verified_date": "2026-09-26",
+        "status": "confirmed_2027",
+        "note": ""
+      },
+      "progression": {
+        "value": "Foundation 수료 + Pharmacy package offer의 faculty progression 조건 충족",
+        "academic_year": 2027,
+        "source_year": 2027,
+        "source_id": "qut-foundation-standard-2027",
+        "source_url": "https://www.qut.edu.au/courses/standard-foundation",
+        "source_type": "official_pathway",
+        "verified_date": "2026-09-26",
+        "status": "confirmed_2027",
+        "note": ""
+      },
+      "english": {
+        "value": "IELTS 5.5 / 각 5.0 · PTE 46 / 각 38 · TOEFL 56 (L10/R10/W15/S14)",
+        "academic_year": 2027,
+        "source_year": 2027,
+        "source_id": "qut-foundation-standard-2027",
+        "source_url": "https://www.qut.edu.au/courses/standard-foundation",
+        "source_type": "official_pathway",
+        "verified_date": "2026-09-26",
+        "status": "confirmed_2027",
+        "note": ""
+      },
+      "qualification": {
+        "value": "Year 11 또는 Year 12 동등 학력 · 한국 학력은 QUT country-specific 심사",
+        "academic_year": 2027,
+        "source_year": 2027,
+        "source_id": "qut-foundation-standard-2027",
+        "source_url": "https://www.qut.edu.au/courses/standard-foundation",
+        "source_type": "official_pathway",
+        "verified_date": "2026-09-26",
+        "status": "confirmed_2027",
+        "note": "QUT College Merit 장학의 한국 고2 5등급/80% 기준은 장학 기준이므로 일반 입학점수로 사용하지 않습니다."
+      },
+      "note": "국제학생 전용 12개월 Foundation입니다. 수료 후 승인된 QUT Bachelor 1학년으로 연결되며 Pharmacy 패키지의 개별 progression 조건을 충족해야 합니다.",
+      "intake_months": {
+        "value": [
+          2,
+          7
+        ],
+        "academic_year": 2027,
+        "source_year": 2027,
+        "source_id": "qut-foundation-standard-2027",
+        "source_url": "https://www.qut.edu.au/courses/standard-foundation",
+        "source_type": "official_pathway",
+        "verified_date": "2026-09-26",
+        "status": "confirmed_2027",
+        "note": ""
+      },
+      "pathway_fee": {
+        "value": 25536,
+        "academic_year": 2027,
+        "source_year": 2027,
+        "source_id": "qut-foundation-standard-2027",
+        "source_url": "https://www.qut.edu.au/courses/standard-foundation",
+        "source_type": "official_pathway",
+        "verified_date": "2026-09-26",
+        "status": "confirmed_2027",
+        "note": "2027 Standard Foundation 전체 96 credit points 학비"
+      }
+    },
+    {
+      "id": "qut-foundation-intensive",
+      "program_id": "qut-bpharm-hons",
+      "type": "foundation",
+      "title": "QUT College · Intensive Program",
+      "availability": {
+        "value": true,
+        "academic_year": 2027,
+        "source_year": 2027,
+        "source_id": "qut-foundation-intensive-2027",
+        "source_url": "https://www.qut.edu.au/courses/intensive-program",
+        "source_type": "official_pathway",
+        "verified_date": "2026-09-26",
+        "status": "confirmed_2027",
+        "note": ""
+      },
+      "credit": {
+        "value": 0,
+        "academic_year": 2027,
+        "source_year": 2027,
+        "source_id": "qut-foundation-intensive-2027",
+        "source_url": "https://www.qut.edu.au/courses/intensive-program",
+        "source_type": "official_pathway",
+        "verified_date": "2026-09-26",
+        "status": "confirmed_2027",
+        "note": ""
+      },
+      "entry_year": {
+        "value": 1,
+        "academic_year": 2027,
+        "source_year": 2027,
+        "source_id": "qut-foundation-intensive-2027",
+        "source_url": "https://www.qut.edu.au/courses/intensive-program",
+        "source_type": "official_pathway",
+        "verified_date": "2026-09-26",
+        "status": "confirmed_2027",
+        "note": ""
+      },
+      "duration": {
+        "value": "6개월",
+        "academic_year": 2027,
+        "source_year": 2027,
+        "source_id": "qut-foundation-intensive-2027",
+        "source_url": "https://www.qut.edu.au/courses/intensive-program",
+        "source_type": "official_pathway",
+        "verified_date": "2026-09-26",
+        "status": "confirmed_2027",
+        "note": ""
+      },
+      "intake": {
+        "value": "2월 · 7월",
+        "academic_year": 2027,
+        "source_year": 2027,
+        "source_id": "qut-foundation-intensive-2027",
+        "source_url": "https://www.qut.edu.au/courses/intensive-program",
+        "source_type": "official_pathway",
+        "verified_date": "2026-09-26",
+        "status": "confirmed_2027",
+        "note": ""
+      },
+      "progression": {
+        "value": "Foundation 수료 + Pharmacy package offer의 faculty progression 조건 충족",
+        "academic_year": 2027,
+        "source_year": 2027,
+        "source_id": "qut-foundation-intensive-2027",
+        "source_url": "https://www.qut.edu.au/courses/intensive-program",
+        "source_type": "official_pathway",
+        "verified_date": "2026-09-26",
+        "status": "confirmed_2027",
+        "note": ""
+      },
+      "english": {
+        "value": "IELTS 6.0 / 각 5.0 · PTE 50 / 각 38 · TOEFL 71 (L10/R10/W15/S14)",
+        "academic_year": 2027,
+        "source_year": 2027,
+        "source_id": "qut-foundation-intensive-2027",
+        "source_url": "https://www.qut.edu.au/courses/intensive-program",
+        "source_type": "official_pathway",
+        "verified_date": "2026-09-26",
+        "status": "confirmed_2027",
+        "note": ""
+      },
+      "qualification": {
+        "value": "Year 12 동등 학력 · 목표 Bachelor 입학조건에 거의 도달한 학생용",
+        "academic_year": 2027,
+        "source_year": 2027,
+        "source_id": "qut-foundation-intensive-2027",
+        "source_url": "https://www.qut.edu.au/courses/intensive-program",
+        "source_type": "official_pathway",
+        "verified_date": "2026-09-26",
+        "status": "confirmed_2027",
+        "note": ""
+      },
+      "note": "고교 Year 12 동등 학력을 마치고 목표 QUT 학사 입학조건에 거의 도달한 학생을 위한 6개월 가속 Foundation입니다.",
+      "intake_months": {
+        "value": [
+          2,
+          7
+        ],
+        "academic_year": 2027,
+        "source_year": 2027,
+        "source_id": "qut-foundation-intensive-2027",
+        "source_url": "https://www.qut.edu.au/courses/intensive-program",
+        "source_type": "official_pathway",
+        "verified_date": "2026-09-26",
+        "status": "confirmed_2027",
+        "note": ""
+      },
+      "pathway_fee": {
+        "value": 12768,
+        "academic_year": 2027,
+        "source_year": 2027,
+        "source_id": "qut-foundation-intensive-2027",
+        "source_url": "https://www.qut.edu.au/courses/intensive-program",
+        "source_type": "official_pathway",
+        "verified_date": "2026-09-26",
+        "status": "confirmed_2027",
+        "note": "2027 Intensive Program 전체 48 credit points 학비"
       }
     },
     {
@@ -5358,112 +5599,6 @@
       }
     },
     {
-      "id": "qut-foundation",
-      "program_id": "qut-bpharm-hons",
-      "type": "foundation",
-      "title": "QUT College · Foundation",
-      "availability": {
-        "value": true,
-        "academic_year": 2027,
-        "source_year": null,
-        "source_id": "qut-college-foundation",
-        "source_url": "https://www.qut.edu.au/study/qut-college/international/english-language-programs",
-        "source_type": "official_pathway",
-        "verified_date": "2026-09-25",
-        "status": "latest_published",
-        "note": ""
-      },
-      "credit": {
-        "value": 0,
-        "academic_year": 2027,
-        "source_year": null,
-        "source_id": "qut-college-foundation",
-        "source_url": "https://www.qut.edu.au/study/qut-college/international/english-language-programs",
-        "source_type": "official_pathway",
-        "verified_date": "2026-09-25",
-        "status": "latest_published",
-        "note": ""
-      },
-      "entry_year": {
-        "value": 1,
-        "academic_year": 2027,
-        "source_year": null,
-        "source_id": "qut-college-foundation",
-        "source_url": "https://www.qut.edu.au/study/qut-college/international/english-language-programs",
-        "source_type": "official_pathway",
-        "verified_date": "2026-09-25",
-        "status": "latest_published",
-        "note": ""
-      },
-      "duration": {
-        "value": "6개월 Intensive 또는 12개월 Standard",
-        "academic_year": 2027,
-        "source_year": null,
-        "source_id": "qut-college-foundation",
-        "source_url": "https://www.qut.edu.au/study/qut-college/international/english-language-programs",
-        "source_type": "official_pathway",
-        "verified_date": "2026-09-25",
-        "status": "latest_published",
-        "note": ""
-      },
-      "intake": {
-        "value": "QUT College 일정",
-        "academic_year": 2027,
-        "source_year": null,
-        "source_id": "qut-college-foundation",
-        "source_url": "https://www.qut.edu.au/study/qut-college/international/english-language-programs",
-        "source_type": "official_pathway",
-        "verified_date": "2026-09-25",
-        "status": "latest_published",
-        "note": ""
-      },
-      "progression": {
-        "value": "Foundation 수료 + QUT Pharmacy 입학조건 충족",
-        "academic_year": 2027,
-        "source_year": null,
-        "source_id": "qut-college-foundation",
-        "source_url": "https://www.qut.edu.au/study/qut-college/international/english-language-programs",
-        "source_type": "official_pathway",
-        "verified_date": "2026-09-25",
-        "status": "latest_published",
-        "note": ""
-      },
-      "english": {
-        "value": null,
-        "academic_year": 2027,
-        "source_year": null,
-        "source_id": "qut-college-foundation",
-        "source_url": "https://www.qut.edu.au/study/qut-college/international/english-language-programs",
-        "source_type": "official_pathway",
-        "verified_date": "2026-09-25",
-        "status": "pending_2027",
-        "note": ""
-      },
-      "qualification": {
-        "value": null,
-        "academic_year": 2027,
-        "source_year": null,
-        "source_id": "qut-college-foundation",
-        "source_url": "https://www.qut.edu.au/study/qut-college/international/english-language-programs",
-        "source_type": "official_pathway",
-        "verified_date": "2026-09-25",
-        "status": "pending_2027",
-        "note": ""
-      },
-      "note": "Foundation 후 QUT Bachelor 1학년으로 진학하는 경로입니다. Pharmacy 선수과목과 영어조건은 별도로 맞춰야 합니다.",
-      "intake_months": {
-        "value": null,
-        "academic_year": 2027,
-        "source_year": null,
-        "source_id": "qut-college-foundation",
-        "source_url": "https://www.qut.edu.au/study/qut-college/international/english-language-programs",
-        "source_type": "official_pathway",
-        "verified_date": "2026-09-25",
-        "status": "pending_2027",
-        "note": ""
-      }
-    },
-    {
       "id": "rmit-foundation",
       "program_id": "rmit-bpharm-hons",
       "type": "foundation",
@@ -5976,108 +6111,108 @@
       "program_id": "utas-bpharm-hons",
       "qualification": "csat",
       "score": {
-        "value": null,
+        "value": 305,
         "academic_year": 2027,
-        "source_year": 2027,
-        "source_id": "utas",
-        "source_url": "https://www.utas.edu.au/courses/health/courses/54d-bachelor-of-pharmacy-with-honours",
-        "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
-        "note": "Pharmacy 전용 2027 환산 기준 확인 중"
+        "source_year": 2023,
+        "source_id": "utas-atar-equiv-current",
+        "source_url": "https://www.utas.edu.au/__data/assets/pdf_file/0011/1673759/MST-ISR-ATAR_Equivilance-Table.pdf",
+        "source_type": "official_admissions",
+        "verified_date": "2026-09-26",
+        "status": "latest_published",
+        "note": "현재 UTas country-entry 페이지가 연결하는 ATAR equivalency table의 ATAR 70 열 기준"
       },
-      "scale": null,
-      "calculation": null
+      "scale": "CSAT overall score",
+      "calculation": "Upper Secondary Certificate + CSAT"
     },
     {
       "id": "utas-bpharm-hons-sat",
       "program_id": "utas-bpharm-hons",
       "qualification": "sat",
       "score": {
-        "value": null,
+        "value": 980,
         "academic_year": 2027,
-        "source_year": 2027,
-        "source_id": "utas",
-        "source_url": "https://www.utas.edu.au/courses/health/courses/54d-bachelor-of-pharmacy-with-honours",
-        "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
-        "note": "Pharmacy 전용 2027 환산 기준 확인 중"
+        "source_year": 2023,
+        "source_id": "utas-atar-equiv-current",
+        "source_url": "https://www.utas.edu.au/__data/assets/pdf_file/0011/1673759/MST-ISR-ATAR_Equivilance-Table.pdf",
+        "source_type": "official_admissions",
+        "verified_date": "2026-09-26",
+        "status": "latest_published",
+        "note": "현재 UTas country-entry 페이지가 연결하는 ATAR equivalency table의 ATAR 70 열 기준"
       },
-      "scale": null,
-      "calculation": null
+      "scale": "1600",
+      "calculation": "US High School completion also required"
     },
     {
       "id": "utas-bpharm-hons-ib",
       "program_id": "utas-bpharm-hons",
       "qualification": "ib",
       "score": {
-        "value": null,
+        "value": 25,
         "academic_year": 2027,
-        "source_year": 2027,
-        "source_id": "utas",
-        "source_url": "https://www.utas.edu.au/courses/health/courses/54d-bachelor-of-pharmacy-with-honours",
-        "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
-        "note": "Pharmacy 전용 2027 환산 기준 확인 중"
+        "source_year": 2023,
+        "source_id": "utas-atar-equiv-current",
+        "source_url": "https://www.utas.edu.au/__data/assets/pdf_file/0011/1673759/MST-ISR-ATAR_Equivilance-Table.pdf",
+        "source_type": "official_admissions",
+        "verified_date": "2026-09-26",
+        "status": "latest_published",
+        "note": "현재 UTas country-entry 페이지가 연결하는 ATAR equivalency table의 ATAR 70 열 기준"
       },
-      "scale": null,
-      "calculation": null
+      "scale": "45",
+      "calculation": ""
     },
     {
       "id": "utas-bpharm-hons-alevel",
       "program_id": "utas-bpharm-hons",
       "qualification": "alevel",
       "score": {
-        "value": null,
+        "value": 8,
         "academic_year": 2027,
-        "source_year": 2027,
-        "source_id": "utas",
-        "source_url": "https://www.utas.edu.au/courses/health/courses/54d-bachelor-of-pharmacy-with-honours",
-        "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
-        "note": "Pharmacy 전용 2027 환산 기준 확인 중"
+        "source_year": 2023,
+        "source_id": "utas-atar-equiv-current",
+        "source_url": "https://www.utas.edu.au/__data/assets/pdf_file/0011/1673759/MST-ISR-ATAR_Equivilance-Table.pdf",
+        "source_type": "official_admissions",
+        "verified_date": "2026-09-26",
+        "status": "latest_published",
+        "note": "현재 UTas country-entry 페이지가 연결하는 ATAR equivalency table의 ATAR 70 열 기준"
       },
-      "scale": null,
-      "calculation": null
+      "scale": "UTas A-level points",
+      "calculation": "2 or 3 H2 subjects"
     },
     {
       "id": "utas-bpharm-hons-ossd",
       "program_id": "utas-bpharm-hons",
       "qualification": "ossd",
       "score": {
-        "value": null,
+        "value": 70,
         "academic_year": 2027,
-        "source_year": 2027,
-        "source_id": "utas",
-        "source_url": "https://www.utas.edu.au/courses/health/courses/54d-bachelor-of-pharmacy-with-honours",
-        "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
-        "note": "Pharmacy 전용 2027 환산 기준 확인 중"
+        "source_year": 2023,
+        "source_id": "utas-atar-equiv-current",
+        "source_url": "https://www.utas.edu.au/__data/assets/pdf_file/0011/1673759/MST-ISR-ATAR_Equivilance-Table.pdf",
+        "source_type": "official_admissions",
+        "verified_date": "2026-09-26",
+        "status": "latest_published",
+        "note": "현재 UTas country-entry 페이지가 연결하는 ATAR equivalency table의 ATAR 70 열 기준"
       },
-      "scale": null,
-      "calculation": null
+      "scale": "best six Grade 12 subjects %",
+      "calculation": "workplace/open 제외"
     },
     {
       "id": "utas-bpharm-hons-korean_high_school",
       "program_id": "utas-bpharm-hons",
       "qualification": "korean_high_school",
       "score": {
-        "value": null,
+        "value": false,
         "academic_year": 2027,
-        "source_year": 2027,
-        "source_id": "utas",
-        "source_url": "https://www.utas.edu.au/courses/health/courses/54d-bachelor-of-pharmacy-with-honours",
-        "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
-        "note": "Pharmacy 전용 2027 환산 기준 확인 중"
+        "source_year": 2023,
+        "source_id": "utas-atar-equiv-current",
+        "source_url": "https://www.utas.edu.au/__data/assets/pdf_file/0011/1673759/MST-ISR-ATAR_Equivilance-Table.pdf",
+        "source_type": "official_admissions",
+        "verified_date": "2026-09-26",
+        "status": "latest_published",
+        "note": "한국 일반고는 Upper Secondary Certificate와 CSAT를 함께 요구하는 ATAR 환산표를 사용합니다."
       },
-      "scale": null,
-      "calculation": null
+      "scale": "고교 졸업장 단독 Direct 아님",
+      "calculation": ""
     },
     {
       "id": "utas-bpharm-hons-ged",
@@ -8338,57 +8473,57 @@
     {
       "program_id": "utas-bpharm-hons",
       "chemistry": {
-        "value": "required",
+        "value": "Chemistry 또는 Physical Sciences 중 1과목",
         "academic_year": 2027,
         "source_year": 2027,
-        "source_id": "utas",
+        "source_id": "utas-2027-campus",
         "source_url": "https://www.utas.edu.au/courses/health/courses/54d-bachelor-of-pharmacy-with-honours",
         "source_type": "official_course",
-        "verified_date": "2026-09-25",
+        "verified_date": "2026-09-26",
         "status": "confirmed_2027",
-        "note": "Chemistry 또는 Physical Sciences 동등 과목"
+        "note": ""
       },
       "mathematics": {
         "value": "required",
         "academic_year": 2027,
         "source_year": 2027,
-        "source_id": "utas",
+        "source_id": "utas-2027-campus",
         "source_url": "https://www.utas.edu.au/courses/health/courses/54d-bachelor-of-pharmacy-with-honours",
         "source_type": "official_course",
-        "verified_date": "2026-09-25",
+        "verified_date": "2026-09-26",
         "status": "confirmed_2027",
         "note": ""
       },
       "biology": {
-        "value": "recommended",
+        "value": "not_required",
         "academic_year": 2027,
         "source_year": 2027,
-        "source_id": "utas",
+        "source_id": "utas-2027-campus",
         "source_url": "https://www.utas.edu.au/courses/health/courses/54d-bachelor-of-pharmacy-with-honours",
         "source_type": "official_course",
-        "verified_date": "2026-09-25",
+        "verified_date": "2026-09-26",
         "status": "confirmed_2027",
         "note": ""
       },
       "physics": {
-        "value": "accepted",
+        "value": "not_required",
         "academic_year": 2027,
         "source_year": 2027,
-        "source_id": "utas",
+        "source_id": "utas-2027-campus",
         "source_url": "https://www.utas.edu.au/courses/health/courses/54d-bachelor-of-pharmacy-with-honours",
         "source_type": "official_course",
-        "verified_date": "2026-09-25",
+        "verified_date": "2026-09-26",
         "status": "confirmed_2027",
-        "note": "Physical Sciences가 Chemistry 대체 선택지로 안내됨"
+        "note": "Physics 자체가 필수라는 뜻이 아니라, 공식 prerequisite는 Chemistry 또는 Physical Sciences 중 1과목입니다."
       },
       "minimum_grade": {
-        "value": "수학 1과목 + Chemistry 또는 Physical Sciences에서 satisfactory achievement",
+        "value": "Mathematics 1과목 + Chemistry 또는 Physical Sciences에서 satisfactory achievement",
         "academic_year": 2027,
         "source_year": 2027,
-        "source_id": "utas",
+        "source_id": "utas-2027-campus",
         "source_url": "https://www.utas.edu.au/courses/health/courses/54d-bachelor-of-pharmacy-with-honours",
         "source_type": "official_course",
-        "verified_date": "2026-09-25",
+        "verified_date": "2026-09-26",
         "status": "confirmed_2027",
         "note": ""
       }
@@ -9297,34 +9432,40 @@
       "pte_overall": {
         "value": 65,
         "academic_year": 2027,
-        "source_year": 2027,
-        "source_id": "jcu-guide",
-        "source_url": "https://www.jcu.edu.au/__data/assets/pdf_file/0010/2316889/2027-Undergraduate-Guide.pdf",
-        "source_type": "official_guide",
-        "verified_date": "2026-09-25",
-        "status": "confirmed_2027",
+        "source_year": null,
+        "source_id": "jcu-english-band3a",
+        "source_url": "https://www.jcu.edu.au/policy/academic-governance/student-experience/admissions-policy-schedule-ii",
+        "source_type": "official_admissions",
+        "verified_date": "2026-09-26",
+        "status": "latest_published",
         "note": ""
       },
       "pte_each": {
         "value": 58,
         "academic_year": 2027,
-        "source_year": 2027,
-        "source_id": "jcu-guide",
-        "source_url": "https://www.jcu.edu.au/__data/assets/pdf_file/0010/2316889/2027-Undergraduate-Guide.pdf",
-        "source_type": "official_guide",
-        "verified_date": "2026-09-25",
-        "status": "confirmed_2027",
+        "source_year": null,
+        "source_id": "jcu-english-band3a",
+        "source_url": "https://www.jcu.edu.au/policy/academic-governance/student-experience/admissions-policy-schedule-ii",
+        "source_type": "official_admissions",
+        "verified_date": "2026-09-26",
+        "status": "latest_published",
         "note": ""
       },
       "toefl": {
-        "value": null,
+        "value": {
+          "overall": 94,
+          "L": 23,
+          "R": 23,
+          "W": 23,
+          "S": 23
+        },
         "academic_year": 2027,
         "source_year": null,
-        "source_id": "jcu",
-        "source_url": "https://www.jcu.edu.au/courses/bachelor-of-pharmacy-honours",
-        "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
+        "source_id": "jcu-english-band3a",
+        "source_url": "https://www.jcu.edu.au/policy/academic-governance/student-experience/admissions-policy-schedule-ii",
+        "source_type": "official_admissions",
+        "verified_date": "2026-09-26",
+        "status": "latest_published",
         "note": ""
       }
     },
@@ -17602,6 +17743,62 @@
       "source_year": 2027,
       "source_type": "official_guide",
       "verified_date": "2026-09-25"
+    },
+    {
+      "id": "jcu-english-band3a",
+      "title": "JCU · Admissions Policy Schedule II · Band 3a English equivalencies",
+      "url": "https://www.jcu.edu.au/policy/academic-governance/student-experience/admissions-policy-schedule-ii",
+      "source_year": null,
+      "source_type": "official_admissions",
+      "verified_date": "2026-09-26"
+    },
+    {
+      "id": "jcu-prep-current",
+      "title": "JCU Prep · current eligibility and pathway guidance",
+      "url": "https://study.jcu.edu.au/jcu-prep",
+      "source_year": null,
+      "source_type": "official_pathway",
+      "verified_date": "2026-09-26"
+    },
+    {
+      "id": "utas-entry-country-current",
+      "title": "UTas · Entry requirements by country",
+      "url": "https://www.utas.edu.au/study/apply/admission-requirements/entry-requirements-by-country",
+      "source_year": null,
+      "source_type": "official_admissions",
+      "verified_date": "2026-09-26"
+    },
+    {
+      "id": "utas-atar-equiv-current",
+      "title": "UTas · Equivalent undergraduate entry requirements · current linked ATAR equivalency table",
+      "url": "https://www.utas.edu.au/__data/assets/pdf_file/0011/1673759/MST-ISR-ATAR_Equivilance-Table.pdf",
+      "source_year": 2023,
+      "source_type": "official_admissions",
+      "verified_date": "2026-09-26"
+    },
+    {
+      "id": "qut-foundation-standard-2027",
+      "title": "QUT College · Standard Foundation Program · 2027 fee and entry",
+      "url": "https://www.qut.edu.au/courses/standard-foundation",
+      "source_year": 2027,
+      "source_type": "official_pathway",
+      "verified_date": "2026-09-26"
+    },
+    {
+      "id": "qut-foundation-intensive-2027",
+      "title": "QUT College · Intensive Program · 2027 fee and entry",
+      "url": "https://www.qut.edu.au/courses/intensive-program",
+      "source_year": 2027,
+      "source_type": "official_pathway",
+      "verified_date": "2026-09-26"
+    },
+    {
+      "id": "qut-college-merit-current",
+      "title": "QUT College Merit Scholarship · South Korea criteria",
+      "url": "https://www.qut.edu.au/study/fees-and-scholarships/scholarships/qut-college-merit-scholarship",
+      "source_year": null,
+      "source_type": "official_scholarship",
+      "verified_date": "2026-09-26"
     }
   ],
   "conflicts": [
