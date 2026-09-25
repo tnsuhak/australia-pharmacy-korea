@@ -540,16 +540,18 @@
         "2027 학비 공개",
         "Hobart 숙소"
       ],
-      "editorial": "4년 약학과를 3년에 압축해 공부합니다. 1년 수강량이 많습니다.",
+      "editorial": "3년 Fast-track 약대입니다. Direct 외에 UTas International Pathway College의 Standard(8–9개월)와 Fast-track(4–5개월) Foundation이 있으며, Pharmacy 진급은 Physical Science stream FCWAM 60%, Chemistry+Statistics, Foundation English 평균 65% 조건을 적용합니다.",
       "review_items": [],
       "decision_lens": {
         "why": [
-          "3년 Fast-track",
-          "Tasmania 요건 충족 시 두 번째 485 +2년",
-          "2027 국제장학 30% 자동심사"
+          "3년 Fast-track 본과",
+          "2027 본과 학비 A$61,267 · 총액 A$198,050",
+          "UTas IPC Standard/Fast-track Foundation에서 Pharmacy 진학 가능",
+          "Hobart·Launceston·Cradle Coast 모두 Tasmania Regional"
         ],
         "watch": [
-          "Foundation의 2027 약대 진급조건 발표 대기"
+          "Foundation 시작월에 따라 Pharmacy 다음 HSP1까지 대기기간이 달라질 수 있음",
+          "Foundation 2027 fee는 Standard A$21,975 / Fast-track A$25,450"
         ]
       }
     },
@@ -5124,112 +5126,6 @@
       }
     },
     {
-      "id": "utas-foundation",
-      "program_id": "utas-bpharm-hons",
-      "type": "foundation",
-      "title": "International Foundation",
-      "availability": {
-        "value": null,
-        "academic_year": 2027,
-        "source_year": 2027,
-        "source_id": "utas",
-        "source_url": "https://www.utas.edu.au/courses/health/courses/54d-bachelor-of-pharmacy-with-honours",
-        "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
-        "note": ""
-      },
-      "credit": {
-        "value": 0,
-        "academic_year": 2027,
-        "source_year": 2027,
-        "source_id": "utas",
-        "source_url": "https://www.utas.edu.au/courses/health/courses/54d-bachelor-of-pharmacy-with-honours",
-        "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "confirmed_2027",
-        "note": ""
-      },
-      "entry_year": {
-        "value": 1,
-        "academic_year": 2027,
-        "source_year": 2027,
-        "source_id": "utas",
-        "source_url": "https://www.utas.edu.au/courses/health/courses/54d-bachelor-of-pharmacy-with-honours",
-        "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "confirmed_2027",
-        "note": ""
-      },
-      "duration": {
-        "value": null,
-        "academic_year": 2027,
-        "source_year": 2027,
-        "source_id": "utas",
-        "source_url": "https://www.utas.edu.au/courses/health/courses/54d-bachelor-of-pharmacy-with-honours",
-        "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
-        "note": ""
-      },
-      "intake": {
-        "value": null,
-        "academic_year": 2027,
-        "source_year": 2027,
-        "source_id": "utas",
-        "source_url": "https://www.utas.edu.au/courses/health/courses/54d-bachelor-of-pharmacy-with-honours",
-        "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
-        "note": ""
-      },
-      "progression": {
-        "value": null,
-        "academic_year": 2027,
-        "source_year": 2027,
-        "source_id": "utas",
-        "source_url": "https://www.utas.edu.au/courses/health/courses/54d-bachelor-of-pharmacy-with-honours",
-        "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
-        "note": ""
-      },
-      "english": {
-        "value": null,
-        "academic_year": 2027,
-        "source_year": 2027,
-        "source_id": "utas",
-        "source_url": "https://www.utas.edu.au/courses/health/courses/54d-bachelor-of-pharmacy-with-honours",
-        "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
-        "note": ""
-      },
-      "qualification": {
-        "value": null,
-        "academic_year": 2027,
-        "source_year": 2027,
-        "source_id": "utas",
-        "source_url": "https://www.utas.edu.au/courses/health/courses/54d-bachelor-of-pharmacy-with-honours",
-        "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
-        "note": ""
-      },
-      "note": "2027 약대 진급조건·유학생 모집 발표 대기입니다.",
-      "intake_months": {
-        "value": null,
-        "academic_year": 2027,
-        "source_year": 2027,
-        "source_id": "utas",
-        "source_url": "https://www.utas.edu.au/courses/health/courses/54d-bachelor-of-pharmacy-with-honours",
-        "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
-        "note": ""
-      }
-    },
-    {
       "id": "uwa-bpharm-hons-direct",
       "program_id": "uwa-bpharm-hons",
       "type": "direct",
@@ -5667,6 +5563,248 @@
         "verified_date": "2026-09-25",
         "status": "confirmed_2027",
         "note": "2027 Foundation Studies total tuition fee"
+      }
+    },
+    {
+      "id": "utas-foundation-standard",
+      "program_id": "utas-bpharm-hons",
+      "type": "foundation",
+      "title": "UTas IPC · Foundation Studies Standard",
+      "availability": {
+        "value": true,
+        "academic_year": 2027,
+        "source_year": null,
+        "source_id": "utas-ipc-foundation",
+        "source_url": "https://utas.up.education/foundation-studies/",
+        "source_type": "official_pathway",
+        "verified_date": "2026-09-25",
+        "status": "latest_published",
+        "note": ""
+      },
+      "credit": {
+        "value": 0,
+        "academic_year": 2027,
+        "source_year": null,
+        "source_id": "utas-ipc-foundation",
+        "source_url": "https://utas.up.education/foundation-studies/",
+        "source_type": "official_pathway",
+        "verified_date": "2026-09-25",
+        "status": "latest_published",
+        "note": ""
+      },
+      "entry_year": {
+        "value": 1,
+        "academic_year": 2027,
+        "source_year": null,
+        "source_id": "utas-ipc-foundation",
+        "source_url": "https://utas.up.education/foundation-studies/",
+        "source_type": "official_pathway",
+        "verified_date": "2026-09-25",
+        "status": "latest_published",
+        "note": ""
+      },
+      "duration": {
+        "value": "8–9개월 · 2 semesters",
+        "academic_year": 2027,
+        "source_year": 2027,
+        "source_id": "utas-ipc-fees-2027",
+        "source_url": "https://utas.up.education/fees-and-intakes/",
+        "source_type": "official_pathway",
+        "verified_date": "2026-09-25",
+        "status": "confirmed_2027",
+        "note": ""
+      },
+      "intake": {
+        "value": "2027년 2월 22일 · 6월 21일 · 10월 11일",
+        "academic_year": 2027,
+        "source_year": 2027,
+        "source_id": "utas-ipc-fees-2027",
+        "source_url": "https://utas.up.education/fees-and-intakes/",
+        "source_type": "official_pathway",
+        "verified_date": "2026-09-25",
+        "status": "confirmed_2027",
+        "note": ""
+      },
+      "progression": {
+        "value": "Pharmacy: Physical Science stream · FCWAM 60% · Chemistry + Statistics · Foundation English 평균 65%, 각 60% 이상",
+        "academic_year": 2027,
+        "source_year": null,
+        "source_id": "utas-ipc-foundation",
+        "source_url": "https://utas.up.education/foundation-studies/",
+        "source_type": "official_pathway",
+        "verified_date": "2026-09-25",
+        "status": "latest_published",
+        "note": "IPC progression table의 Pharmacy 기준. 현재 학위명 표기는 구 명칭이 남아 있으나 Pharmacy pathway criteria로 사용됩니다."
+      },
+      "english": {
+        "value": "입학 IELTS 5.5 / 각 5.0",
+        "academic_year": 2027,
+        "source_year": null,
+        "source_id": "utas-ipc-entry",
+        "source_url": "https://utas.up.education/applying/entry-requirements/",
+        "source_type": "official_pathway",
+        "verified_date": "2026-09-25",
+        "status": "latest_published",
+        "note": ""
+      },
+      "qualification": {
+        "value": "한국: Senior Year 2(고2) 60% · 60%=pass 기준",
+        "academic_year": 2027,
+        "source_year": null,
+        "source_id": "utas-ipc-entry",
+        "source_url": "https://utas.up.education/applying/entry-requirements/",
+        "source_type": "official_pathway",
+        "verified_date": "2026-09-25",
+        "status": "latest_published",
+        "note": ""
+      },
+      "note": "한국 고2(Senior Year 2) 60%부터 입학 가능. Foundation 종료 후 다음 가능한 Pharmacy Health Study Period 1 입학시기에 맞춰 진학합니다.",
+      "intake_months": {
+        "value": [
+          2,
+          6,
+          10
+        ],
+        "academic_year": 2027,
+        "source_year": 2027,
+        "source_id": "utas-ipc-fees-2027",
+        "source_url": "https://utas.up.education/fees-and-intakes/",
+        "source_type": "official_pathway",
+        "verified_date": "2026-09-25",
+        "status": "confirmed_2027",
+        "note": ""
+      },
+      "pathway_fee": {
+        "value": 21975,
+        "academic_year": 2027,
+        "source_year": 2027,
+        "source_id": "utas-ipc-fees-2027",
+        "source_url": "https://utas.up.education/fees-and-intakes/",
+        "source_type": "official_pathway",
+        "verified_date": "2026-09-25",
+        "status": "confirmed_2027",
+        "note": "2027 Foundation Studies Standard tuition fee"
+      }
+    },
+    {
+      "id": "utas-foundation-fast",
+      "program_id": "utas-bpharm-hons",
+      "type": "foundation",
+      "title": "UTas IPC · University Pathway Program Fast-track",
+      "availability": {
+        "value": true,
+        "academic_year": 2027,
+        "source_year": null,
+        "source_id": "utas-ipc-foundation",
+        "source_url": "https://utas.up.education/foundation-studies/",
+        "source_type": "official_pathway",
+        "verified_date": "2026-09-25",
+        "status": "latest_published",
+        "note": ""
+      },
+      "credit": {
+        "value": 0,
+        "academic_year": 2027,
+        "source_year": null,
+        "source_id": "utas-ipc-foundation",
+        "source_url": "https://utas.up.education/foundation-studies/",
+        "source_type": "official_pathway",
+        "verified_date": "2026-09-25",
+        "status": "latest_published",
+        "note": ""
+      },
+      "entry_year": {
+        "value": 1,
+        "academic_year": 2027,
+        "source_year": null,
+        "source_id": "utas-ipc-foundation",
+        "source_url": "https://utas.up.education/foundation-studies/",
+        "source_type": "official_pathway",
+        "verified_date": "2026-09-25",
+        "status": "latest_published",
+        "note": ""
+      },
+      "duration": {
+        "value": "4–5개월 · 1 semester",
+        "academic_year": 2027,
+        "source_year": 2027,
+        "source_id": "utas-ipc-fees-2027",
+        "source_url": "https://utas.up.education/fees-and-intakes/",
+        "source_type": "official_pathway",
+        "verified_date": "2026-09-25",
+        "status": "confirmed_2027",
+        "note": ""
+      },
+      "intake": {
+        "value": "2027년 2월 22일 · 6월 21일 · 10월 11일",
+        "academic_year": 2027,
+        "source_year": 2027,
+        "source_id": "utas-ipc-fees-2027",
+        "source_url": "https://utas.up.education/fees-and-intakes/",
+        "source_type": "official_pathway",
+        "verified_date": "2026-09-25",
+        "status": "confirmed_2027",
+        "note": ""
+      },
+      "progression": {
+        "value": "Pharmacy: Physical Science stream · FCWAM 60% · Chemistry + Statistics · Foundation English 평균 65%, 각 60% 이상",
+        "academic_year": 2027,
+        "source_year": null,
+        "source_id": "utas-ipc-foundation",
+        "source_url": "https://utas.up.education/foundation-studies/",
+        "source_type": "official_pathway",
+        "verified_date": "2026-09-25",
+        "status": "latest_published",
+        "note": "IPC progression table의 Pharmacy 기준. 현재 학위명 표기는 구 명칭이 남아 있으나 Pharmacy pathway criteria로 사용됩니다."
+      },
+      "english": {
+        "value": "입학 IELTS 6.0 / 각 5.0",
+        "academic_year": 2027,
+        "source_year": null,
+        "source_id": "utas-ipc-entry",
+        "source_url": "https://utas.up.education/applying/entry-requirements/",
+        "source_type": "official_pathway",
+        "verified_date": "2026-09-25",
+        "status": "latest_published",
+        "note": ""
+      },
+      "qualification": {
+        "value": "한국: Senior Year 2(고2) 65% · General Mathematics 또는 country-specific equivalent 필요",
+        "academic_year": 2027,
+        "source_year": null,
+        "source_id": "utas-ipc-entry",
+        "source_url": "https://utas.up.education/applying/entry-requirements/",
+        "source_type": "official_pathway",
+        "verified_date": "2026-09-25",
+        "status": "latest_published",
+        "note": ""
+      },
+      "note": "한국 고2(Senior Year 2) 65%부터 입학 가능. General Mathematics 또는 인정 동등과목이 필요하며 빠른 일정이라 본과 시작시기와 조합을 확인해야 합니다.",
+      "intake_months": {
+        "value": [
+          2,
+          6,
+          10
+        ],
+        "academic_year": 2027,
+        "source_year": 2027,
+        "source_id": "utas-ipc-fees-2027",
+        "source_url": "https://utas.up.education/fees-and-intakes/",
+        "source_type": "official_pathway",
+        "verified_date": "2026-09-25",
+        "status": "confirmed_2027",
+        "note": ""
+      },
+      "pathway_fee": {
+        "value": 25450,
+        "academic_year": 2027,
+        "source_year": 2027,
+        "source_id": "utas-ipc-fees-2027",
+        "source_url": "https://utas.up.education/fees-and-intakes/",
+        "source_type": "official_pathway",
+        "verified_date": "2026-09-25",
+        "status": "confirmed_2027",
+        "note": "2027 University Pathway Program Fast Track tuition fee"
       }
     }
   ],
@@ -17379,6 +17517,30 @@
       "title": "La Trobe College · 2026 international English entry requirements",
       "url": "https://www.latrobecollegeaustralia.edu.au/wp-content/uploads/LTCA260107-1149-International-Guide-2026-Update-FAW_Web.pdf",
       "source_year": 2026,
+      "source_type": "official_pathway",
+      "verified_date": "2026-09-25"
+    },
+    {
+      "id": "utas-ipc-fees-2027",
+      "title": "UTas International Pathway College · 2027 Foundation fees and intakes",
+      "url": "https://utas.up.education/fees-and-intakes/",
+      "source_year": 2027,
+      "source_type": "official_pathway",
+      "verified_date": "2026-09-25"
+    },
+    {
+      "id": "utas-ipc-foundation",
+      "title": "UTas International Pathway College · Foundation Pharmacy progression",
+      "url": "https://utas.up.education/foundation-studies/",
+      "source_year": null,
+      "source_type": "official_pathway",
+      "verified_date": "2026-09-25"
+    },
+    {
+      "id": "utas-ipc-entry",
+      "title": "UTas International Pathway College · country and English entry requirements",
+      "url": "https://utas.up.education/applying/entry-requirements/",
+      "source_year": null,
       "source_type": "official_pathway",
       "verified_date": "2026-09-25"
     }
