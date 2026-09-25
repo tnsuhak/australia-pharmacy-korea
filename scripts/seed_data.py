@@ -97,10 +97,14 @@ source('adelaide-fee-current','Adelaide University · Bachelor of Pharmacy (Hono
 source('rmit-2027-apply','RMIT Bachelor of Pharmacy (Honours) · 2027 intake','https://www.rmit.edu.au/study-with-us/levels-of-study/undergraduate-study/honours-degrees/bachelor-of-pharmacy-honours-bh102/apply-now',2027,'official_course')
 source('unsw-2027-course','UNSW Pharmaceutical Medicine / Doctor of Pharmacy · 2027','https://www.unsw.edu.au/study/undergraduate/bachelor-of-pharmaceutical-medicine-master-of-pharmacy',2027,'official_course')
 source('unsw-2027-guide','UNSW · 2027 Undergraduate Student Guide · international ATAR/IB table','https://www.unsw.edu.au/content/dam/pdfs/future-students/2027-DOM-UG-Guide.pdf',2027,'official_guide')
-source('unsw-english-current','UNSW · English language requirements','https://www.unsw.edu.au/study/how-to-apply/english-language-requirements',None,'official_admissions')
+source('unsw-english-current','UNSW · English language requirements · Pharmacy exception','https://www.unsw.edu.au/study/how-to-apply/english-language-requirements',None,'official_admissions')
+source('unsw-college-student-guide','UNSW College · Student Guide · Pharmacy Foundation progression','https://www.unswcollege.edu.au/content/dam/pdfs/unsw-college/college-student-guide.pdf',None,'official_pathway')
+source('unsw-college-standard-2027','UNSW College · Standard Foundation Program · 2027 fee','https://www.unswcollege.edu.au/study/standard-program',2027,'official_pathway')
 source('latrobe-2027-course','La Trobe Bachelor of Pharmacy (Honours) · 2027 start','https://www.latrobe.edu.au/courses/bachelor-of-pharmacy-honours',2027,'official_course')
 source('curtin-pharmacy-current-guide','Curtin · Pharmacy English requirement guide','https://publications.curtin.edu.au/chinese-student-guide/page/28-29',None,'official_guide')
 source('newcastle-2027-course','University of Newcastle · Bachelor of Pharmacy (Honours) current 2027 entry','https://www.newcastle.edu.au/degrees/bachelor-of-pharmacy-honours',2027,'official_course')
+source('newcastle-nonstandard-english-2025','University of Newcastle · List of Non-Standard English Entry Programs · 28 Aug 2025','https://policies.newcastle.edu.au/download.php?associated=1&id=855&version=4',2025,'official_policy')
+source('newcastle-english-procedure-current','University of Newcastle · English Language Proficiency Procedure · current test equivalencies','https://policies.newcastle.edu.au/document/view-current.php?id=166&version=9',None,'official_policy')
 source('newcastle-2026-ug','University of Newcastle · 2026 Undergraduate Degrees guide','https://www.newcastle.edu.au/__data/assets/pdf_file/0012/978438/2026-1088_UG-Prospectus_v3.6_WEB.pdf',2026,'official_guide')
 source('monash-pps-2026','Monash Pharmacy and Pharmaceutical Sciences · International UG Course Guide 2026','https://www.monash.edu/__data/assets/pdf_file/0004/4091809/Monash-University-PPS-International-UG-Course-Guide-2026.pdf',2026,'official_guide')
 source('rmit-korea-equiv','RMIT · South Korea academic entry equivalency','https://www.rmit.edu.au/study-with-us/international-students/apply-to-rmit-international-students/entry-requirements/country-equivalency/south-korea',2027,'official_admissions')
@@ -150,6 +154,7 @@ source('sydney-prereqs-current','Sydney Academic Board · Pharmacy course prereq
 source('sydney-guide','Sydney international guide','https://www.sydney.edu.au/dam/corporate/documents/study/guides/usyd-international-guide.pdf',2027,'official_guide')
 source('griffith-college','Griffith · College articulation 107343','https://credit-precedent.sds.na.ce.griffith.edu.au/credit_detail.php?pk1=107343',2027,'official_articulation')
 source('griffith-college-2027-guide','Griffith College · International Quick Guide 2026–2027 · Health Sciences to Pharmacy','https://www.griffithcollege.edu.au/wp-content/uploads/Griffith-College-International-Quick-Guide-2026-2027.pdf',2027,'official_pathway')
+source('griffith-guaranteed-2027','Griffith · 2027 Guaranteed Admission Scheme · Pharmacy rank 76','https://www.griffith.edu.au/apply/guaranteed-admission-scheme',2027,'official_admissions')
 source('griffith-college-health','Griffith College · Diploma of Health Sciences','https://www.griffithcollege.edu.au/study-options/diploma/health-sciences/',None,'official_pathway')
 source('griffith-college-dates-2027','Griffith College · 2027 key dates','https://www.griffithcollege.edu.au/student-life/key-dates/',2027,'official_pathway')
 source('curtin-college','Curtin College · Pharmacy Diploma','https://www.curtincollege.edu.au/courses/diplomas/health-sciences/pharmacy/',None,'official_pathway')
@@ -265,7 +270,7 @@ req('uq','required','required','recommended',grade='English·수학·Chemistry: 
 eng('uq',6.5,{'L':6,'R':6,'W':6,'S':6},pte=64,pte_each=60,toefl={'overall':87,'L':19,'R':19,'W':21,'S':19})
 setp('adelaide',highlights=['4년 학사','CSAT 345','15% Merit 자동심사'],editorial='일반 Direct는 2월 시작입니다. 7월 입학은 학점이 인정된 국제학생을 개별 심사합니다. 현재 과정 페이지의 A$54,300은 2026 입학생 학비라고 명시돼 있어 2027 학비로 사용하지 않습니다.')
 intake('adelaide',[2],'2월 · 7월은 학점 인정 시 개별 심사'); fee('adelaide',54300,src='adelaide-fee-current',year=2026); req('adelaide','accepted','not_required','accepted','accepted','Biology, Chemistry 또는 Physics 중 1과목 또는 동등 수준',src='adelaide'); eng('adelaide',6.5,{'L':6,'R':6,'W':6,'S':6},src='adelaide')
-setp('griffith',highlights=['Direct H1 기준','Diploma → 2학년','80CP 인정'],editorial='Direct 입학과 Griffith College Diploma 경로가 있습니다. Direct는 최신 공개 국제가이드(2026) H1 기준으로 CSAT 331 · IB 28 · SAT 1080 · A-level 7을 참고할 수 있으나 2027 확정 환산표는 아직 확인 중입니다. Griffith College Diploma 후에는 80CP를 인정받고 약대 2학년으로 연결됩니다.',review_items=['2027 Direct 국제학력 환산표','2027 국제학생 본과 학비','Pharmacy 과목별 assumed knowledge/subject prerequisite 최신표']); intake('griffith',[3,7],'3월 · 7월 (2026 공개 기준)',src='griffith-2026-guide'); eng('griffith',7.0,None,src='griffith-2026-guide')
+setp('griffith',highlights=['Griffith College → 80CP','Gold Coast · Regional','Direct H1 최신 참고'],editorial='Direct 입학과 Griffith College Diploma 경로가 있습니다. Direct는 최신 공개 국제가이드(2026) H1 기준으로 CSAT 331 · IB 28 · SAT 1080 · A-level 7을 참고할 수 있으나 2027 확정 국제환산표는 아직 확인 중입니다. Griffith College의 2026/2027 Diploma of Health Sciences는 2027 Pharmacy 1614에 80CP가 공식 인정됩니다. 2027 국내 Guaranteed Admission Rank 76은 국제학생 Direct 점수로 사용하지 않습니다.',review_items=['2027 Direct 국제학력 환산표','2027 국제학생 본과 학비','Pharmacy 과목별 assumed knowledge/subject prerequisite 최신표']); intake('griffith',[3,7],'3월 · 7월 (2026 공개 기준)',src='griffith-2026-guide'); eng('griffith',7.0,None,src='griffith-2026-guide')
 setp('latrobe',international_recruitment=fact(True,'latrobe-2027-course',status='latest_published',note='현재 Pharmacy course page는 국제학생이 연중 지원 가능하다고 안내합니다. 2027 국제학생 학비는 별도 확인 중입니다.'),highlights=['Bendigo Regional','4년 학사','30% Health Innovation'],editorial='Bendigo 캠퍼스 4년 약대입니다. 현재 과정 페이지는 2027년 3월 시작과 국제학생 연중 지원 가능을 안내하며, 졸업 후 1년 supervised internship이 별도입니다. 2027 국제학생 학비는 아직 확정 표시가 없어 계속 확인 중입니다.',review_items=['2027 국제학생 학비']); intake('latrobe',[3],'Semester 1 · 2027년 3월',src='latrobe-2027-course'); req('latrobe','not_required','not_required','not_required','not_required','별도 과학 선수과목 없음 · 영어 prerequisite만 적용',src='latrobe-health-guide'); eng('latrobe',6.5,{'L':6.5,'R':6.5,'W':6.5,'S':6.5},src='latrobe-health-guide')
 _latrobe_reg=row(registration,'latrobe'); _latrobe_reg['supervised_practice_in_degree']=fact(True,'latrobe-2027-course',note='과정 중 community/hospital 등 clinical placement 포함'); _latrobe_reg['itp_in_degree']=fact(False,'latrobe-2027-course',note='등록용 1년 supervised internship은 학위 밖에서 진행'); _latrobe_reg['post_graduation_internship']=fact(True,'latrobe-2027-course',note='졸업 후 1년 supervised internship + Pharmacy Board exams 필요')
 setp('qut',highlights=['수학·화학 assumed knowledge','4년 학사','2027 학비 A$46,200'],editorial='QUT Pharmacy는 Chemistry와 Mathematical Methods/Specialist Mathematics를 필수 prerequisite가 아니라 assumed knowledge로 안내합니다. 미이수 학생은 지원 자체가 막히는 것으로 표시하지 않고 bridging study 안내와 함께 구분합니다.')
@@ -273,23 +278,22 @@ req('qut','assumed','assumed',grade='Chemistry + Mathematical Methods/Specialist
 setp('rmit',highlights=['4년','RMIT Foundation 가능','2027 학비 A$49,920'],editorial='Bundoora 캠퍼스 4년 약대입니다. 한국 고교·수능 환산표가 명확하고 RMIT Foundation으로도 준비할 수 있습니다.')
 req('rmit','required','required',grade='VCE Chemistry 25, Mathematics 25 또는 인정되는 동등 수준.'); fee('rmit',49920,year=2027); intake('rmit',[2],'Semester 1 · 2027년 3월 1일 수업 시작',src='rmit-2027-apply')
 eng('rmit',7,{'L':6.5,'R':6.5,'W':6.5,'S':6.5},src='rmit-english',pte=65,pte_each=58,toefl={'overall':94,'R':19,'L':20,'S':20,'W':24})
-setp('newcastle',highlights=['4년 학사','Foundation 연계','2027 영어자료 충돌'],editorial='2027 공식 Degree Guide는 IELTS 6.5/각 6.5, 현재 과정 페이지의 English proficiency section은 7.0/각 7.0으로 표시해 공식자료 간 차이가 남아 있습니다.',review_items=['Pharmacy 2027 영어조건 공식자료 충돌','2027 CSAT·SAT·IB course-specific 값','APC 인증 갱신: 현재 목록 종료일 2026-12-31'])
-eng('newcastle',7,{'L':7,'R':7,'W':7,'S':7},src='newcastle-2027-course',status='source_conflict');
+setp('newcastle',highlights=['4년 학사','Foundation 연계','영어 공식자료 불일치'],editorial='2027 Degree Guide와 2025-08-28 최신 Non-Standard English list는 Pharmacy를 IELTS 6.5/각 6.5로 안내하지만, 현재 degree page의 국제학생 섹션은 7.0/각 7.0을 표시합니다. 같은 현재 공식 시스템 안에서 값이 충돌하므로 사이트에서는 한 값을 확정하지 않고 지원 전 Newcastle Admissions 서면 확인 대상으로 유지합니다.',review_items=['Pharmacy 영어조건: 6.5/6.5 vs 국제학생 페이지 7.0/7.0 충돌','2027 CSAT·SAT·A-level·OSSD course-specific 값','APC 인증 갱신: 현재 목록 종료일 2026-12-31'])
+eng('newcastle',6.5,{'L':6.5,'R':6.5,'W':6.5,'S':6.5},src='newcastle-nonstandard-english-2025',status='source_conflict');
 for _k in ['ielts_overall','ielts_bands']:
- row(english,'newcastle')[_k]['note']='2027 International Student Degree Guide는 IELTS 6.5/각 6.5, 현재 과정 페이지의 English proficiency section은 7.0/각 7.0으로 표시합니다. 자동 충족 판정에 사용하지 않고 지원 전 Newcastle Admissions 서면 확인이 필요합니다.'
-for k in ['ielts_overall','ielts_bands']:row(english,'newcastle')[k]['note']='공식 과정페이지에 6.5/6.5와 7.0/7.0 표기가 함께 노출되고 공식 국제 가이드도 연도별 차이가 있어 2027 지원 전 서면 확인 필요.'
+ row(english,'newcastle')[_k]['note']='2025-08-28 최신 Non-Standard English list와 2027 Degree Guide는 6.5/각6.5이지만, 현재 degree page 국제학생 섹션은 7.0/각7.0입니다. 자동 충족 판정에 사용하지 않고 지원 전 서면 확인합니다.'
 intake('newcastle',[2],'Semester 1 · 2027년 2월 22일',src='newcastle-2027-course'); req('newcastle','assumed','assumed',physics='assumed',grade='Assumed knowledge: Mathematics, English Advanced, Chemistry, Physics',src='newcastle-2026-ug'); fee('newcastle',51665,src='newcastle-fee-2027',year=2027,load='80 units 기준')
 setp('canberra',highlights=['Canberra','학부 약학 과정','모집 확인 중'],editorial='APC 학부 약학 인증 목록과 실제 국제학생 모집은 서로 다른 확인 항목입니다. 2027 국제학생 course offer를 확인 중입니다.'); fee('canberra',42500,src='canberra-guide-2027',year=2026)
 setp('unisq',highlights=['T1 only','Toowoomba','2027 개설표'],editorial='2027 국제학생 대면 수업은 Trimester 1에 표시됩니다. 개설 안내서는 9월 28일 확정 예정이므로 최종 일정 확인이 필요합니다.')
 intake('unisq',[2],'Trimester 1 · 2027년 2월 15일',src='unisq-pharmacy-current'); req('unisq','accepted','assumed','accepted','accepted','수학 + Biology/Chemistry/Physics 중 1과목에서 Year 12 C 수준 assumed knowledge',src='unisq-pharmacy-current'); eng('unisq',7.0,{'L':7,'R':7,'W':6.5,'S':7},src='unisq-pharmacy-current')
-setp('monash',highlights=['4년 Exit','5년 PharmD','Internship 통합'],editorial='4년 후 BPharm(Hons)로 졸업하거나 5년째 PharmD까지 이어갈 수 있습니다. 관련 학사 졸업자는 Graduate Entry도 있습니다.')
+setp('monash',highlights=['5년 PharmD','5년차 유급 인턴 통합','4년 BPharm(Hons) Exit'],editorial='P6007은 5년 Bachelor of Pharmacy (Honours) / Doctor of Pharmacy 통합과정입니다. 2~4학년에는 구조화된 실습이 있고 5학년에는 paid work-integrated learning과 Intern Training Program이 통합됩니다. 3년 144cp 후 Bachelor of Pharmacotherapeutics, 4년 192cp 후 BPharm(Hons), 5년에는 PharmD 또는 조건에 따라 BPharm(Hons)+Master of Pharmacy 대체 Exit가 있습니다. 2027 국내 Monash Guarantee ATAR는 80이지만 국제학력 Direct 점수로 자동 환산하지 않습니다. 관련 학사 졸업자는 Graduate Entry로 3학년 진입을 검토할 수 있습니다.')
 req('monash','required','required',grade='VCE Methods/Specialist Maths 25 + Chemistry 25. IB Math AA SL4 또는 AA/AI HL3, Chemistry SL4 또는 HL3.'); intake('monash',[2],'2월'); fee('monash',49740,src='monash-fee-2027',year=2027,load='48 credit points 기준'); eng('monash',6.5,{'L':6,'R':6,'W':6,'S':6},src='monash-pps-2026',pte=58,pte_each=50)
 setp('sydney',bachelor_award_year=fact(4,'sydney-structure'),four_year_exit=fact(True,'sydney-structure'),exit_degree=fact('Bachelor of Pharmacy (Honours)','sydney-structure'),highlights=['5년 통합','4년 BPharm(Hons) Exit','Mathematics prerequisite'],editorial='5년 Bachelor of Pharmacy (Honours) + Master of Pharmacy Practice 통합과정입니다. 현재 Course Resolutions는 1~4학년 192cp를 충족하면 Bachelor of Pharmacy (Honours)를 수여할 수 있고, 5학년 48cp가 Master of Pharmacy Practice임을 명시합니다. Mathematics는 공식 course prerequisite이며 Chemistry·Biology는 assumed knowledge, Physics는 recommended study입니다.',review_items=['USFP 수학 progression 조건'])
 eng('sydney',6.5,{'L':6,'R':6,'W':6,'S':6},toefl={'overall':85,'bands_note':'공식표 각영역 17/19 구분 상세 확인'}); intake('sydney',[2],'2월'); fee('sydney',63600); req('sydney','assumed','required','assumed','recommended','Mathematics Advanced Band 4 또는 Mathematics Extension 1/2 Band E3 상당 prerequisite · Chemistry와 Biology는 assumed knowledge · Physics 권장',src='sydney-prereqs-current')
 qual('sydney','csat',346,'표준점수 4개 합','국어 + 수학 + 사회/과학 탐구 상위 2개 과목의 표준점수 합. 등급이나 백분위 합계가 아닙니다.')
 qual('sydney','sat',1300,'1600'); qual('sydney','ib',31,'45'); qual('sydney','alevel',14,'대학 환산점수','3과목/4과목 각각 14. A-level 성적을 대학 공식 환산식으로 계산해야 합니다.')
 q=next(x for x in qualifications if x['program_id']=='sydney-bpharm-hons' and x['qualification']=='korean_high_school');q['score']=fact(False,'sydney',note='Korean Senior High School Diploma는 이 Direct 환산표에서 assessable qualification이 아님')
-setp('unsw',name=fact('Bachelor of Pharmaceutical Medicine / Doctor of Pharmacy','unsw-2027-course'),final_degree=fact('Bachelor of Pharmaceutical Medicine / Doctor of Pharmacy','unsw-2027-course'),highlights=['2027 PharmD 전환','2027 Intl IB 33','5년 통합'],editorial='UNSW는 2027부터 Bachelor of Pharmaceutical Medicine / Doctor of Pharmacy로 명칭을 변경합니다. 2027 공식 Guide의 국제 기준은 International ATAR 87 / IB 33이며, 현재 course page의 A-level 15 기준은 2027에도 입학요건이 동일하다는 학교 안내에 따라 참고합니다. 새 PharmD 명칭의 APC/Board 반영은 별도 확인 중입니다.',review_items=['새 PharmD 명칭의 APC/Board 승인 반영','2027 국제학생 학비']); prog('unsw')['accreditation']['note']='APC 2026-07-08 목록은 기존 Bachelor of Pharmaceutical Medicine / Master of Pharmacy 명칭을 Accredited with conditions(종료 2028-06-30)로 게재합니다. UNSW가 공지한 2027 Doctor of Pharmacy 새 명칭의 APC/Pharmacy Board 반영은 지원·등록 전 재확인합니다.'; fee('unsw',63000,src='unsw-fee-2026',year=2026,total=349000,load='first-year full-time fee'); intake('unsw',[2],'Term 1 · 2027',src='unsw-2027-course'); eng('unsw',6.5,{'L':6,'R':6,'W':6,'S':6},src='unsw-english-current'); req('unsw','assumed','assumed',grade='Assumed knowledge: Chemistry, Mathematics Advanced',src='unsw')
+setp('unsw',name=fact('Bachelor of Pharmaceutical Medicine / Doctor of Pharmacy','unsw-2027-course'),final_degree=fact('Bachelor of Pharmaceutical Medicine / Doctor of Pharmacy','unsw-2027-course'),highlights=['2027 PharmD 전환','IELTS 7.0 · 각 6.0','5년 통합'],editorial='UNSW는 2027부터 Bachelor of Pharmaceutical Medicine / Doctor of Pharmacy로 명칭을 변경합니다. 2027 공식 Guide의 국제 기준은 International ATAR 87 / IB 33이며, Pharmacy는 일반 Medicine & Health 영어기준보다 높은 IELTS 7.0(각 6.0)을 적용합니다. 새 PharmD 명칭의 APC/Board 반영과 2027 본과 학비는 별도 확인 중입니다.',review_items=['새 PharmD 명칭의 APC/Board 승인 반영','2027 국제학생 본과 학비']); prog('unsw')['accreditation']['note']='APC 2026-07-08 목록은 기존 Bachelor of Pharmaceutical Medicine / Master of Pharmacy 명칭을 Accredited with conditions(종료 2028-06-30)로 게재합니다. UNSW가 공지한 2027 Doctor of Pharmacy 새 명칭의 APC/Pharmacy Board 반영은 지원·등록 전 재확인합니다.'; fee('unsw',63000,src='unsw-fee-2026',year=2026,total=349000,load='first-year full-time fee'); intake('unsw',[2],'Term 1 · 2027',src='unsw-2027-course'); eng('unsw',7.0,{'L':6,'R':6,'W':6,'S':6},src='unsw-english-current',pte=65,pte_each=54,toefl={'overall':94,'L':23,'R':23,'W':25,'S':23}); req('unsw','assumed','assumed',grade='Assumed knowledge: Chemistry, Mathematics Advanced',src='unsw')
 setp('uwa',highlights=['4년 Bachelor + PharmD','ATAR 85 · CBM WAM 65 assurance','2027 Global Excellence 10~20%'],editorial='고교 졸업 후 4년 동안 Bachelor of Human Sciences (Pharmaceutical Health) + Doctor of Pharmacy를 함께 이수하는 combined degree입니다. 공식 과정 페이지는 ATAR 85 입학과 combined degree 내 65% WAM assurance를 명시하며, 졸업 후에는 별도 internship과 Pharmacy Board 시험이 필요합니다.',review_items=['2027 국제학생 학비'])
 req('uwa','assumed','assumed',grade='Chemistry 및 Mathematics Applications/Methods 수준을 권장하며, 미충족 시 UWA 규정에 따라 foundation/bridging units가 요구될 수 있습니다.'); eng('uwa',7,{'L':7,'R':7,'W':7,'S':7}); intake('uwa',[2],'Semester 1 · 2월')
 # RMIT Pharmacy 65% international academic requirement mapped through official country equivalency tables.
@@ -346,9 +350,10 @@ dr['qualification']=fact('최신 공개 H1 참고: CSAT 331 · IB 28 · SAT 1080
 dr['note']='2026 국제가이드의 H1 환산표를 최신 공개 참고값으로 사용합니다. 2027 확정 환산표·과목별 assumed knowledge는 별도 확인 중입니다.'
 route('griffith','griffith-college','diploma','Griffith College · Diploma of Health Sciences','griffith-college',80,2,'8개월(2 trimesters) 또는 12개월(3 trimesters)','2027 T1 3월 1일 · T2 6월 28일 · T3 10월 25일','Diploma 수료 + Pharmacy progression quota · 정원 초과 시 completed Diploma GPA 순 선발','80CP 인정 후 Bachelor of Pharmacy (Honours)로 연결됩니다. 2027 국제가이드는 Pharmacy에 progression quota가 있음을 명시합니다. T3 시작은 본과 intake와 progression gap을 함께 확인해야 합니다.')
 routes[-1]['duration']=fact('8개월(2 trimesters) 또는 12개월(3 trimesters)','griffith-college-health')
-routes[-1]['intake']=fact('2027 T1 3월 1일 · T2 6월 28일 · T3 10월 25일','griffith-college-dates-2027')
-routes[-1]['intake_months']=fact([3,6,10],'griffith-college-dates-2027')
-routes[-1]['progression']=fact('Diploma 수료 + Pharmacy progression quota · 정원 초과 시 completed Diploma GPA 순 선발','griffith-college-2027-guide')
+routes[-1]['intake']=fact('2027 T1 3월 1일 · T2 6월 27일 · T3 10월 5일','griffith-college-2027-guide')
+routes[-1]['intake_months']=fact([3,6,10],'griffith-college-2027-guide')
+routes[-1]['progression']=fact('2026/2027 Diploma of Health Sciences 수료 → 2027 Bachelor of Pharmacy (Honours) 1614에 80CP 인정','griffith-college',note='공식 articulation은 80CP 인정 후 T1 대학 진학 시 본과 3년, T2 진학 시 약 3.5년이 남는다고 명시합니다.')
+routes[-1]['note']='Griffith College Diploma of Health Sciences 2026/2027 → 2027 Pharmacy 1614에 80CP가 공식 인정됩니다. T1 진학 시 본과 240CP를 약 3년, T2 진학 시 약 3.5년에 이수합니다. 한국 내 UniCentre 경로는 TNS 사이트 정책상 별도 홍보하지 않습니다.'
 routes[-1]['pathway_fee']=fact(None,'griffith-college-health',status='pending_2027',note='검증한 공식 2027 자료에서 Diploma of Health Sciences의 2027 tuition amount를 확인하지 못해 추정하지 않습니다.')
 route('curtin','curtin-college','diploma','Curtin College · Pharmacy Diploma','curtin-college',175,2,'Stage 2: 12개월 · Stage 1 필요 시 8–12개월 추가','Stage 1: 2월/6월 · Stage 2: 2월','Stage 2 CWA 70% + PHAR1002 Pharmacy Practice 1(12월) 추가 이수','Diploma 완료 시 175 credits를 인정받고, 12월 PHAR1002를 추가 이수한 뒤 약대 2학년으로 진학합니다.')
 routes[-1]['english']=fact('Stage 2 Pharmacy: IELTS 6.5 / 각 6.0 · PTE 58 / 각 50(2026년 8월 이전 시험 기준)','curtin-college-english')
@@ -380,6 +385,11 @@ routes[-1]['english']=fact('IELTS 6.0 / 각 5.0 · PTE 50 / 각 38 · TOEFL 71 (
 routes[-1]['qualification']=fact('Year 12 동등 학력 · 목표 Bachelor 입학조건에 거의 도달한 학생용','qut-foundation-intensive-2027')
 routes[-1]['pathway_fee']=fact(12768,'qut-foundation-intensive-2027',year=2027,note='2027 Intensive Program 전체 48 credit points 학비')
 route('sydney','sydney-usfp','foundation','USFP · University of Sydney Foundation Program','sydney',0,1,None,None,'Pharmacy GPA 7.3 / English C','2027 Pharmacy 진학 기준입니다. 수학과 Foundation 입학조건을 충족해야 합니다.')
+route('unsw','unsw-foundation-standard','foundation','UNSW College · Standard Foundation','unsw-college-standard-2027',0,1,'9개월','4월 · 10월','현재 Pharmacy progression reference: Foundation GPA 7.6 · Academic English B · Life Science/Physical Science · UNSW Term 1','UNSW College의 현재 progression 표는 기존 3895 Bachelor of Pharmaceutical Medicine/Master of Pharmacy 명칭을 사용합니다. UNSW는 2027 신입생을 새 Doctor of Pharmacy 명칭으로 전환한다고 안내하므로, GPA 7.6 / English B는 최신 pathway 참고값으로 표시하되 새 명칭 전용 2027 표가 갱신되기 전까지 자동 확정판정에는 사용하지 않습니다.')
+routes[-1]['intake']=fact('4월 · 10월','unsw-college-standard-2027')
+routes[-1]['intake_months']=fact([4,10],'unsw-college-standard-2027')
+routes[-1]['progression']=fact('현재 3895 progression: GPA 7.6 · Academic English B · Life Science/Physical Science · Term 1','unsw-college-student-guide',status='latest_published',note='College 표에는 아직 기존 Master of Pharmacy 명칭이 남아 있습니다. 2027 Doctor of Pharmacy 명칭 전용 progression table 발표 후 재확인합니다.')
+routes[-1]['pathway_fee']=fact(43650,'unsw-college-standard-2027',year=2027,note='2027 Standard Foundation tuition only · 기타 compulsory fee 별도')
 route('monash','monash-foundation','foundation','Monash University Foundation Year','monash-foundation-p6007-current',0,1,'Standard 약 12개월','2월 · 8월','P6007: Foundation score 75% · English 65% · Maths 50% + Chemistry 50%','현재 Monash College destination-degree 페이지는 새 P6007을 75%/English 65%로 안내하지만, 2027 Pathway Programs PDF의 Pharmacy 표에는 아직 P6001이 남아 있어 2027 확정 자동판정에는 사용하지 않습니다.')
 routes[-1]['availability']=fact(True,'monash-foundation-p6007-current')
 routes[-1]['duration']=fact('Standard 약 12개월','monash-foundation-dates-2027')
@@ -481,7 +491,7 @@ housing('unsw','unsw-2027-status','UNSW 2027 학생숙소','unsw-housing-2027',N
 housing('uwa','uwa-trinity-2027','Trinity Residential College · Standard Room','uwa-trinity-2027',595,None,True,True,'UWA College Row · Crawley','2027 Standard Room A$595/week. 3 meals/day, utilities, Wi-Fi, room cleaning 등이 포함됩니다.')
 
 conflicts=[
- dict(id='newcastle-english',entity_id='newcastle-bpharm-hons',field='english',source_ids=['newcastle-2027-course','newcastle-fee-2027'],status='source_conflict',summary='Newcastle 2027 Degree Guide는 IELTS 6.5/각6.5, 현재 과정 페이지 English proficiency section은 7.0/각7.0으로 표기',decision='같은 대학의 2027 공식자료 간 차이이므로 자동 충족 판정에서 제외. 지원 전 Newcastle Admissions 서면 확인.'),
+ dict(id='newcastle-english',entity_id='newcastle-bpharm-hons',field='english',source_ids=['newcastle-2027-course','newcastle-fee-2027','newcastle-nonstandard-english-2025'],status='source_conflict',summary='2027 Degree Guide + 2025-08-28 Non-Standard English list는 IELTS 6.5/각6.5, 현재 degree page 국제학생 섹션은 7.0/각7.0',decision='현재 공식자료끼리 불일치하므로 자동 충족 판정에서 제외. Newcastle Admissions 서면 확인 전 단일값으로 확정하지 않음.'),
  dict(id='monash-foundation-version',entity_id='monash-foundation',field='progression',source_ids=['monash-foundation','monash-foundation-p6007-current'],status='source_conflict',summary='2027 Pathway Programs PDF Pharmacy 표는 P6001을 유지하지만, 현재 Monash College destination-degree 페이지는 새 P6007과 75%/English 65%/Maths·Chemistry 50%를 표시',decision='P6007 live 값을 최신 공개 참고값으로 보여주되 2027 확정 자동판정에는 사용하지 않음.'),
 ]
 # Canberra 2027 course PDF verified after initial seed.
@@ -558,9 +568,13 @@ for uid in ['adelaide','qut','canberra','unisq','unsw']:
  elif uid=='unsw':
   dr['intake']=fact('Term 1 · 2027','unsw-2027-course')
   dr['intake_months']=fact([2],'unsw-2027-course')
-  dr['english']=fact('IELTS 6.5 / 각 6.0','unsw-english-current')
+  dr['english']=fact('IELTS 7.0 / 각 6.0 · PTE 65 / 각 54 · TOEFL 94 (W25, R/L/S23)','unsw-english-current')
   dr['qualification']=fact('2027 Guide: International ATAR 87 / IB 33 · current A-level 15 · assumed knowledge Chemistry + Mathematics Advanced','unsw-2027-guide')
   dr['note']='2027부터 Doctor of Pharmacy 명칭으로 전환됩니다. 입학요건은 학교가 기존 기준과 동일하다고 안내하지만 새 명칭의 APC/Board 반영은 별도 확인합니다.'
+_newcastle_direct=next(r for r in routes if r['id']=='newcastle-bpharm-hons-direct')
+_newcastle_direct['english']=fact('공식자료 충돌: IELTS 6.5/각6.5 vs 국제학생 degree page 7.0/각7.0','newcastle-nonstandard-english-2025',status='source_conflict',note='2027 Degree Guide와 2025-08-28 정책 목록은 6.5/6.5, 현재 degree page 국제학생 섹션은 7.0/7.0입니다.')
+_newcastle_direct['qualification']=fact('2027 IB 28 확인 · 기타 국제학력 course-specific 환산은 업데이트 대기','newcastle-prospectus-2027')
+_newcastle_direct['note']='2027년 2월 22일 시작과 IB 28은 확인됐습니다. 영어는 현재 공식자료 간 충돌로 자동 판정하지 않습니다.'
 # A blocked source is not a completed verification.
 sources['board']['verified_date']=None
 sources['board']['retrieval_status']='blocked_403'
@@ -622,11 +636,12 @@ decision_lenses={
   },
   "griffith": {
     "why": [
-      "Griffith College Diploma → 약대 2학년",
+      "Griffith College 2026/2027 Diploma → Pharmacy 1614에 80CP 공식 인정",
       "Gold Coast Regional",
       "2027 International Academic Merit 20%"
     ],
     "watch": [
+      "2027 국내 Guaranteed Rank 76은 국제학생 Direct 점수가 아님",
       "2027 Direct 학비·국제학생 입학점수 최종 업데이트 대기"
     ]
   },
@@ -668,10 +683,10 @@ decision_lenses={
     "why": [
       "2027 학비 A$51,665",
       "Newcastle Regional",
-      "Foundation 경로 있음"
+      "Foundation 2027 A$31,400 경로 있음"
     ],
     "watch": [
-      "공식 영어자료가 6.5와 7.0으로 충돌해 지원 전 서면 확인 필요",
+      "2027 Degree Guide·2025 최신 정책목록은 IELTS 6.5/6.5, 현재 국제학생 degree page는 7.0/7.0으로 충돌",
       "2027 20% International Excellence는 Pharmacy 제외"
     ]
   },
@@ -698,12 +713,13 @@ decision_lenses={
   },
   "monash": {
     "why": [
-      "4년 BPharm(Hons) Exit + 5년 PharmD",
-      "5년차 paid supervised practice",
-      "Graduate Entry 있음"
+      "5년 BPharm(Hons) / Doctor of Pharmacy",
+      "5년차 paid supervised practice + Intern Training Program 통합",
+      "관련 학사 졸업자는 Graduate Entry로 3학년 진입 가능"
     ],
     "watch": [
-      "2027 Foundation → 새 P6007 진급점수 발표 대기",
+      "Foundation live page는 P6007, 2027 Pathway PDF는 legacy P6001이라 진급표 버전 충돌",
+      "2027 ATAR 80은 국내 Monash Guarantee이며 국제학력 점수로 자동 환산하지 않음",
       "Melbourne은 지역 추가 485 대상 아님"
     ]
   },
@@ -721,11 +737,12 @@ decision_lenses={
     "why": [
       "2027부터 Doctor of Pharmacy 명칭",
       "5년 통합 과정",
-      "2027 IB·A-level 기준 확인"
+      "Pharmacy 영어 IELTS 7.0 / 각 6.0"
     ],
     "watch": [
-      "졸업 후 인턴십은 별도",
-      "2027 학비 발표 대기"
+      "UNSW College progression 표는 아직 기존 Master of Pharmacy 명칭",
+      "졸업 후 등록용 인턴십은 별도",
+      "2027 본과 학비 발표 대기"
     ]
   },
   "uwa": {
