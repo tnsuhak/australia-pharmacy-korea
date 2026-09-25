@@ -162,17 +162,12 @@
 
 ## 운영 메모
 
-- UNSW 2027 Guide의 International IB 33은 현재 course page의 2026 domestic-offer IB 36과 목적이 다릅니다. 국제학생 비교에는 2027 공식 international table의 IB 33을 사용합니다.
-- Canberra는 2027 Selection Rank 75와 현재 international equivalency table을 결합해 IB 28, SAT 1130, A-level 11, OSSD 74%를 비교값으로 사용합니다.
-- UniSQ 2027 국제학생은 Trimester 1 · 2월 15일 시작의 4년 과정입니다. 3년 accelerated option은 2028부터입니다.
-
 - `data/catalog.json`의 각 fact가 실제 적용 상태(`confirmed_2027`, `latest_published`, `pending_2027`, `source_conflict`)와 출처를 보유합니다.
 - 2027 값이 확인되지 않은 경우 최신 공개연도를 2027 확정값으로 바꾸지 않습니다.
-- Adelaide Pharmacy 현재 국제학생 페이지는 South Korea CSAT **345**를 표시합니다. 동일 페이지의 A$54,300 학비는 **2026 입학생 학비**라고 명시하므로 2027 학비로 승격하지 않습니다.
-- Griffith College 2027 intake 날짜는 현재 live Key Dates 페이지를 사용합니다. 2027 Quick Guide는 T2/T3 날짜가 다르므로 오래된 PDF보다 live 페이지를 우선합니다.
+- UWA combined Pharmacy course는 현재 공식 페이지에서 ATAR 85와 combined degree 내 65% WAM assurance를 안내합니다.
+- UWA 2027 Global Excellence Scholarship은 eligible combined bachelor degree에 적용되며, equivalent ATAR 85~89.95는 10%, ATAR 90+는 20% tuition discount, final transcript 기준 자동심사입니다.
+- UWA 2027 국제학생 본과 학비는 공식 2027 fee table을 확인하기 전까지 2026 A$46,000을 최신 공개 참고값으로만 유지합니다.
 - Curtin Pharmacy 최신 BH-PHARMA 페이지는 fee가 unavailable, intake는 no intakes available로 표시하므로 2027 국제학생 학비·시작월을 추정하지 않습니다.
-- La Trobe Pharmacy는 2027년 3월 시작과 국제학생 연중 지원 가능을 안내하지만, 국제학생 2027 학비는 확정값을 넣지 않습니다.
 - Monash Foundation은 live destination-degree 페이지의 P6007 값과 2027 Pathway Programs PDF의 legacy P6001이 충돌하므로 source_conflict로 유지합니다.
-- Queensland 2026-27 QSOL은 consultation이 종료됐지만 새 목록이 아직 공개되지 않아 2025-26 약사 491 범위를 새 회계연도 자격으로 이식하지 않습니다.
 - 경쟁사 한국 경로는 source registry와 공개 페이지에서 제외합니다.
 - Apply / How to apply / Application Portal은 공개 상담 퍼널의 기본 외부 링크로 사용하지 않습니다.
