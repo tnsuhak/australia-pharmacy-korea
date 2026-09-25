@@ -22,6 +22,12 @@ source('board','Pharmacy Board · Internships','https://www.pharmacyboard.gov.au
 source('apc-exam','APC · Intern written examination','https://www.pharmacycouncil.org.au/pharmacist/skills-assessment/intern-written-exam/',None,'regulator')
 source('korea-law','약사법 제3조 · 2026-09-11 시행','https://law.go.kr/lsLawLinkInfo.do?chrClsCd=010202&lsJoLnkSeq=1000328184',2026,'government')
 source('kuksiwon','국시원 · 외국대학 인정기준','https://www.kuksiwon.or.kr/infoOpen/list.do?seq=82',None,'government')
+source('homeaffairs-485','Australian Home Affairs · Temporary Graduate visa (subclass 485) Post-Higher Education Work','https://immi.homeaffairs.gov.au/Visa-subsite/Pages/work/485-post-study-work.aspx',2026,'government')
+source('homeaffairs-second485','Australian Home Affairs · Second Post-Higher Education Work stream','https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/temporary-graduate-485/second-post-higher-education-work',2026,'government')
+source('homeaffairs-regional','Australian Home Affairs · Designated regional area postcodes','https://immi.homeaffairs.gov.au/supporting/Pages/Work/187-regional-postcodes.aspx',2026,'government')
+source('jcu-2027-campus','JCU · 2027 course changes · Pharmacy campuses','https://www.jcu.edu.au/future-students/schools/2027-course-changes',2027,'official_course')
+source('utas-2027-campus','University of Tasmania · Bachelor of Pharmacy with Honours 2027','https://www.utas.edu.au/courses/health/courses/54d-bachelor-of-pharmacy-with-honours',2027,'official_course')
+source('uwa-dpharm','UWA · Doctor of Pharmacy graduate entry','https://www.uwa.edu.au/study/courses/doctor-of-pharmacy',2027,'official_course')
 course_urls={
  'jcu':'https://www.jcu.edu.au/courses/bachelor-of-pharmacy-honours',
  'utas':'https://www.utas.edu.au/courses/health/courses/54d-bachelor-of-pharmacy-with-honours',
