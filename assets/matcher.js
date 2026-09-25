@@ -53,7 +53,7 @@
     }
     if(f.structure){
       if(f.structure==='exit')check(read(p.four_year_exit),v=>v===true,'4년 Exit');
-      else if(f.structure==='integrated')check(read(p.professional_registration.supervised_practice_in_degree),v=>v===true,'학위 내 등록 실무');
+      else if(f.structure==='integrated')check(read(p.professional_registration.itp_in_degree),v=>v===true,'학위 내 ITP·등록 실무');
       else if(f.structure==='3.5')check(p.id==='uq-bpharm-hons'?true:years===null?null:false,v=>v&&f.intake!=='2','3.5년 경로');
       else if(f.structure==='3.75')check(years,v=>v===3.75,'3년 9개월');
       else check(years,v=>v===Number(f.structure),'세부 기간');
