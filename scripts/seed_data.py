@@ -83,6 +83,9 @@ source('unsw-2027-course','UNSW Pharmaceutical Medicine / Doctor of Pharmacy · 
 source('unsw-english-current','UNSW · English language requirements','https://www.unsw.edu.au/study/how-to-apply/english-language-requirements',None,'official_admissions')
 source('latrobe-2027-course','La Trobe Bachelor of Pharmacy (Honours) · 2027 start','https://www.latrobe.edu.au/courses/bachelor-of-pharmacy-honours',2027,'official_course')
 source('curtin-pharmacy-current-guide','Curtin · Pharmacy English requirement guide','https://publications.curtin.edu.au/chinese-student-guide/page/28-29',None,'official_guide')
+source('newcastle-2027-course','University of Newcastle · Bachelor of Pharmacy (Honours) current 2027 entry','https://www.newcastle.edu.au/degrees/bachelor-of-pharmacy-honours',2027,'official_course')
+source('newcastle-2026-ug','University of Newcastle · 2026 Undergraduate Degrees guide','https://www.newcastle.edu.au/__data/assets/pdf_file/0012/978438/2026-1088_UG-Prospectus_v3.6_WEB.pdf',2026,'official_guide')
+source('monash-pps-2026','Monash Pharmacy and Pharmaceutical Sciences · International UG Course Guide 2026','https://www.monash.edu/__data/assets/pdf_file/0004/4091809/Monash-University-PPS-International-UG-Course-Guide-2026.pdf',2026,'official_guide')
 course_urls={
  'jcu':'https://www.jcu.edu.au/courses/bachelor-of-pharmacy-honours',
  'utas':'https://www.utas.edu.au/courses/health/courses/54d-bachelor-of-pharmacy-with-honours',
@@ -204,7 +207,7 @@ def qual(i,q,score,scale,calc=''):
  r.update(score=fact(score,i),scale=scale,calculation=calc)
 
 setp('jcu',highlights=['3년 Fast-track','화학 권장','2월 입학'],editorial='화학은 필수가 아닙니다. 3년 Fast-track이라 학업 속도가 빠릅니다.',review_items=['2027 국제학생 학비','한국 학력 환산표'])
-req('jcu','recommended','required',grade='English와 General Mathematics 또는 동등 수준. Chemistry 권장.',src='jcu-guide'); intake('jcu',[2],'2월','jcu-guide'); fee('jcu',31710,src='jcu-fee-2026',year=2026)
+req('jcu','recommended','required',grade='English와 General Mathematics 또는 동등 수준. Chemistry 권장.',src='jcu-guide'); intake('jcu',[2],'2월','jcu-guide'); fee('jcu',31710,src='jcu-fee-2026',year=2026); eng('jcu',7.0,{'L':6.5,'R':6.5,'W':6.5,'S':6.5},src='jcu-guide',pte=65,pte_each=58)
 setp('utas',highlights=['3년 Fast-track','2027 학비 공개','Hobart 숙소'],editorial='4년 약학과를 3년에 압축해 공부합니다. 1년 수강량이 많습니다.')
 fee('utas',61267,total=198050,load='연간 133 credit points 기준'); eng('utas',6.5,{'L':6,'R':6,'W':6,'S':6},src='utas'); intake('utas',None,'Semester 1 · Cradle Coast / Hobart / Launceston',src='utas'); req('utas','required','required','recommended','accepted','수학 1과목 + Chemistry 또는 Physical Sciences에서 satisfactory achievement',src='utas')
 setp('curtin',highlights=['College → Year 2','175 credits','진급 CWA 확인'],editorial='Curtin College Diploma 후 약대 2학년으로 진학합니다. Stage 2 CWA 70%와 PHAR1002가 필요합니다.',review_items=['약 3년 9개월 운영 일정 재확인','국제학생 2027 학비','Global Merit의 Pharmacy 제외 여부']); eng('curtin',7.0,{'L':7,'R':7,'W':7,'S':7},src='curtin-pharmacy-current-guide')
@@ -222,21 +225,19 @@ req('rmit','required','required',grade='VCE Chemistry 25, Mathematics 25 또는 
 eng('rmit',7,{'L':6.5,'R':6.5,'W':6.5,'S':6.5},src='rmit-english',status='pending_2027')
 for k in ['ielts_overall','ielts_bands']:row(english,'rmit')[k]['note']='Pharmacy 전용 표는 확인. 국제학생 course 조건과 적용 범위 대조 완료 전 자동 충족 판정 제외.'
 setp('newcastle',highlights=['4년 학사','Foundation 연계','영어 재확인'],editorial='영어조건 자료가 서로 달라 2027 기준 발표를 기다리고 있습니다.',review_items=['Pharmacy 영어조건 자료 충돌','2027 CSAT·SAT·IB course-specific 값','APC 인증 갱신: 현재 목록 종료일 2026-12-31'])
-eng('newcastle',7,{'L':7,'R':7,'W':7,'S':7},status='source_conflict')
-for k in ['ielts_overall','ielts_bands']:row(english,'newcastle')[k]['note']='과정 페이지 국제학생 상세 7.0/각7.0, 다른 표시 6.5. 2027 입학팀 서면 확인 필요.'
-intake('newcastle',[2],'Semester 1 · 2월'); fee('newcastle',49205,src='newcastle-fee-2027',year=2027,load='80 units 기준')
+eng('newcastle',7,{'L':7,'R':7,'W':7,'S':7},src='newcastle-2027-course'); intake('newcastle',[2],'Semester 1 · 2027년 2월 22일',src='newcastle-2027-course'); req('newcastle','assumed','assumed',physics='assumed',grade='Assumed knowledge: Mathematics, English Advanced, Chemistry, Physics',src='newcastle-2026-ug'); fee('newcastle',49205,src='newcastle-fee-2027',year=2027,load='80 units 기준')
 setp('canberra',highlights=['Canberra','학부 약학 과정','모집 확인 중'],editorial='APC 학부 약학 인증 목록과 실제 국제학생 모집은 서로 다른 확인 항목입니다. 2027 국제학생 course offer를 확인 중입니다.'); fee('canberra',42500,src='canberra-guide-2027',year=2027)
 setp('unisq',highlights=['T1 only','Toowoomba','2027 개설표'],editorial='2027 국제학생 대면 수업은 Trimester 1에 표시됩니다. 개설 안내서는 9월 28일 확정 예정이므로 최종 일정 확인이 필요합니다.')
 intake('unisq',None,'2027 국제학생 Trimester 1 only · 최종 개설 확정 대기')
 row(intakes,'unisq')['months']=fact(None,'unisq',note='T1 시작월을 달력과 대조 후 확정')
 setp('monash',highlights=['4년 Exit','5년 PharmD','Internship 통합'],editorial='4년 후 BPharm(Hons)로 졸업하거나 5년째 PharmD까지 이어갈 수 있습니다. 관련 학사 졸업자는 Graduate Entry도 있습니다.')
-req('monash','required','required',grade='VCE Methods/Specialist Maths 25 + Chemistry 25. IB Math AA SL4 또는 AA/AI HL3, Chemistry SL4 또는 HL3.'); intake('monash',[2],'2월'); fee('monash',49740,src='monash-fee-2027',year=2027,load='48 credit points 기준')
+req('monash','required','required',grade='VCE Methods/Specialist Maths 25 + Chemistry 25. IB Math AA SL4 또는 AA/AI HL3, Chemistry SL4 또는 HL3.'); intake('monash',[2],'2월'); fee('monash',49740,src='monash-fee-2027',year=2027,load='48 credit points 기준'); eng('monash',6.5,{'L':6,'R':6,'W':6,'S':6},src='monash-pps-2026',pte=58,pte_each=50)
 setp('sydney',highlights=['5년 통합','2027 환산표','Internship 통합'],editorial='5년 BPharm(Hons) / Master of Pharmacy Practice 과정입니다. 4년 후 학사 Exit가 있습니다.',review_items=['4년 학사 Exit 조건과 학위명','2027 Mathematics prerequisite 적용 여부','USFP 수학 progression 조건'])
 eng('sydney',6.5,{'L':6,'R':6,'W':6,'S':6},toefl={'overall':85,'bands_note':'공식표 각영역 17/19 구분 상세 확인'}); intake('sydney',[2],'2월'); fee('sydney',63600); req('sydney','assumed','assumed','recommended',grade='Mathematics admission prerequisite와 Chemistry/Math assumed knowledge를 별도로 확인',src='sydney-structure')
 qual('sydney','csat',346,'표준점수 4개 합','국어 + 수학 + 사회/과학 탐구 상위 2개 과목의 표준점수 합. 등급이나 백분위 합계가 아닙니다.')
 qual('sydney','sat',1300,'1600'); qual('sydney','ib',31,'45'); qual('sydney','alevel',14,'대학 환산점수','3과목/4과목 각각 14. A-level 성적을 대학 공식 환산식으로 계산해야 합니다.')
 q=next(x for x in qualifications if x['program_id']=='sydney-bpharm-hons' and x['qualification']=='korean_high_school');q['score']=fact(False,'sydney',note='Korean Senior High School Diploma는 이 Direct 환산표에서 assessable qualification이 아님')
-setp('unsw',highlights=['2027 PharmD 전환','5년 학위','졸업 후 Internship'],editorial='2027부터 PharmD 명칭을 사용하지만 졸업 후 인턴십은 따로 합니다.',review_items=['새 PharmD 명칭의 APC/Board 승인 반영','2027 국제학생 학비']); fee('unsw',63000,src='unsw-fee-2026',year=2026,total=349000,load='first-year full-time fee'); intake('unsw',[2],'Term 1 · 2027',src='unsw-2027-course'); eng('unsw',6.5,{'L':6,'R':6,'W':6,'S':6},src='unsw-english-current')
+setp('unsw',highlights=['2027 PharmD 전환','5년 학위','졸업 후 Internship'],editorial='2027부터 PharmD 명칭을 사용하지만 졸업 후 인턴십은 따로 합니다.',review_items=['새 PharmD 명칭의 APC/Board 승인 반영','2027 국제학생 학비']); fee('unsw',63000,src='unsw-fee-2026',year=2026,total=349000,load='first-year full-time fee'); intake('unsw',[2],'Term 1 · 2027',src='unsw-2027-course'); eng('unsw',6.5,{'L':6,'R':6,'W':6,'S':6},src='unsw-english-current'); req('unsw','assumed','assumed',grade='Assumed knowledge: Chemistry, Mathematics Advanced',src='unsw')
 setp('uwa',highlights=['4년 Bachelor + PharmD','고교 졸업 후 진학','졸업 후 Internship'],editorial='고교 졸업 후 4년 동안 Bachelor + Doctor of Pharmacy를 함께 취득합니다. 졸업 후 인턴십은 따로 합니다.',review_items=['2027 국제학생 학비'])
 req('uwa','assumed','assumed',grade='Chemistry 및 Mathematics Applications/Methods 수준을 권장하며, 미충족 시 UWA 규정에 따라 foundation/bridging units가 요구될 수 있습니다.'); eng('uwa',7,{'L':7,'R':7,'W':7,'S':7}); intake('uwa',[2],'Semester 1 · 2월')
 qual('uwa','csat',329,'UWA 국제학력 환산점수'); qual('uwa','sat',1220,'1600'); qual('uwa','ib',30,'45'); qual('uwa','alevel',10,'UWA A-level 환산점수'); fee('uwa',46000,src='uwa-fee-2026',year=2026,load='48 points 기준')
