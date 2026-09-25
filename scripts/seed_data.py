@@ -85,6 +85,7 @@ source('uwa-fee-2026','UWA · 2026 international undergraduate fees CM039','http
 source('adelaide-fee-current','Adelaide University · Bachelor of Pharmacy (Honours) · published 2026 international fee','https://adelaide.edu.au/study/degrees/bachelor-of-pharmacy-honours/',2026,'official_course')
 source('rmit-2027-apply','RMIT Bachelor of Pharmacy (Honours) · 2027 intake','https://www.rmit.edu.au/study-with-us/levels-of-study/undergraduate-study/honours-degrees/bachelor-of-pharmacy-honours-bh102/apply-now',2027,'official_course')
 source('unsw-2027-course','UNSW Pharmaceutical Medicine / Doctor of Pharmacy · 2027','https://www.unsw.edu.au/study/undergraduate/bachelor-of-pharmaceutical-medicine-master-of-pharmacy',2027,'official_course')
+source('unsw-2027-guide','UNSW · 2027 Undergraduate Student Guide · international ATAR/IB table','https://www.unsw.edu.au/content/dam/pdfs/future-students/2027-DOM-UG-Guide.pdf',2027,'official_guide')
 source('unsw-english-current','UNSW · English language requirements','https://www.unsw.edu.au/study/how-to-apply/english-language-requirements',None,'official_admissions')
 source('latrobe-2027-course','La Trobe Bachelor of Pharmacy (Honours) · 2027 start','https://www.latrobe.edu.au/courses/bachelor-of-pharmacy-honours',2027,'official_course')
 source('curtin-pharmacy-current-guide','Curtin · Pharmacy English requirement guide','https://publications.curtin.edu.au/chinese-student-guide/page/28-29',None,'official_guide')
@@ -274,7 +275,7 @@ eng('sydney',6.5,{'L':6,'R':6,'W':6,'S':6},toefl={'overall':85,'bands_note':'공
 qual('sydney','csat',346,'표준점수 4개 합','국어 + 수학 + 사회/과학 탐구 상위 2개 과목의 표준점수 합. 등급이나 백분위 합계가 아닙니다.')
 qual('sydney','sat',1300,'1600'); qual('sydney','ib',31,'45'); qual('sydney','alevel',14,'대학 환산점수','3과목/4과목 각각 14. A-level 성적을 대학 공식 환산식으로 계산해야 합니다.')
 q=next(x for x in qualifications if x['program_id']=='sydney-bpharm-hons' and x['qualification']=='korean_high_school');q['score']=fact(False,'sydney',note='Korean Senior High School Diploma는 이 Direct 환산표에서 assessable qualification이 아님')
-setp('unsw',name=fact('Bachelor of Pharmaceutical Medicine / Doctor of Pharmacy','unsw-2027-course'),final_degree=fact('Bachelor of Pharmaceutical Medicine / Doctor of Pharmacy','unsw-2027-course'),highlights=['2027 PharmD 전환','5년 학위','졸업 후 Internship'],editorial='UNSW는 2027부터 Bachelor of Pharmaceutical Medicine / Doctor of Pharmacy로 명칭을 변경한다고 공식 안내합니다. 졸업 후 일반등록을 위한 인턴십·시험 요건은 별도입니다.',review_items=['새 PharmD 명칭의 APC/Board 승인 반영','2027 국제학생 학비']); prog('unsw')['accreditation']['note']='APC 2026-07-08 목록은 기존 Bachelor of Pharmaceutical Medicine / Master of Pharmacy 명칭을 Accredited with conditions(종료 2028-06-30)로 게재합니다. UNSW가 공지한 2027 Doctor of Pharmacy 새 명칭의 APC/Pharmacy Board 반영은 지원·등록 전 재확인합니다.'; fee('unsw',63000,src='unsw-fee-2026',year=2026,total=349000,load='first-year full-time fee'); intake('unsw',[2],'Term 1 · 2027',src='unsw-2027-course'); eng('unsw',6.5,{'L':6,'R':6,'W':6,'S':6},src='unsw-english-current'); req('unsw','assumed','assumed',grade='Assumed knowledge: Chemistry, Mathematics Advanced',src='unsw')
+setp('unsw',name=fact('Bachelor of Pharmaceutical Medicine / Doctor of Pharmacy','unsw-2027-course'),final_degree=fact('Bachelor of Pharmaceutical Medicine / Doctor of Pharmacy','unsw-2027-course'),highlights=['2027 PharmD 전환','2027 Intl IB 33','5년 통합'],editorial='UNSW는 2027부터 Bachelor of Pharmaceutical Medicine / Doctor of Pharmacy로 명칭을 변경합니다. 2027 공식 Guide의 국제 기준은 International ATAR 87 / IB 33이며, 현재 course page의 A-level 15 기준은 2027에도 입학요건이 동일하다는 학교 안내에 따라 참고합니다. 새 PharmD 명칭의 APC/Board 반영은 별도 확인 중입니다.',review_items=['새 PharmD 명칭의 APC/Board 승인 반영','2027 국제학생 학비']); prog('unsw')['accreditation']['note']='APC 2026-07-08 목록은 기존 Bachelor of Pharmaceutical Medicine / Master of Pharmacy 명칭을 Accredited with conditions(종료 2028-06-30)로 게재합니다. UNSW가 공지한 2027 Doctor of Pharmacy 새 명칭의 APC/Pharmacy Board 반영은 지원·등록 전 재확인합니다.'; fee('unsw',63000,src='unsw-fee-2026',year=2026,total=349000,load='first-year full-time fee'); intake('unsw',[2],'Term 1 · 2027',src='unsw-2027-course'); eng('unsw',6.5,{'L':6,'R':6,'W':6,'S':6},src='unsw-english-current'); req('unsw','assumed','assumed',grade='Assumed knowledge: Chemistry, Mathematics Advanced',src='unsw')
 setp('uwa',highlights=['4년 Bachelor + PharmD','고교 졸업 후 진학','졸업 후 Internship'],editorial='고교 졸업 후 4년 동안 Bachelor + Doctor of Pharmacy를 함께 취득합니다. 졸업 후 인턴십은 따로 합니다.',review_items=['2027 국제학생 학비'])
 req('uwa','assumed','assumed',grade='Chemistry 및 Mathematics Applications/Methods 수준을 권장하며, 미충족 시 UWA 규정에 따라 foundation/bridging units가 요구될 수 있습니다.'); eng('uwa',7,{'L':7,'R':7,'W':7,'S':7}); intake('uwa',[2],'Semester 1 · 2월')
 # RMIT Pharmacy 65% international academic requirement mapped through official country equivalency tables.
@@ -289,8 +290,10 @@ qual('uwa','csat',329,'UWA 국제학력 환산점수'); qual('uwa','sat',1220,'1
 # Additional international qualification scores verified for 2027 site.
 for qt,val,scale in [('csat',345,'대학 공식 CSAT 기준'),('ib',30,'45'),('sat',1220,'1600'),('alevel',10,'UK / Global GCE A-level 환산점수'),('ossd',80,'Ontario Secondary School Diploma 평균 %')]:
  q=next(x for x in qualifications if x['program_id']=='adelaide-bpharm-hons' and x['qualification']==qt); q.update(score=fact(val,'adelaide-pharmacy-current'),scale=scale)
-for qt,val,scale in [('ib',36,'45'),('alevel',15,'UNSW A-level aggregate')]:
- q=next(x for x in qualifications if x['program_id']=='unsw-bpharm-hons' and x['qualification']==qt); q.update(score=fact(val,'unsw-2027-course'),scale=scale,calculation='2027 PharmD 명칭 변경에도 입학기준은 동일하다는 UNSW 안내 기준')
+for qt,val,scale in [('ib',28,'45'),('sat',1130,'1600'),('alevel',11,'UC A-level aggregate'),('ossd',74,'Grade 12 U/M average %')]:
+ q=next(x for x in qualifications if x['program_id']=='canberra-bpharm-hons' and x['qualification']==qt); q.update(score=fact(val,'canberra-intl-equiv'),scale=scale,calculation='UC Selection Rank 75 equivalent')
+for qt,val,scale,src in [('ib',33,'45','unsw-2027-guide'),('alevel',15,'UNSW A-level aggregate','unsw-2027-course')]:
+ q=next(x for x in qualifications if x['program_id']=='unsw-bpharm-hons' and x['qualification']==qt); q.update(score=fact(val,src),scale=scale,calculation='2027 PharmD 명칭 변경에도 입학기준은 동일하다는 UNSW 안내 기준')
 q=next(x for x in qualifications if x['program_id']=='newcastle-bpharm-hons' and x['qualification']=='ib'); q.update(score=fact(28,'newcastle-prospectus-2027'),scale='45')
 q=next(x for x in qualifications if x['program_id']=='uq-bpharm-hons' and x['qualification']=='ib'); q.update(score=fact(30.25,'uq',2026,status='latest_published',note='2027 program page의 최신 threshold이며 Semester 1, 2026 offer 기준'),scale='45')
 for qt,val,scale in [('ib',27,'45'),('sat',1020,'1600')]:
@@ -438,8 +441,11 @@ conflicts=[
 ]
 # Canberra 2027 course PDF verified after initial seed.
 source('canberra-2027','Canberra Bachelor of Pharmacy HLB301 · 2027','https://www.canberra.edu.au/course/HLB301/1/2027.pdf',2027,'official_course')
-setp('canberra',name=fact('Bachelor of Pharmacy · Honours option','canberra-2027'),final_degree=fact('Bachelor of Pharmacy · Honours option available','canberra-2027'),international_recruitment=fact(True,'canberra-2027'),highlights=['4년 Bachelor of Pharmacy','Honours 선택 가능','Canberra · Regional'],editorial='4년 Bachelor of Pharmacy 과정입니다. 성적과 Honours 요건을 충족하면 Bachelor of Pharmacy (Honours)로 졸업할 수 있습니다.')
-eng('canberra',7,{'L':7,'R':7,'W':7,'S':7},src='canberra-2027');intake('canberra',[2],'2027-02-15 · Semester 1','canberra-2027')
+source('canberra-course-guide-2027','University of Canberra · 2027 Domestic Course Guide','https://www.canberra.edu.au/campaign/uc-course-guide.pdf',2027,'official_guide')
+source('canberra-intl-equiv','University of Canberra · International qualification equivalencies','https://www.canberra.edu.au/future-students/entry-requirements-options/academic-entry-requirements/international-qualifications',None,'official_admissions')
+source('canberra-english-current','University of Canberra · Current English language requirements','https://www.canberra.edu.au/future-students/entry-requirements-options/core-admission-requirements/english-language-requirements',None,'official_admissions')
+setp('canberra',name=fact('Bachelor of Pharmacy · Honours option','canberra-2027'),duration_years=fact(4,'canberra-course-guide-2027'),duration_label=fact('4년','canberra-course-guide-2027'),bachelor_award_year=fact(4,'canberra-course-guide-2027'),final_degree=fact('Bachelor of Pharmacy · Honours option available','canberra-2027'),international_recruitment=fact(True,'canberra-2027'),highlights=['4년 Bachelor of Pharmacy','Selection Rank 75','Canberra · Regional'],editorial='2027 Semester 1에 국제학생 모집이 열려 있는 4년 Bachelor of Pharmacy입니다. 2027 Course Guide의 Selection Rank는 75이며, 국제학력은 UC selection-rank equivalency로 환산합니다. 성적과 Honours 요건을 충족하면 Honours로 졸업할 수 있습니다.')
+eng('canberra',7,{'L':7,'R':7,'W':7,'S':7},src='canberra-2027',pte=65,toefl={'overall':94,'R':25,'L':25,'S':23,'W':27});intake('canberra',[2],'2027-02-15 · Semester 1','canberra-2027')
 req('canberra','assumed','assumed','assumed','assumed','수학 + Biology/Human Movement, Chemistry/Physics는 assumed knowledge로 안내. 필수 prerequisite와 구분.',src='canberra-2027')
 for route_record in routes:
  route_record['intake_months']=fact([2],'uq-accelerated') if route_record['id']=='uq-accelerated' else fact([2],'curtin-college') if route_record['id']=='curtin-college' else fact([2],'newcastle-foundation') if route_record['id']=='newcastle-foundation' else fact(None,route_record['availability']['source_id'])
@@ -453,7 +459,7 @@ source('unisq-course','UniSQ · International Bachelor of Pharmacy (Honours)','h
 eng('unisq',7,{'L':7,'R':7,'W':6.5,'S':7},src='unisq-course')
 req('unisq','assumed','assumed','assumed','assumed','English C, Mathematical Methods/Specialist C, Biology/Chemistry/Physics 중 하나 C는 assumed knowledge.',src='unisq-course')
 fee('unisq',34280,src='unisq-course',year=2026,load='8 units / year · 2026 국제학생 참고값')
-setp('unisq',editorial='2027은 Trimester 1 입학입니다. 3년 가속과정은 2028부터 시작합니다.',review_items=['2027 학비','T1 최종 개설 일정','2027 장학금 적용'])
+setp('unisq',duration_years=fact(4,'unisq'),duration_label=fact('4년','unisq'),bachelor_award_year=fact(4,'unisq'),editorial='2027 국제학생은 Trimester 1에만 입학하며 2월 15일 시작입니다. 2027은 4년 과정이고, 3년 accelerated option은 2028부터 시작합니다.',review_items=['2027 학비','2027 장학금 적용'])
 row(registration,'unisq').update(supervised_practice_in_degree=fact(False,'unisq-course'),post_graduation_internship=fact(True,'unisq-course'))
 source('griffith-2026','Griffith 2026 International Guide · Pharmacy H1','https://www.griffith.edu.au/__data/assets/pdf_file/0035/2193587/Griffith-University-2026-International-Study-Guide-Digital.pdf',2026,'official_guide')
 for q,score,scale in [('csat',331,'대학 공식 CSAT 환산'),('sat',1080,'1600 · 미국 고교졸업 자격 동반'),('ib',28,'45'),('alevel',7,'대학 A-level 환산점수')]:
@@ -475,7 +481,7 @@ for route_record in routes:
   route_record['note']='아래 표에 성적·선수과목·영어 기준을 정리했습니다.'
 
 # Keep high-value Direct route summaries synchronized with verified course facts.
-for uid in ['adelaide','qut','canberra','unisq']:
+for uid in ['adelaide','qut','canberra','unisq','unsw']:
  dr=next(r for r in routes if r['id']==uid+'-bpharm-hons-direct')
  er=row(english,uid); rr=row(requirements,uid)
  if uid=='adelaide':
@@ -487,13 +493,21 @@ for uid in ['adelaide','qut','canberra','unisq']:
   dr['qualification']=fact('Chemistry + Mathematical Methods/Specialist Mathematics는 assumed knowledge · 필수 prerequisite와 구분','qut-fee-2027')
   dr['note']='2027 본과는 2월 시작입니다. 수학·화학은 assumed knowledge이며 미이수 학생은 bridging study 안내를 확인합니다.'
  elif uid=='canberra':
-  dr['english']=fact('IELTS 7.0 / 각 7.0','canberra-2027')
-  dr['qualification']=fact('수학 + Biology/Human Movement, Chemistry/Physics는 assumed knowledge · 필수 prerequisite와 구분','canberra-2027')
-  dr['note']='2027 Semester 1은 2월 15일 시작입니다. Honours는 성적·과정요건을 충족한 학생에게 제공되는 option으로 구분합니다.'
+  dr['duration']=fact('4년','canberra-course-guide-2027')
+  dr['english']=fact('IELTS 7.0 / 각 7.0 · PTE 65 · TOEFL 94 (R25/L25/S23/W27)','canberra-english-current')
+  dr['qualification']=fact('Selection Rank 75 + 국제학력 UC rank 환산 · 수학 + Biology/Human Movement + Chemistry/Physics assumed knowledge','canberra-course-guide-2027')
+  dr['note']='2027 Semester 1은 2월 15일 시작입니다. 국제학생은 해외학력을 UC Selection Rank로 환산해 평가합니다.'
  elif uid=='unisq':
+  dr['duration']=fact('4년','unisq')
   dr['english']=fact('IELTS 7.0 · Speaking/Reading/Listening 7.0 · Writing 6.5','unisq-pharmacy-current')
   dr['qualification']=fact('Mathematics + Biology/Chemistry/Physics 중 1과목 Year 12 C 수준 assumed knowledge','unisq-pharmacy-current')
   dr['note']='2027 국제학생은 Trimester 1 한 번만 입학하며 수업 시작은 2월 15일입니다. 3년 accelerated pathway는 2028부터입니다.'
+ elif uid=='unsw':
+  dr['intake']=fact('Term 1 · 2027','unsw-2027-course')
+  dr['intake_months']=fact([2],'unsw-2027-course')
+  dr['english']=fact('IELTS 6.5 / 각 6.0','unsw-english-current')
+  dr['qualification']=fact('2027 Guide: International ATAR 87 / IB 33 · current A-level 15 · assumed knowledge Chemistry + Mathematics Advanced','unsw-2027-guide')
+  dr['note']='2027부터 Doctor of Pharmacy 명칭으로 전환됩니다. 입학요건은 학교가 기존 기준과 동일하다고 안내하지만 새 명칭의 APC/Board 반영은 별도 확인합니다.'
 # A blocked source is not a completed verification.
 sources['board']['verified_date']=None
 sources['board']['retrieval_status']='blocked_403'
