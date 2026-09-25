@@ -1,11 +1,11 @@
 # 공식자료 및 검색 설계
 
-자료 확인일: 2026-09-24. 출처 연도와 목표 입학연도는 다를 수 있습니다. 아래 URL은 자료 검증용이며 원서 제출 CTA로 사용하지 않습니다.
+자료 확인일: 2026-09-25. 출처 연도와 목표 입학연도는 다를 수 있습니다. 아래 URL은 사실 검증용이며 원서 제출 CTA로 사용하지 않습니다. 공개 사이트에서는 대학·과정 메인보다 필요한 세부 공식자료를 작은 `자료 출처` 형태로 연결합니다.
 
 | ID | 자료 | 출처 연도 | 원문 상태 |
 |---|---|---|---|
 | apc | [APC 호주 약학 학위 인증 목록 · 2026-07-08 기준](https://www.pharmacycouncil.org.au/education-provider/accreditation/pharmacy-degree-programs-australia/accredited-pharmacy-degree-programs/) | 2026 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
-| board | [Pharmacy Board · Internships](https://www.pharmacyboard.gov.au/Registration/Internships.aspx) | 페이지별 확인 | 접근 차단·재확인 필요 |
+| board | [Pharmacy Board · Internships](https://www.pharmacyboard.gov.au/Registration/Internships.aspx) | 페이지별 확인 | 공식 regulator · 접근 제한 가능 |
 | apc-exam | [APC · Intern written examination](https://www.pharmacycouncil.org.au/pharmacist/skills-assessment/intern-written-exam/) | 페이지별 확인 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
 | korea-law | [약사법 제3조 · 2026-09-11 시행](https://law.go.kr/lsLawLinkInfo.do?chrClsCd=010202&lsJoLnkSeq=1000328184) | 2026 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
 | kuksiwon | [국시원 · 외국대학 인정기준](https://www.kuksiwon.or.kr/infoOpen/list.do?seq=82) | 페이지별 확인 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
@@ -33,19 +33,18 @@
 | sydney-guide | [Sydney international guide](https://www.sydney.edu.au/dam/corporate/documents/study/guides/usyd-international-guide.pdf) | 2027 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
 | griffith-college | [Griffith · College articulation 107343](https://credit-precedent.sds.na.ce.griffith.edu.au/credit_detail.php?pk1=107343) | 2027 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
 | curtin-college | [Curtin College · Pharmacy Diploma](https://www.curtincollege.edu.au/courses/diplomas/health-sciences/pharmacy/) | 페이지별 확인 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
-| curtin-old | [Curtin College · 旧 course information](https://sites.google.com/a/study.curtincollege.edu.au/courseinformation/Courses/testdhsi/pharmacy) | 페이지별 확인 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
 | uq-foundation | [UQ College · Foundation progression](https://uqcollege.uq.edu.au/study/pathways-uq/foundation-program) | 페이지별 확인 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
 | uq-accelerated | [UQ College · Accelerated Foundation](https://uqcollege.uq.edu.au/study/pathways-uq/foundation-program/accelerated-foundation-program) | 2027 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
 | uq-calendar | [UQ College · Academic calendar](https://uqcollege.uq.edu.au/current-students/academic-calendar) | 2027 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
 | monash-foundation | [Monash Pathway Programs 2027 · 과정 코드 재확인 필요](https://www.monashcollege.edu.au/__data/assets/pdf_file/0005/4349102/2027-Monash-Pathway-Programs.pdf) | 2027 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
-| newcastle-foundation | [University of Newcastle International College · Foundation](https://internationalcollege.newcastle.edu.au/foundation-studies) | 페이지별 확인 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
+| newcastle-foundation | [University of Newcastle College of International Education · Foundation Studies](https://internationalcollege.newcastle.edu.au/foundation-studies) | 페이지별 확인 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
 | rmit-pathway | [RMIT 2026 degree and diploma guide](https://www.rmit.edu.au/content/dam/rmit/au/en/docs/study/career-advisers/brochures/2026-degree-diploma-guide-rmit-university.pdf) | 2026 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
 | griffith-scholarship | [Griffith International Academic Merit Scholarship](https://www.griffith.edu.au/international/scholarships-finance/scholarships/international-academic-merit-scholarship) | 2027 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
 | monash-scholarship | [Monash Pharmacy and Pharmaceutical Science International Merit Scholarship](https://www.monash.edu/study/fees-scholarships/scholarships/find-a-scholarship/pharmacy-international-merit-scholarship-5745) | 페이지별 확인 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
 | sydney-scholarship | [Sydney International Student Award 2027](https://www.sydney.edu.au/study/fees-and-loans/scholarships/sydney-international-student-award.html) | 2027 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
 | unsw-scholarship | [UNSW International Student Award · 국가 목록](https://www.scholarships.unsw.edu.au/sites/default/files/2026-04/International%20Student%20Award_List%20of%20Eligible%20Countries.pdf) | 2026 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
 | newcastle-scholarship | [Newcastle International Excellence Scholarship 2027](https://www.newcastle.edu.au/scholarships/UNI_053) | 2027 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
-| jcu-scholarship | [JCU · International scholarships](https://www.jcu.edu.au/international-students/scholarships-and-financial-aid) | 페이지별 확인 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
+| jcu-scholarship | [JCU · International Excellence Scholarship](https://www.jcu.edu.au/scholarships/search/international-excellence-scholarship) | 페이지별 확인 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
 | utas-housing | [UTas · Hobart accommodation 2027](https://www.utas.edu.au/uni-life/accommodation/hobart) | 2027 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
 | utas-christ | [UTas · Christ College](https://www.utas.edu.au/uni-life/accommodation/hobart/christ-college) | 2027 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
 | latrobe-housing | [La Trobe · Bendigo accommodation rates 2026](https://www.latrobe.edu.au/__data/assets/pdf_file/0008/1388663/Bendigo-Accommodation-Rates-2026.pdf) | 2026 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
@@ -55,23 +54,91 @@
 | unisq-course | [UniSQ · International Bachelor of Pharmacy (Honours)](https://www.unisq.edu.au/study/degrees-and-courses/bachelor-of-pharmacy-honours?studentType=international) | 페이지별 확인 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
 | griffith-2026 | [Griffith 2026 International Guide · Pharmacy H1](https://www.griffith.edu.au/__data/assets/pdf_file/0035/2193587/Griffith-University-2026-International-Study-Guide-Digital.pdf) | 2026 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
 | griffith-college-entry | [Griffith College · 국제학생 입학조건](https://www.griffithcollege.edu.au/international-students/entry-requirements/) | 페이지별 확인 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
+| uwa | [UWA Pharmacy · 공식 과정/입학 안내](https://www.uwa.edu.au/study/courses/bachelor-of-human-sciences-pharmaceutical-health-and-doctor-of-pharmacy) | 페이지별 확인 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
+| homeaffairs-485 | [Australian Home Affairs · Temporary Graduate visa (subclass 485) Post-Higher Education Work](https://immi.homeaffairs.gov.au/Visa-subsite/Pages/work/485-post-study-work.aspx) | 2026 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
+| homeaffairs-second485 | [Australian Home Affairs · Second Post-Higher Education Work stream](https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/temporary-graduate-485/second-post-higher-education-work) | 2026 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
+| homeaffairs-regional | [Australian Home Affairs · Designated regional area postcodes](https://immi.homeaffairs.gov.au/supporting/Pages/Work/187-regional-postcodes.aspx) | 2026 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
+| jcu-2027-campus | [JCU · 2027 course changes · Pharmacy campuses](https://www.jcu.edu.au/future-students/schools/2027-course-changes) | 2027 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
+| utas-2027-campus | [University of Tasmania · Bachelor of Pharmacy with Honours 2027](https://www.utas.edu.au/courses/health/courses/54d-bachelor-of-pharmacy-with-honours) | 2027 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
+| uwa-dpharm | [UWA · Doctor of Pharmacy graduate entry](https://www.uwa.edu.au/study/courses/doctor-of-pharmacy) | 2027 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
+| migration-nsw-skills | [NSW Government · NSW Skills Lists](https://www.nsw.gov.au/visas-and-migration/skilled-visas/nsw-skills-lists) | 2026 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
+| migration-qld-list | [Migration Queensland · Queensland onshore skilled occupation list](https://migration.qld.gov.au/occupation-lists/queensland-onshore-skilled-occupation-list) | 2026 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
+| migration-qld-status | [Migration Queensland · Skilled migration ROI status](https://migration.qld.gov.au/visa-options/skilled-visas/registering-your-interest-in-queenslands-migration-program) | 2026 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
+| migration-vic-status | [Victoria · Skilled visa nomination program status](https://liveinmelbourne.vic.gov.au/migrate/skilled-migration-visas/2025-26-skilled-migration-visa-nomination-program) | 2026 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
+| migration-tas-program | [Migration Tasmania · 2026-27 Program Opening](https://www.migration.tas.gov.au/news/2024-25_program_open_to_rois) | 2026 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
+| migration-tas-health | [Migration Tasmania · Health, Allied Health and Teaching Occupations](https://www.migration.tas.gov.au/skilled_migration/health%2C-allied-health-and-teaching-occupations) | 2026 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
+| migration-act-list | [ACT Government · Nominated Migration Program Occupation List](https://www.act.gov.au/migration/skilled-migrants/act-nominated-migration-program-occupation-list) | 2026 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
+| migration-act-program | [ACT Government · ACT nomination pathways](https://www.act.gov.au/migration/skilled-migrants/act-government-nomination/act-nomination-pathways) | 2026 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
+| migration-sa-list | [South Australia · Skilled Occupation List](https://migration.sa.gov.au/before-applying/work-in-sa/occupation-lists/occupations-list) | 2026 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
+| migration-sa-status | [South Australia · 2026-27 program status](https://migration.sa.gov.au/news/registrations-of-interest-closing-2-june-2026) | 2026 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
+| migration-wa-criteria | [WA Government · 2025-26 State Nominated Migration Program criteria](https://migration.wa.gov.au/sites/default/files/2025-09/2025-26%20WA%20SNMP%20Criteria%20-%20July%202025.pdf) | 2025 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
+| migration-wa-pharmacist | [WA Government · December 2025 SNMP invited EOIs by occupation](https://migration.wa.gov.au/sites/default/files/2025-12/SNMP%20Invite%20Round%20-%20December%202025.pdf) | 2025 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
+| jcu-housing-2026 | [JCU · Casual Stay Rates 2026](https://www.jcu.edu.au/accommodation/casual-stays/casual-rates) | 2026 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
+| uq-housing-current | [UQ · Cost of living and UQ RES](https://study.uq.edu.au/university-life/living-in-queensland/cost-living) | 페이지별 확인 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
+| adelaide-mattanya-2027 | [Adelaide University · Mattanya Student Residences 2027](https://adelaide.edu.au/life-at-adelaide/accommodation/student-accommodation/university-managed-student-accommodation/mattanya-student-residences/) | 2027 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
+| adelaide-village-2027 | [Adelaide University · Adelaide University Village 2027](https://adelaide.edu.au/life-at-adelaide/accommodation/student-accommodation/university-managed-student-accommodation/adelaide-university-village/) | 2027 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
+| griffith-village-2027 | [Griffith University Village · 2027 room rates](https://campuslivingvillages.com/australia/gold-coast/griffith-university-village) | 2027 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
+| griffith-accommodation | [Griffith University · Gold Coast accommodation](https://www.griffith.edu.au/about-griffith/campuses-facilities/accommodation) | 페이지별 확인 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
+| qut-living-current | [QUT · Living in Brisbane cost guide](https://www.qut.edu.au/study/international/living-in-brisbane) | 페이지별 확인 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
+| rmit-bundoora-2027 | [RMIT · UniLodge Bundoora Walert House 2027 rate reference](https://www.rmit.edu.au/scholarships/coursework/unilodge) | 2027 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
+| newcastle-housing-2027 | [University of Newcastle · 2027 International Prospectus accommodation](https://www.newcastle.edu.au/__data/assets/pdf_file/0020/1102565/2025-1079-International-Prospectus-2027-ROW_V27.pdf) | 2027 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
+| canberra-housing-2027 | [University of Canberra · 2027 accommodation guarantee and rates](https://www.canberra.edu.au/future-students/study-at-uc/international/international-student-experience-at-uc/2026/september/accomodation-guarantee) | 2027 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
+| unisq-housing-current | [UniSQ · International fees and accommodation guide](https://www.unisq.edu.au/international/fees-scholarships) | 페이지별 확인 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
+| monash-parkville-rent | [Monash · Parkville private rental guide](https://www.monash.edu/accommodation/off-campus/private-rental) | 페이지별 확인 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
+| sydney-regiment-2026 | [University of Sydney · Regiment 2026 rates](https://www.sydney.edu.au/study/accommodation/camperdown-darlington/university-residences/regiment.html) | 2026 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
+| sydney-qmb-2026 | [University of Sydney · Queen Mary Building 2026 rates](https://www.sydney.edu.au/study/accommodation/camperdown-darlington/university-residences/queen-mary-building.html) | 2026 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
+| unsw-housing-2027 | [UNSW · 2027 accommodation status](https://www.unsw.edu.au/accommodation/apartments) | 2027 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
+| uwa-trinity-2027 | [Trinity Residential College at UWA · 2027 fees](https://trc.uwa.edu.au/our-pricing/fees/) | 2027 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
+| curtin-housing-current | [Curtin · Perth on-campus accommodation](https://www.curtin.edu.au/study/campus-life/accommodation/) | 페이지별 확인 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
+| curtin-contract-2026 | [Curtin · 2026 on-campus contract dates](https://www.curtin.edu.au/study/help-support/app/answers/detail/a-id/2377/what-are-the-contract-dates-for-on-campus-accommodation/) | 2026 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
+| qut-scholarship-2027 | [QUT 2027 International Guide · International Merit Scholarship](https://cms.qut.edu.au/__data/assets/pdf_file/0003/1566471/27516-Year-12-International-Guide-2027_DIGITAL_F.pdf) | 2027 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
+| uq-scholarship-2027 | [UQ International Excellence Scholarship 2027](https://scholarships.uq.edu.au/scholarship/uq-international-excellence-scholarship) | 2027 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
+| curtin-scholarship-2027 | [Curtin Global Merit Scholarship · 2027 commencement](https://scholarships.curtin.edu.au/Scholarship/?id=7986) | 2027 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
+| utas-scholarship-2027 | [UTas Tasmanian International Merit Scholarship · 2027 terms](https://www.utas.edu.au/study/scholarships-fees-and-costs/international-scholarships/tasmanian-international-merit-scholarship) | 2027 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
+| unisq-scholarship-2027 | [UniSQ International Student Support Scholarship 2027](https://www.unisq.edu.au/scholarships/unisqi-international-student-support-scholarship-2027) | 2027 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
+| adelaide-scholarship | [Adelaide Merit Scholarship 15%](https://adelaide.edu.au/study/scholarships/int/adelaide-merit-scholarship-15/) | 페이지별 확인 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
+| latrobe-scholarship-2027 | [La Trobe High Achiever Scholarship · 2026/2027](https://www.latrobe.edu.au/study/scholarships/other/la-trobe-high-achiever-scholarship) | 2027 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
+| latrobe-scholarship-courses | [La Trobe · Courses offering international scholarships](https://www.latrobe.edu.au/study/scholarships/advice/courses-offering-international-scholarships) | 2027 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
+| canberra-guide-2027 | [University of Canberra International Course Guide 2027 · Scholarships](https://www.canberra.edu.au/content/dam/uc/documents/agent-marketing-toolkit/international-course-guide/international-course-guide.pdf) | 2027 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
+| uwa-scholarship-current | [UWA Global Excellence Scholarship](https://www.uwa.edu.au/study/scholarships-and-fees/scholarships/international-scholarships/global-excellence-scholarship) | 2027 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
+| newcastle-scholarship-2027-terms | [Newcastle International Excellence Scholarship 2027 · Terms & Conditions · excluded programs](https://www.newcastle.edu.au/__data/assets/pdf_file/0014/1136300/UNI_053-International-Excellence-Scholarship-2027-T-and-Cs-07072026.pdf) | 2027 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
+| uwa-foundation | [UWA College · UWA Foundation Program](https://www.uwa.edu.au/uwa-college/Study/UWA-Foundation-Program) | 페이지별 확인 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
+| qut-college-foundation | [QUT College · Foundation programs](https://www.qut.edu.au/study/qut-college/international/english-language-programs) | 페이지별 확인 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
+| qut-fee-2027 | [QUT · Bachelor of Pharmacy (Honours) 2027 fee](https://www.qut.edu.au/courses/bachelor-of-pharmacy-honours) | 2027 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
+| newcastle-fee-2027 | [University of Newcastle · 2027 International Student Degree Guide · Pharmacy](https://www.newcastle.edu.au/__data/assets/pdf_file/0020/1102565/2025-1079-International-Prospectus-2027-ROW_V27.pdf) | 2027 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
+| monash-fee-2027 | [Monash · Pharmacy P6007 2027 fee](https://www.monash.edu/study/courses/find-a-course/pharmacy-p6007) | 2027 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
+| jcu-fee-2026 | [JCU · Bachelor of Pharmacy (Honours) 2026 fee](https://www.jcu.edu.au/courses/bachelor-of-pharmacy-honours) | 2026 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
+| unsw-fee-2026 | [UNSW · Pharmaceutical Medicine / Pharmacy 2026 fee](https://www.unsw.edu.au/study/undergraduate/bachelor-of-pharmaceutical-medicine-master-of-pharmacy) | 2026 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
+| uwa-fee-2026 | [UWA · 2026 international undergraduate fees CM039](https://www.fees.uwa.edu.au/Browse/BrowseCourses?feeType=INTUG&feeYear=2026) | 2026 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
+| adelaide-fee-current | [Adelaide University · Bachelor of Pharmacy (Honours) international fee](https://adelaide.edu.au/study/degrees/bachelor-of-pharmacy-honours/) | 페이지별 확인 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
+| rmit-2027-apply | [RMIT Bachelor of Pharmacy (Honours) · 2027 intake](https://www.rmit.edu.au/study-with-us/levels-of-study/undergraduate-study/honours-degrees/bachelor-of-pharmacy-honours-bh102/apply-now) | 2027 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
+| unsw-2027-course | [UNSW Pharmaceutical Medicine / Doctor of Pharmacy · 2027](https://www.unsw.edu.au/study/undergraduate/bachelor-of-pharmaceutical-medicine-master-of-pharmacy) | 2027 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
+| unsw-english-current | [UNSW · English language requirements](https://www.unsw.edu.au/study/how-to-apply/english-language-requirements) | 페이지별 확인 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
+| latrobe-2027-course | [La Trobe Bachelor of Pharmacy (Honours) · 2027 start](https://www.latrobe.edu.au/courses/bachelor-of-pharmacy-honours) | 2027 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
+| curtin-pharmacy-current-guide | [Curtin · Pharmacy English requirement guide](https://publications.curtin.edu.au/chinese-student-guide/page/28-29) | 페이지별 확인 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
+| newcastle-2027-course | [University of Newcastle · Bachelor of Pharmacy (Honours) current 2027 entry](https://www.newcastle.edu.au/degrees/bachelor-of-pharmacy-honours) | 2027 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
+| newcastle-2026-ug | [University of Newcastle · 2026 Undergraduate Degrees guide](https://www.newcastle.edu.au/__data/assets/pdf_file/0012/978438/2026-1088_UG-Prospectus_v3.6_WEB.pdf) | 2026 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
+| monash-pps-2026 | [Monash Pharmacy and Pharmaceutical Sciences · International UG Course Guide 2026](https://www.monash.edu/__data/assets/pdf_file/0004/4091809/Monash-University-PPS-International-UG-Course-Guide-2026.pdf) | 2026 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
+| latrobe-health-guide | [La Trobe · International Health Discipline Handbook · Pharmacy](https://www.latrobe.edu.au/international/documents/international-handbooks/LTU-Health-Discipline-Handbook.pdf) | 2026 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
+| griffith-2026-guide | [Griffith University · 2026 International Student Guide · Pharmacy](https://www.griffith.edu.au/__data/assets/pdf_file/0035/2193587/Griffith-University-2026-International-Study-Guide-Digital.pdf) | 2026 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
+| jcu-intl-2025 | [JCU 2025 International Guide · Pharmacy entry scores](https://www.jcu.edu.au/__data/assets/pdf_file/0018/2205414/2025-International-Guide.pdf) | 2025 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
+| newcastle-prospectus-2027 | [University of Newcastle · 2027 International Prospectus](https://www.newcastle.edu.au/__data/assets/pdf_file/0020/1102565/2025-1079-International-Prospectus-2027-ROW.pdf) | 2027 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
+| adelaide-pharmacy-current | [Adelaide University · Bachelor of Pharmacy (Honours) international entry requirements](https://adelaide.edu.au/study/degrees/bachelor-of-pharmacy-honours/) | 페이지별 확인 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
+| unisq-pharmacy-current | [UniSQ · Bachelor of Pharmacy (Honours) current international entry requirements](https://www.unisq.edu.au/study/degrees-and-courses/bachelor-of-pharmacy-honours?studentType=international) | 2027 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
+| rmit-korea-equiv | [RMIT · South Korea academic entry equivalency](https://www.rmit.edu.au/study-with-us/international-students/apply-to-rmit-international-students/entry-requirements/country-equivalency/south-korea) | 2027 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
+| rmit-ib-equiv | [RMIT · International Baccalaureate academic equivalency](https://www.rmit.edu.au/study-with-us/international-students/apply-to-rmit-international-students/entry-requirements/country-equivalency/international-baccalaureate) | 2027 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
+| rmit-uk-equiv | [RMIT · United Kingdom academic equivalency](https://www.rmit.edu.au/study-with-us/international-students/apply-to-rmit-international-students/entry-requirements/country-equivalency/united-kingdom) | 2027 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
+| rmit-usa-equiv | [RMIT · USA academic equivalency](https://www.rmit.edu.au/study-with-us/international-students/apply-to-rmit-international-students/entry-requirements/country-equivalency/usa) | 2027 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
+| rmit-foundation-equiv | [RMIT · Foundation Studies equivalency](https://www.rmit.edu.au/study-with-us/international-students/apply-to-rmit-international-students/entry-requirements/country-equivalency/foundation-equivalencies) | 2027 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
+| latrobe-health-innovation-2027 | [La Trobe Health Innovation Scholarship · 30% · 2026/2027 intakes](https://www.latrobe.edu.au/international/applying/scholarships) | 2027 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
+| curtin-college-entry | [Curtin College · International academic entry requirements · Pharmacy](https://www.curtincollege.edu.au/how-apply/international/journey/academic-entry-requirements/) | 페이지별 확인 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
+| curtin-college-english | [Curtin College · English requirements · Pharmacy Stage 2](https://www.curtincollege.edu.au/how-apply/international/journey/english-requirements/) | 페이지별 확인 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
+| newcastle-foundation-entry | [Newcastle CIE · Foundation Studies entry requirements](https://internationalcollege.newcastle.edu.au/entry-requirements) | 페이지별 확인 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
+| newcastle-foundation-fee-2027 | [Newcastle CIE · 2027 Foundation Studies fees](https://internationalcollege.newcastle.edu.au/fees) | 2027 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
 
-## Google Korea / Naver 검색
+## 운영 메모
 
-대상: 한국 고등학생·국제학교 학생·대졸자·학부모, 한국어. 이번 작업에서 Google과 Naver의 한국어 검색 결과 화면을 각각 확인했습니다. 검색량·정확한 순위·경쟁도 수치는 수집하지 않았으며 추정치를 게시하지 않습니다. 결과 화면은 개인화·시점에 따라 바뀌므로 검색량 증거로 사용하지 않습니다.
-
-| 검색 의도 / 검토 키워드 | V1 URL | 구성 결정 |
-|---|---|---|
-| 호주 약대 / 호주 약대 비교 | /, /compare/ | 홈은 안내, 비교는 조건 탐색 |
-| 호주 약대 입학조건 / 수능 / IB / SAT | /admission-requirements/ | 2027 자료가 적은 수능 단독 thin page 보류 |
-| 호주 3년 약대 | /3-year-pharmacy/ | 압축 학위와 졸업 후 인턴십 구분 |
-| 호주 약대 파운데이션 | /foundation/ | 입학과 본과 진급 조건 분리 |
-| 호주 약대 학비 / 장학금 | /tuition-scholarships/ | 수강량·장학 자격·숙소 계약 분리 |
-| 호주 약사 / 한국 약사면허 | /pharmacist-registration/, /korea-pharmacist/ | 서로 다른 국가의 등록 절차 |
-| 대학명 + 약대 | /universities/{university}-pharmacy/ | 대학별 과정과 경로 통합 |
-
-/no-chemistry/, /july-intake/, /csat/, /australia-pharmacy/는 V1에서 별도 유사 페이지를 만들지 않았습니다. 현재는 필터·기존 가이드로 안내합니다. Production 후 Google Search Console과 Naver Search Advisor의 실제 쿼리로 확장 여부를 결정해야 합니다. Preview는 검색 등록 대상이 아닙니다.
-
-## 우선 확인 대상
-
-Newcastle 2027 ROW prospectus PDF는 검색에서 발견되었으나 원문 요청이 실패했습니다. CSAT 320 / SAT 1130 / IB 28 등의 사용자 제시값을 이 작업에서 확정값으로 채우지 않았습니다. Adelaide는 국제/국내 모드가 혼재하는 페이지 표시를 추가 대조해야 합니다. Pharmacy Board 원문은 403 접근 차단으로 최신 세부 등록 요건·시간 수 검증을 완료하지 못했습니다.
+- `data/catalog.json`의 각 fact가 실제 적용 상태(`confirmed_2027`, `latest_published`, `pending_2027`, `source_conflict`)와 출처를 보유합니다.
+- 2027 값이 확인되지 않은 경우 최신 공개연도를 2027 확정값으로 바꾸지 않습니다.
+- 경쟁사 한국 경로는 source registry와 공개 페이지에서 제외합니다.
+- Apply / How to apply / Application Portal은 공개 상담 퍼널의 기본 외부 링크로 사용하지 않습니다.
