@@ -4267,39 +4267,39 @@
         "note": ""
       },
       "progression": {
-        "value": "Stage 2 CWA 70% + PHAR1002(12월) 추가 이수",
+        "value": "Stage 2 CWA 70% + PHAR1002 Pharmacy Practice 1(12월) 추가 이수",
         "academic_year": 2027,
         "source_year": null,
         "source_id": "curtin-college",
         "source_url": "https://www.curtincollege.edu.au/courses/diplomas/health-sciences/pharmacy/",
         "source_type": "official_pathway",
-        "verified_date": "2026-09-24",
+        "verified_date": "2026-09-25",
         "status": "latest_published",
         "note": ""
       },
       "english": {
-        "value": null,
+        "value": "Stage 2 Pharmacy: IELTS 6.5 / 각 6.0 · PTE 58 / 각 50(2026년 8월 이전 시험 기준)",
         "academic_year": 2027,
         "source_year": null,
-        "source_id": "curtin-college",
-        "source_url": "https://www.curtincollege.edu.au/courses/diplomas/health-sciences/pharmacy/",
+        "source_id": "curtin-college-english",
+        "source_url": "https://www.curtincollege.edu.au/how-apply/international/journey/english-requirements/",
         "source_type": "official_pathway",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
+        "verified_date": "2026-09-25",
+        "status": "latest_published",
         "note": ""
       },
       "qualification": {
-        "value": null,
+        "value": "Stage 2 한국: 고3 Rank 6 또는 고교 졸업 + CSAT 280/600 · Mathematics + Chemistry prerequisite",
         "academic_year": 2027,
         "source_year": null,
-        "source_id": "curtin-college",
-        "source_url": "https://www.curtincollege.edu.au/courses/diplomas/health-sciences/pharmacy/",
+        "source_id": "curtin-college-entry",
+        "source_url": "https://www.curtincollege.edu.au/how-apply/international/journey/academic-entry-requirements/",
         "source_type": "official_pathway",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
+        "verified_date": "2026-09-25",
+        "status": "latest_published",
         "note": ""
       },
-      "note": "Stage 2 CWA 70% 기준을 적용합니다.",
+      "note": "Diploma 완료 시 175 credits를 인정받고, 12월 PHAR1002를 추가 이수한 뒤 약대 2학년으로 진학합니다.",
       "intake_months": {
         "value": [
           2
@@ -4309,7 +4309,7 @@
         "source_id": "curtin-college",
         "source_url": "https://www.curtincollege.edu.au/courses/diplomas/health-sciences/pharmacy/",
         "source_type": "official_pathway",
-        "verified_date": "2026-09-24",
+        "verified_date": "2026-09-25",
         "status": "latest_published",
         "note": ""
       }
@@ -4638,7 +4638,7 @@
       "id": "newcastle-foundation",
       "program_id": "newcastle-bpharm-hons",
       "type": "foundation",
-      "title": "Newcastle International College · Foundation Studies",
+      "title": "Newcastle CIE · Foundation Studies",
       "availability": {
         "value": true,
         "academic_year": 2027,
@@ -4673,71 +4673,84 @@
         "note": ""
       },
       "duration": {
-        "value": null,
+        "value": "11개월 · Pharmacy 목적 2월 시작",
         "academic_year": 2027,
         "source_year": null,
         "source_id": "newcastle-foundation",
         "source_url": "https://internationalcollege.newcastle.edu.au/foundation-studies",
         "source_type": "official_pathway",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
+        "verified_date": "2026-09-25",
+        "status": "latest_published",
         "note": ""
       },
       "intake": {
-        "value": null,
+        "value": "2월 · Pharmacy는 본과 중간입학 없음",
         "academic_year": 2027,
         "source_year": null,
         "source_id": "newcastle-foundation",
         "source_url": "https://internationalcollege.newcastle.edu.au/foundation-studies",
         "source_type": "official_pathway",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
+        "verified_date": "2026-09-25",
+        "status": "latest_published",
         "note": ""
       },
       "progression": {
-        "value": null,
+        "value": "전체 평균 65%+ · Academic English A&B 평균 75%+",
         "academic_year": 2027,
         "source_year": null,
         "source_id": "newcastle-foundation",
         "source_url": "https://internationalcollege.newcastle.edu.au/foundation-studies",
         "source_type": "official_pathway",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
+        "verified_date": "2026-09-25",
+        "status": "latest_published",
         "note": ""
       },
       "english": {
-        "value": null,
+        "value": "Foundation 입학: IELTS 5.5 / 각 5.0 · 본과 진급: Academic English A&B 평균 75%+",
         "academic_year": 2027,
         "source_year": null,
-        "source_id": "newcastle-foundation",
-        "source_url": "https://internationalcollege.newcastle.edu.au/foundation-studies",
+        "source_id": "newcastle-foundation-entry",
+        "source_url": "https://internationalcollege.newcastle.edu.au/entry-requirements",
         "source_type": "official_pathway",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
+        "verified_date": "2026-09-25",
+        "status": "latest_published",
         "note": ""
       },
       "qualification": {
-        "value": null,
+        "value": "한국: 고2 수료(pass grades)부터 Foundation Studies 입학 가능",
         "academic_year": 2027,
         "source_year": null,
-        "source_id": "newcastle-foundation",
-        "source_url": "https://internationalcollege.newcastle.edu.au/foundation-studies",
+        "source_id": "newcastle-foundation-entry",
+        "source_url": "https://internationalcollege.newcastle.edu.au/entry-requirements",
         "source_type": "official_pathway",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
+        "verified_date": "2026-09-25",
+        "status": "latest_published",
         "note": ""
       },
-      "note": "2027 진급점수 발표 대기입니다.",
+      "note": "Foundation을 마치면 Bachelor of Pharmacy (Honours) 1학년으로 진학합니다. 2027 Foundation Studies 학비는 A$31,400입니다.",
       "intake_months": {
-        "value": null,
+        "value": [
+          2
+        ],
         "academic_year": 2027,
         "source_year": null,
         "source_id": "newcastle-foundation",
         "source_url": "https://internationalcollege.newcastle.edu.au/foundation-studies",
         "source_type": "official_pathway",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
+        "verified_date": "2026-09-25",
+        "status": "latest_published",
         "note": ""
+      },
+      "pathway_fee": {
+        "value": 31400,
+        "academic_year": 2027,
+        "source_year": 2027,
+        "source_id": "newcastle-foundation-fee-2027",
+        "source_url": "https://internationalcollege.newcastle.edu.au/fees",
+        "source_type": "official_pathway",
+        "verified_date": "2026-09-25",
+        "status": "confirmed_2027",
+        "note": "2027 Foundation Studies program fee · 10 courses"
       }
     },
     {
@@ -16354,14 +16367,6 @@
       "verified_date": "2026-09-24"
     },
     {
-      "id": "curtin-old",
-      "title": "Curtin College · 旧 course information",
-      "url": "https://sites.google.com/a/study.curtincollege.edu.au/courseinformation/Courses/testdhsi/pharmacy",
-      "source_year": null,
-      "source_type": "official_pathway",
-      "verified_date": "2026-09-24"
-    },
-    {
       "id": "uq-foundation",
       "title": "UQ College · Foundation progression",
       "url": "https://uqcollege.uq.edu.au/study/pathways-uq/foundation-program",
@@ -16395,11 +16400,11 @@
     },
     {
       "id": "newcastle-foundation",
-      "title": "University of Newcastle International College · Foundation",
+      "title": "University of Newcastle College of International Education · Foundation Studies",
       "url": "https://internationalcollege.newcastle.edu.au/foundation-studies",
       "source_year": null,
       "source_type": "official_pathway",
-      "verified_date": "2026-09-24"
+      "verified_date": "2026-09-25"
     },
     {
       "id": "rmit-pathway",
@@ -17144,21 +17149,41 @@
       "source_year": 2027,
       "source_type": "official_scholarship",
       "verified_date": "2026-09-25"
+    },
+    {
+      "id": "curtin-college-entry",
+      "title": "Curtin College · International academic entry requirements · Pharmacy",
+      "url": "https://www.curtincollege.edu.au/how-apply/international/journey/academic-entry-requirements/",
+      "source_year": null,
+      "source_type": "official_pathway",
+      "verified_date": "2026-09-25"
+    },
+    {
+      "id": "curtin-college-english",
+      "title": "Curtin College · English requirements · Pharmacy Stage 2",
+      "url": "https://www.curtincollege.edu.au/how-apply/international/journey/english-requirements/",
+      "source_year": null,
+      "source_type": "official_pathway",
+      "verified_date": "2026-09-25"
+    },
+    {
+      "id": "newcastle-foundation-entry",
+      "title": "Newcastle CIE · Foundation Studies entry requirements",
+      "url": "https://internationalcollege.newcastle.edu.au/entry-requirements",
+      "source_year": null,
+      "source_type": "official_pathway",
+      "verified_date": "2026-09-25"
+    },
+    {
+      "id": "newcastle-foundation-fee-2027",
+      "title": "Newcastle CIE · 2027 Foundation Studies fees",
+      "url": "https://internationalcollege.newcastle.edu.au/fees",
+      "source_year": 2027,
+      "source_type": "official_pathway",
+      "verified_date": "2026-09-25"
     }
   ],
   "conflicts": [
-    {
-      "id": "curtin-progression",
-      "entity_id": "curtin-college",
-      "field": "progression",
-      "source_ids": [
-        "curtin-college",
-        "curtin-old"
-      ],
-      "status": "source_conflict",
-      "summary": "Stage 2 CWA: 현재 College 70% / 구 과정 안내 65%",
-      "decision": "현재 메인 College 70% 우선. 입학팀 확인 전 충돌 기록 유지."
-    },
     {
       "id": "newcastle-english",
       "entity_id": "newcastle-bpharm-hons",
