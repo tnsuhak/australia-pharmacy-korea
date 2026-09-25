@@ -239,6 +239,7 @@ def routecards(rs):
     for r in rs:
         fields=[('진학 가능',fv(r['availability'])),('기간 / 시작월',fv(r['duration'])+'<br>'+fv(r['intake'])),('약대 진급조건',fv(r['progression']))]
         if r['type']!='direct':fields.extend([('입학 학력',fv(r['qualification'])),('영어',fv(r['english']))])
+        if r.get('pathway_fee'):fields.append(('준비과정 학비',fv(r['pathway_fee'],money)))
         if isinstance(r['credit']['value'],(int,float)) and r['credit']['value']>0:fields.insert(1,('약대 인정학점',fv(r['credit'])+(' CP' if r['program_id'].startswith('griffith') else ' credits')))
         html+=f'<article class="route-detail"><span class="pill-label">{ROUTE[r["type"]]}</span><h3>{E(r["title"])}</h3><dl>'+''.join(f'<dt>{k}</dt><dd>{v}</dd>' for k,v in fields)+f'</dl><p>{E(r["note"])}</p></article>'
     return '<div class="route-cards">'+html+'</div>'
