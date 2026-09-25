@@ -45,7 +45,12 @@ Netlify: build `python3 scripts/build.py`, publish `dist`. PR Deploy Preview에�
 
 ## 정보구조 원칙
 
-- 메인은 초급자 설명 → 3/4/5년 과정 구조 → Foundation/Diploma/Direct → Finder → 주요 대학 → 약사등록 순서입니다.
-- `입학방법` 허브는 Foundation, Diploma/IYO, Direct를 대표적인 고교생 3개 경로로 안내합니다. Graduate Entry는 대학별 특수경로로 별도 취급합니다.
-- 대학 상세페이지는 한눈에 보기 / 입학방법 / 입학조건 / 비용 / 호주 약사등록 / 한국 약사면허 / FAQ / 자료 출처의 8개 큰 그룹으로 유지합니다.
-- UWA의 4년 Bachelor of Human Sciences (Pharmaceutical Health) / Doctor of Pharmacy는 학부 시작 과정으로 포함하며, 졸업 후 supervised internship이 별도라는 점을 유지합니다.
+- 이 사이트의 중심은 Finder가 아니라 **대학별 약대 상세페이지**입니다.
+- 호주 약대 수는 많지 않지만 대학마다 기간, 학위, 입학월, 선수과목, Foundation/Diploma, 인턴십, 485 지역조건이 크게 다르므로 학교 하나씩 깊게 설명합니다.
+- 메인은 “호주 약대는 학교마다 다르다” → 대학별 전체 목록 → 입학방법 허브 → 졸업 후 485/Regional → 약사등록 순서입니다.
+- `/universities/`와 각 대학 상세페이지가 핵심 탐색 경로입니다. `/compare/` Finder는 보조 도구로 유지합니다.
+- Foundation / Diploma / Direct / Graduate Entry 페이지는 같은 입학방법을 가진 대학들을 다시 묶어 보는 허브입니다. 세부 사실의 원본은 대학 상세페이지에 둡니다.
+- 대학 상세페이지는 과정·학위 구조 / 입학방법 / Direct 조건 / 비용 / 졸업 후 485·지역 / 호주 약사등록 / 한국 약사면허 / FAQ / 출처를 한 페이지에 모읍니다.
+- 485 표시는 현재 Home Affairs 기준을 사용하며, 지역 추가기간은 Second Post-Higher Education Work stream의 별도 자격 충족을 전제로 합니다.
+- 주정부 nomination은 대학 위치만으로 자동 가능하다고 표시하지 않고 주별 최신 공고를 별도 관리합니다.
+- UWA의 4년 school-leaver Bachelor + Doctor of Pharmacy와 별도 2년 Graduate Entry Doctor of Pharmacy를 구분합니다.
