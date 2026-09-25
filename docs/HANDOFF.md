@@ -150,3 +150,7 @@ RMIT 영어는 더 이상 conflict/pending 항목이 아니다. 현재 공식 Ph
 
 - Adelaide 재검증: 현재 국제학생 Pharmacy 페이지의 South Korea CSAT 기준은 345입니다. 기존 340을 345로 수정했습니다. 같은 페이지의 A$54,300은 문구상 2026 입학생 학비이므로 `source_year=2026`으로 고정하고 2027 학비로 표시하지 않습니다.
 - Griffith College 2027 일정: live Key Dates는 T1 3/1 · T2 6/28 · T3 10/25입니다. 2027 Quick Guide의 T2 6/27 · T3 10/5와 차이가 있어 live Key Dates를 우선하고 provenance note를 남겼습니다. 2027 Diploma fee는 아직 확정값을 찾지 못해 pending 유지합니다.
+
+- Canberra: 2027 Course Guide의 Selection Rank 75와 현재 international equivalency table을 연결해 IB 28, SAT 1130, A-level 11, OSSD 74%를 Direct 비교값으로 추가했습니다. Pharmacy 영어는 IELTS 7.0/각7.0이며 현재 UC equivalency 기준 PTE 65, TOEFL 94(R25/L25/S23/W27)를 반영했습니다.
+- UniSQ: 2027 국제학생 과정은 Trimester 1 · 2월 15일 시작의 4년 과정으로 고정했습니다. 3년 accelerated Pharmacy는 2028 시작이므로 2027에 적용하지 않습니다.
+- UNSW: 2027 공식 Guide의 international table 기준 Pharmaceutical Medicine/Pharmacy의 IB를 33으로 수정했습니다. 현재 course page의 IB 36은 2026 offer/selection 안내로 분리합니다. 2027 PharmD 명칭 전환과 APC/Board 반영 여부는 계속 별도 관리합니다.
