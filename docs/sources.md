@@ -29,7 +29,7 @@
 | utas-2026 | [UTas 2026 Pharmacy course](https://www.utas.edu.au/courses/health/courses/54d-bachelor-of-pharmacy-with-honours?year=2026) | 2026 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
 | qut-guide | [QUT 2027 international Year 12 guide](https://cms.qut.edu.au/__data/assets/pdf_file/0003/1566471/27516-Year-12-International-Guide-2027_DIGITAL_F.pdf) | 2027 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
 | rmit-english | [RMIT · Minimum English language requirements](https://www.rmit.edu.au/study-with-us/applying-to-rmit/local-student-applications/entry-requirements/minimum-english-language-requirement) | 페이지별 확인 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
-| sydney-structure | [Sydney Pharmacy · Course resolutions](https://www.sydney.edu.au/handbooks/medicine-health/coursework/pharmacy/course-resolutions.html) | 페이지별 확인 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
+| sydney-structure | [Sydney Pharmacy · current course resolutions](https://www.sydney.edu.au/handbooks/medicine-health/coursework/pharmacy/course-resolutions.html) | 2026 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
 | sydney-guide | [Sydney international guide](https://www.sydney.edu.au/dam/corporate/documents/study/guides/usyd-international-guide.pdf) | 2027 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
 | griffith-college | [Griffith · College articulation 107343](https://credit-precedent.sds.na.ce.griffith.edu.au/credit_detail.php?pk1=107343) | 2027 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
 | curtin-college | [Curtin College · Pharmacy Diploma](https://www.curtincollege.edu.au/courses/diplomas/health-sciences/pharmacy/) | 페이지별 확인 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
@@ -139,15 +139,20 @@
 | monash-foundation-dates-2027 | [Monash College · Foundation Year 2027 dates](https://www.monashcollege.edu.au/study/courses/foundation-year/dates-and-fees) | 2027 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
 | migration-qld-2026-consultation | [Migration Queensland · 2026-27 QSOL consultation status](https://migration.qld.gov.au/dama-consultation) | 2026 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
 | latrobe-villas-current | [La Trobe · The Villas · current live rate](https://www.latrobe.edu.au/accommodation/bendigo-campus/villas) | 페이지별 확인 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
+| rmit-foundation-2027 | [RMIT Foundation Studies · 2027 fee and intake](https://www.rmit.edu.au/study-with-us/levels-of-study/pre-university-study/foundation-studies/foundation-studies-fs022/apply-now) | 2027 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
+| rmit-foundation-current | [RMIT Foundation Studies · current entry requirements](https://www.rmit.edu.au/study-with-us/levels-of-study/pre-university-study/foundation-studies/fs022) | 페이지별 확인 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
+| griffith-college-2027-guide | [Griffith College · International Quick Guide 2026–2027 · Health Sciences to Pharmacy](https://www.griffithcollege.edu.au/wp-content/uploads/Griffith-College-International-Quick-Guide-2026-2027.pdf) | 2027 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
+| griffith-college-health | [Griffith College · Diploma of Health Sciences](https://www.griffithcollege.edu.au/study-options/diploma/health-sciences/) | 페이지별 확인 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
+| griffith-college-dates-2027 | [Griffith College · 2027 key dates](https://www.griffithcollege.edu.au/student-life/key-dates/) | 2027 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
 
 ## 운영 메모
 
-- `data/catalog.json`의 각 fact가 실제 적용 상태(`confirmed_2027`, `latest_published`, `pending_2027`, `source_conflict`)와 출처를 보유합니다.
+- `data/catalog.json`의 각 fact가 적용 상태(`confirmed_2027`, `latest_published`, `pending_2027`, `source_conflict`)와 출처를 보유합니다.
 - 2027 값이 확인되지 않은 경우 최신 공개연도를 2027 확정값으로 바꾸지 않습니다.
-- Curtin Pharmacy 최신 BH-PHARMA 페이지는 fee가 unavailable, intake는 no intakes available로 표시하므로 2027 국제학생 학비·시작월을 추정하지 않습니다.
-- La Trobe Pharmacy는 2027년 3월 시작과 국제학생 연중 지원 가능을 안내하지만, 국제학생 2027 학비는 확정값을 넣지 않습니다.
-- La Trobe Bendigo 숙소는 현재 live residence page의 시작가를 우선합니다: The Units A$255/week부터, Villas A$270/week부터. 둘 다 utilities 포함·semester contract이며 2027 전용 rate card의 정확한 주수는 pending입니다.
-- Monash Foundation은 live destination-degree 페이지의 P6007 값과 2027 Pathway Programs PDF의 legacy P6001이 충돌하므로 source_conflict로 유지합니다.
-- Queensland 2026-27 QSOL은 consultation이 종료됐지만 새 목록이 아직 공개되지 않아 2025-26 약사 491 범위를 새 회계연도 자격으로 이식하지 않습니다.
-- 경쟁사 한국 경로는 source registry와 공개 페이지에서 제외합니다.
+- Newcastle 영어는 2027 공식자료끼리 6.5/각6.5와 7.0/각7.0이 달라 `source_conflict`로 유지합니다.
+- Monash Foundation은 live P6007 destination page와 2027 Pathway Programs PDF의 legacy P6001 표기가 달라 `source_conflict`로 유지합니다.
+- Curtin Pharmacy 최신 BH-PHARMA 페이지는 2027 fee/intake를 현재 제공하지 않아 추정하지 않습니다.
+- Griffith College Diploma of Health Sciences → Pharmacy는 2027 공식 가이드/credit precedent/current entry requirements를 사용합니다. 공개 경로는 Griffith College만 유지하며 경쟁사 한국 경로는 source registry·SEO·CTA에서 제외합니다.
+- UQ 2027 신설 PharmD는 국제학생 모집 자체는 확인됐지만 APC accreditation 및 Pharmacy Board approval이 아직 완료되지 않았으므로 모집 여부와 전문인증 상태를 분리합니다.
+- Queensland 2026-27 QSOL은 consultation 종료 후 새 목록이 아직 공개되지 않아 2025-26 약사 491 범위를 2026-27로 자동 이식하지 않습니다.
 - Apply / How to apply / Application Portal은 공개 상담 퍼널의 기본 외부 링크로 사용하지 않습니다.
