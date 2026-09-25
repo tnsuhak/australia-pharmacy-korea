@@ -155,6 +155,7 @@ university_rows=[
  ('unsw','UNSW Sydney','뉴사우스웨일스대학교','NSW','Sydney · Kensington','UNSW'),
  ('uwa','The University of Western Australia','서호주대학교','WA','Perth · Crawley','UWA')]
 universities=[dict(id=i,name=n,name_ko=k,state=s,campus=fact(c,'apc' if i not in ['uq','qut','monash'] else i),short=short,slug=i+'-pharmacy') for i,n,k,s,c,short in university_rows]
+source('unisq-pharmacy-current','UniSQ · Bachelor of Pharmacy (Honours) current international entry requirements','https://www.unisq.edu.au/study/degrees-and-courses/bachelor-of-pharmacy-honours?studentType=international',2027,'official_course')
 programs=[]; qualifications=[]; requirements=[]; english=[]; intakes=[]; tuition=[]; registration=[]; routes=[]; scholarships=[]; accommodation=[]
 for u in universities:
  i=u['id']; p=i+'-bpharm-hons'
@@ -234,8 +235,7 @@ for k in ['ielts_overall','ielts_bands']:row(english,'newcastle')[k]['note']='�
 intake('newcastle',[2],'Semester 1 · 2027년 2월 22일',src='newcastle-2027-course'); req('newcastle','assumed','assumed',physics='assumed',grade='Assumed knowledge: Mathematics, English Advanced, Chemistry, Physics',src='newcastle-2026-ug'); fee('newcastle',49205,src='newcastle-fee-2027',year=2027,load='80 units 기준')
 setp('canberra',highlights=['Canberra','학부 약학 과정','모집 확인 중'],editorial='APC 학부 약학 인증 목록과 실제 국제학생 모집은 서로 다른 확인 항목입니다. 2027 국제학생 course offer를 확인 중입니다.'); fee('canberra',42500,src='canberra-guide-2027',year=2027)
 setp('unisq',highlights=['T1 only','Toowoomba','2027 개설표'],editorial='2027 국제학생 대면 수업은 Trimester 1에 표시됩니다. 개설 안내서는 9월 28일 확정 예정이므로 최종 일정 확인이 필요합니다.')
-intake('unisq',None,'2027 국제학생 Trimester 1 only · 최종 개설 확정 대기')
-row(intakes,'unisq')['months']=fact(None,'unisq',note='T1 시작월을 달력과 대조 후 확정')
+intake('unisq',[2],'Trimester 1 · 2027년 2월 15일',src='unisq-pharmacy-current'); req('unisq','accepted','assumed','accepted','accepted','수학 + Biology/Chemistry/Physics 중 1과목에서 Year 12 C 수준 assumed knowledge',src='unisq-pharmacy-current'); eng('unisq',7.0,{'L':7,'R':7,'W':6.5,'S':7},src='unisq-pharmacy-current')
 setp('monash',highlights=['4년 Exit','5년 PharmD','Internship 통합'],editorial='4년 후 BPharm(Hons)로 졸업하거나 5년째 PharmD까지 이어갈 수 있습니다. 관련 학사 졸업자는 Graduate Entry도 있습니다.')
 req('monash','required','required',grade='VCE Methods/Specialist Maths 25 + Chemistry 25. IB Math AA SL4 또는 AA/AI HL3, Chemistry SL4 또는 HL3.'); intake('monash',[2],'2월'); fee('monash',49740,src='monash-fee-2027',year=2027,load='48 credit points 기준'); eng('monash',6.5,{'L':6,'R':6,'W':6,'S':6},src='monash-pps-2026',pte=58,pte_each=50)
 setp('sydney',highlights=['5년 통합','2027 환산표','Internship 통합'],editorial='5년 BPharm(Hons) / Master of Pharmacy Practice 과정입니다. 4년 후 학사 Exit가 있습니다.',review_items=['4년 학사 Exit 조건과 학위명','2027 Mathematics prerequisite 적용 여부','USFP 수학 progression 조건'])
