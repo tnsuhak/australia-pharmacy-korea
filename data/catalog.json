@@ -16879,11 +16879,12 @@
       "entity_id": "newcastle-bpharm-hons",
       "field": "english",
       "source_ids": [
-        "newcastle"
+        "newcastle-2027-course",
+        "newcastle-2026-ug"
       ],
       "status": "source_conflict",
-      "summary": "국제학생 상세 IELTS 7.0/각7.0과 다른 페이지 표시 6.5",
-      "decision": "필터 충족 판정에서 제외. 2027 prospectus·입학팀 서면 대조 필요."
+      "summary": "Newcastle 공식 자료에서 Pharmacy IELTS 6.5/각6.5와 7.0/각7.0 표기가 충돌",
+      "decision": "자동 충족 판정에서 제외. 2027 지원 전 Newcastle Admissions 서면 확인."
     },
     {
       "id": "monash-foundation-version",
@@ -16896,18 +16897,6 @@
       "status": "pending_2027",
       "summary": "Pathway guide 구 P6001과 새 P6007 과정 코드 차이",
       "decision": "기존 progression 점수 이식 금지."
-    },
-    {
-      "id": "rmit-english-scope",
-      "entity_id": "rmit-bpharm-hons",
-      "field": "english",
-      "source_ids": [
-        "rmit-english",
-        "rmit"
-      ],
-      "status": "pending_2027",
-      "summary": "Pharmacy 전용 영어표의 국제학생 적용 범위 대조 필요",
-      "decision": "수치는 참고값으로 표시. 자동 충족 판정 제외."
     }
   ]
 }
