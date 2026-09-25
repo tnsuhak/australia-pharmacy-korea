@@ -125,12 +125,15 @@ source('sydney-guide','Sydney international guide','https://www.sydney.edu.au/da
 source('griffith-korea','Griffith · UniCentre South Korea articulation 107341','https://credit-precedent.sds.na.ce.griffith.edu.au/credit_detail.php?pk1=107341',2027,'official_articulation')
 source('griffith-college','Griffith · College articulation 107343','https://credit-precedent.sds.na.ce.griffith.edu.au/credit_detail.php?pk1=107343',2027,'official_articulation')
 source('curtin-college','Curtin College · Pharmacy Diploma','https://www.curtincollege.edu.au/courses/diplomas/health-sciences/pharmacy/',None,'official_pathway')
-source('curtin-old','Curtin College · 旧 course information','https://sites.google.com/a/study.curtincollege.edu.au/courseinformation/Courses/testdhsi/pharmacy',None,'official_pathway')
+source('curtin-college-entry','Curtin College · International academic entry requirements · Pharmacy','https://www.curtincollege.edu.au/how-apply/international/journey/academic-entry-requirements/',None,'official_pathway')
+source('curtin-college-english','Curtin College · English requirements · Pharmacy Stage 2','https://www.curtincollege.edu.au/how-apply/international/journey/english-requirements/',None,'official_pathway')
 source('uq-foundation','UQ College · Foundation progression','https://uqcollege.uq.edu.au/study/pathways-uq/foundation-program',None,'official_pathway')
 source('uq-accelerated','UQ College · Accelerated Foundation','https://uqcollege.uq.edu.au/study/pathways-uq/foundation-program/accelerated-foundation-program',2027,'official_pathway')
 source('uq-calendar','UQ College · Academic calendar','https://uqcollege.uq.edu.au/current-students/academic-calendar',2027,'official_calendar')
 source('monash-foundation','Monash Pathway Programs 2027 · 과정 코드 재확인 필요','https://www.monashcollege.edu.au/__data/assets/pdf_file/0005/4349102/2027-Monash-Pathway-Programs.pdf',2027,'official_pathway')
-source('newcastle-foundation','University of Newcastle International College · Foundation','https://internationalcollege.newcastle.edu.au/foundation-studies',None,'official_pathway')
+source('newcastle-foundation','University of Newcastle College of International Education · Foundation Studies','https://internationalcollege.newcastle.edu.au/foundation-studies',None,'official_pathway')
+source('newcastle-foundation-entry','Newcastle CIE · Foundation Studies entry requirements','https://internationalcollege.newcastle.edu.au/entry-requirements',None,'official_pathway')
+source('newcastle-foundation-fee-2027','Newcastle CIE · 2027 Foundation Studies fees','https://internationalcollege.newcastle.edu.au/fees',2027,'official_pathway')
 source('rmit-pathway','RMIT 2026 degree and diploma guide','https://www.rmit.edu.au/content/dam/rmit/au/en/docs/study/career-advisers/brochures/2026-degree-diploma-guide-rmit-university.pdf',2026,'official_guide')
 source('griffith-scholarship','Griffith International Academic Merit Scholarship','https://www.griffith.edu.au/international/scholarships-finance/scholarships/international-academic-merit-scholarship',2027,'official_scholarship')
 source('monash-scholarship','Monash Pharmacy and Pharmaceutical Science International Merit Scholarship','https://www.monash.edu/study/fees-scholarships/scholarships/find-a-scholarship/pharmacy-international-merit-scholarship-5745',None,'official_scholarship')
@@ -295,7 +298,9 @@ def route(i,id,type,title,src,credit=None,entry=None,duration=None,intake=None,p
  r=dict(id=id,program_id=i+'-bpharm-hons',type=type,title=title,availability=fact(True if verified else None,src),credit=fact(credit,src),entry_year=fact(entry,src),duration=fact(duration,src),intake=fact(intake,src),progression=fact(progression,src),english=fact(None,src),qualification=fact(None,src),note=note)
  routes.append(r);return r
 route('griffith','griffith-college','diploma','Griffith College · Diploma of Health Sciences','griffith-college',80,2,'본과 잔여 240CP · T1 3년 / T2 3.5년','본과 T1 / T2 · Diploma 개강월 별도 확인','지정 Diploma 과목 이수 + 최종 입학허가','80CP 인정. Diploma 학비·진급 GPA는 업데이트 대기입니다.')
-route('curtin','curtin-college','diploma','Curtin College · Pharmacy Diploma','curtin-college',175,2,'Stage 2: 12개월 · Stage 1 필요 시 8–12개월 추가','Stage 1: 2월/6월 · Stage 2: 2월','Stage 2 CWA 70% + PHAR1002(12월) 추가 이수','Stage 2 CWA 70% 기준을 적용합니다.')
+route('curtin','curtin-college','diploma','Curtin College · Pharmacy Diploma','curtin-college',175,2,'Stage 2: 12개월 · Stage 1 필요 시 8–12개월 추가','Stage 1: 2월/6월 · Stage 2: 2월','Stage 2 CWA 70% + PHAR1002 Pharmacy Practice 1(12월) 추가 이수','Diploma 완료 시 175 credits를 인정받고, 12월 PHAR1002를 추가 이수한 뒤 약대 2학년으로 진학합니다.')
+routes[-1]['english']=fact('Stage 2 Pharmacy: IELTS 6.5 / 각 6.0 · PTE 58 / 각 50(2026년 8월 이전 시험 기준)','curtin-college-english')
+routes[-1]['qualification']=fact('Stage 2 한국: 고3 Rank 6 또는 고교 졸업 + CSAT 280/600 · Mathematics + Chemistry prerequisite','curtin-college-entry')
 route('uq','uq-accelerated','foundation','UQ College · Accelerated Foundation','uq-accelerated',0,1,'약 4개월','2027-02-15 시작 → 07-09 완료 · 본과 07-26','BPharm 진급 GPA 5.0 · Academic English 5 · 선수과목 충족','2월 Foundation → 7월 BPharm 일정입니다. GPA·영어·필수과목을 충족해야 합니다.')
 routes[-1]['progression']=fact('BPharm 진급 GPA 5.0 · Academic English 5 · 선수과목 충족','uq-foundation')
 route('uwa','uwa-foundation','foundation','UWA College · Foundation Program','uwa-foundation',0,1,'8개월 또는 12개월','UWA College 일정','UWA College Foundation 70 + Pharmacy 입학·영어조건','Foundation 수료 후 UWA 약대 1학년으로 진학합니다. UWA 약대 공식 페이지에 UWA College Foundation 70이 입학점수로 공개돼 있습니다.')
@@ -303,7 +308,10 @@ routes[-1]['progression']=fact('UWA College Foundation 70 + Pharmacy 입학·영
 route('qut','qut-foundation','foundation','QUT College · Foundation','qut-college-foundation',0,1,'6개월 Intensive 또는 12개월 Standard','QUT College 일정','Foundation 수료 + QUT Pharmacy 입학조건 충족','Foundation 후 QUT Bachelor 1학년으로 진학하는 경로입니다. Pharmacy 선수과목과 영어조건은 별도로 맞춰야 합니다.')
 route('sydney','sydney-usfp','foundation','USFP · University of Sydney Foundation Program','sydney',0,1,None,None,'Pharmacy GPA 7.3 / English C','2027 Pharmacy 진학 기준입니다. 수학과 Foundation 입학조건을 충족해야 합니다.')
 route('monash','monash-foundation','foundation','Monash University Foundation Year','monash-foundation',0,1,None,None,None,'새 P6007 진급점수는 아직 발표되지 않았습니다.',False)
-route('newcastle','newcastle-foundation','foundation','Newcastle International College · Foundation Studies','newcastle-foundation',0,1,None,None,None,'2027 진급점수 발표 대기입니다.')
+route('newcastle','newcastle-foundation','foundation','Newcastle CIE · Foundation Studies','newcastle-foundation',0,1,'11개월 · Pharmacy 목적 2월 시작','2월 · Pharmacy는 본과 중간입학 없음','전체 평균 65%+ · Academic English A&B 평균 75%+','Foundation을 마치면 Bachelor of Pharmacy (Honours) 1학년으로 진학합니다. 2027 Foundation Studies 학비는 A$31,400입니다.')
+routes[-1]['english']=fact('Foundation 입학: IELTS 5.5 / 각 5.0 · 본과 진급: Academic English A&B 평균 75%+','newcastle-foundation-entry')
+routes[-1]['qualification']=fact('한국: 고2 수료(pass grades)부터 Foundation Studies 입학 가능','newcastle-foundation-entry')
+routes[-1]['pathway_fee']=fact(31400,'newcastle-foundation-fee-2027',year=2027,note='2027 Foundation Studies program fee · 10 courses')
 route('monash','monash-ge','graduate','Monash · Graduate Entry','monash',None,3,'관련 학위 + 여름 집중과정 후 3학년 진입',None,'최근 10년 이내 관련 학사 · 평균 70% 이상 · 대학 수준 Human Physiology','최소 기준을 충족한 뒤 경쟁 선발합니다.')
 route('rmit','rmit-foundation','foundation','RMIT Foundation Studies','rmit-foundation-equiv',0,1,None,None,'Foundation 65% + Pharmacy Chemistry·Mathematics prerequisite 동등과목 충족','Foundation 후 Pharmacy 1학년으로 지원합니다. Pharmacy의 Chemistry·Mathematics prerequisite를 Foundation에서 충족해야 합니다.')
 route('rmit','rmit-associate','other','RMIT · Associate Degree pathway','rmit-pathway',None,None,'Associate 2년 + Bachelor 3년',None,None,'2년 Associate Degree + 약대 3년 경로입니다. 1년 Diploma가 아닙니다.',False)
@@ -358,7 +366,6 @@ housing('unsw','unsw-2027-status','UNSW 2027 학생숙소','unsw-housing-2027',N
 housing('uwa','uwa-trinity-2027','Trinity Residential College · Standard Room','uwa-trinity-2027',595,None,True,True,'UWA College Row · Crawley','2027 Standard Room A$595/week. 3 meals/day, utilities, Wi-Fi, room cleaning 등이 포함됩니다.')
 
 conflicts=[
- dict(id='curtin-progression',entity_id='curtin-college',field='progression',source_ids=['curtin-college','curtin-old'],status='source_conflict',summary='Stage 2 CWA: 현재 College 70% / 구 과정 안내 65%',decision='현재 메인 College 70% 우선. 입학팀 확인 전 충돌 기록 유지.'),
  dict(id='newcastle-english',entity_id='newcastle-bpharm-hons',field='english',source_ids=['newcastle-2027-course','newcastle-fee-2027'],status='source_conflict',summary='Newcastle 2027 Degree Guide는 IELTS 6.5/각6.5, 현재 과정 페이지 English proficiency section은 7.0/각7.0으로 표기',decision='같은 대학의 2027 공식자료 간 차이이므로 자동 충족 판정에서 제외. 지원 전 Newcastle Admissions 서면 확인.'),
  dict(id='monash-foundation-version',entity_id='monash-foundation',field='progression',source_ids=['monash-foundation','monash'],status='pending_2027',summary='Pathway guide 구 P6001과 새 P6007 과정 코드 차이',decision='기존 progression 점수 이식 금지.'),
 ]
@@ -368,7 +375,7 @@ setp('canberra',name=fact('Bachelor of Pharmacy · Honours option','canberra-202
 eng('canberra',7,{'L':7,'R':7,'W':7,'S':7},src='canberra-2027');intake('canberra',[2],'2027-02-15 · Semester 1','canberra-2027')
 req('canberra','assumed','assumed','assumed','assumed','수학 + Biology/Human Movement, Chemistry/Physics는 assumed knowledge로 안내. 필수 prerequisite와 구분.',src='canberra-2027')
 for route_record in routes:
- route_record['intake_months']=fact([2],'uq-accelerated') if route_record['id']=='uq-accelerated' else fact([2],'curtin-college') if route_record['id']=='curtin-college' else fact(None,route_record['availability']['source_id'])
+ route_record['intake_months']=fact([2],'uq-accelerated') if route_record['id']=='uq-accelerated' else fact([2],'curtin-college') if route_record['id']=='curtin-college' else fact([2],'newcastle-foundation') if route_record['id']=='newcastle-foundation' else fact(None,route_record['availability']['source_id'])
 
 # Additional course-specific official checks, 2026-09-24.
 source('curtin-structure','Curtin · 2026 개편 Pharmacy 구조','https://www.curtin.edu.au/news/advice/how-to-become-a-pharmacist/',2026,'official_course')
