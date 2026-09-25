@@ -1380,19 +1380,20 @@
         "note": "2026-07-08 목록. 학위명 변경·캠퍼스·갱신은 지원 전 재확인."
       },
       "highlights": [
-        "4년 학사",
-        "2027 학비 공개",
-        "Other Pathway"
+        "4년",
+        "RMIT Foundation 가능",
+        "2027 학비 A$49,920"
       ],
-      "editorial": "약대 영어기준을 따로 봅니다. Associate Degree는 1년 Diploma와 다른 경로입니다.",
+      "editorial": "Bundoora 캠퍼스 4년 약대입니다. 한국 고교·수능 환산표가 명확하고 RMIT Foundation으로도 준비할 수 있습니다.",
       "review_items": [],
       "decision_lens": {
         "why": [
-          "2027 학비 A$49,920",
-          "Bundoora 캠퍼스",
-          "Pharmacy 영어 IELTS 7.0 / 각 6.5"
+          "한국 고교 75% 또는 고교 졸업 + 수능 300부터 Direct 기준",
+          "RMIT Foundation → 약대 1학년 가능",
+          "2027 학비 A$49,920"
         ],
         "watch": [
+          "Chemistry + Mathematics prerequisite 필요",
           "Associate Degree 경로는 1년 Diploma와 다름",
           "약대 학위 장학은 별도 확인 중"
         ]
@@ -5481,6 +5482,112 @@
         "status": "pending_2027",
         "note": ""
       }
+    },
+    {
+      "id": "rmit-foundation",
+      "program_id": "rmit-bpharm-hons",
+      "type": "foundation",
+      "title": "RMIT Foundation Studies",
+      "availability": {
+        "value": true,
+        "academic_year": 2027,
+        "source_year": 2027,
+        "source_id": "rmit-foundation-equiv",
+        "source_url": "https://www.rmit.edu.au/study-with-us/international-students/apply-to-rmit-international-students/entry-requirements/country-equivalency/foundation-equivalencies",
+        "source_type": "official_pathway",
+        "verified_date": "2026-09-25",
+        "status": "confirmed_2027",
+        "note": ""
+      },
+      "credit": {
+        "value": 0,
+        "academic_year": 2027,
+        "source_year": 2027,
+        "source_id": "rmit-foundation-equiv",
+        "source_url": "https://www.rmit.edu.au/study-with-us/international-students/apply-to-rmit-international-students/entry-requirements/country-equivalency/foundation-equivalencies",
+        "source_type": "official_pathway",
+        "verified_date": "2026-09-25",
+        "status": "confirmed_2027",
+        "note": ""
+      },
+      "entry_year": {
+        "value": 1,
+        "academic_year": 2027,
+        "source_year": 2027,
+        "source_id": "rmit-foundation-equiv",
+        "source_url": "https://www.rmit.edu.au/study-with-us/international-students/apply-to-rmit-international-students/entry-requirements/country-equivalency/foundation-equivalencies",
+        "source_type": "official_pathway",
+        "verified_date": "2026-09-25",
+        "status": "confirmed_2027",
+        "note": ""
+      },
+      "duration": {
+        "value": null,
+        "academic_year": 2027,
+        "source_year": 2027,
+        "source_id": "rmit-foundation-equiv",
+        "source_url": "https://www.rmit.edu.au/study-with-us/international-students/apply-to-rmit-international-students/entry-requirements/country-equivalency/foundation-equivalencies",
+        "source_type": "official_pathway",
+        "verified_date": "2026-09-25",
+        "status": "pending_2027",
+        "note": "Foundation 과정 기간은 선택한 stream/intake에 따라 확인"
+      },
+      "intake": {
+        "value": null,
+        "academic_year": 2027,
+        "source_year": 2027,
+        "source_id": "rmit-foundation-equiv",
+        "source_url": "https://www.rmit.edu.au/study-with-us/international-students/apply-to-rmit-international-students/entry-requirements/country-equivalency/foundation-equivalencies",
+        "source_type": "official_pathway",
+        "verified_date": "2026-09-25",
+        "status": "pending_2027",
+        "note": "2027 Foundation intake는 RMIT Foundation 페이지에서 확인"
+      },
+      "progression": {
+        "value": "Foundation 65% + Pharmacy Chemistry·Mathematics prerequisite 동등과목 충족",
+        "academic_year": 2027,
+        "source_year": 2027,
+        "source_id": "rmit-foundation-equiv",
+        "source_url": "https://www.rmit.edu.au/study-with-us/international-students/apply-to-rmit-international-students/entry-requirements/country-equivalency/foundation-equivalencies",
+        "source_type": "official_pathway",
+        "verified_date": "2026-09-25",
+        "status": "confirmed_2027",
+        "note": ""
+      },
+      "english": {
+        "value": null,
+        "academic_year": 2027,
+        "source_year": 2027,
+        "source_id": "rmit-foundation-equiv",
+        "source_url": "https://www.rmit.edu.au/study-with-us/international-students/apply-to-rmit-international-students/entry-requirements/country-equivalency/foundation-equivalencies",
+        "source_type": "official_pathway",
+        "verified_date": "2026-09-25",
+        "status": "pending_2027",
+        "note": "Foundation 입학 영어는 별도"
+      },
+      "qualification": {
+        "value": "RMIT Foundation Studies",
+        "academic_year": 2027,
+        "source_year": 2027,
+        "source_id": "rmit-foundation-equiv",
+        "source_url": "https://www.rmit.edu.au/study-with-us/international-students/apply-to-rmit-international-students/entry-requirements/country-equivalency/foundation-equivalencies",
+        "source_type": "official_pathway",
+        "verified_date": "2026-09-25",
+        "status": "confirmed_2027",
+        "note": ""
+      },
+      "note": "Foundation 후 Pharmacy 1학년으로 지원합니다. Pharmacy의 Chemistry·Mathematics prerequisite를 Foundation에서 충족해야 합니다.",
+      "intake_months": {
+        "value": null,
+        "academic_year": 2027,
+        "source_year": 2027,
+        "source_id": "rmit-foundation-equiv",
+        "source_url": "https://www.rmit.edu.au/study-with-us/international-students/apply-to-rmit-international-students/entry-requirements/country-equivalency/foundation-equivalencies",
+        "source_type": "official_pathway",
+        "verified_date": "2026-09-25",
+        "status": "pending_2027",
+        "note": ""
+      }
     }
   ],
   "qualifications": [
@@ -6641,72 +6748,72 @@
       "program_id": "rmit-bpharm-hons",
       "qualification": "csat",
       "score": {
-        "value": null,
+        "value": 300,
         "academic_year": 2027,
-        "source_year": null,
-        "source_id": "rmit",
-        "source_url": "https://www.rmit.edu.au/study-with-us/levels-of-study/undergraduate-study/honours-degrees/bachelor-of-pharmacy-honours-bh102",
-        "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
-        "note": "Pharmacy 전용 2027 환산 기준 확인 중"
+        "source_year": 2027,
+        "source_id": "rmit-korea-equiv",
+        "source_url": "https://www.rmit.edu.au/study-with-us/international-students/apply-to-rmit-international-students/entry-requirements/country-equivalency/south-korea",
+        "source_type": "official_admissions",
+        "verified_date": "2026-09-25",
+        "status": "confirmed_2027",
+        "note": "한국 고교 졸업 + CSAT 기준"
       },
-      "scale": null,
-      "calculation": null
+      "scale": "표준점수 합",
+      "calculation": "국어·수학을 포함한 best 4 graded subjects의 KICE standard score 계산"
     },
     {
       "id": "rmit-bpharm-hons-sat",
       "program_id": "rmit-bpharm-hons",
       "qualification": "sat",
       "score": {
-        "value": null,
+        "value": 1060,
         "academic_year": 2027,
-        "source_year": null,
-        "source_id": "rmit",
-        "source_url": "https://www.rmit.edu.au/study-with-us/levels-of-study/undergraduate-study/honours-degrees/bachelor-of-pharmacy-honours-bh102",
-        "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
-        "note": "Pharmacy 전용 2027 환산 기준 확인 중"
+        "source_year": 2027,
+        "source_id": "rmit-usa-equiv",
+        "source_url": "https://www.rmit.edu.au/study-with-us/international-students/apply-to-rmit-international-students/entry-requirements/country-equivalency/usa",
+        "source_type": "official_admissions",
+        "verified_date": "2026-09-25",
+        "status": "confirmed_2027",
+        "note": "미국 High School Diploma GPA 2.5 이상과 함께 충족해야 함"
       },
-      "scale": null,
-      "calculation": null
+      "scale": "1600",
+      "calculation": ""
     },
     {
       "id": "rmit-bpharm-hons-ib",
       "program_id": "rmit-bpharm-hons",
       "qualification": "ib",
       "score": {
-        "value": null,
+        "value": 25,
         "academic_year": 2027,
-        "source_year": null,
-        "source_id": "rmit",
-        "source_url": "https://www.rmit.edu.au/study-with-us/levels-of-study/undergraduate-study/honours-degrees/bachelor-of-pharmacy-honours-bh102",
-        "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
-        "note": "Pharmacy 전용 2027 환산 기준 확인 중"
+        "source_year": 2027,
+        "source_id": "rmit-ib-equiv",
+        "source_url": "https://www.rmit.edu.au/study-with-us/international-students/apply-to-rmit-international-students/entry-requirements/country-equivalency/international-baccalaureate",
+        "source_type": "official_admissions",
+        "verified_date": "2026-09-25",
+        "status": "confirmed_2027",
+        "note": "RMIT Bachelor 65% 기준의 IB 환산값"
       },
-      "scale": null,
-      "calculation": null
+      "scale": "45",
+      "calculation": ""
     },
     {
       "id": "rmit-bpharm-hons-alevel",
       "program_id": "rmit-bpharm-hons",
       "qualification": "alevel",
       "score": {
-        "value": null,
+        "value": 7,
         "academic_year": 2027,
-        "source_year": null,
-        "source_id": "rmit",
-        "source_url": "https://www.rmit.edu.au/study-with-us/levels-of-study/undergraduate-study/honours-degrees/bachelor-of-pharmacy-honours-bh102",
-        "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
-        "note": "Pharmacy 전용 2027 환산 기준 확인 중"
+        "source_year": 2027,
+        "source_id": "rmit-uk-equiv",
+        "source_url": "https://www.rmit.edu.au/study-with-us/international-students/apply-to-rmit-international-students/entry-requirements/country-equivalency/united-kingdom",
+        "source_type": "official_admissions",
+        "verified_date": "2026-09-25",
+        "status": "confirmed_2027",
+        "note": "3 A-level 기준 예시 CDD"
       },
-      "scale": null,
-      "calculation": null
+      "scale": "RMIT A-level points",
+      "calculation": ""
     },
     {
       "id": "rmit-bpharm-hons-ossd",
@@ -6731,18 +6838,18 @@
       "program_id": "rmit-bpharm-hons",
       "qualification": "korean_high_school",
       "score": {
-        "value": null,
+        "value": 75,
         "academic_year": 2027,
-        "source_year": null,
-        "source_id": "rmit",
-        "source_url": "https://www.rmit.edu.au/study-with-us/levels-of-study/undergraduate-study/honours-degrees/bachelor-of-pharmacy-honours-bh102",
-        "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
-        "note": "Pharmacy 전용 2027 환산 기준 확인 중"
+        "source_year": 2027,
+        "source_id": "rmit-korea-equiv",
+        "source_url": "https://www.rmit.edu.au/study-with-us/international-students/apply-to-rmit-international-students/entry-requirements/country-equivalency/south-korea",
+        "source_type": "official_admissions",
+        "verified_date": "2026-09-25",
+        "status": "confirmed_2027",
+        "note": "RMIT Pharmacy 국제학생 academic requirement 65%의 한국 고교 환산값"
       },
-      "scale": null,
-      "calculation": null
+      "scale": "한국 고교 졸업성적 평균 %",
+      "calculation": ""
     },
     {
       "id": "rmit-bpharm-hons-ged",
@@ -16858,6 +16965,46 @@
       "url": "https://www.unisq.edu.au/study/degrees-and-courses/bachelor-of-pharmacy-honours?studentType=international",
       "source_year": 2027,
       "source_type": "official_course",
+      "verified_date": "2026-09-25"
+    },
+    {
+      "id": "rmit-korea-equiv",
+      "title": "RMIT · South Korea academic entry equivalency",
+      "url": "https://www.rmit.edu.au/study-with-us/international-students/apply-to-rmit-international-students/entry-requirements/country-equivalency/south-korea",
+      "source_year": 2027,
+      "source_type": "official_admissions",
+      "verified_date": "2026-09-25"
+    },
+    {
+      "id": "rmit-ib-equiv",
+      "title": "RMIT · International Baccalaureate academic equivalency",
+      "url": "https://www.rmit.edu.au/study-with-us/international-students/apply-to-rmit-international-students/entry-requirements/country-equivalency/international-baccalaureate",
+      "source_year": 2027,
+      "source_type": "official_admissions",
+      "verified_date": "2026-09-25"
+    },
+    {
+      "id": "rmit-uk-equiv",
+      "title": "RMIT · United Kingdom academic equivalency",
+      "url": "https://www.rmit.edu.au/study-with-us/international-students/apply-to-rmit-international-students/entry-requirements/country-equivalency/united-kingdom",
+      "source_year": 2027,
+      "source_type": "official_admissions",
+      "verified_date": "2026-09-25"
+    },
+    {
+      "id": "rmit-usa-equiv",
+      "title": "RMIT · USA academic equivalency",
+      "url": "https://www.rmit.edu.au/study-with-us/international-students/apply-to-rmit-international-students/entry-requirements/country-equivalency/usa",
+      "source_year": 2027,
+      "source_type": "official_admissions",
+      "verified_date": "2026-09-25"
+    },
+    {
+      "id": "rmit-foundation-equiv",
+      "title": "RMIT · Foundation Studies equivalency",
+      "url": "https://www.rmit.edu.au/study-with-us/international-students/apply-to-rmit-international-students/entry-requirements/country-equivalency/foundation-equivalencies",
+      "source_year": 2027,
+      "source_type": "official_pathway",
       "verified_date": "2026-09-25"
     }
   ],
