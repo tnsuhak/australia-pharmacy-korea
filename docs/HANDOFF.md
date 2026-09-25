@@ -141,3 +141,15 @@ ZIP 압축을 푼 뒤 `offline-preview/index.html`을 브라우저에서 여세�
 - Graduate Entry remains a separate special route, not a fourth standard school-leaver method.
 - Current PR Preview: https://deploy-preview-1--australia-pharmacy-korea.netlify.app
 - Production remains unchanged and requires explicit approval.
+
+
+## 2026-09-25 IA simplification
+
+- Removed the standalone homepage route-self-selection section because it duplicated the three-route explanation. Its shortcuts now sit next to the Finder.
+- Replaced the Hero's duplicate 3/4/5-year explainer with a compact comparison-scope summary.
+- Added /admission-pathways/ as the real top-level admission-method hub. Header navigation now points there instead of sending the admission-route label to Foundation only.
+- Simplified the Compare advanced filter so duration handles 3/4/5-year choices while degree/registration structure is limited to structural distinctions such as 4-year Exit and internship integration.
+- Grouped university detail pages from roughly 15 small sections into 8 major sections without dropping the underlying facts.
+- Removed the per-university duplicate consultation section because the global TNS consultation CTA follows every page.
+- Updated stale Compare copy so UWA's 4-year school-leaver Bachelor + Doctor of Pharmacy is included, while graduate-only routes remain out of the undergraduate comparison.
+- Production remains unchanged; review in PR #1 Deploy Preview before merge.
