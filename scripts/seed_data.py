@@ -82,7 +82,7 @@ source('monash-fee-2027','Monash · Pharmacy P6007 2027 fee','https://www.monash
 source('jcu-fee-2026','JCU · Bachelor of Pharmacy (Honours) 2026 fee','https://www.jcu.edu.au/courses/bachelor-of-pharmacy-honours',2026,'official_course')
 source('unsw-fee-2026','UNSW · Pharmaceutical Medicine / Pharmacy 2026 fee','https://www.unsw.edu.au/study/undergraduate/bachelor-of-pharmaceutical-medicine-master-of-pharmacy',2026,'official_course')
 source('uwa-fee-2026','UWA · 2026 international undergraduate fees CM039','https://www.fees.uwa.edu.au/Browse/BrowseCourses?feeType=INTUG&feeYear=2026',2026,'official_fee')
-source('adelaide-fee-current','Adelaide University · Bachelor of Pharmacy (Honours) international fee','https://adelaide.edu.au/study/degrees/bachelor-of-pharmacy-honours/',None,'official_course')
+source('adelaide-fee-current','Adelaide University · Bachelor of Pharmacy (Honours) · published 2026 international fee','https://adelaide.edu.au/study/degrees/bachelor-of-pharmacy-honours/',2026,'official_course')
 source('rmit-2027-apply','RMIT Bachelor of Pharmacy (Honours) · 2027 intake','https://www.rmit.edu.au/study-with-us/levels-of-study/undergraduate-study/honours-degrees/bachelor-of-pharmacy-honours-bh102/apply-now',2027,'official_course')
 source('unsw-2027-course','UNSW Pharmaceutical Medicine / Doctor of Pharmacy · 2027','https://www.unsw.edu.au/study/undergraduate/bachelor-of-pharmaceutical-medicine-master-of-pharmacy',2027,'official_course')
 source('unsw-english-current','UNSW · English language requirements','https://www.unsw.edu.au/study/how-to-apply/english-language-requirements',None,'official_admissions')
@@ -249,8 +249,8 @@ setp('curtin',highlights=['College → Year 2','175 credits','진급 CWA 확인'
 setp('uq',duration_label=fact('2월 4년 · 7월 약 3.5년','uq'),highlights=['2월 4년','7월 3.5년','Accelerated Foundation'],editorial='2월 입학은 4년, 7월 입학은 약 3.5년입니다. 새 5년 PharmD와는 다른 과정입니다.')
 req('uq','required','required','recommended',grade='English·수학·Chemistry: Queensland Year 12 C 또는 동등 수준.'); intake('uq',[2,7],'2월 22일 / 7월 26일'); fee('uq',60952,load='16 units 기준')
 eng('uq',6.5,{'L':6,'R':6,'W':6,'S':6},pte=64,pte_each=60,toefl={'overall':87,'L':19,'R':19,'W':21,'S':19})
-setp('adelaide',highlights=['4년 학사','7월은 학점인정 조건부'],editorial='일반 Direct는 2월 시작입니다. 7월 입학은 학점이 인정된 국제학생을 개별 심사합니다.')
-intake('adelaide',[2],'2월 · 7월은 학점 인정 시 개별 심사'); fee('adelaide',54300,src='adelaide-fee-current'); req('adelaide','accepted','not_required','accepted','accepted','Biology, Chemistry 또는 Physics 중 1과목 또는 동등 수준',src='adelaide'); eng('adelaide',6.5,{'L':6,'R':6,'W':6,'S':6},src='adelaide')
+setp('adelaide',highlights=['4년 학사','CSAT 345','15% Merit 자동심사'],editorial='일반 Direct는 2월 시작입니다. 7월 입학은 학점이 인정된 국제학생을 개별 심사합니다. 현재 과정 페이지의 A$54,300은 2026 입학생 학비라고 명시돼 있어 2027 학비로 사용하지 않습니다.')
+intake('adelaide',[2],'2월 · 7월은 학점 인정 시 개별 심사'); fee('adelaide',54300,src='adelaide-fee-current',year=2026); req('adelaide','accepted','not_required','accepted','accepted','Biology, Chemistry 또는 Physics 중 1과목 또는 동등 수준',src='adelaide'); eng('adelaide',6.5,{'L':6,'R':6,'W':6,'S':6},src='adelaide')
 setp('griffith',highlights=['Diploma → 2학년','80CP 인정','20% 자동심사'],editorial='Direct 입학과 Griffith College Diploma 경로가 있습니다. Griffith College Diploma 후 80CP를 인정받고 약대 2학년으로 진학합니다.'); intake('griffith',[3,7],'3월 · 7월 (2026 공개 기준)',src='griffith-2026-guide'); eng('griffith',7.0,None,src='griffith-2026-guide')
 setp('latrobe',international_recruitment=fact(True,'latrobe-2027-course',status='latest_published',note='현재 Pharmacy course page는 국제학생이 연중 지원 가능하다고 안내합니다. 2027 국제학생 학비는 별도 확인 중입니다.'),highlights=['Bendigo','4년 학사','국제학생 지원 가능'],editorial='Bendigo 캠퍼스 4년 약대입니다. 현재 과정 페이지는 2027년 3월 시작과 국제학생 연중 지원 가능을 안내하지만, 2027 국제학생 학비는 아직 확정 표시가 없어 계속 확인 중입니다.',review_items=['2027 국제학생 학비']); intake('latrobe',[3],'Semester 1 · 2027년 3월',src='latrobe-2027-course'); req('latrobe','not_required','not_required','not_required','not_required','별도 과학 선수과목 없음 · 영어 prerequisite만 적용',src='latrobe-health-guide'); eng('latrobe',6.5,{'L':6.5,'R':6.5,'W':6.5,'S':6.5},src='latrobe-health-guide')
 setp('qut',highlights=['수학·화학 assumed knowledge','4년 학사','2027 학비 A$46,200'],editorial='QUT Pharmacy는 Chemistry와 Mathematical Methods/Specialist Mathematics를 필수 prerequisite가 아니라 assumed knowledge로 안내합니다. 미이수 학생은 지원 자체가 막히는 것으로 표시하지 않고 bridging study 안내와 함께 구분합니다.')
@@ -287,7 +287,7 @@ for qt,val,scale,src,note,calc in [
  q=next(x for x in qualifications if x['program_id']=='rmit-bpharm-hons' and x['qualification']==qt); q.update(score=fact(val,src),scale=scale,calculation=calc); q['score']['note']=note
 qual('uwa','csat',329,'UWA 국제학력 환산점수'); qual('uwa','sat',1220,'1600'); qual('uwa','ib',30,'45'); qual('uwa','alevel',10,'UWA A-level 환산점수'); fee('uwa',46000,src='uwa-fee-2026',year=2026,load='48 points 기준')
 # Additional international qualification scores verified for 2027 site.
-for qt,val,scale in [('csat',340,'대학 공식 CSAT 기준'),('ib',30,'45'),('sat',1220,'1600'),('alevel',10,'UK / Global GCE A-level 환산점수'),('ossd',80,'Ontario Secondary School Diploma 평균 %')]:
+for qt,val,scale in [('csat',345,'대학 공식 CSAT 기준'),('ib',30,'45'),('sat',1220,'1600'),('alevel',10,'UK / Global GCE A-level 환산점수'),('ossd',80,'Ontario Secondary School Diploma 평균 %')]:
  q=next(x for x in qualifications if x['program_id']=='adelaide-bpharm-hons' and x['qualification']==qt); q.update(score=fact(val,'adelaide-pharmacy-current'),scale=scale)
 for qt,val,scale in [('ib',36,'45'),('alevel',15,'UNSW A-level aggregate')]:
  q=next(x for x in qualifications if x['program_id']=='unsw-bpharm-hons' and x['qualification']==qt); q.update(score=fact(val,'unsw-2027-course'),scale=scale,calculation='2027 PharmD 명칭 변경에도 입학기준은 동일하다는 UNSW 안내 기준')
