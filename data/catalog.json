@@ -3803,7 +3803,7 @@
         "source_id": "rmit-2027-apply",
         "source_url": "https://www.rmit.edu.au/study-with-us/levels-of-study/undergraduate-study/honours-degrees/bachelor-of-pharmacy-honours-bh102/apply-now",
         "source_type": "official_course",
-        "verified_date": "2026-09-25",
+        "verified_date": "2026-09-26",
         "status": "confirmed_2027",
         "note": ""
       }
@@ -11241,14 +11241,14 @@
       "route_id": "rmit-bpharm-hons-direct",
       "months": {
         "value": [
-          2
+          3
         ],
         "academic_year": 2027,
         "source_year": 2027,
         "source_id": "rmit-2027-apply",
         "source_url": "https://www.rmit.edu.au/study-with-us/levels-of-study/undergraduate-study/honours-degrees/bachelor-of-pharmacy-honours-bh102/apply-now",
         "source_type": "official_course",
-        "verified_date": "2026-09-25",
+        "verified_date": "2026-09-26",
         "status": "confirmed_2027",
         "note": ""
       },
@@ -16137,15 +16137,15 @@
         "note": ""
       },
       "itp_in_degree": {
-        "value": null,
+        "value": false,
         "academic_year": 2027,
-        "source_year": null,
-        "source_id": "curtin",
-        "source_url": "https://www.curtin.edu.au/study/offering/course-ug-bachelor-of-pharmacy-honours--bh-pharma/",
+        "source_year": 2026,
+        "source_id": "curtin-structure",
+        "source_url": "https://www.curtin.edu.au/news/advice/how-to-become-a-pharmacist/",
         "source_type": "official_course",
-        "verified_date": "2026-09-25",
-        "status": "pending_2027",
-        "note": ""
+        "verified_date": "2026-09-26",
+        "status": "latest_published",
+        "note": "등록용 internship/ITP는 학위 밖 졸업 후 과정"
       },
       "post_graduation_internship": {
         "value": true,
