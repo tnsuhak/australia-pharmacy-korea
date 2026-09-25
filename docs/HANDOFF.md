@@ -27,8 +27,8 @@ UWA는 비교 대학에 포함하며, 고교 졸업자용 4년 Bachelor of Human
 ## 데이터 상태
 
 - 2027 확인: 405
-- 최신 공개 기준: 413
-- 2027 확인 중: 422
+- 최신 공개 기준: 417
+- 2027 확인 중: 418
 - source_conflict fact: 4
 - active conflict record: 2
 
@@ -62,6 +62,8 @@ UWA는 비교 대학에 포함하며, 고교 졸업자용 4년 Bachelor of Human
 - 현재 Griffith College 한국 Diploma 입학표: 고3 4개 학업과목 평균 Rank 6, 또는 고교 졸업+CSAT 280 / 상위 3개 stanine 6, 또는 검정고시 평균 80. 이는 Griffith University 본과 Direct 점수가 아님.
 - Pharmacy는 progression quota 대상이며 정원 초과 시 completed Diploma GPA 순 선발.
 - 2027 Diploma 정확한 학비는 검증한 공식자료에서 확인하지 못해 pending. 다른 연도 값을 2027로 승격하지 않음.
+- Direct route 카드도 최신 공개 2026 H1 기준을 동기화: CSAT 331 · IB 28 · SAT 1080(+미국 고교졸업) · A-level 7 · IELTS 7.0 overall · 3월/7월. 모두 `latest_published` 참고값이며 2027 확정 환산표로 승격하지 않음.
+- 2027 Direct 국제학력 환산표, Pharmacy 과목별 assumed knowledge/prerequisite 최신표, 2027 본과 학비는 계속 확인 대상.
 - 경쟁사 한국 경로는 공개 페이지·source registry·SEO·CTA에서 제외.
 
 ### La Trobe
