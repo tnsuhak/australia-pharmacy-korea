@@ -333,6 +333,11 @@ route('uq','uq-accelerated','foundation','UQ College · Accelerated Foundation',
 routes[-1]['progression']=fact('BPharm 진급 GPA 5.0 · Academic English 5 · 선수과목 충족','uq-foundation')
 route('uwa','uwa-foundation','foundation','UWA College · Foundation Program','uwa-foundation',0,1,'8개월 또는 12개월','UWA College 일정','UWA College Foundation 70 + Pharmacy 입학·영어조건','Foundation 수료 후 UWA 약대 1학년으로 진학합니다. UWA 약대 공식 페이지에 UWAC Foundation 70이 입학점수로 공개돼 있습니다. Combined degree 내 Doctor of Pharmacy progression은 65% WAM assurance 조건을 별도로 확인해야 합니다.')
 routes[-1]['progression']=fact('UWA College Foundation 70 + Pharmacy 입학·영어조건','uwa')
+_uwa_direct=next(x for x in routes if x['id']=='uwa-bpharm-hons-direct')
+_uwa_direct['progression']=fact('Combined degree 내 Doctor of Pharmacy assurance: WAM 65%','uwa',note='UWA course page states an 85 ATAR entry and 65% WAM assurance in this combined degree.')
+_uwa_direct['qualification']=fact('ATAR 85 equivalent · CSAT 329 · IB 30 · A-level 10 · SAT 1220 · UWAC Foundation 70','uwa')
+_uwa_direct['english']=fact('IELTS 7.0 · 각 영역 7.0','uwa')
+_uwa_direct['note']='고교 졸업 후 4년 combined degree로 시작합니다. Doctor of Pharmacy progression assurance는 WAM 65% 조건이며 졸업 후 internship과 Pharmacy Board 시험이 별도입니다.'
 route('qut','qut-foundation','foundation','QUT College · Foundation','qut-college-foundation',0,1,'6개월 Intensive 또는 12개월 Standard','QUT College 일정','Foundation 수료 + QUT Pharmacy 입학조건 충족','Foundation 후 QUT Bachelor 1학년으로 진학하는 경로입니다. Pharmacy 선수과목과 영어조건은 별도로 맞춰야 합니다.')
 route('sydney','sydney-usfp','foundation','USFP · University of Sydney Foundation Program','sydney',0,1,None,None,'Pharmacy GPA 7.3 / English C','2027 Pharmacy 진학 기준입니다. 수학과 Foundation 입학조건을 충족해야 합니다.')
 route('monash','monash-foundation','foundation','Monash University Foundation Year','monash-foundation-p6007-current',0,1,'Standard 약 12개월','2월 · 8월','P6007: Foundation score 75% · English 65% · Maths 50% + Chemistry 50%','현재 Monash College destination-degree 페이지는 새 P6007을 75%/English 65%로 안내하지만, 2027 Pathway Programs PDF의 Pharmacy 표에는 아직 P6001이 남아 있어 2027 확정 자동판정에는 사용하지 않습니다.')
