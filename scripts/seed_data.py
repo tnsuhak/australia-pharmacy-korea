@@ -122,7 +122,6 @@ source('qut-guide','QUT 2027 international Year 12 guide','https://cms.qut.edu.a
 source('rmit-english','RMIT · Minimum English language requirements','https://www.rmit.edu.au/study-with-us/applying-to-rmit/local-student-applications/entry-requirements/minimum-english-language-requirement',None,'official_admissions')
 source('sydney-structure','Sydney Pharmacy · Course resolutions','https://www.sydney.edu.au/handbooks/medicine-health/coursework/pharmacy/course-resolutions.html',None,'official_handbook')
 source('sydney-guide','Sydney international guide','https://www.sydney.edu.au/dam/corporate/documents/study/guides/usyd-international-guide.pdf',2027,'official_guide')
-source('griffith-korea','Griffith · UniCentre South Korea articulation 107341','https://credit-precedent.sds.na.ce.griffith.edu.au/credit_detail.php?pk1=107341',2027,'official_articulation')
 source('griffith-college','Griffith · College articulation 107343','https://credit-precedent.sds.na.ce.griffith.edu.au/credit_detail.php?pk1=107343',2027,'official_articulation')
 source('curtin-college','Curtin College · Pharmacy Diploma','https://www.curtincollege.edu.au/courses/diplomas/health-sciences/pharmacy/',None,'official_pathway')
 source('curtin-college-entry','Curtin College · International academic entry requirements · Pharmacy','https://www.curtincollege.edu.au/how-apply/international/journey/academic-entry-requirements/',None,'official_pathway')
