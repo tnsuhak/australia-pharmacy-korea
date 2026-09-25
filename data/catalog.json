@@ -1977,8 +1977,7 @@
       ],
       "editorial": "2027부터 PharmD 명칭을 사용하지만 졸업 후 인턴십은 따로 합니다.",
       "review_items": [
-        "새 PharmD 명칭의 APC/Board 승인 반영",
-        "신규 과정 2027 국가별 환산·학비"
+        "새 PharmD 명칭의 APC/Board 승인 반영"
       ]
     },
     {
@@ -5333,36 +5332,36 @@
       "program_id": "jcu-bpharm-hons",
       "qualification": "sat",
       "score": {
-        "value": null,
+        "value": 1020,
         "academic_year": 2027,
-        "source_year": null,
-        "source_id": "jcu",
-        "source_url": "https://www.jcu.edu.au/courses/bachelor-of-pharmacy-honours",
-        "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
-        "note": "Pharmacy 전용 2027 환산 기준 확인 중"
+        "source_year": 2025,
+        "source_id": "jcu-intl-2025",
+        "source_url": "https://www.jcu.edu.au/__data/assets/pdf_file/0018/2205414/2025-International-Guide.pdf",
+        "source_type": "official_guide",
+        "verified_date": "2026-09-25",
+        "status": "latest_published",
+        "note": "2025 International Guide reference only; 2027 international score conversion remains to be confirmed."
       },
-      "scale": null,
-      "calculation": null
+      "scale": "1600",
+      "calculation": ""
     },
     {
       "id": "jcu-bpharm-hons-ib",
       "program_id": "jcu-bpharm-hons",
       "qualification": "ib",
       "score": {
-        "value": null,
+        "value": 27,
         "academic_year": 2027,
-        "source_year": null,
-        "source_id": "jcu",
-        "source_url": "https://www.jcu.edu.au/courses/bachelor-of-pharmacy-honours",
-        "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
-        "note": "Pharmacy 전용 2027 환산 기준 확인 중"
+        "source_year": 2025,
+        "source_id": "jcu-intl-2025",
+        "source_url": "https://www.jcu.edu.au/__data/assets/pdf_file/0018/2205414/2025-International-Guide.pdf",
+        "source_type": "official_guide",
+        "verified_date": "2026-09-25",
+        "status": "latest_published",
+        "note": "Latest clean international qualification score located in JCU's 2025 International Guide. 2027 international conversion not yet published on the Pharmacy page."
       },
-      "scale": null,
-      "calculation": null
+      "scale": "45",
+      "calculation": ""
     },
     {
       "id": "jcu-bpharm-hons-alevel",
@@ -5783,18 +5782,18 @@
       "program_id": "uq-bpharm-hons",
       "qualification": "ib",
       "score": {
-        "value": null,
+        "value": 30.25,
         "academic_year": 2027,
-        "source_year": 2027,
+        "source_year": 2026,
         "source_id": "uq",
         "source_url": "https://study.uq.edu.au/study-options/programs/bachelor-pharmacy-honours-2373",
         "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
-        "note": "Pharmacy 전용 2027 환산 기준 확인 중"
+        "verified_date": "2026-09-25",
+        "status": "latest_published",
+        "note": "UQ 2027 program page lists this as the latest entry-score threshold based on Semester 1, 2026 offers. It is a guide, not a guaranteed international cut-off."
       },
-      "scale": null,
-      "calculation": null
+      "scale": "45",
+      "calculation": ""
     },
     {
       "id": "uq-bpharm-hons-alevel",
@@ -5891,90 +5890,90 @@
       "program_id": "adelaide-bpharm-hons",
       "qualification": "csat",
       "score": {
-        "value": null,
+        "value": 340,
         "academic_year": 2027,
         "source_year": null,
-        "source_id": "adelaide",
+        "source_id": "adelaide-pharmacy-current",
         "source_url": "https://adelaide.edu.au/study/degrees/bachelor-of-pharmacy-honours/",
         "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
-        "note": "Pharmacy 전용 2027 환산 기준 확인 중"
+        "verified_date": "2026-09-25",
+        "status": "latest_published",
+        "note": ""
       },
-      "scale": null,
-      "calculation": null
+      "scale": "대학 공식 CSAT 기준",
+      "calculation": "College Scholastic Ability Test (CSAT)"
     },
     {
       "id": "adelaide-bpharm-hons-sat",
       "program_id": "adelaide-bpharm-hons",
       "qualification": "sat",
       "score": {
-        "value": null,
+        "value": 1220,
         "academic_year": 2027,
         "source_year": null,
-        "source_id": "adelaide",
+        "source_id": "adelaide-pharmacy-current",
         "source_url": "https://adelaide.edu.au/study/degrees/bachelor-of-pharmacy-honours/",
         "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
-        "note": "Pharmacy 전용 2027 환산 기준 확인 중"
+        "verified_date": "2026-09-25",
+        "status": "latest_published",
+        "note": ""
       },
-      "scale": null,
-      "calculation": null
+      "scale": "1600",
+      "calculation": ""
     },
     {
       "id": "adelaide-bpharm-hons-ib",
       "program_id": "adelaide-bpharm-hons",
       "qualification": "ib",
       "score": {
-        "value": null,
+        "value": 30,
         "academic_year": 2027,
         "source_year": null,
-        "source_id": "adelaide",
+        "source_id": "adelaide-pharmacy-current",
         "source_url": "https://adelaide.edu.au/study/degrees/bachelor-of-pharmacy-honours/",
         "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
-        "note": "Pharmacy 전용 2027 환산 기준 확인 중"
+        "verified_date": "2026-09-25",
+        "status": "latest_published",
+        "note": ""
       },
-      "scale": null,
-      "calculation": null
+      "scale": "45",
+      "calculation": ""
     },
     {
       "id": "adelaide-bpharm-hons-alevel",
       "program_id": "adelaide-bpharm-hons",
       "qualification": "alevel",
       "score": {
-        "value": null,
+        "value": 10,
         "academic_year": 2027,
         "source_year": null,
-        "source_id": "adelaide",
+        "source_id": "adelaide-pharmacy-current",
         "source_url": "https://adelaide.edu.au/study/degrees/bachelor-of-pharmacy-honours/",
         "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
-        "note": "Pharmacy 전용 2027 환산 기준 확인 중"
+        "verified_date": "2026-09-25",
+        "status": "latest_published",
+        "note": ""
       },
-      "scale": null,
-      "calculation": null
+      "scale": "UK / Global GCE A-level 환산점수",
+      "calculation": ""
     },
     {
       "id": "adelaide-bpharm-hons-ossd",
       "program_id": "adelaide-bpharm-hons",
       "qualification": "ossd",
       "score": {
-        "value": null,
+        "value": 80,
         "academic_year": 2027,
         "source_year": null,
-        "source_id": "adelaide",
+        "source_id": "adelaide-pharmacy-current",
         "source_url": "https://adelaide.edu.au/study/degrees/bachelor-of-pharmacy-honours/",
         "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
-        "note": "Pharmacy 전용 2027 환산 기준 확인 중"
+        "verified_date": "2026-09-25",
+        "status": "latest_published",
+        "note": ""
       },
-      "scale": null,
-      "calculation": null
+      "scale": "Ontario Secondary School Diploma 평균 %",
+      "calculation": ""
     },
     {
       "id": "adelaide-bpharm-hons-korean_high_school",
@@ -6647,18 +6646,18 @@
       "program_id": "newcastle-bpharm-hons",
       "qualification": "ib",
       "score": {
-        "value": null,
+        "value": 28,
         "academic_year": 2027,
-        "source_year": null,
-        "source_id": "newcastle",
-        "source_url": "https://www.newcastle.edu.au/degrees/bachelor-of-pharmacy-honours",
-        "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
-        "note": "Pharmacy 전용 2027 환산 기준 확인 중"
+        "source_year": 2027,
+        "source_id": "newcastle-prospectus-2027",
+        "source_url": "https://www.newcastle.edu.au/__data/assets/pdf_file/0020/1102565/2025-1079-International-Prospectus-2027-ROW.pdf",
+        "source_type": "official_guide",
+        "verified_date": "2026-09-25",
+        "status": "confirmed_2027",
+        "note": ""
       },
-      "scale": null,
-      "calculation": null
+      "scale": "45",
+      "calculation": ""
     },
     {
       "id": "newcastle-bpharm-hons-alevel",
@@ -7367,36 +7366,36 @@
       "program_id": "unsw-bpharm-hons",
       "qualification": "ib",
       "score": {
-        "value": null,
+        "value": 36,
         "academic_year": 2027,
-        "source_year": null,
-        "source_id": "unsw",
+        "source_year": 2027,
+        "source_id": "unsw-2027-course",
         "source_url": "https://www.unsw.edu.au/study/undergraduate/bachelor-of-pharmaceutical-medicine-master-of-pharmacy",
         "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
-        "note": "Pharmacy 전용 2027 환산 기준 확인 중"
+        "verified_date": "2026-09-25",
+        "status": "confirmed_2027",
+        "note": "UNSW course page states entry requirements remain unchanged when the degree becomes Doctor of Pharmacy from 2027."
       },
-      "scale": null,
-      "calculation": null
+      "scale": "45",
+      "calculation": ""
     },
     {
       "id": "unsw-bpharm-hons-alevel",
       "program_id": "unsw-bpharm-hons",
       "qualification": "alevel",
       "score": {
-        "value": null,
+        "value": 15,
         "academic_year": 2027,
-        "source_year": null,
-        "source_id": "unsw",
+        "source_year": 2027,
+        "source_id": "unsw-2027-course",
         "source_url": "https://www.unsw.edu.au/study/undergraduate/bachelor-of-pharmaceutical-medicine-master-of-pharmacy",
         "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
-        "note": "Pharmacy 전용 2027 환산 기준 확인 중"
+        "verified_date": "2026-09-25",
+        "status": "confirmed_2027",
+        "note": "2026 published entry score; UNSW states entry requirements remain unchanged for the 2027 PharmD name change."
       },
-      "scale": null,
-      "calculation": null
+      "scale": "UNSW A-level aggregate",
+      "calculation": ""
     },
     {
       "id": "unsw-bpharm-hons-ossd",
@@ -16642,6 +16641,30 @@
       "url": "https://www.griffith.edu.au/__data/assets/pdf_file/0035/2193587/Griffith-University-2026-International-Study-Guide-Digital.pdf",
       "source_year": 2026,
       "source_type": "official_guide",
+      "verified_date": "2026-09-25"
+    },
+    {
+      "id": "jcu-intl-2025",
+      "title": "JCU 2025 International Guide · Pharmacy entry scores",
+      "url": "https://www.jcu.edu.au/__data/assets/pdf_file/0018/2205414/2025-International-Guide.pdf",
+      "source_year": 2025,
+      "source_type": "official_guide",
+      "verified_date": "2026-09-25"
+    },
+    {
+      "id": "newcastle-prospectus-2027",
+      "title": "University of Newcastle · 2027 International Prospectus",
+      "url": "https://www.newcastle.edu.au/__data/assets/pdf_file/0020/1102565/2025-1079-International-Prospectus-2027-ROW.pdf",
+      "source_year": 2027,
+      "source_type": "official_guide",
+      "verified_date": "2026-09-25"
+    },
+    {
+      "id": "adelaide-pharmacy-current",
+      "title": "Adelaide University · Bachelor of Pharmacy (Honours) international entry requirements",
+      "url": "https://adelaide.edu.au/study/degrees/bachelor-of-pharmacy-honours/",
+      "source_year": null,
+      "source_type": "official_course",
       "verified_date": "2026-09-25"
     }
   ],
