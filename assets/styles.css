@@ -49,3 +49,7 @@
 @media(max-width:1050px){.difference-cards{grid-template-columns:repeat(2,minmax(0,1fr))}.pathway-hub-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.university-directory-intro{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:780px){.difference-panel{display:none}.difference-cards{grid-template-columns:1fr}.pharmacy-school-grid{grid-template-columns:1fr}.pathway-hub-grid{grid-template-columns:1fr 1fr}.visa-grid{grid-template-columns:1fr}.secondary-tool{display:block}.secondary-tool a{display:block;margin-top:7px}.school-keyfacts{grid-template-columns:1fr 1fr}.university-directory-intro{grid-template-columns:1fr 1fr}}
 @media(max-width:490px){.pathway-hub-grid{grid-template-columns:1fr}.university-directory-intro{grid-template-columns:1fr}.school-keyfacts{grid-template-columns:1fr}.school-keyfacts>div{padding-right:0!important}.school-card-head h3{font-size:18px}}
+
+
+/* State nomination + housing detail · 2026-09-25 */
+.state-nomination-card{margin:14px 0 18px;border:1px solid var(--line);border-radius:13px;background:#f8faf7;padding:19px 20px}.state-nomination-card .state-status{display:inline-flex;padding:5px 8px;border-radius:999px;background:#e8f1eb;color:var(--teal);font-size:9px;font-weight:800;letter-spacing:.04em}.state-nomination-card h3{font-size:15px;margin:12px 0 7px}.state-nomination-card p{font-size:11px;line-height:1.7;color:var(--muted);margin:0}.housing-card>p{font-size:11px;line-height:1.7;color:var(--muted)}.housing-card .facts-grid{margin-bottom:12px}
