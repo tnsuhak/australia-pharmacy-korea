@@ -975,19 +975,6 @@
     "note": "한국 고교 11학년 등 country-specific 2027 Foundation 학력표는 별도 확인합니다."
   },
   {
-    "entity_id": "uwa-bpharm-hons-direct",
-    "field_path": ".entry_routes[25].progression",
-    "value": null,
-    "academic_year": 2027,
-    "source_year": null,
-    "source_id": "uwa",
-    "source_url": "https://www.uwa.edu.au/study/courses/bachelor-of-human-sciences-pharmaceutical-health-and-doctor-of-pharmacy",
-    "source_type": "official_course",
-    "verified_date": "2026-09-25",
-    "status": "pending_2027",
-    "note": ""
-  },
-  {
     "entity_id": "uwa-foundation",
     "field_path": ".entry_routes[26].english",
     "value": null,
@@ -4075,33 +4062,7 @@
   },
   {
     "entity_id": "uwa-global-excellence",
-    "field_path": ".scholarships[15].amount",
-    "value": 20,
-    "academic_year": 2027,
-    "source_year": 2027,
-    "source_id": "uwa-scholarship-current",
-    "source_url": "https://www.uwa.edu.au/study/scholarships-and-fees/scholarships/international-scholarships/global-excellence-scholarship",
-    "source_type": "official_scholarship",
-    "verified_date": "2026-09-25",
-    "status": "pending_2027",
-    "note": ""
-  },
-  {
-    "entity_id": "uwa-global-excellence",
     "field_path": ".scholarships[15].number_available",
-    "value": null,
-    "academic_year": 2027,
-    "source_year": 2027,
-    "source_id": "uwa-scholarship-current",
-    "source_url": "https://www.uwa.edu.au/study/scholarships-and-fees/scholarships/international-scholarships/global-excellence-scholarship",
-    "source_type": "official_scholarship",
-    "verified_date": "2026-09-25",
-    "status": "pending_2027",
-    "note": ""
-  },
-  {
-    "entity_id": "uwa-global-excellence",
-    "field_path": ".scholarships[15].course_exclusion",
     "value": null,
     "academic_year": 2027,
     "source_year": 2027,
