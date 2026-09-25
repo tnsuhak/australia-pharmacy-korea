@@ -15,10 +15,10 @@ test('모든 학교에 수능 숫자를 채우지 않음',()=>assert.equal(check
 test('Sydney 내신만으로 Direct 평가 불가, Foundation 선택은 개별 확인',()=>{assert.equal(check('sydney-bpharm-hons',{qualification:'korean_high_school',route:'direct'}).state,'excluded');assert.equal(check('sydney-bpharm-hons',{qualification:'korean_high_school',route:'foundation'}).state,'pending');});
 test('UQ 7월 빠른 과정과 2월 빠른 과정을 구분',()=>{assert.equal(check('uq-bpharm-hons',{duration:'fast',intake:'7'}).state,'match');assert.equal(check('uq-bpharm-hons',{duration:'fast',intake:'2'}).state,'excluded');});
 test('7월 본과와 2월 Accelerated Foundation 시작을 혼동하지 않음',()=>{assert.equal(check('uq-bpharm-hons',{route:'foundation',intake:'2'}).state,'match');assert.equal(check('uq-bpharm-hons',{route:'foundation',intake:'7'}).state,'excluded');});
-test('UQ 신설 PharmD 미승인 상태는 기본적으로 pending',()=>assert.equal(check('uq-pharmd',{}).state,'pending'));
+test('UQ 신설 PharmD는 모집 중이지만 전문인증 미승인 때문에 기본 pending',()=>{assert.equal(catalog.entry_routes.find(x=>x.id==='uq-pharmd-direct').availability.value,true);assert.equal(check('uq-pharmd',{}).state,'pending');});
 test('신설 PharmD는 기존 BPharm 수능을 복사하지 않음',()=>assert.equal(check('uq-pharmd',{qualification:'csat',score:'999',route:'direct'}).state,'pending'));
 test('등록 실무 통합 필터: Monash와 UNSW 구별',()=>{assert.equal(check('monash-bpharm-hons',{structure:'integrated'}).state,'match');assert.equal(check('unsw-bpharm-hons',{structure:'integrated'}).state,'excluded');});
-test('4년 Exit 미확인 Sydney를 자동 통과시키지 않음',()=>{assert.equal(check('monash-bpharm-hons',{structure:'exit'}).state,'match');assert.equal(check('sydney-bpharm-hons',{structure:'exit'}).state,'pending');});
+test('4년 Exit: Monash와 Sydney는 공식 학사 Exit 확인',()=>{assert.equal(check('monash-bpharm-hons',{structure:'exit'}).state,'match');assert.equal(check('sydney-bpharm-hons',{structure:'exit'}).state,'match');const p=catalog.programs.find(x=>x.id==='sydney-bpharm-hons');assert.equal(p.bachelor_award_year.value,4);assert.equal(p.exit_degree.value,'Bachelor of Pharmacy (Honours)');});
 test('졸업자는 Monash GE도 추가 대학 과목 심사 필요',()=>{assert.equal(check('monash-bpharm-hons',{qualification:'graduate'}).state,'pending');assert.equal(check('jcu-bpharm-hons',{qualification:'graduate'}).state,'excluded');});
 test('UNSW 20%는 한국 국적 기본 장학 필터에 포함되지 않음',()=>{assert.equal(check('unsw-bpharm-hons',{cost:'20'}).state,'excluded');assert.equal(check('sydney-bpharm-hons',{cost:'20'}).state,'match');});
 test('Curtin 2027 Global Merit 20%는 약대 장학 필터에 포함',()=>assert.equal(check('curtin-bpharm-hons',{cost:'20'}).state,'match'));
