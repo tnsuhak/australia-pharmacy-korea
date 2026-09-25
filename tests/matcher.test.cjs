@@ -5,7 +5,7 @@ const {classify}=require('../assets/matcher.js');
 function program(id){const p=structuredClone(catalog.programs.find(p=>p.id===id));for(const c of ['requirements','english','intakes','tuition','professional_registration'])p[c]=catalog[c].find(x=>x.program_id===id);for(const c of ['entry_routes','qualifications'])p[c]=catalog[c].filter(x=>x.program_id===id);for(const c of ['scholarships','accommodation'])p[c]=catalog[c].filter(x=>x.university_id===p.university_id);return p;}
 const check=(id,f)=>classify(program(id),f);
 test('화학 없음: JCU는 검토 가능, Monash Direct는 제외',()=>{assert.equal(check('jcu-bpharm-hons',{chemistry:'no',route:'direct'}).state,'match');assert.equal(check('monash-bpharm-hons',{chemistry:'no',route:'direct'}).state,'excluded');});
-test('화학 미확인 대학은 필수 아님으로 통과시키지 않음',()=>assert.equal(check('latrobe-bpharm-hons',{chemistry:'no'}).state,'pending'));
+test('La Trobe는 현재 공식자료상 별도 과학 선수과목 없음 + 국제학생 지원 가능',()=>{assert.equal(check('latrobe-bpharm-hons',{chemistry:'no'}).state,'match');const t=catalog.tuition.find(x=>x.program_id==='latrobe-bpharm-hons');assert.equal(t.annual.value,null);assert.equal(t.annual.status,'pending_2027');});
 test('IELTS 6.5 필터 실제 차등: UQ 통과, Canberra 7.0 제외',()=>{assert.equal(check('uq-bpharm-hons',{english:'6.5'}).state,'match');assert.equal(check('canberra-bpharm-hons',{english:'6.5'}).state,'excluded');});
 test('Newcastle 영어 공식자료 충돌은 자동 통과시키지 않음',()=>assert.equal(check('newcastle-bpharm-hons',{english:'7'}).state,'pending'));
 test('UTas 2027 영어 IELTS 6.5는 공식 확인값으로 필터 통과',()=>assert.equal(check('utas-bpharm-hons',{english:'6.5'}).state,'match'));
