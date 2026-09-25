@@ -245,7 +245,7 @@ def routecards(rs):
 def pathway_status(uid,t):
     rr=[r for r in university_routes(uid) if r['type']==t]
     if t=='graduate' and uid=='uwa':return '<strong class="yes">있음</strong><span>2년 Doctor of Pharmacy</span>'
-    if not rr:return '<strong class="none">현재 공식 연계 없음</strong>'
+    if not rr:return '<strong class="none">공식 연계 미확인</strong>'
     confirmed=[r for r in rr if r['availability']['value'] is True]
     pending=[r for r in rr if r['availability']['value'] is None]
     if confirmed:
@@ -255,7 +255,7 @@ def pathway_status(uid,t):
         if t=='graduate':return '<strong class="yes">있음</strong><span>'+E(r['title'])+'</span>'
         return '<strong class="yes">있음</strong>'
     if pending:return '<strong class="pending">2027 발표 대기</strong>'
-    return '<strong class="none">현재 공식 연계 없음</strong>'
+    return '<strong class="none">공식 연계 미확인</strong>'
 def pathway_matrix(uid):
     return '<div class="pathway-status-grid"><div><b>Direct</b><strong class="yes">가능</strong><span>약대 1학년</span></div><div><b>Foundation</b>'+pathway_status(uid,'foundation')+'</div><div><b>Diploma</b>'+pathway_status(uid,'diploma')+'</div><div><b>Graduate Entry</b>'+pathway_status(uid,'graduate')+'</div></div>'
 def scholarcards(ss):
