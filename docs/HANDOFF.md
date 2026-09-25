@@ -153,3 +153,14 @@ ZIP 압축을 푼 뒤 `offline-preview/index.html`을 브라우저에서 여세�
 - Removed the per-university duplicate consultation section because the global TNS consultation CTA follows every page.
 - Updated stale Compare copy so UWA's 4-year school-leaver Bachelor + Doctor of Pharmacy is included, while graduate-only routes remain out of the undergraduate comparison.
 - Production remains unchanged; review in PR #1 Deploy Preview before merge.
+
+
+## Plain-language copy rule — 2026-09-25
+
+- User-facing copy must be understood on the first read by a Korean student or parent with no Australia-pharmacy background.
+- Lead with the direct outcome: e.g. "Diploma → 약대 2학년", not "대학 1학년 상당 과정 + 학점인정".
+- Avoid vague or bureaucratic phrasing such as "상당 과정", "검토", "구조상", "가깝습니다", "이해하면 됩니다", "일 수 있습니다" when a direct statement is supported.
+- Put the main fact in the headline/body. Move exceptions or uncertainty into a short secondary note.
+- Prefer Korean labels before technical English. Keep English only when it is the actual course/registration term.
+- Do not weaken factual safeguards: when official information is genuinely pending, say "발표 대기", "승인 대기", or name the exact missing fact instead of using a vague hedge.
+- Keep this rule for all future copy changes in this site.
