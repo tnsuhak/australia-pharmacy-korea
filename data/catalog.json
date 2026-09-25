@@ -15296,6 +15296,54 @@
       "source_year": null,
       "source_type": "official_course",
       "verified_date": "2026-09-25"
+    },
+    {
+      "id": "homeaffairs-485",
+      "title": "Australian Home Affairs · Temporary Graduate visa (subclass 485) Post-Higher Education Work",
+      "url": "https://immi.homeaffairs.gov.au/Visa-subsite/Pages/work/485-post-study-work.aspx",
+      "source_year": 2026,
+      "source_type": "government",
+      "verified_date": "2026-09-25"
+    },
+    {
+      "id": "homeaffairs-second485",
+      "title": "Australian Home Affairs · Second Post-Higher Education Work stream",
+      "url": "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/temporary-graduate-485/second-post-higher-education-work",
+      "source_year": 2026,
+      "source_type": "government",
+      "verified_date": "2026-09-25"
+    },
+    {
+      "id": "homeaffairs-regional",
+      "title": "Australian Home Affairs · Designated regional area postcodes",
+      "url": "https://immi.homeaffairs.gov.au/supporting/Pages/Work/187-regional-postcodes.aspx",
+      "source_year": 2026,
+      "source_type": "government",
+      "verified_date": "2026-09-25"
+    },
+    {
+      "id": "jcu-2027-campus",
+      "title": "JCU · 2027 course changes · Pharmacy campuses",
+      "url": "https://www.jcu.edu.au/future-students/schools/2027-course-changes",
+      "source_year": 2027,
+      "source_type": "official_course",
+      "verified_date": "2026-09-25"
+    },
+    {
+      "id": "utas-2027-campus",
+      "title": "University of Tasmania · Bachelor of Pharmacy with Honours 2027",
+      "url": "https://www.utas.edu.au/courses/health/courses/54d-bachelor-of-pharmacy-with-honours",
+      "source_year": 2027,
+      "source_type": "official_course",
+      "verified_date": "2026-09-25"
+    },
+    {
+      "id": "uwa-dpharm",
+      "title": "UWA · Doctor of Pharmacy graduate entry",
+      "url": "https://www.uwa.edu.au/study/courses/doctor-of-pharmacy",
+      "source_year": 2027,
+      "source_type": "official_course",
+      "verified_date": "2026-09-25"
     }
   ],
   "conflicts": [
