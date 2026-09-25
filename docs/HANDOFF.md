@@ -64,6 +64,10 @@ UWA는 16번째 비교 대학으로 포함돼 있으며, 학교졸업자용 4년
 - Monash Foundation: 현재 Monash College destination-degree live page는 새 P6007을 Foundation score 75%, English 65%, Maths 50% + Chemistry 50%로 표시합니다. 반면 2027 Pathway Programs PDF Pharmacy 표에는 legacy P6001이 남아 있어 `source_conflict`로 유지했습니다. Standard 2027 일정은 2월/8월 시작, 약 12개월로 반영했습니다.
 - La Trobe: 2027 course page의 Semester 1 · 2027년 3월 시작을 Direct route에도 동기화했습니다. 국제학생 2027 학비는 아직 확정값을 넣지 않았습니다.
 
+- 2026-09-25 추가 점검: Curtin 최신 공식 Pharmacy 페이지는 fees를 “not currently available”, intake를 “No intakes available”로 표시합니다. 따라서 2027 국제학생 학비와 Direct 시작월은 계속 pending으로 유지합니다.
+- La Trobe Pharmacy 공식 페이지는 국제학생이 연중 지원 가능하다고 안내하므로 `international_recruitment=true`로 전환하되, 페이지의 2027 정보 변경 가능성 고지와 국제학생 학비 미표시를 감안해 `latest_published`로 보수적으로 처리했습니다.
+- Queensland: 2026-27 QSOL consultation은 2026-07-07 종료됐지만 새 QSOL이 아직 공개되지 않았습니다. 공개 중인 onshore list는 2025-26이며 Hospital/Retail Pharmacist는 491만 표시되므로 새 회계연도 확정 자격으로 이식하지 않습니다.
+
 ## Source conflict / 적용 범위
 
 | 항목 | 상태 | 처리 |
