@@ -3016,19 +3016,6 @@
     "note": ""
   },
   {
-    "entity_id": "sydney-bpharm-hons",
-    "field_path": ".requirements[13].physics",
-    "value": null,
-    "academic_year": 2027,
-    "source_year": 2027,
-    "source_id": "sydney",
-    "source_url": "https://www.sydney.edu.au/dam/corporate/documents/study/how-to-apply/international-admission-guide.pdf",
-    "source_type": "official_course",
-    "verified_date": "2026-09-24",
-    "status": "pending_2027",
-    "note": ""
-  },
-  {
     "entity_id": "unsw-bpharm-hons",
     "field_path": ".requirements[14].biology",
     "value": null,
