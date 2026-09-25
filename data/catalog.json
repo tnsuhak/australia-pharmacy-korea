@@ -11,12 +11,12 @@
       "campus": {
         "value": "Townsville · Cairns · Mackay",
         "academic_year": 2027,
-        "source_year": 2026,
-        "source_id": "apc",
-        "source_url": "https://www.pharmacycouncil.org.au/education-provider/accreditation/pharmacy-degree-programs-australia/accredited-pharmacy-degree-programs/",
-        "source_type": "accreditation",
-        "verified_date": "2026-09-24",
-        "status": "latest_published",
+        "source_year": 2027,
+        "source_id": "jcu-2027-campus",
+        "source_url": "https://www.jcu.edu.au/future-students/schools/2027-course-changes",
+        "source_type": "official_course",
+        "verified_date": "2026-09-25",
+        "status": "confirmed_2027",
         "note": ""
       },
       "short": "JCU",
@@ -413,23 +413,23 @@
       },
       "highlights": [
         "3년 Fast-track",
-        "화학 권장",
-        "2월 입학"
+        "Townsville · Cairns · Mackay",
+        "화학 권장 · 수학 필수"
       ],
-      "editorial": "화학은 필수가 아닙니다. 3년 Fast-track이라 학업 속도가 빠릅니다.",
+      "editorial": "2027 공식 course changes에서 Townsville·Cairns·Mackay 모두 2월 시작의 3년 Trimester 과정으로 확인됩니다. 현재 국제학생 course page도 세 캠퍼스를 모두 표시하지만 학비는 아직 2026 A$31,710을 보여주므로 2027 학비로 승격하지 않습니다.",
       "review_items": [
-        "2027 국제학생 캠퍼스별 모집",
-        "3년 개편 과정의 국제학생 연간 학비",
+        "2027 국제학생 학비",
         "한국 학력 환산표"
       ],
       "decision_lens": {
         "why": [
           "3년 Fast-track",
-          "Townsville·Cairns·Mackay 모두 Regional",
-          "화학은 권장, 수학은 필요"
+          "2027 Townsville·Cairns·Mackay 모두 2월 시작",
+          "화학은 권장 · General Mathematics 필요"
         ],
         "watch": [
-          "2027 국제학생 학비 발표 대기"
+          "현재 국제학생 course page 학비 A$31,710은 2026 표시값",
+          "2027 국제학생 학비·한국 학력 환산표 발표 대기"
         ]
       }
     },
