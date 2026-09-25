@@ -903,18 +903,22 @@
       },
       "highlights": [
         "4년 학사",
-        "7월은 학점인정 조건부"
+        "CSAT 345",
+        "15% Merit 자동심사"
       ],
-      "editorial": "일반 Direct는 2월 시작입니다. 7월 입학은 학점이 인정된 국제학생을 개별 심사합니다.",
-      "review_items": [],
+      "editorial": "일반 Direct는 2월 시작입니다. 7월 입학은 학점이 인정된 국제학생을 개별 심사합니다. 현재 과정 페이지의 A$54,300은 2026 입학생 학비라고 명시돼 있어 2027 학비로 사용하지 않습니다.",
+      "review_items": [
+        "2027 국제학생 학비"
+      ],
       "decision_lens": {
         "why": [
           "4년 Bachelor of Pharmacy (Honours)",
-          "7월은 학점 인정 학생 개별 심사",
-          "Adelaide 지역요건 충족 시 두 번째 485 +1년"
+          "CSAT 345 · IB 30 · SAT 1220",
+          "Adelaide Merit Scholarship 15% 자동심사"
         ],
         "watch": [
-          "7월 입학을 일반 고졸 Direct 입학으로 보면 안 됨"
+          "현재 A$54,300은 공식 페이지가 2026 입학생 학비라고 명시",
+          "7월 입학은 학점 인정 학생 case-by-case"
         ]
       }
     },
@@ -4171,7 +4175,7 @@
         "source_type": "official_pathway",
         "verified_date": "2026-09-25",
         "status": "confirmed_2027",
-        "note": ""
+        "note": "Current live Griffith College 2027 key-dates page is used. The older 2027 Quick Guide shows different T2/T3 dates, so the live page takes precedence."
       },
       "progression": {
         "value": "Diploma 수료 + Pharmacy progression quota · 정원 초과 시 completed Diploma GPA 순 선발",
@@ -4220,7 +4224,7 @@
         "source_type": "official_pathway",
         "verified_date": "2026-09-25",
         "status": "confirmed_2027",
-        "note": ""
+        "note": "2027 live key-dates page takes precedence over the older Quick Guide."
       },
       "pathway_fee": {
         "value": null,
@@ -6394,7 +6398,7 @@
       "program_id": "adelaide-bpharm-hons",
       "qualification": "csat",
       "score": {
-        "value": 340,
+        "value": 345,
         "academic_year": 2027,
         "source_year": null,
         "source_id": "adelaide-pharmacy-current",
@@ -6402,7 +6406,7 @@
         "source_type": "official_course",
         "verified_date": "2026-09-25",
         "status": "latest_published",
-        "note": ""
+        "note": "Current Adelaide University international admissions table lists South Korea CSAT 345."
       },
       "scale": "대학 공식 CSAT 기준",
       "calculation": "College Scholastic Ability Test (CSAT)"
@@ -10980,13 +10984,13 @@
       "annual": {
         "value": 54300,
         "academic_year": 2027,
-        "source_year": null,
+        "source_year": 2026,
         "source_id": "adelaide-fee-current",
         "source_url": "https://adelaide.edu.au/study/degrees/bachelor-of-pharmacy-honours/",
         "source_type": "official_course",
         "verified_date": "2026-09-25",
         "status": "latest_published",
-        "note": "Current international course page value; page does not label the fee year."
+        "note": "Official international course page states this A$54,300 fee is for students starting in 2026. Do not treat as 2027 tuition."
       },
       "official_total": {
         "value": null,
@@ -11003,13 +11007,13 @@
       "load_basis": {
         "value": "full-time annual load",
         "academic_year": 2027,
-        "source_year": null,
+        "source_year": 2026,
         "source_id": "adelaide-fee-current",
         "source_url": "https://adelaide.edu.au/study/degrees/bachelor-of-pharmacy-honours/",
         "source_type": "official_course",
         "verified_date": "2026-09-25",
         "status": "latest_published",
-        "note": ""
+        "note": "2026 published international annual full-time fee basis."
       },
       "increase_note": "연도별 인상 및 실제 수강량에 따라 달라질 수 있습니다."
     },
@@ -17190,9 +17194,9 @@
     },
     {
       "id": "adelaide-fee-current",
-      "title": "Adelaide University · Bachelor of Pharmacy (Honours) international fee",
+      "title": "Adelaide University · Bachelor of Pharmacy (Honours) · published 2026 international fee",
       "url": "https://adelaide.edu.au/study/degrees/bachelor-of-pharmacy-honours/",
-      "source_year": null,
+      "source_year": 2026,
       "source_type": "official_course",
       "verified_date": "2026-09-25"
     },
