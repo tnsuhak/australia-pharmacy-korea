@@ -65,7 +65,10 @@ source('curtin-housing-current','Curtin · Perth on-campus accommodation','https
 source('curtin-contract-2026','Curtin · 2026 on-campus contract dates','https://www.curtin.edu.au/study/help-support/app/answers/detail/a-id/2377/what-are-the-contract-dates-for-on-campus-accommodation/',2026,'official_accommodation')
 source('qut-scholarship-2027','QUT 2027 International Guide · International Merit Scholarship','https://cms.qut.edu.au/__data/assets/pdf_file/0003/1566471/27516-Year-12-International-Guide-2027_DIGITAL_F.pdf',2027,'official_guide')
 source('uq-scholarship-2027','UQ International Excellence Scholarship 2027','https://scholarships.uq.edu.au/scholarship/uq-international-excellence-scholarship',2027,'official_scholarship')
+source('uq-guaranteed-atar-2027','UQ · 2027 Guaranteed ATAR · Pharmacy 80','https://study.uq.edu.au/admissions/undergraduate/review-entry-requirements/guaranteed-atar',2027,'official_admissions')
+source('uq-standard-foundation-2027','UQ College · Standard Foundation 2026/2027 dates and fees','https://uqcollege.uq.edu.au/study/pathways-uq/foundation-program/standard-foundation-program',2027,'official_pathway')
 source('curtin-scholarship-2027','Curtin Global Merit Scholarship · 2027 commencement','https://scholarships.curtin.edu.au/Scholarship/?id=7986',2027,'official_scholarship')
+source('curtin-college-fees-2027','Curtin College · 2027 international Diploma fees','https://www.curtincollege.edu.au/how-apply/international/fees-payment/',2027,'official_pathway')
 source('utas-scholarship-2027','UTas Tasmanian International Merit Scholarship · 2027 terms','https://www.utas.edu.au/study/scholarships-fees-and-costs/international-scholarships/tasmanian-international-merit-scholarship',2027,'official_scholarship')
 source('utas-ipc-fees-2027','UTas International Pathway College · 2027 Foundation fees and intakes','https://utas.up.education/fees-and-intakes/',2027,'official_pathway')
 source('utas-ipc-foundation','UTas International Pathway College · Foundation Pharmacy progression','https://utas.up.education/foundation-studies/',None,'official_pathway')
@@ -75,6 +78,7 @@ source('adelaide-scholarship','Adelaide Merit Scholarship 15%','https://adelaide
 source('latrobe-scholarship-2027','La Trobe High Achiever Scholarship · 2026/2027','https://www.latrobe.edu.au/study/scholarships/other/la-trobe-high-achiever-scholarship',2027,'official_scholarship')
 source('latrobe-scholarship-courses','La Trobe · Courses offering international scholarships','https://www.latrobe.edu.au/study/scholarships/advice/courses-offering-international-scholarships',2027,'official_scholarship')
 source('latrobe-health-innovation-2027','La Trobe Health Innovation Scholarship · 30% · 2026/2027 intakes','https://www.latrobe.edu.au/international/applying/scholarships',2027,'official_scholarship')
+source('latrobe-scholarship-terms-2027','La Trobe international scholarship terms · 2026/2027 intakes','https://www.latrobe.edu.au/international/tc/la-trobe-high-achievers-scholarship-terms-and-conditions',2027,'official_scholarship')
 source('canberra-guide-2027','University of Canberra International Course Guide 2027 · Scholarships','https://www.canberra.edu.au/content/dam/uc/documents/agent-marketing-toolkit/international-course-guide/international-course-guide.pdf',2027,'official_guide')
 source('uwa-scholarship-current','UWA Global Excellence Scholarship','https://www.uwa.edu.au/study/scholarships-and-fees/scholarships/international-scholarships/global-excellence-scholarship',2027,'official_scholarship')
 source('newcastle-scholarship-2027-terms','Newcastle International Excellence Scholarship 2027 · Terms & Conditions · excluded programs','https://www.newcastle.edu.au/__data/assets/pdf_file/0014/1136300/UNI_053-International-Excellence-Scholarship-2027-T-and-Cs-07072026.pdf',2027,'official_scholarship')
@@ -256,13 +260,14 @@ row(english,'jcu')['pte_overall']=fact(65,'jcu-english-band3a'); row(english,'jc
 setp('utas',highlights=['3년 Fast-track','Cradle Coast · Hobart · Launceston','2027 학비·30% Merit'],editorial='2027 과정은 Cradle Coast·Hobart·Launceston 세 캠퍼스에서 국제학생이 전체 3년을 이수할 수 있습니다. 일반 4년 약학과 분량을 3년에 압축해 연간 수강량이 많은 편입니다.')
 fee('utas',61267,total=198050,load='연간 133 credit points 기준'); eng('utas',6.5,{'L':6,'R':6,'W':6,'S':6},src='utas'); intake('utas',None,'Semester 1 · Cradle Coast / Hobart / Launceston',src='utas'); req('utas','Chemistry 또는 Physical Sciences 중 1과목','required','not_required','not_required','Mathematics 1과목 + Chemistry 또는 Physical Sciences에서 satisfactory achievement',src='utas-2027-campus')
 setp('curtin',highlights=['College → Year 2','175 credits','진급 CWA 확인'],editorial='Curtin College Diploma 후 약대 2학년으로 진학합니다. Stage 2 CWA 70%와 PHAR1002가 필요합니다.',review_items=['국제학생 2027 학비','2027 국제학생 Direct 시작월','Global Merit의 Pharmacy 제외 여부']); eng('curtin',7.0,{'L':7,'R':7,'W':7,'S':7},src='curtin')
-setp('uq',duration_label=fact('2월 4년 · 7월 약 3.5년','uq'),highlights=['2월 4년','7월 3.5년','Accelerated Foundation'],editorial='2월 입학은 4년, 7월 입학은 약 3.5년입니다. 새 5년 PharmD와는 다른 과정입니다.')
+setp('uq',duration_label=fact('2월 4년 · 7월 약 3.5년','uq'),highlights=['2027 Guaranteed ATAR 80','2월 4년 · 7월 3.5년','Accelerated Foundation'],editorial='2027 BPharm(Hons)은 2월 입학 4년, 7월 입학 약 3.5년입니다. UQ가 2027 Pharmacy guaranteed ATAR를 80으로 공개했으며, 해외학력은 별도 동등성 환산이 필요합니다. 새 5년 PharmD와는 다른 과정입니다.')
 req('uq','required','required','recommended',grade='English·수학·Chemistry: Queensland Year 12 C 또는 동등 수준.'); intake('uq',[2,7],'2월 22일 / 7월 26일'); fee('uq',60952,load='16 units 기준')
 eng('uq',6.5,{'L':6,'R':6,'W':6,'S':6},pte=64,pte_each=60,toefl={'overall':87,'L':19,'R':19,'W':21,'S':19})
 setp('adelaide',highlights=['4년 학사','CSAT 345','15% Merit 자동심사'],editorial='일반 Direct는 2월 시작입니다. 7월 입학은 학점이 인정된 국제학생을 개별 심사합니다. 현재 과정 페이지의 A$54,300은 2026 입학생 학비라고 명시돼 있어 2027 학비로 사용하지 않습니다.')
 intake('adelaide',[2],'2월 · 7월은 학점 인정 시 개별 심사'); fee('adelaide',54300,src='adelaide-fee-current',year=2026); req('adelaide','accepted','not_required','accepted','accepted','Biology, Chemistry 또는 Physics 중 1과목 또는 동등 수준',src='adelaide'); eng('adelaide',6.5,{'L':6,'R':6,'W':6,'S':6},src='adelaide')
 setp('griffith',highlights=['Direct H1 기준','Diploma → 2학년','80CP 인정'],editorial='Direct 입학과 Griffith College Diploma 경로가 있습니다. Direct는 최신 공개 국제가이드(2026) H1 기준으로 CSAT 331 · IB 28 · SAT 1080 · A-level 7을 참고할 수 있으나 2027 확정 환산표는 아직 확인 중입니다. Griffith College Diploma 후에는 80CP를 인정받고 약대 2학년으로 연결됩니다.',review_items=['2027 Direct 국제학력 환산표','2027 국제학생 본과 학비','Pharmacy 과목별 assumed knowledge/subject prerequisite 최신표']); intake('griffith',[3,7],'3월 · 7월 (2026 공개 기준)',src='griffith-2026-guide'); eng('griffith',7.0,None,src='griffith-2026-guide')
-setp('latrobe',international_recruitment=fact(True,'latrobe-2027-course',status='latest_published',note='현재 Pharmacy course page는 국제학생이 연중 지원 가능하다고 안내합니다. 2027 국제학생 학비는 별도 확인 중입니다.'),highlights=['Bendigo','4년 학사','국제학생 지원 가능'],editorial='Bendigo 캠퍼스 4년 약대입니다. 현재 과정 페이지는 2027년 3월 시작과 국제학생 연중 지원 가능을 안내하지만, 2027 국제학생 학비는 아직 확정 표시가 없어 계속 확인 중입니다.',review_items=['2027 국제학생 학비']); intake('latrobe',[3],'Semester 1 · 2027년 3월',src='latrobe-2027-course'); req('latrobe','not_required','not_required','not_required','not_required','별도 과학 선수과목 없음 · 영어 prerequisite만 적용',src='latrobe-health-guide'); eng('latrobe',6.5,{'L':6.5,'R':6.5,'W':6.5,'S':6.5},src='latrobe-health-guide')
+setp('latrobe',international_recruitment=fact(True,'latrobe-2027-course',status='latest_published',note='현재 Pharmacy course page는 국제학생이 연중 지원 가능하다고 안내합니다. 2027 국제학생 학비는 별도 확인 중입니다.'),highlights=['Bendigo Regional','4년 학사','30% Health Innovation'],editorial='Bendigo 캠퍼스 4년 약대입니다. 현재 과정 페이지는 2027년 3월 시작과 국제학생 연중 지원 가능을 안내하며, 졸업 후 1년 supervised internship이 별도입니다. 2027 국제학생 학비는 아직 확정 표시가 없어 계속 확인 중입니다.',review_items=['2027 국제학생 학비']); intake('latrobe',[3],'Semester 1 · 2027년 3월',src='latrobe-2027-course'); req('latrobe','not_required','not_required','not_required','not_required','별도 과학 선수과목 없음 · 영어 prerequisite만 적용',src='latrobe-health-guide'); eng('latrobe',6.5,{'L':6.5,'R':6.5,'W':6.5,'S':6.5},src='latrobe-health-guide')
+_latrobe_reg=row(registration,'latrobe'); _latrobe_reg['supervised_practice_in_degree']=fact(True,'latrobe-2027-course',note='과정 중 community/hospital 등 clinical placement 포함'); _latrobe_reg['itp_in_degree']=fact(False,'latrobe-2027-course',note='등록용 1년 supervised internship은 학위 밖에서 진행'); _latrobe_reg['post_graduation_internship']=fact(True,'latrobe-2027-course',note='졸업 후 1년 supervised internship + Pharmacy Board exams 필요')
 setp('qut',highlights=['수학·화학 assumed knowledge','4년 학사','2027 학비 A$46,200'],editorial='QUT Pharmacy는 Chemistry와 Mathematical Methods/Specialist Mathematics를 필수 prerequisite가 아니라 assumed knowledge로 안내합니다. 미이수 학생은 지원 자체가 막히는 것으로 표시하지 않고 bridging study 안내와 함께 구분합니다.')
 req('qut','assumed','assumed',grade='Chemistry + Mathematical Methods/Specialist Mathematics는 assumed knowledge',src='qut-fee-2027'); eng('qut',6.5,{'L':6,'R':6,'W':6,'S':6},pte=58,pte_each=50,toefl={'overall':79,'L':16,'R':16,'W':21,'S':18}); intake('qut',[2],'2월',src='qut-fee-2027'); fee('qut',46200,src='qut-fee-2027',year=2027,load='96 credit points 기준')
 setp('rmit',highlights=['4년','RMIT Foundation 가능','2027 학비 A$49,920'],editorial='Bundoora 캠퍼스 4년 약대입니다. 한국 고교·수능 환산표가 명확하고 RMIT Foundation으로도 준비할 수 있습니다.')
@@ -348,8 +353,15 @@ routes[-1]['pathway_fee']=fact(None,'griffith-college-health',status='pending_20
 route('curtin','curtin-college','diploma','Curtin College · Pharmacy Diploma','curtin-college',175,2,'Stage 2: 12개월 · Stage 1 필요 시 8–12개월 추가','Stage 1: 2월/6월 · Stage 2: 2월','Stage 2 CWA 70% + PHAR1002 Pharmacy Practice 1(12월) 추가 이수','Diploma 완료 시 175 credits를 인정받고, 12월 PHAR1002를 추가 이수한 뒤 약대 2학년으로 진학합니다.')
 routes[-1]['english']=fact('Stage 2 Pharmacy: IELTS 6.5 / 각 6.0 · PTE 58 / 각 50(2026년 8월 이전 시험 기준)','curtin-college-english')
 routes[-1]['qualification']=fact('Stage 2 한국: 고3 Rank 6 또는 고교 졸업 + CSAT 280/600 · Mathematics + Chemistry prerequisite','curtin-college-entry')
+routes[-1]['pathway_fee']=fact(44900,'curtin-college-fees-2027',year=2027,note='2027 Diploma of Health Sciences Stage 2 전체 학비. Stage 1이 필요한 학생은 2027 Stage 1 A$32,900이 추가됩니다.')
+route('uq','uq-standard-2027-entry','foundation','UQ College · Standard Foundation','uq-standard-foundation-2027',0,1,'약 10개월','2026-09-07 시작 → 2027-07-09 완료 · 본과 2027 Semester 2','BPharm 진급 GPA 5.0 · Academic English 5 · 선수과목 충족','2027년 7월 UQ Pharmacy 입학을 목표로 할 경우 Standard Foundation은 2026년 9월 시작 일정이 맞습니다. 2027년 2월 Standard 시작은 UQ 2028 Semester 1로 연결됩니다.')
+routes[-1]['intake_months']=fact([9],'uq-standard-foundation-2027',year=2026,status='latest_published',note='2027 BPharm Semester 2 연결용 Foundation 시작월')
+routes[-1]['progression']=fact('BPharm 진급 GPA 5.0 · Academic English 5 · 선수과목 충족','uq-foundation')
+routes[-1]['pathway_fee']=fact(36280,'uq-standard-foundation-2027',year=2027,note='2026/2027 offer 기준 tuition fee. Enrolment·Student Services·교재비 포함 총액은 A$39,172.')
 route('uq','uq-accelerated','foundation','UQ College · Accelerated Foundation','uq-accelerated',0,1,'약 4개월','2027-02-15 시작 → 07-09 완료 · 본과 07-26','BPharm 진급 GPA 5.0 · Academic English 5 · 선수과목 충족','2월 Foundation → 7월 BPharm 일정입니다. GPA·영어·필수과목을 충족해야 합니다.')
 routes[-1]['progression']=fact('BPharm 진급 GPA 5.0 · Academic English 5 · 선수과목 충족','uq-foundation')
+routes[-1]['english']=fact('IELTS 6.0 · Writing 6.0 · Speaking/Listening/Reading 5.5 이상','uq-accelerated')
+routes[-1]['pathway_fee']=fact(24940,'uq-accelerated',year=2027,note='2026/2027 offer 기준 tuition fee. Enrolment·Student Services·교재비 포함 총액은 A$27,490.')
 route('uwa','uwa-foundation','foundation','UWA College · Foundation Program','uwa-foundation',0,1,'8개월 또는 12개월','UWA College 일정','UWA College Foundation 70 + Pharmacy 입학·영어조건','Foundation 수료 후 UWA 약대 1학년으로 진학합니다. UWA 약대 공식 페이지에 UWAC Foundation 70이 입학점수로 공개돼 있습니다. Combined degree 내 Doctor of Pharmacy progression은 65% WAM assurance 조건을 별도로 확인해야 합니다.')
 routes[-1]['progression']=fact('UWA College Foundation 70 + Pharmacy 입학·영어조건','uwa')
 _uwa_direct=next(x for x in routes if x['id']=='uwa-bpharm-hons-direct')
@@ -433,7 +445,7 @@ scholarship('curtin','curtin-global-merit','Curtin Global Merit Scholarship','cu
 scholarship('uq','uq-excellence','UQ International Excellence Scholarship','uq-scholarship-2027',25,'competitive',True,True,True,'학위 전체 기간','Offer holder 중 대학이 정한 경쟁점수','UQ 장학 약관 충족',note='별도 신청 없이 자동심사합니다. 다른 UQ tuition reduction과 중복 적용하지 않습니다.',pharmacy=True)
 scholarship('adelaide','adelaide-merit','Adelaide Merit Scholarship','adelaide-scholarship',15,'automatic',True,False,True,'표준 학위기간','IB 28 · A-level 9 · 기타 국제고교 ATAR 85 상당','Program Term GPA 4.5/7 유지',exclude='공식 제외과정에 Pharmacy 없음',note='Bachelor of Pharmacy (Honours)는 공식 제외과정 목록에 없습니다.',pharmacy=True)
 scholarship('latrobe','latrobe-high-achiever','La Trobe High Achiever Scholarship','latrobe-scholarship-2027',[20,25],'automatic',True,False,True,'학위 전체 기간','WAM/ATAR 상당 60–74.9: 20% · 75+: 25%','Full-time 등록·정상 학업진행',note='Bendigo Bachelor of Pharmacy (Honours)는 국제장학 eligible-course 목록에 포함됩니다.',pharmacy=True,pharmacy_src='latrobe-scholarship-courses')
-scholarship('latrobe','latrobe-health-innovation-30','La Trobe Health Innovation Scholarship · 30%','latrobe-health-innovation-2027',30,'pending',None,None,True,None,'Minimum WAM 75+','장학 약관 및 Offer 조건 충족',note='La Trobe Pharmacy 과정 페이지에 Future undergraduate · International 대상 30% Health Innovation Scholarship이 표시됩니다. 2026/2027 intake 약관이 적용되며 최종 수여·중복 가능 여부는 Offer에서 확인합니다.',pharmacy=True,pharmacy_src='latrobe-health-innovation-2027')
+scholarship('latrobe','latrobe-health-innovation-30','La Trobe Health Innovation Scholarship · 30%','latrobe-health-innovation-2027',30,'automatic',True,False,True,None,'Minimum WAM 75+','장학 약관 및 Offer 조건 충족',note='30% Health Innovation은 현재 국제장학 안내에서 50%/100%와 달리 별도 신청이 필요한 장학으로 표시되지 않습니다. 2026/2027 intake 약관상 수량이 제한되고 offer acceptance 순으로 확보되므로 조기 수락 조건을 확인해야 합니다.',pharmacy=True,pharmacy_src='latrobe-health-innovation-2027')
 scholarship('qut','qut-merit','QUT International Merit Scholarship','qut-scholarship-2027',25,'automatic',True,False,True,'학위 전체 기간','입학 성적 기준 충족','QUT 최소 GPA 조건 유지',note='2027 국제학생 가이드 기준. 전 학부/faculty에 제공되는 International Merit Scholarship입니다.',pharmacy=True)
 scholarship('newcastle','newcastle-excellence','International Excellence Scholarship 2027','newcastle-scholarship',20,'course_excluded',True,False,True,'해당 없음',None,None,500,'Bachelor of Pharmacy (Honours)','20% 장학 자체는 2027 국제학생 장학이지만 Bachelor of Pharmacy (Honours)는 공식 제외과정입니다.',pharmacy=False,pharmacy_src='newcastle-scholarship-2027-terms')
 scholarship('canberra','canberra-international-2027','UC International Scholarships 2027','canberra-guide-2027',[10,20,30],'pending',None,None,None,'학위 조건에 따라 적용','Merit 10%: GPA 5/7 · High Achievers/Excellence는 더 높은 기준',None,note='2027 가이드에 10%·20%·30%가 공개됐지만 지역·과정 제외조건이 있어 한국 학생 Pharmacy 적용은 최종 확인 후 확정합니다.',pharmacy=None)
@@ -518,6 +530,10 @@ _utas_direct=next(r for r in routes if r['id']=='utas-bpharm-hons-direct')
 _utas_direct['english']=fact('IELTS 6.5 / 각 6.0','utas')
 _utas_direct['qualification']=fact('2027 minimum ATAR 70 상당 · CSAT 305 · IB 25 · A-level 8 · OSSD 70% · SAT 980','utas-atar-equiv-current',2023,status='latest_published',note='현재 UTas 공식 country-entry 페이지가 링크하는 equivalency table의 ATAR 70 열 기준')
 _utas_direct['note']='2027 minimum ATAR 70 상당 학력 + Mathematics + Chemistry 또는 Physical Sciences 요건을 충족해야 합니다.'
+_uq_direct=next(r for r in routes if r['id']=='uq-bpharm-hons-direct')
+_uq_direct['english']=fact('IELTS 6.5 / 각 6.0 · PTE 64 / 각 60 · TOEFL 87 (L19/R19/W21/S19)','uq')
+_uq_direct['qualification']=fact('2027 Guaranteed ATAR 80 + Mathematics + Chemistry · 해외학력은 UQ 동등성 환산','uq-guaranteed-atar-2027')
+_uq_direct['note']='2027 guaranteed ATAR 80은 Australian ATAR 기준입니다. 한국·IB·A-level 등 해외학력은 UQ가 동등성 환산해 평가합니다.'
 for uid in ['adelaide','qut','canberra','unisq','unsw']:
  dr=next(r for r in routes if r['id']==uid+'-bpharm-hons-direct')
  er=row(english,uid); rr=row(requirements,uid)
@@ -576,19 +592,21 @@ decision_lenses={
     "why": [
       "3년 9개월",
       "Curtin College Diploma → 약대 2학년",
-      "Perth 지역요건 충족 시 두 번째 485 +1년"
+      "2027 Curtin College Stage 2 학비 A$44,900"
     ],
     "watch": [
-      "2027 국제학생 학비 발표 대기"
+      "Curtin 본과 2027 국제학생 학비·Direct 시작월은 계속 확인 중",
+      "Stage 1이 필요한 경우 2027 A$32,900 추가"
     ]
   },
   "uq": {
     "why": [
+      "2027 Guaranteed ATAR 80",
       "2월 4년 · 7월 약 3.5년",
-      "Accelerated Foundation → 7월 BPharm 연결",
-      "2027 국제장학 25% 경쟁 선발"
+      "Standard/Accelerated Foundation 모두 2027 7월 BPharm 연결 가능"
     ],
     "watch": [
+      "해외학력은 ATAR 80 동등성 환산이 별도",
       "신설 5년 PharmD는 APC·Pharmacy Board 승인 진행 중"
     ]
   },
@@ -619,6 +637,7 @@ decision_lenses={
       "2027 Health Innovation 30% · High Achiever 20~25%"
     ],
     "watch": [
+      "30% 장학은 수량 제한·offer acceptance 순 확보 조건 확인",
       "2027 국제학생 학비 발표 대기"
     ]
   },
