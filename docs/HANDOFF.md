@@ -46,6 +46,7 @@ UWA는 16번째 비교 대학으로 포함돼 있으며, 학교졸업자용 4년
   - 한국 학생은 고2 수료(pass grades)부터 Foundation 입학 가능
   - Pharmacy는 본과 mid-year intake가 없어 2월 Foundation 시작 기준
   - 2027 Foundation Studies 학비 A$31,400
+- Curtin 본과 공식 course URL이 기존 `BH-PHARM`에서 새 `BH-PHARMA` 페이지로 변경된 것을 확인하고 source registry와 fact provenance를 교체했습니다. 새 공식 페이지 기준으로 3년 9개월, 최소 ATAR/Selection Rank 80, Chemistry + Mathematics Applications, IELTS 7.0/각 7.0을 반영했습니다. 현재 페이지는 국제학생 2027 Direct 시작월과 학비를 표시하지 않아 해당 두 항목은 pending으로 유지합니다.
 - Curtin College Pharmacy Diploma를 최신 공식 페이지 기준으로 정리:
   - Diploma 완료 후 175 credits 인정
   - Stage 2 CWA 70%
@@ -86,7 +87,7 @@ UWA는 16번째 비교 대학으로 포함돼 있으며, 학교졸업자용 4년
 ## 다음 우선순위
 
 1. 최신 HEAD의 GitHub Preview QA + Netlify Deploy Preview 성공 재확인.
-2. Curtin·Griffith·La Trobe의 2027 국제학생 Pharmacy 학비 공식값 확인.
+2. Curtin·Griffith·La Trobe의 2027 국제학생 Pharmacy 학비 공식값 확인. Curtin은 새 course page가 현재 fee를 ‘not available’로 표시하므로 추정값을 넣지 않는다.
 3. Monash Foundation P6007 2027 progression 범위 확정.
 4. 대학별 2027 캠퍼스·기숙사/숙소 실비 자료 보강.
 5. 2026-27 주정부 nomination 자료의 현재 공개상태 점검.
