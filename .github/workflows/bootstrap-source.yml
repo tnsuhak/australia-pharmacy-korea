@@ -24,7 +24,7 @@ jobs:
           base64 -d /tmp/australia-source.b64 > /tmp/australia-source.tar.xz
           tar -xJf /tmp/australia-source.tar.xz -C .
           rm -rf .bootstrap
-          rm -f .github/workflows/bootstrap-source.yml
+          rm -f .github/workflows/qa.yml
       - name: Commit imported V1 source
         shell: bash
         run: |
