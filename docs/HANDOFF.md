@@ -164,3 +164,18 @@ ZIP 압축을 푼 뒤 `offline-preview/index.html`을 브라우저에서 여세�
 - Prefer Korean labels before technical English. Keep English only when it is the actual course/registration term.
 - Do not weaken factual safeguards: when official information is genuinely pending, say "발표 대기", "승인 대기", or name the exact missing fact instead of using a vague hedge.
 - Keep this rule for all future copy changes in this site.
+
+
+## 2026-09-25 university-first redesign
+
+- Core product changed from a Finder-centric comparison site to a university-by-university pharmacy analysis site.
+- Homepage no longer contains the large Finder. It leads with why Australian pharmacy schools differ, then links directly to all universities.
+- Added `/universities/` as the primary directory.
+- Added `/graduate-entry/` for verified graduate-entry routes, including UWA's separate 2-year Doctor of Pharmacy.
+- Added `/after-graduation/` for 485 / Regional rules and university campus categories.
+- Current Home Affairs rule used in Preview: Bachelor and Masters coursework/extended first 485 = 2 years; eligible second 485 adds 1 year in Category 2 or 2 years in Category 3.
+- JCU 2027 Pharmacy campuses: Townsville, Cairns, Mackay. UTas 2027 Pharmacy locations: Hobart, Launceston, Cradle Coast.
+- University detail pages now include a dedicated "졸업 후 485·지역" section.
+- State nomination is intentionally not shown as an automatic outcome; it remains a separate current-policy data layer.
+- `/compare/` remains available only as a secondary tool.
+- Production remains unchanged. Review the PR #1 Deploy Preview before merge.
