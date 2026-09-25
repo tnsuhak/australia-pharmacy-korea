@@ -86,6 +86,11 @@ source('curtin-pharmacy-current-guide','Curtin · Pharmacy English requirement g
 source('newcastle-2027-course','University of Newcastle · Bachelor of Pharmacy (Honours) current 2027 entry','https://www.newcastle.edu.au/degrees/bachelor-of-pharmacy-honours',2027,'official_course')
 source('newcastle-2026-ug','University of Newcastle · 2026 Undergraduate Degrees guide','https://www.newcastle.edu.au/__data/assets/pdf_file/0012/978438/2026-1088_UG-Prospectus_v3.6_WEB.pdf',2026,'official_guide')
 source('monash-pps-2026','Monash Pharmacy and Pharmaceutical Sciences · International UG Course Guide 2026','https://www.monash.edu/__data/assets/pdf_file/0004/4091809/Monash-University-PPS-International-UG-Course-Guide-2026.pdf',2026,'official_guide')
+source('rmit-korea-equiv','RMIT · South Korea academic entry equivalency','https://www.rmit.edu.au/study-with-us/international-students/apply-to-rmit-international-students/entry-requirements/country-equivalency/south-korea',2027,'official_admissions')
+source('rmit-ib-equiv','RMIT · International Baccalaureate academic equivalency','https://www.rmit.edu.au/study-with-us/international-students/apply-to-rmit-international-students/entry-requirements/country-equivalency/international-baccalaureate',2027,'official_admissions')
+source('rmit-uk-equiv','RMIT · United Kingdom academic equivalency','https://www.rmit.edu.au/study-with-us/international-students/apply-to-rmit-international-students/entry-requirements/country-equivalency/united-kingdom',2027,'official_admissions')
+source('rmit-usa-equiv','RMIT · USA academic equivalency','https://www.rmit.edu.au/study-with-us/international-students/apply-to-rmit-international-students/entry-requirements/country-equivalency/usa',2027,'official_admissions')
+source('rmit-foundation-equiv','RMIT · Foundation Studies equivalency','https://www.rmit.edu.au/study-with-us/international-students/apply-to-rmit-international-students/entry-requirements/country-equivalency/foundation-equivalencies',2027,'official_pathway')
 source('jcu-intl-2025','JCU 2025 International Guide · Pharmacy entry scores','https://www.jcu.edu.au/__data/assets/pdf_file/0018/2205414/2025-International-Guide.pdf',2025,'official_guide')
 source('newcastle-prospectus-2027','University of Newcastle · 2027 International Prospectus','https://www.newcastle.edu.au/__data/assets/pdf_file/0020/1102565/2025-1079-International-Prospectus-2027-ROW.pdf',2027,'official_guide')
 source('adelaide-pharmacy-current','Adelaide University · Bachelor of Pharmacy (Honours) international entry requirements','https://adelaide.edu.au/study/degrees/bachelor-of-pharmacy-honours/',None,'official_course')
@@ -226,7 +231,7 @@ setp('griffith',highlights=['Diploma → 2학년','80CP 인정','20% 자동심�
 setp('latrobe',highlights=['Bendigo','4년 학사','숙소 2026 참고'],editorial='Bendigo 캠퍼스 약대입니다. 2027 학비는 업데이트 대기입니다.',review_items=['2027 국제학생 학비']); intake('latrobe',[3],'Semester 1 · 2027년 3월',src='latrobe-2027-course'); req('latrobe','not_required','not_required','not_required','not_required','별도 과학 선수과목 없음 · 영어 prerequisite만 적용',src='latrobe-health-guide'); eng('latrobe',6.5,{'L':6.5,'R':6.5,'W':6.5,'S':6.5},src='latrobe-health-guide')
 setp('qut',highlights=['수학 + 화학','4년 학사','영어 조건 비교'],editorial='수학과 화학이 필요합니다. 영어는 약대 기준을 적용합니다.')
 req('qut','assumed','assumed',grade='Chemistry + Mathematical Methods/Specialist Mathematics는 assumed knowledge',src='qut-fee-2027'); eng('qut',6.5,{'L':6,'R':6,'W':6,'S':6},pte=58,pte_each=50,toefl={'overall':79,'L':16,'R':16,'W':21,'S':18}); intake('qut',[2],'2월',src='qut-fee-2027'); fee('qut',46200,src='qut-fee-2027',year=2027,load='96 credit points 기준')
-setp('rmit',highlights=['4년 학사','2027 학비 공개','Other Pathway'],editorial='약대 영어기준을 따로 봅니다. Associate Degree는 1년 Diploma와 다른 경로입니다.')
+setp('rmit',highlights=['4년','RMIT Foundation 가능','2027 학비 A$49,920'],editorial='Bundoora 캠퍼스 4년 약대입니다. 한국 고교·수능 환산표가 명확하고 RMIT Foundation으로도 준비할 수 있습니다.')
 req('rmit','required','required',grade='VCE Chemistry 25, Mathematics 25 또는 인정되는 동등 수준.'); fee('rmit',49920,year=2027); intake('rmit',[2],'Semester 1 · 2027년 3월 1일 수업 시작',src='rmit-2027-apply')
 eng('rmit',7,{'L':6.5,'R':6.5,'W':6.5,'S':6.5},src='rmit-english',pte=65,pte_each=58,toefl={'overall':94,'R':19,'L':20,'S':20,'W':24})
 setp('newcastle',highlights=['4년 학사','Foundation 연계','영어 재확인'],editorial='영어조건 자료가 서로 달라 2027 기준 발표를 기다리고 있습니다.',review_items=['Pharmacy 영어조건 자료 충돌','2027 CSAT·SAT·IB course-specific 값','APC 인증 갱신: 현재 목록 종료일 2026-12-31'])
@@ -246,6 +251,14 @@ q=next(x for x in qualifications if x['program_id']=='sydney-bpharm-hons' and x[
 setp('unsw',highlights=['2027 PharmD 전환','5년 학위','졸업 후 Internship'],editorial='2027부터 PharmD 명칭을 사용하지만 졸업 후 인턴십은 따로 합니다.',review_items=['새 PharmD 명칭의 APC/Board 승인 반영','2027 국제학생 학비']); fee('unsw',63000,src='unsw-fee-2026',year=2026,total=349000,load='first-year full-time fee'); intake('unsw',[2],'Term 1 · 2027',src='unsw-2027-course'); eng('unsw',6.5,{'L':6,'R':6,'W':6,'S':6},src='unsw-english-current'); req('unsw','assumed','assumed',grade='Assumed knowledge: Chemistry, Mathematics Advanced',src='unsw')
 setp('uwa',highlights=['4년 Bachelor + PharmD','고교 졸업 후 진학','졸업 후 Internship'],editorial='고교 졸업 후 4년 동안 Bachelor + Doctor of Pharmacy를 함께 취득합니다. 졸업 후 인턴십은 따로 합니다.',review_items=['2027 국제학생 학비'])
 req('uwa','assumed','assumed',grade='Chemistry 및 Mathematics Applications/Methods 수준을 권장하며, 미충족 시 UWA 규정에 따라 foundation/bridging units가 요구될 수 있습니다.'); eng('uwa',7,{'L':7,'R':7,'W':7,'S':7}); intake('uwa',[2],'Semester 1 · 2월')
+# RMIT Pharmacy 65% international academic requirement mapped through official country equivalency tables.
+for qt,val,scale,src,note,calc in [
+ ('korean_high_school',75,'한국 고교 졸업성적 평균 %','rmit-korea-equiv','RMIT Pharmacy 국제학생 academic requirement 65%의 한국 고교 환산값',''),
+ ('csat',300,'표준점수 합','rmit-korea-equiv','한국 고교 졸업 + CSAT 기준','국어·수학을 포함한 best 4 graded subjects의 KICE standard score 계산'),
+ ('ib',25,'45','rmit-ib-equiv','RMIT Bachelor 65% 기준의 IB 환산값',''),
+ ('alevel',7,'RMIT A-level points','rmit-uk-equiv','3 A-level 기준 예시 CDD',''),
+ ('sat',1060,'1600','rmit-usa-equiv','미국 High School Diploma GPA 2.5 이상과 함께 충족해야 함','')]:
+ q=next(x for x in qualifications if x['program_id']=='rmit-bpharm-hons' and x['qualification']==qt); q.update(score=fact(val,src),scale=scale,calculation=calc); q['score']['note']=note
 qual('uwa','csat',329,'UWA 국제학력 환산점수'); qual('uwa','sat',1220,'1600'); qual('uwa','ib',30,'45'); qual('uwa','alevel',10,'UWA A-level 환산점수'); fee('uwa',46000,src='uwa-fee-2026',year=2026,load='48 points 기준')
 # Additional international qualification scores verified for 2027 site.
 for qt,val,scale in [('csat',340,'대학 공식 CSAT 기준'),('ib',30,'45'),('sat',1220,'1600'),('alevel',10,'UK / Global GCE A-level 환산점수'),('ossd',80,'Ontario Secondary School Diploma 평균 %')]:
@@ -289,6 +302,7 @@ route('sydney','sydney-usfp','foundation','USFP · University of Sydney Foundati
 route('monash','monash-foundation','foundation','Monash University Foundation Year','monash-foundation',0,1,None,None,None,'새 P6007 진급점수는 아직 발표되지 않았습니다.',False)
 route('newcastle','newcastle-foundation','foundation','Newcastle International College · Foundation Studies','newcastle-foundation',0,1,None,None,None,'2027 진급점수 발표 대기입니다.')
 route('monash','monash-ge','graduate','Monash · Graduate Entry','monash',None,3,'관련 학위 + 여름 집중과정 후 3학년 진입',None,'최근 10년 이내 관련 학사 · 평균 70% 이상 · 대학 수준 Human Physiology','최소 기준을 충족한 뒤 경쟁 선발합니다.')
+route('rmit','rmit-foundation','foundation','RMIT Foundation Studies','rmit-foundation-equiv',0,1,None,None,'Foundation 65% + Pharmacy Chemistry·Mathematics prerequisite 동등과목 충족','Foundation 후 Pharmacy 1학년으로 지원합니다. Pharmacy의 Chemistry·Mathematics prerequisite를 Foundation에서 충족해야 합니다.')
 route('rmit','rmit-associate','other','RMIT · Associate Degree pathway','rmit-pathway',None,None,'Associate 2년 + Bachelor 3년',None,None,'2년 Associate Degree + 약대 3년 경로입니다. 1년 Diploma가 아닙니다.',False)
 for i,title in [('latrobe','Foundation · Health / Life Sciences'),('utas','International Foundation')]:
  route(i,i+'-foundation','foundation',title,i,0,1,note='2027 약대 진급조건·유학생 모집 발표 대기입니다.',verified=False)
@@ -468,11 +482,12 @@ decision_lenses={
   },
   "rmit": {
     "why": [
-      "2027 학비 A$49,920",
-      "Bundoora 캠퍼스",
-      "Pharmacy 영어 IELTS 7.0 / 각 6.5"
+      "한국 고교 75% 또는 고교 졸업 + 수능 300부터 Direct 기준",
+      "RMIT Foundation → 약대 1학년 가능",
+      "2027 학비 A$49,920"
     ],
     "watch": [
+      "Chemistry + Mathematics prerequisite 필요",
       "Associate Degree 경로는 1년 Diploma와 다름",
       "약대 학위 장학은 별도 확인 중"
     ]
