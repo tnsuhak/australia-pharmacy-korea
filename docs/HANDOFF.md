@@ -147,3 +147,6 @@ RMIT 영어는 더 이상 conflict/pending 항목이 아니다. 현재 공식 Ph
 6. 대학별 2027 숙소 실비와 남은 qualification 환산값 보강.
 7. 모바일/데스크톱 Preview 실제 시각 QA 후 사용자 확인.
 8. 사용자 승인 뒤에만 Production.
+
+- Adelaide 재검증: 현재 국제학생 Pharmacy 페이지의 South Korea CSAT 기준은 345입니다. 기존 340을 345로 수정했습니다. 같은 페이지의 A$54,300은 문구상 2026 입학생 학비이므로 `source_year=2026`으로 고정하고 2027 학비로 표시하지 않습니다.
+- Griffith College 2027 일정: live Key Dates는 T1 3/1 · T2 6/28 · T3 10/25입니다. 2027 Quick Guide의 T2 6/27 · T3 10/5와 차이가 있어 live Key Dates를 우선하고 provenance note를 남겼습니다. 2027 Diploma fee는 아직 확정값을 찾지 못해 pending 유지합니다.
