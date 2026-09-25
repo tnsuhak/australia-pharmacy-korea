@@ -252,8 +252,15 @@ def scholarcards(ss):
 def housingcards(hh):
     out=''
     for h in hh:
-        content=facts([('주당',fv(h['weekly_cost'],money)),('계약 기간',fv(h['contract_weeks'],lambda f:value(f)+'주' if f['value'] else '확인 중')),('공식 계약 총액',fv(h['official_contract_total'],money)),('공과금 포함',fv(h['utilities'])),('식사 포함',fv(h['meals'])),('위치',fv(h['campus_distance']))])
-        out+=f'<article class="route-detail"><h3>{E(h["name"])}</h3>{content}<p>{E(h["note"])}</p></article>'
+        fields=[]
+        if h['weekly_cost']['value'] is not None:fields.append(('주당',fv(h['weekly_cost'],money)))
+        if h['contract_weeks']['value'] is not None:fields.append(('계약',fv(h['contract_weeks'],lambda f:str(value(f))+'주')))
+        if h['official_contract_total']['value'] is not None:fields.append(('공식 총액',fv(h['official_contract_total'],money)))
+        if h['utilities']['value'] is not None:fields.append(('공과금 포함',fv(h['utilities'])))
+        if h['meals']['value'] is not None:fields.append(('식사 포함',fv(h['meals'])))
+        if h['campus_distance']['value'] is not None:fields.append(('위치',fv(h['campus_distance'])))
+        content=facts(fields) if fields else ''
+        out+=f'<article class="route-detail housing-card"><h3>{E(h["name"])}</h3>{content}<p>{E(h["note"])}</p></article>'
     return '<div class="route-cards">'+out+'</div>'
 def structure(pid):
     p=P[pid];r=one('professional_registration',pid)
