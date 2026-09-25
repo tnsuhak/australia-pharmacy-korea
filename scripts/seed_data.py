@@ -69,6 +69,8 @@ source('latrobe-scholarship-courses','La Trobe · Courses offering international
 source('canberra-guide-2027','University of Canberra International Course Guide 2027 · Scholarships','https://www.canberra.edu.au/content/dam/uc/documents/agent-marketing-toolkit/international-course-guide/international-course-guide.pdf',2027,'official_guide')
 source('uwa-scholarship-current','UWA Global Excellence Scholarship','https://www.uwa.edu.au/study/scholarships-and-fees/scholarships/international-scholarships/global-excellence-scholarship',2027,'official_scholarship')
 source('newcastle-scholarship-2027-terms','Newcastle International Excellence Scholarship 2027 · excluded programs','https://www.newcastle.edu.au/__data/assets/pdf_file/0018/1035117/UNI_054_International-Excellence-Scholarship.pdf',2027,'official_scholarship')
+source('uwa-foundation','UWA College · UWA Foundation Program','https://www.uwa.edu.au/uwa-college/Study/UWA-Foundation-Program',None,'official_pathway')
+source('qut-college-foundation','QUT College · Foundation programs','https://www.qut.edu.au/study/qut-college/international/english-language-programs',None,'official_pathway')
 course_urls={
  'jcu':'https://www.jcu.edu.au/courses/bachelor-of-pharmacy-honours',
  'utas':'https://www.utas.edu.au/courses/health/courses/54d-bachelor-of-pharmacy-with-honours',
@@ -247,11 +249,13 @@ routes.append(dict(id='uq-pharmd-direct',program_id='uq-pharmd',type='direct',ti
 def route(i,id,type,title,src,credit=None,entry=None,duration=None,intake=None,progression=None,note='',verified=True):
  r=dict(id=id,program_id=i+'-bpharm-hons',type=type,title=title,availability=fact(True if verified else None,src),credit=fact(credit,src),entry_year=fact(entry,src),duration=fact(duration,src),intake=fact(intake,src),progression=fact(progression,src),english=fact(None,src),qualification=fact(None,src),note=note)
  routes.append(r);return r
-route('griffith','unicentre-korea','diploma','한국 UniCentre · Diploma of Health Science', 'griffith-korea',80,2,'한국 Diploma 1년 + 본과 T1 3년 또는 T2 3.5년','본과 T1 / T2 · 한국과정 시작월 확인 중','Diploma 수료 및 Griffith 입학조건 충족 후 80CP 인정','2027 entry onwards. 학점인정 협약은 입학·영어·장학금 보장이 아닙니다.')
 route('griffith','griffith-college','diploma','Griffith College · Diploma of Health Sciences','griffith-college',80,2,'본과 잔여 240CP · T1 3년 / T2 3.5년','본과 T1 / T2 · Diploma 개강월 별도 확인','지정 Diploma 과목 이수 + 최종 입학허가','80CP 인정. Diploma 학비·진급 GPA는 업데이트 대기입니다.')
 route('curtin','curtin-college','diploma','Curtin College · Pharmacy Diploma','curtin-college',175,2,'Stage 2: 12개월 · Stage 1 필요 시 8–12개월 추가','Stage 1: 2월/6월 · Stage 2: 2월','Stage 2 CWA 70% + PHAR1002(12월) 추가 이수','Stage 2 CWA 70% 기준을 적용합니다.')
 route('uq','uq-accelerated','foundation','UQ College · Accelerated Foundation','uq-accelerated',0,1,'약 4개월','2027-02-15 시작 → 07-09 완료 · 본과 07-26','BPharm 진급 GPA 5.0 · Academic English 5 · 선수과목 충족','2월 Foundation → 7월 BPharm 일정입니다. GPA·영어·필수과목을 충족해야 합니다.')
 routes[-1]['progression']=fact('BPharm 진급 GPA 5.0 · Academic English 5 · 선수과목 충족','uq-foundation')
+route('uwa','uwa-foundation','foundation','UWA College · Foundation Program','uwa-foundation',0,1,'8개월 또는 12개월','UWA College 일정','UWA College Foundation 70 + Pharmacy 입학·영어조건','Foundation 수료 후 UWA 약대 1학년으로 진학합니다. UWA 약대 공식 페이지에 UWA College Foundation 70이 입학점수로 공개돼 있습니다.')
+routes[-1]['progression']=fact('UWA College Foundation 70 + Pharmacy 입학·영어조건','uwa')
+route('qut','qut-foundation','foundation','QUT College · Foundation','qut-college-foundation',0,1,'6개월 Intensive 또는 12개월 Standard','QUT College 일정','Foundation 수료 + QUT Pharmacy 입학조건 충족','Foundation 후 QUT Bachelor 1학년으로 진학하는 경로입니다. Pharmacy 선수과목과 영어조건은 별도로 맞춰야 합니다.')
 route('sydney','sydney-usfp','foundation','USFP · University of Sydney Foundation Program','sydney',0,1,None,None,'Pharmacy GPA 7.3 / English C','2027 Pharmacy 진학 기준입니다. 수학과 Foundation 입학조건을 충족해야 합니다.')
 route('monash','monash-foundation','foundation','Monash University Foundation Year','monash-foundation',0,1,None,None,None,'새 P6007 진급점수는 아직 발표되지 않았습니다.',False)
 route('newcastle','newcastle-foundation','foundation','Newcastle International College · Foundation Studies','newcastle-foundation',0,1,None,None,None,'2027 진급점수 발표 대기입니다.')
