@@ -1,6 +1,6 @@
 # 공식자료 및 검색 설계
 
-자료 확인일: 2026-09-25. 출처 연도와 목표 입학연도는 다를 수 있습니다. 아래 URL은 사실 검증용이며 원서 제출 CTA로 사용하지 않습니다. 공개 사이트에서는 대학·과정 메인보다 필요한 세부 공식자료를 작은 `자료 출처` 형태로 연결합니다.
+자료 확인일: 2026-09-25. 출처 연도와 목표 입학연도는 다를 수 있습니다. 아래 URL은 사실 검증용이며 원서 제출 CTA로 사용하지 않습니다. 공개 사이트에서는 필요한 세부 공식자료를 작은 `자료 출처` 형태로 연결합니다.
 
 | ID | 자료 | 출처 연도 | 원문 상태 |
 |---|---|---|---|
@@ -36,7 +36,7 @@
 | uq-foundation | [UQ College · Foundation progression](https://uqcollege.uq.edu.au/study/pathways-uq/foundation-program) | 페이지별 확인 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
 | uq-accelerated | [UQ College · Accelerated Foundation](https://uqcollege.uq.edu.au/study/pathways-uq/foundation-program/accelerated-foundation-program) | 2027 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
 | uq-calendar | [UQ College · Academic calendar](https://uqcollege.uq.edu.au/current-students/academic-calendar) | 2027 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
-| monash-foundation | [Monash Pathway Programs 2027 · 과정 코드 재확인 필요](https://www.monashcollege.edu.au/__data/assets/pdf_file/0005/4349102/2027-Monash-Pathway-Programs.pdf) | 2027 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
+| monash-foundation | [Monash Pathway Programs 2027 · Pharmacy section still shows legacy P6001](https://www.monashcollege.edu.au/__data/assets/pdf_file/0005/4349102/2027-Monash-Pathway-Programs.pdf) | 2027 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
 | newcastle-foundation | [University of Newcastle College of International Education · Foundation Studies](https://internationalcollege.newcastle.edu.au/foundation-studies) | 페이지별 확인 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
 | rmit-pathway | [RMIT 2026 degree and diploma guide](https://www.rmit.edu.au/content/dam/rmit/au/en/docs/study/career-advisers/brochures/2026-degree-diploma-guide-rmit-university.pdf) | 2026 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
 | griffith-scholarship | [Griffith International Academic Merit Scholarship](https://www.griffith.edu.au/international/scholarships-finance/scholarships/international-academic-merit-scholarship) | 2027 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
@@ -135,10 +135,13 @@
 | curtin-college-english | [Curtin College · English requirements · Pharmacy Stage 2](https://www.curtincollege.edu.au/how-apply/international/journey/english-requirements/) | 페이지별 확인 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
 | newcastle-foundation-entry | [Newcastle CIE · Foundation Studies entry requirements](https://internationalcollege.newcastle.edu.au/entry-requirements) | 페이지별 확인 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
 | newcastle-foundation-fee-2027 | [Newcastle CIE · 2027 Foundation Studies fees](https://internationalcollege.newcastle.edu.au/fees) | 2027 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
+| monash-foundation-p6007-current | [Monash College · Foundation Year destination degree · Pharmacy P6007](https://www.monashcollege.edu.au/study/courses/foundation-year/fy-data/destination-degrees-2026-single-degrees/pharmacy-and-pharmaceutical-science) | 페이지별 확인 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
+| monash-foundation-dates-2027 | [Monash College · Foundation Year 2027 dates](https://www.monashcollege.edu.au/study/courses/foundation-year/dates-and-fees) | 2027 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
 
 ## 운영 메모
 
 - `data/catalog.json`의 각 fact가 실제 적용 상태(`confirmed_2027`, `latest_published`, `pending_2027`, `source_conflict`)와 출처를 보유합니다.
 - 2027 값이 확인되지 않은 경우 최신 공개연도를 2027 확정값으로 바꾸지 않습니다.
+- Monash Foundation은 live destination-degree 페이지의 P6007 값과 2027 Pathway Programs PDF의 legacy P6001이 충돌하므로 source_conflict로 유지합니다.
 - 경쟁사 한국 경로는 source registry와 공개 페이지에서 제외합니다.
 - Apply / How to apply / Application Portal은 공개 상담 퍼널의 기본 외부 링크로 사용하지 않습니다.
