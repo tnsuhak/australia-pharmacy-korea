@@ -17,7 +17,7 @@ test('UQ 7월 빠른 과정과 2월 빠른 과정을 구분',()=>{assert.equal(c
 test('7월 본과와 2월 Accelerated Foundation 시작을 혼동하지 않음',()=>{assert.equal(check('uq-bpharm-hons',{route:'foundation',intake:'2'}).state,'match');assert.equal(check('uq-bpharm-hons',{route:'foundation',intake:'7'}).state,'excluded');});
 test('UQ 신설 PharmD는 모집 중이지만 전문인증 미승인 때문에 기본 pending',()=>{assert.equal(catalog.entry_routes.find(x=>x.id==='uq-pharmd-direct').availability.value,true);assert.equal(check('uq-pharmd',{}).state,'pending');});
 test('신설 PharmD는 기존 BPharm 수능을 복사하지 않음',()=>assert.equal(check('uq-pharmd',{qualification:'csat',score:'999',route:'direct'}).state,'pending'));
-test('등록 실무 통합 필터: Monash와 UNSW 구별',()=>{assert.equal(check('monash-bpharm-hons',{structure:'integrated'}).state,'match');assert.equal(check('unsw-bpharm-hons',{structure:'integrated'}).state,'excluded');});
+test('등록 실무 통합 필터: Monash는 통합, Adelaide 일반 placement와 UNSW는 별도',()=>{assert.equal(check('monash-bpharm-hons',{structure:'integrated'}).state,'match');assert.equal(check('adelaide-bpharm-hons',{structure:'integrated'}).state,'excluded');assert.equal(check('unsw-bpharm-hons',{structure:'integrated'}).state,'excluded');});
 test('4년 Exit: Monash와 Sydney는 공식 학사 Exit 확인',()=>{assert.equal(check('monash-bpharm-hons',{structure:'exit'}).state,'match');assert.equal(check('sydney-bpharm-hons',{structure:'exit'}).state,'match');const p=catalog.programs.find(x=>x.id==='sydney-bpharm-hons');assert.equal(p.bachelor_award_year.value,4);assert.equal(p.exit_degree.value,'Bachelor of Pharmacy (Honours)');});
 test('졸업자는 Monash GE도 추가 대학 과목 심사 필요',()=>{assert.equal(check('monash-bpharm-hons',{qualification:'graduate'}).state,'pending');assert.equal(check('jcu-bpharm-hons',{qualification:'graduate'}).state,'excluded');});
 test('UNSW 20%는 한국 국적 기본 장학 필터에 포함되지 않음',()=>{assert.equal(check('unsw-bpharm-hons',{cost:'20'}).state,'excluded');assert.equal(check('sydney-bpharm-hons',{cost:'20'}).state,'match');});
@@ -48,4 +48,56 @@ test('Adelaide 현재 국제학생 표의 CSAT 345 경계값과 2026 학비 연�
   assert.equal(t.annual.value,54300);
   assert.equal(t.annual.source_year,2026);
   assert.equal(t.annual.status,'latest_published');
+});
+
+
+test('3월 본과 필터가 RMIT와 La Trobe를 찾는다',()=>{
+  assert.equal(check('rmit-bpharm-hons',{intake:'3'}).state,'match');
+  assert.equal(check('latrobe-bpharm-hons',{intake:'3'}).state,'match');
+  assert.equal(check('rmit-bpharm-hons',{intake:'2'}).state,'excluded');
+});
+
+test('Sydney USFP 2027 Standard와 Intensive를 분리하고 학비를 구분',()=>{
+  const routes=catalog.entry_routes.filter(x=>x.program_id==='sydney-bpharm-hons'&&x.type==='foundation');
+  assert.equal(routes.length,2);
+  assert.equal(routes.find(x=>x.id==='sydney-usfp').pathway_fee.value,49800);
+  assert.equal(routes.find(x=>x.id==='sydney-usfp-intensive').pathway_fee.value,47690);
+  assert.match(routes.find(x=>x.id==='sydney-usfp').progression.value,/Mathematics/);
+});
+
+test('UWA Foundation 8개월과 12개월 영어·한국 학력표를 구분',()=>{
+  const eight=catalog.entry_routes.find(x=>x.id==='uwa-foundation-8');
+  const twelve=catalog.entry_routes.find(x=>x.id==='uwa-foundation-12');
+  assert.match(eight.english.value,/6\.0/);
+  assert.match(twelve.english.value,/5\.5/);
+  assert.match(eight.qualification.value,/CSAT 260/);
+  assert.match(twelve.qualification.value,/CSAT 230/);
+  assert.equal(eight.qualification.source_year,2025);
+});
+
+test('Adelaide 영어 동등점수와 BPharm registration internship 구조를 분리',()=>{
+  const e=catalog.english.find(x=>x.program_id==='adelaide-bpharm-hons');
+  const r=catalog.professional_registration.find(x=>x.program_id==='adelaide-bpharm-hons');
+  assert.equal(e.pte_overall.value,64);
+  assert.equal(e.pte_each.value,60);
+  assert.equal(e.toefl.value.overall,79);
+  assert.equal(r.supervised_practice_in_degree.value,true);
+  assert.equal(r.itp_in_degree.value,false);
+  assert.equal(r.post_graduation_internship.value,true);
+});
+
+test('Canberra 10~30% 국제장학은 Pharmacy 제외목록이 아니고 자동심사',()=>{
+  const s=catalog.scholarships.find(x=>x.id==='canberra-international-2027');
+  assert.equal(s.automatic_assessment.value,true);
+  assert.equal(s.separate_application.value,false);
+  assert.equal(s.pharmacy_eligible.value,true);
+  assert.match(s.renewal_condition.value,/5\.0/);
+  assert.equal(check('canberra-bpharm-hons',{cost:'20'}).state,'match');
+});
+
+test('UniSQ 2027 10% 장학은 Pharmacy 대상이지만 offshore/non-award는 제외',()=>{
+  const s=catalog.scholarships.find(x=>x.id==='unisq-support');
+  assert.equal(s.pharmacy_eligible.value,true);
+  assert.match(s.course_exclusion.value,/offshore/);
+  assert.equal(check('unisq-bpharm-hons',{cost:'scholarship'}).state,'match');
 });
