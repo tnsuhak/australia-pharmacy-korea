@@ -192,7 +192,11 @@ directory_body+='<section class="section"><div class="wrap"><div class="universi
 register('/universities/','2027 호주 약대 16개 대학별 상세 비교 | TNS','호주 약대 16개 대학의 기간, 입학시기, Direct·Foundation·Diploma, 인턴십, 485 지역조건을 대학별 상세페이지로 연결합니다.',directory_body)
 
 ge=[r for r in D['entry_routes'] if r['type']=='graduate' and r['availability']['value'] is True]
-ge_items=[('overview','대졸자 약대는 별도 과정입니다','<p>고등학생용 Direct·Foundation·Diploma와 달리 이미 학사학위가 있는 학생이 지원하는 과정입니다.</p>'),('uwa','UWA · 2년 Doctor of Pharmacy','<p><strong>2년 · 2027년 1월 시작</strong></p><p>학사학위, sWAM 65+, Chemistry, Mathematics/Statistics, Microbiology, Pharmacology가 필요합니다. IELTS는 Overall 7.0, 각 영역 7.0입니다. 선발은 경쟁 방식입니다.</p>'+link('/universities/uwa-pharmacy/','UWA 약대 전체 분석 →','btn text')),('monash','Monash Graduate Entry',routecards(ge) if ge else '<p>2027 공식 조건 업데이트 중입니다.</p>'),('note','대졸자 과정도 대학별로 다릅니다','<p>과정기간, 선수과목, 학부 전공 제한, 선발 방식이 다르므로 학사학위가 있다고 모두 지원할 수 있는 것은 아닙니다.</p>'+sources(['uwa-dpharm','monash']))]
+monash_ge='<p>2027 공식 조건 업데이트 중입니다.</p>'
+if ge:
+    g=ge[0]
+    monash_ge='<p><strong>'+E(g['title'])+'</strong></p>'+facts([('기간',fv(g['duration'])),('입학시기',fv(g['intake'])),('입학 학력',fv(g['qualification'])),('영어',fv(g['english'])),('선발·진급',fv(g['progression']))])+'<p>'+E(g['note'])+'</p>'+link('/universities/monash-pharmacy/','Monash 약대 전체 분석 →','btn text')
+ge_items=[('overview','대졸자 약대는 별도 과정입니다','<p>고등학생용 Direct·Foundation·Diploma와 달리 이미 학사학위가 있는 학생이 지원하는 과정입니다.</p>'),('uwa','UWA · 2년 Doctor of Pharmacy','<p><strong>2년 · 2027년 1월 시작</strong></p><p>학사학위, sWAM 65+, Chemistry, Mathematics/Statistics, Microbiology, Pharmacology가 필요합니다. IELTS는 Overall 7.0, 각 영역 7.0입니다. 선발은 경쟁 방식입니다.</p>'+link('/universities/uwa-pharmacy/','UWA 약대 전체 분석 →','btn text')),('monash','Monash Graduate Entry',monash_ge),('note','대졸자 과정도 대학별로 다릅니다','<p>과정기간, 선수과목, 학부 전공 제한, 선발 방식이 다르므로 학사학위가 있다고 모두 지원할 수 있는 것은 아닙니다.</p>'+sources(['uwa-dpharm','monash']))]
 register('/graduate-entry/','2027 호주 약대 Graduate Entry · UWA·Monash | TNS','학사 졸업자가 지원하는 호주 약대 Graduate Entry를 UWA 2년 Doctor of Pharmacy와 Monash 경로 중심으로 정리합니다.',pagehero('호주 약대 Graduate Entry','이미 학사학위가 있다면 고교생 경로가 아닌 대졸자 전형을 따로 봐야 합니다.','Graduate Entry')+article(ge_items))
 
 regional_rows=[]
