@@ -35,7 +35,7 @@ def value(f,default='확인 중'):
     if isinstance(v,list):return ' / '.join(map(str,v))
     if isinstance(v,dict):return ' · '.join(f'{k} {v}' for k,v in v.items())
     return PREREQ.get(str(v),str(v))
-def money(f):return f"A${f['value']:,.0f}" if f.get('value') is not None else '2027 업데이트 대기'
+def money(f):return f"A${f['value']:,.0f}" if f.get('value') is not None else '2027 확인 중'
 def status(f):
     s=f.get('status','pending_2027');year=f.get('source_year')
     label=STATUS[s]+(f' · {year}' if s=='latest_published' and year else '')
@@ -112,7 +112,7 @@ def card(p):
     elif en['ielts_overall']['value'] is not None:e+=' · 영역별 별도'
     chips=''.join(f'<span class="chip">{E(t)}</span>' for t in p['highlights'])
     name=u['name_ko']+(' · 신설 PharmD' if pid=='uq-pharmd' else '')
-    warn='<div class="notice-inline">신설 과정: APC 인증·Board 승인 대기</div>' if pid=='uq-pharmd' else '<div class="notice-inline">2027 모집 발표 대기</div>' if p['international_recruitment']['value'] is None else ''
+    warn='<div class="notice-inline">신설 과정: APC 인증·Board 승인 대기</div>' if pid=='uq-pharmd' else '<div class="notice-inline">2027 모집 확인 중</div>' if p['international_recruitment']['value'] is None else ''
     return f'''<article class="university-card" data-program="{pid}"><div class="card-top"><div class="card-location"><span>{E(value(u['campus']))}</span><span class="school-monogram">{E(u['short'])}</span></div><h3>{E(name)}<span class="school-en">{E(u['name'])}</span></h3><div class="chips">{chips}</div><p class="degree-name">{E(value(p['name']))}</p></div>{warn}<dl class="card-facts"><dt>과정</dt><dd>{E(value(p['duration_label']))}</dd><dt>영어</dt><dd>{E(e)}</dd><dt>화학</dt><dd>{E(value(rq['chemistry']))}</dd><dt>연간 학비</dt><dd>{E(money(fee))}{' · '+str(fee['source_year']) if fee['value'] is not None else ''}</dd></dl><div class="match-reason" hidden></div><div class="card-bottom"><a href="{purl(p)}{'#uq-pharmd' if pid=='uq-pharmd' else ''}">입학조건 보기 →</a><label class="compare-toggle"><input type="checkbox" data-compare="{pid}" aria-label="{E(name)} 비교에 추가"> 비교</label></div></article>'''
 
 REGIONAL_485={
@@ -159,7 +159,7 @@ def months_for(uid):
     return sorted(set(out))
 def intake_text(uid):
     mm=months_for(uid)
-    return ' · '.join('2월' if x==2 else '7월' if x==7 else str(x)+'월' for x in mm) if mm else '발표 대기'
+    return ' · '.join('2월' if x==2 else '7월' if x==7 else str(x)+'월' for x in mm) if mm else '확인 중'
 def pathway_badges(uid):
     labels=['Direct']
     if has_route(uid,'foundation'):labels.append('Foundation')
@@ -173,7 +173,7 @@ def internship_label(uid):
         rr=one('professional_registration',p['id'])
         if rr['post_graduation_internship']['value'] is True:vals.append('졸업 후 인턴십')
         elif rr['itp_in_degree']['value'] is True or rr['supervised_practice_in_degree']['value'] is True:vals.append('학위 안 실무훈련')
-    return ' / '.join(dict.fromkeys(vals)) if vals else '업데이트 대기'
+    return ' / '.join(dict.fromkeys(vals)) if vals else '확인 중'
 def directory_card(u):
     ps=university_programs(u['id'])
     duration=' / '.join(dict.fromkeys(value(p['duration_label']) for p in ps))
@@ -222,7 +222,7 @@ after_items=[('rule','485 기본기간','<p>현재 Home Affairs 기준으로 Bac
 register('/after-graduation/','호주 약대 졸업 후 485 · Regional · 주정부 이민 | TNS','호주 약대 졸업 후 485 기본 2년과 Regional Category 2·3의 두 번째 485, 대학별 캠퍼스 지역을 정리합니다.',pagehero('호주 약대 졸업 후 485·Regional','약대가 있는 도시와 캠퍼스에 따라 졸업 후 체류조건이 달라질 수 있습니다.','졸업 후')+article(after_items))
 
 comp=pagehero('2027 호주 약대 비교',f'학력·선수과목·입학시기로 {len(U)}개 대학의 {len(P)}개 과정을 비교합니다.','전체 약대 비교')
-comp+='<div class="compare-sticky"><a href="#finder">조건 수정 ↑</a><span>최대 3개 과정 비교</span></div><section class="section"><div class="wrap">'+finder()+'''<div class="results-head"><div><h2>비교 결과 <span class="results-count" id="result-count">'''+str(len(P))+'''</span></h2><p id="result-summary" role="status" aria-live="polite">조건을 바꾸면 결과가 바로 달라집니다.</p></div><p class="view-note">검색 결과는 선택한 조건 기준입니다.<br>최종 합격은 대학 심사로 결정됩니다.</p></div><div class="empty" id="empty-results" hidden><h3>확인된 조건에 맞는 과정이 없습니다</h3><p>조건을 줄이거나 아래 ‘추가 확인 필요’ 과정을 살펴보세요.</p><button type="button" id="reset-empty">필터 초기화</button></div><div class="card-grid" id="match-results">'''+''.join(card(p) for p in D['programs'])+'''</div><h2 class="pending-heading" id="pending-heading" hidden>정보 대기 <span id="pending-count"></span></h2><p class="small" id="pending-note" hidden>2027 조건이 아직 발표되지 않았거나 자료가 다른 과정입니다.</p><div class="card-grid" id="pending-results"></div>'''+callout('UWA 4년 Bachelor + Doctor of Pharmacy는 비교에 포함했습니다. 대학원 전용 과정은 제외했습니다.')+'</div></section>'
+comp+='<div class="compare-sticky"><a href="#finder">조건 수정 ↑</a><span>최대 3개 과정 비교</span></div><section class="section"><div class="wrap">'+finder()+'''<div class="results-head"><div><h2>비교 결과 <span class="results-count" id="result-count">'''+str(len(P))+'''</span></h2><p id="result-summary" role="status" aria-live="polite">조건을 바꾸면 결과가 바로 달라집니다.</p></div><p class="view-note">검색 결과는 선택한 조건 기준입니다.<br>최종 합격은 대학 심사로 결정됩니다.</p></div><div class="empty" id="empty-results" hidden><h3>확인된 조건에 맞는 과정이 없습니다</h3><p>조건을 줄이거나 아래 ‘추가 확인 필요’ 과정을 살펴보세요.</p><button type="button" id="reset-empty">필터 초기화</button></div><div class="card-grid" id="match-results">'''+''.join(card(p) for p in D['programs'])+'''</div><h2 class="pending-heading" id="pending-heading" hidden>정보 대기 <span id="pending-count"></span></h2><p class="small" id="pending-note" hidden>2027 조건을 확인 중이거나 공식자료 간 차이가 남은 과정입니다.</p><div class="card-grid" id="pending-results"></div>'''+callout('UWA 4년 Bachelor + Doctor of Pharmacy는 비교에 포함했습니다. 대학원 전용 과정은 제외했습니다.')+'</div></section>'
 register('/compare/','2027 호주 약대 비교 · 입학방법·화학·입학시기 필터 | TNS',f'호주 약대 {len(U)}개 대학, {len(P)}개 과정을 조건별로 비교합니다. 3년·4년·5년, 화학, 7월 입학, Foundation·1학년 Diploma·Direct Entry를 구분합니다.',comp)
 
 def qtable(pid):
@@ -258,7 +258,7 @@ def pathway_status(uid,t):
         if t=='foundation':return '<strong class="yes">있음</strong><span>약대 1학년 진학</span>'
         if t=='graduate':return '<strong class="yes">있음</strong><span>'+E(r['title'])+'</span>'
         return '<strong class="yes">있음</strong>'
-    if pending:return '<strong class="pending">2027 발표 대기</strong>'
+    if pending:return '<strong class="pending">2027 확인 중</strong>'
     return '<strong class="none">공식 연계 미확인</strong>'
 def pathway_matrix(uid):
     return '<div class="pathway-status-grid"><div><b>Direct</b><strong class="yes">가능</strong><span>약대 1학년</span></div><div><b>Foundation</b>'+pathway_status(uid,'foundation')+'</div><div><b>Diploma</b>'+pathway_status(uid,'diploma')+'</div><div><b>Graduate Entry</b>'+pathway_status(uid,'graduate')+'</div></div>'
@@ -266,7 +266,7 @@ def scholarcards(ss):
     out=''
     for s in ss:
         av=s['amount']['value']
-        if av is None:amount='2027 발표 대기'
+        if av is None:amount='2027 확인 중'
         elif isinstance(av,list):amount=' / '.join(str(x)+'%' for x in av)
         else:amount=str(av)+'%'
         fields=[('장학금',fv(s['amount'],lambda _:amount)),('심사방식',ASSESS[s['assessment']])]
@@ -305,7 +305,7 @@ for u in D['universities']:
     lens=p.get('decision_lens') or {}
     if lens:
         intro+='<div class="decision-lens"><div><span>이 학교의 차이</span><ul>'+''.join('<li>'+E(x)+'</li>' for x in lens.get('why',[]))+'</ul></div><div class="watch"><span>지원 전 체크</span><ul>'+''.join('<li>'+E(x)+'</li>' for x in lens.get('watch',[]))+'</ul></div></div>'
-    if p['review_items']:intro+=callout('<strong>2027 업데이트 대기</strong><ul>'+''.join('<li>'+E(x)+'</li>' for x in p['review_items'])+'</ul>',True)
+    if p['review_items']:intro+=callout('<strong>2027 지원 전 확인 항목</strong><ul>'+''.join('<li>'+E(x)+'</li>' for x in p['review_items'])+'</ul>',True)
     anatomy=structure(pid)
     if len(pp)>1:
         other=pp[1];anatomy+='<h3 id="uq-pharmd">신설 UQ 통합 PharmD · 별도 과정</h3>'+callout(E(other['editorial']),True)+structure(other['id'])
@@ -354,7 +354,7 @@ foundation_routes=[r for r in D['entry_routes'] if r['type']=='foundation']
 foundation_items=[('difference','Foundation은 약대 입학 전 준비과정입니다','<p>고2 수료 후 Foundation을 마치고 약대 1학년으로 진학합니다. Foundation 입학조건과 약대 진급조건은 서로 다릅니다.</p><div class="route-mini"><span>Foundation 입학</span>→<span>지정 과목·영어 이수</span>→<span>약대 진급 기준 충족</span>→<span>약대 1학년</span></div>'),
  ('routes','어느 대학으로 연결되나요?',routecards(foundation_routes)),
  ('uq','UQ · 2월 Foundation → 7월 약대','<p>UQ College Accelerated Foundation은 2027년 2월 15일 시작해 7월 9일 끝납니다. UQ BPharm은 7월 26일 시작합니다.</p>'+callout('Foundation 입학, 필수과목, GPA·영어 기준을 모두 충족해야 약대로 올라갑니다.')+'<p>BPharm 공개 진급 기준은 GPA 5.0, Academic English 5입니다. 새 UQ PharmD로 같은 조건이 적용된다고 가정하지 않습니다.</p>'),
- ('monash','Monash · 2027 새 과정 코드 확인','<p>구 P6001 점수는 새 P6007에 적용하지 않습니다. P6007 진급점수는 발표 대기입니다.</p>'),
+ ('monash','Monash · 2027 새 과정 코드 확인','<p>구 P6001 점수는 새 P6007에 자동 적용하지 않습니다. 현재 P6007 live page와 2027 Pathway PDF의 과정 코드가 달라 진급 기준을 확정값으로 판정하지 않습니다.</p>'),
  ('check','지원 전 체크','<ul><li>고교 졸업/재학 증명과 학년별 성적표</li><li>희망 약대에 필요한 수학·과학 과목 조합</li><li>Foundation 영어조건과 약대 진급 영어조건</li><li>Foundation 시작일, 약대 시작일, 성적 발표일</li><li>Foundation과 약대의 학비·숙소 예산</li></ul>'+sources(source_ids(foundation_routes)|{'uq-calendar','uq-foundation','uq'}))]
 register('/foundation/','호주 약대 파운데이션 · 2027 대학별 진급조건 | TNS','UQ Accelerated Foundation, Sydney USFP, Monash 등 Foundation 진급 성적·영어·과목·약대 시작시기를 정리합니다.',pagehero('Foundation으로 호주 약대 준비하기','고교 성적이나 선수과목이 부족하다면 Foundation부터 약대 진급까지 한 번에 보세요.','Foundation')+article(foundation_items))
 
@@ -368,7 +368,7 @@ for p in D['programs']:
 scholarship_rows=[]
 for s in D['scholarships']:
     av=s['amount']['value']
-    amount='발표 대기' if av is None else ' / '.join(str(x)+'%' for x in av) if isinstance(av,list) else str(av)+'%'
+    amount='확인 중' if av is None else ' / '.join(str(x)+'%' for x in av) if isinstance(av,list) else str(av)+'%'
     pharmacy='약대 적용' if s['pharmacy_eligible']['value'] is True else '약대 제외' if s['pharmacy_eligible']['value'] is False else '약대 적용 확인 중'
     scholarship_rows.append((link(purl(university_programs(s['university_id'])[0]),E(U[s['university_id']]['short'])),E(s['name']),E(amount),E(ASSESS[s['assessment']]),E(pharmacy)))
 cost_items=[('tuition','대학별 1년 학비',table(fee_rows,['과정','연간 학비','대학 공개 예상 총학비'],True)+callout('대학마다 연간 수강량이 달라 단순히 1년 학비 × 과정기간으로 총학비를 계산하지 않습니다.')),('scholarship-types','장학금은 수여 방식이 다릅니다','<div class="process-grid"><div class="process-card"><span class="number">01</span><h3>조건 충족 시 자동</h3><p>UniSQ처럼 조건을 맞추면 Admissions가 자동으로 반영하는 장학이 있습니다.</p></div><div class="process-card"><span class="number">02</span><h3>자동심사</h3><p>JCU·QUT·UTas·Curtin·Adelaide·La Trobe처럼 입학 지원서로 장학을 함께 심사하는 대학이 있습니다.</p></div><div class="process-card"><span class="number">03</span><h3>경쟁 선발</h3><p>UQ·Monash처럼 성적이 좋아도 다른 지원자와 경쟁하는 장학이 있습니다.</p></div></div>'),('scholarships','대학별 장학금 한눈에 보기',table(scholarship_rows,['대학','장학금','금액','심사','약대'],True)+callout('Newcastle의 2027 International Excellence Scholarship 20%는 Bachelor of Pharmacy (Honours)가 제외과정입니다. UNSW International Student Award 20%는 현재 한국 국적이 대상 국가에 포함되지 않습니다.')),('housing','기숙사·숙소비',housingcards(D['accommodation'])+'<p class="small">금액이 공개된 숙소는 실제 주당·계약기간을 표시하고, 2027 요금이 아직 없는 학교는 최신 공식자료의 연도와 상태를 그대로 보여줍니다.</p>'),('calculator','1년 예산 계산',costcalculator()),('sources','자료 기준',sources(source_ids(D['tuition']+D['scholarships']+D['accommodation'])))]
@@ -383,7 +383,7 @@ register('/korea-pharmacist/','호주 약대 졸업 후 한국 약사면허 · �
 fastitems=[('programs','3년 Fast-track · JCU와 UTas','<p>JCU와 UTas는 4년 약학과를 3년에 압축해 공부합니다. 1년 수강량이 많고 학업 일정이 빠릅니다.</p><div class="card-grid">'+card(P['jcu-bpharm-hons'])+card(P['utas-bpharm-hons'])+'</div>'),('uq','UQ의 7월 약 3.5년과 구분','<p>UQ 기존 BPharm은 2월 4년, 7월 약 3.5년입니다. 3년 Fast-track과 동일한 상품이 아니며, 수학·화학 요건과 7월 모집 여부를 함께 봐야 합니다.</p>'),('registration','학업기간 이후의 등록 준비','<p>3년 학위 수료 후에도 등록용 인턴십과 ITP·등록시험 등 요구가 남습니다. 5년 통합과 비교할 때는 학위만의 기간과 전체 등록 준비기간을 구분하세요.</p>'+link('/pharmacist-registration/','등록 구조 자세히 →','btn text')+sources(['jcu-guide','utas','uq','apc']))]
 register('/3-year-pharmacy/','호주 3년 약대 · JCU·UTas Fast-track 비교 | TNS','호주 3년 약대 JCU·UTas의 압축 학사와 UQ 7월 3.5년 경로를 구분하고, 졸업 후 약사등록 준비기간을 확인합니다.',pagehero('호주 3년 약대, 빠른 만큼 확인할 것','3년 학위 완료와 약사등록 완료는 다릅니다. 압축 학사 일정과 졸업 후 준비를 함께 살펴보세요.','3년 약대')+article(fastitems))
 
-method_items=[('scope','이 사이트의 비교 범위','<p>한국 학생이 고교 졸업 후 학부 단계부터 약사 과정을 시작할 수 있는 대학을 중심으로 구성합니다. 대학원 전용 과정과 국제학생 대면 모집 확인이 안 된 상품을 확정 진학 옵션으로 표시하지 않습니다.</p>'),('status','정보 상태 읽는 방법',table([(status({'status':s}),t) for s,t in [('confirmed_2027','2027 공식 자료에서 해당 사실을 확인했습니다. 최종 입학허가를 뜻하지 않습니다.'),('latest_published','현재 확인한 최신 공개 자료입니다. 연도가 이전이면 명시하며 2027 확정으로 사용하지 않습니다.'),('pending_2027','2027 발표 대기, 접근 제한 또는 검증 미완료를 포함합니다. 공식 자료가 존재하지 않는다고 단정하지 않습니다.'),('source_conflict','공식 자료 간 수치·적용 범위 차이가 남아 있습니다. 자동 충족 판정에 사용하지 않습니다.')]],['상태','의미'],True)),('conflicts','자료 차이와 후속 확인',table([(E(c['summary']),E(c['decision'])) for c in D['conflicts']],responsive=True)),('order','자료 우선순위','<p>최신 대학 course page·official admissions guide, APC·Pharmacy Board, 정부 자료를 우선합니다. 일반 입학 최소기준을 약대 전용 기준으로 대체하지 않으며, 프로그램 코드가 바뀐 경우 이전 점수를 이식하지 않습니다.</p>'),('limits','현재 검증이 남은 범위','<p>여러 대학의 CSAT·SAT·IB·OSSD 환산, 내신·검정고시 인정, 준비과정별 진급조건, 장학 제외목록, 공식 숙소 요금이 확인 중입니다. 비교 결과에서는 해당 조건을 충족으로 간주하지 않습니다.</p><p>호주 전용 TNS 오픈채팅은 승인된 링크가 확보될 때까지 연결하지 않습니다. 참여자 수는 검증되지 않아 게시하지 않습니다.</p>')]
+method_items=[('scope','이 사이트의 비교 범위','<p>한국 학생이 고교 졸업 후 학부 단계부터 약사 과정을 시작할 수 있는 대학을 중심으로 구성합니다. 대학원 전용 과정과 국제학생 대면 모집 확인이 안 된 상품을 확정 진학 옵션으로 표시하지 않습니다.</p>'),('status','정보 상태 읽는 방법',table([(status({'status':s}),t) for s,t in [('confirmed_2027','2027 공식 자료에서 해당 사실을 확인했습니다. 최종 입학허가를 뜻하지 않습니다.'),('latest_published','현재 확인한 최신 공개 자료입니다. 연도가 이전이면 명시하며 2027 확정으로 사용하지 않습니다.'),('pending_2027','2027 확인 중 상태입니다. 미발표, 접근 제한, 적용범위 미검증 또는 본 작업의 대조 미완료를 포함하며 공식 자료가 없다고 단정하지 않습니다.'),('source_conflict','공식 자료 간 수치·적용 범위 차이가 남아 있습니다. 자동 충족 판정에 사용하지 않습니다.')]],['상태','의미'],True)),('conflicts','자료 차이와 후속 확인',table([(E(c['summary']),E(c['decision'])) for c in D['conflicts']],responsive=True)),('order','자료 우선순위','<p>최신 대학 course page·official admissions guide, APC·Pharmacy Board, 정부 자료를 우선합니다. 일반 입학 최소기준을 약대 전용 기준으로 대체하지 않으며, 프로그램 코드가 바뀐 경우 이전 점수를 이식하지 않습니다.</p>'),('limits','현재 검증이 남은 범위','<p>여러 대학의 CSAT·SAT·IB·OSSD 환산, 내신·검정고시 인정, 준비과정별 진급조건, 장학 제외목록, 공식 숙소 요금이 확인 중입니다. 비교 결과에서는 해당 조건을 충족으로 간주하지 않습니다.</p><p>호주 전용 TNS 오픈채팅은 승인된 링크가 확보될 때까지 연결하지 않습니다. 참여자 수는 검증되지 않아 게시하지 않습니다.</p>')]
 register('/methodology/','자료 기준·2027 업데이트 상태 | TNS 호주약대','호주 약대 정보의 출처 우선순위, 2027 확정·참고·확인 중·자료 차이 상태와 검증이 남은 범위를 설명합니다.',pagehero('자료 기준과 업데이트 상태','비교에 쓰이는 숫자가 어느 연도, 어느 과정의 조건인지 확인할 수 있도록 관리합니다.','자료 기준')+article(method_items))
 
 consult_items=[('prepare','상담 전에 준비하면 좋은 정보','<p>성적표 전체를 공개 공간에 올릴 필요는 없습니다. 먼저 아래 항목을 정리하고, 구체적인 서류 제출은 상담 채널에서 안내받으세요.</p><ul><li>최종 학력과 졸업 예정일</li><li>수능·IB·SAT·A-level·내신 등 보유 성적</li><li>화학·수학·생물·물리 이수 과목과 성적</li><li>영어시험 종류·시험일·overall·각 영역 점수</li><li>희망 입학시기, 준비과정 가능 여부, 예산</li></ul>'),('summary','상담 메모 만들기','<p>아래 메모는 브라우저에서만 작성됩니다. 복사 후 원하는 상담 채널에 직접 전달하세요.</p><div class="consult-prep"><label for="consult-note">상담 메모<textarea id="consult-note">최종 학력 / 졸업 예정일:\n보유 학업 성적:\n수학·화학 등 이수 과목:\n영어 overall / 각 영역:\n희망 입학시기:\n관심 대학 / 입학방법:\n예산 / 궁금한 점:</textarea></label><div><button class="btn" id="copy-note">메모 복사</button></div><p class="small" id="copy-status" role="status"></p></div>')]
