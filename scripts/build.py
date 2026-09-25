@@ -20,10 +20,10 @@ for directory in [OUT,OFF]:
     if directory.exists():shutil.rmtree(directory)
     directory.mkdir();shutil.copytree(ROOT/'assets',directory/'assets');shutil.copy2(ROOT/'assets/favicon.svg',directory/'favicon.svg')
 
-STATUS={'confirmed_2027':'2027 확인','latest_published':'최신 공개','pending_2027':'2027 발표 대기','source_conflict':'자료 차이'}
+STATUS={'confirmed_2027':'2027 확인','latest_published':'최신 공개','pending_2027':'2027 확인 중','source_conflict':'자료 차이'}
 QUAL={'csat':'수능 CSAT','ib':'IB','alevel':'A-level','sat':'SAT','ossd':'OSSD','korean_high_school':'한국 일반고 내신','ged':'검정고시','other':'기타 국제학교 자격','graduate':'대학 졸업'}
 ROUTE={'direct':'Direct Entry','foundation':'Foundation','diploma':'Diploma / IYO','graduate':'Graduate Entry','other':'기타 입학방법'}
-MAIN_ROUTE={'foundation':'Foundation','diploma':'1학년 Diploma / IYO','direct':'Direct Entry'}
+MAIN_ROUTE={'foundation':'Foundation','diploma':'Diploma / IYO · 학점인정 진학','direct':'Direct Entry'}
 PREREQ={'required':'필수','recommended':'권장','not_required':'필수 아님','accepted':'인정','assumed':'선행지식 · 브리징 가능'}
 ASSESS={'automatic':'자동심사','application':'별도 신청','competitive':'경쟁 선발','guaranteed':'조건 충족 시 자동','course_excluded':'약대 제외','not_eligible':'한국 국적 대상 아님','pending':'2027 확인 중'}
 pages={}
@@ -77,7 +77,7 @@ def logo():return '<svg class="brand-symbol" viewBox="0 0 48 48" aria-hidden="tr
 def header(path):
     links=[('/universities/','대학별 약대'),('/admission-pathways/','입학방법'),('/tuition-scholarships/','학비·장학금'),('/pharmacist-registration/','약사등록'),('/after-graduation/','졸업 후')]
     nav=''.join(f'<a href="{u}"'+(' aria-current="page"' if path==u else '')+f'>{t}</a>' for u,t in links)
-    return f'<a class="skip" href="#main">본문 바로가기</a>'+('' if PRODUCTION else '<div class="preview-bar">V1 Preview · 2027 미발표 정보는 ‘발표 대기’로 표시합니다</div>')+f'<header class="site-header"><div class="wrap header-inner"><a class="brand" href="/" aria-label="TNS 호주약대 가이드 홈">{logo()}<span class="brand-title">호주약대 가이드<small>BY TNS · AUSTRALIA</small></span></a><button class="menu-toggle" aria-expanded="false" aria-controls="main-nav">메뉴</button><nav class="nav" id="main-nav" aria-label="주 메뉴">{nav}<a class="nav-cta" href="/consult/">TNS 상담 ↗</a></nav></div></header>'
+    return f'<a class="skip" href="#main">본문 바로가기</a>'+('' if PRODUCTION else '<div class="preview-bar">V1 Preview · 2027 확정값을 확인 중인 항목은 ‘확인 중’으로 표시합니다</div>')+f'<header class="site-header"><div class="wrap header-inner"><a class="brand" href="/" aria-label="TNS 호주약대 가이드 홈">{logo()}<span class="brand-title">호주약대 가이드<small>BY TNS · AUSTRALIA</small></span></a><button class="menu-toggle" aria-expanded="false" aria-controls="main-nav">메뉴</button><nav class="nav" id="main-nav" aria-label="주 메뉴">{nav}<a class="nav-cta" href="/consult/">TNS 상담 ↗</a></nav></div></header>'
 def channels():
     content=''
     for c in C['channels']:
@@ -93,7 +93,7 @@ def select(name,label,items):return f'<label>{label}<select name="{name}">{optio
 def finder(home=False):
     first=select('qualification','학력 / 시험',[('','선택해 주세요')]+[(k,v) for k,v in QUAL.items() if k not in ('graduate',)])
     first+=select('chemistry','화학 이수',[('','상관없음'),('yes','화학 있음'),('no','화학 없음')])
-    first+=select('intake','희망 입학시기',[('','상관없음'),('2','2월'),('7','7월')])
+    first+=select('intake','희망 입학시기',[('','상관없음'),('2','2월'),('3','3월'),('7','7월')])
     first+=select('duration','과정 기간',[('','상관없음'),('fast','빠른 과정'),('4','4년'),('5','5년 통합')])
     advanced=select('route','입학방법',[('','전체')]+list(MAIN_ROUTE.items()))
     advanced+=select('structure','학위·인턴십',[('','전체'),('exit','4년 Exit 가능'),('integrated','Internship 학위 내 통합')])
@@ -103,7 +103,7 @@ def finder(home=False):
     advanced+='<label class="score-field" hidden>성적 <span id="score-scale"></span><input name="score" type="number" min="0" step="any" inputmode="decimal" aria-describedby="score-help" placeholder="점수 입력 (선택)"></label>'
     more=f'<details class="advanced"><summary>상세필터 · 입학방법, 영어, 비용·장학금</summary><div class="filter-grid advanced-grid">{advanced}</div><p class="filter-note" id="score-help">같은 시험도 대학마다 점수 계산법이 다릅니다. 영어는 전체점수와 각 영역 점수를 함께 봅니다.</p></details>'
     if home:more=''
-    return f'''<form class="finder {'home-finder' if home else ''}" id="finder" action="/compare/" method="get" data-mode="{'navigate' if home else 'filter'}"><div class="finder-title"><h2>내 조건으로 호주약대 찾기</h2><p>간단한 조건부터 시작하세요</p></div><div class="filter-grid">{first}</div>{more}<div class="finder-actions"><p>아직 발표되지 않은 조건은 ‘정보 대기’로 표시합니다.<br>검색 결과는 합격 보장이 아닙니다.</p><div class="button-row">{'' if home else '<button type="reset" id="reset-filters">초기화</button>'}<button class="btn" type="submit">가능한 약대 보기 <span aria-hidden="true">→</span></button></div></div></form>'''
+    return f'''<form class="finder {'home-finder' if home else ''}" id="finder" action="/compare/" method="get" data-mode="{'navigate' if home else 'filter'}"><div class="finder-title"><h2>내 조건으로 호주약대 찾기</h2><p>간단한 조건부터 시작하세요</p></div><div class="filter-grid">{first}</div>{more}<div class="finder-actions"><p>2027 확정값을 확인 중인 조건은 ‘정보 대기’로 표시합니다.<br>검색 결과는 합격 보장이 아닙니다.</p><div class="button-row">{'' if home else '<button type="reset" id="reset-filters">초기화</button>'}<button class="btn" type="submit">가능한 약대 보기 <span aria-hidden="true">→</span></button></div></div></form>'''
 def card(p):
     u=U[p['university_id']];pid=p['id'];fee=one('tuition',pid)['annual'];en=one('english',pid);rq=one('requirements',pid);it=one('intakes',pid)
     e='확인 중' if en['ielts_overall']['value'] is None else 'IELTS '+str(en['ielts_overall']['value']).removesuffix('.0')
