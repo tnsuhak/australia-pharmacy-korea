@@ -1084,7 +1084,6 @@
       "editorial": "Bendigo 캠퍼스 약대입니다. 2027 선수과목은 업데이트 대기입니다.",
       "review_items": [
         "2027 국제학생 모집",
-        "2027 선수과목·영어·학비",
         "Health Innovation 및 High Achiever 약대 적용"
       ]
     },
@@ -8112,84 +8111,84 @@
     {
       "program_id": "latrobe-bpharm-hons",
       "chemistry": {
-        "value": null,
+        "value": "not_required",
         "academic_year": 2027,
-        "source_year": null,
-        "source_id": "latrobe",
-        "source_url": "https://www.latrobe.edu.au/courses/bachelor-of-pharmacy-honours",
-        "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
+        "source_year": 2026,
+        "source_id": "latrobe-health-guide",
+        "source_url": "https://www.latrobe.edu.au/international/documents/international-handbooks/LTU-Health-Discipline-Handbook.pdf",
+        "source_type": "official_guide",
+        "verified_date": "2026-09-25",
+        "status": "latest_published",
         "note": ""
       },
       "mathematics": {
-        "value": null,
+        "value": "not_required",
         "academic_year": 2027,
-        "source_year": null,
-        "source_id": "latrobe",
-        "source_url": "https://www.latrobe.edu.au/courses/bachelor-of-pharmacy-honours",
-        "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
+        "source_year": 2026,
+        "source_id": "latrobe-health-guide",
+        "source_url": "https://www.latrobe.edu.au/international/documents/international-handbooks/LTU-Health-Discipline-Handbook.pdf",
+        "source_type": "official_guide",
+        "verified_date": "2026-09-25",
+        "status": "latest_published",
         "note": ""
       },
       "biology": {
-        "value": null,
+        "value": "not_required",
         "academic_year": 2027,
-        "source_year": null,
-        "source_id": "latrobe",
-        "source_url": "https://www.latrobe.edu.au/courses/bachelor-of-pharmacy-honours",
-        "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
+        "source_year": 2026,
+        "source_id": "latrobe-health-guide",
+        "source_url": "https://www.latrobe.edu.au/international/documents/international-handbooks/LTU-Health-Discipline-Handbook.pdf",
+        "source_type": "official_guide",
+        "verified_date": "2026-09-25",
+        "status": "latest_published",
         "note": ""
       },
       "physics": {
-        "value": null,
+        "value": "not_required",
         "academic_year": 2027,
-        "source_year": null,
-        "source_id": "latrobe",
-        "source_url": "https://www.latrobe.edu.au/courses/bachelor-of-pharmacy-honours",
-        "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
+        "source_year": 2026,
+        "source_id": "latrobe-health-guide",
+        "source_url": "https://www.latrobe.edu.au/international/documents/international-handbooks/LTU-Health-Discipline-Handbook.pdf",
+        "source_type": "official_guide",
+        "verified_date": "2026-09-25",
+        "status": "latest_published",
         "note": ""
       },
       "minimum_grade": {
-        "value": null,
+        "value": "별도 과학 선수과목 없음 · 영어 prerequisite만 적용",
         "academic_year": 2027,
-        "source_year": null,
-        "source_id": "latrobe",
-        "source_url": "https://www.latrobe.edu.au/courses/bachelor-of-pharmacy-honours",
-        "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
+        "source_year": 2026,
+        "source_id": "latrobe-health-guide",
+        "source_url": "https://www.latrobe.edu.au/international/documents/international-handbooks/LTU-Health-Discipline-Handbook.pdf",
+        "source_type": "official_guide",
+        "verified_date": "2026-09-25",
+        "status": "latest_published",
         "note": ""
       }
     },
     {
       "program_id": "qut-bpharm-hons",
       "chemistry": {
-        "value": "required",
+        "value": "assumed",
         "academic_year": 2027,
         "source_year": 2027,
-        "source_id": "qut-guide",
-        "source_url": "https://cms.qut.edu.au/__data/assets/pdf_file/0003/1566471/27516-Year-12-International-Guide-2027_DIGITAL_F.pdf",
-        "source_type": "official_guide",
-        "verified_date": "2026-09-24",
+        "source_id": "qut-fee-2027",
+        "source_url": "https://www.qut.edu.au/courses/bachelor-of-pharmacy-honours",
+        "source_type": "official_course",
+        "verified_date": "2026-09-25",
         "status": "confirmed_2027",
-        "note": ""
+        "note": "Year 12 Chemistry 수준 assumed knowledge"
       },
       "mathematics": {
-        "value": "required",
+        "value": "assumed",
         "academic_year": 2027,
         "source_year": 2027,
-        "source_id": "qut-guide",
-        "source_url": "https://cms.qut.edu.au/__data/assets/pdf_file/0003/1566471/27516-Year-12-International-Guide-2027_DIGITAL_F.pdf",
-        "source_type": "official_guide",
-        "verified_date": "2026-09-24",
+        "source_id": "qut-fee-2027",
+        "source_url": "https://www.qut.edu.au/courses/bachelor-of-pharmacy-honours",
+        "source_type": "official_course",
+        "verified_date": "2026-09-25",
         "status": "confirmed_2027",
-        "note": ""
+        "note": "Mathematical Methods 또는 Specialist Mathematics 수준 assumed knowledge"
       },
       "biology": {
         "value": null,
@@ -8214,15 +8213,15 @@
         "note": ""
       },
       "minimum_grade": {
-        "value": "Mathematical Methods 계열 및 Chemistry 동등 과목 확인",
+        "value": "Chemistry + Mathematical Methods/Specialist Mathematics는 assumed knowledge",
         "academic_year": 2027,
         "source_year": 2027,
-        "source_id": "qut-guide",
-        "source_url": "https://cms.qut.edu.au/__data/assets/pdf_file/0003/1566471/27516-Year-12-International-Guide-2027_DIGITAL_F.pdf",
-        "source_type": "official_guide",
-        "verified_date": "2026-09-24",
+        "source_id": "qut-fee-2027",
+        "source_url": "https://www.qut.edu.au/courses/bachelor-of-pharmacy-honours",
+        "source_type": "official_course",
+        "verified_date": "2026-09-25",
         "status": "confirmed_2027",
-        "note": ""
+        "note": "미이수 학생도 지원 가능하며 QUT는 bridging study를 권장합니다."
       }
     },
     {
@@ -9076,23 +9075,23 @@
         "value": 7,
         "academic_year": 2027,
         "source_year": 2026,
-        "source_id": "griffith-2026",
+        "source_id": "griffith-2026-guide",
         "source_url": "https://www.griffith.edu.au/__data/assets/pdf_file/0035/2193587/Griffith-University-2026-International-Study-Guide-Digital.pdf",
         "source_type": "official_guide",
-        "verified_date": "2026-09-24",
+        "verified_date": "2026-09-25",
         "status": "latest_published",
-        "note": "2026 Pharmacy 행. 각 영역과 2027 조건은 별도 확인 중."
+        "note": ""
       },
       "ielts_bands": {
         "value": null,
         "academic_year": 2027,
-        "source_year": null,
-        "source_id": "griffith",
-        "source_url": "https://www.griffith.edu.au/study/degrees/bachelor-of-pharmacy-honours-1614",
-        "source_type": "official_course",
-        "verified_date": "2026-09-24",
+        "source_year": 2026,
+        "source_id": "griffith-2026-guide",
+        "source_url": "https://www.griffith.edu.au/__data/assets/pdf_file/0035/2193587/Griffith-University-2026-International-Study-Guide-Digital.pdf",
+        "source_type": "official_guide",
+        "verified_date": "2026-09-25",
         "status": "pending_2027",
-        "note": ""
+        "note": "각 영역 기준은 2027 과정 자료에서 추가 확인합니다."
       },
       "pte_overall": {
         "value": null,
@@ -9131,25 +9130,30 @@
     {
       "program_id": "latrobe-bpharm-hons",
       "ielts_overall": {
-        "value": null,
+        "value": 6.5,
         "academic_year": 2027,
-        "source_year": null,
-        "source_id": "latrobe",
-        "source_url": "https://www.latrobe.edu.au/courses/bachelor-of-pharmacy-honours",
-        "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
+        "source_year": 2026,
+        "source_id": "latrobe-health-guide",
+        "source_url": "https://www.latrobe.edu.au/international/documents/international-handbooks/LTU-Health-Discipline-Handbook.pdf",
+        "source_type": "official_guide",
+        "verified_date": "2026-09-25",
+        "status": "latest_published",
         "note": ""
       },
       "ielts_bands": {
-        "value": null,
+        "value": {
+          "L": 6.5,
+          "R": 6.5,
+          "W": 6.5,
+          "S": 6.5
+        },
         "academic_year": 2027,
-        "source_year": null,
-        "source_id": "latrobe",
-        "source_url": "https://www.latrobe.edu.au/courses/bachelor-of-pharmacy-honours",
-        "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
+        "source_year": 2026,
+        "source_id": "latrobe-health-guide",
+        "source_url": "https://www.latrobe.edu.au/international/documents/international-handbooks/LTU-Health-Discipline-Handbook.pdf",
+        "source_type": "official_guide",
+        "verified_date": "2026-09-25",
+        "status": "latest_published",
         "note": ""
       },
       "pte_overall": {
@@ -9974,25 +9978,28 @@
       "program_id": "griffith-bpharm-hons",
       "route_id": "griffith-bpharm-hons-direct",
       "months": {
-        "value": null,
+        "value": [
+          3,
+          7
+        ],
         "academic_year": 2027,
-        "source_year": null,
-        "source_id": "griffith",
-        "source_url": "https://www.griffith.edu.au/study/degrees/bachelor-of-pharmacy-honours-1614",
-        "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
+        "source_year": 2026,
+        "source_id": "griffith-2026-guide",
+        "source_url": "https://www.griffith.edu.au/__data/assets/pdf_file/0035/2193587/Griffith-University-2026-International-Study-Guide-Digital.pdf",
+        "source_type": "official_guide",
+        "verified_date": "2026-09-25",
+        "status": "latest_published",
         "note": ""
       },
       "label": {
-        "value": null,
+        "value": "3월 · 7월 (2026 공개 기준)",
         "academic_year": 2027,
-        "source_year": null,
-        "source_id": "griffith",
-        "source_url": "https://www.griffith.edu.au/study/degrees/bachelor-of-pharmacy-honours-1614",
-        "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
+        "source_year": 2026,
+        "source_id": "griffith-2026-guide",
+        "source_url": "https://www.griffith.edu.au/__data/assets/pdf_file/0035/2193587/Griffith-University-2026-International-Study-Guide-Digital.pdf",
+        "source_type": "official_guide",
+        "verified_date": "2026-09-25",
+        "status": "latest_published",
         "note": ""
       }
     },
@@ -10028,25 +10035,27 @@
       "program_id": "qut-bpharm-hons",
       "route_id": "qut-bpharm-hons-direct",
       "months": {
-        "value": null,
+        "value": [
+          2
+        ],
         "academic_year": 2027,
-        "source_year": null,
-        "source_id": "qut",
+        "source_year": 2027,
+        "source_id": "qut-fee-2027",
         "source_url": "https://www.qut.edu.au/courses/bachelor-of-pharmacy-honours",
         "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
+        "verified_date": "2026-09-25",
+        "status": "confirmed_2027",
         "note": ""
       },
       "label": {
-        "value": null,
+        "value": "2월",
         "academic_year": 2027,
-        "source_year": null,
-        "source_id": "qut",
+        "source_year": 2027,
+        "source_id": "qut-fee-2027",
         "source_url": "https://www.qut.edu.au/courses/bachelor-of-pharmacy-honours",
         "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
+        "verified_date": "2026-09-25",
+        "status": "confirmed_2027",
         "note": ""
       }
     },
@@ -16615,6 +16624,22 @@
       "id": "monash-pps-2026",
       "title": "Monash Pharmacy and Pharmaceutical Sciences · International UG Course Guide 2026",
       "url": "https://www.monash.edu/__data/assets/pdf_file/0004/4091809/Monash-University-PPS-International-UG-Course-Guide-2026.pdf",
+      "source_year": 2026,
+      "source_type": "official_guide",
+      "verified_date": "2026-09-25"
+    },
+    {
+      "id": "latrobe-health-guide",
+      "title": "La Trobe · International Health Discipline Handbook · Pharmacy",
+      "url": "https://www.latrobe.edu.au/international/documents/international-handbooks/LTU-Health-Discipline-Handbook.pdf",
+      "source_year": 2026,
+      "source_type": "official_guide",
+      "verified_date": "2026-09-25"
+    },
+    {
+      "id": "griffith-2026-guide",
+      "title": "Griffith University · 2026 International Student Guide · Pharmacy",
+      "url": "https://www.griffith.edu.au/__data/assets/pdf_file/0035/2193587/Griffith-University-2026-International-Study-Guide-Digital.pdf",
       "source_year": 2026,
       "source_type": "official_guide",
       "verified_date": "2026-09-25"
