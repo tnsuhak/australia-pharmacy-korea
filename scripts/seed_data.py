@@ -66,6 +66,7 @@ source('unisq-scholarship-2027','UniSQ International Student Support Scholarship
 source('adelaide-scholarship','Adelaide Merit Scholarship 15%','https://adelaide.edu.au/study/scholarships/int/adelaide-merit-scholarship-15/',None,'official_scholarship')
 source('latrobe-scholarship-2027','La Trobe High Achiever Scholarship · 2026/2027','https://www.latrobe.edu.au/study/scholarships/other/la-trobe-high-achiever-scholarship',2027,'official_scholarship')
 source('latrobe-scholarship-courses','La Trobe · Courses offering international scholarships','https://www.latrobe.edu.au/study/scholarships/advice/courses-offering-international-scholarships',2027,'official_scholarship')
+source('latrobe-health-innovation-2027','La Trobe Health Innovation Scholarship · 30% · 2026/2027 intakes','https://www.latrobe.edu.au/international/applying/scholarships',2027,'official_scholarship')
 source('canberra-guide-2027','University of Canberra International Course Guide 2027 · Scholarships','https://www.canberra.edu.au/content/dam/uc/documents/agent-marketing-toolkit/international-course-guide/international-course-guide.pdf',2027,'official_guide')
 source('uwa-scholarship-current','UWA Global Excellence Scholarship','https://www.uwa.edu.au/study/scholarships-and-fees/scholarships/international-scholarships/global-excellence-scholarship',2027,'official_scholarship')
 source('newcastle-scholarship-2027-terms','Newcastle International Excellence Scholarship 2027 · Terms & Conditions · excluded programs','https://www.newcastle.edu.au/__data/assets/pdf_file/0014/1136300/UNI_053-International-Excellence-Scholarship-2027-T-and-Cs-07072026.pdf',2027,'official_scholarship')
@@ -240,7 +241,7 @@ for _k in ['ielts_overall','ielts_bands']:
  row(english,'newcastle')[_k]['note']='2027 International Student Degree Guide는 IELTS 6.5/각 6.5, 현재 과정 페이지의 English proficiency section은 7.0/각 7.0으로 표시합니다. 자동 충족 판정에 사용하지 않고 지원 전 Newcastle Admissions 서면 확인이 필요합니다.'
 for k in ['ielts_overall','ielts_bands']:row(english,'newcastle')[k]['note']='공식 과정페이지에 6.5/6.5와 7.0/7.0 표기가 함께 노출되고 공식 국제 가이드도 연도별 차이가 있어 2027 지원 전 서면 확인 필요.'
 intake('newcastle',[2],'Semester 1 · 2027년 2월 22일',src='newcastle-2027-course'); req('newcastle','assumed','assumed',physics='assumed',grade='Assumed knowledge: Mathematics, English Advanced, Chemistry, Physics',src='newcastle-2026-ug'); fee('newcastle',51665,src='newcastle-fee-2027',year=2027,load='80 units 기준')
-setp('canberra',highlights=['Canberra','학부 약학 과정','모집 확인 중'],editorial='APC 학부 약학 인증 목록과 실제 국제학생 모집은 서로 다른 확인 항목입니다. 2027 국제학생 course offer를 확인 중입니다.'); fee('canberra',42500,src='canberra-guide-2027',year=2026)
+setp('canberra',highlights=['Canberra','4년 Bachelor of Pharmacy','2027 국제학생 모집 확인'],editorial='2027 HLB301 공식 course PDF와 International Course Guide에서 Semester 1 국제학생 모집과 연 A$42,500 학비를 확인했습니다.'); fee('canberra',42500,src='canberra-guide-2027',year=2027)
 setp('unisq',highlights=['T1 only','Toowoomba','2027 개설표'],editorial='2027 국제학생 대면 수업은 Trimester 1에 표시됩니다. 개설 안내서는 9월 28일 확정 예정이므로 최종 일정 확인이 필요합니다.')
 intake('unisq',[2],'Trimester 1 · 2027년 2월 15일',src='unisq-pharmacy-current'); req('unisq','accepted','assumed','accepted','accepted','수학 + Biology/Chemistry/Physics 중 1과목에서 Year 12 C 수준 assumed knowledge',src='unisq-pharmacy-current'); eng('unisq',7.0,{'L':7,'R':7,'W':6.5,'S':7},src='unisq-pharmacy-current')
 setp('monash',highlights=['4년 Exit','5년 PharmD','Internship 통합'],editorial='4년 후 BPharm(Hons)로 졸업하거나 5년째 PharmD까지 이어갈 수 있습니다. 관련 학사 졸업자는 Graduate Entry도 있습니다.')
@@ -321,6 +322,7 @@ scholarship('curtin','curtin-global-merit','Curtin Global Merit Scholarship','cu
 scholarship('uq','uq-excellence','UQ International Excellence Scholarship','uq-scholarship-2027',25,'competitive',True,True,True,'학위 전체 기간','Offer holder 중 대학이 정한 경쟁점수','UQ 장학 약관 충족',note='별도 신청 없이 자동심사합니다. 다른 UQ tuition reduction과 중복 적용하지 않습니다.',pharmacy=True)
 scholarship('adelaide','adelaide-merit','Adelaide Merit Scholarship','adelaide-scholarship',15,'automatic',True,False,True,'표준 학위기간','IB 28 · A-level 9 · 기타 국제고교 ATAR 85 상당','Program Term GPA 4.5/7 유지',exclude='공식 제외과정에 Pharmacy 없음',note='Bachelor of Pharmacy (Honours)는 공식 제외과정 목록에 없습니다.',pharmacy=True)
 scholarship('latrobe','latrobe-high-achiever','La Trobe High Achiever Scholarship','latrobe-scholarship-2027',[20,25],'automatic',True,False,True,'학위 전체 기간','WAM/ATAR 상당 60–74.9: 20% · 75+: 25%','Full-time 등록·정상 학업진행',note='Bendigo Bachelor of Pharmacy (Honours)는 국제장학 eligible-course 목록에 포함됩니다.',pharmacy=True,pharmacy_src='latrobe-scholarship-courses')
+scholarship('latrobe','latrobe-health-innovation-30','La Trobe Health Innovation Scholarship · 30%','latrobe-health-innovation-2027',30,'pending',None,None,True,None,'Minimum WAM 75+','장학 약관 및 Offer 조건 충족',note='La Trobe Pharmacy 과정 페이지에 Future undergraduate · International 대상 30% Health Innovation Scholarship이 표시됩니다. 2026/2027 intake 약관이 적용되며 최종 수여·중복 가능 여부는 Offer에서 확인합니다.',pharmacy=True,pharmacy_src='latrobe-health-innovation-2027')
 scholarship('qut','qut-merit','QUT International Merit Scholarship','qut-scholarship-2027',25,'automatic',True,False,True,'학위 전체 기간','입학 성적 기준 충족','QUT 최소 GPA 조건 유지',note='2027 국제학생 가이드 기준. 전 학부/faculty에 제공되는 International Merit Scholarship입니다.',pharmacy=True)
 scholarship('newcastle','newcastle-excellence','International Excellence Scholarship 2027','newcastle-scholarship',20,'course_excluded',True,False,True,'해당 없음',None,None,500,'Bachelor of Pharmacy (Honours)','20% 장학 자체는 2027 국제학생 장학이지만 Bachelor of Pharmacy (Honours)는 공식 제외과정입니다.',pharmacy=False,pharmacy_src='newcastle-scholarship-2027-terms')
 scholarship('canberra','canberra-international-2027','UC International Scholarships 2027','canberra-guide-2027',[10,20,30],'pending',None,None,None,'학위 조건에 따라 적용','Merit 10%: GPA 5/7 · High Achievers/Excellence는 더 높은 기준',None,note='2027 가이드에 10%·20%·30%가 공개됐지만 지역·과정 제외조건이 있어 한국 학생 Pharmacy 적용은 최종 확인 후 확정합니다.',pharmacy=None)
@@ -466,7 +468,7 @@ decision_lenses={
     "why": [
       "Bendigo Regional · Category 3",
       "과학 선수과목 별도 요구 없음",
-      "2027 High Achiever 20~25%"
+      "2027 Health Innovation 30% · High Achiever 20~25%"
     ],
     "watch": [
       "2027 국제학생 학비 발표 대기"
