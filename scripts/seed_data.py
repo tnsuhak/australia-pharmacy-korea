@@ -142,25 +142,25 @@ def qual(i,q,score,scale,calc=''):
  r=next(x for x in qualifications if x['program_id']==i+'-bpharm-hons' and x['qualification']==q)
  r.update(score=fact(score,i),scale=scale,calculation=calc)
 
-setp('jcu',highlights=['3년 Fast-track','화학 권장','2월 입학'],editorial='고교 화학이 필수 선수과목은 아닙니다. 압축된 학사 일정과 수학·영어 준비를 함께 살펴보세요.',review_items=['2027 국제학생 캠퍼스별 모집','3년 개편 과정의 국제학생 연간 학비','한국 학력 환산표'])
+setp('jcu',highlights=['3년 Fast-track','화학 권장','2월 입학'],editorial='화학은 필수가 아닙니다. 3년 Fast-track이라 학업 속도가 빠릅니다.',review_items=['2027 국제학생 캠퍼스별 모집','3년 개편 과정의 국제학생 연간 학비','한국 학력 환산표'])
 req('jcu','recommended','required',grade='English와 General Mathematics 또는 동등 수준. Chemistry 권장.',src='jcu-guide'); intake('jcu',[2],'2월','jcu-guide')
-setp('utas',highlights=['3년 Fast-track','2027 학비 공개','Hobart 숙소'],editorial='4년 상당의 학습량을 3년에 이수합니다. 연간 수강량이 일반 1년과 달라 단순 연간 학비 비교에 주의해야 합니다.')
+setp('utas',highlights=['3년 Fast-track','2027 학비 공개','Hobart 숙소'],editorial='4년 약학과를 3년에 압축해 공부합니다. 1년 수강량이 많습니다.')
 fee('utas',61267,total=198050,load='연간 133 credit points 기준'); eng('utas',6.5,{'L':6,'R':6,'W':6,'S':6},src='utas-2026')
-setp('curtin',highlights=['College → Year 2','175 credits','진급 CWA 확인'],editorial='College Pharmacy Diploma는 인정학점 외에 12월 추가 Pharmacy unit이 필요합니다. CWA와 실제 학사 일정을 함께 확인하세요.',review_items=['약 3년 9개월 운영 일정 재확인','국제학생 2027 학비','Global Merit의 Pharmacy 제외 여부'])
-setp('uq',duration_label=fact('2월 4년 · 7월 약 3.5년','uq'),highlights=['2월 4년','7월 3.5년','Accelerated Foundation'],editorial='기존 BPharm은 입학 학기에 따라 일정이 다릅니다. 신설 통합 PharmD와 별도 과정으로 비교하세요.')
+setp('curtin',highlights=['College → Year 2','175 credits','진급 CWA 확인'],editorial='Curtin College Diploma 후 약대 2학년으로 진학합니다. Stage 2 CWA 70%와 PHAR1002가 필요합니다.',review_items=['약 3년 9개월 운영 일정 재확인','국제학생 2027 학비','Global Merit의 Pharmacy 제외 여부'])
+setp('uq',duration_label=fact('2월 4년 · 7월 약 3.5년','uq'),highlights=['2월 4년','7월 3.5년','Accelerated Foundation'],editorial='2월 입학은 4년, 7월 입학은 약 3.5년입니다. 새 5년 PharmD와는 다른 과정입니다.')
 req('uq','required','required','recommended',grade='English·수학·Chemistry: Queensland Year 12 C 또는 동등 수준.'); intake('uq',[2,7],'2월 22일 / 7월 26일'); fee('uq',60952,load='16 units 기준')
 eng('uq',6.5,{'L':6,'R':6,'W':6,'S':6},pte=64,pte_each=60,toefl={'overall':87,'L':19,'R':19,'W':21,'S':19})
-setp('adelaide',highlights=['4년 학사','7월은 학점인정 조건부'],editorial='7월 입학은 일반 고졸 Direct 입학으로 단정할 수 없습니다. 기존 학점 인정이 있는 국제학생에 대한 개별 검토 조건을 확인하세요.')
+setp('adelaide',highlights=['4년 학사','7월은 학점인정 조건부'],editorial='일반 Direct는 2월 시작입니다. 7월 입학은 학점이 인정된 국제학생을 개별 심사합니다.')
 intake('adelaide',[2],'2월 · 7월은 학점 인정 시 개별 심사')
-setp('griffith',highlights=['한국 Diploma','80CP 인정','20% 자동심사'],editorial='Direct, Griffith College, 한국 UniCentre 경로를 비교할 수 있습니다. 80CP 인정과 최종 입학허가는 별도입니다.')
-setp('latrobe',highlights=['Bendigo','4년 학사','숙소 2026 참고'],editorial='Bendigo 약학 과정과 숙소를 함께 비교합니다. 화학을 일괄 필수로 처리하지 않고 2027 선수과목 확인 상태를 표시합니다.',review_items=['2027 국제학생 모집','2027 선수과목·영어·학비','Health Innovation 및 High Achiever 약대 적용'])
-setp('qut',highlights=['수학 + 화학','4년 학사','영어 조건 비교'],editorial='수학과 화학 선수과목을 별도로 검토해야 합니다. 영어는 Pharmacy 과정 페이지의 기준을 비교합니다.')
+setp('griffith',highlights=['한국 Diploma','80CP 인정','20% 자동심사'],editorial='Direct, Griffith College, 한국 UniCentre 경로를 비교할 수 있습니다. Griffith College Diploma 후 80CP를 인정받고 약대 2학년으로 진학합니다.')
+setp('latrobe',highlights=['Bendigo','4년 학사','숙소 2026 참고'],editorial='Bendigo 캠퍼스 약대입니다. 2027 선수과목은 업데이트 대기입니다.',review_items=['2027 국제학생 모집','2027 선수과목·영어·학비','Health Innovation 및 High Achiever 약대 적용'])
+setp('qut',highlights=['수학 + 화학','4년 학사','영어 조건 비교'],editorial='수학과 화학이 필요합니다. 영어는 약대 기준을 적용합니다.')
 req('qut','required','required',grade='Mathematical Methods 계열 및 Chemistry 동등 과목 확인',src='qut-guide'); eng('qut',6.5,{'L':6,'R':6,'W':6,'S':6},pte=58,pte_each=50,toefl={'overall':79,'L':16,'R':16,'W':21,'S':18})
-setp('rmit',highlights=['4년 학사','2027 학비 공개','Other Pathway'],editorial='일반 학부 영어기준을 약대에 적용하지 않습니다. Associate Degree 연계는 1년 Diploma와 구분해 검토합니다.')
+setp('rmit',highlights=['4년 학사','2027 학비 공개','Other Pathway'],editorial='약대 영어기준을 따로 봅니다. Associate Degree는 1년 Diploma와 다른 경로입니다.')
 req('rmit','required','required',grade='VCE Chemistry 25, Mathematics 25 또는 인정되는 동등 수준.'); fee('rmit',49920,year=2027)
 eng('rmit',7,{'L':6.5,'R':6.5,'W':6.5,'S':6.5},src='rmit-english',status='pending_2027')
 for k in ['ielts_overall','ielts_bands']:row(english,'rmit')[k]['note']='Pharmacy 전용 표는 확인. 국제학생 course 조건과 적용 범위 대조 완료 전 자동 충족 판정 제외.'
-setp('newcastle',highlights=['4년 학사','Foundation 연계','영어 재확인'],editorial='영어조건의 자료 차이를 숨기지 않습니다. 국제학생 Pharmacy 페이지와 2027 안내서 기준의 일치 여부를 재확인해야 합니다.',review_items=['Pharmacy 영어조건 자료 충돌','2027 CSAT·SAT·IB course-specific 값','APC 인증 갱신: 현재 목록 종료일 2026-12-31'])
+setp('newcastle',highlights=['4년 학사','Foundation 연계','영어 재확인'],editorial='영어조건 자료가 서로 달라 2027 기준 발표를 기다리고 있습니다.',review_items=['Pharmacy 영어조건 자료 충돌','2027 CSAT·SAT·IB course-specific 값','APC 인증 갱신: 현재 목록 종료일 2026-12-31'])
 eng('newcastle',7,{'L':7,'R':7,'W':7,'S':7},status='source_conflict')
 for k in ['ielts_overall','ielts_bands']:row(english,'newcastle')[k]['note']='과정 페이지 국제학생 상세 7.0/각7.0, 다른 표시 6.5. 2027 입학팀 서면 확인 필요.'
 intake('newcastle',[2],'Semester 1 · 2월')
@@ -168,21 +168,21 @@ setp('canberra',highlights=['Canberra','학부 약학 과정','모집 확인 중
 setp('unisq',highlights=['T1 only','Toowoomba','2027 개설표'],editorial='2027 국제학생 대면 수업은 Trimester 1에 표시됩니다. 개설 안내서는 9월 28일 확정 예정이므로 최종 일정 확인이 필요합니다.')
 intake('unisq',None,'2027 국제학생 Trimester 1 only · 최종 개설 확정 대기')
 row(intakes,'unisq')['months']=fact(None,'unisq',note='T1 시작월을 달력과 대조 후 확정')
-setp('monash',highlights=['4년 Exit','5년 PharmD','Internship 통합'],editorial='4년 학사 Exit와 5년 통합 완료를 구분합니다. 관련 학사 졸업자는 Graduate Entry도 함께 검토할 수 있습니다.')
+setp('monash',highlights=['4년 Exit','5년 PharmD','Internship 통합'],editorial='4년 후 BPharm(Hons)로 졸업하거나 5년째 PharmD까지 이어갈 수 있습니다. 관련 학사 졸업자는 Graduate Entry도 있습니다.')
 req('monash','required','required',grade='VCE Methods/Specialist Maths 25 + Chemistry 25. IB Math AA SL4 또는 AA/AI HL3, Chemistry SL4 또는 HL3.'); intake('monash',[2],'2월')
-setp('sydney',highlights=['5년 통합','2027 환산표','Internship 통합'],editorial='2027 국제학생 Pharmacy 행의 성적과 학비를 사용합니다. 5년차 실무 과정과 학사 Exit 조건은 따로 확인하세요.',review_items=['4년 학사 Exit 조건과 학위명','2027 Mathematics prerequisite 적용 여부','USFP 수학 progression 조건'])
+setp('sydney',highlights=['5년 통합','2027 환산표','Internship 통합'],editorial='5년 BPharm(Hons) / Master of Pharmacy Practice 과정입니다. 4년 후 학사 Exit가 있습니다.',review_items=['4년 학사 Exit 조건과 학위명','2027 Mathematics prerequisite 적용 여부','USFP 수학 progression 조건'])
 eng('sydney',6.5,{'L':6,'R':6,'W':6,'S':6},toefl={'overall':85,'bands_note':'공식표 각영역 17/19 구분 상세 확인'}); intake('sydney',[2],'2월'); fee('sydney',63600)
 qual('sydney','csat',346,'표준점수 4개 합','국어 + 수학 + 사회/과학 탐구 상위 2개 과목의 표준점수 합. 등급이나 백분위 합계가 아닙니다.')
 qual('sydney','sat',1300,'1600'); qual('sydney','ib',31,'45'); qual('sydney','alevel',14,'대학 환산점수','3과목/4과목 각각 14. A-level 성적을 대학 공식 환산식으로 계산해야 합니다.')
 q=next(x for x in qualifications if x['program_id']=='sydney-bpharm-hons' and x['qualification']=='korean_high_school');q['score']=fact(False,'sydney',note='Korean Senior High School Diploma는 이 Direct 환산표에서 assessable qualification이 아님')
-setp('unsw',highlights=['2027 PharmD 전환','5년 학위','졸업 후 Internship'],editorial='2027 학위명 변경과 인턴십 통합은 같은 의미가 아닙니다. 현재 과정 안내는 학위 후 별도 supervised internship을 설명합니다.',review_items=['새 PharmD 명칭의 APC/Board 승인 반영','신규 과정 2027 국가별 환산·학비'])
-setp('uwa',highlights=['4년 Bachelor + PharmD','고교 졸업 후 진학','졸업 후 Internship'],editorial='고교 졸업 후 시작하는 4년 통합 Bachelor + Doctor of Pharmacy 과정입니다. 학위 안의 실습과 졸업 후 Pharmacy Board 등록을 위한 supervised internship year를 구분해야 하며, 별도의 2년 Graduate Entry Doctor of Pharmacy 과정과도 다릅니다.',review_items=['2027 국제학생 학비','Foundation·브리징 경로 세부조건'])
+setp('unsw',highlights=['2027 PharmD 전환','5년 학위','졸업 후 Internship'],editorial='2027부터 PharmD 명칭을 사용하지만 졸업 후 인턴십은 따로 합니다.',review_items=['새 PharmD 명칭의 APC/Board 승인 반영','신규 과정 2027 국가별 환산·학비'])
+setp('uwa',highlights=['4년 Bachelor + PharmD','고교 졸업 후 진학','졸업 후 Internship'],editorial='고교 졸업 후 4년 동안 Bachelor + Doctor of Pharmacy를 함께 취득합니다. 졸업 후 인턴십은 따로 합니다.',review_items=['2027 국제학생 학비','Foundation·브리징 경로 세부조건'])
 req('uwa','assumed','assumed',grade='Chemistry 및 Mathematics Applications/Methods 수준을 권장하며, 미충족 시 UWA 규정에 따라 foundation/bridging units가 요구될 수 있습니다.'); eng('uwa',7,{'L':7,'R':7,'W':7,'S':7}); intake('uwa',[2],'Semester 1 · 2월')
 qual('uwa','csat',329,'UWA 국제학력 환산점수'); qual('uwa','sat',1220,'1600'); qual('uwa','ib',30,'45'); qual('uwa','alevel',10,'UWA A-level 환산점수')
 
 # New UQ program remains a separate record with accreditation gate.
 import copy
-p=copy.deepcopy(prog('uq'));p.update(id='uq-pharmd',name=fact('Bachelor of Pharmaceutics and Therapeutic Science / Doctor of Pharmacy','uq-pharmd'),duration_years=fact(5,'uq-pharmd'),duration_label=fact('5년 통합','uq-pharmd'),bachelor_award_year=fact(None,'uq-pharmd'),four_year_exit=fact(None,'uq-pharmd'),exit_degree=fact(None,'uq-pharmd'),final_degree=fact('Bachelor of Pharmaceutics and Therapeutic Science / Doctor of Pharmacy','uq-pharmd'),highlights=['신설 5년 통합','Internship 통합 설계','인증 승인 대기'],editorial='신설 과정은 대학 공식 페이지에서 APC 인증과 Pharmacy Board 승인을 추진 중이라고 명시합니다. 기존 BPharm의 인증을 이 과정에 적용할 수 없습니다.',accreditation=fact('APC 인증·Pharmacy Board 승인 아직 미획득','uq-pharmd',status='pending_2027'),review_items=['APC accreditation 및 Board approval','신규 과정 qualification별 기준','학사 중간 Exit 여부'])
+p=copy.deepcopy(prog('uq'));p.update(id='uq-pharmd',name=fact('Bachelor of Pharmaceutics and Therapeutic Science / Doctor of Pharmacy','uq-pharmd'),duration_years=fact(5,'uq-pharmd'),duration_label=fact('5년 통합','uq-pharmd'),bachelor_award_year=fact(None,'uq-pharmd'),four_year_exit=fact(None,'uq-pharmd'),exit_degree=fact(None,'uq-pharmd'),final_degree=fact('Bachelor of Pharmaceutics and Therapeutic Science / Doctor of Pharmacy','uq-pharmd'),highlights=['신설 5년 통합','Internship 통합 설계','인증 승인 대기'],editorial='2027 신설 5년 PharmD입니다. Intern training을 학위에 포함하도록 설계됐고 APC·Pharmacy Board 승인을 진행 중입니다.',accreditation=fact('APC 인증·Pharmacy Board 승인 아직 미획득','uq-pharmd',status='pending_2027'),review_items=['APC accreditation 및 Board approval','신규 과정 qualification별 기준','학사 중간 Exit 여부'])
 programs.append(p)
 for coll in [requirements,english,intakes,tuition,registration]:
  r=copy.deepcopy(row(coll,'uq'));r['program_id']='uq-pharmd'
@@ -201,17 +201,17 @@ def route(i,id,type,title,src,credit=None,entry=None,duration=None,intake=None,p
  r=dict(id=id,program_id=i+'-bpharm-hons',type=type,title=title,availability=fact(True if verified else None,src),credit=fact(credit,src),entry_year=fact(entry,src),duration=fact(duration,src),intake=fact(intake,src),progression=fact(progression,src),english=fact(None,src),qualification=fact(None,src),note=note)
  routes.append(r);return r
 route('griffith','unicentre-korea','diploma','한국 UniCentre · Diploma of Health Science', 'griffith-korea',80,2,'한국 Diploma 1년 + 본과 T1 3년 또는 T2 3.5년','본과 T1 / T2 · 한국과정 시작월 확인 중','Diploma 수료 및 Griffith 입학조건 충족 후 80CP 인정','2027 entry onwards. 학점인정 협약은 입학·영어·장학금 보장이 아닙니다.')
-route('griffith','griffith-college','diploma','Griffith College · Diploma of Health Sciences','griffith-college',80,2,'본과 잔여 240CP · T1 3년 / T2 3.5년','본과 T1 / T2 · Diploma 개강월 별도 확인','지정 Diploma 과목 이수 + 최종 입학허가','2026/2027 Diploma → 2027 본과부터. Diploma 자체 학비·진급 GPA는 확인 중.')
-route('curtin','curtin-college','diploma','Curtin College · Pharmacy Diploma','curtin-college',175,2,'Stage 2: 12개월 · Stage 1 필요 시 8–12개월 추가','Stage 1: 2월/6월 · Stage 2: 2월','Stage 2 CWA 70% + PHAR1002(12월) 추가 이수','현재 College 페이지 70%를 우선합니다. 구 course information의 65%와 충돌 기록을 유지합니다.')
-route('uq','uq-accelerated','foundation','UQ College · Accelerated Foundation','uq-accelerated',0,1,'약 4개월','2027-02-15 시작 → 07-09 완료 · 본과 07-26','BPharm 진급 GPA 5.0 · Academic English 5 · 선수과목 충족','일정상 7월 본과 연결이 가능한 구조입니다. Foundation 입학자격, 과목 조합, 성적 발표·오퍼·비자 일정까지 충족해야 합니다.')
+route('griffith','griffith-college','diploma','Griffith College · Diploma of Health Sciences','griffith-college',80,2,'본과 잔여 240CP · T1 3년 / T2 3.5년','본과 T1 / T2 · Diploma 개강월 별도 확인','지정 Diploma 과목 이수 + 최종 입학허가','80CP 인정. Diploma 학비·진급 GPA는 업데이트 대기입니다.')
+route('curtin','curtin-college','diploma','Curtin College · Pharmacy Diploma','curtin-college',175,2,'Stage 2: 12개월 · Stage 1 필요 시 8–12개월 추가','Stage 1: 2월/6월 · Stage 2: 2월','Stage 2 CWA 70% + PHAR1002(12월) 추가 이수','Stage 2 CWA 70% 기준을 적용합니다.')
+route('uq','uq-accelerated','foundation','UQ College · Accelerated Foundation','uq-accelerated',0,1,'약 4개월','2027-02-15 시작 → 07-09 완료 · 본과 07-26','BPharm 진급 GPA 5.0 · Academic English 5 · 선수과목 충족','2월 Foundation → 7월 BPharm 일정입니다. GPA·영어·필수과목을 충족해야 합니다.')
 routes[-1]['progression']=fact('BPharm 진급 GPA 5.0 · Academic English 5 · 선수과목 충족','uq-foundation')
-route('sydney','sydney-usfp','foundation','USFP · University of Sydney Foundation Program','sydney',0,1,None,None,'Pharmacy GPA 7.3 / English C','2027 Pharmacy 행 기준. 수학 이수 및 프로그램별 입학자격은 별도 확인합니다.')
-route('monash','monash-foundation','foundation','Monash University Foundation Year','monash-foundation',0,1,None,None,None,'2027 Pathway guide의 구 P6001 표를 새 P6007에 자동 적용하지 않습니다. 총점·영어·수학·화학 기준 확인 중.',False)
-route('newcastle','newcastle-foundation','foundation','Newcastle International College · Foundation Studies','newcastle-foundation',0,1,None,None,None,'Pharmacy 연결 과정은 확인했습니다. 성적표의 academic/English 열과 2027 조건 대조를 완료한 뒤 수치를 표시합니다.')
-route('monash','monash-ge','graduate','Monash · Graduate Entry','monash',None,3,'관련 학위 + 여름 집중과정 후 3학년 진입',None,'최근 10년 이내 관련 학사 · 평균 70% 이상 · 대학 수준 Human Physiology','최소 기준을 충족해도 선발은 경쟁적이며 학점·과목 심사가 필요합니다.')
-route('rmit','rmit-associate','other','RMIT · Associate Degree pathway','rmit-pathway',None,None,'Associate 2년 + Bachelor 3년',None,None,'2026 공개 경로 참고. 1년 Diploma/IYO로 분류하지 않으며 2027 국제학생 적용 여부 확인 중.',False)
+route('sydney','sydney-usfp','foundation','USFP · University of Sydney Foundation Program','sydney',0,1,None,None,'Pharmacy GPA 7.3 / English C','2027 Pharmacy 진학 기준입니다. 수학과 Foundation 입학조건을 충족해야 합니다.')
+route('monash','monash-foundation','foundation','Monash University Foundation Year','monash-foundation',0,1,None,None,None,'새 P6007 진급점수는 아직 발표되지 않았습니다.',False)
+route('newcastle','newcastle-foundation','foundation','Newcastle International College · Foundation Studies','newcastle-foundation',0,1,None,None,None,'2027 진급점수 발표 대기입니다.')
+route('monash','monash-ge','graduate','Monash · Graduate Entry','monash',None,3,'관련 학위 + 여름 집중과정 후 3학년 진입',None,'최근 10년 이내 관련 학사 · 평균 70% 이상 · 대학 수준 Human Physiology','최소 기준을 충족한 뒤 경쟁 선발합니다.')
+route('rmit','rmit-associate','other','RMIT · Associate Degree pathway','rmit-pathway',None,None,'Associate 2년 + Bachelor 3년',None,None,'2년 Associate Degree + 약대 3년 경로입니다. 1년 Diploma가 아닙니다.',False)
 for i,title in [('latrobe','Foundation · Health / Life Sciences'),('utas','International Foundation')]:
- route(i,i+'-foundation','foundation',title,i,0,1,note='2027 Pharmacy-specific progression과 국제학생 모집 확인 중. 진학 가능 경로로 확정하지 않습니다.',verified=False)
+ route(i,i+'-foundation','foundation',title,i,0,1,note='2027 약대 진급조건·유학생 모집 발표 대기입니다.',verified=False)
 
 def scholarship(i,id,name,src,pct=None,kind='pending',automatic=None,competitive=None,eligible=None,duration=None,threshold=None,renewal=None,number=None,exclude=None,note=''):
  scholarships.append(dict(id=id,university_id=i,name=name,amount=fact(pct,src),award_type='percentage' if pct else None,assessment=kind,
@@ -242,7 +242,7 @@ conflicts=[
 ]
 # Canberra 2027 course PDF verified after initial seed.
 source('canberra-2027','Canberra Bachelor of Pharmacy HLB301 · 2027','https://www.canberra.edu.au/course/HLB301/1/2027.pdf',2027,'official_course')
-setp('canberra',name=fact('Bachelor of Pharmacy','canberra-2027'),final_degree=fact('Bachelor of Pharmacy; embedded Honours option','canberra-2027'),international_recruitment=fact(True,'canberra-2027'),highlights=['4년 학사','2월 입학','IELTS 각 7.0'],editorial='2027 Bruce 캠퍼스 국제학생 모집이 확인되었습니다. Honours는 별도 성적 기준을 충족한 학생의 embedded option입니다.')
+setp('canberra',name=fact('Bachelor of Pharmacy','canberra-2027'),final_degree=fact('Bachelor of Pharmacy; embedded Honours option','canberra-2027'),international_recruitment=fact(True,'canberra-2027'),highlights=['4년 학사','2월 입학','IELTS 각 7.0'],editorial='2027 Bruce 캠퍼스 유학생 모집이 확인됐습니다. Honours는 성적 기준을 충족한 학생이 선택합니다.')
 eng('canberra',7,{'L':7,'R':7,'W':7,'S':7},src='canberra-2027');intake('canberra',[2],'2027-02-15 · Semester 1','canberra-2027')
 req('canberra','assumed','assumed','assumed','assumed','수학 + Biology/Human Movement, Chemistry/Physics는 assumed knowledge로 안내. 필수 prerequisite와 구분.',src='canberra-2027')
 for route_record in routes:
@@ -257,7 +257,7 @@ source('unisq-course','UniSQ · International Bachelor of Pharmacy (Honours)','h
 eng('unisq',7,{'L':7,'R':7,'W':6.5,'S':7},src='unisq-course')
 req('unisq','assumed','assumed','assumed','assumed','English C, Mathematical Methods/Specialist C, Biology/Chemistry/Physics 중 하나 C는 assumed knowledge.',src='unisq-course')
 fee('unisq',34280,src='unisq-course',year=2026,load='8 units / year · 2026 국제학생 참고값')
-setp('unisq',editorial='2027 국제학생 개설표는 Trimester 1만 안내합니다. 공식 과정 페이지의 3년 가속 일정은 2028년부터이며 2027 과정에 적용하지 않습니다.',review_items=['2027 학비','T1 최종 개설 일정','2027 장학금 적용'])
+setp('unisq',editorial='2027은 Trimester 1 입학입니다. 3년 가속과정은 2028부터 시작합니다.',review_items=['2027 학비','T1 최종 개설 일정','2027 장학금 적용'])
 row(registration,'unisq').update(supervised_practice_in_degree=fact(False,'unisq-course'),post_graduation_internship=fact(True,'unisq-course'))
 source('griffith-2026','Griffith 2026 International Guide · Pharmacy H1','https://www.griffith.edu.au/__data/assets/pdf_file/0035/2193587/Griffith-University-2026-International-Study-Guide-Digital.pdf',2026,'official_guide')
 for q,score,scale in [('csat',331,'대학 공식 CSAT 환산'),('sat',1080,'1600 · 미국 고교졸업 자격 동반'),('ib',28,'45'),('alevel',7,'대학 A-level 환산점수')]:
@@ -276,7 +276,7 @@ for route_record in routes:
   route_record['duration']=copy.deepcopy(program['duration_label'])
   route_record['intake']=copy.deepcopy(start['label'])
   route_record['intake_months']=copy.deepcopy(start['months'])
-  route_record['note']='아래 Direct 학력별 성적·선수과목·영어 표를 함께 확인하세요. 최종 입학은 대학 심사로 결정됩니다.'
+  route_record['note']='아래 표에 성적·선수과목·영어 기준을 정리했습니다.'
 # A blocked source is not a completed verification.
 sources['board']['verified_date']=None
 sources['board']['retrieval_status']='blocked_403'
