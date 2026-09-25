@@ -68,11 +68,11 @@ source('latrobe-scholarship-2027','La Trobe High Achiever Scholarship · 2026/20
 source('latrobe-scholarship-courses','La Trobe · Courses offering international scholarships','https://www.latrobe.edu.au/study/scholarships/advice/courses-offering-international-scholarships',2027,'official_scholarship')
 source('canberra-guide-2027','University of Canberra International Course Guide 2027 · Scholarships','https://www.canberra.edu.au/content/dam/uc/documents/agent-marketing-toolkit/international-course-guide/international-course-guide.pdf',2027,'official_guide')
 source('uwa-scholarship-current','UWA Global Excellence Scholarship','https://www.uwa.edu.au/study/scholarships-and-fees/scholarships/international-scholarships/global-excellence-scholarship',2027,'official_scholarship')
-source('newcastle-scholarship-2027-terms','Newcastle International Excellence Scholarship 2027 · excluded programs','https://www.newcastle.edu.au/__data/assets/pdf_file/0018/1035117/UNI_054_International-Excellence-Scholarship.pdf',2027,'official_scholarship')
+source('newcastle-scholarship-2027-terms','Newcastle International Excellence Scholarship 2027 · Terms & Conditions · excluded programs','https://www.newcastle.edu.au/__data/assets/pdf_file/0014/1136300/UNI_053-International-Excellence-Scholarship-2027-T-and-Cs-07072026.pdf',2027,'official_scholarship')
 source('uwa-foundation','UWA College · UWA Foundation Program','https://www.uwa.edu.au/uwa-college/Study/UWA-Foundation-Program',None,'official_pathway')
 source('qut-college-foundation','QUT College · Foundation programs','https://www.qut.edu.au/study/qut-college/international/english-language-programs',None,'official_pathway')
 source('qut-fee-2027','QUT · Bachelor of Pharmacy (Honours) 2027 fee','https://www.qut.edu.au/courses/bachelor-of-pharmacy-honours',2027,'official_course')
-source('newcastle-fee-2027','University of Newcastle · Bachelor of Pharmacy (Honours) 2027 fee','https://www.newcastle.edu.au/degrees/bachelor-of-pharmacy-honours',2027,'official_course')
+source('newcastle-fee-2027','University of Newcastle · 2027 International Student Degree Guide · Pharmacy','https://www.newcastle.edu.au/__data/assets/pdf_file/0020/1102565/2025-1079-International-Prospectus-2027-ROW_V27.pdf',2027,'official_guide')
 source('monash-fee-2027','Monash · Pharmacy P6007 2027 fee','https://www.monash.edu/study/courses/find-a-course/pharmacy-p6007',2027,'official_course')
 source('jcu-fee-2026','JCU · Bachelor of Pharmacy (Honours) 2026 fee','https://www.jcu.edu.au/courses/bachelor-of-pharmacy-honours',2026,'official_course')
 source('unsw-fee-2026','UNSW · Pharmaceutical Medicine / Pharmacy 2026 fee','https://www.unsw.edu.au/study/undergraduate/bachelor-of-pharmaceutical-medicine-master-of-pharmacy',2026,'official_course')
@@ -136,7 +136,7 @@ source('monash-scholarship','Monash Pharmacy and Pharmaceutical Science Internat
 source('sydney-scholarship','Sydney International Student Award 2027','https://www.sydney.edu.au/study/fees-and-loans/scholarships/sydney-international-student-award.html',2027,'official_scholarship')
 source('unsw-scholarship','UNSW International Student Award · 국가 목록','https://www.scholarships.unsw.edu.au/sites/default/files/2026-04/International%20Student%20Award_List%20of%20Eligible%20Countries.pdf',2026,'official_scholarship')
 source('newcastle-scholarship','Newcastle International Excellence Scholarship 2027','https://www.newcastle.edu.au/scholarships/UNI_053',2027,'official_scholarship')
-source('jcu-scholarship','JCU · International scholarships','https://www.jcu.edu.au/international-students/scholarships-and-financial-aid',None,'official_scholarship')
+source('jcu-scholarship','JCU · International Excellence Scholarship','https://www.jcu.edu.au/scholarships/search/international-excellence-scholarship',None,'official_scholarship')
 source('utas-housing','UTas · Hobart accommodation 2027','https://www.utas.edu.au/uni-life/accommodation/hobart',2027,'official_accommodation')
 source('utas-christ','UTas · Christ College','https://www.utas.edu.au/uni-life/accommodation/hobart/christ-college',2027,'official_accommodation')
 source('latrobe-housing','La Trobe · Bendigo accommodation rates 2026','https://www.latrobe.edu.au/__data/assets/pdf_file/0008/1388663/Bendigo-Accommodation-Rates-2026.pdf',2026,'official_accommodation')
@@ -234,10 +234,12 @@ req('qut','assumed','assumed',grade='Chemistry + Mathematical Methods/Specialist
 setp('rmit',highlights=['4년','RMIT Foundation 가능','2027 학비 A$49,920'],editorial='Bundoora 캠퍼스 4년 약대입니다. 한국 고교·수능 환산표가 명확하고 RMIT Foundation으로도 준비할 수 있습니다.')
 req('rmit','required','required',grade='VCE Chemistry 25, Mathematics 25 또는 인정되는 동등 수준.'); fee('rmit',49920,year=2027); intake('rmit',[2],'Semester 1 · 2027년 3월 1일 수업 시작',src='rmit-2027-apply')
 eng('rmit',7,{'L':6.5,'R':6.5,'W':6.5,'S':6.5},src='rmit-english',pte=65,pte_each=58,toefl={'overall':94,'R':19,'L':20,'S':20,'W':24})
-setp('newcastle',highlights=['4년 학사','Foundation 연계','영어 재확인'],editorial='영어조건 자료가 서로 달라 2027 기준 발표를 기다리고 있습니다.',review_items=['Pharmacy 영어조건 자료 충돌','2027 CSAT·SAT·IB course-specific 값','APC 인증 갱신: 현재 목록 종료일 2026-12-31'])
+setp('newcastle',highlights=['4년 학사','Foundation 연계','2027 영어자료 충돌'],editorial='2027 공식 Degree Guide는 IELTS 6.5/각 6.5, 현재 과정 페이지의 English proficiency section은 7.0/각 7.0으로 표시해 공식자료 간 차이가 남아 있습니다.',review_items=['Pharmacy 2027 영어조건 공식자료 충돌','2027 CSAT·SAT·IB course-specific 값','APC 인증 갱신: 현재 목록 종료일 2026-12-31'])
 eng('newcastle',7,{'L':7,'R':7,'W':7,'S':7},src='newcastle-2027-course',status='source_conflict');
+for _k in ['ielts_overall','ielts_bands']:
+ row(english,'newcastle')[_k]['note']='2027 International Student Degree Guide는 IELTS 6.5/각 6.5, 현재 과정 페이지의 English proficiency section은 7.0/각 7.0으로 표시합니다. 자동 충족 판정에 사용하지 않고 지원 전 Newcastle Admissions 서면 확인이 필요합니다.'
 for k in ['ielts_overall','ielts_bands']:row(english,'newcastle')[k]['note']='공식 과정페이지에 6.5/6.5와 7.0/7.0 표기가 함께 노출되고 공식 국제 가이드도 연도별 차이가 있어 2027 지원 전 서면 확인 필요.'
-intake('newcastle',[2],'Semester 1 · 2027년 2월 22일',src='newcastle-2027-course'); req('newcastle','assumed','assumed',physics='assumed',grade='Assumed knowledge: Mathematics, English Advanced, Chemistry, Physics',src='newcastle-2026-ug'); fee('newcastle',49205,src='newcastle-fee-2027',year=2027,load='80 units 기준')
+intake('newcastle',[2],'Semester 1 · 2027년 2월 22일',src='newcastle-2027-course'); req('newcastle','assumed','assumed',physics='assumed',grade='Assumed knowledge: Mathematics, English Advanced, Chemistry, Physics',src='newcastle-2026-ug'); fee('newcastle',51665,src='newcastle-fee-2027',year=2027,load='80 units 기준')
 setp('canberra',highlights=['Canberra','학부 약학 과정','모집 확인 중'],editorial='APC 학부 약학 인증 목록과 실제 국제학생 모집은 서로 다른 확인 항목입니다. 2027 국제학생 course offer를 확인 중입니다.'); fee('canberra',42500,src='canberra-guide-2027',year=2026)
 setp('unisq',highlights=['T1 only','Toowoomba','2027 개설표'],editorial='2027 국제학생 대면 수업은 Trimester 1에 표시됩니다. 개설 안내서는 9월 28일 확정 예정이므로 최종 일정 확인이 필요합니다.')
 intake('unisq',[2],'Trimester 1 · 2027년 2월 15일',src='unisq-pharmacy-current'); req('unisq','accepted','assumed','accepted','accepted','수학 + Biology/Chemistry/Physics 중 1과목에서 Year 12 C 수준 assumed knowledge',src='unisq-pharmacy-current'); eng('unisq',7.0,{'L':7,'R':7,'W':6.5,'S':7},src='unisq-pharmacy-current')
@@ -248,7 +250,7 @@ eng('sydney',6.5,{'L':6,'R':6,'W':6,'S':6},toefl={'overall':85,'bands_note':'공
 qual('sydney','csat',346,'표준점수 4개 합','국어 + 수학 + 사회/과학 탐구 상위 2개 과목의 표준점수 합. 등급이나 백분위 합계가 아닙니다.')
 qual('sydney','sat',1300,'1600'); qual('sydney','ib',31,'45'); qual('sydney','alevel',14,'대학 환산점수','3과목/4과목 각각 14. A-level 성적을 대학 공식 환산식으로 계산해야 합니다.')
 q=next(x for x in qualifications if x['program_id']=='sydney-bpharm-hons' and x['qualification']=='korean_high_school');q['score']=fact(False,'sydney',note='Korean Senior High School Diploma는 이 Direct 환산표에서 assessable qualification이 아님')
-setp('unsw',highlights=['2027 PharmD 전환','5년 학위','졸업 후 Internship'],editorial='2027부터 PharmD 명칭을 사용하지만 졸업 후 인턴십은 따로 합니다.',review_items=['새 PharmD 명칭의 APC/Board 승인 반영','2027 국제학생 학비']); fee('unsw',63000,src='unsw-fee-2026',year=2026,total=349000,load='first-year full-time fee'); intake('unsw',[2],'Term 1 · 2027',src='unsw-2027-course'); eng('unsw',6.5,{'L':6,'R':6,'W':6,'S':6},src='unsw-english-current'); req('unsw','assumed','assumed',grade='Assumed knowledge: Chemistry, Mathematics Advanced',src='unsw')
+setp('unsw',name=fact('Bachelor of Pharmaceutical Medicine / Doctor of Pharmacy','unsw-2027-course'),final_degree=fact('Bachelor of Pharmaceutical Medicine / Doctor of Pharmacy','unsw-2027-course'),highlights=['2027 PharmD 전환','5년 학위','졸업 후 Internship'],editorial='UNSW는 2027부터 Bachelor of Pharmaceutical Medicine / Doctor of Pharmacy로 명칭을 변경한다고 공식 안내합니다. 졸업 후 일반등록을 위한 인턴십·시험 요건은 별도입니다.',review_items=['새 PharmD 명칭의 APC/Board 승인 반영','2027 국제학생 학비']); prog('unsw')['accreditation']['note']='APC 2026-07-08 목록은 기존 Bachelor of Pharmaceutical Medicine / Master of Pharmacy 명칭을 Accredited with conditions(종료 2028-06-30)로 게재합니다. UNSW가 공지한 2027 Doctor of Pharmacy 새 명칭의 APC/Pharmacy Board 반영은 지원·등록 전 재확인합니다.'; fee('unsw',63000,src='unsw-fee-2026',year=2026,total=349000,load='first-year full-time fee'); intake('unsw',[2],'Term 1 · 2027',src='unsw-2027-course'); eng('unsw',6.5,{'L':6,'R':6,'W':6,'S':6},src='unsw-english-current'); req('unsw','assumed','assumed',grade='Assumed knowledge: Chemistry, Mathematics Advanced',src='unsw')
 setp('uwa',highlights=['4년 Bachelor + PharmD','고교 졸업 후 진학','졸업 후 Internship'],editorial='고교 졸업 후 4년 동안 Bachelor + Doctor of Pharmacy를 함께 취득합니다. 졸업 후 인턴십은 따로 합니다.',review_items=['2027 국제학생 학비'])
 req('uwa','assumed','assumed',grade='Chemistry 및 Mathematics Applications/Methods 수준을 권장하며, 미충족 시 UWA 규정에 따라 foundation/bridging units가 요구될 수 있습니다.'); eng('uwa',7,{'L':7,'R':7,'W':7,'S':7}); intake('uwa',[2],'Semester 1 · 2월')
 # RMIT Pharmacy 65% international academic requirement mapped through official country equivalency tables.
@@ -312,7 +314,7 @@ def scholarship(i,id,name,src,pct=None,kind='pending',automatic=None,competitive
   automatic_assessment=fact(automatic,src),separate_application=fact(not automatic,src) if automatic is not None else fact(None,src),competitive=fact(competitive,src),country_eligibility=fact(eligible,src),duration=fact(duration,src),academic_threshold=fact(threshold,src),renewal_condition=fact(renewal,src),number_available=fact(number,src),course_exclusion=fact(exclude,src),pharmacy_eligible=fact(pharmacy,pharmacy_src or src),note=note))
 scholarship('griffith','griffith-merit','International Academic Merit','griffith-scholarship',20,'automatic',True,False,True,'학위 잔여 기간 · 인정학점 제외','GPA 4.5/7 또는 동등 성적','매 학기 전 과목 통과·풀타임 유지',exclude='Diploma 자체 및 제휴기관 제공과정 등 제외',note='한국 국적 대상. Pathway 패키지는 최종 성적 제출 후 심사합니다.',pharmacy=True)
 scholarship('sydney','sydney-award','Sydney International Student Award','sydney-scholarship',20,'application',False,False,True,'과정 기간','입학조건 충족 + personal statement','미납 없음·허가 없는 파트타임 전환 금지·정해진 기간 이수',exclude='MBA/EMBA·교환·원격·일부 법학 복수과정 등',note='2027 한국 국적 포함. Personal statement는 3개 항목 각 최대 200단어입니다.',pharmacy=True)
-scholarship('monash','monash-merit','Pharmacy and Pharmaceutical Science International Merit','monash-scholarship',[25,50],'competitive',True,True,True,'최소 졸업학점 이수까지','각 대상 과정군 최상위·차상위','매 학기 WAM 70 유지',8,'공식 목록의 P6007 Scholars Program 등 대상 과정 확인','전체 4개 과정군 합계 연 8명. 일반 학생의 기본 비용에 적용하지 않습니다.',pharmacy=None)
+scholarship('monash','monash-merit','Pharmacy and Pharmaceutical Science International Merit','monash-scholarship',[25,50],'competitive',True,True,True,'최소 졸업학점 이수까지','각 대상 과정군 최상위·차상위','매 학기 WAM 70 유지',8,'공식 목록은 P6007 Scholars Program/Doctor of Pharmacy를 대상 과정으로 명시','연 8명 경쟁장학입니다. 50%는 각 과정군 최상위, 25%는 차상위에 수여됩니다. 일반 P6007 전원 적용 장학으로 표시하지 않습니다.',pharmacy=None)
 scholarship('jcu','jcu-excellence','International Excellence Scholarship','jcu-scholarship',25,'automatic',True,False,True,'학위 전체 기간','학부: ATAR 65 또는 동등 성적','매 학기 강한 GPA 유지',exclude='Medicine·Dentistry·Diploma·일부 비학위 과정',note='Bachelor of Pharmacy (Honours)는 공식 제외목록에 없습니다.',pharmacy=True)
 scholarship('utas','utas-tims','Tasmanian International Merit Scholarship','utas-scholarship-2027',30,'automatic',True,False,True,'학위 전체 기간 · 최대 5년','최종 학력 성적표 기준 merit 심사','정상 등록·학업진행 유지',note='2027 약대는 제외과정 목록에 없습니다. 다른 UTas 장학과 중복 수혜는 불가하며 더 높은 장학이 적용됩니다.',pharmacy=True)
 scholarship('curtin','curtin-global-merit','Curtin Global Merit Scholarship','curtin-scholarship-2027',20,'automatic',True,False,True,'학부 최대 4년','최근 학업성적 Distinction 수준','Offer·등록 조건 유지',exclude='공식 제외과정에 Pharmacy 없음',note='2027/2028 WA 캠퍼스 국제학생 대상.',pharmacy=True)
@@ -355,7 +357,7 @@ housing('uwa','uwa-trinity-2027','Trinity Residential College · Standard Room',
 
 conflicts=[
  dict(id='curtin-progression',entity_id='curtin-college',field='progression',source_ids=['curtin-college','curtin-old'],status='source_conflict',summary='Stage 2 CWA: 현재 College 70% / 구 과정 안내 65%',decision='현재 메인 College 70% 우선. 입학팀 확인 전 충돌 기록 유지.'),
- dict(id='newcastle-english',entity_id='newcastle-bpharm-hons',field='english',source_ids=['newcastle-2027-course','newcastle-2026-ug'],status='source_conflict',summary='Newcastle 공식 자료에서 Pharmacy IELTS 6.5/각6.5와 7.0/각7.0 표기가 충돌',decision='자동 충족 판정에서 제외. 2027 지원 전 Newcastle Admissions 서면 확인.'),
+ dict(id='newcastle-english',entity_id='newcastle-bpharm-hons',field='english',source_ids=['newcastle-2027-course','newcastle-fee-2027'],status='source_conflict',summary='Newcastle 2027 Degree Guide는 IELTS 6.5/각6.5, 현재 과정 페이지 English proficiency section은 7.0/각7.0으로 표기',decision='같은 대학의 2027 공식자료 간 차이이므로 자동 충족 판정에서 제외. 지원 전 Newcastle Admissions 서면 확인.'),
  dict(id='monash-foundation-version',entity_id='monash-foundation',field='progression',source_ids=['monash-foundation','monash'],status='pending_2027',summary='Pathway guide 구 P6001과 새 P6007 과정 코드 차이',decision='기존 progression 점수 이식 금지.'),
 ]
 # Canberra 2027 course PDF verified after initial seed.
@@ -494,7 +496,7 @@ decision_lenses={
   },
   "newcastle": {
     "why": [
-      "2027 학비 A$49,205",
+      "2027 학비 A$51,665",
       "Newcastle Regional",
       "Foundation 경로 있음"
     ],
