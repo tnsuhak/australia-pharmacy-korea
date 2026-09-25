@@ -7823,58 +7823,58 @@
     {
       "program_id": "utas-bpharm-hons",
       "chemistry": {
-        "value": null,
+        "value": "required",
         "academic_year": 2027,
         "source_year": 2027,
         "source_id": "utas",
         "source_url": "https://www.utas.edu.au/courses/health/courses/54d-bachelor-of-pharmacy-with-honours",
         "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
-        "note": ""
+        "verified_date": "2026-09-25",
+        "status": "confirmed_2027",
+        "note": "Chemistry 또는 Physical Sciences 동등 과목"
       },
       "mathematics": {
-        "value": null,
+        "value": "required",
         "academic_year": 2027,
         "source_year": 2027,
         "source_id": "utas",
         "source_url": "https://www.utas.edu.au/courses/health/courses/54d-bachelor-of-pharmacy-with-honours",
         "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
+        "verified_date": "2026-09-25",
+        "status": "confirmed_2027",
         "note": ""
       },
       "biology": {
-        "value": null,
+        "value": "recommended",
         "academic_year": 2027,
         "source_year": 2027,
         "source_id": "utas",
         "source_url": "https://www.utas.edu.au/courses/health/courses/54d-bachelor-of-pharmacy-with-honours",
         "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
+        "verified_date": "2026-09-25",
+        "status": "confirmed_2027",
         "note": ""
       },
       "physics": {
-        "value": null,
+        "value": "accepted",
         "academic_year": 2027,
         "source_year": 2027,
         "source_id": "utas",
         "source_url": "https://www.utas.edu.au/courses/health/courses/54d-bachelor-of-pharmacy-with-honours",
         "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
-        "note": ""
+        "verified_date": "2026-09-25",
+        "status": "confirmed_2027",
+        "note": "Physical Sciences가 Chemistry 대체 선택지로 안내됨"
       },
       "minimum_grade": {
-        "value": null,
+        "value": "수학 1과목 + Chemistry 또는 Physical Sciences에서 satisfactory achievement",
         "academic_year": 2027,
         "source_year": 2027,
         "source_id": "utas",
         "source_url": "https://www.utas.edu.au/courses/health/courses/54d-bachelor-of-pharmacy-with-honours",
         "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
+        "verified_date": "2026-09-25",
+        "status": "confirmed_2027",
         "note": ""
       }
     },
@@ -7997,58 +7997,58 @@
     {
       "program_id": "adelaide-bpharm-hons",
       "chemistry": {
-        "value": null,
+        "value": "accepted",
         "academic_year": 2027,
         "source_year": null,
         "source_id": "adelaide",
         "source_url": "https://adelaide.edu.au/study/degrees/bachelor-of-pharmacy-honours/",
         "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
-        "note": ""
+        "verified_date": "2026-09-25",
+        "status": "latest_published",
+        "note": "Biology, Chemistry, Physics 중 1과목"
       },
       "mathematics": {
-        "value": null,
+        "value": "not_required",
         "academic_year": 2027,
         "source_year": null,
         "source_id": "adelaide",
         "source_url": "https://adelaide.edu.au/study/degrees/bachelor-of-pharmacy-honours/",
         "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
+        "verified_date": "2026-09-25",
+        "status": "latest_published",
         "note": ""
       },
       "biology": {
-        "value": null,
+        "value": "accepted",
         "academic_year": 2027,
         "source_year": null,
         "source_id": "adelaide",
         "source_url": "https://adelaide.edu.au/study/degrees/bachelor-of-pharmacy-honours/",
         "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
-        "note": ""
+        "verified_date": "2026-09-25",
+        "status": "latest_published",
+        "note": "Biology, Chemistry, Physics 중 1과목"
       },
       "physics": {
-        "value": null,
+        "value": "accepted",
         "academic_year": 2027,
         "source_year": null,
         "source_id": "adelaide",
         "source_url": "https://adelaide.edu.au/study/degrees/bachelor-of-pharmacy-honours/",
         "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
-        "note": ""
+        "verified_date": "2026-09-25",
+        "status": "latest_published",
+        "note": "Biology, Chemistry, Physics 중 1과목"
       },
       "minimum_grade": {
-        "value": null,
+        "value": "SACE Stage 2 Biology, Chemistry 또는 Physics 중 1과목 또는 동등 수준",
         "academic_year": 2027,
         "source_year": null,
         "source_id": "adelaide",
         "source_url": "https://adelaide.edu.au/study/degrees/bachelor-of-pharmacy-honours/",
         "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
+        "verified_date": "2026-09-25",
+        "status": "latest_published",
         "note": ""
       }
     },
@@ -8519,37 +8519,37 @@
     {
       "program_id": "sydney-bpharm-hons",
       "chemistry": {
-        "value": null,
+        "value": "assumed",
         "academic_year": 2027,
-        "source_year": 2027,
-        "source_id": "sydney",
-        "source_url": "https://www.sydney.edu.au/dam/corporate/documents/study/how-to-apply/international-admission-guide.pdf",
-        "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
-        "note": ""
+        "source_year": null,
+        "source_id": "sydney-structure",
+        "source_url": "https://www.sydney.edu.au/handbooks/medicine-health/coursework/pharmacy/course-resolutions.html",
+        "source_type": "official_handbook",
+        "verified_date": "2026-09-25",
+        "status": "latest_published",
+        "note": "미이수 학생에게 Chemistry bridging course 권장"
       },
       "mathematics": {
-        "value": null,
+        "value": "assumed",
         "academic_year": 2027,
-        "source_year": 2027,
-        "source_id": "sydney",
-        "source_url": "https://www.sydney.edu.au/dam/corporate/documents/study/how-to-apply/international-admission-guide.pdf",
-        "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
-        "note": ""
+        "source_year": null,
+        "source_id": "sydney-structure",
+        "source_url": "https://www.sydney.edu.au/handbooks/medicine-health/coursework/pharmacy/course-resolutions.html",
+        "source_type": "official_handbook",
+        "verified_date": "2026-09-25",
+        "status": "latest_published",
+        "note": "Mathematics Advanced (2U) 수준 assumed knowledge"
       },
       "biology": {
-        "value": null,
+        "value": "recommended",
         "academic_year": 2027,
-        "source_year": 2027,
-        "source_id": "sydney",
-        "source_url": "https://www.sydney.edu.au/dam/corporate/documents/study/how-to-apply/international-admission-guide.pdf",
-        "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
-        "note": ""
+        "source_year": null,
+        "source_id": "sydney-structure",
+        "source_url": "https://www.sydney.edu.au/handbooks/medicine-health/coursework/pharmacy/course-resolutions.html",
+        "source_type": "official_handbook",
+        "verified_date": "2026-09-25",
+        "status": "latest_published",
+        "note": "미이수 학생에게 Biology bridging course 권장"
       },
       "physics": {
         "value": null,
@@ -8563,14 +8563,14 @@
         "note": ""
       },
       "minimum_grade": {
-        "value": null,
+        "value": "Mathematics admission prerequisite와 Chemistry/Math assumed knowledge를 별도로 확인",
         "academic_year": 2027,
-        "source_year": 2027,
-        "source_id": "sydney",
-        "source_url": "https://www.sydney.edu.au/dam/corporate/documents/study/how-to-apply/international-admission-guide.pdf",
-        "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
+        "source_year": null,
+        "source_id": "sydney-structure",
+        "source_url": "https://www.sydney.edu.au/handbooks/medicine-health/coursework/pharmacy/course-resolutions.html",
+        "source_type": "official_handbook",
+        "verified_date": "2026-09-25",
+        "status": "latest_published",
         "note": ""
       }
     },
@@ -8813,12 +8813,12 @@
       "ielts_overall": {
         "value": 6.5,
         "academic_year": 2027,
-        "source_year": 2026,
-        "source_id": "utas-2026",
-        "source_url": "https://www.utas.edu.au/courses/health/courses/54d-bachelor-of-pharmacy-with-honours?year=2026",
+        "source_year": 2027,
+        "source_id": "utas",
+        "source_url": "https://www.utas.edu.au/courses/health/courses/54d-bachelor-of-pharmacy-with-honours",
         "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "latest_published",
+        "verified_date": "2026-09-25",
+        "status": "confirmed_2027",
         "note": ""
       },
       "ielts_bands": {
@@ -8829,12 +8829,12 @@
           "S": 6
         },
         "academic_year": 2027,
-        "source_year": 2026,
-        "source_id": "utas-2026",
-        "source_url": "https://www.utas.edu.au/courses/health/courses/54d-bachelor-of-pharmacy-with-honours?year=2026",
+        "source_year": 2027,
+        "source_id": "utas",
+        "source_url": "https://www.utas.edu.au/courses/health/courses/54d-bachelor-of-pharmacy-with-honours",
         "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "latest_published",
+        "verified_date": "2026-09-25",
+        "status": "confirmed_2027",
         "note": ""
       },
       "pte_overall": {
@@ -8874,25 +8874,30 @@
     {
       "program_id": "curtin-bpharm-hons",
       "ielts_overall": {
-        "value": null,
+        "value": 7,
         "academic_year": 2027,
         "source_year": null,
-        "source_id": "curtin",
-        "source_url": "https://www.curtin.edu.au/study/offering/course-ug-bachelor-of-pharmacy-honours--bh-pharm/?region=int",
-        "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
+        "source_id": "curtin-pharmacy-current-guide",
+        "source_url": "https://publications.curtin.edu.au/chinese-student-guide/page/28-29",
+        "source_type": "official_guide",
+        "verified_date": "2026-09-25",
+        "status": "latest_published",
         "note": ""
       },
       "ielts_bands": {
-        "value": null,
+        "value": {
+          "L": 7,
+          "R": 7,
+          "W": 7,
+          "S": 7
+        },
         "academic_year": 2027,
         "source_year": null,
-        "source_id": "curtin",
-        "source_url": "https://www.curtin.edu.au/study/offering/course-ug-bachelor-of-pharmacy-honours--bh-pharm/?region=int",
-        "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
+        "source_id": "curtin-pharmacy-current-guide",
+        "source_url": "https://publications.curtin.edu.au/chinese-student-guide/page/28-29",
+        "source_type": "official_guide",
+        "verified_date": "2026-09-25",
+        "status": "latest_published",
         "note": ""
       },
       "pte_overall": {
@@ -9001,25 +9006,30 @@
     {
       "program_id": "adelaide-bpharm-hons",
       "ielts_overall": {
-        "value": null,
+        "value": 6.5,
         "academic_year": 2027,
         "source_year": null,
         "source_id": "adelaide",
         "source_url": "https://adelaide.edu.au/study/degrees/bachelor-of-pharmacy-honours/",
         "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
+        "verified_date": "2026-09-25",
+        "status": "latest_published",
         "note": ""
       },
       "ielts_bands": {
-        "value": null,
+        "value": {
+          "L": 6,
+          "R": 6,
+          "W": 6,
+          "S": 6
+        },
         "academic_year": 2027,
         "source_year": null,
         "source_id": "adelaide",
         "source_url": "https://adelaide.edu.au/study/degrees/bachelor-of-pharmacy-honours/",
         "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
+        "verified_date": "2026-09-25",
+        "status": "latest_published",
         "note": ""
       },
       "pte_overall": {
@@ -9620,25 +9630,30 @@
     {
       "program_id": "unsw-bpharm-hons",
       "ielts_overall": {
-        "value": null,
+        "value": 6.5,
         "academic_year": 2027,
         "source_year": null,
-        "source_id": "unsw",
-        "source_url": "https://www.unsw.edu.au/study/undergraduate/bachelor-of-pharmaceutical-medicine-master-of-pharmacy",
-        "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
+        "source_id": "unsw-english-current",
+        "source_url": "https://www.unsw.edu.au/study/how-to-apply/english-language-requirements",
+        "source_type": "official_admissions",
+        "verified_date": "2026-09-25",
+        "status": "latest_published",
         "note": ""
       },
       "ielts_bands": {
-        "value": null,
+        "value": {
+          "L": 6,
+          "R": 6,
+          "W": 6,
+          "S": 6
+        },
         "academic_year": 2027,
         "source_year": null,
-        "source_id": "unsw",
-        "source_url": "https://www.unsw.edu.au/study/undergraduate/bachelor-of-pharmaceutical-medicine-master-of-pharmacy",
-        "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
+        "source_id": "unsw-english-current",
+        "source_url": "https://www.unsw.edu.au/study/how-to-apply/english-language-requirements",
+        "source_type": "official_admissions",
+        "verified_date": "2026-09-25",
+        "status": "latest_published",
         "note": ""
       },
       "pte_overall": {
@@ -9847,19 +9862,19 @@
         "source_id": "utas",
         "source_url": "https://www.utas.edu.au/courses/health/courses/54d-bachelor-of-pharmacy-with-honours",
         "source_type": "official_course",
-        "verified_date": "2026-09-24",
+        "verified_date": "2026-09-25",
         "status": "pending_2027",
-        "note": ""
+        "note": "공식 페이지는 Semester 1로 표시하며 정확한 개강일은 달력에서 확인합니다."
       },
       "label": {
-        "value": null,
+        "value": "Semester 1 · Cradle Coast / Hobart / Launceston",
         "academic_year": 2027,
         "source_year": 2027,
         "source_id": "utas",
         "source_url": "https://www.utas.edu.au/courses/health/courses/54d-bachelor-of-pharmacy-with-honours",
         "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
+        "verified_date": "2026-09-25",
+        "status": "confirmed_2027",
         "note": ""
       }
     },
@@ -9976,25 +9991,27 @@
       "program_id": "latrobe-bpharm-hons",
       "route_id": "latrobe-bpharm-hons-direct",
       "months": {
-        "value": null,
+        "value": [
+          3
+        ],
         "academic_year": 2027,
-        "source_year": null,
-        "source_id": "latrobe",
+        "source_year": 2027,
+        "source_id": "latrobe-2027-course",
         "source_url": "https://www.latrobe.edu.au/courses/bachelor-of-pharmacy-honours",
         "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
+        "verified_date": "2026-09-25",
+        "status": "confirmed_2027",
         "note": ""
       },
       "label": {
-        "value": null,
+        "value": "Semester 1 · 2027년 3월",
         "academic_year": 2027,
-        "source_year": null,
-        "source_id": "latrobe",
+        "source_year": 2027,
+        "source_id": "latrobe-2027-course",
         "source_url": "https://www.latrobe.edu.au/courses/bachelor-of-pharmacy-honours",
         "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
+        "verified_date": "2026-09-25",
+        "status": "confirmed_2027",
         "note": ""
       }
     },
@@ -10028,25 +10045,27 @@
       "program_id": "rmit-bpharm-hons",
       "route_id": "rmit-bpharm-hons-direct",
       "months": {
-        "value": null,
+        "value": [
+          2
+        ],
         "academic_year": 2027,
-        "source_year": null,
-        "source_id": "rmit",
-        "source_url": "https://www.rmit.edu.au/study-with-us/levels-of-study/undergraduate-study/honours-degrees/bachelor-of-pharmacy-honours-bh102",
+        "source_year": 2027,
+        "source_id": "rmit-2027-apply",
+        "source_url": "https://www.rmit.edu.au/study-with-us/levels-of-study/undergraduate-study/honours-degrees/bachelor-of-pharmacy-honours-bh102/apply-now",
         "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
+        "verified_date": "2026-09-25",
+        "status": "confirmed_2027",
         "note": ""
       },
       "label": {
-        "value": null,
+        "value": "Semester 1 · 2027년 3월 1일 수업 시작",
         "academic_year": 2027,
-        "source_year": null,
-        "source_id": "rmit",
-        "source_url": "https://www.rmit.edu.au/study-with-us/levels-of-study/undergraduate-study/honours-degrees/bachelor-of-pharmacy-honours-bh102",
+        "source_year": 2027,
+        "source_id": "rmit-2027-apply",
+        "source_url": "https://www.rmit.edu.au/study-with-us/levels-of-study/undergraduate-study/honours-degrees/bachelor-of-pharmacy-honours-bh102/apply-now",
         "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
+        "verified_date": "2026-09-25",
+        "status": "confirmed_2027",
         "note": ""
       }
     },
@@ -10192,25 +10211,27 @@
       "program_id": "unsw-bpharm-hons",
       "route_id": "unsw-bpharm-hons-direct",
       "months": {
-        "value": null,
+        "value": [
+          2
+        ],
         "academic_year": 2027,
-        "source_year": null,
-        "source_id": "unsw",
+        "source_year": 2027,
+        "source_id": "unsw-2027-course",
         "source_url": "https://www.unsw.edu.au/study/undergraduate/bachelor-of-pharmaceutical-medicine-master-of-pharmacy",
         "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
+        "verified_date": "2026-09-25",
+        "status": "confirmed_2027",
         "note": ""
       },
       "label": {
-        "value": null,
+        "value": "Term 1 · 2027",
         "academic_year": 2027,
-        "source_year": null,
-        "source_id": "unsw",
+        "source_year": 2027,
+        "source_id": "unsw-2027-course",
         "source_url": "https://www.unsw.edu.au/study/undergraduate/bachelor-of-pharmaceutical-medicine-master-of-pharmacy",
         "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
+        "verified_date": "2026-09-25",
+        "status": "confirmed_2027",
         "note": ""
       }
     },
@@ -10656,14 +10677,14 @@
     {
       "program_id": "canberra-bpharm-hons",
       "annual": {
-        "value": null,
+        "value": 42500,
         "academic_year": 2027,
-        "source_year": null,
-        "source_id": "canberra",
-        "source_url": "https://www.canberra.edu.au/about-uc/faculties/health/study/pharmacy",
-        "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
+        "source_year": 2027,
+        "source_id": "canberra-guide-2027",
+        "source_url": "https://www.canberra.edu.au/content/dam/uc/documents/agent-marketing-toolkit/international-course-guide/international-course-guide.pdf",
+        "source_type": "official_guide",
+        "verified_date": "2026-09-25",
+        "status": "confirmed_2027",
         "note": ""
       },
       "official_total": {
@@ -10679,14 +10700,14 @@
       },
       "currency": "AUD",
       "load_basis": {
-        "value": null,
+        "value": "2027 international course guide annual fee",
         "academic_year": 2027,
-        "source_year": null,
-        "source_id": "canberra",
-        "source_url": "https://www.canberra.edu.au/about-uc/faculties/health/study/pharmacy",
-        "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
+        "source_year": 2027,
+        "source_id": "canberra-guide-2027",
+        "source_url": "https://www.canberra.edu.au/content/dam/uc/documents/agent-marketing-toolkit/international-course-guide/international-course-guide.pdf",
+        "source_type": "official_guide",
+        "verified_date": "2026-09-25",
+        "status": "confirmed_2027",
         "note": ""
       },
       "increase_note": "연도별 인상 및 실제 수강량에 따라 달라질 수 있습니다."
@@ -16523,6 +16544,46 @@
       "url": "https://adelaide.edu.au/study/degrees/bachelor-of-pharmacy-honours/",
       "source_year": null,
       "source_type": "official_course",
+      "verified_date": "2026-09-25"
+    },
+    {
+      "id": "rmit-2027-apply",
+      "title": "RMIT Bachelor of Pharmacy (Honours) · 2027 intake",
+      "url": "https://www.rmit.edu.au/study-with-us/levels-of-study/undergraduate-study/honours-degrees/bachelor-of-pharmacy-honours-bh102/apply-now",
+      "source_year": 2027,
+      "source_type": "official_course",
+      "verified_date": "2026-09-25"
+    },
+    {
+      "id": "unsw-2027-course",
+      "title": "UNSW Pharmaceutical Medicine / Doctor of Pharmacy · 2027",
+      "url": "https://www.unsw.edu.au/study/undergraduate/bachelor-of-pharmaceutical-medicine-master-of-pharmacy",
+      "source_year": 2027,
+      "source_type": "official_course",
+      "verified_date": "2026-09-25"
+    },
+    {
+      "id": "unsw-english-current",
+      "title": "UNSW · English language requirements",
+      "url": "https://www.unsw.edu.au/study/how-to-apply/english-language-requirements",
+      "source_year": null,
+      "source_type": "official_admissions",
+      "verified_date": "2026-09-25"
+    },
+    {
+      "id": "latrobe-2027-course",
+      "title": "La Trobe Bachelor of Pharmacy (Honours) · 2027 start",
+      "url": "https://www.latrobe.edu.au/courses/bachelor-of-pharmacy-honours",
+      "source_year": 2027,
+      "source_type": "official_course",
+      "verified_date": "2026-09-25"
+    },
+    {
+      "id": "curtin-pharmacy-current-guide",
+      "title": "Curtin · Pharmacy English requirement guide",
+      "url": "https://publications.curtin.edu.au/chinese-student-guide/page/28-29",
+      "source_year": null,
+      "source_type": "official_guide",
       "verified_date": "2026-09-25"
     }
   ],
