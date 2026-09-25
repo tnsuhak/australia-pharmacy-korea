@@ -103,6 +103,9 @@ UWA는 비교 대학에 포함하며, 고교 졸업자용 4년 Bachelor of Human
 - JCU 25% International Excellence는 Pharmacy가 공식 제외목록에 없음을 확인.
 - Canberra A$42,500은 2027 Guide 안의 표라도 **2026 Annual Fee**이므로 2027 학비로 승격하지 않음.
 
+- 2026-09-25 direct-route QA: QUT Pharmacy의 Chemistry + Mathematical Methods/Specialist Mathematics는 prerequisite가 아니라 **assumed knowledge**로 정정·강조했습니다. 미이수 학생을 Direct 자동 제외하지 않도록 matcher test를 추가했습니다.
+- Adelaide/QUT/Canberra/UniSQ Direct 카드의 입학월·영어·핵심 학업조건을 이미 검증된 본문 데이터와 동기화했습니다. UniSQ는 2027 국제학생 T1 2월 15일 1회 입학, 3년 accelerated는 2028부터라는 점을 route에도 고정했습니다.
+
 ## Active source conflict
 
 | 항목 | 상태 | 처리 |
