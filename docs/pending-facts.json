@@ -937,19 +937,6 @@
   },
   {
     "entity_id": "griffith-college",
-    "field_path": ".entry_routes[16].qualification",
-    "value": "College 일반 학력표: 한국 고교 4개 학업과목 평균 Rank 6, 또는 고교 졸업 + CSAT 280 / 상위 3개 stanine 6, 또는 검정고시 평균 80",
-    "academic_year": 2027,
-    "source_year": null,
-    "source_id": "griffith-college-entry",
-    "source_url": "https://www.griffithcollege.edu.au/international-students/entry-requirements/",
-    "source_type": "official_pathway",
-    "verified_date": "2026-09-24",
-    "status": "pending_2027",
-    "note": "College 입학용 참고표. Pharmacy 연결 과정의 학력 예외·2027 적용 검증 전이며 Griffith 본과 Direct 점수가 아닙니다."
-  },
-  {
-    "entity_id": "griffith-college",
     "field_path": ".entry_routes[16].pathway_fee",
     "value": null,
     "academic_year": 2027,
