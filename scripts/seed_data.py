@@ -379,7 +379,7 @@ for route_record in routes:
 # Additional course-specific official checks, 2026-09-24.
 source('curtin-structure','Curtin · 2026 개편 Pharmacy 구조','https://www.curtin.edu.au/news/advice/how-to-become-a-pharmacist/',2026,'official_course')
 setp('curtin',duration_years=fact(3.75,'curtin'),duration_label=fact('3년 9개월','curtin'),bachelor_award_year=fact(3.75,'curtin'),highlights=['3년 9개월','Diploma → 2학년','Perth · Regional'],editorial='현재 Curtin 공식 과정 페이지는 Bachelor of Pharmacy (Honours)를 3년 9개월로 안내합니다. 2027 국제학생 Direct 시작월과 학비는 아직 과정 페이지에 표시되지 않아 확인 중입니다.',review_items=['2027 국제학생 학비','2027 국제학생 Direct 시작월']); intake('curtin',None,None,src='curtin')
-req('curtin','required','required','recommended',grade='Chemistry와 Mathematics Applications 또는 인정 동등 과목. Biology/Human Biology는 권장.',src='curtin')
+req('curtin','required','required','recommended','not_required',grade='Chemistry와 Mathematics Applications 또는 인정 동등 과목. Biology/Human Biology는 권장.',src='curtin')
 row(registration,'curtin').update(supervised_practice_in_degree=fact(False,'curtin-structure'),post_graduation_internship=fact(True,'curtin-structure'))
 source('unisq-course','UniSQ · International Bachelor of Pharmacy (Honours)','https://www.unisq.edu.au/study/degrees-and-courses/bachelor-of-pharmacy-honours?studentType=international',None,'official_course')
 eng('unisq',7,{'L':7,'R':7,'W':6.5,'S':7},src='unisq-course')
