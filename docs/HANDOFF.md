@@ -27,8 +27,8 @@ UWA는 비교 대학에 포함하며, 고교 졸업자용 4년 Bachelor of Human
 ## 데이터 상태
 
 - 2027 확인: 401
-- 최신 공개 기준: 408
-- 2027 확인 중: 430
+- 최신 공개 기준: 409
+- 2027 확인 중: 429
 - source_conflict fact: 4
 - active conflict record: 2
 
@@ -53,6 +53,7 @@ UWA는 비교 대학에 포함하며, 고교 졸업자용 4년 Bachelor of Human
 - Diploma 기간 **8개월(2 trimesters) 또는 12개월(3 trimesters)**.
 - 2027 live key dates: T1 3월 1일 / T2 6월 28일 / T3 10월 25일.
 - Pharmacy 연결 영어: IELTS 6.5/각6.0 · PTE 58/각50 · TOEFL 79/각19.
+- 현재 Griffith College 한국 Diploma 입학표: 고3 4개 학업과목 평균 Rank 6, 또는 고교 졸업+CSAT 280 / 상위 3개 stanine 6, 또는 검정고시 평균 80. 이는 Griffith University 본과 Direct 점수가 아님.
 - Pharmacy는 progression quota 대상이며 정원 초과 시 completed Diploma GPA 순 선발.
 - 2027 Diploma 정확한 학비는 검증한 공식자료에서 확인하지 못해 pending. 다른 연도 값을 2027로 승격하지 않음.
 - 경쟁사 한국 경로는 공개 페이지·source registry·SEO·CTA에서 제외.
