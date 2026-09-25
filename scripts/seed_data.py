@@ -146,7 +146,8 @@ source('jcu-scholarship','JCU · International Excellence Scholarship','https://
 source('utas-housing','UTas · Hobart accommodation 2027','https://www.utas.edu.au/uni-life/accommodation/hobart',2027,'official_accommodation')
 source('utas-christ','UTas · Christ College','https://www.utas.edu.au/uni-life/accommodation/hobart/christ-college',2027,'official_accommodation')
 source('latrobe-housing','La Trobe · Bendigo accommodation rates 2026','https://www.latrobe.edu.au/__data/assets/pdf_file/0008/1388663/Bendigo-Accommodation-Rates-2026.pdf',2026,'official_accommodation')
-source('latrobe-units','La Trobe · The Units','https://www.latrobe.edu.au/accommodation/bendigo-campus/units',None,'official_accommodation')
+source('latrobe-units','La Trobe · The Units · current live rate','https://www.latrobe.edu.au/accommodation/bendigo-campus/units',None,'official_accommodation')
+source('latrobe-villas-current','La Trobe · The Villas · current live rate','https://www.latrobe.edu.au/accommodation/bendigo-campus/villas',None,'official_accommodation')
 
 university_rows=[
  ('jcu','James Cook University','제임스쿡대학교','QLD','Townsville · Cairns · Mackay','JCU'),
@@ -351,8 +352,8 @@ def housing(i,id,name,src,weekly=None,weeks=None,utilities=None,meals=None,campu
  accommodation.append(dict(id=id,university_id=i,name=name,weekly_cost=fact(weekly,src),contract_weeks=fact(weeks,src),official_contract_total=fact(None,src),utilities=fact(utilities,src),meals=fact(meals,src),campus_distance=fact(campus,src),note=note))
 housing('utas','utas-christ','Christ College','utas-housing',316,42,True,False,'Sandy Bay 교내 · 무료 교내 셔틀','2027 주당 요금. 42주 계약은 College 안내 기준. 방 형태·입주 자격·보증금 확인 필요.')
 housing('utas','utas-john','John Fisher College','utas-housing',316,42,True,False,'Sandy Bay 교내','2027 주당 요금. 약학 수업 캠퍼스와 통학 동선을 확인하세요.')
-housing('latrobe','latrobe-units','The Units','latrobe-housing',240,41,None,None,'Bendigo 캠퍼스','2026 latest reference. 보증금 A$1,000, 퇴실 청소 A$130 별도. 2027 금액 확인 중.')
-housing('latrobe','latrobe-villas','The Villas','latrobe-housing',250,41,None,None,'Bendigo 캠퍼스','2026 latest reference. 2027 가격으로 표시하지 않습니다.')
+housing('latrobe','latrobe-units','The Units','latrobe-units',255,None,True,False,'Bendigo 캠퍼스','현재 공식 residence page는 A$255/week부터, semester contract, utilities 포함으로 안내합니다. 계약기간의 정확한 주수와 2027 전용 rate card는 별도 확인합니다.')
+housing('latrobe','latrobe-villas','The Villas','latrobe-villas-current',270,None,True,False,'Bendigo 캠퍼스','현재 공식 residence page는 A$270/week부터, semester contract, utilities 포함으로 안내합니다. 계약기간의 정확한 주수와 2027 전용 rate card는 별도 확인합니다.')
 housing('jcu','jcu-townsville-2026','Townsville · University Hall / Rotary','jcu-housing-2026',330,None,True,False,'Townsville 캠퍼스','2026 일반 장기체류 참고요금. Pharmacy 학생이 7일 이상 머무는 경우 별도 academic rate가 적용됩니다.')
 housing('jcu','jcu-cairns-2026','Cairns · John Grey Hall Standard','jcu-housing-2026',431,None,True,False,'Cairns 캠퍼스','2026 일반 장기체류 참고요금. Pharmacy 학생의 academic rate는 별도입니다.')
 housing('uq','uq-kev-carmody','UQ RES · Kev Carmody House','uq-housing-current',414,None,True,False,'St Lucia','현재 공개 최저가. Pharmacy는 Dutton Park 캠퍼스이므로 통학 동선을 함께 봐야 합니다.')
