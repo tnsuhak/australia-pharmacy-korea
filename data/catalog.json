@@ -1150,10 +1150,12 @@
         "why": [
           "Bendigo Regional · Category 3",
           "과학 선수과목 별도 요구 없음",
+          "La Trobe College Foundation → Pharmacy 1학년",
           "2027 Health Innovation 30% · High Achiever 20~25%"
         ],
         "watch": [
-          "2027 국제학생 학비 발표 대기"
+          "2027 국제학생 본과 학비 발표 대기",
+          "Foundation 2027 학비·한국 country entry table 업데이트 대기"
         ]
       }
     },
@@ -5005,26 +5007,26 @@
       "id": "latrobe-foundation",
       "program_id": "latrobe-bpharm-hons",
       "type": "foundation",
-      "title": "Foundation · Health / Life Sciences",
+      "title": "La Trobe College · Foundation Studies · Health, Life Sciences and Engineering",
       "availability": {
-        "value": null,
+        "value": true,
         "academic_year": 2027,
         "source_year": null,
-        "source_id": "latrobe",
-        "source_url": "https://www.latrobe.edu.au/courses/bachelor-of-pharmacy-honours",
-        "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
+        "source_id": "latrobe-foundation-current",
+        "source_url": "https://www.latrobecollegeaustralia.edu.au/study-options/foundation-studies/health-life-sciences/",
+        "source_type": "official_pathway",
+        "verified_date": "2026-09-25",
+        "status": "latest_published",
         "note": ""
       },
       "credit": {
         "value": 0,
         "academic_year": 2027,
         "source_year": null,
-        "source_id": "latrobe",
-        "source_url": "https://www.latrobe.edu.au/courses/bachelor-of-pharmacy-honours",
-        "source_type": "official_course",
-        "verified_date": "2026-09-24",
+        "source_id": "latrobe-foundation-current",
+        "source_url": "https://www.latrobecollegeaustralia.edu.au/study-options/foundation-studies/health-life-sciences/",
+        "source_type": "official_pathway",
+        "verified_date": "2026-09-25",
         "status": "latest_published",
         "note": ""
       },
@@ -5032,79 +5034,93 @@
         "value": 1,
         "academic_year": 2027,
         "source_year": null,
-        "source_id": "latrobe",
-        "source_url": "https://www.latrobe.edu.au/courses/bachelor-of-pharmacy-honours",
-        "source_type": "official_course",
-        "verified_date": "2026-09-24",
+        "source_id": "latrobe-foundation-current",
+        "source_url": "https://www.latrobecollegeaustralia.edu.au/study-options/foundation-studies/health-life-sciences/",
+        "source_type": "official_pathway",
+        "verified_date": "2026-09-25",
         "status": "latest_published",
         "note": ""
       },
       "duration": {
-        "value": null,
+        "value": "8개월 · 2 trimesters",
         "academic_year": 2027,
         "source_year": null,
-        "source_id": "latrobe",
-        "source_url": "https://www.latrobe.edu.au/courses/bachelor-of-pharmacy-honours",
-        "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
+        "source_id": "latrobe-foundation-current",
+        "source_url": "https://www.latrobecollegeaustralia.edu.au/study-options/foundation-studies/health-life-sciences/",
+        "source_type": "official_pathway",
+        "verified_date": "2026-09-25",
+        "status": "latest_published",
         "note": ""
       },
       "intake": {
-        "value": null,
+        "value": "2월 · 6월",
         "academic_year": 2027,
         "source_year": null,
-        "source_id": "latrobe",
-        "source_url": "https://www.latrobe.edu.au/courses/bachelor-of-pharmacy-honours",
-        "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
+        "source_id": "latrobe-foundation-current",
+        "source_url": "https://www.latrobecollegeaustralia.edu.au/study-options/foundation-studies/health-life-sciences/",
+        "source_type": "official_pathway",
+        "verified_date": "2026-09-25",
+        "status": "latest_published",
         "note": ""
       },
       "progression": {
-        "value": null,
+        "value": "Foundation 최소 WAM 60% + 해당 Bachelor 최소조건 · Pharmacy는 Advanced Mathematics 2 + Chemistry 2 이수 필요 · quota/추가조건 가능",
         "academic_year": 2027,
         "source_year": null,
-        "source_id": "latrobe",
-        "source_url": "https://www.latrobe.edu.au/courses/bachelor-of-pharmacy-honours",
-        "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
-        "note": ""
+        "source_id": "latrobe-foundation-transfer",
+        "source_url": "https://www.latrobecollegeaustralia.edu.au/study-options/transferring-university/",
+        "source_type": "official_pathway",
+        "verified_date": "2026-09-25",
+        "status": "latest_published",
+        "note": "현재 transfer page의 공통 최소 WAM 60%와 Pharmacy study-plan 과목요건을 결합해 표시합니다. Pharmacy-specific 최종 WAM/정원은 지원 전 재확인합니다."
       },
       "english": {
-        "value": null,
+        "value": "Foundation 입학: IELTS 5.5 / 각 5.0 · PTE 42 / 각 36 · TOEFL iBT 55 / Writing 16",
         "academic_year": 2027,
-        "source_year": null,
-        "source_id": "latrobe",
-        "source_url": "https://www.latrobe.edu.au/courses/bachelor-of-pharmacy-honours",
-        "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
+        "source_year": 2026,
+        "source_id": "latrobe-foundation-english-2026",
+        "source_url": "https://www.latrobecollegeaustralia.edu.au/wp-content/uploads/LTCA260107-1149-International-Guide-2026-Update-FAW_Web.pdf",
+        "source_type": "official_pathway",
+        "verified_date": "2026-09-25",
+        "status": "latest_published",
         "note": ""
       },
       "qualification": {
         "value": null,
         "academic_year": 2027,
         "source_year": null,
-        "source_id": "latrobe",
-        "source_url": "https://www.latrobe.edu.au/courses/bachelor-of-pharmacy-honours",
-        "source_type": "official_course",
-        "verified_date": "2026-09-24",
+        "source_id": "latrobe-foundation-current",
+        "source_url": "https://www.latrobecollegeaustralia.edu.au/study-options/foundation-studies/health-life-sciences/",
+        "source_type": "official_pathway",
+        "verified_date": "2026-09-25",
         "status": "pending_2027",
-        "note": ""
+        "note": "한국 고교 11학년 등 country-specific 2027 Foundation 학력표는 별도 확인합니다."
       },
-      "note": "2027 약대 진급조건·유학생 모집 발표 대기입니다.",
+      "note": "국제학생 전용 Foundation이며 Pharmacy (Honours) Bendigo 1학년으로 연결됩니다. 현재 공개 페이지의 학비는 2026 A$29,780이므로 2027 학비로 표시하지 않습니다.",
       "intake_months": {
-        "value": null,
+        "value": [
+          2,
+          6
+        ],
         "academic_year": 2027,
         "source_year": null,
-        "source_id": "latrobe",
-        "source_url": "https://www.latrobe.edu.au/courses/bachelor-of-pharmacy-honours",
-        "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
+        "source_id": "latrobe-foundation-current",
+        "source_url": "https://www.latrobecollegeaustralia.edu.au/study-options/foundation-studies/health-life-sciences/",
+        "source_type": "official_pathway",
+        "verified_date": "2026-09-25",
+        "status": "latest_published",
         "note": ""
+      },
+      "pathway_fee": {
+        "value": 29780,
+        "academic_year": 2027,
+        "source_year": 2026,
+        "source_id": "latrobe-foundation-fee-2026",
+        "source_url": "https://www.latrobecollegeaustralia.edu.au/how-apply/fees/",
+        "source_type": "official_pathway",
+        "verified_date": "2026-09-25",
+        "status": "latest_published",
+        "note": "2026 Foundation Studies international program fee · 2027 금액 아님"
       }
     },
     {
@@ -17324,6 +17340,46 @@
       "url": "https://www.sydney.edu.au/content/dam/corporate/documents/about-us/governance-and-structure/academic-board/ab-standards---guidelines-/course-prerquisite-assumed-knowledge-recommended-studies-table.pdf",
       "source_year": 2025,
       "source_type": "official_admissions",
+      "verified_date": "2026-09-25"
+    },
+    {
+      "id": "latrobe-foundation-current",
+      "title": "La Trobe College · Foundation Studies Health, Life Sciences and Engineering",
+      "url": "https://www.latrobecollegeaustralia.edu.au/study-options/foundation-studies/health-life-sciences/",
+      "source_year": null,
+      "source_type": "official_pathway",
+      "verified_date": "2026-09-25"
+    },
+    {
+      "id": "latrobe-foundation-transfer",
+      "title": "La Trobe College · Foundation Studies transfer criteria",
+      "url": "https://www.latrobecollegeaustralia.edu.au/study-options/transferring-university/",
+      "source_year": null,
+      "source_type": "official_pathway",
+      "verified_date": "2026-09-25"
+    },
+    {
+      "id": "latrobe-foundation-plan",
+      "title": "La Trobe College · Foundation Health and Life Sciences study plan",
+      "url": "https://www.latrobecollegeaustralia.edu.au/wp-content/uploads/webpage-study-plan-guide.pdf",
+      "source_year": null,
+      "source_type": "official_pathway",
+      "verified_date": "2026-09-25"
+    },
+    {
+      "id": "latrobe-foundation-fee-2026",
+      "title": "La Trobe College · 2026 Foundation Studies fee",
+      "url": "https://www.latrobecollegeaustralia.edu.au/how-apply/fees/",
+      "source_year": 2026,
+      "source_type": "official_pathway",
+      "verified_date": "2026-09-25"
+    },
+    {
+      "id": "latrobe-foundation-english-2026",
+      "title": "La Trobe College · 2026 international English entry requirements",
+      "url": "https://www.latrobecollegeaustralia.edu.au/wp-content/uploads/LTCA260107-1149-International-Guide-2026-Update-FAW_Web.pdf",
+      "source_year": 2026,
+      "source_type": "official_pathway",
       "verified_date": "2026-09-25"
     }
   ],
