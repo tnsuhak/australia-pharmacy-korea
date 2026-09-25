@@ -68,6 +68,8 @@ UWA는 16번째 비교 대학으로 포함돼 있으며, 학교졸업자용 4년
 - La Trobe Pharmacy 공식 페이지는 국제학생이 연중 지원 가능하다고 안내하므로 `international_recruitment=true`로 전환하되, 페이지의 2027 정보 변경 가능성 고지와 국제학생 학비 미표시를 감안해 `latest_published`로 보수적으로 처리했습니다.
 - Queensland: 2026-27 QSOL consultation은 2026-07-07 종료됐지만 새 QSOL이 아직 공개되지 않았습니다. 공개 중인 onshore list는 2025-26이며 Hospital/Retail Pharmacist는 491만 표시되므로 새 회계연도 확정 자격으로 이식하지 않습니다.
 
+- La Trobe Bendigo 숙소: 2026 41주 표의 The Units A$240 / Villas A$250를 기본 표시에서 제거하고, 현재 공식 residence page의 live 시작가 The Units A$255/week, Villas A$270/week로 업데이트했습니다. utilities 포함이며 현재 페이지는 semester contract라고만 표시하므로 정확한 계약 주수와 2027 전용 rate card는 pending입니다.
+
 ## Source conflict / 적용 범위
 
 | 항목 | 상태 | 처리 |
