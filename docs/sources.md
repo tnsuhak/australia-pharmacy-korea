@@ -155,8 +155,16 @@
 | utas-ipc-fees-2027 | [UTas International Pathway College · 2027 Foundation fees and intakes](https://utas.up.education/fees-and-intakes/) | 2027 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
 | utas-ipc-foundation | [UTas International Pathway College · Foundation Pharmacy progression](https://utas.up.education/foundation-studies/) | 페이지별 확인 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
 | utas-ipc-entry | [UTas International Pathway College · country and English entry requirements](https://utas.up.education/applying/entry-requirements/) | 페이지별 확인 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
+| canberra-course-guide-2027 | [University of Canberra · 2027 Domestic Course Guide](https://www.canberra.edu.au/campaign/uc-course-guide.pdf) | 2027 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
+| canberra-intl-equiv | [University of Canberra · International qualification equivalencies](https://www.canberra.edu.au/future-students/entry-requirements-options/academic-entry-requirements/international-qualifications) | 페이지별 확인 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
+| canberra-english-current | [University of Canberra · Current English language requirements](https://www.canberra.edu.au/future-students/entry-requirements-options/core-admission-requirements/english-language-requirements) | 페이지별 확인 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
+| unsw-2027-guide | [UNSW · 2027 Undergraduate Student Guide · international ATAR/IB table](https://www.unsw.edu.au/content/dam/pdfs/future-students/2027-DOM-UG-Guide.pdf) | 2027 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
 
 ## 운영 메모
+
+- UNSW 2027 Guide의 International IB 33은 현재 course page의 2026 domestic-offer IB 36과 목적이 다릅니다. 국제학생 비교에는 2027 공식 international table의 IB 33을 사용합니다.
+- Canberra는 2027 Selection Rank 75와 현재 international equivalency table을 결합해 IB 28, SAT 1130, A-level 11, OSSD 74%를 비교값으로 사용합니다.
+- UniSQ 2027 국제학생은 Trimester 1 · 2월 15일 시작의 4년 과정입니다. 3년 accelerated option은 2028부터입니다.
 
 - `data/catalog.json`의 각 fact가 실제 적용 상태(`confirmed_2027`, `latest_published`, `pending_2027`, `source_conflict`)와 출처를 보유합니다.
 - 2027 값이 확인되지 않은 경우 최신 공개연도를 2027 확정값으로 바꾸지 않습니다.
