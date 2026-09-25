@@ -59,3 +59,8 @@
 .pathway-status-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:0 0 18px}.pathway-status-grid>div{border:1px solid var(--line);border-radius:12px;padding:16px;background:#f8faf7;min-height:106px}.pathway-status-grid b{display:block;font-size:9px;letter-spacing:.08em;color:var(--muted);margin-bottom:11px}.pathway-status-grid strong{display:block;font-size:13px;line-height:1.45}.pathway-status-grid strong.yes{color:var(--teal)}.pathway-status-grid strong.pending{color:#8a6517}.pathway-status-grid strong.none{color:var(--muted);font-size:11px}.pathway-status-grid span{display:block;font-size:10px;line-height:1.5;color:var(--muted);margin-top:5px}.scholarship-card>p{font-size:11px;line-height:1.7;color:var(--muted)}
 @media(max-width:900px){.pathway-status-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:490px){.pathway-status-grid{grid-template-columns:1fr 1fr}.pathway-status-grid>div{padding:13px;min-height:96px}}
+
+
+/* School decision lens · 2026-09-25 */
+.decision-lens{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:20px 0 4px}.decision-lens>div{border:1px solid var(--line);border-radius:13px;background:#f8faf7;padding:18px}.decision-lens>.watch{background:#fffaf2}.decision-lens span{display:block;font-size:10px;font-weight:800;letter-spacing:.08em;color:var(--teal);margin-bottom:10px}.decision-lens>.watch span{color:#8a6517}.decision-lens ul{margin:0;padding-left:18px}.decision-lens li{font-size:11px;line-height:1.65;margin:5px 0;color:var(--ink)}
+@media(max-width:680px){.decision-lens{grid-template-columns:1fr}}
