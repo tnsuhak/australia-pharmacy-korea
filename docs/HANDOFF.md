@@ -129,6 +129,10 @@ RMIT 영어는 더 이상 conflict/pending 항목이 아니다. 현재 공식 Ph
 - Queensland: 2026-27 QSOL consultation은 2026-07-07 종료됐지만 새 QSOL 미공개. 2025-26 약사 491 표시를 2026-27 자격으로 자동 이식하지 않음.
 - WA·SA·Victoria: 새 회계연도 공고가 확인되기 전 과거 조건을 현재 확정조건으로 표시하지 않음.
 
+- UWA 재검증: combined Bachelor of Human Sciences (Pharmaceutical Health) / Doctor of Pharmacy는 ATAR 85 입학과 combined degree 내 **65% WAM assurance**를 공식 페이지가 명시합니다. Direct route progression에 이를 반영했습니다.
+- UWA 2027 Global Excellence Scholarship: 모든 국가 대상, eligible combined bachelor degree 포함. equivalent ATAR **85~89.95 = 10%**, **90+ = 20%**, 별도 장학 신청 없이 final transcript 기준 자동 심사로 확정했습니다. Pharmacy combined degree는 명시된 제외대상(Medicine/Dental assured pathways)에 해당하지 않습니다.
+- UWA 2027 국제학생 본과 학비는 아직 공식 2027 fee table 확인 전이므로 기존 2026 A$46,000을 2027 확정값으로 승격하지 않습니다.
+
 ## QA / 배포 원칙
 
 - 변경마다 GitHub Preview QA와 Netlify Deploy Preview를 확인한다.
