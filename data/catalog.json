@@ -2218,10 +2218,10 @@
         "value": true,
         "academic_year": 2027,
         "source_year": 2027,
-        "source_id": "uq",
-        "source_url": "https://study.uq.edu.au/study-options/programs/bachelor-pharmacy-honours-2373",
+        "source_id": "uq-pharmd",
+        "source_url": "https://study.uq.edu.au/study-options/programs/bachelor-pharmaceutics-and-therapeutic-science-doctor-pharmacy-2577?year=2027",
         "source_type": "official_course",
-        "verified_date": "2026-09-24",
+        "verified_date": "2026-09-25",
         "status": "confirmed_2027",
         "note": ""
       },
@@ -2238,23 +2238,25 @@
       },
       "highlights": [
         "신설 5년 통합",
-        "Internship 통합 설계",
+        "700+시간 실습 + Intern training 통합",
         "인증 승인 대기"
       ],
-      "editorial": "2027 신설 5년 PharmD입니다. Intern training을 학위에 포함하도록 설계됐고 APC·Pharmacy Board 승인을 진행 중입니다.",
+      "editorial": "2027 신설 5년 PharmD입니다. 공식 2027 국제학생 페이지에서 2월·7월 입학과 A$60,952 학비를 공개하고 있으며, 2학년부터 700시간 이상의 supervised clinical placement와 4~5학년 compulsory intern training을 포함하도록 설계됐습니다. APC·Pharmacy Board 승인은 아직 진행 중입니다.",
       "review_items": [
         "APC accreditation 및 Board approval",
-        "신규 과정 qualification별 기준",
+        "신규 과정 qualification별 점수",
         "학사 중간 Exit 여부"
       ],
       "decision_lens": {
         "why": [
-          "2월 4년 · 7월 약 3.5년",
-          "Accelerated Foundation → 7월 BPharm 연결",
-          "2027 국제장학 25% 경쟁 선발"
+          "2027 국제학생 모집 · 2월/7월 시작",
+          "5년 안에 700+시간 실습 + compulsory intern training 설계",
+          "2027 국제학생 학비 A$60,952"
         ],
         "watch": [
-          "신설 5년 PharmD는 APC·Pharmacy Board 승인 진행 중"
+          "APC accreditation 및 Pharmacy Board approval 아직 미획득",
+          "CSAT·IB·SAT 등 qualification-specific 점수는 새 과정 기준 별도 확인",
+          "학사 중간 Exit 여부 미확정"
         ]
       }
     },
@@ -3999,15 +4001,15 @@
       "type": "direct",
       "title": "Direct · 신설 통합과정",
       "availability": {
-        "value": null,
+        "value": true,
         "academic_year": 2027,
         "source_year": 2027,
         "source_id": "uq-pharmd",
         "source_url": "https://study.uq.edu.au/study-options/programs/bachelor-pharmaceutics-and-therapeutic-science-doctor-pharmacy-2577?year=2027",
         "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
-        "note": "인증·승인 완료 여부 확인 후 판단"
+        "verified_date": "2026-09-25",
+        "status": "confirmed_2027",
+        "note": "2027 국제학생 모집 페이지가 공개돼 있습니다. 단, 전문인증·Board 승인은 별도 pending입니다."
       },
       "credit": {
         "value": 0,
@@ -4049,7 +4051,7 @@
         "source_id": "uq-pharmd",
         "source_url": "https://study.uq.edu.au/study-options/programs/bachelor-pharmaceutics-and-therapeutic-science-doctor-pharmacy-2577?year=2027",
         "source_type": "official_course",
-        "verified_date": "2026-09-24",
+        "verified_date": "2026-09-25",
         "status": "confirmed_2027",
         "note": ""
       },
@@ -4065,28 +4067,28 @@
         "note": ""
       },
       "english": {
-        "value": null,
+        "value": "IELTS 6.5 / 각 6.0 · PTE 64 / 각 60 · TOEFL 87",
         "academic_year": 2027,
         "source_year": 2027,
         "source_id": "uq-pharmd",
         "source_url": "https://study.uq.edu.au/study-options/programs/bachelor-pharmaceutics-and-therapeutic-science-doctor-pharmacy-2577?year=2027",
         "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
+        "verified_date": "2026-09-25",
+        "status": "confirmed_2027",
         "note": ""
       },
       "qualification": {
-        "value": null,
+        "value": "General English + Mathematics + Chemistry Queensland Year 12 C 동등 조건 · qualification별 점수는 별도 확인",
         "academic_year": 2027,
         "source_year": 2027,
         "source_id": "uq-pharmd",
         "source_url": "https://study.uq.edu.au/study-options/programs/bachelor-pharmaceutics-and-therapeutic-science-doctor-pharmacy-2577?year=2027",
         "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
+        "verified_date": "2026-09-25",
+        "status": "confirmed_2027",
         "note": ""
       },
-      "note": "아래 표에 성적·선수과목·영어 기준을 정리했습니다.",
+      "note": "2027 국제학생 모집은 공개됐지만 APC accreditation 및 Pharmacy Board approval은 아직 미획득 상태입니다.",
       "intake_months": {
         "value": [
           2,
