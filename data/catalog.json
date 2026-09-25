@@ -949,11 +949,10 @@
         "note": "2026-07-08 목록. 학위명 변경·캠퍼스·갱신은 지원 전 재확인."
       },
       "highlights": [
-        "한국 Diploma",
         "80CP 인정",
         "20% 자동심사"
       ],
-      "editorial": "Direct, Griffith College, 한국 UniCentre 경로를 비교할 수 있습니다. 80CP 인정과 최종 입학허가는 별도입니다.",
+      "editorial": "80CP 인정과 최종 입학허가는 별도입니다.",
       "review_items": []
     },
     {
@@ -3792,112 +3791,6 @@
         "source_type": "official_course",
         "verified_date": "2026-09-24",
         "status": "confirmed_2027",
-        "note": ""
-      }
-    },
-    {
-      "id": "unicentre-korea",
-      "program_id": "griffith-bpharm-hons",
-      "type": "diploma",
-      "title": "한국 UniCentre · Diploma of Health Science",
-      "availability": {
-        "value": true,
-        "academic_year": 2027,
-        "source_year": 2027,
-        "source_id": "griffith-korea",
-        "source_url": "https://credit-precedent.sds.na.ce.griffith.edu.au/credit_detail.php?pk1=107341",
-        "source_type": "official_articulation",
-        "verified_date": "2026-09-24",
-        "status": "confirmed_2027",
-        "note": ""
-      },
-      "credit": {
-        "value": 80,
-        "academic_year": 2027,
-        "source_year": 2027,
-        "source_id": "griffith-korea",
-        "source_url": "https://credit-precedent.sds.na.ce.griffith.edu.au/credit_detail.php?pk1=107341",
-        "source_type": "official_articulation",
-        "verified_date": "2026-09-24",
-        "status": "confirmed_2027",
-        "note": ""
-      },
-      "entry_year": {
-        "value": 2,
-        "academic_year": 2027,
-        "source_year": 2027,
-        "source_id": "griffith-korea",
-        "source_url": "https://credit-precedent.sds.na.ce.griffith.edu.au/credit_detail.php?pk1=107341",
-        "source_type": "official_articulation",
-        "verified_date": "2026-09-24",
-        "status": "confirmed_2027",
-        "note": ""
-      },
-      "duration": {
-        "value": "한국 Diploma 1년 + 본과 T1 3년 또는 T2 3.5년",
-        "academic_year": 2027,
-        "source_year": 2027,
-        "source_id": "griffith-korea",
-        "source_url": "https://credit-precedent.sds.na.ce.griffith.edu.au/credit_detail.php?pk1=107341",
-        "source_type": "official_articulation",
-        "verified_date": "2026-09-24",
-        "status": "confirmed_2027",
-        "note": ""
-      },
-      "intake": {
-        "value": "본과 T1 / T2 · 한국과정 시작월 확인 중",
-        "academic_year": 2027,
-        "source_year": 2027,
-        "source_id": "griffith-korea",
-        "source_url": "https://credit-precedent.sds.na.ce.griffith.edu.au/credit_detail.php?pk1=107341",
-        "source_type": "official_articulation",
-        "verified_date": "2026-09-24",
-        "status": "confirmed_2027",
-        "note": ""
-      },
-      "progression": {
-        "value": "Diploma 수료 및 Griffith 입학조건 충족 후 80CP 인정",
-        "academic_year": 2027,
-        "source_year": 2027,
-        "source_id": "griffith-korea",
-        "source_url": "https://credit-precedent.sds.na.ce.griffith.edu.au/credit_detail.php?pk1=107341",
-        "source_type": "official_articulation",
-        "verified_date": "2026-09-24",
-        "status": "confirmed_2027",
-        "note": ""
-      },
-      "english": {
-        "value": null,
-        "academic_year": 2027,
-        "source_year": 2027,
-        "source_id": "griffith-korea",
-        "source_url": "https://credit-precedent.sds.na.ce.griffith.edu.au/credit_detail.php?pk1=107341",
-        "source_type": "official_articulation",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
-        "note": ""
-      },
-      "qualification": {
-        "value": null,
-        "academic_year": 2027,
-        "source_year": 2027,
-        "source_id": "griffith-korea",
-        "source_url": "https://credit-precedent.sds.na.ce.griffith.edu.au/credit_detail.php?pk1=107341",
-        "source_type": "official_articulation",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
-        "note": ""
-      },
-      "note": "2027 entry onwards. 학점인정 협약은 입학·영어·장학금 보장이 아닙니다.",
-      "intake_months": {
-        "value": null,
-        "academic_year": 2027,
-        "source_year": 2027,
-        "source_id": "griffith-korea",
-        "source_url": "https://credit-precedent.sds.na.ce.griffith.edu.au/credit_detail.php?pk1=107341",
-        "source_type": "official_articulation",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
         "note": ""
       }
     },
@@ -14572,14 +14465,6 @@
       "url": "https://www.sydney.edu.au/dam/corporate/documents/study/guides/usyd-international-guide.pdf",
       "source_year": 2027,
       "source_type": "official_guide",
-      "verified_date": "2026-09-24"
-    },
-    {
-      "id": "griffith-korea",
-      "title": "Griffith · UniCentre South Korea articulation 107341",
-      "url": "https://credit-precedent.sds.na.ce.griffith.edu.au/credit_detail.php?pk1=107341",
-      "source_year": 2027,
-      "source_type": "official_articulation",
       "verified_date": "2026-09-24"
     },
     {
