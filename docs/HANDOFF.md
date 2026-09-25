@@ -46,7 +46,6 @@ URL 없음. Git 연결과 PR 배포 전입니다. Preview noindex, robots, sitem
 - `/admission-requirements/` — 2027 호주 약대 입학조건 · 수능·IB·SAT·선수과목
 - `/foundation/` — 호주 약대 파운데이션 · 2027 대학별 진급조건
 - `/diploma/` — 호주 약대 디플로마 · Griffith·Curtin 학점인정
-- `/diploma/griffith-korea/` — 한국 UniCentre → Griffith 약대 · 2027 80CP 경로
 - `/tuition-scholarships/` — 2027 호주 약대 학비·장학금·숙소 비교
 - `/pharmacist-registration/` — 호주 약사 되는 과정 · 학위·인턴십·등록시험
 - `/korea-pharmacist/` — 호주 약대 졸업 후 한국 약사면허 · 확인 절차
@@ -124,3 +123,10 @@ ZIP 압축을 푼 뒤 `offline-preview/index.html`을 브라우저에서 여세�
 
 - Netlify project linked to GitHub after PR creation.
 - This feature-branch update is intended to trigger a Deploy Preview only; do not merge to main yet.
+
+
+## Site-specific commercial content policy
+
+- Do not promote, link to, create landing pages for, or recommend the Korea-based Griffith pathway operated by UniCentre South Korea.
+- Griffith University itself may remain in neutral university comparisons, and independently supportable routes may be shown when appropriate.
+- The Korea-based competitor pathway must not appear in badges, filters, comparison tables, homepage features, SEO landing pages, CTAs, or consultation copy.
