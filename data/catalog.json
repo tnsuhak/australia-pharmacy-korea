@@ -1142,10 +1142,9 @@
         "4년 학사",
         "숙소 2026 참고"
       ],
-      "editorial": "Bendigo 캠퍼스 약대입니다. 2027 선수과목은 업데이트 대기입니다.",
+      "editorial": "Bendigo 캠퍼스 4년 약대입니다. 현재 과정 페이지는 2027년 3월 시작을 표시하지만 국제학생 2027 학비는 아직 확정 표시가 없어 계속 확인 중입니다.",
       "review_items": [
-        "2027 국제학생 모집",
-        "Health Innovation 및 High Achiever 약대 적용"
+        "2027 국제학생 학비"
       ],
       "decision_lens": {
         "why": [
@@ -3080,14 +3079,14 @@
         "note": ""
       },
       "intake": {
-        "value": null,
+        "value": "Semester 1 · 2027년 3월",
         "academic_year": 2027,
-        "source_year": null,
-        "source_id": "latrobe",
+        "source_year": 2027,
+        "source_id": "latrobe-2027-course",
         "source_url": "https://www.latrobe.edu.au/courses/bachelor-of-pharmacy-honours",
         "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
+        "verified_date": "2026-09-25",
+        "status": "confirmed_2027",
         "note": ""
       },
       "progression": {
@@ -3102,14 +3101,14 @@
         "note": ""
       },
       "english": {
-        "value": null,
+        "value": "IELTS 6.5 / 각 영역 6.5",
         "academic_year": 2027,
-        "source_year": null,
-        "source_id": "latrobe",
-        "source_url": "https://www.latrobe.edu.au/courses/bachelor-of-pharmacy-honours",
-        "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
+        "source_year": 2026,
+        "source_id": "latrobe-health-guide",
+        "source_url": "https://www.latrobe.edu.au/international/documents/international-handbooks/LTU-Health-Discipline-Handbook.pdf",
+        "source_type": "official_guide",
+        "verified_date": "2026-09-25",
+        "status": "latest_published",
         "note": ""
       },
       "qualification": {
@@ -3125,14 +3124,16 @@
       },
       "note": "아래 표에 성적·선수과목·영어 기준을 정리했습니다.",
       "intake_months": {
-        "value": null,
+        "value": [
+          3
+        ],
         "academic_year": 2027,
-        "source_year": null,
-        "source_id": "latrobe",
+        "source_year": 2027,
+        "source_id": "latrobe-2027-course",
         "source_url": "https://www.latrobe.edu.au/courses/bachelor-of-pharmacy-honours",
         "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
+        "verified_date": "2026-09-25",
+        "status": "confirmed_2027",
         "note": ""
       }
     },
@@ -4535,81 +4536,81 @@
       "type": "foundation",
       "title": "Monash University Foundation Year",
       "availability": {
-        "value": null,
+        "value": true,
         "academic_year": 2027,
-        "source_year": 2027,
-        "source_id": "monash-foundation",
-        "source_url": "https://www.monashcollege.edu.au/__data/assets/pdf_file/0005/4349102/2027-Monash-Pathway-Programs.pdf",
+        "source_year": null,
+        "source_id": "monash-foundation-p6007-current",
+        "source_url": "https://www.monashcollege.edu.au/study/courses/foundation-year/fy-data/destination-degrees-2026-single-degrees/pharmacy-and-pharmaceutical-science",
         "source_type": "official_pathway",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
+        "verified_date": "2026-09-25",
+        "status": "latest_published",
         "note": ""
       },
       "credit": {
         "value": 0,
         "academic_year": 2027,
-        "source_year": 2027,
-        "source_id": "monash-foundation",
-        "source_url": "https://www.monashcollege.edu.au/__data/assets/pdf_file/0005/4349102/2027-Monash-Pathway-Programs.pdf",
+        "source_year": null,
+        "source_id": "monash-foundation-p6007-current",
+        "source_url": "https://www.monashcollege.edu.au/study/courses/foundation-year/fy-data/destination-degrees-2026-single-degrees/pharmacy-and-pharmaceutical-science",
         "source_type": "official_pathway",
-        "verified_date": "2026-09-24",
-        "status": "confirmed_2027",
+        "verified_date": "2026-09-25",
+        "status": "latest_published",
         "note": ""
       },
       "entry_year": {
         "value": 1,
         "academic_year": 2027,
-        "source_year": 2027,
-        "source_id": "monash-foundation",
-        "source_url": "https://www.monashcollege.edu.au/__data/assets/pdf_file/0005/4349102/2027-Monash-Pathway-Programs.pdf",
+        "source_year": null,
+        "source_id": "monash-foundation-p6007-current",
+        "source_url": "https://www.monashcollege.edu.au/study/courses/foundation-year/fy-data/destination-degrees-2026-single-degrees/pharmacy-and-pharmaceutical-science",
         "source_type": "official_pathway",
-        "verified_date": "2026-09-24",
-        "status": "confirmed_2027",
+        "verified_date": "2026-09-25",
+        "status": "latest_published",
         "note": ""
       },
       "duration": {
-        "value": null,
+        "value": "Standard 약 12개월",
         "academic_year": 2027,
         "source_year": 2027,
-        "source_id": "monash-foundation",
-        "source_url": "https://www.monashcollege.edu.au/__data/assets/pdf_file/0005/4349102/2027-Monash-Pathway-Programs.pdf",
+        "source_id": "monash-foundation-dates-2027",
+        "source_url": "https://www.monashcollege.edu.au/study/courses/foundation-year/dates-and-fees",
         "source_type": "official_pathway",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
+        "verified_date": "2026-09-25",
+        "status": "confirmed_2027",
         "note": ""
       },
       "intake": {
-        "value": null,
+        "value": "2월 · 8월",
         "academic_year": 2027,
         "source_year": 2027,
-        "source_id": "monash-foundation",
-        "source_url": "https://www.monashcollege.edu.au/__data/assets/pdf_file/0005/4349102/2027-Monash-Pathway-Programs.pdf",
+        "source_id": "monash-foundation-dates-2027",
+        "source_url": "https://www.monashcollege.edu.au/study/courses/foundation-year/dates-and-fees",
         "source_type": "official_pathway",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
+        "verified_date": "2026-09-25",
+        "status": "confirmed_2027",
         "note": ""
       },
       "progression": {
-        "value": null,
+        "value": "P6007: Foundation score 75% · English 65% · Maths 50% + Chemistry 50%",
         "academic_year": 2027,
-        "source_year": 2027,
-        "source_id": "monash-foundation",
-        "source_url": "https://www.monashcollege.edu.au/__data/assets/pdf_file/0005/4349102/2027-Monash-Pathway-Programs.pdf",
+        "source_year": null,
+        "source_id": "monash-foundation-p6007-current",
+        "source_url": "https://www.monashcollege.edu.au/study/courses/foundation-year/fy-data/destination-degrees-2026-single-degrees/pharmacy-and-pharmaceutical-science",
         "source_type": "official_pathway",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
-        "note": ""
+        "verified_date": "2026-09-25",
+        "status": "source_conflict",
+        "note": "2027 Pathway Programs PDF는 Pharmacy 표에 legacy P6001을 유지하고 있어 P6007 live page와 코드가 불일치합니다."
       },
       "english": {
-        "value": null,
+        "value": "P6007 진급 English 65%",
         "academic_year": 2027,
-        "source_year": 2027,
-        "source_id": "monash-foundation",
-        "source_url": "https://www.monashcollege.edu.au/__data/assets/pdf_file/0005/4349102/2027-Monash-Pathway-Programs.pdf",
+        "source_year": null,
+        "source_id": "monash-foundation-p6007-current",
+        "source_url": "https://www.monashcollege.edu.au/study/courses/foundation-year/fy-data/destination-degrees-2026-single-degrees/pharmacy-and-pharmaceutical-science",
         "source_type": "official_pathway",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
-        "note": ""
+        "verified_date": "2026-09-25",
+        "status": "source_conflict",
+        "note": "Foundation 입학 영어조건이 아니라 Monash University Pharmacy 진급용 Foundation English 점수입니다."
       },
       "qualification": {
         "value": null,
@@ -4622,16 +4623,19 @@
         "status": "pending_2027",
         "note": ""
       },
-      "note": "새 P6007 진급점수는 아직 발표되지 않았습니다.",
+      "note": "현재 Monash College destination-degree 페이지는 새 P6007을 75%/English 65%로 안내하지만, 2027 Pathway Programs PDF의 Pharmacy 표에는 아직 P6001이 남아 있어 2027 확정 자동판정에는 사용하지 않습니다.",
       "intake_months": {
-        "value": null,
+        "value": [
+          2,
+          8
+        ],
         "academic_year": 2027,
         "source_year": 2027,
-        "source_id": "monash-foundation",
-        "source_url": "https://www.monashcollege.edu.au/__data/assets/pdf_file/0005/4349102/2027-Monash-Pathway-Programs.pdf",
+        "source_id": "monash-foundation-dates-2027",
+        "source_url": "https://www.monashcollege.edu.au/study/courses/foundation-year/dates-and-fees",
         "source_type": "official_pathway",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
+        "verified_date": "2026-09-25",
+        "status": "confirmed_2027",
         "note": ""
       }
     },
@@ -16391,11 +16395,11 @@
     },
     {
       "id": "monash-foundation",
-      "title": "Monash Pathway Programs 2027 · 과정 코드 재확인 필요",
+      "title": "Monash Pathway Programs 2027 · Pharmacy section still shows legacy P6001",
       "url": "https://www.monashcollege.edu.au/__data/assets/pdf_file/0005/4349102/2027-Monash-Pathway-Programs.pdf",
       "source_year": 2027,
       "source_type": "official_pathway",
-      "verified_date": "2026-09-24"
+      "verified_date": "2026-09-25"
     },
     {
       "id": "newcastle-foundation",
@@ -17180,6 +17184,22 @@
       "source_year": 2027,
       "source_type": "official_pathway",
       "verified_date": "2026-09-25"
+    },
+    {
+      "id": "monash-foundation-p6007-current",
+      "title": "Monash College · Foundation Year destination degree · Pharmacy P6007",
+      "url": "https://www.monashcollege.edu.au/study/courses/foundation-year/fy-data/destination-degrees-2026-single-degrees/pharmacy-and-pharmaceutical-science",
+      "source_year": null,
+      "source_type": "official_pathway",
+      "verified_date": "2026-09-25"
+    },
+    {
+      "id": "monash-foundation-dates-2027",
+      "title": "Monash College · Foundation Year 2027 dates",
+      "url": "https://www.monashcollege.edu.au/study/courses/foundation-year/dates-and-fees",
+      "source_year": 2027,
+      "source_type": "official_pathway",
+      "verified_date": "2026-09-25"
     }
   ],
   "conflicts": [
@@ -17201,11 +17221,11 @@
       "field": "progression",
       "source_ids": [
         "monash-foundation",
-        "monash"
+        "monash-foundation-p6007-current"
       ],
-      "status": "pending_2027",
-      "summary": "Pathway guide 구 P6001과 새 P6007 과정 코드 차이",
-      "decision": "기존 progression 점수 이식 금지."
+      "status": "source_conflict",
+      "summary": "2027 Pathway Programs PDF Pharmacy 표는 P6001을 유지하지만, 현재 Monash College destination-degree 페이지는 새 P6007과 75%/English 65%/Maths·Chemistry 50%를 표시",
+      "decision": "P6007 live 값을 최신 공개 참고값으로 보여주되 2027 확정 자동판정에는 사용하지 않음."
     }
   ]
 }
