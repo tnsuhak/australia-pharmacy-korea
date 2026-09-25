@@ -101,6 +101,11 @@ source('jcu-intl-2025','JCU 2025 International Guide · Pharmacy entry scores','
 source('newcastle-prospectus-2027','University of Newcastle · 2027 International Prospectus','https://www.newcastle.edu.au/__data/assets/pdf_file/0020/1102565/2025-1079-International-Prospectus-2027-ROW.pdf',2027,'official_guide')
 source('adelaide-pharmacy-current','Adelaide University · Bachelor of Pharmacy (Honours) international entry requirements','https://adelaide.edu.au/study/degrees/bachelor-of-pharmacy-honours/',None,'official_course')
 source('latrobe-health-guide','La Trobe · International Health Discipline Handbook · Pharmacy','https://www.latrobe.edu.au/international/documents/international-handbooks/LTU-Health-Discipline-Handbook.pdf',2026,'official_guide')
+source('latrobe-foundation-current','La Trobe College · Foundation Studies Health, Life Sciences and Engineering','https://www.latrobecollegeaustralia.edu.au/study-options/foundation-studies/health-life-sciences/',None,'official_pathway')
+source('latrobe-foundation-transfer','La Trobe College · Foundation Studies transfer criteria','https://www.latrobecollegeaustralia.edu.au/study-options/transferring-university/',None,'official_pathway')
+source('latrobe-foundation-plan','La Trobe College · Foundation Health and Life Sciences study plan','https://www.latrobecollegeaustralia.edu.au/wp-content/uploads/webpage-study-plan-guide.pdf',None,'official_pathway')
+source('latrobe-foundation-fee-2026','La Trobe College · 2026 Foundation Studies fee','https://www.latrobecollegeaustralia.edu.au/how-apply/fees/',2026,'official_pathway')
+source('latrobe-foundation-english-2026','La Trobe College · 2026 international English entry requirements','https://www.latrobecollegeaustralia.edu.au/wp-content/uploads/LTCA260107-1149-International-Guide-2026-Update-FAW_Web.pdf',2026,'official_pathway')
 source('griffith-2026-guide','Griffith University · 2026 International Student Guide · Pharmacy','https://www.griffith.edu.au/__data/assets/pdf_file/0035/2193587/Griffith-University-2026-International-Study-Guide-Digital.pdf',2026,'official_guide')
 course_urls={
  'jcu':'https://www.jcu.edu.au/courses/bachelor-of-pharmacy-honours',
@@ -352,8 +357,15 @@ routes[-1]['intake_months']=fact([2],'rmit-associate-2027')
 routes[-1]['progression']=fact('AD012P24 Biomedicine option 수료 + IELTS 7.0 / 각 6.5 → Pharmacy guaranteed entry','rmit-associate-current')
 routes[-1]['english']=fact('Pharmacy 진급: IELTS 7.0 / 각 6.5 또는 동등점수','rmit-associate-current')
 routes[-1]['pathway_fee']=fact(38400,'rmit-associate-2027',year=2027,note='2027 Associate Degree 국제학생 연간 학비 · 2년 총액 아님')
-for i,title in [('latrobe','Foundation · Health / Life Sciences'),('utas','International Foundation')]:
- route(i,i+'-foundation','foundation',title,i,0,1,note='2027 약대 진급조건·유학생 모집 발표 대기입니다.',verified=False)
+route('latrobe','latrobe-foundation','foundation','La Trobe College · Foundation Studies · Health, Life Sciences and Engineering','latrobe-foundation-current',0,1,'8개월 · 2 trimesters','2월 · 6월','Foundation 최소 WAM 60% + 해당 Bachelor 최소조건 · Pharmacy는 Advanced Mathematics 2 + Chemistry 2 이수 필요 · quota/추가조건 가능','국제학생 전용 Foundation이며 Pharmacy (Honours) Bendigo 1학년으로 연결됩니다. 현재 공개 페이지의 학비는 2026 A$29,780이므로 2027 학비로 표시하지 않습니다.')
+routes[-1]['duration']=fact('8개월 · 2 trimesters','latrobe-foundation-current')
+routes[-1]['intake']=fact('2월 · 6월','latrobe-foundation-current')
+routes[-1]['intake_months']=fact([2,6],'latrobe-foundation-current')
+routes[-1]['progression']=fact('Foundation 최소 WAM 60% + 해당 Bachelor 최소조건 · Pharmacy는 Advanced Mathematics 2 + Chemistry 2 이수 필요 · quota/추가조건 가능','latrobe-foundation-transfer',note='현재 transfer page의 공통 최소 WAM 60%와 Pharmacy study-plan 과목요건을 결합해 표시합니다. Pharmacy-specific 최종 WAM/정원은 지원 전 재확인합니다.')
+routes[-1]['english']=fact('Foundation 입학: IELTS 5.5 / 각 5.0 · PTE 42 / 각 36 · TOEFL iBT 55 / Writing 16','latrobe-foundation-english-2026')
+routes[-1]['qualification']=fact(None,'latrobe-foundation-current',status='pending_2027',note='한국 고교 11학년 등 country-specific 2027 Foundation 학력표는 별도 확인합니다.')
+routes[-1]['pathway_fee']=fact(29780,'latrobe-foundation-fee-2026',year=2026,note='2026 Foundation Studies international program fee · 2027 금액 아님')
+route('utas','utas-foundation','foundation','International Foundation','utas',0,1,note='2027 약대 진급조건·유학생 모집 발표 대기입니다.',verified=False)
 
 def scholarship(i,id,name,src,pct=None,kind='pending',automatic=None,competitive=None,eligible=None,duration=None,threshold=None,renewal=None,number=None,exclude=None,note='',pharmacy=None,amount_status=None,pharmacy_src=None):
  scholarships.append(dict(id=id,university_id=i,name=name,amount=fact(pct,src,status=amount_status),award_type='percentage' if pct is not None else None,assessment=kind,
