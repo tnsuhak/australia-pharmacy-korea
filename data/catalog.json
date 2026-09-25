@@ -1025,11 +1025,16 @@
         "note": "2026-07-08 목록. 학위명 변경·캠퍼스·갱신은 지원 전 재확인."
       },
       "highlights": [
-        "80CP 인정",
-        "20% 자동심사"
+        "Direct H1 기준",
+        "Diploma → 2학년",
+        "80CP 인정"
       ],
-      "editorial": "Direct 입학과 Griffith College Diploma of Health Sciences 경로가 있습니다. Diploma는 8~12개월, 2027년 3·6·10월 시작이 공개돼 있으며 80CP를 인정받습니다. Pharmacy progression quota가 있어 정원 초과 시 Diploma GPA 순으로 선발됩니다.",
-      "review_items": [],
+      "editorial": "Direct 입학과 Griffith College Diploma 경로가 있습니다. Direct는 최신 공개 국제가이드(2026) H1 기준으로 CSAT 331 · IB 28 · SAT 1080 · A-level 7을 참고할 수 있으나 2027 확정 환산표는 아직 확인 중입니다. Griffith College Diploma 후에는 80CP를 인정받고 약대 2학년으로 연결됩니다.",
+      "review_items": [
+        "2027 Direct 국제학력 환산표",
+        "2027 국제학생 본과 학비",
+        "Pharmacy 과목별 assumed knowledge/subject prerequisite 최신표"
+      ],
       "decision_lens": {
         "why": [
           "Griffith College Diploma → 약대 2학년",
@@ -2982,14 +2987,14 @@
         "note": ""
       },
       "intake": {
-        "value": null,
+        "value": "3월 · 7월 (2026 국제가이드 기준)",
         "academic_year": 2027,
-        "source_year": null,
-        "source_id": "griffith",
-        "source_url": "https://www.griffith.edu.au/study/degrees/bachelor-of-pharmacy-honours-1614",
-        "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
+        "source_year": 2026,
+        "source_id": "griffith-2026-guide",
+        "source_url": "https://www.griffith.edu.au/__data/assets/pdf_file/0035/2193587/Griffith-University-2026-International-Study-Guide-Digital.pdf",
+        "source_type": "official_guide",
+        "verified_date": "2026-09-25",
+        "status": "latest_published",
         "note": ""
       },
       "progression": {
@@ -3004,37 +3009,40 @@
         "note": ""
       },
       "english": {
-        "value": null,
+        "value": "IELTS 7.0 overall · 각 영역 기준은 2027 과정자료에서 추가 확인",
         "academic_year": 2027,
-        "source_year": null,
-        "source_id": "griffith",
-        "source_url": "https://www.griffith.edu.au/study/degrees/bachelor-of-pharmacy-honours-1614",
-        "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
+        "source_year": 2026,
+        "source_id": "griffith-2026-guide",
+        "source_url": "https://www.griffith.edu.au/__data/assets/pdf_file/0035/2193587/Griffith-University-2026-International-Study-Guide-Digital.pdf",
+        "source_type": "official_guide",
+        "verified_date": "2026-09-25",
+        "status": "latest_published",
         "note": ""
       },
       "qualification": {
-        "value": null,
+        "value": "최신 공개 H1 참고: CSAT 331 · IB 28 · SAT 1080(+미국 고교졸업) · A-level 7",
         "academic_year": 2027,
-        "source_year": null,
-        "source_id": "griffith",
-        "source_url": "https://www.griffith.edu.au/study/degrees/bachelor-of-pharmacy-honours-1614",
-        "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
+        "source_year": 2026,
+        "source_id": "griffith-2026",
+        "source_url": "https://www.griffith.edu.au/__data/assets/pdf_file/0035/2193587/Griffith-University-2026-International-Study-Guide-Digital.pdf",
+        "source_type": "official_guide",
+        "verified_date": "2026-09-25",
+        "status": "latest_published",
         "note": ""
       },
-      "note": "아래 표에 성적·선수과목·영어 기준을 정리했습니다.",
+      "note": "2026 국제가이드의 H1 환산표를 최신 공개 참고값으로 사용합니다. 2027 확정 환산표·과목별 assumed knowledge는 별도 확인 중입니다.",
       "intake_months": {
-        "value": null,
+        "value": [
+          3,
+          7
+        ],
         "academic_year": 2027,
-        "source_year": null,
-        "source_id": "griffith",
-        "source_url": "https://www.griffith.edu.au/study/degrees/bachelor-of-pharmacy-honours-1614",
-        "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
+        "source_year": 2026,
+        "source_id": "griffith-2026-guide",
+        "source_url": "https://www.griffith.edu.au/__data/assets/pdf_file/0035/2193587/Griffith-University-2026-International-Study-Guide-Digital.pdf",
+        "source_type": "official_guide",
+        "verified_date": "2026-09-25",
+        "status": "latest_published",
         "note": ""
       }
     },
