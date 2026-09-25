@@ -195,7 +195,7 @@ home+='''<section class="section school-differences"><div class="wrap"><div clas
 
 home+='<section class="section soft" id="all-schools"><div class="wrap"><div class="section-head"><div><span class="eyebrow">ALL PHARMACY SCHOOLS</span><h2>'+str(len(U))+'개 호주 약대를 하나씩 보세요</h2><p>검색 결과가 아니라 각 대학의 과정·입학방법·졸업 후 조건을 직접 비교합니다.</p></div><a href="/universities/">대학별 전체 페이지 →</a></div><div class="pharmacy-school-grid">'+''.join(directory_card(u) for u in D['universities'])+'</div><div class="secondary-tool"><span>성적·화학·입학월로 다시 좁히고 싶다면</span><a href="/compare/">조건 비교 도구 사용 →</a></div></div></section>'
 
-home+='''<section class="section pathway-hub-preview"><div class="wrap"><div class="section-head"><div><span class="eyebrow">ENTRY PATHWAYS</span><h2>입학방법으로 다시 모아보기</h2><p>입학방법 페이지는 대학별 정보를 다시 묶어 보는 보조 허브입니다.</p></div><a href="/admission-pathways/">입학방법 전체보기 →</a></div><div class="pathway-hub-grid"><a href="/admission-requirements/"><span>DIRECT</span><h3>고졸 Direct</h3><p>수능·IB·A-level·SAT·OSSD로 약대 1학년</p></a><a href="/foundation/"><span>FOUNDATION</span><h3>Foundation</h3><p>고2 수료부터 시작해 약대 1학년</p></a><a href="/diploma/"><span>DIPLOMA</span><h3>Diploma</h3><p>Griffith·Curtin은 약대 2학년</p></a><a href="/graduate-entry/"><span>GRADUATE ENTRY</span><h3>대졸자 입학</h3><p>Monash·UWA 등 학사 졸업자 과정</p></a></div></div></section>'''
+home+='''<section class="section pathway-hub-preview"><div class="wrap"><div class="section-head"><div><span class="eyebrow">ENTRY PATHWAYS</span><h2>입학방법으로 다시 모아보기</h2><p>입학방법 페이지는 대학별 정보를 다시 묶어 보는 보조 허브입니다.</p></div><a href="/admission-pathways/">입학방법 전체보기 →</a></div><div class="pathway-hub-grid"><a href="/direct-entry/"><span>DIRECT</span><h3>고졸 Direct</h3><p>수능·IB·A-level·SAT·OSSD로 약대 1학년</p></a><a href="/foundation/"><span>FOUNDATION</span><h3>Foundation</h3><p>고2 수료부터 시작해 약대 1학년</p></a><a href="/diploma/"><span>DIPLOMA</span><h3>Diploma</h3><p>Griffith·Curtin은 약대 2학년</p></a><a href="/graduate-entry/"><span>GRADUATE ENTRY</span><h3>대졸자 입학</h3><p>Monash·UWA 등 학사 졸업자 과정</p></a></div></div></section>'''
 
 home+='''<section class="section soft poststudy-preview"><div class="wrap"><div class="section-head"><div><span class="eyebrow">AFTER GRADUATION</span><h2>졸업 후 체류기간도 캠퍼스마다 다릅니다</h2><p>일반적인 첫 485는 2년이지만, Regional 요건을 충족하면 두 번째 485가 추가될 수 있습니다.</p></div><a href="/after-graduation/">485·Regional 전체보기 →</a></div><div class="visa-grid"><div><strong>2년</strong><h3>Sydney · Melbourne · Brisbane</h3><p>Major city · 지역 추가 485 없음</p></div><div><strong>3년</strong><h3>Perth · Adelaide · Gold Coast 등</h3><p>Category 2 · 요건 충족 시 +1년</p></div><div><strong>4년</strong><h3>Townsville · Bendigo · Toowoomba 등</h3><p>Category 3 · 요건 충족 시 +2년</p></div></div><p class="representative-note">두 번째 485는 지역캠퍼스 졸업과 지역 거주 등 별도 자격을 충족해야 합니다. 주정부 nomination은 주별 최신 기준을 따로 확인합니다.</p></div></section>'''
 
@@ -239,9 +239,25 @@ def routecards(rs):
     for r in rs:
         fields=[('진학 가능',fv(r['availability'])),('기간 / 시작월',fv(r['duration'])+'<br>'+fv(r['intake'])),('약대 진급조건',fv(r['progression']))]
         if r['type']!='direct':fields.extend([('입학 학력',fv(r['qualification'])),('영어',fv(r['english']))])
-        if r['credit']['value'] is not None:fields.insert(1,('약대 인정학점',fv(r['credit'])+(' CP' if r['program_id'].startswith('griffith') else ' credits')))
+        if isinstance(r['credit']['value'],(int,float)) and r['credit']['value']>0:fields.insert(1,('약대 인정학점',fv(r['credit'])+(' CP' if r['program_id'].startswith('griffith') else ' credits')))
         html+=f'<article class="route-detail"><span class="pill-label">{ROUTE[r["type"]]}</span><h3>{E(r["title"])}</h3><dl>'+''.join(f'<dt>{k}</dt><dd>{v}</dd>' for k,v in fields)+f'</dl><p>{E(r["note"])}</p></article>'
     return '<div class="route-cards">'+html+'</div>'
+def pathway_status(uid,t):
+    rr=[r for r in university_routes(uid) if r['type']==t]
+    if t=='graduate' and uid=='uwa':return '<strong class="yes">있음</strong><span>2년 Doctor of Pharmacy</span>'
+    if not rr:return '<strong class="none">현재 공식 연계 없음</strong>'
+    confirmed=[r for r in rr if r['availability']['value'] is True]
+    pending=[r for r in rr if r['availability']['value'] is None]
+    if confirmed:
+        r=confirmed[0]
+        if t=='diploma' and r['entry_year']['value']==2:return '<strong class="yes">있음</strong><span>약대 2학년 진학</span>'
+        if t=='foundation':return '<strong class="yes">있음</strong><span>약대 1학년 진학</span>'
+        if t=='graduate':return '<strong class="yes">있음</strong><span>'+E(r['title'])+'</span>'
+        return '<strong class="yes">있음</strong>'
+    if pending:return '<strong class="pending">2027 발표 대기</strong>'
+    return '<strong class="none">현재 공식 연계 없음</strong>'
+def pathway_matrix(uid):
+    return '<div class="pathway-status-grid"><div><b>Direct</b><strong class="yes">가능</strong><span>약대 1학년</span></div><div><b>Foundation</b>'+pathway_status(uid,'foundation')+'</div><div><b>Diploma</b>'+pathway_status(uid,'diploma')+'</div><div><b>Graduate Entry</b>'+pathway_status(uid,'graduate')+'</div></div>'
 def scholarcards(ss):
     out=''
     for s in ss:
@@ -291,7 +307,7 @@ for u in D['universities']:
         ('졸업하면 바로 호주나 한국 약사가 되나요?','아닙니다. 호주는 인턴십·시험·등록이 필요하고, 한국은 별도 면허 절차가 있습니다.')]
     allids=source_ids([p,rs,ss,hh,rq,en,it,t,r,related('qualifications',pid)])|{'apc','korea-law'}
     if u['id']=='uq':allids|={'uq-pharmd','uq-foundation','uq-calendar'}
-    routes_html=routecards(rs)
+    routes_html=pathway_matrix(u['id'])+routecards(rs)
     if u['id']=='uwa':routes_html+=callout('<strong>대졸자 별도 과정</strong><p>UWA에는 학사 졸업자가 지원하는 2년 Doctor of Pharmacy도 있습니다. 2027년 1월 시작, sWAM 65+와 Chemistry·Math/Statistics·Microbiology·Pharmacology가 필요합니다.</p>'+link('/graduate-entry/','UWA Graduate Entry 보기 →','btn text'))
     allids|={'homeaffairs-485','homeaffairs-second485','homeaffairs-regional'}
     allids|=set(STATE_NOMINATION.get(u['state'],{}).get('sources',[]))
@@ -301,8 +317,15 @@ for u in D['universities']:
     items=[('overview','이 약대 핵심',intro),('structure','과정·학위 구조',anatomy),('routes','입학방법',routes_html),('admission','Direct 입학조건','<h3>학력·성적</h3>'+qtable(pid)+'<h3>선수과목</h3>'+requirements_html+'<h3>영어</h3>'+english_html+'<h3>입학시기</h3>'+fv(it['label'])+'<p class="small">Foundation·Diploma 시작월은 위 입학방법에 표시했습니다.</p>'),('cost','학비·장학금·생활비','<h3>학비</h3>'+fees+'<h3>장학금</h3>'+scholarcards(ss)+'<h3>기숙사·숙소</h3>'+housingcards(hh)+'<h3>1년 예산</h3>'+costcalculator()),('poststudy','졸업 후 485·지역',poststudy_html(u)),('registration','호주 약사등록',registration_html),('korea','한국 약사면허','<p>호주 약대 졸업만으로 한국 약사면허가 자동으로 나오지 않습니다. 대학 인정, 호주 면허, 예비시험·국가시험을 따로 거칩니다.</p>'+link('/korea-pharmacist/','한국 약사면허 확인 순서 →','btn text')),('faq','자주 묻는 질문',faq(fs)),('sources','자료 출처',sources(allids))]
     register(purl(p),f'2027 {u["name_ko"]} 약대 완전분석 · 입학·학비·485 | TNS',u['name']+' Pharmacy의 과정기간, 입학방법, 선수과목, 학비·장학금, 인턴십, 485 지역조건과 약사등록을 정리합니다.',body+article(items),fs)
 
-pathway_items=[('overview','호주 약대 입학방법 3가지','<p>고등학생은 보통 Foundation, Diploma, Direct Entry 세 가지 방법으로 시작합니다.</p><div class="admission-grid"><article class="admission-card"><span class="route-label">FOUNDATION</span><h3>고2 → Foundation → 약대 1학년</h3><p>고2 수료 후 Foundation을 마치고 약대 1학년으로 진학합니다.</p><a href="/foundation/">Foundation 자세히 →</a></article><article class="admission-card"><span class="route-label">DIPLOMA / IYO</span><h3>Diploma → 약대 2학년</h3><p>Griffith·Curtin은 Diploma 후 약대 2학년으로 진학합니다.</p><p class="route-exception">Adelaide: 학점 인정 학생 → 7월 입학 심사</p><a href="/diploma/">Diploma 자세히 →</a></article><article class="admission-card"><span class="route-label">DIRECT ENTRY</span><h3>성적으로 바로 약대 1학년</h3><p>수능·IB·A-level·SAT·OSSD와 선수과목·영어로 바로 지원합니다.</p><a href="/admission-requirements/">Direct 입학조건 →</a></article></div>'),('profiles','내 학력에서 바로 찾기',table([('고2 수료','Foundation'),('고3 졸업','Direct / Diploma'),('검정고시','Diploma / 일부 Direct'),('수능·IB·A-level·SAT·OSSD','Direct Entry')],['현재 학력','먼저 볼 방법'],True)),('graduate','대학 졸업자','<p>Graduate Entry는 일부 대학만 운영합니다. 학사학위와 대학 선수과목이 필요합니다.</p>'+link('/compare/?qualification=graduate','Graduate Entry 보기 →','btn text'))]
+pathway_items=[('overview','호주 약대 입학방법 3가지','<p>고등학생은 보통 Foundation, Diploma, Direct Entry 세 가지 방법으로 시작합니다.</p><div class="admission-grid"><article class="admission-card"><span class="route-label">FOUNDATION</span><h3>고2 → Foundation → 약대 1학년</h3><p>고2 수료 후 Foundation을 마치고 약대 1학년으로 진학합니다.</p><a href="/foundation/">Foundation 자세히 →</a></article><article class="admission-card"><span class="route-label">DIPLOMA / IYO</span><h3>Diploma → 약대 2학년</h3><p>Griffith·Curtin은 Diploma 후 약대 2학년으로 진학합니다.</p><p class="route-exception">Adelaide: 학점 인정 학생 → 7월 입학 심사</p><a href="/diploma/">Diploma 자세히 →</a></article><article class="admission-card"><span class="route-label">DIRECT ENTRY</span><h3>성적으로 바로 약대 1학년</h3><p>수능·IB·A-level·SAT·OSSD와 선수과목·영어로 바로 지원합니다.</p><a href="/direct-entry/">Direct 대학 보기 →</a></article></div>'),('profiles','내 학력에서 바로 찾기',table([('고2 수료','Foundation'),('고3 졸업','Direct / Diploma'),('검정고시','Diploma / 일부 Direct'),('수능·IB·A-level·SAT·OSSD','Direct Entry')],['현재 학력','먼저 볼 방법'],True)),('graduate','대학 졸업자','<p>Graduate Entry는 일부 대학만 운영합니다. 학사학위와 대학 선수과목이 필요합니다.</p>'+link('/graduate-entry/','Graduate Entry 보기 →','btn text'))]
 register('/admission-pathways/','2027 호주 약대 입학방법 · Foundation·Diploma·Direct | TNS','호주 약대에 진학하는 대표적인 세 가지 방법인 Foundation, 1학년 Diploma/IYO, Direct Entry를 학력별로 비교하고 대졸자 특수경로를 구분합니다.',pagehero('호주 약대 입학방법','입학방법을 먼저 고른 뒤, 해당 대학 상세페이지에서 실제 조건을 확인하세요.','입학방법')+article(pathway_items))
+
+direct_rows=[]
+for p in D['programs']:
+    u=U[p['university_id']];rq=one('requirements',p['id']);en=one('english',p['id']);it=one('intakes',p['id'])
+    direct_rows.append((link(purl(p),E(u['short'])+(' · 신설 PharmD' if p['id']=='uq-pharmd' else '')),E(value(p['duration_label'])),fv(it['label']),fv(rq['chemistry']),fv(rq['mathematics']),fv(en['ielts_overall'])))
+direct_items=[('schools','Direct 입학 가능한 약대',table(direct_rows,['대학','기간','입학월','화학','수학','IELTS'],True)),('scores','성적은 대학별 페이지에서 확인','<p>수능·IB·A-level·SAT·OSSD 환산점수는 대학마다 다릅니다. 대학명을 누르면 해당 학교의 2027 Direct 점수표로 이동합니다.</p>'+link('/admission-requirements/','학력별 성적·선수과목 설명 →','btn text')),('other','Direct가 어렵다면','<div class="section-link-list"><a href="/foundation/">Foundation → 약대 1학년</a><a href="/diploma/">Diploma → 약대 2학년</a><a href="/graduate-entry/">Graduate Entry</a></div>')]
+register('/direct-entry/','2027 호주 약대 Direct 입학 · 대학별 수능·IB·선수과목 | TNS','호주 약대 Direct Entry를 대학별 기간, 입학월, 화학·수학 선수과목과 IELTS 기준으로 비교하고 각 대학 상세페이지로 연결합니다.',pagehero('고졸 Direct로 호주 약대 가기','수능·IB·A-level·SAT·OSSD로 약대 1학년에 바로 지원하는 대학을 한눈에 봅니다.','Direct Entry')+article(direct_items))
 
 admission_rows=[]
 for p in D['programs']:
