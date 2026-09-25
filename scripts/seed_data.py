@@ -126,6 +126,9 @@ source('rmit-english','RMIT · Minimum English language requirements','https://w
 source('sydney-structure','Sydney Pharmacy · current course resolutions','https://www.sydney.edu.au/handbooks/medicine-health/coursework/pharmacy/course-resolutions.html',2026,'official_handbook')
 source('sydney-guide','Sydney international guide','https://www.sydney.edu.au/dam/corporate/documents/study/guides/usyd-international-guide.pdf',2027,'official_guide')
 source('griffith-college','Griffith · College articulation 107343','https://credit-precedent.sds.na.ce.griffith.edu.au/credit_detail.php?pk1=107343',2027,'official_articulation')
+source('griffith-college-2027-guide','Griffith College · International Quick Guide 2026–2027 · Health Sciences to Pharmacy','https://www.griffithcollege.edu.au/wp-content/uploads/Griffith-College-International-Quick-Guide-2026-2027.pdf',2027,'official_pathway')
+source('griffith-college-health','Griffith College · Diploma of Health Sciences','https://www.griffithcollege.edu.au/study-options/diploma/health-sciences/',None,'official_pathway')
+source('griffith-college-dates-2027','Griffith College · 2027 key dates','https://www.griffithcollege.edu.au/student-life/key-dates/',2027,'official_pathway')
 source('curtin-college','Curtin College · Pharmacy Diploma','https://www.curtincollege.edu.au/courses/diplomas/health-sciences/pharmacy/',None,'official_pathway')
 source('curtin-college-entry','Curtin College · International academic entry requirements · Pharmacy','https://www.curtincollege.edu.au/how-apply/international/journey/academic-entry-requirements/',None,'official_pathway')
 source('curtin-college-english','Curtin College · English requirements · Pharmacy Stage 2','https://www.curtincollege.edu.au/how-apply/international/journey/english-requirements/',None,'official_pathway')
@@ -302,7 +305,12 @@ routes.append(dict(id='uq-pharmd-direct',program_id='uq-pharmd',type='direct',ti
 def route(i,id,type,title,src,credit=None,entry=None,duration=None,intake=None,progression=None,note='',verified=True):
  r=dict(id=id,program_id=i+'-bpharm-hons',type=type,title=title,availability=fact(True if verified else None,src),credit=fact(credit,src),entry_year=fact(entry,src),duration=fact(duration,src),intake=fact(intake,src),progression=fact(progression,src),english=fact(None,src),qualification=fact(None,src),note=note)
  routes.append(r);return r
-route('griffith','griffith-college','diploma','Griffith College · Diploma of Health Sciences','griffith-college',80,2,'본과 잔여 240CP · T1 3년 / T2 3.5년','본과 T1 / T2 · Diploma 개강월 별도 확인','지정 Diploma 과목 이수 + 최종 입학허가','80CP 인정. Diploma 학비·진급 GPA는 업데이트 대기입니다.')
+route('griffith','griffith-college','diploma','Griffith College · Diploma of Health Sciences','griffith-college',80,2,'8개월(2 trimesters) 또는 12개월(3 trimesters)','2027 T1 3월 1일 · T2 6월 28일 · T3 10월 25일','Diploma 수료 + Pharmacy progression quota · 정원 초과 시 completed Diploma GPA 순 선발','80CP 인정 후 Bachelor of Pharmacy (Honours)로 연결됩니다. 2027 국제가이드는 Pharmacy에 progression quota가 있음을 명시합니다. T3 시작은 본과 intake와 progression gap을 함께 확인해야 합니다.')
+routes[-1]['duration']=fact('8개월(2 trimesters) 또는 12개월(3 trimesters)','griffith-college-health')
+routes[-1]['intake']=fact('2027 T1 3월 1일 · T2 6월 28일 · T3 10월 25일','griffith-college-dates-2027')
+routes[-1]['intake_months']=fact([3,6,10],'griffith-college-dates-2027')
+routes[-1]['progression']=fact('Diploma 수료 + Pharmacy progression quota · 정원 초과 시 completed Diploma GPA 순 선발','griffith-college-2027-guide')
+routes[-1]['pathway_fee']=fact(None,'griffith-college-health',status='pending_2027',note='검증한 공식 2027 자료에서 Diploma of Health Sciences의 2027 tuition amount를 확인하지 못해 추정하지 않습니다.')
 route('curtin','curtin-college','diploma','Curtin College · Pharmacy Diploma','curtin-college',175,2,'Stage 2: 12개월 · Stage 1 필요 시 8–12개월 추가','Stage 1: 2월/6월 · Stage 2: 2월','Stage 2 CWA 70% + PHAR1002 Pharmacy Practice 1(12월) 추가 이수','Diploma 완료 시 175 credits를 인정받고, 12월 PHAR1002를 추가 이수한 뒤 약대 2학년으로 진학합니다.')
 routes[-1]['english']=fact('Stage 2 Pharmacy: IELTS 6.5 / 각 6.0 · PTE 58 / 각 50(2026년 8월 이전 시험 기준)','curtin-college-english')
 routes[-1]['qualification']=fact('Stage 2 한국: 고3 Rank 6 또는 고교 졸업 + CSAT 280/600 · Mathematics + Chemistry prerequisite','curtin-college-entry')
@@ -413,7 +421,7 @@ for q,score,scale in [('csat',331,'대학 공식 CSAT 환산'),('sat',1080,'1600
 row(english,'griffith')['ielts_overall']=fact(7,'griffith-2026',note='2026 Pharmacy 행. 각 영역과 2027 조건은 별도 확인 중.')
 source('griffith-college-entry','Griffith College · 국제학생 입학조건','https://www.griffithcollege.edu.au/international-students/entry-requirements/',None,'official_pathway')
 gc=next(r for r in routes if r['id']=='griffith-college')
-gc['english']=fact('Pharmacy 연결 Diploma: IELTS 6.5 / 각 6.0 · PTE 58 / 각 50 · TOEFL 79 / 각 19','griffith-college-entry',note='일반 Diploma 영어 5.5를 약대 연결 경로에 적용하지 않습니다. 본과 진급 영어조건은 별도 확인.')
+gc['english']=fact('Pharmacy 연결 Diploma: IELTS 6.5 / 각 6.0 · PTE 58 / 각 50 · TOEFL 79 / 각 19','griffith-college-entry',note='일반 Diploma 영어 5.5를 약대 연결 경로에 적용하지 않습니다. Pharmacy 연결 전용 영어기준입니다.')
 gc['qualification']=fact('College 일반 학력표: 한국 고교 4개 학업과목 평균 Rank 6, 또는 고교 졸업 + CSAT 280 / 상위 3개 stanine 6, 또는 검정고시 평균 80','griffith-college-entry',status='pending_2027',note='College 입학용 참고표. Pharmacy 연결 과정의 학력 예외·2027 적용 검증 전이며 Griffith 본과 Direct 점수가 아닙니다.')
 # Link Direct route summaries to their own program rather than duplicate unknowns.
 for route_record in routes:
