@@ -352,7 +352,7 @@ route('griffith','griffith-college','diploma','Griffith College · Diploma of He
 routes[-1]['duration']=fact('8개월(2 trimesters) 또는 12개월(3 trimesters)','griffith-college-health')
 routes[-1]['intake']=fact('2027 T1 3월 1일 · T2 6월 27일 · T3 10월 5일','griffith-college-2027-guide')
 routes[-1]['intake_months']=fact([3,6,10],'griffith-college-2027-guide')
-routes[-1]['progression']=fact('2026/2027 Diploma of Health Sciences 수료 → 2027 Bachelor of Pharmacy (Honours) 1614에 80CP 인정','griffith-college',note='공식 articulation은 80CP 인정 후 T1 대학 진학 시 본과 3년, T2 진학 시 약 3.5년이 남는다고 명시합니다.')
+routes[-1]['progression']=fact('2026/2027 Diploma of Health Sciences 수료 + Pharmacy progression quota 충족 → 2027 Bachelor of Pharmacy (Honours) 1614에 80CP 인정 · 정원 초과 시 completed Diploma GPA 순 선발','griffith-college',note='공식 articulation은 80CP 인정 후 T1 대학 진학 시 본과 3년, T2 진학 시 약 3.5년이 남는다고 명시합니다.')
 routes[-1]['note']='Griffith College Diploma of Health Sciences 2026/2027 → 2027 Pharmacy 1614에 80CP가 공식 인정됩니다. T1 진학 시 본과 240CP를 약 3년, T2 진학 시 약 3.5년에 이수합니다. 한국 내 UniCentre 경로는 TNS 사이트 정책상 별도 홍보하지 않습니다.'
 routes[-1]['pathway_fee']=fact(None,'griffith-college-health',status='pending_2027',note='검증한 공식 2027 자료에서 Diploma of Health Sciences의 2027 tuition amount를 확인하지 못해 추정하지 않습니다.')
 route('curtin','curtin-college','diploma','Curtin College · Pharmacy Diploma','curtin-college',175,2,'Stage 2: 12개월 · Stage 1 필요 시 8–12개월 추가','Stage 1: 2월/6월 · Stage 2: 2월','Stage 2 CWA 70% + PHAR1002 Pharmacy Practice 1(12월) 추가 이수','Diploma 완료 시 175 credits를 인정받고, 12월 PHAR1002를 추가 이수한 뒤 약대 2학년으로 진학합니다.')
