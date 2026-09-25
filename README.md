@@ -2,7 +2,7 @@
 
 한국 학생의 학력·과목·영어·입학시기와 Direct / Foundation / Diploma / Graduate Entry를 비교하는 한국어 정적 포털입니다.
 
-현재 상태: V1 구현 및 정적 검사 완료, 원격 저장소·PR·Netlify Deploy Preview 미생성. Production 승인 없음.
+현재 상태: PR #1과 Netlify Deploy Preview에서 V1 개편 검토 중. Production 승인·main merge 없음.
 
 ## 실행
 
@@ -19,10 +19,10 @@ ZIP 안의 `offline-preview/index.html`을 일반 브라우저에서 열어도 �
 
 ## 파일 역할
 
-- `data/catalog.json`: 15개 대학, 16개 프로그램, 27개 경로와 출처를 연결한 데이터
+- `data/catalog.json`: 16개 대학, 17개 프로그램과 입학경로·출처를 연결한 데이터
 - `data/site.json`: 운영자·승인된 TNS 채널·Production 승인 상태
 - `scripts/seed_data.py`: 초기 편집 원본. 수정 후 재생성하면 catalog/site JSON을 덮어씁니다.
-- `scripts/build.py`: 29개 정적 페이지, robots/sitemap/schema 및 오프라인 미러 생성
+- `scripts/build.py`: 홈·비교·입학방법 허브·대학 상세·가이드를 포함한 정적 페이지, robots/sitemap/schema 및 오프라인 미러 생성
 - `assets/matcher.js`: 미확정 조건을 통과시키지 않는 필터 판정
 - `tests/matcher.test.cjs`: 주요 입학조건 오판 방지 검사 24개
 - `docs/HANDOFF.md`: 작업 상태와 남은 배포 절차
@@ -38,6 +38,14 @@ ZIP 안의 `offline-preview/index.html`을 일반 브라우저에서 열어도 �
 
 Netlify: build `python3 scripts/build.py`, publish `dist`. PR Deploy Preview에서 `DEPLOY_PRIME_URL`을 canonical 기준으로 사용하고 noindex를 유지합니다. `CONTEXT=production`은 환경변수 `PRODUCTION_APPROVED=true`, 설정 파일 승인, 승인된 HTTPS 도메인이 모두 있어야 빌드됩니다. 사용자 승인 전 이 보호 조건을 해제하지 마세요.
 
-브랜치: `feature/australia-pharmacy-2027-v1` (로컬). 예정 원격: `tnsuhak/australia-pharmacy-korea` (아직 없음).
+브랜치: `feature/australia-pharmacy-2027-v1` · PR #1 · Preview: https://deploy-preview-1--australia-pharmacy-korea.netlify.app
 
 폰트: Noto Sans KR, SIL Open Font License. 라이선스는 assets에 포함되어 있습니다. OG 이미지는 코드로 제작한 텍스트 그래픽입니다. 대학 로고·사진을 임의로 사용하지 않았습니다.
+
+
+## 정보구조 원칙
+
+- 메인은 초급자 설명 → 3/4/5년 과정 구조 → Foundation/Diploma/Direct → Finder → 주요 대학 → 약사등록 순서입니다.
+- `입학방법` 허브는 Foundation, Diploma/IYO, Direct를 대표적인 고교생 3개 경로로 안내합니다. Graduate Entry는 대학별 특수경로로 별도 취급합니다.
+- 대학 상세페이지는 한눈에 보기 / 입학방법 / 입학조건 / 비용 / 호주 약사등록 / 한국 약사면허 / FAQ / 자료 출처의 8개 큰 그룹으로 유지합니다.
+- UWA의 4년 Bachelor of Human Sciences (Pharmaceutical Health) / Doctor of Pharmacy는 학부 시작 과정으로 포함하며, 졸업 후 supervised internship이 별도라는 점을 유지합니다.
