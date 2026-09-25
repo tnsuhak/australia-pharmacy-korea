@@ -130,3 +130,14 @@ ZIP 압축을 푼 뒤 `offline-preview/index.html`을 브라우저에서 여세�
 - Do not promote, link to, create landing pages for, or recommend the Korea-based Griffith pathway operated by UniCentre South Korea.
 - Griffith University itself may remain in neutral university comparisons, and independently supportable routes may be shown when appropriate.
 - The Korea-based competitor pathway must not appear in badges, filters, comparison tables, homepage features, SEO landing pages, CTAs, or consultation copy.
+
+
+## 2026-09-25 beginner-first homepage revision
+
+- Homepage order changed to: beginner overview → 3/4/5-year degree structures → Foundation/Diploma/Direct → self-selection by student profile → Finder.
+- Finder remains intact but moved below the beginner explanation layer.
+- UWA added as the 16th comparison university with a 4-year combined Bachelor + Doctor of Pharmacy pathway.
+- UWA general registration still requires a post-graduation supervised internship year and registration requirements; do not treat the 4-year PharmD structure as internship-integrated.
+- Graduate Entry remains a separate special route, not a fourth standard school-leaver method.
+- Current PR Preview: https://deploy-preview-1--australia-pharmacy-korea.netlify.app
+- Production remains unchanged and requires explicit approval.
