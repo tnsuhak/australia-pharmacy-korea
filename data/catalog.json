@@ -1504,21 +1504,22 @@
       "highlights": [
         "4년 학사",
         "Foundation 연계",
-        "영어 재확인"
+        "2027 영어자료 충돌"
       ],
-      "editorial": "영어조건 자료가 서로 달라 2027 기준 발표를 기다리고 있습니다.",
+      "editorial": "2027 공식 Degree Guide는 IELTS 6.5/각 6.5, 현재 과정 페이지의 English proficiency section은 7.0/각 7.0으로 표시해 공식자료 간 차이가 남아 있습니다.",
       "review_items": [
+        "Pharmacy 2027 영어조건 공식자료 충돌",
         "2027 CSAT·SAT·IB course-specific 값",
         "APC 인증 갱신: 현재 목록 종료일 2026-12-31"
       ],
       "decision_lens": {
         "why": [
-          "2027 학비 A$49,205",
+          "2027 학비 A$51,665",
           "Newcastle Regional",
           "Foundation 경로 있음"
         ],
         "watch": [
-          "공식 영어자료가 6.5와 7.0으로 충돌해 지원 전 서면 확인 필요",
+          "2027 공식 Degree Guide는 IELTS 6.5/각 6.5, 과정 페이지의 English proficiency section은 7.0/각 7.0으로 달라 지원 전 서면 확인 필요",
           "2027 20% International Excellence는 Pharmacy 제외"
         ]
       }
@@ -2018,12 +2019,12 @@
       "name": {
         "value": "Bachelor of Pharmaceutical Medicine / Doctor of Pharmacy",
         "academic_year": 2027,
-        "source_year": null,
-        "source_id": "unsw",
+        "source_year": 2027,
+        "source_id": "unsw-2027-course",
         "source_url": "https://www.unsw.edu.au/study/undergraduate/bachelor-of-pharmaceutical-medicine-master-of-pharmacy",
         "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "latest_published",
+        "verified_date": "2026-09-25",
+        "status": "confirmed_2027",
         "note": ""
       },
       "duration_years": {
@@ -2084,12 +2085,12 @@
       "final_degree": {
         "value": "Bachelor of Pharmaceutical Medicine / Doctor of Pharmacy",
         "academic_year": 2027,
-        "source_year": null,
-        "source_id": "unsw",
+        "source_year": 2027,
+        "source_id": "unsw-2027-course",
         "source_url": "https://www.unsw.edu.au/study/undergraduate/bachelor-of-pharmaceutical-medicine-master-of-pharmacy",
         "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "latest_published",
+        "verified_date": "2026-09-25",
+        "status": "confirmed_2027",
         "note": ""
       },
       "international_recruitment": {
@@ -2112,14 +2113,14 @@
         "source_type": "accreditation",
         "verified_date": "2026-09-24",
         "status": "latest_published",
-        "note": "2026-07-08 목록. 학위명 변경·캠퍼스·갱신은 지원 전 재확인."
+        "note": "APC 2026-07-08 목록은 기존 Bachelor of Pharmaceutical Medicine / Master of Pharmacy 명칭을 Accredited with conditions(종료 2028-06-30)로 게재합니다. UNSW가 공지한 2027 Doctor of Pharmacy 새 명칭의 APC/Pharmacy Board 반영은 지원·등록 전 재확인합니다."
       },
       "highlights": [
         "2027 PharmD 전환",
         "5년 학위",
         "졸업 후 Internship"
       ],
-      "editorial": "2027부터 PharmD 명칭을 사용하지만 졸업 후 인턴십은 따로 합니다.",
+      "editorial": "UNSW는 2027부터 Bachelor of Pharmaceutical Medicine / Doctor of Pharmacy로 명칭을 변경한다고 공식 안내합니다. 졸업 후 일반등록을 위한 인턴십·시험 요건은 별도입니다.",
       "review_items": [
         "새 PharmD 명칭의 APC/Board 승인 반영"
       ],
@@ -9620,7 +9621,7 @@
         "source_type": "official_course",
         "verified_date": "2026-09-25",
         "status": "source_conflict",
-        "note": "Newcastle 공식 과정페이지에 6.5/6.5와 7.0/7.0 표기가 함께 노출되고 공식 국제 가이드도 연도별 차이가 있어, 2027 지원 전 서면 확인이 필요합니다."
+        "note": "2027 International Student Degree Guide는 IELTS 6.5/각 6.5, 현재 과정 페이지의 English proficiency section은 7.0/각 7.0으로 표시합니다. 자동 충족 판정에 사용하지 않고 지원 전 Newcastle Admissions 서면 확인이 필요합니다."
       },
       "ielts_bands": {
         "value": {
@@ -9636,7 +9637,7 @@
         "source_type": "official_course",
         "verified_date": "2026-09-25",
         "status": "source_conflict",
-        "note": "Newcastle 공식 과정페이지에 6.5/6.5와 7.0/7.0 표기가 함께 노출되고 공식 국제 가이드도 연도별 차이가 있어, 2027 지원 전 서면 확인이 필요합니다."
+        "note": "2027 International Student Degree Guide는 IELTS 6.5/각 6.5, 현재 과정 페이지의 English proficiency section은 7.0/각 7.0으로 표시합니다. 자동 충족 판정에 사용하지 않고 지원 전 Newcastle Admissions 서면 확인이 필요합니다."
       },
       "pte_overall": {
         "value": null,
@@ -10948,12 +10949,12 @@
     {
       "program_id": "newcastle-bpharm-hons",
       "annual": {
-        "value": 49205,
+        "value": 51665,
         "academic_year": 2027,
         "source_year": 2027,
         "source_id": "newcastle-fee-2027",
-        "source_url": "https://www.newcastle.edu.au/degrees/bachelor-of-pharmacy-honours",
-        "source_type": "official_course",
+        "source_url": "https://www.newcastle.edu.au/__data/assets/pdf_file/0020/1102565/2025-1079-International-Prospectus-2027-ROW_V27.pdf",
+        "source_type": "official_guide",
         "verified_date": "2026-09-25",
         "status": "confirmed_2027",
         "note": ""
@@ -10975,8 +10976,8 @@
         "academic_year": 2027,
         "source_year": 2027,
         "source_id": "newcastle-fee-2027",
-        "source_url": "https://www.newcastle.edu.au/degrees/bachelor-of-pharmacy-honours",
-        "source_type": "official_course",
+        "source_url": "https://www.newcastle.edu.au/__data/assets/pdf_file/0020/1102565/2025-1079-International-Prospectus-2027-ROW_V27.pdf",
+        "source_type": "official_guide",
         "verified_date": "2026-09-25",
         "status": "confirmed_2027",
         "note": ""
@@ -11618,13 +11619,13 @@
         "note": ""
       },
       "course_exclusion": {
-        "value": "공식 목록의 P6007 Scholars Program 등 대상 과정 확인",
+        "value": "공식 목록은 P6007 Scholars Program/Doctor of Pharmacy를 대상 과정으로 명시",
         "academic_year": 2027,
         "source_year": null,
         "source_id": "monash-scholarship",
         "source_url": "https://www.monash.edu/study/fees-scholarships/scholarships/find-a-scholarship/pharmacy-international-merit-scholarship-5745",
         "source_type": "official_scholarship",
-        "verified_date": "2026-09-24",
+        "verified_date": "2026-09-25",
         "status": "latest_published",
         "note": ""
       },
@@ -11639,7 +11640,7 @@
         "status": "pending_2027",
         "note": ""
       },
-      "note": "전체 4개 과정군 합계 연 8명. 일반 학생의 기본 비용에 적용하지 않습니다."
+      "note": "연 8명 경쟁장학입니다. 50%는 각 과정군 최상위, 25%는 차상위에 수여됩니다. 일반 P6007 전원 적용 장학으로 표시하지 않습니다."
     },
     {
       "id": "newcastle-excellence",
@@ -11750,8 +11751,8 @@
         "value": "Bachelor of Pharmacy (Honours)",
         "academic_year": 2027,
         "source_year": 2027,
-        "source_id": "newcastle-scholarship",
-        "source_url": "https://www.newcastle.edu.au/scholarships/UNI_053",
+        "source_id": "newcastle-scholarship-2027-terms",
+        "source_url": "https://www.newcastle.edu.au/__data/assets/pdf_file/0014/1136300/UNI_053-International-Excellence-Scholarship-2027-T-and-Cs-07072026.pdf",
         "source_type": "official_scholarship",
         "verified_date": "2026-09-25",
         "status": "confirmed_2027",
@@ -11762,7 +11763,7 @@
         "academic_year": 2027,
         "source_year": 2027,
         "source_id": "newcastle-scholarship-2027-terms",
-        "source_url": "https://www.newcastle.edu.au/__data/assets/pdf_file/0018/1035117/UNI_054_International-Excellence-Scholarship.pdf",
+        "source_url": "https://www.newcastle.edu.au/__data/assets/pdf_file/0014/1136300/UNI_053-International-Excellence-Scholarship-2027-T-and-Cs-07072026.pdf",
         "source_type": "official_scholarship",
         "verified_date": "2026-09-25",
         "status": "confirmed_2027",
@@ -11779,7 +11780,7 @@
         "academic_year": 2027,
         "source_year": null,
         "source_id": "jcu-scholarship",
-        "source_url": "https://www.jcu.edu.au/international-students/scholarships-and-financial-aid",
+        "source_url": "https://www.jcu.edu.au/scholarships/search/international-excellence-scholarship",
         "source_type": "official_scholarship",
         "verified_date": "2026-09-25",
         "status": "latest_published",
@@ -11792,7 +11793,7 @@
         "academic_year": 2027,
         "source_year": null,
         "source_id": "jcu-scholarship",
-        "source_url": "https://www.jcu.edu.au/international-students/scholarships-and-financial-aid",
+        "source_url": "https://www.jcu.edu.au/scholarships/search/international-excellence-scholarship",
         "source_type": "official_scholarship",
         "verified_date": "2026-09-25",
         "status": "latest_published",
@@ -11803,7 +11804,7 @@
         "academic_year": 2027,
         "source_year": null,
         "source_id": "jcu-scholarship",
-        "source_url": "https://www.jcu.edu.au/international-students/scholarships-and-financial-aid",
+        "source_url": "https://www.jcu.edu.au/scholarships/search/international-excellence-scholarship",
         "source_type": "official_scholarship",
         "verified_date": "2026-09-25",
         "status": "latest_published",
@@ -11814,7 +11815,7 @@
         "academic_year": 2027,
         "source_year": null,
         "source_id": "jcu-scholarship",
-        "source_url": "https://www.jcu.edu.au/international-students/scholarships-and-financial-aid",
+        "source_url": "https://www.jcu.edu.au/scholarships/search/international-excellence-scholarship",
         "source_type": "official_scholarship",
         "verified_date": "2026-09-25",
         "status": "latest_published",
@@ -11825,7 +11826,7 @@
         "academic_year": 2027,
         "source_year": null,
         "source_id": "jcu-scholarship",
-        "source_url": "https://www.jcu.edu.au/international-students/scholarships-and-financial-aid",
+        "source_url": "https://www.jcu.edu.au/scholarships/search/international-excellence-scholarship",
         "source_type": "official_scholarship",
         "verified_date": "2026-09-25",
         "status": "latest_published",
@@ -11836,7 +11837,7 @@
         "academic_year": 2027,
         "source_year": null,
         "source_id": "jcu-scholarship",
-        "source_url": "https://www.jcu.edu.au/international-students/scholarships-and-financial-aid",
+        "source_url": "https://www.jcu.edu.au/scholarships/search/international-excellence-scholarship",
         "source_type": "official_scholarship",
         "verified_date": "2026-09-25",
         "status": "latest_published",
@@ -11847,7 +11848,7 @@
         "academic_year": 2027,
         "source_year": null,
         "source_id": "jcu-scholarship",
-        "source_url": "https://www.jcu.edu.au/international-students/scholarships-and-financial-aid",
+        "source_url": "https://www.jcu.edu.au/scholarships/search/international-excellence-scholarship",
         "source_type": "official_scholarship",
         "verified_date": "2026-09-25",
         "status": "latest_published",
@@ -11858,7 +11859,7 @@
         "academic_year": 2027,
         "source_year": null,
         "source_id": "jcu-scholarship",
-        "source_url": "https://www.jcu.edu.au/international-students/scholarships-and-financial-aid",
+        "source_url": "https://www.jcu.edu.au/scholarships/search/international-excellence-scholarship",
         "source_type": "official_scholarship",
         "verified_date": "2026-09-25",
         "status": "latest_published",
@@ -11869,7 +11870,7 @@
         "academic_year": 2027,
         "source_year": null,
         "source_id": "jcu-scholarship",
-        "source_url": "https://www.jcu.edu.au/international-students/scholarships-and-financial-aid",
+        "source_url": "https://www.jcu.edu.au/scholarships/search/international-excellence-scholarship",
         "source_type": "official_scholarship",
         "verified_date": "2026-09-25",
         "status": "pending_2027",
@@ -11880,7 +11881,7 @@
         "academic_year": 2027,
         "source_year": null,
         "source_id": "jcu-scholarship",
-        "source_url": "https://www.jcu.edu.au/international-students/scholarships-and-financial-aid",
+        "source_url": "https://www.jcu.edu.au/scholarships/search/international-excellence-scholarship",
         "source_type": "official_scholarship",
         "verified_date": "2026-09-25",
         "status": "pending_2027",
@@ -11891,13 +11892,13 @@
         "academic_year": 2027,
         "source_year": null,
         "source_id": "jcu-scholarship",
-        "source_url": "https://www.jcu.edu.au/international-students/scholarships-and-financial-aid",
+        "source_url": "https://www.jcu.edu.au/scholarships/search/international-excellence-scholarship",
         "source_type": "official_scholarship",
         "verified_date": "2026-09-25",
         "status": "latest_published",
         "note": ""
       },
-      "note": "Medicine·Dentistry·Diploma 등은 제외되지만 Bachelor of Pharmacy (Honours)는 제외목록에 없습니다."
+      "note": "Bachelor of Pharmacy (Honours)는 공식 제외목록에 없습니다. 25% tuition reduction은 입학 지원 시 자동심사되며, 수혜 후 매 학기 strong GPA 유지 조건이 적용됩니다."
     },
     {
       "id": "unsw-award",
@@ -16321,11 +16322,11 @@
     },
     {
       "id": "jcu-scholarship",
-      "title": "JCU · International scholarships",
-      "url": "https://www.jcu.edu.au/international-students/scholarships-and-financial-aid",
+      "title": "JCU · International Excellence Scholarship",
+      "url": "https://www.jcu.edu.au/scholarships/search/international-excellence-scholarship",
       "source_year": null,
       "source_type": "official_scholarship",
-      "verified_date": "2026-09-24"
+      "verified_date": "2026-09-25"
     },
     {
       "id": "utas-housing",
@@ -16777,8 +16778,8 @@
     },
     {
       "id": "newcastle-scholarship-2027-terms",
-      "title": "Newcastle International Excellence Scholarship 2027 · excluded programs",
-      "url": "https://www.newcastle.edu.au/__data/assets/pdf_file/0018/1035117/UNI_054_International-Excellence-Scholarship.pdf",
+      "title": "Newcastle International Excellence Scholarship 2027 · Terms & Conditions · excluded programs",
+      "url": "https://www.newcastle.edu.au/__data/assets/pdf_file/0014/1136300/UNI_053-International-Excellence-Scholarship-2027-T-and-Cs-07072026.pdf",
       "source_year": 2027,
       "source_type": "official_scholarship",
       "verified_date": "2026-09-25"
@@ -16809,10 +16810,10 @@
     },
     {
       "id": "newcastle-fee-2027",
-      "title": "University of Newcastle · Bachelor of Pharmacy (Honours) 2027 fee",
-      "url": "https://www.newcastle.edu.au/degrees/bachelor-of-pharmacy-honours",
+      "title": "University of Newcastle · 2027 International Student Degree Guide · Pharmacy",
+      "url": "https://www.newcastle.edu.au/__data/assets/pdf_file/0020/1102565/2025-1079-International-Prospectus-2027-ROW_V27.pdf",
       "source_year": 2027,
-      "source_type": "official_course",
+      "source_type": "official_guide",
       "verified_date": "2026-09-25"
     },
     {
@@ -17027,11 +17028,11 @@
       "field": "english",
       "source_ids": [
         "newcastle-2027-course",
-        "newcastle-2026-ug"
+        "newcastle-fee-2027"
       ],
       "status": "source_conflict",
-      "summary": "Newcastle 공식 자료에서 Pharmacy IELTS 6.5/각6.5와 7.0/각7.0 표기가 충돌",
-      "decision": "자동 충족 판정에서 제외. 2027 지원 전 Newcastle Admissions 서면 확인."
+      "summary": "Newcastle 2027 Degree Guide는 IELTS 6.5/각6.5, 현재 과정 페이지 English proficiency section은 7.0/각7.0으로 표기",
+      "decision": "같은 대학의 2027 공식자료 간 차이이므로 자동 충족 판정에서 제외. 지원 전 Newcastle Admissions 서면 확인."
     },
     {
       "id": "monash-foundation-version",
