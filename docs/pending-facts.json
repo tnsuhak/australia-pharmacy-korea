@@ -91,19 +91,6 @@
     "note": ""
   },
   {
-    "entity_id": "latrobe-bpharm-hons",
-    "field_path": ".programs[6].international_recruitment",
-    "value": null,
-    "academic_year": 2027,
-    "source_year": null,
-    "source_id": "latrobe",
-    "source_url": "https://www.latrobe.edu.au/courses/bachelor-of-pharmacy-honours",
-    "source_type": "official_course",
-    "verified_date": "2026-09-24",
-    "status": "pending_2027",
-    "note": "2027 국제학생 모집·대면 과정 최종 확인 중"
-  },
-  {
     "entity_id": "qut-bpharm-hons",
     "field_path": ".programs[7].exit_degree",
     "value": null,
