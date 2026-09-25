@@ -1549,34 +1549,34 @@
       "duration_years": {
         "value": 4,
         "academic_year": 2027,
-        "source_year": 2026,
-        "source_id": "apc",
-        "source_url": "https://www.pharmacycouncil.org.au/education-provider/accreditation/pharmacy-degree-programs-australia/accredited-pharmacy-degree-programs/",
-        "source_type": "accreditation",
-        "verified_date": "2026-09-24",
-        "status": "latest_published",
+        "source_year": 2027,
+        "source_id": "canberra-course-guide-2027",
+        "source_url": "https://www.canberra.edu.au/campaign/uc-course-guide.pdf",
+        "source_type": "official_guide",
+        "verified_date": "2026-09-25",
+        "status": "confirmed_2027",
         "note": ""
       },
       "duration_label": {
         "value": "4년",
         "academic_year": 2027,
-        "source_year": 2026,
-        "source_id": "apc",
-        "source_url": "https://www.pharmacycouncil.org.au/education-provider/accreditation/pharmacy-degree-programs-australia/accredited-pharmacy-degree-programs/",
-        "source_type": "accreditation",
-        "verified_date": "2026-09-24",
-        "status": "latest_published",
+        "source_year": 2027,
+        "source_id": "canberra-course-guide-2027",
+        "source_url": "https://www.canberra.edu.au/campaign/uc-course-guide.pdf",
+        "source_type": "official_guide",
+        "verified_date": "2026-09-25",
+        "status": "confirmed_2027",
         "note": ""
       },
       "bachelor_award_year": {
         "value": 4,
         "academic_year": 2027,
-        "source_year": 2026,
-        "source_id": "apc",
-        "source_url": "https://www.pharmacycouncil.org.au/education-provider/accreditation/pharmacy-degree-programs-australia/accredited-pharmacy-degree-programs/",
-        "source_type": "accreditation",
-        "verified_date": "2026-09-24",
-        "status": "latest_published",
+        "source_year": 2027,
+        "source_id": "canberra-course-guide-2027",
+        "source_url": "https://www.canberra.edu.au/campaign/uc-course-guide.pdf",
+        "source_type": "official_guide",
+        "verified_date": "2026-09-25",
+        "status": "confirmed_2027",
         "note": ""
       },
       "four_year_exit": {
@@ -1636,10 +1636,10 @@
       },
       "highlights": [
         "4년 Bachelor of Pharmacy",
-        "Honours 선택 가능",
+        "Selection Rank 75",
         "Canberra · Regional"
       ],
-      "editorial": "4년 Bachelor of Pharmacy 과정입니다. 성적과 Honours 요건을 충족하면 Bachelor of Pharmacy (Honours)로 졸업할 수 있습니다.",
+      "editorial": "2027 Semester 1에 국제학생 모집이 열려 있는 4년 Bachelor of Pharmacy입니다. 2027 Course Guide의 Selection Rank는 75이며, 국제학력은 UC selection-rank equivalency로 환산합니다. 성적과 Honours 요건을 충족하면 Honours로 졸업할 수 있습니다.",
       "review_items": [],
       "decision_lens": {
         "why": [
@@ -1670,34 +1670,34 @@
       "duration_years": {
         "value": 4,
         "academic_year": 2027,
-        "source_year": 2026,
-        "source_id": "apc",
-        "source_url": "https://www.pharmacycouncil.org.au/education-provider/accreditation/pharmacy-degree-programs-australia/accredited-pharmacy-degree-programs/",
-        "source_type": "accreditation",
-        "verified_date": "2026-09-24",
-        "status": "latest_published",
+        "source_year": 2027,
+        "source_id": "unisq",
+        "source_url": "https://course-offer-guide.unisq.edu.au/2027/BPHH.html",
+        "source_type": "official_course",
+        "verified_date": "2026-09-25",
+        "status": "confirmed_2027",
         "note": ""
       },
       "duration_label": {
         "value": "4년",
         "academic_year": 2027,
-        "source_year": 2026,
-        "source_id": "apc",
-        "source_url": "https://www.pharmacycouncil.org.au/education-provider/accreditation/pharmacy-degree-programs-australia/accredited-pharmacy-degree-programs/",
-        "source_type": "accreditation",
-        "verified_date": "2026-09-24",
-        "status": "latest_published",
+        "source_year": 2027,
+        "source_id": "unisq",
+        "source_url": "https://course-offer-guide.unisq.edu.au/2027/BPHH.html",
+        "source_type": "official_course",
+        "verified_date": "2026-09-25",
+        "status": "confirmed_2027",
         "note": ""
       },
       "bachelor_award_year": {
         "value": 4,
         "academic_year": 2027,
-        "source_year": 2026,
-        "source_id": "apc",
-        "source_url": "https://www.pharmacycouncil.org.au/education-provider/accreditation/pharmacy-degree-programs-australia/accredited-pharmacy-degree-programs/",
-        "source_type": "accreditation",
-        "verified_date": "2026-09-24",
-        "status": "latest_published",
+        "source_year": 2027,
+        "source_id": "unisq",
+        "source_url": "https://course-offer-guide.unisq.edu.au/2027/BPHH.html",
+        "source_type": "official_course",
+        "verified_date": "2026-09-25",
+        "status": "confirmed_2027",
         "note": ""
       },
       "four_year_exit": {
@@ -1760,7 +1760,7 @@
         "Toowoomba",
         "2027 개설표"
       ],
-      "editorial": "2027은 Trimester 1 입학입니다. 3년 가속과정은 2028부터 시작합니다.",
+      "editorial": "2027 국제학생은 Trimester 1에만 입학하며 2월 15일 시작입니다. 2027은 4년 과정이고, 3년 accelerated option은 2028부터 시작합니다.",
       "review_items": [
         "2027 학비",
         "2027 장학금 적용"
@@ -2124,10 +2124,10 @@
       },
       "highlights": [
         "2027 PharmD 전환",
-        "5년 학위",
-        "졸업 후 Internship"
+        "2027 Intl IB 33",
+        "5년 통합"
       ],
-      "editorial": "UNSW는 2027부터 Bachelor of Pharmaceutical Medicine / Doctor of Pharmacy로 명칭을 변경한다고 공식 안내합니다. 졸업 후 일반등록을 위한 인턴십·시험 요건은 별도입니다.",
+      "editorial": "UNSW는 2027부터 Bachelor of Pharmaceutical Medicine / Doctor of Pharmacy로 명칭을 변경합니다. 2027 공식 Guide의 국제 기준은 International ATAR 87 / IB 33이며, 현재 course page의 A-level 15 기준은 2027에도 입학요건이 동일하다는 학교 안내에 따라 참고합니다. 새 PharmD 명칭의 APC/Board 반영은 별도 확인 중입니다.",
       "review_items": [
         "새 PharmD 명칭의 APC/Board 승인 반영"
       ],
@@ -3511,12 +3511,12 @@
       "duration": {
         "value": "4년",
         "academic_year": 2027,
-        "source_year": 2026,
-        "source_id": "apc",
-        "source_url": "https://www.pharmacycouncil.org.au/education-provider/accreditation/pharmacy-degree-programs-australia/accredited-pharmacy-degree-programs/",
-        "source_type": "accreditation",
-        "verified_date": "2026-09-24",
-        "status": "latest_published",
+        "source_year": 2027,
+        "source_id": "canberra-course-guide-2027",
+        "source_url": "https://www.canberra.edu.au/campaign/uc-course-guide.pdf",
+        "source_type": "official_guide",
+        "verified_date": "2026-09-25",
+        "status": "confirmed_2027",
         "note": ""
       },
       "intake": {
@@ -3542,28 +3542,28 @@
         "note": ""
       },
       "english": {
-        "value": "IELTS 7.0 / 각 7.0",
+        "value": "IELTS 7.0 / 각 7.0 · PTE 65 (R59/L58/S76/W69) · TOEFL 94 (R25/L25/S23/W27)",
         "academic_year": 2027,
-        "source_year": 2027,
-        "source_id": "canberra-2027",
-        "source_url": "https://www.canberra.edu.au/course/HLB301/1/2027.pdf",
-        "source_type": "official_course",
+        "source_year": null,
+        "source_id": "canberra-english-current",
+        "source_url": "https://www.canberra.edu.au/future-students/entry-requirements-options/core-admission-requirements/english-language-requirements",
+        "source_type": "official_admissions",
         "verified_date": "2026-09-25",
-        "status": "confirmed_2027",
+        "status": "latest_published",
         "note": ""
       },
       "qualification": {
-        "value": "수학 + Biology/Human Movement, Chemistry/Physics는 assumed knowledge · 필수 prerequisite와 구분",
+        "value": "Selection Rank 75 + 국제학력 UC rank 환산 · 수학 + Biology/Human Movement + Chemistry/Physics assumed knowledge",
         "academic_year": 2027,
         "source_year": 2027,
-        "source_id": "canberra-2027",
-        "source_url": "https://www.canberra.edu.au/course/HLB301/1/2027.pdf",
-        "source_type": "official_course",
+        "source_id": "canberra-course-guide-2027",
+        "source_url": "https://www.canberra.edu.au/campaign/uc-course-guide.pdf",
+        "source_type": "official_guide",
         "verified_date": "2026-09-25",
         "status": "confirmed_2027",
         "note": ""
       },
-      "note": "2027 Semester 1은 2월 15일 시작입니다. Honours는 성적·과정요건을 충족한 학생에게 제공되는 option으로 구분합니다.",
+      "note": "2027 Semester 1은 2월 15일 시작입니다. 국제학생은 해외학력을 UC Selection Rank로 환산해 평가합니다.",
       "intake_months": {
         "value": [
           2
@@ -3619,12 +3619,12 @@
       "duration": {
         "value": "4년",
         "academic_year": 2027,
-        "source_year": 2026,
-        "source_id": "apc",
-        "source_url": "https://www.pharmacycouncil.org.au/education-provider/accreditation/pharmacy-degree-programs-australia/accredited-pharmacy-degree-programs/",
-        "source_type": "accreditation",
-        "verified_date": "2026-09-24",
-        "status": "latest_published",
+        "source_year": 2027,
+        "source_id": "unisq",
+        "source_url": "https://course-offer-guide.unisq.edu.au/2027/BPHH.html",
+        "source_type": "official_course",
+        "verified_date": "2026-09-25",
+        "status": "confirmed_2027",
         "note": ""
       },
       "intake": {
@@ -3952,14 +3952,14 @@
         "note": ""
       },
       "intake": {
-        "value": null,
+        "value": "Term 1 · 2027",
         "academic_year": 2027,
-        "source_year": null,
-        "source_id": "unsw",
+        "source_year": 2027,
+        "source_id": "unsw-2027-course",
         "source_url": "https://www.unsw.edu.au/study/undergraduate/bachelor-of-pharmaceutical-medicine-master-of-pharmacy",
         "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
+        "verified_date": "2026-09-25",
+        "status": "confirmed_2027",
         "note": ""
       },
       "progression": {
@@ -3974,37 +3974,39 @@
         "note": ""
       },
       "english": {
-        "value": null,
+        "value": "IELTS 6.5 / 각 6.0",
         "academic_year": 2027,
         "source_year": null,
-        "source_id": "unsw",
-        "source_url": "https://www.unsw.edu.au/study/undergraduate/bachelor-of-pharmaceutical-medicine-master-of-pharmacy",
-        "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
+        "source_id": "unsw-english-current",
+        "source_url": "https://www.unsw.edu.au/study/how-to-apply/english-language-requirements",
+        "source_type": "official_admissions",
+        "verified_date": "2026-09-25",
+        "status": "latest_published",
         "note": ""
       },
       "qualification": {
-        "value": null,
+        "value": "2027 Guide: International ATAR 87 / IB 33 · current A-level 15 · assumed knowledge Chemistry + Mathematics Advanced",
         "academic_year": 2027,
-        "source_year": null,
-        "source_id": "unsw",
-        "source_url": "https://www.unsw.edu.au/study/undergraduate/bachelor-of-pharmaceutical-medicine-master-of-pharmacy",
-        "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
+        "source_year": 2027,
+        "source_id": "unsw-2027-guide",
+        "source_url": "https://www.unsw.edu.au/content/dam/pdfs/future-students/2027-DOM-UG-Guide.pdf",
+        "source_type": "official_guide",
+        "verified_date": "2026-09-25",
+        "status": "confirmed_2027",
         "note": ""
       },
-      "note": "아래 표에 성적·선수과목·영어 기준을 정리했습니다.",
+      "note": "2027부터 Doctor of Pharmacy 명칭으로 전환됩니다. 입학요건은 학교가 기존 기준과 동일하다고 안내하지만 새 명칭의 APC/Board 반영은 별도 확인합니다.",
       "intake_months": {
-        "value": null,
+        "value": [
+          2
+        ],
         "academic_year": 2027,
-        "source_year": null,
-        "source_id": "unsw",
+        "source_year": 2027,
+        "source_id": "unsw-2027-course",
         "source_url": "https://www.unsw.edu.au/study/undergraduate/bachelor-of-pharmaceutical-medicine-master-of-pharmacy",
         "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
+        "verified_date": "2026-09-25",
+        "status": "confirmed_2027",
         "note": ""
       }
     },
@@ -7280,72 +7282,72 @@
       "program_id": "canberra-bpharm-hons",
       "qualification": "sat",
       "score": {
-        "value": null,
+        "value": 1130,
         "academic_year": 2027,
         "source_year": null,
-        "source_id": "canberra",
-        "source_url": "https://www.canberra.edu.au/about-uc/faculties/health/study/pharmacy",
-        "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
-        "note": "Pharmacy 전용 2027 환산 기준 확인 중"
+        "source_id": "canberra-intl-equiv",
+        "source_url": "https://www.canberra.edu.au/future-students/entry-requirements-options/academic-entry-requirements/international-qualifications",
+        "source_type": "official_admissions",
+        "verified_date": "2026-09-25",
+        "status": "latest_published",
+        "note": ""
       },
-      "scale": null,
-      "calculation": null
+      "scale": "1600",
+      "calculation": "UC Selection Rank 75 equivalent"
     },
     {
       "id": "canberra-bpharm-hons-ib",
       "program_id": "canberra-bpharm-hons",
       "qualification": "ib",
       "score": {
-        "value": null,
+        "value": 28,
         "academic_year": 2027,
         "source_year": null,
-        "source_id": "canberra",
-        "source_url": "https://www.canberra.edu.au/about-uc/faculties/health/study/pharmacy",
-        "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
-        "note": "Pharmacy 전용 2027 환산 기준 확인 중"
+        "source_id": "canberra-intl-equiv",
+        "source_url": "https://www.canberra.edu.au/future-students/entry-requirements-options/academic-entry-requirements/international-qualifications",
+        "source_type": "official_admissions",
+        "verified_date": "2026-09-25",
+        "status": "latest_published",
+        "note": ""
       },
-      "scale": null,
-      "calculation": null
+      "scale": "45",
+      "calculation": "UC Selection Rank 75 equivalent"
     },
     {
       "id": "canberra-bpharm-hons-alevel",
       "program_id": "canberra-bpharm-hons",
       "qualification": "alevel",
       "score": {
-        "value": null,
+        "value": 11,
         "academic_year": 2027,
         "source_year": null,
-        "source_id": "canberra",
-        "source_url": "https://www.canberra.edu.au/about-uc/faculties/health/study/pharmacy",
-        "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
-        "note": "Pharmacy 전용 2027 환산 기준 확인 중"
+        "source_id": "canberra-intl-equiv",
+        "source_url": "https://www.canberra.edu.au/future-students/entry-requirements-options/academic-entry-requirements/international-qualifications",
+        "source_type": "official_admissions",
+        "verified_date": "2026-09-25",
+        "status": "latest_published",
+        "note": ""
       },
-      "scale": null,
-      "calculation": null
+      "scale": "UC A-level aggregate",
+      "calculation": "UC Selection Rank 75 equivalent"
     },
     {
       "id": "canberra-bpharm-hons-ossd",
       "program_id": "canberra-bpharm-hons",
       "qualification": "ossd",
       "score": {
-        "value": null,
+        "value": 74,
         "academic_year": 2027,
         "source_year": null,
-        "source_id": "canberra",
-        "source_url": "https://www.canberra.edu.au/about-uc/faculties/health/study/pharmacy",
-        "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
-        "note": "Pharmacy 전용 2027 환산 기준 확인 중"
+        "source_id": "canberra-intl-equiv",
+        "source_url": "https://www.canberra.edu.au/future-students/entry-requirements-options/academic-entry-requirements/international-qualifications",
+        "source_type": "official_admissions",
+        "verified_date": "2026-09-25",
+        "status": "latest_published",
+        "note": ""
       },
-      "scale": null,
-      "calculation": null
+      "scale": "Grade 12 U/M average %",
+      "calculation": "UC Selection Rank 75 equivalent"
     },
     {
       "id": "canberra-bpharm-hons-korean_high_school",
@@ -7874,18 +7876,18 @@
       "program_id": "unsw-bpharm-hons",
       "qualification": "ib",
       "score": {
-        "value": 36,
+        "value": 33,
         "academic_year": 2027,
         "source_year": 2027,
-        "source_id": "unsw-2027-course",
-        "source_url": "https://www.unsw.edu.au/study/undergraduate/bachelor-of-pharmaceutical-medicine-master-of-pharmacy",
-        "source_type": "official_course",
+        "source_id": "unsw-2027-guide",
+        "source_url": "https://www.unsw.edu.au/content/dam/pdfs/future-students/2027-DOM-UG-Guide.pdf",
+        "source_type": "official_guide",
         "verified_date": "2026-09-25",
         "status": "confirmed_2027",
-        "note": "UNSW course page states entry requirements remain unchanged when the degree becomes Doctor of Pharmacy from 2027."
+        "note": ""
       },
       "scale": "45",
-      "calculation": ""
+      "calculation": "2027 Undergraduate Guide international IB"
     },
     {
       "id": "unsw-bpharm-hons-alevel",
@@ -7900,10 +7902,10 @@
         "source_type": "official_course",
         "verified_date": "2026-09-25",
         "status": "confirmed_2027",
-        "note": "2026 published entry score; UNSW states entry requirements remain unchanged for the 2027 PharmD name change."
+        "note": ""
       },
       "scale": "UNSW A-level aggregate",
-      "calculation": ""
+      "calculation": "2027 PharmD 명칭 변경에도 입학기준은 동일하다는 UNSW 안내 기준"
     },
     {
       "id": "unsw-bpharm-hons-ossd",
@@ -9928,36 +9930,42 @@
         "note": ""
       },
       "pte_overall": {
-        "value": null,
+        "value": 65,
         "academic_year": 2027,
         "source_year": null,
-        "source_id": "canberra",
-        "source_url": "https://www.canberra.edu.au/about-uc/faculties/health/study/pharmacy",
-        "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
+        "source_id": "canberra-english-current",
+        "source_url": "https://www.canberra.edu.au/future-students/entry-requirements-options/core-admission-requirements/english-language-requirements",
+        "source_type": "official_admissions",
+        "verified_date": "2026-09-25",
+        "status": "latest_published",
         "note": ""
       },
       "pte_each": {
         "value": null,
         "academic_year": 2027,
         "source_year": null,
-        "source_id": "canberra",
-        "source_url": "https://www.canberra.edu.au/about-uc/faculties/health/study/pharmacy",
-        "source_type": "official_course",
-        "verified_date": "2026-09-24",
+        "source_id": "canberra-english-current",
+        "source_url": "https://www.canberra.edu.au/future-students/entry-requirements-options/core-admission-requirements/english-language-requirements",
+        "source_type": "official_admissions",
+        "verified_date": "2026-09-25",
         "status": "pending_2027",
-        "note": ""
+        "note": "공식 equivalency는 R59 / L58 / S76 / W69로 영역별 최소점수가 동일하지 않아 단일 수치 필드에는 저장하지 않습니다."
       },
       "toefl": {
-        "value": null,
+        "value": {
+          "overall": 94,
+          "R": 25,
+          "L": 25,
+          "S": 23,
+          "W": 27
+        },
         "academic_year": 2027,
         "source_year": null,
-        "source_id": "canberra",
-        "source_url": "https://www.canberra.edu.au/about-uc/faculties/health/study/pharmacy",
-        "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
+        "source_id": "canberra-english-current",
+        "source_url": "https://www.canberra.edu.au/future-students/entry-requirements-options/core-admission-requirements/english-language-requirements",
+        "source_type": "official_admissions",
+        "verified_date": "2026-09-25",
+        "status": "latest_published",
         "note": ""
       }
     },
@@ -17550,6 +17558,38 @@
       "url": "https://utas.up.education/applying/entry-requirements/",
       "source_year": null,
       "source_type": "official_pathway",
+      "verified_date": "2026-09-25"
+    },
+    {
+      "id": "canberra-course-guide-2027",
+      "title": "University of Canberra · 2027 Domestic Course Guide",
+      "url": "https://www.canberra.edu.au/campaign/uc-course-guide.pdf",
+      "source_year": 2027,
+      "source_type": "official_guide",
+      "verified_date": "2026-09-25"
+    },
+    {
+      "id": "canberra-intl-equiv",
+      "title": "University of Canberra · International qualification equivalencies",
+      "url": "https://www.canberra.edu.au/future-students/entry-requirements-options/academic-entry-requirements/international-qualifications",
+      "source_year": null,
+      "source_type": "official_admissions",
+      "verified_date": "2026-09-25"
+    },
+    {
+      "id": "canberra-english-current",
+      "title": "University of Canberra · Current English language requirements",
+      "url": "https://www.canberra.edu.au/future-students/entry-requirements-options/core-admission-requirements/english-language-requirements",
+      "source_year": null,
+      "source_type": "official_admissions",
+      "verified_date": "2026-09-25"
+    },
+    {
+      "id": "unsw-2027-guide",
+      "title": "UNSW · 2027 Undergraduate Student Guide · international ATAR/IB table",
+      "url": "https://www.unsw.edu.au/content/dam/pdfs/future-students/2027-DOM-UG-Guide.pdf",
+      "source_year": 2027,
+      "source_type": "official_guide",
       "verified_date": "2026-09-25"
     }
   ],
