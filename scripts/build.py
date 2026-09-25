@@ -289,7 +289,11 @@ def housingcards(hh):
     return '<div class="route-cards">'+out+'</div>'
 def structure(pid):
     p=P[pid];r=one('professional_registration',pid)
-    return facts([('총 학업기간',fv(p['duration_label'])),('학사학위 취득',fv(p['bachelor_award_year'],lambda f:str(f['value'])+'년차' if f['value'] else '확인 중')),('4년 후 졸업 가능',fv(p['four_year_exit'])),('4년 후 학위',fv(p['exit_degree'])),('최종 학위',fv(p['final_degree'])),('학위 안 실무훈련',fv(r['supervised_practice_in_degree'])),('Intern Training 포함',fv(r['itp_in_degree'])),('졸업 후 인턴십',fv(r['post_graduation_internship']))])
+    rows=[('총 학업기간',fv(p['duration_label']))]
+    if p['duration_years']['value']==5:
+        rows.extend([('학사학위 취득',fv(p['bachelor_award_year'],lambda f:str(f['value'])+'년차' if f['value'] else '확인 중')),('4년 후 학사 Exit',fv(p['four_year_exit'])),('4년 후 학위',fv(p['exit_degree']))])
+    rows.extend([('최종 학위',fv(p['final_degree'])),('학위 안 실무훈련',fv(r['supervised_practice_in_degree'])),('Intern Training 포함',fv(r['itp_in_degree'])),('졸업 후 인턴십',fv(r['post_graduation_internship']))])
+    return facts(rows)
 def costcalculator():return '''<div class="cost-calculator"><h3>1년 예산 가늠하기</h3><p class="small">금액은 직접 조정할 수 있습니다. 숙소·생활비 기본값은 비교용 가정이며 공식 견적이나 현재 평균이 아닙니다.</p><form id="cost-form"><div class="cost-grid"><label>연간 학비 (AUD)<input name="tuition" type="number" min="0" max="200000" value="60000" step="100"></label><label>숙소 주당 (AUD)<input name="rent" type="number" min="0" max="3000" value="350"></label><label>계약 주 수<input name="weeks" type="number" min="1" max="52" value="52"></label><label>기타 생활비 주당 (AUD)<input name="living" type="number" min="0" max="3000" value="250"></label><label>적용할 장학률 (%)<input name="discount" type="number" min="0" max="100" value="0"></label><label>계산용 환율 (KRW / AUD)<input name="fx" type="number" min="1" max="10000" value="1000"></label></div><button class="btn" type="submit" style="margin-top:20px">가정한 예산 계산</button></form><div class="cost-output" aria-live="polite" id="cost-output"><span>위 가정으로 계산한 1년 예산</span><strong>A$91,200</strong><p>약 9,120만 원 · 환율 A$1 = 1,000원 가정<br>학비 A$60,000 + 숙소 A$18,200 + 기타 생활비 A$13,000</p></div><p class="small muted" style="margin-top:14px">공식 총학비가 아닙니다. 장학률 기본값은 0%이며 실제 오퍼에 장학이 명시된 경우 조정하세요. 항공·비자·OSHC·교재·보증금·실습 이동비는 별도입니다. 생활비는 52주 기준, 숙소는 입력한 계약 주 수 기준입니다.</p></div>'''
 
 for u in D['universities']:
