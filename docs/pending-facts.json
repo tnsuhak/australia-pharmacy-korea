@@ -1131,45 +1131,6 @@
     "note": ""
   },
   {
-    "entity_id": "unicentre-korea",
-    "field_path": ".entry_routes[16].english",
-    "value": null,
-    "academic_year": 2027,
-    "source_year": 2027,
-    "source_id": "griffith-korea",
-    "source_url": "https://credit-precedent.sds.na.ce.griffith.edu.au/credit_detail.php?pk1=107341",
-    "source_type": "official_articulation",
-    "verified_date": "2026-09-24",
-    "status": "pending_2027",
-    "note": ""
-  },
-  {
-    "entity_id": "unicentre-korea",
-    "field_path": ".entry_routes[16].qualification",
-    "value": null,
-    "academic_year": 2027,
-    "source_year": 2027,
-    "source_id": "griffith-korea",
-    "source_url": "https://credit-precedent.sds.na.ce.griffith.edu.au/credit_detail.php?pk1=107341",
-    "source_type": "official_articulation",
-    "verified_date": "2026-09-24",
-    "status": "pending_2027",
-    "note": ""
-  },
-  {
-    "entity_id": "unicentre-korea",
-    "field_path": ".entry_routes[16].intake_months",
-    "value": null,
-    "academic_year": 2027,
-    "source_year": 2027,
-    "source_id": "griffith-korea",
-    "source_url": "https://credit-precedent.sds.na.ce.griffith.edu.au/credit_detail.php?pk1=107341",
-    "source_type": "official_articulation",
-    "verified_date": "2026-09-24",
-    "status": "pending_2027",
-    "note": ""
-  },
-  {
     "entity_id": "griffith-college",
     "field_path": ".entry_routes[17].qualification",
     "value": "College 일반 학력표: 한국 고교 4개 학업과목 평균 Rank 6, 또는 고교 졸업 + CSAT 280 / 상위 3개 stanine 6, 또는 검정고시 평균 80",
