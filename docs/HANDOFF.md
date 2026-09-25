@@ -19,86 +19,120 @@
 - 입학경로 30개
 - 장학 레코드 17개
 - 숙소 레코드 23개
-- 대학 상세페이지 중심 구조: `/universities/`
+- 대학 상세페이지 중심: `/universities/`
 - 주요 허브: `/admission-pathways/`, `/direct-entry/`, `/foundation/`, `/diploma/`, `/graduate-entry/`, `/tuition-scholarships/`, `/after-graduation/`, `/pharmacist-registration/`
 
-UWA는 16번째 비교 대학으로 포함돼 있으며, 학교졸업자용 4년 Bachelor of Human Sciences (Pharmaceutical Health) + Doctor of Pharmacy 구조와 대졸자용 별도 Doctor of Pharmacy를 구분한다.
+UWA는 비교 대학에 포함하며, 고교 졸업자용 4년 Bachelor of Human Sciences (Pharmaceutical Health) + Doctor of Pharmacy 구조와 대졸자용 Doctor of Pharmacy를 구분한다.
 
-## 데이터 원칙
+## 데이터 상태
 
-현재 fact 상태 집계:
-- 2027 확인: 387
-- 최신 공개 기준: 394
-- 2027 확인 중: 458
-- 공식자료 충돌: 2
+- 2027 확인: 401
+- 최신 공개 기준: 408
+- 2027 확인 중: 430
+- source_conflict fact: 4
+- active conflict record: 2
 
-`docs/pending-facts.json`은 현재 `data/catalog.json`에서 다시 생성한 스냅샷이다. 미확정값을 2027 확정값으로 보이지 않게 유지한다.
+`docs/pending-facts.json`은 현재 `data/catalog.json`에서 다시 생성한 스냅샷이다. 미확정값을 자동 합격/충족으로 판정하지 않는다.
 
 ## 2026-09-25 핵심 검증·수정
 
-- Newcastle 2027 Pharmacy 학비를 **A$51,665**로 수정. A$49,205는 2026 금액.
-- Newcastle 영어는 2027 Degree Guide의 IELTS 6.5/각 6.5와 현재 과정 페이지 English proficiency section의 7.0/각 7.0이 충돌하므로 자동 충족 판정에서 제외.
-- Newcastle 2027 International Excellence Scholarship 20%는 Bachelor of Pharmacy (Honours) 제외과정으로 표시.
-- Newcastle CIE Foundation을 구체화:
-  - Pharmacy 진급 전체 평균 65%+
-  - Academic English A&B 평균 75%+
-  - Foundation 입학 IELTS 5.5 / 각 5.0
-  - 한국 학생은 고2 수료(pass grades)부터 Foundation 입학 가능
-  - Pharmacy는 본과 mid-year intake가 없어 2월 Foundation 시작 기준
-  - 2027 Foundation Studies 학비 A$31,400
-- Curtin 본과 공식 course URL이 기존 `BH-PHARM`에서 새 `BH-PHARMA` 페이지로 변경된 것을 확인하고 source registry와 fact provenance를 교체했습니다. 새 공식 페이지 기준으로 3년 9개월, 최소 ATAR/Selection Rank 80, Chemistry + Mathematics Applications, IELTS 7.0/각 7.0을 반영했습니다. 현재 페이지는 국제학생 2027 Direct 시작월과 학비를 표시하지 않아 해당 두 항목은 pending으로 유지합니다.
-- Curtin College Pharmacy Diploma를 최신 공식 페이지 기준으로 정리:
-  - Diploma 완료 후 175 credits 인정
-  - Stage 2 CWA 70%
-  - PHAR1002 Pharmacy Practice 1을 12월 추가 이수 후 약대 2학년 진학
-  - Stage 2 Pharmacy IELTS 6.5 / 각 6.0
-  - 한국 Stage 2: 고3 Rank 6 또는 고교 졸업 + CSAT 280/600, Mathematics + Chemistry prerequisite
-  - 구 페이지 65%는 현재 메인 공식페이지가 70%를 명시하므로 active conflict에서 제거.
-- La Trobe Pharmacy 페이지의 Health Innovation Scholarship 30%를 추가. High Achiever 20–25%와 별도 레코드로 관리.
-- Monash Pharmacy Merit는 일반 P6007 전원 장학으로 과장하지 않고 Scholars Program/Doctor of Pharmacy 대상 범위를 유지.
-- UNSW는 2027 Bachelor of Pharmaceutical Medicine / Doctor of Pharmacy 명칭 변경을 반영하되, APC 최신 목록은 기존 Master 명칭을 사용하므로 인증 반영 상태를 재확인 대상으로 유지.
-- JCU 25% International Excellence는 Pharmacy가 공식 제외목록에 없음을 확인하고 scholarship-specific 공식 링크로 교체.
-- Canberra A$42,500은 2027 Guide에 실려 있어도 표 자체가 **2026 Annual Fee**이므로 2027 학비로 승격하지 않음.
-- 경쟁사 한국 경로는 공개 페이지·SEO·CTA·source registry에서 제외.
+### Newcastle
+- 2027 Pharmacy 학비 **A$51,665**. A$49,205는 2026 금액.
+- 2027 Degree Guide IELTS 6.5/각6.5 vs 현재 과정 페이지 7.0/각7.0 → `source_conflict`, 자동 판정 금지.
+- 2027 International Excellence Scholarship 20%는 Bachelor of Pharmacy (Honours) 제외.
+- CIE Foundation: 한국 고2 수료부터, IELTS 5.5/각5.0, Pharmacy 진급 전체 65%+ 및 Academic English A&B 평균 75%+, 2027 학비 A$31,400.
 
-- Monash Foundation: 현재 Monash College destination-degree live page는 새 P6007을 Foundation score 75%, English 65%, Maths 50% + Chemistry 50%로 표시합니다. 반면 2027 Pathway Programs PDF Pharmacy 표에는 legacy P6001이 남아 있어 `source_conflict`로 유지했습니다. Standard 2027 일정은 2월/8월 시작, 약 12개월로 반영했습니다.
-- La Trobe: 2027 course page의 Semester 1 · 2027년 3월 시작을 Direct route에도 동기화했습니다. 국제학생 2027 학비는 아직 확정값을 넣지 않았습니다.
+### Curtin
+- 최신 BH-PHARMA 공식 페이지 기준: 3년 9개월, ATAR/Selection Rank 80, Chemistry + Mathematics Applications, IELTS 7.0/각7.0.
+- 현재 공식 페이지가 2027 international fee/intake를 제공하지 않아 둘 다 pending.
+- Curtin College Pharmacy Diploma: 175 credits, Stage 2 CWA 70%, PHAR1002 추가 이수, Stage 2 IELTS 6.5/각6.0, 한국 Stage 2 학력조건 반영.
 
-- 2026-09-25 추가 점검: Curtin 최신 공식 Pharmacy 페이지는 fees를 “not currently available”, intake를 “No intakes available”로 표시합니다. 따라서 2027 국제학생 학비와 Direct 시작월은 계속 pending으로 유지합니다.
-- La Trobe Pharmacy 공식 페이지는 국제학생이 연중 지원 가능하다고 안내하므로 `international_recruitment=true`로 전환하되, 페이지의 2027 정보 변경 가능성 고지와 국제학생 학비 미표시를 감안해 `latest_published`로 보수적으로 처리했습니다.
-- Queensland: 2026-27 QSOL consultation은 2026-07-07 종료됐지만 새 QSOL이 아직 공개되지 않았습니다. 공개 중인 onshore list는 2025-26이며 Hospital/Retail Pharmacist는 491만 표시되므로 새 회계연도 확정 자격으로 이식하지 않습니다.
+### Griffith
+- 공개 Diploma 경로는 **Griffith College Diploma of Health Sciences**만 유지.
+- 2026/2027 Diploma → Bachelor of Pharmacy (Honours) **80CP** 인정.
+- Diploma 기간 **8개월(2 trimesters) 또는 12개월(3 trimesters)**.
+- 2027 live key dates: T1 3월 1일 / T2 6월 28일 / T3 10월 25일.
+- Pharmacy 연결 영어: IELTS 6.5/각6.0 · PTE 58/각50 · TOEFL 79/각19.
+- Pharmacy는 progression quota 대상이며 정원 초과 시 completed Diploma GPA 순 선발.
+- 2027 Diploma 정확한 학비는 검증한 공식자료에서 확인하지 못해 pending. 다른 연도 값을 2027로 승격하지 않음.
+- 경쟁사 한국 경로는 공개 페이지·source registry·SEO·CTA에서 제외.
 
-- La Trobe Bendigo 숙소: 2026 41주 표의 The Units A$240 / Villas A$250를 기본 표시에서 제거하고, 현재 공식 residence page의 live 시작가 The Units A$255/week, Villas A$270/week로 업데이트했습니다. utilities 포함이며 현재 페이지는 semester contract라고만 표시하므로 정확한 계약 주수와 2027 전용 rate card는 pending입니다.
+### La Trobe
+- 2027 course page의 Semester 1 · 2027년 3월 시작 반영.
+- 국제학생 지원 가능은 current course page 기준 반영하되 2027 국제학생 학비는 pending.
+- Health Innovation Scholarship 30%와 High Achiever 20–25%를 별도 관리.
+- Bendigo 숙소 current live 시작가: The Units A$255/week, Villas A$270/week, utilities 포함. 정확한 2027 contract 주수는 pending.
 
-## Source conflict / 적용 범위
+### Monash
+- P6007 2027 학비 A$49,740.
+- Pharmacy Merit 장학은 일반 P6007 전원 장학으로 표시하지 않고 공식 대상 범위를 유지.
+- Foundation live page: P6007 progression 75%, English 65%, Maths 50% + Chemistry 50%.
+- 2027 Pathway Programs PDF에는 legacy P6001이 남아 있어 `source_conflict`. Standard 2027 Foundation은 2월/8월 시작, 약 12개월.
+
+### RMIT
+- 2027 BPharm(Hons) 학비 **A$49,920**, Semester 1 수업 시작 2027년 3월 1일.
+- Pharmacy 영어: IELTS 7.0/각6.5 · PTE 65/각58 · TOEFL 94(R19/L20/S20/W24).
+- 한국 학력 Direct 기준과 Chemistry + Mathematics prerequisite를 route에 동기화.
+- RMIT Foundation Studies 2027: **A$34,250**, 1년, 2월/7월 시작, IELTS 5.5/각5.0, Year 11 동등 학력 + 평균 50%/pass average + 만 16세.
+- 2027 BH102 apply page에서 Associate Degree in Applied Science packaged pathway 확인. 총 5년(Associate 2년 + Pharmacy 3년); exact credit/진입학년은 별도 확인.
+
+### Sydney
+- 현재 Pharmacy Course Resolutions 기준 1~4학년 192cp 완료 시 **Bachelor of Pharmacy (Honours)** 수여 가능.
+- 따라서 `bachelor_award_year=4`, `four_year_exit=true`, `exit_degree=Bachelor of Pharmacy (Honours)`로 확정.
+- 5학년 48cp는 Master of Pharmacy Practice.
+- 남은 확인: 2027 Mathematics prerequisite 적용 및 USFP 수학 progression.
+
+### UQ 신설 PharmD
+- 2027 Bachelor of Pharmaceutics and Therapeutic Science / Doctor of Pharmacy 국제학생 모집 확인.
+- 5년, 2월 22일 / 7월 26일 시작, 2027 학비 A$60,952.
+- IELTS 6.5/각6.0 · PTE 64/각60 · TOEFL 87.
+- 2학년부터 700시간+ supervised clinical placement, 4~5학년 compulsory intern training 설계.
+- **모집은 확인됐지만 APC accreditation 및 Pharmacy Board approval은 아직 미획득**. route availability=true와 accreditation pending을 분리.
+- 새 과정의 CSAT/IB/SAT 등 qualification-specific 점수와 학사 중간 Exit 여부는 pending.
+
+### UNSW / JCU / Canberra
+- UNSW 2027 과정명 Doctor of Pharmacy 변경을 반영하되 APC 최신 목록은 기존 Master 명칭이므로 새 명칭의 regulator 반영 상태 재확인.
+- JCU 25% International Excellence는 Pharmacy가 공식 제외목록에 없음을 확인.
+- Canberra A$42,500은 2027 Guide 안의 표라도 **2026 Annual Fee**이므로 2027 학비로 승격하지 않음.
+
+## Active source conflict
 
 | 항목 | 상태 | 처리 |
 |---|---|---|
-| Newcastle 영어 | source conflict | 6.5/각6.5 vs 7.0/각7.0. 자동 충족 판정 금지, 지원 전 Admissions 서면 확인 |
-| Monash Foundation | source conflict | live destination page=P6007 75%/English 65%/Maths·Chemistry 50%, 2027 PDF=legacy P6001. 자동 확정 판정 금지 |
-| RMIT 영어 | 적용 범위 pending | Pharmacy 전용 국제학생 적용 확인 전 자동 통과 금지 |
-| UQ 신설 PharmD | 승인 pending | APC/Pharmacy Board 승인 완료 전 기존 BPharm 인증을 자동 승계하지 않음 |
+| Newcastle 영어 | source conflict | 2027 공식자료 6.5/각6.5 vs 7.0/각7.0. 자동 충족 판정 금지 |
+| Monash Foundation | source conflict | live P6007 75%/English65%/Maths·Chem50% vs 2027 PDF legacy P6001. 자동 확정 판정 금지 |
 
-## 현재 2027 학비 상태 요약
+RMIT 영어는 더 이상 conflict/pending 항목이 아니다. 현재 공식 Pharmacy-specific English requirement를 반영했다.
+
+## 2027 학비 상태
 
 2027 confirmed: UTas, UQ BPharm, QUT, RMIT, Newcastle, Monash, Sydney, UQ 신설 PharmD.
 
-최신 공개값이지만 2027로 확정하지 않는 항목: JCU(2026), Canberra(2026), UniSQ(2026), UNSW(2026), UWA(2026). Adelaide는 현재 공개값의 연도 적용 범위를 더 확인한다. Curtin·Griffith·La Trobe는 2027 국제학생 Pharmacy 학비를 계속 확인한다.
+최신 공개값이지만 2027 확정으로 승격하지 않는 대표 항목: JCU(2026), Canberra(2026), UniSQ(2026), UNSW(2026), UWA(2026). Adelaide는 current page 금액의 연도 적용 범위를 계속 구분한다. Curtin·Griffith·La Trobe는 2027 국제학생 Pharmacy 본과 학비를 계속 확인한다.
+
+## 졸업 후 / nomination
+
+- NSW: current Skills List에서 Pharmacists(ANZSCO unit group 2515) 190·Regional 491 포함.
+- Tasmania: 2026-27 program active, Hospital/Industrial/Retail Pharmacist Health/Allied Health 목록 포함.
+- ACT: current occupation list에 Hospital/Industrial/Retail Pharmacist 포함, 2026-27 allocation은 별도 확인.
+- Queensland: 2026-27 QSOL consultation은 2026-07-07 종료됐지만 새 QSOL 미공개. 2025-26 약사 491 표시를 2026-27 자격으로 자동 이식하지 않음.
+- WA·SA·Victoria: 새 회계연도 공고가 확인되기 전 과거 조건을 현재 확정조건으로 표시하지 않음.
 
 ## QA / 배포 원칙
 
-- GitHub Preview QA와 Netlify Deploy Preview를 매 변경 후 확인한다.
-- Preview가 성공하더라도 Production 완료로 보고하지 않는다.
-- 사용자 화면 확인 및 최종 승인 후에만 main merge → Production 1회 배포.
-- Production 후 commit / Netlify production deploy / 실제 운영 URL 반영을 모두 확인한다.
-- 새 디자인·문구·데이터 수정은 같은 PR #1에 계속 누적한다.
+- 변경마다 GitHub Preview QA와 Netlify Deploy Preview를 확인한다.
+- Preview 성공을 Production 완료로 표현하지 않는다.
+- 사용자 최종 승인 전 main merge 금지.
+- Production 반영 후에는 commit → Netlify production deploy → 실제 운영 URL을 모두 확인한다.
+- 디자인/문구/데이터 수정은 같은 PR #1에 누적한다.
 
 ## 다음 우선순위
 
-1. 최신 HEAD의 GitHub Preview QA + Netlify Deploy Preview 성공 재확인.
-2. Curtin·Griffith·La Trobe의 2027 국제학생 Pharmacy 학비 공식값 확인. Curtin은 새 course page가 현재 fee를 ‘not available’로 표시하므로 추정값을 넣지 않는다.
-3. Monash Foundation P6007 2027 progression 범위 확정.
-4. 대학별 2027 캠퍼스·기숙사/숙소 실비 자료 보강.
-5. 2026-27 주정부 nomination 자료의 현재 공개상태 점검.
-6. 모바일/데스크톱 Preview에서 실제 브라우저 시각 QA 후 사용자 확인.
-7. 사용자 승인 뒤에만 Production.
+1. 최신 HEAD의 GitHub Preview QA + Netlify Deploy Preview 재검증.
+2. Griffith·Curtin·La Trobe의 2027 국제학생 본과 학비 공식값이 새로 공개됐는지 계속 확인.
+3. Monash Foundation P6007 vs 2027 PDF conflict 해소 여부 모니터링.
+4. RMIT Associate packaged pathway exact credit/진입학년 및 Foundation stream 세부 선수과목 보강.
+5. UQ 신설 PharmD APC/Pharmacy Board 승인 상태 확인.
+6. 대학별 2027 숙소 실비와 남은 qualification 환산값 보강.
+7. 모바일/데스크톱 Preview 실제 시각 QA 후 사용자 확인.
+8. 사용자 승인 뒤에만 Production.
