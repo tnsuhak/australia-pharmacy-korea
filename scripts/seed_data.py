@@ -422,7 +422,7 @@ row(english,'griffith')['ielts_overall']=fact(7,'griffith-2026',note='2026 Pharm
 source('griffith-college-entry','Griffith College · 국제학생 입학조건','https://www.griffithcollege.edu.au/international-students/entry-requirements/',None,'official_pathway')
 gc=next(r for r in routes if r['id']=='griffith-college')
 gc['english']=fact('Pharmacy 연결 Diploma: IELTS 6.5 / 각 6.0 · PTE 58 / 각 50 · TOEFL 79 / 각 19','griffith-college-entry',note='일반 Diploma 영어 5.5를 약대 연결 경로에 적용하지 않습니다. Pharmacy 연결 전용 영어기준입니다.')
-gc['qualification']=fact('College 일반 학력표: 한국 고교 4개 학업과목 평균 Rank 6, 또는 고교 졸업 + CSAT 280 / 상위 3개 stanine 6, 또는 검정고시 평균 80','griffith-college-entry',status='pending_2027',note='College 입학용 참고표. Pharmacy 연결 과정의 학력 예외·2027 적용 검증 전이며 Griffith 본과 Direct 점수가 아닙니다.')
+gc['qualification']=fact('한국 Diploma 입학: 고3 졸업 + 4개 학업과목 평균 Rank 6, 또는 고교 졸업 + CSAT 280 / 상위 3개 stanine 6, 또는 검정고시 평균 80','griffith-college-entry',note='현재 Griffith College 국제학생 country entry table의 Diploma 기준입니다. Griffith University Pharmacy 본과 Direct 점수가 아닙니다.')
 # Link Direct route summaries to their own program rather than duplicate unknowns.
 for route_record in routes:
  if route_record['type']=='direct':
