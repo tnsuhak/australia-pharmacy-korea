@@ -61,12 +61,15 @@ UWA는 16번째 비교 대학으로 포함돼 있으며, 학교졸업자용 4년
 - Canberra A$42,500은 2027 Guide에 실려 있어도 표 자체가 **2026 Annual Fee**이므로 2027 학비로 승격하지 않음.
 - 경쟁사 한국 경로는 공개 페이지·SEO·CTA·source registry에서 제외.
 
+- Monash Foundation: 현재 Monash College destination-degree live page는 새 P6007을 Foundation score 75%, English 65%, Maths 50% + Chemistry 50%로 표시합니다. 반면 2027 Pathway Programs PDF Pharmacy 표에는 legacy P6001이 남아 있어 `source_conflict`로 유지했습니다. Standard 2027 일정은 2월/8월 시작, 약 12개월로 반영했습니다.
+- La Trobe: 2027 course page의 Semester 1 · 2027년 3월 시작을 Direct route에도 동기화했습니다. 국제학생 2027 학비는 아직 확정값을 넣지 않았습니다.
+
 ## Source conflict / 적용 범위
 
 | 항목 | 상태 | 처리 |
 |---|---|---|
 | Newcastle 영어 | source conflict | 6.5/각6.5 vs 7.0/각7.0. 자동 충족 판정 금지, 지원 전 Admissions 서면 확인 |
-| Monash Foundation | 적용 범위 pending | 구 P6001 progression을 새 P6007에 자동 이식하지 않음 |
+| Monash Foundation | source conflict | live destination page=P6007 75%/English 65%/Maths·Chemistry 50%, 2027 PDF=legacy P6001. 자동 확정 판정 금지 |
 | RMIT 영어 | 적용 범위 pending | Pharmacy 전용 국제학생 적용 확인 전 자동 통과 금지 |
 | UQ 신설 PharmD | 승인 pending | APC/Pharmacy Board 승인 완료 전 기존 BPharm 인증을 자동 승계하지 않음 |
 
