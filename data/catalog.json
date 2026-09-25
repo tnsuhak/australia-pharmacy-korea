@@ -1640,7 +1640,6 @@
       "editorial": "2027은 Trimester 1 입학입니다. 3년 가속과정은 2028부터 시작합니다.",
       "review_items": [
         "2027 학비",
-        "T1 최종 개설 일정",
         "2027 장학금 적용"
       ]
     },
@@ -8400,58 +8399,58 @@
     {
       "program_id": "unisq-bpharm-hons",
       "chemistry": {
-        "value": "assumed",
+        "value": "accepted",
         "academic_year": 2027,
-        "source_year": null,
-        "source_id": "unisq-course",
+        "source_year": 2027,
+        "source_id": "unisq-pharmacy-current",
         "source_url": "https://www.unisq.edu.au/study/degrees-and-courses/bachelor-of-pharmacy-honours?studentType=international",
         "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "latest_published",
-        "note": ""
+        "verified_date": "2026-09-25",
+        "status": "confirmed_2027",
+        "note": "Biology, Chemistry, Physics 중 1과목"
       },
       "mathematics": {
         "value": "assumed",
         "academic_year": 2027,
-        "source_year": null,
-        "source_id": "unisq-course",
+        "source_year": 2027,
+        "source_id": "unisq-pharmacy-current",
         "source_url": "https://www.unisq.edu.au/study/degrees-and-courses/bachelor-of-pharmacy-honours?studentType=international",
         "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "latest_published",
-        "note": ""
+        "verified_date": "2026-09-25",
+        "status": "confirmed_2027",
+        "note": "Mathematical Methods 또는 Specialist Mathematics"
       },
       "biology": {
-        "value": "assumed",
+        "value": "accepted",
         "academic_year": 2027,
-        "source_year": null,
-        "source_id": "unisq-course",
+        "source_year": 2027,
+        "source_id": "unisq-pharmacy-current",
         "source_url": "https://www.unisq.edu.au/study/degrees-and-courses/bachelor-of-pharmacy-honours?studentType=international",
         "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "latest_published",
-        "note": ""
+        "verified_date": "2026-09-25",
+        "status": "confirmed_2027",
+        "note": "Biology, Chemistry, Physics 중 1과목"
       },
       "physics": {
-        "value": "assumed",
+        "value": "accepted",
         "academic_year": 2027,
-        "source_year": null,
-        "source_id": "unisq-course",
+        "source_year": 2027,
+        "source_id": "unisq-pharmacy-current",
         "source_url": "https://www.unisq.edu.au/study/degrees-and-courses/bachelor-of-pharmacy-honours?studentType=international",
         "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "latest_published",
-        "note": ""
+        "verified_date": "2026-09-25",
+        "status": "confirmed_2027",
+        "note": "Biology, Chemistry, Physics 중 1과목"
       },
       "minimum_grade": {
-        "value": "English C, Mathematical Methods/Specialist C, Biology/Chemistry/Physics 중 하나 C는 assumed knowledge.",
+        "value": "수학 + Biology/Chemistry/Physics 중 1과목에서 Year 12 C 수준 assumed knowledge",
         "academic_year": 2027,
-        "source_year": null,
-        "source_id": "unisq-course",
+        "source_year": 2027,
+        "source_id": "unisq-pharmacy-current",
         "source_url": "https://www.unisq.edu.au/study/degrees-and-courses/bachelor-of-pharmacy-honours?studentType=international",
         "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "latest_published",
+        "verified_date": "2026-09-25",
+        "status": "confirmed_2027",
         "note": ""
       }
     },
@@ -9458,12 +9457,12 @@
       "ielts_overall": {
         "value": 7,
         "academic_year": 2027,
-        "source_year": null,
-        "source_id": "unisq-course",
+        "source_year": 2027,
+        "source_id": "unisq-pharmacy-current",
         "source_url": "https://www.unisq.edu.au/study/degrees-and-courses/bachelor-of-pharmacy-honours?studentType=international",
         "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "latest_published",
+        "verified_date": "2026-09-25",
+        "status": "confirmed_2027",
         "note": ""
       },
       "ielts_bands": {
@@ -9474,12 +9473,12 @@
           "S": 7
         },
         "academic_year": 2027,
-        "source_year": null,
-        "source_id": "unisq-course",
+        "source_year": 2027,
+        "source_id": "unisq-pharmacy-current",
         "source_url": "https://www.unisq.edu.au/study/degrees-and-courses/bachelor-of-pharmacy-honours?studentType=international",
         "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "latest_published",
+        "verified_date": "2026-09-25",
+        "status": "confirmed_2027",
         "note": ""
       },
       "pte_overall": {
@@ -10152,24 +10151,26 @@
       "program_id": "unisq-bpharm-hons",
       "route_id": "unisq-bpharm-hons-direct",
       "months": {
-        "value": null,
+        "value": [
+          2
+        ],
         "academic_year": 2027,
         "source_year": 2027,
-        "source_id": "unisq",
-        "source_url": "https://course-offer-guide.unisq.edu.au/2027/BPHH.html",
+        "source_id": "unisq-pharmacy-current",
+        "source_url": "https://www.unisq.edu.au/study/degrees-and-courses/bachelor-of-pharmacy-honours?studentType=international",
         "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
-        "note": "T1 시작월을 달력과 대조 후 확정"
+        "verified_date": "2026-09-25",
+        "status": "confirmed_2027",
+        "note": ""
       },
       "label": {
-        "value": "2027 국제학생 Trimester 1 only · 최종 개설 확정 대기",
+        "value": "Trimester 1 · 2027년 2월 15일",
         "academic_year": 2027,
         "source_year": 2027,
-        "source_id": "unisq",
-        "source_url": "https://course-offer-guide.unisq.edu.au/2027/BPHH.html",
+        "source_id": "unisq-pharmacy-current",
+        "source_url": "https://www.unisq.edu.au/study/degrees-and-courses/bachelor-of-pharmacy-honours?studentType=international",
         "source_type": "official_course",
-        "verified_date": "2026-09-24",
+        "verified_date": "2026-09-25",
         "status": "confirmed_2027",
         "note": ""
       }
@@ -16670,6 +16671,14 @@
       "title": "Adelaide University · Bachelor of Pharmacy (Honours) international entry requirements",
       "url": "https://adelaide.edu.au/study/degrees/bachelor-of-pharmacy-honours/",
       "source_year": null,
+      "source_type": "official_course",
+      "verified_date": "2026-09-25"
+    },
+    {
+      "id": "unisq-pharmacy-current",
+      "title": "UniSQ · Bachelor of Pharmacy (Honours) current international entry requirements",
+      "url": "https://www.unisq.edu.au/study/degrees-and-courses/bachelor-of-pharmacy-honours?studentType=international",
+      "source_year": 2027,
       "source_type": "official_course",
       "verified_date": "2026-09-25"
     }
