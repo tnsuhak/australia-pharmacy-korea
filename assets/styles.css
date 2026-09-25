@@ -26,3 +26,14 @@
 /* Simplified IA · 2026-09-25 */
 .hero-scope-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.hero-scope-grid>div{border:1px solid var(--line);border-radius:13px;background:#f8faf7;padding:18px;min-height:105px;display:flex;flex-direction:column;justify-content:center}.hero-scope-grid strong{font-size:31px;line-height:1;font-weight:800;letter-spacing:-.05em;color:var(--teal)}.hero-scope-grid span{font-size:11px;color:var(--muted);margin-top:9px}.scope-note{font-size:11px;line-height:1.7;color:var(--muted);margin:18px 0 0}.article-section>h3{font-size:17px;margin:30px 0 12px}.article-section>h3:first-child{margin-top:0}.compact-callout{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:12px 18px}.compact-callout p{margin:0}.compact-callout a{font-size:12px;font-weight:750;color:var(--teal);white-space:nowrap}.profile-chips{margin-top:16px}
 @media(max-width:780px){.hero-scope-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.hero-scope-grid>div{padding:15px;min-height:88px}.hero-scope-grid strong{font-size:26px}.compact-callout{display:block}.compact-callout p{margin:6px 0 10px}.profile-chips>span{width:100%}}
+
+
+/* Plain-language cards · 2026-09-25 */
+.route-exception{margin:12px 0 0;padding-top:10px;border-top:1px solid var(--line);font-size:11px;font-weight:650;color:var(--muted);line-height:1.55}
+.diploma-summary{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:0 0 18px}
+.diploma-summary>div{border:1px solid var(--line);border-radius:12px;padding:18px;background:#fff}
+.diploma-summary strong{display:block;color:var(--teal);font-size:13px;margin-bottom:7px}
+.diploma-summary span{display:block;font-size:14px;font-weight:750;line-height:1.45}
+.process-grid.four{grid-template-columns:repeat(4,minmax(0,1fr))}
+@media(max-width:1050px){.process-grid.four{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:780px){.diploma-summary{grid-template-columns:1fr}.process-grid.four{grid-template-columns:1fr}}
