@@ -137,11 +137,15 @@
 | newcastle-foundation-fee-2027 | [Newcastle CIE · 2027 Foundation Studies fees](https://internationalcollege.newcastle.edu.au/fees) | 2027 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
 | monash-foundation-p6007-current | [Monash College · Foundation Year destination degree · Pharmacy P6007](https://www.monashcollege.edu.au/study/courses/foundation-year/fy-data/destination-degrees-2026-single-degrees/pharmacy-and-pharmaceutical-science) | 페이지별 확인 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
 | monash-foundation-dates-2027 | [Monash College · Foundation Year 2027 dates](https://www.monashcollege.edu.au/study/courses/foundation-year/dates-and-fees) | 2027 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
+| migration-qld-2026-consultation | [Migration Queensland · 2026-27 QSOL consultation status](https://migration.qld.gov.au/dama-consultation) | 2026 | 출처 확인 · 필드별 적용 상태는 catalog 참조 |
 
 ## 운영 메모
 
 - `data/catalog.json`의 각 fact가 실제 적용 상태(`confirmed_2027`, `latest_published`, `pending_2027`, `source_conflict`)와 출처를 보유합니다.
 - 2027 값이 확인되지 않은 경우 최신 공개연도를 2027 확정값으로 바꾸지 않습니다.
+- Curtin Pharmacy 최신 BH-PHARMA 페이지는 현재 fee가 unavailable, intake는 no intakes available로 표시하므로 2027 국제학생 학비·시작월을 추정하지 않습니다.
+- La Trobe Pharmacy 페이지는 2027년 3월 시작과 국제학생 연중 지원 가능을 안내하지만, 국제학생 2027 학비는 확정값을 넣지 않습니다.
 - Monash Foundation은 live destination-degree 페이지의 P6007 값과 2027 Pathway Programs PDF의 legacy P6001이 충돌하므로 source_conflict로 유지합니다.
+- Queensland 2026-27 QSOL은 consultation이 종료됐지만 새 목록이 아직 공개되지 않아 2025-26 약사 491 범위를 새 회계연도 자격으로 이식하지 않습니다.
 - 경쟁사 한국 경로는 source registry와 공개 페이지에서 제외합니다.
 - Apply / How to apply / Application Portal은 공개 상담 퍼널의 기본 외부 링크로 사용하지 않습니다.
