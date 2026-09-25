@@ -1,0 +1,20 @@
+# Draft only. Append under sites after repository/deployment identity is confirmed.
+# Do not register a guessed live URL or enable monitoring before launch.
+id: australia-pharmacy-korea
+name: Australia Pharmacy Korea 2027
+language: ko
+market: South Korea
+github_repo: tnsuhak/australia-pharmacy-korea
+production_url: null
+netlify_site_name: null
+enabled: false
+tier: A
+lifecycle: maintenance
+config: sites/australia-pharmacy-korea.yaml
+checks:
+  health: false
+  seo: false
+  broken_links: false
+  assets: false
+  sitemap: false
+  robots: false

@@ -1,0 +1,12 @@
+{
+  "name": "tns-australia-pharmacy-korea",
+  "version": "0.1.0",
+  "private": true,
+  "description": "2027 Korean Australian pharmacy pathway portal",
+  "scripts": {
+    "build": "python3 scripts/build.py",
+    "test": "node --test tests/matcher.test.cjs && python3 scripts/validate.py",
+    "preview": "python3 -m http.server 8080 --directory dist"
+  },
+  "engines": {"node": ">=20"}
+}

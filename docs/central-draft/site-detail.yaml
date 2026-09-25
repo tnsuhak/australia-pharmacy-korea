@@ -1,0 +1,27 @@
+# Draft only; not pushed to central manager.
+schema_version: 1
+site_id: australia-pharmacy-korea
+work_status: local_v1_ready_remote_repository_needed
+branch: feature/australia-pharmacy-2027-v1
+production_approved: false
+preview_url: null
+pull_request: null
+search:
+  language: ko
+  market: South Korea
+  primary_engines: [google, naver]
+  google_search_console: pending_production
+  naver_search_advisor: pending_production
+channels_config: data/site.json
+site_overrides:
+  relevant_open_chat:
+    state: pending
+    reason: Approved Australia-specific room URL not found in central or existing TNS settings; unrelated XJTLU room must not be substituted.
+    presentation: Visible noninteractive fourth card until a relevant approved URL is available.
+  participant_counts:
+    state: omitted
+    reason: No verified current count.
+news:
+  enabled: false
+youtube:
+  enabled: false

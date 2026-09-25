@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "static_pages": 29,
+  "facts": 1117,
+  "fact_statuses": {
+    "latest_published": 247,
+    "confirmed_2027": 229,
+    "pending_2027": 639,
+    "source_conflict": 2
+  },
+  "errors": [],
+  "production_gate": "blocked",
+  "browser_qa": "not_run: cloud browser rejected file URL; remote deploy preview unavailable",
+  "mobile_qa": "CSS responsive rules implemented; real viewport QA not run",
+  "desktop_qa": "static checks only; visual QA not run"
+}

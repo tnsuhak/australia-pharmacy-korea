@@ -1,0 +1,13 @@
+{
+  "repository": "tnsuhak/tns-site-manager",
+  "ref": "main",
+  "checked_date": "2026-09-24",
+  "file_shas": {
+    "OPERATING_SYSTEM.md": "19b02fd0ffadef62dc69a67289887bbd76646de1",
+    "WEBSITE_BUILD_STANDARD.md": "ba8fd4f78599be16b6d2c65824c9b9c187908289",
+    "SEARCH_DISCOVERY_SYSTEM.md": "4c6b2d5318bddf7448cec838f113f31a5c977c68",
+    "DATA_STANDARD.md": "86601b11ed906257561f9f3f4b34dec5c4ec961b",
+    "policies.yaml": "c10b186f8f903769136d1f2654ad33515323b8fe",
+    "sites.yaml": "f6313770b5b6f56dcbc617235160054faa5c5893"
+  }
+}
