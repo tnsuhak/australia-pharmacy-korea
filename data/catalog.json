@@ -2883,15 +2883,15 @@
         "note": ""
       },
       "intake": {
-        "value": "2월 · 7월은 학점 인정 시 개별 심사",
+        "value": "2월",
         "academic_year": 2027,
         "source_year": null,
-        "source_id": "adelaide",
+        "source_id": "adelaide-pharmacy-current",
         "source_url": "https://adelaide.edu.au/study/degrees/bachelor-of-pharmacy-honours/",
         "source_type": "official_course",
-        "verified_date": "2026-09-24",
+        "verified_date": "2026-09-26",
         "status": "latest_published",
-        "note": ""
+        "note": "July may be available only to international students with credit on a case-by-case basis."
       },
       "progression": {
         "value": null,
@@ -2916,13 +2916,13 @@
         "note": ""
       },
       "qualification": {
-        "value": "SACE Stage 2 Biology, Chemistry 또는 Physics 중 1과목(또는 동등 수준) + 학력별 입학점수",
+        "value": "수능 340 · IB 30 · A-Level 10 · SAT 1220 · OSSD 80% + Biology/Chemistry/Physics 중 1과목",
         "academic_year": 2027,
         "source_year": null,
-        "source_id": "adelaide",
+        "source_id": "adelaide-pharmacy-current",
         "source_url": "https://adelaide.edu.au/study/degrees/bachelor-of-pharmacy-honours/",
         "source_type": "official_course",
-        "verified_date": "2026-09-25",
+        "verified_date": "2026-09-26",
         "status": "latest_published",
         "note": ""
       },
@@ -3255,14 +3255,14 @@
         "note": ""
       },
       "qualification": {
-        "value": null,
+        "value": "고교졸업 + 영어 prerequisite · 별도 과학 선수과목 없음",
         "academic_year": 2027,
-        "source_year": null,
-        "source_id": "latrobe",
+        "source_year": 2027,
+        "source_id": "latrobe-2027-course",
         "source_url": "https://www.latrobe.edu.au/courses/bachelor-of-pharmacy-honours",
         "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
+        "verified_date": "2026-09-26",
+        "status": "confirmed_2027",
         "note": ""
       },
       "note": "",
@@ -3553,15 +3553,15 @@
         "note": ""
       },
       "qualification": {
-        "value": "Chemistry + Mathematical Methods/Specialist Mathematics는 assumed knowledge · 필수 prerequisite와 구분",
+        "value": "Selection Rank 76 · Chemistry + Mathematical Methods/Specialist Mathematics는 assumed knowledge",
         "academic_year": 2027,
-        "source_year": 2027,
-        "source_id": "qut-fee-2027",
+        "source_year": null,
+        "source_id": "qut",
         "source_url": "https://www.qut.edu.au/courses/bachelor-of-pharmacy-honours",
         "source_type": "official_course",
-        "verified_date": "2026-09-25",
-        "status": "confirmed_2027",
-        "note": ""
+        "verified_date": "2026-09-26",
+        "status": "latest_published",
+        "note": "Assumed knowledge is not a prerequisite; bridging study can be used if missing."
       },
       "note": "수학·화학은 필수가 아니라 선행지식입니다. 부족하면 bridging study로 보완합니다.",
       "intake_months": {
@@ -5303,25 +5303,25 @@
         "note": ""
       },
       "english": {
-        "value": null,
+        "value": "IELTS 5.5 · 각 5.0",
         "academic_year": 2027,
         "source_year": 2027,
         "source_id": "uq-standard-foundation-2027",
         "source_url": "https://uqcollege.uq.edu.au/study/pathways-uq/foundation-program/standard-foundation-program",
         "source_type": "official_pathway",
         "verified_date": "2026-09-26",
-        "status": "pending_2027",
+        "status": "confirmed_2027",
         "note": ""
       },
       "qualification": {
-        "value": null,
+        "value": "한국: 수능 260 · 검정고시 상위 4과목 평균 65% · 고2 상위 4과목 GPA 3(미)",
         "academic_year": 2027,
-        "source_year": 2027,
-        "source_id": "uq-standard-foundation-2027",
-        "source_url": "https://uqcollege.uq.edu.au/study/pathways-uq/foundation-program/standard-foundation-program",
+        "source_year": 2026,
+        "source_id": "uq-foundation-entry-current",
+        "source_url": "https://uqcollege.uq.edu.au/files/8781/uq-college-foundation-program-academic-requirements.pdf",
         "source_type": "official_pathway",
         "verified_date": "2026-09-26",
-        "status": "pending_2027",
+        "status": "latest_published",
         "note": ""
       },
       "note": "2026년 9월 시작 → 2027년 7월 BPharm 입학. 2027년 2월 Standard 시작은 2028년 본과로 연결됩니다.",
@@ -5433,14 +5433,14 @@
         "note": ""
       },
       "qualification": {
-        "value": null,
+        "value": "한국: 수능 270 · 검정고시 상위 4과목 평균 70% · 고3 상위 4과목 GPA 4(우)",
         "academic_year": 2027,
-        "source_year": 2027,
-        "source_id": "uq-accelerated",
-        "source_url": "https://uqcollege.uq.edu.au/study/pathways-uq/foundation-program/accelerated-foundation-program",
+        "source_year": 2026,
+        "source_id": "uq-foundation-entry-current",
+        "source_url": "https://uqcollege.uq.edu.au/files/8781/uq-college-foundation-program-academic-requirements.pdf",
         "source_type": "official_pathway",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
+        "verified_date": "2026-09-26",
+        "status": "latest_published",
         "note": ""
       },
       "note": "2027년 2월 시작 → 7월 BPharm 입학. GPA·영어·필수과목 진급기준을 충족해야 합니다.",
@@ -6125,15 +6125,15 @@
         "note": ""
       },
       "qualification": {
-        "value": null,
+        "value": "Year 11 동등학력 · 한국 학력은 La Trobe College 심사",
         "academic_year": 2027,
         "source_year": null,
         "source_id": "latrobe-foundation-current",
         "source_url": "https://www.latrobecollegeaustralia.edu.au/study-options/foundation-studies/health-life-sciences/",
         "source_type": "official_pathway",
-        "verified_date": "2026-09-25",
-        "status": "pending_2027",
-        "note": "한국 고교 11학년 등 country-specific 2027 Foundation 학력표는 별도 확인합니다."
+        "verified_date": "2026-09-26",
+        "status": "latest_published",
+        "note": ""
       },
       "note": "Foundation 수료 후 Bendigo Pharmacy 1학년으로 진학합니다. 현재 공개 학비 A$29,780은 2026 금액입니다.",
       "intake_months": {
@@ -7215,15 +7215,15 @@
       "program_id": "adelaide-bpharm-hons",
       "qualification": "csat",
       "score": {
-        "value": 345,
+        "value": 340,
         "academic_year": 2027,
         "source_year": null,
         "source_id": "adelaide-pharmacy-current",
         "source_url": "https://adelaide.edu.au/study/degrees/bachelor-of-pharmacy-honours/",
         "source_type": "official_course",
-        "verified_date": "2026-09-25",
+        "verified_date": "2026-09-26",
         "status": "latest_published",
-        "note": "Current Adelaide University international admissions table lists South Korea CSAT 345."
+        "note": "Current Adelaide University international course page South Korea CSAT requirement."
       },
       "scale": "대학 공식 CSAT 기준",
       "calculation": "College Scholastic Ability Test (CSAT)"
@@ -14086,13 +14086,13 @@
         "note": ""
       },
       "academic_threshold": {
-        "value": "IB 28 · A-level 9 · 기타 국제고교 ATAR 85 상당",
+        "value": "ATAR 75 또는 국제 동등성적",
         "academic_year": 2027,
         "source_year": null,
         "source_id": "adelaide-scholarship",
         "source_url": "https://adelaide.edu.au/study/scholarships/int/adelaide-merit-scholarship-15/",
         "source_type": "official_scholarship",
-        "verified_date": "2026-09-25",
+        "verified_date": "2026-09-26",
         "status": "latest_published",
         "note": ""
       },
@@ -14140,7 +14140,7 @@
         "status": "latest_published",
         "note": ""
       },
-      "note": "Bachelor of Pharmacy (Honours)도 대상 과정."
+      "note": "Adelaide Merit Scholarship 15%. 국제학생은 입학 지원 시 자동심사되며 Pharmacy는 현재 제외과정 목록에 포함되지 않습니다."
     },
     {
       "id": "rmit-pending",
@@ -19013,6 +19013,14 @@
       "title": "Griffith College · Foundation pathway options",
       "url": "https://www.griffithcollege.edu.au/study-options/foundation/pathway-options/",
       "source_year": 2027,
+      "source_type": "official_pathway",
+      "verified_date": "2026-09-26"
+    },
+    {
+      "id": "uq-foundation-entry-current",
+      "title": "UQ College · Foundation academic entry requirements · Korea",
+      "url": "https://uqcollege.uq.edu.au/files/8781/uq-college-foundation-program-academic-requirements.pdf",
+      "source_year": 2026,
       "source_type": "official_pathway",
       "verified_date": "2026-09-26"
     }
