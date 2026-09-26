@@ -171,6 +171,8 @@ source('griffith-college-2027-guide','Griffith College · International Quick Gu
 source('griffith-guaranteed-2027','Griffith · 2027 Guaranteed Admission Scheme · Pharmacy rank 76','https://www.griffith.edu.au/apply/guaranteed-admission-scheme',2027,'official_admissions')
 source('griffith-college-health','Griffith College · Diploma of Health Sciences','https://www.griffithcollege.edu.au/study-options/diploma/health-sciences/',None,'official_pathway')
 source('griffith-college-dates-2027','Griffith College · 2027 key dates','https://www.griffithcollege.edu.au/student-life/key-dates/',2027,'official_pathway')
+source('griffith-foundation-current','Griffith College · Foundation Program','https://www.griffithcollege.edu.au/study-options/foundation/',2027,'official_pathway',verified_date='2026-09-26')
+source('griffith-foundation-pathways','Griffith College · Foundation pathway options','https://www.griffithcollege.edu.au/study-options/foundation/pathway-options/',2027,'official_pathway',verified_date='2026-09-26')
 source('curtin-college','Curtin College · Pharmacy Diploma','https://www.curtincollege.edu.au/courses/diplomas/health-sciences/pharmacy/',None,'official_pathway')
 source('curtin-college-entry','Curtin College · International academic entry requirements · Pharmacy','https://www.curtincollege.edu.au/how-apply/international/journey/academic-entry-requirements/',None,'official_pathway')
 source('curtin-college-english','Curtin College · English requirements · Pharmacy Stage 2','https://www.curtincollege.edu.au/how-apply/international/journey/english-requirements/',None,'official_pathway')
@@ -388,6 +390,19 @@ mdr['direct_scores']={
  'sat':fact(1290,'monash-direct-2027-guide',year=2027,status='latest_published',note='1600점 만점')
 }
 mdr['note']='2027 국제학생 가이드의 Pharmacy 5-year 기준을 사용합니다. 가이드 과정명은 P6001로 남아 있어 신설 P6007의 live qualification selector와 지원 전 최종 재확인합니다.'
+
+route('griffith','griffith-foundation','foundation','Griffith College · Foundation → Health Sciences Diploma → Pharmacy','griffith-foundation-pathways',0,2,'Foundation 8개월 + 1학년 Diploma','2027년 3월 1일 · 6월 28일 · 10월 25일','Foundation → Diploma of Health Sciences → Pharmacy 2학년','Foundation에서 Pharmacy 본과 1학년으로 바로 진학하는 경로로 표시하지 않습니다. Foundation 후 Diploma of Health Sciences를 거쳐 약대 2학년으로 연결합니다.')
+routes[-1]['availability']=fact(True,'griffith-foundation-pathways',year=2027,status='confirmed_2027',note='Foundation Program can be packaged with any Diploma pathway; Pharmacy is excluded from the direct Foundation-to-Bachelor health list.')
+routes[-1]['credit']=fact(0,'griffith-foundation-pathways',year=2027,status='confirmed_2027')
+routes[-1]['entry_year']=fact(2,'griffith-college',year=2027,status='confirmed_2027',note='Foundation 후 Health Sciences Diploma를 거쳐 Pharmacy 2학년으로 연결되는 최종 목적지.')
+routes[-1]['duration']=fact('Foundation 8개월 + 1학년 Diploma','griffith-foundation-current',year=2027,status='confirmed_2027')
+routes[-1]['intake']=fact('2027년 3월 1일 · 6월 28일 · 10월 25일','griffith-college-dates-2027',year=2027,status='confirmed_2027')
+routes[-1]['intake_months']=fact([3,6,10],'griffith-college-dates-2027',year=2027,status='confirmed_2027')
+routes[-1]['progression']=fact('Foundation → Diploma of Health Sciences → Pharmacy 2학년','griffith-foundation-pathways',year=2027,status='confirmed_2027',note='현재 Foundation-to-Bachelor health pathways에서 Pharmacy는 direct 대상에서 제외되며 Foundation은 모든 Diploma pathway와 패키지 가능.')
+routes[-1]['qualification']=fact('한국 고2 4개 학업과목 평균 Rank 7 · 또는 수능 260 / 상위 3개 Stanine 7 · 또는 검정고시 평균 70','griffith-college-entry',status='latest_published')
+routes[-1]['english']=fact('IELTS 5.5 · 각 5.0','griffith-college-entry',status='latest_published')
+routes[-1]['pathway_fee']=fact(None,'griffith-foundation-current',year=2027,status='pending_2027',note='2027 국제학생 Foundation 학비는 별도 검증 전 추정하지 않음.')
+routes[-1]['destination_label']='1학년 Diploma → 약대 2학년'
 
 dr=next(x for x in routes if x['id']=='griffith-bpharm-hons-direct')
 dr['intake']=fact('3월 · 7월 (2026 국제가이드 기준)','griffith-2026-guide')
