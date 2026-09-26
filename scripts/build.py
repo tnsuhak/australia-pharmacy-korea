@@ -1071,7 +1071,7 @@ reg_items=[
  ('faq','FAQ',reg_faq),
  ('sources','출처',reg_sources)
 ]
-register('/pharmacist-registration/','호주 약사 되는 법 · 약대 3~5년 + 인턴 약 1년 + 시험 2개 | TNS','호주 약대 졸업 후 정식 약사가 되는 과정을 숫자로 설명합니다. 약대 3~5년, 인턴 1,824시간 약 1년, 필기·구술시험 2개, 정식 약사등록까지 확인하세요.',pagehero('호주 약대 졸업 후, 정식 약사까지 얼마나 걸리나요?','약대 3~5년 → 인턴 약 1년(1,824시간) → 시험 2개 → 정식 약사등록. 먼저 숫자로 전체 구조를 이해하고 아래에서 필요한 세부내용만 확인하세요.','호주 약사등록',reg_hero)+article(reg_items,'compact-detail pharmacist-registration-detail'))
+register('/pharmacist-registration/','호주 약사 되는 법 · 약대 3~5년 + 인턴 약 1년 + 시험 2개 | TNS','호주 약대 졸업 후 정식 약사가 되는 과정을 숫자로 설명합니다. 약대 3~5년, 인턴 1,824시간 약 1년, 필기·구술시험 2개, 정식 약사등록까지 확인하세요.',pagehero('호주 약사 되는 법','약대 3~5년 → 인턴 약 1년(1,824시간) → 시험 2개 → 정식 약사등록. 먼저 숫자로 전체 구조를 이해하고 아래에서 필요한 세부내용만 확인하세요.','호주 약사등록',reg_hero)+article(reg_items,'compact-detail pharmacist-registration-detail'))
 
 # Korean pharmacist licence: recognized Australian schools + current exam route.
 korea_school_rows=[]
