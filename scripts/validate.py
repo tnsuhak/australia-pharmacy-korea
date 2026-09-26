@@ -77,6 +77,17 @@ for slug,(route_count,phrases) in compact_batch.items():
  for old_heading in ['<h2>Direct 입학조건</h2>','<h2>졸업 후 485·지역</h2>','<h2>호주 약사등록</h2>','<h2>자주 묻는 질문</h2>']:
   if old_heading in txt:errors.append(f'{slug}: old duplicate section remains {old_heading}')
  if 'id="cost-form"' in txt:errors.append(f'{slug}: per-school cost calculator should not render')
+for slug in ['jcu-pharmacy','utas-pharmacy','curtin-pharmacy','griffith-pharmacy']:
+ page=R/f'dist/universities/{slug}/index.html'
+ if page.exists():
+  txt=page.read_text()
+  routes_match=re.search(r'<section class="article-section" id="routes">.*?</section>',txt,re.S)
+  if routes_match:
+   rt=routes_match.group(0)
+   if '<p class="monash-route-meta">' in rt:
+    errors.append(f'{slug}: pathway card secondary microcopy remains')
+   if re.search(r'<div class="route-criteria">.*?<span>',rt,re.S):
+    errors.append(f'{slug}: pathway criteria still contains secondary small copy')
 monash_page=R/'dist/universities/monash-pharmacy/index.html'
 if not monash_page.exists():
  errors.append('monash-page: compact pilot page missing')
@@ -86,6 +97,11 @@ else:
   if phrase not in mt:errors.append(f'monash-page: compact pilot missing {phrase}')
  for label in ['입학조건','영어','입학시기']:
   if mt.count(f'<small>{label}</small>')<3:errors.append(f'monash-page: pathway cards not standardized for {label}')
+ routes_match=re.search(r'<section class="article-section" id="routes">.*?</section>',mt,re.S)
+ if routes_match:
+  rt=routes_match.group(0)
+  if '<p class="monash-route-meta">' in rt:errors.append('monash-page: pathway card secondary microcopy remains')
+  if re.search(r'<div class="route-criteria">.*?<span>',rt,re.S):errors.append('monash-page: pathway criteria still contains secondary small copy')
  visible_mt=re.sub(r'<script\b.*?</script>|<style\b.*?</style>', '', mt, flags=re.I|re.S)
  visible_mt=re.sub(r'<[^>]+>', ' ', visible_mt)
  for code in ['P6007','P6001']:
