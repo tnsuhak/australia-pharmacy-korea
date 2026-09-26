@@ -4429,39 +4429,39 @@
         "note": ""
       },
       "progression": {
-        "value": null,
+        "value": "Maths + Chemistry 필수",
         "academic_year": 2027,
         "source_year": 2027,
         "source_id": "monash",
         "source_url": "https://www.monash.edu/study/courses/find-a-course/pharmacy-p6007",
         "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
+        "verified_date": "2026-09-26",
+        "status": "confirmed_2027",
         "note": ""
       },
       "english": {
-        "value": null,
+        "value": "IELTS 6.5 · 각 6.0",
         "academic_year": 2027,
         "source_year": 2027,
         "source_id": "monash",
         "source_url": "https://www.monash.edu/study/courses/find-a-course/pharmacy-p6007",
         "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
+        "verified_date": "2026-09-26",
+        "status": "confirmed_2027",
         "note": ""
       },
       "qualification": {
-        "value": null,
+        "value": "수능 350 · 한국 고교 86% · A-Level 12 · IB 33 · AP 8 · SAT 1290",
         "academic_year": 2027,
         "source_year": 2027,
-        "source_id": "monash",
-        "source_url": "https://www.monash.edu/study/courses/find-a-course/pharmacy-p6007",
-        "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
-        "note": ""
+        "source_id": "monash-direct-2027-guide",
+        "source_url": "https://www.monash.edu/__data/assets/pdf_file/0005/3941744/undergraduate-international-course-guide.pdf",
+        "source_type": "official_guide",
+        "verified_date": "2026-09-26",
+        "status": "latest_published",
+        "note": "2027 국제학생 가이드 Pharmacy 5-year 기준. 인쇄 가이드의 과정명은 P6001로 남아 있어 P6007 live selector와 지원 전 재확인."
       },
-      "note": "",
+      "note": "2027 국제학생 가이드의 Pharmacy 5-year 기준을 사용합니다. 가이드 과정명은 P6001로 남아 있어 신설 P6007의 live qualification selector와 지원 전 최종 재확인합니다.",
       "intake_months": {
         "value": [
           2
@@ -4474,6 +4474,74 @@
         "verified_date": "2026-09-24",
         "status": "confirmed_2027",
         "note": ""
+      },
+      "direct_scores": {
+        "csat": {
+          "value": 350,
+          "academic_year": 2027,
+          "source_year": 2027,
+          "source_id": "monash-direct-2027-guide",
+          "source_url": "https://www.monash.edu/__data/assets/pdf_file/0005/3941744/undergraduate-international-course-guide.pdf",
+          "source_type": "official_guide",
+          "verified_date": "2026-09-26",
+          "status": "latest_published",
+          "note": "표준점수 상위 4과목 합 · 한국사·영어·직업탐구 제외"
+        },
+        "korean_high_school": {
+          "value": 86,
+          "academic_year": 2027,
+          "source_year": 2027,
+          "source_id": "monash-direct-2027-guide",
+          "source_url": "https://www.monash.edu/__data/assets/pdf_file/0005/3941744/undergraduate-international-course-guide.pdf",
+          "source_type": "official_guide",
+          "verified_date": "2026-09-26",
+          "status": "latest_published",
+          "note": "Grade 10–12 academic subjects 평균"
+        },
+        "alevel": {
+          "value": 12,
+          "academic_year": 2027,
+          "source_year": 2027,
+          "source_id": "monash-direct-2027-guide",
+          "source_url": "https://www.monash.edu/__data/assets/pdf_file/0005/3941744/undergraduate-international-course-guide.pdf",
+          "source_type": "official_guide",
+          "verified_date": "2026-09-26",
+          "status": "latest_published",
+          "note": "Monash 환산점수"
+        },
+        "ib": {
+          "value": 33,
+          "academic_year": 2027,
+          "source_year": 2027,
+          "source_id": "monash-direct-2027-guide",
+          "source_url": "https://www.monash.edu/__data/assets/pdf_file/0005/3941744/undergraduate-international-course-guide.pdf",
+          "source_type": "official_guide",
+          "verified_date": "2026-09-26",
+          "status": "latest_published",
+          "note": "IB Diploma /45"
+        },
+        "ap": {
+          "value": 8,
+          "academic_year": 2027,
+          "source_year": 2027,
+          "source_id": "monash-direct-2027-guide",
+          "source_url": "https://www.monash.edu/__data/assets/pdf_file/0005/3941744/undergraduate-international-course-guide.pdf",
+          "source_type": "official_guide",
+          "verified_date": "2026-09-26",
+          "status": "latest_published",
+          "note": "가장 높은 AP 2개 합 · 각 AP 최소 3"
+        },
+        "sat": {
+          "value": 1290,
+          "academic_year": 2027,
+          "source_year": 2027,
+          "source_id": "monash-direct-2027-guide",
+          "source_url": "https://www.monash.edu/__data/assets/pdf_file/0005/3941744/undergraduate-international-course-guide.pdf",
+          "source_type": "official_guide",
+          "verified_date": "2026-09-26",
+          "status": "latest_published",
+          "note": "1600점 만점"
+        }
       }
     },
     {
@@ -5460,39 +5528,39 @@
         "note": ""
       },
       "progression": {
-        "value": "P6007: Foundation score 75% · English 65% · Maths 50% + Chemistry 50%",
+        "value": "P6007: Foundation 75% · English 65% · Maths 50% · Chemistry 50%",
         "academic_year": 2027,
-        "source_year": null,
+        "source_year": 2026,
         "source_id": "monash-foundation-p6007-current",
         "source_url": "https://www.monashcollege.edu.au/study/courses/foundation-year/fy-data/destination-degrees-2026-single-degrees/pharmacy-and-pharmaceutical-science",
         "source_type": "official_pathway",
-        "verified_date": "2026-09-25",
-        "status": "source_conflict",
-        "note": "2027 Pathway Programs PDF는 Pharmacy 표에 legacy P6001을 유지하고 있어 P6007 live page와 코드가 불일치합니다."
+        "verified_date": "2026-09-26",
+        "status": "latest_published",
+        "note": "현재 Monash College destination degree 표가 P6007을 직접 명시"
       },
       "english": {
-        "value": "P6007 진급 English 65%",
+        "value": "IELTS 5.5 · 각 5.0",
         "academic_year": 2027,
         "source_year": null,
-        "source_id": "monash-foundation-p6007-current",
-        "source_url": "https://www.monashcollege.edu.au/study/courses/foundation-year/fy-data/destination-degrees-2026-single-degrees/pharmacy-and-pharmaceutical-science",
+        "source_id": "monash-foundation-english-current",
+        "source_url": "https://www.monashcollege.edu.au/study/courses/foundation-year/foundation-year-standard",
         "source_type": "official_pathway",
-        "verified_date": "2026-09-25",
-        "status": "source_conflict",
-        "note": "Foundation 입학 영어조건이 아니라 Monash University Pharmacy 진급용 Foundation English 점수입니다."
+        "verified_date": "2026-09-26",
+        "status": "latest_published",
+        "note": "Foundation Year Standard 입학 영어"
       },
       "qualification": {
-        "value": null,
+        "value": "한국 고교 60% 또는 수능 260",
         "academic_year": 2027,
-        "source_year": 2027,
-        "source_id": "monash-foundation",
-        "source_url": "https://www.monashcollege.edu.au/__data/assets/pdf_file/0005/4349102/2027-Monash-Pathway-Programs.pdf",
+        "source_year": null,
+        "source_id": "monash-foundation-korea-current",
+        "source_url": "https://www.monashcollege.edu.au/study/courses/foundation-year/fy-data/2025/mufy-country-data/academic-entry-requirements-by-country2/south-korea",
         "source_type": "official_pathway",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
-        "note": ""
+        "verified_date": "2026-09-26",
+        "status": "latest_published",
+        "note": "Foundation Year Standard 입학 기준"
       },
-      "note": "현재 웹페이지는 P6007 기준 Foundation 75% · English 65%를 안내합니다. 2027 PDF에는 이전 코드 P6001이 남아 있어 최종 진급기준은 미확정입니다.",
+      "note": "약 12개월 Standard 기준. 2027 시작일은 2월·8월이며, P6007 진급은 현재 Monash College destination degree 기준을 사용합니다.",
       "intake_months": {
         "value": [
           2,
@@ -5688,39 +5756,39 @@
         "note": ""
       },
       "progression": {
-        "value": "최근 10년 이내 관련 학사 · 평균 70% 이상 · 대학 수준 Human Physiology",
+        "value": "학사 평균 70%+ · Chemistry · Higher-level Maths · 대학 수준 Human Physiology",
         "academic_year": 2027,
-        "source_year": 2027,
-        "source_id": "monash",
-        "source_url": "https://www.monash.edu/study/courses/find-a-course/pharmacy-p6007",
+        "source_year": null,
+        "source_id": "monash-grad-entry-current",
+        "source_url": "https://www.monash.edu/pharm/future/courses/grad-pharmacy",
         "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "confirmed_2027",
-        "note": ""
+        "verified_date": "2026-09-26",
+        "status": "latest_published",
+        "note": "Human Physiology는 최소 1과목을 tertiary level에서 이수"
       },
       "english": {
-        "value": null,
+        "value": "영어수업 학사 또는 IELTS 6.5 · 각 6.0",
         "academic_year": 2027,
-        "source_year": 2027,
-        "source_id": "monash",
-        "source_url": "https://www.monash.edu/study/courses/find-a-course/pharmacy-p6007",
+        "source_year": null,
+        "source_id": "monash-grad-entry-current",
+        "source_url": "https://www.monash.edu/pharm/future/courses/grad-pharmacy",
         "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
-        "note": ""
+        "verified_date": "2026-09-26",
+        "status": "latest_published",
+        "note": "English Level A"
       },
       "qualification": {
-        "value": null,
+        "value": "관련 학사 · 최근 10년 이내",
         "academic_year": 2027,
-        "source_year": 2027,
-        "source_id": "monash",
-        "source_url": "https://www.monash.edu/study/courses/find-a-course/pharmacy-p6007",
+        "source_year": null,
+        "source_id": "monash-grad-entry-current",
+        "source_url": "https://www.monash.edu/pharm/future/courses/grad-pharmacy",
         "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
-        "note": ""
+        "verified_date": "2026-09-26",
+        "status": "latest_published",
+        "note": "Biomedicine, Pharmaceutical Sciences, Science 등 관련 science-based degree"
       },
-      "note": "최소요건 충족자 중 경쟁 선발합니다.",
+      "note": "최소요건 충족자 중 경쟁선발 · Summer intensive 이수 후 약대 3학년 진입",
       "intake_months": {
         "value": null,
         "academic_year": 2027,
@@ -8177,72 +8245,72 @@
       "program_id": "monash-bpharm-hons",
       "qualification": "csat",
       "score": {
-        "value": null,
+        "value": 350,
         "academic_year": 2027,
         "source_year": 2027,
-        "source_id": "monash",
-        "source_url": "https://www.monash.edu/study/courses/find-a-course/pharmacy-p6007",
-        "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
-        "note": "Pharmacy 전용 2027 환산 기준 확인 중"
+        "source_id": "monash-direct-2027-guide",
+        "source_url": "https://www.monash.edu/__data/assets/pdf_file/0005/3941744/undergraduate-international-course-guide.pdf",
+        "source_type": "official_guide",
+        "verified_date": "2026-09-26",
+        "status": "latest_published",
+        "note": "2027 International Undergraduate Course Guide의 Pharmacy 5-year international entry table 기준. 가이드에는 기존 P6001 명칭이 남아 있어 P6007 live selector와 지원 전 재확인."
       },
-      "scale": null,
-      "calculation": null
+      "scale": "표준점수 상위 4과목 합",
+      "calculation": "한국사·영어·직업탐구 제외"
     },
     {
       "id": "monash-bpharm-hons-sat",
       "program_id": "monash-bpharm-hons",
       "qualification": "sat",
       "score": {
-        "value": null,
+        "value": 1290,
         "academic_year": 2027,
         "source_year": 2027,
-        "source_id": "monash",
-        "source_url": "https://www.monash.edu/study/courses/find-a-course/pharmacy-p6007",
-        "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
-        "note": "Pharmacy 전용 2027 환산 기준 확인 중"
+        "source_id": "monash-direct-2027-guide",
+        "source_url": "https://www.monash.edu/__data/assets/pdf_file/0005/3941744/undergraduate-international-course-guide.pdf",
+        "source_type": "official_guide",
+        "verified_date": "2026-09-26",
+        "status": "latest_published",
+        "note": "2027 International Undergraduate Course Guide의 Pharmacy 5-year international entry table 기준. 가이드에는 기존 P6001 명칭이 남아 있어 P6007 live selector와 지원 전 재확인."
       },
-      "scale": null,
-      "calculation": null
+      "scale": "1600",
+      "calculation": "SAT Evidence-Based Reading and Writing + Math"
     },
     {
       "id": "monash-bpharm-hons-ib",
       "program_id": "monash-bpharm-hons",
       "qualification": "ib",
       "score": {
-        "value": null,
+        "value": 33,
         "academic_year": 2027,
         "source_year": 2027,
-        "source_id": "monash",
-        "source_url": "https://www.monash.edu/study/courses/find-a-course/pharmacy-p6007",
-        "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
-        "note": "Pharmacy 전용 2027 환산 기준 확인 중"
+        "source_id": "monash-direct-2027-guide",
+        "source_url": "https://www.monash.edu/__data/assets/pdf_file/0005/3941744/undergraduate-international-course-guide.pdf",
+        "source_type": "official_guide",
+        "verified_date": "2026-09-26",
+        "status": "latest_published",
+        "note": "2027 International Undergraduate Course Guide의 Pharmacy 5-year international entry table 기준. 가이드에는 기존 P6001 명칭이 남아 있어 P6007 live selector와 지원 전 재확인."
       },
-      "scale": null,
-      "calculation": null
+      "scale": "45",
+      "calculation": "IB Diploma 최종 총점"
     },
     {
       "id": "monash-bpharm-hons-alevel",
       "program_id": "monash-bpharm-hons",
       "qualification": "alevel",
       "score": {
-        "value": null,
+        "value": 12,
         "academic_year": 2027,
         "source_year": 2027,
-        "source_id": "monash",
-        "source_url": "https://www.monash.edu/study/courses/find-a-course/pharmacy-p6007",
-        "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
-        "note": "Pharmacy 전용 2027 환산 기준 확인 중"
+        "source_id": "monash-direct-2027-guide",
+        "source_url": "https://www.monash.edu/__data/assets/pdf_file/0005/3941744/undergraduate-international-course-guide.pdf",
+        "source_type": "official_guide",
+        "verified_date": "2026-09-26",
+        "status": "latest_published",
+        "note": "2027 International Undergraduate Course Guide의 Pharmacy 5-year international entry table 기준. 가이드에는 기존 P6001 명칭이 남아 있어 P6007 live selector와 지원 전 재확인."
       },
-      "scale": null,
-      "calculation": null
+      "scale": "Monash GCE A Level 환산점수",
+      "calculation": "Monash 공식 환산방식 적용"
     },
     {
       "id": "monash-bpharm-hons-ossd",
@@ -8267,18 +8335,18 @@
       "program_id": "monash-bpharm-hons",
       "qualification": "korean_high_school",
       "score": {
-        "value": null,
+        "value": 86,
         "academic_year": 2027,
         "source_year": 2027,
-        "source_id": "monash",
-        "source_url": "https://www.monash.edu/study/courses/find-a-course/pharmacy-p6007",
-        "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
-        "note": "Pharmacy 전용 2027 환산 기준 확인 중"
+        "source_id": "monash-direct-2027-guide",
+        "source_url": "https://www.monash.edu/__data/assets/pdf_file/0005/3941744/undergraduate-international-course-guide.pdf",
+        "source_type": "official_guide",
+        "verified_date": "2026-09-26",
+        "status": "latest_published",
+        "note": "2027 International Undergraduate Course Guide의 Pharmacy 5-year international entry table 기준. 가이드에는 기존 P6001 명칭이 남아 있어 P6007 live selector와 지원 전 재확인."
       },
-      "scale": null,
-      "calculation": null
+      "scale": "Grade 10–12 academic subjects 평균 %",
+      "calculation": "낙제 포함 학업과목 평균 · 비학업과목 제외"
     },
     {
       "id": "monash-bpharm-hons-ged",
@@ -18776,6 +18844,38 @@
       "url": "https://www.monash.edu/study/fees-scholarships/scholarships/find-a-scholarship/monash-international-leadership-scholarship-5571Z",
       "source_year": 2026,
       "source_type": "official_scholarship",
+      "verified_date": "2026-09-26"
+    },
+    {
+      "id": "monash-direct-2027-guide",
+      "title": "Monash 2027 International Undergraduate Course Guide · Pharmacy entry scores",
+      "url": "https://www.monash.edu/__data/assets/pdf_file/0005/3941744/undergraduate-international-course-guide.pdf",
+      "source_year": 2027,
+      "source_type": "official_guide",
+      "verified_date": "2026-09-26"
+    },
+    {
+      "id": "monash-foundation-korea-current",
+      "title": "Monash College Foundation Year · South Korea entry requirements",
+      "url": "https://www.monashcollege.edu.au/study/courses/foundation-year/fy-data/2025/mufy-country-data/academic-entry-requirements-by-country2/south-korea",
+      "source_year": null,
+      "source_type": "official_pathway",
+      "verified_date": "2026-09-26"
+    },
+    {
+      "id": "monash-foundation-english-current",
+      "title": "Monash College Foundation Year Standard · English entry requirements",
+      "url": "https://www.monashcollege.edu.au/study/courses/foundation-year/foundation-year-standard",
+      "source_year": null,
+      "source_type": "official_pathway",
+      "verified_date": "2026-09-26"
+    },
+    {
+      "id": "monash-grad-entry-current",
+      "title": "Monash Graduate Entry Pharmacy · current eligibility",
+      "url": "https://www.monash.edu/pharm/future/courses/grad-pharmacy",
+      "source_year": null,
+      "source_type": "official_course",
       "verified_date": "2026-09-26"
     }
   ],
