@@ -1177,14 +1177,14 @@
       ],
       "decision_lens": {
         "why": [
-          "2027 ATAR 75.05",
-          "Bendigo Regional",
-          "과학 선수과목 별도 없음",
-          "2027 Health Innovation 30%"
+          "Bendigo Regional · Category 3",
+          "과학 선수과목 별도 요구 없음",
+          "30% 자동장학 + 50%/100% Vice Chancellor 경쟁장학"
         ],
         "watch": [
-          "30% 장학은 수량 제한 · 오퍼 수락 순",
-          "2027 본과 학비 미확정"
+          "30% 장학은 수량 제한·offer acceptance 순 확보 조건 확인",
+          "Vice Chancellor는 Direct Entry 대상 · 별도 지원·경쟁선발",
+          "2027 국제학생 학비 발표 대기"
         ]
       }
     },
@@ -15588,6 +15588,138 @@
         "note": ""
       },
       "note": "50% tuition reduction. Separate application and competitive selection. Pharmacy is not listed among excluded programs."
+    },
+    {
+      "id": "latrobe-vc-2027",
+      "university_id": "latrobe",
+      "name": "La Trobe Vice Chancellor Scholarship · 50%/100%",
+      "amount": {
+        "value": [
+          50,
+          100
+        ],
+        "academic_year": 2027,
+        "source_year": 2027,
+        "source_id": "latrobe-vc-2027",
+        "source_url": "https://www.latrobe.edu.au/study/scholarships/other/la-trobe-vice-chancellor-scholarship",
+        "source_type": "official_scholarship",
+        "verified_date": "2026-09-27",
+        "status": "confirmed_2027",
+        "note": ""
+      },
+      "award_type": "percentage",
+      "assessment": "competitive",
+      "automatic_assessment": {
+        "value": false,
+        "academic_year": 2027,
+        "source_year": 2027,
+        "source_id": "latrobe-vc-2027",
+        "source_url": "https://www.latrobe.edu.au/study/scholarships/other/la-trobe-vice-chancellor-scholarship",
+        "source_type": "official_scholarship",
+        "verified_date": "2026-09-27",
+        "status": "confirmed_2027",
+        "note": ""
+      },
+      "separate_application": {
+        "value": true,
+        "academic_year": 2027,
+        "source_year": 2027,
+        "source_id": "latrobe-vc-2027",
+        "source_url": "https://www.latrobe.edu.au/study/scholarships/other/la-trobe-vice-chancellor-scholarship",
+        "source_type": "official_scholarship",
+        "verified_date": "2026-09-27",
+        "status": "confirmed_2027",
+        "note": ""
+      },
+      "competitive": {
+        "value": true,
+        "academic_year": 2027,
+        "source_year": 2027,
+        "source_id": "latrobe-vc-2027",
+        "source_url": "https://www.latrobe.edu.au/study/scholarships/other/la-trobe-vice-chancellor-scholarship",
+        "source_type": "official_scholarship",
+        "verified_date": "2026-09-27",
+        "status": "confirmed_2027",
+        "note": ""
+      },
+      "country_eligibility": {
+        "value": true,
+        "academic_year": 2027,
+        "source_year": 2027,
+        "source_id": "latrobe-vc-2027",
+        "source_url": "https://www.latrobe.edu.au/study/scholarships/other/la-trobe-vice-chancellor-scholarship",
+        "source_type": "official_scholarship",
+        "verified_date": "2026-09-27",
+        "status": "confirmed_2027",
+        "note": ""
+      },
+      "duration": {
+        "value": "학위 전체 기간",
+        "academic_year": 2027,
+        "source_year": 2027,
+        "source_id": "latrobe-vc-2027",
+        "source_url": "https://www.latrobe.edu.au/study/scholarships/other/la-trobe-vice-chancellor-scholarship",
+        "source_type": "official_scholarship",
+        "verified_date": "2026-09-27",
+        "status": "confirmed_2027",
+        "note": ""
+      },
+      "academic_threshold": {
+        "value": "Minimum WAM 80 + 영어 + written statement",
+        "academic_year": 2027,
+        "source_year": 2027,
+        "source_id": "latrobe-vc-2027",
+        "source_url": "https://www.latrobe.edu.au/study/scholarships/other/la-trobe-vice-chancellor-scholarship",
+        "source_type": "official_scholarship",
+        "verified_date": "2026-09-27",
+        "status": "confirmed_2027",
+        "note": ""
+      },
+      "renewal_condition": {
+        "value": "Full-time 등록·정상 학업진행 + 장학생 활동 참여",
+        "academic_year": 2027,
+        "source_year": 2027,
+        "source_id": "latrobe-vc-2027",
+        "source_url": "https://www.latrobe.edu.au/study/scholarships/other/la-trobe-vice-chancellor-scholarship",
+        "source_type": "official_scholarship",
+        "verified_date": "2026-09-27",
+        "status": "confirmed_2027",
+        "note": ""
+      },
+      "number_available": {
+        "value": null,
+        "academic_year": 2027,
+        "source_year": 2027,
+        "source_id": "latrobe-vc-2027",
+        "source_url": "https://www.latrobe.edu.au/study/scholarships/other/la-trobe-vice-chancellor-scholarship",
+        "source_type": "official_scholarship",
+        "verified_date": "2026-09-27",
+        "status": "pending_2027",
+        "note": ""
+      },
+      "course_exclusion": {
+        "value": "Direct entry eligible course만",
+        "academic_year": 2027,
+        "source_year": 2027,
+        "source_id": "latrobe-vc-2027",
+        "source_url": "https://www.latrobe.edu.au/study/scholarships/other/la-trobe-vice-chancellor-scholarship",
+        "source_type": "official_scholarship",
+        "verified_date": "2026-09-27",
+        "status": "confirmed_2027",
+        "note": ""
+      },
+      "pharmacy_eligible": {
+        "value": true,
+        "academic_year": 2027,
+        "source_year": 2027,
+        "source_id": "latrobe-2027-course",
+        "source_url": "https://www.latrobe.edu.au/courses/bachelor-of-pharmacy-honours",
+        "source_type": "official_course",
+        "verified_date": "2026-09-27",
+        "status": "confirmed_2027",
+        "note": ""
+      },
+      "note": "2027 국제학생 대상 별도 지원 경쟁장학입니다. La Trobe Pharmacy 과정 페이지가 이 장학을 해당 과정의 이용 가능 장학으로 표시합니다."
     }
   ],
   "accommodation": [
@@ -19941,6 +20073,14 @@
       "url": "https://www.qut.edu.au/study/applying/guaranteed-course-offers",
       "source_year": 2027,
       "source_type": "official_admissions",
+      "verified_date": "2026-09-27"
+    },
+    {
+      "id": "latrobe-vc-2027",
+      "title": "La Trobe Vice Chancellor Scholarship · 50%/100% · 2027",
+      "url": "https://www.latrobe.edu.au/study/scholarships/other/la-trobe-vice-chancellor-scholarship",
+      "source_year": 2027,
+      "source_type": "official_scholarship",
       "verified_date": "2026-09-27"
     }
   ],

@@ -85,6 +85,7 @@ source('adelaide-scholarship','Adelaide Merit Scholarship 15%','https://adelaide
 source('latrobe-scholarship-2027','La Trobe High Achiever Scholarship · 2026/2027','https://www.latrobe.edu.au/study/scholarships/other/la-trobe-high-achiever-scholarship',2027,'official_scholarship')
 source('latrobe-scholarship-courses','La Trobe · Courses offering international scholarships','https://www.latrobe.edu.au/study/scholarships/advice/courses-offering-international-scholarships',2027,'official_scholarship')
 source('latrobe-health-innovation-2027','La Trobe Health Innovation Scholarship · 30% · 2026/2027 intakes','https://www.latrobe.edu.au/international/applying/scholarships',2027,'official_scholarship')
+source('latrobe-vc-2027','La Trobe Vice Chancellor Scholarship · 50%/100% · 2027','https://www.latrobe.edu.au/study/scholarships/other/la-trobe-vice-chancellor-scholarship',2027,'official_scholarship',verified_date='2026-09-27')
 source('latrobe-scholarship-terms-2027','La Trobe international scholarship terms · 2026/2027 intakes','https://www.latrobe.edu.au/international/tc/la-trobe-high-achievers-scholarship-terms-and-conditions',2027,'official_scholarship')
 source('canberra-guide-2027','University of Canberra International Course Guide 2027 · Scholarships','https://www.canberra.edu.au/content/dam/uc/documents/agent-marketing-toolkit/international-course-guide/international-course-guide.pdf',2027,'official_guide')
 source('canberra-scholarship-conditions-current','University of Canberra · International Scholarships Conditions of Award','https://www.canberra.edu.au/content/dam/uc/documents/scholarships/conditions/uc-international-scholarships.pdf',None,'official_scholarship')
@@ -580,6 +581,7 @@ scholarship('uq','uq-excellence','UQ International Excellence Scholarship','uq-s
 scholarship('adelaide','adelaide-merit','Adelaide Merit Scholarship','adelaide-scholarship',15,'automatic',True,False,True,'표준 학위기간','IB 28 · A-level 9 · 기타 국제고교 ATAR 85 상당','Program Term GPA 4.5/7 유지',exclude='공식 제외과정에 Pharmacy 없음',note='Bachelor of Pharmacy (Honours)는 공식 제외과정 목록에 없습니다.',pharmacy=True)
 scholarship('latrobe','latrobe-high-achiever','La Trobe High Achiever Scholarship','latrobe-scholarship-2027',[20,25],'automatic',True,False,True,'학위 전체 기간','WAM/ATAR 상당 60–74.9: 20% · 75+: 25%','Full-time 등록·정상 학업진행',note='Bendigo Bachelor of Pharmacy (Honours)는 국제장학 eligible-course 목록에 포함됩니다.',pharmacy=True,pharmacy_src='latrobe-scholarship-courses')
 scholarship('latrobe','latrobe-health-innovation-30','La Trobe Health Innovation Scholarship · 30%','latrobe-health-innovation-2027',30,'automatic',True,False,True,None,'Minimum WAM 75+','장학 약관 및 Offer 조건 충족',note='30% Health Innovation은 현재 국제장학 안내에서 50%/100%와 달리 별도 신청이 필요한 장학으로 표시되지 않습니다. 2026/2027 intake 약관상 수량이 제한되고 offer acceptance 순으로 확보되므로 조기 수락 조건을 확인해야 합니다.',pharmacy=True,pharmacy_src='latrobe-health-innovation-2027')
+scholarship('latrobe','latrobe-vc-2027','La Trobe Vice Chancellor Scholarship · 50%/100%','latrobe-vc-2027',[50,100],'competitive',False,True,True,'학위 전체 기간','Minimum WAM 80 + 영어 + written statement','Full-time 등록·정상 학업진행 + 장학생 활동 참여',exclude='Direct entry eligible course만',note='2027 국제학생 대상 별도 지원 경쟁장학입니다. La Trobe Pharmacy 과정 페이지가 이 장학을 해당 과정의 이용 가능 장학으로 표시합니다.',pharmacy=True,pharmacy_src='latrobe-2027-course')
 scholarship('qut','qut-merit','QUT International Merit Scholarship','qut-scholarship-2027',25,'automatic',True,False,True,'학위 전체 기간','입학 성적 기준 충족','QUT 최소 GPA 조건 유지',note='2027 국제학생 가이드 기준. 전 학부/faculty에 제공되는 International Merit Scholarship입니다.',pharmacy=True)
 scholarship('newcastle','newcastle-excellence','International Excellence Scholarship 2027','newcastle-scholarship',20,'course_excluded',True,False,True,'해당 없음',None,None,500,'Bachelor of Pharmacy (Honours)','20% 장학 자체는 2027 국제학생 장학이지만 Bachelor of Pharmacy (Honours)는 공식 제외과정입니다.',pharmacy=False,pharmacy_src='newcastle-scholarship-2027-terms')
 scholarship('canberra','canberra-international-2027','UC International Scholarships 2027','canberra-guide-2027',[10,20,30],'automatic',True,True,True,'표준 학위기간','Merit 10%: GPA 5/7 · 상위 장학은 더 높은 성적/전략 기준','Course GPA 5.0 이상 유지',exclude='HDR·1년 standalone Honours·non-award·offshore·일부 보건계열 제외. Bachelor of Pharmacy는 제외목록에 없음',note='별도 장학 신청 없이 입학 지원 시 자동 심사합니다. 10/20/30%는 academic merit와 strategic recruitment priorities에 따라 결정되며 학업 중 GPA 5.0 이상을 유지해야 합니다.',pharmacy=True,pharmacy_src='canberra-scholarship-conditions-current')
@@ -782,10 +784,11 @@ decision_lenses={
     "why": [
       "Bendigo Regional · Category 3",
       "과학 선수과목 별도 요구 없음",
-      "2027 Health Innovation 30% · High Achiever 20~25%"
+      "30% 자동장학 + 50%/100% Vice Chancellor 경쟁장학"
     ],
     "watch": [
       "30% 장학은 수량 제한·offer acceptance 순 확보 조건 확인",
+      "Vice Chancellor는 Direct Entry 대상 · 별도 지원·경쟁선발",
       "2027 국제학생 학비 발표 대기"
     ]
   },
@@ -942,7 +945,7 @@ public_program_copy = {
     highlights=['Bendigo · Regional','4년','30% Health Innovation'],
     editorial='Bendigo 캠퍼스 4년 약대이며 2027년 3월 시작입니다. 별도 과학 선수과목은 없고 IELTS는 6.5(각 6.5)입니다. 졸업 후 1년 supervised internship은 별도입니다.',
     review_items=['2027 본과 학비'],
-    decision_lens=dict(why=['Bendigo Regional','과학 선수과목 별도 없음','2027 Health Innovation 30%'],watch=['30% 장학은 수량 제한 · 오퍼 수락 순','2027 본과 학비 미확정'])
+    decision_lens=dict(why=['Bendigo Regional','과학 선수과목 별도 없음','30% 자동장학 + 50%/100% Vice Chancellor 경쟁장학'],watch=['30% 장학은 수량 제한 · 오퍼 수락 순','Vice Chancellor는 Direct Entry 대상 · 별도 지원·경쟁선발','2027 본과 학비 미확정'])
   ),
   'qut-bpharm-hons': dict(
     highlights=['4년','수학·화학 필수 아님','2027 학비 A$46,200'],

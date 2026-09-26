@@ -375,7 +375,7 @@ for u in D['universities']:
         elif u['id']=='adelaide':
             hero_duration='4년 BPharm(Hons)'; hero_intake='2월 · 7월'; hero_english='IELTS 6.5 · 각 6.0'; hero_scholar='15% 자동 · 최대 50%'
         elif u['id']=='latrobe':
-            hero_duration='4년'; hero_intake='3월'; hero_english='IELTS 6.5 · 각 6.5'; hero_scholar='Health Innovation · 30%'
+            hero_duration='4년'; hero_intake='3월'; hero_english='IELTS 6.5 · 각 6.5'; hero_scholar='30% 자동 · 최대 100%'
         else:
             hero_duration='4년'; hero_intake='2월'; hero_english='IELTS 6.5 · 각 6.0'; hero_scholar='자동심사 · 25%'
         hero_fee=money(t['annual']) if t['annual'].get('source_year')==2027 and t['annual'].get('value') is not None else '2027 확인 중'
@@ -680,7 +680,7 @@ for u in D['universities']:
             seo=('2027 Adelaide 약대 · ATAR90·Foundation·최대50% 장학 | TNS','Adelaide University 약대의 2027 ATAR 90·IB 35.25, 2월·7월 입학, Eynesbury Foundation·Health Science Diploma, 5년 Master 연계와 최대 50% 장학을 정리합니다.')
         elif uid=='latrobe':
             lt_health=next(x for x in ss if x['id']=='latrobe-health-innovation-30')
-            overview='''<div class="monash-snapshot"><p class="lead"><strong>Bendigo에서 공부하는 4년 BPharm(Hons)이며, Direct 입학에 별도 과학 선수과목을 요구하지 않습니다.</strong></p><p>2027 가이드의 ATAR 기준은 75.05이며, La Trobe College Foundation을 거쳐 Bendigo 약대 1학년으로 진학할 수도 있습니다. 국제학생 대상 Health Innovation 30% 장학도 있습니다.</p><div class="monash-keyline"><span>2027 ATAR 75.05</span><span>과학 선수과목 없음</span><span>30% Health Innovation</span></div></div>'''
+            overview='''<div class="monash-snapshot"><p class="lead"><strong>Bendigo에서 공부하는 4년 BPharm(Hons)이며, Direct 입학에 별도 과학 선수과목을 요구하지 않습니다.</strong></p><p>2027 가이드의 ATAR 기준은 75.05이며, La Trobe College Foundation을 거쳐 Bendigo 약대 1학년으로 진학할 수도 있습니다. 국제학생 대상 30% Health Innovation과 별도 지원형 50%/100% Vice Chancellor 장학이 있습니다.</p><div class="monash-keyline"><span>2027 ATAR 75.05</span><span>과학 선수과목 없음</span><span>최대 100% 장학</span></div></div>'''
             routes='''<div class="monash-route-grid compact-route-grid two">
 <article><span class="route-label">DIRECT</span><h3>고졸 → 약대 1학년</h3><div class="route-criteria">
 <div><small>입학조건</small><strong>2027 ATAR 75.05 · 별도 과학 선수과목 없음 · 국제학력은 La Trobe 환산</strong></div>
@@ -702,11 +702,12 @@ for u in D['universities']:
 <div><small>2027 국제학생 학비</small><strong>확인 중</strong><span>대학 최신 금액 발표 후 반영</span></div>
 <div><small>Health Innovation</small><strong>30%</strong><span>Minimum WAM 75+</span></div>
 <div><small>High Achiever</small><strong>20% · 25%</strong><span>입학성적 기준</span></div>
+<div><small>Vice Chancellor</small><strong>50% · 100%</strong><span>별도 지원 · 경쟁선발</span></div>
 <div><small>Bendigo 숙소</small><strong>A$255 / 주부터</strong><span>공과금 포함</span></div>
-</div><div class="section-link-list compact-links">'''+link('/tuition-scholarships/','호주 약대 전체 학비·생활비 비교 →')+'''</div>'''
+</div>'''+callout('<strong>Vice Chancellor Scholarship은 자동 장학이 아닙니다.</strong> 2027 Direct Entry eligible course 지원자가 오퍼를 받은 뒤 별도 지원하며, 최소 WAM 80 기준·영어·written statement를 바탕으로 경쟁선발합니다.')+'''<div class="section-link-list compact-links">'''+link('/tuition-scholarships/','호주 약대 전체 학비·생활비 비교 →')+'''</div>'''
             after='''<div class="monash-flow"><div><b>4년</b><strong>BPharm(Hons)</strong><span>Bendigo 학사과정</span></div><i>↓</i><div><b>졸업 후</b><strong>약 1년 등록 인턴십</strong><span>약사등록용 실무훈련</span></div><i>↓</i><div><b>등록요건</b><strong>등록시험·심사 완료</strong><span>Pharmacy Board 절차</span></div><i>↓</i><div><b>결과</b><strong>정식 약사등록</strong><span>General Registration</span></div></div><div class="section-link-list compact-links">'''+link('/pharmacist-registration/','호주 약사등록 방법 →')+link('/korea-pharmacist/','한국 약사면허 취득 방법 →')+'''</div>'''
             titles=('La Trobe 약대 과정 구조','입학방법 2가지','4년 과정·실습','학비·장학금·생활비','졸업 후 약사등록')
-            seo=('2027 La Trobe 약대 · Bendigo·Foundation·30% 장학 | TNS','La Trobe 약대의 Bendigo 4년 과정, Direct·Foundation 입학, IELTS 6.5 각 6.5, Health Innovation 30% 장학을 정리합니다.')
+            seo=('2027 La Trobe 약대 · Bendigo·Foundation·최대100% 장학 | TNS','La Trobe 약대의 Bendigo 4년 과정, Direct·Foundation 입학, IELTS 6.5 각 6.5, 30% 자동장학과 50%·100% Vice Chancellor 경쟁장학을 정리합니다.')
         else:
             qut_sch=next(x for x in ss if x['id']=='qut-merit')
             overview='''<div class="monash-snapshot"><p class="lead"><strong>Gardens Point에서 공부하는 4년 BPharm(Hons)이며, Chemistry와 Mathematics는 필수 prerequisite가 아니라 assumed knowledge입니다.</strong></p><p>Direct 외에 QUT College Standard Foundation과 6개월 Intensive Program을 통해 약대 1학년으로 진학할 수 있습니다.</p><div class="monash-keyline"><span>4년</span><span>수학·화학 assumed knowledge</span><span>Foundation 2종</span></div></div>'''
