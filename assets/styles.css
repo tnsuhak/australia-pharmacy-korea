@@ -76,6 +76,17 @@
 .monash-route-grid ul{margin:0;padding-left:18px}
 .monash-route-grid li{margin:7px 0;line-height:1.55;color:var(--muted)}
 .monash-route-grid li strong{color:var(--ink)}
+.monash-score-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin:0 0 14px}
+.monash-score-grid span{display:block;padding:10px 11px;border-radius:10px;background:#f5f8f5}
+.monash-score-grid small{display:block;font-size:10px;color:var(--muted);margin-bottom:3px}
+.monash-score-grid strong{display:block;font-size:15px;line-height:1.3;color:var(--ink)}
+.monash-route-meta{margin:13px 0 0;font-size:10.5px;line-height:1.55;color:var(--muted)}
+.monash-path-step{padding:13px 14px;border:1px solid var(--line);border-radius:11px;background:#f8faf8}
+.monash-path-step small,.monash-path-step strong,.monash-path-step span{display:block}
+.monash-path-step small{font-size:10px;font-weight:800;letter-spacing:.04em;color:var(--teal)}
+.monash-path-step strong{margin-top:5px;font-size:15px;line-height:1.4;color:var(--ink)}
+.monash-path-step span{margin-top:5px;font-size:11px;line-height:1.5;color:var(--muted)}
+.monash-path-arrow{text-align:center;padding:5px 0;color:var(--muted);font-weight:800}
 .monash-money-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
 .monash-money-grid>div{border:1px solid var(--line);border-radius:14px;padding:18px;background:#fff}
 .monash-money-grid small,.monash-money-grid span{display:block;color:var(--muted);line-height:1.5}
