@@ -36,14 +36,16 @@ def value(f,default='확인 중'):
     if isinstance(v,dict):return ' · '.join(f'{k} {v}' for k,v in v.items())
     return PREREQ.get(str(v),str(v))
 def money(f):return f"A${f['value']:,.0f}" if f.get('value') is not None else '2027 확인 중'
-def status(f):
+def status(f,force=False):
     s=f.get('status','pending_2027');year=f.get('source_year')
-    label=STATUS[s]+(f' · {year}' if s=='latest_published' and year else '')
+    if s=='confirmed_2027' and not force:return ''
+    label=(f'{year} 공식 참고' if s=='latest_published' and year else STATUS[s])
     return f'<span class="status {s}">{label}</span>'
 def fv(f,fmt=None):
     t=fmt(f) if fmt else value(f)
+    st=status(f)
     note=f'<span class="fact-note">{E(f["public_note"])}</span>' if f.get('public_note') else ''
-    return f'{E(t)}<br>{status(f)}{note}'
+    return f'{E(t)}'+(f'<br>{st}' if st else '')+note
 def related(collection,p=None,u=None):return [r for r in D[collection] if (not p or r.get('program_id')==p) and (not u or r.get('university_id')==u)]
 def one(collection,p):return related(collection,p)[0]
 def purl(p):return '/universities/'+U[p['university_id']]['slug']+'/'
@@ -240,9 +242,9 @@ def routecards(rs):
     for r in rs:
         if r['type']=='direct':
             it=one('intakes',r['program_id'])
-            fields=[('진학 가능',fv(r['availability'])),('기간 / 시작월',fv(r['duration'])+'<br>'+fv(it['label']))]
+            fields=[('입학',('가능' if r['availability']['value'] is True else '2027 확인 중' if r['availability']['value'] is None else '불가')),('기간 / 시작월',fv(r['duration'])+'<br>'+fv(it['label']))]
         else:
-            fields=[('진학 가능',fv(r['availability'])),('기간 / 시작월',fv(r['duration'])+'<br>'+fv(r['intake'])),('약대 진급조건',fv(r['progression'])),('입학 학력',fv(r['qualification'])),('영어',fv(r['english']))]
+            fields=[('경로',('운영' if r['availability']['value'] is True else '2027 확인 중' if r['availability']['value'] is None else '미운영')),('기간 / 시작월',fv(r['duration'])+'<br>'+fv(r['intake'])),('약대 진급조건',fv(r['progression'])),('입학 학력',fv(r['qualification'])),('영어',fv(r['english']))]
         if r.get('pathway_fee'):fields.append(('준비과정 학비',fv(r['pathway_fee'],money)))
         if isinstance(r['credit']['value'],(int,float)) and r['credit']['value']>0:fields.insert(1,('약대 인정학점',fv(r['credit'])+(' CP' if r['program_id'].startswith('griffith') else ' credits')))
         note_html=f'<p>{E(r["note"])}</p>' if r.get('note') else ''
@@ -294,16 +296,19 @@ def housingcards(hh):
 def structure(pid):
     p=P[pid];r=one('professional_registration',pid)
     rows=[('총 학업기간',fv(p['duration_label']))]
+    def yn(f,yes,no):
+        if f.get('value') is None:return '2027 확인 중'
+        return yes if f['value'] else no
     if p['duration_years']['value']==5:
-        rows.extend([('학사학위 취득',fv(p['bachelor_award_year'],lambda f:str(f['value'])+'년차' if f['value'] else '확인 중')),('4년 후 학사 Exit',fv(p['four_year_exit'])),('4년 후 학위',fv(p['exit_degree']))])
-    rows.extend([('최종 학위',fv(p['final_degree'])),('학위 안 실무훈련',fv(r['supervised_practice_in_degree'])),('Intern Training 포함',fv(r['itp_in_degree'])),('졸업 후 인턴십',fv(r['post_graduation_internship']))])
+        rows.extend([('학사학위 취득',fv(p['bachelor_award_year'],lambda f:str(f['value'])+'년차' if f['value'] else '확인 중')),('4년 후 학사 Exit',yn(p['four_year_exit'],'가능','없음')),('4년 후 학위',fv(p['exit_degree']))])
+    rows.extend([('최종 학위',fv(p['final_degree'])),('학위 중 등록 실무훈련',yn(r['supervised_practice_in_degree'],'포함','별도')),('Intern Training Program',yn(r['itp_in_degree'],'학위에 포함','별도')),('졸업 후 등록 인턴십',yn(r['post_graduation_internship'],'필요','별도 없음'))])
     return facts(rows)
 def costcalculator():return '''<div class="cost-calculator"><h3>1년 예상비용 계산</h3><p class="small">학비·숙소·생활비를 넣으면 1년 예상비용을 바로 계산합니다. 기본값은 예시입니다.</p><form id="cost-form"><div class="cost-grid"><label>연간 학비 (AUD)<input name="tuition" type="number" min="0" max="200000" value="60000" step="100"></label><label>숙소 주당 (AUD)<input name="rent" type="number" min="0" max="3000" value="350"></label><label>계약 주 수<input name="weeks" type="number" min="1" max="52" value="52"></label><label>기타 생활비 주당 (AUD)<input name="living" type="number" min="0" max="3000" value="250"></label><label>적용할 장학률 (%)<input name="discount" type="number" min="0" max="100" value="0"></label><label>계산용 환율 (KRW / AUD)<input name="fx" type="number" min="1" max="10000" value="1000"></label></div><button class="btn" type="submit" style="margin-top:20px">1년 비용 계산</button></form><div class="cost-output" aria-live="polite" id="cost-output"><span>위 가정으로 계산한 1년 예산</span><strong>A$91,200</strong><p>약 9,120만 원 · 환율 A$1 = 1,000원 가정<br>학비 A$60,000 + 숙소 A$18,200 + 기타 생활비 A$13,000</p></div><p class="small muted" style="margin-top:14px">예상비용입니다. 장학금은 실제 오퍼 기준으로 입력하세요. 항공·비자·OSHC·교재·보증금·실습 이동비는 포함하지 않습니다.</p></div>'''
 
 for u in D['universities']:
     pp=[p for p in D['programs'] if p['university_id']==u['id']];p=pp[0];pid=p['id'];rq=one('requirements',pid);en=one('english',pid);it=one('intakes',pid);t=one('tuition',pid);r=one('professional_registration',pid)
     rs=related('entry_routes',pid);ss=related('scholarships',u=u['id']);hh=related('accommodation',u=u['id'])
-    extra='<div class="facts-grid">'+''.join(f'<div class="fact-tile"><small>{k}</small><strong>{v}</strong></div>' for k,v in [('과정',E(value(p['duration_label']))),('캠퍼스',E(value(u['campus']))),('입학시기',E(value(it['label']))),('유학생 모집',E(value(p['international_recruitment']))),('연간 학비',E(money(t['annual']))),('자료 업데이트',DATE)])+'</div>'
+    extra='<div class="facts-grid">'+''.join(f'<div class="fact-tile"><small>{k}</small><strong>{v}</strong></div>' for k,v in [('과정',E(value(p['duration_label']))),('캠퍼스',E(value(u['campus']))),('입학시기',E(value(it['label']))),('유학생 모집',E(value(p['international_recruitment']))),('연간 학비',E(money(t['annual']))),('정보 기준일',DATE)])+'</div>'
     body=pagehero(E(u['name_ko'])+' 약대',E(u['name'])+' · '+E(value(p['name'])),u['name_ko'],extra)
     intro='<p>'+E(p['editorial'])+'</p><div class="chips">'+''.join(f'<span class="chip">{E(h)}</span>' for h in p['highlights'])+'</div>'
     lens=p.get('decision_lens') or {}
@@ -433,7 +438,7 @@ register('/korea-pharmacist/','보건복지부 인정 호주 약대 13곳 · 약
 fastitems=[('programs','3년 Fast-track · JCU와 UTas','<p>JCU와 UTas는 4년 약학과를 3년에 압축해 공부합니다. 1년 수강량이 많고 학업 일정이 빠릅니다.</p><div class="card-grid">'+card(P['jcu-bpharm-hons'])+card(P['utas-bpharm-hons'])+'</div>'),('uq','UQ의 7월 약 3.5년과 구분','<p>UQ 기존 BPharm은 2월 4년, 7월 약 3.5년입니다. 3년 Fast-track과 동일한 상품이 아니며, 수학·화학 요건과 7월 모집 여부를 함께 봐야 합니다.</p>'),('registration','학업기간 이후의 등록 준비','<p>3년 학위 수료 후에도 등록용 인턴십과 ITP·등록시험 등 요구가 남습니다. 5년 통합과 비교할 때는 학위만의 기간과 전체 등록 준비기간을 구분하세요.</p>'+link('/pharmacist-registration/','등록 구조 자세히 →','btn text')+sources(['jcu-guide','utas','uq','apc']))]
 register('/3-year-pharmacy/','호주 3년 약대 · JCU·UTas Fast-track 비교 | TNS','호주 3년 약대 JCU·UTas의 압축 학사와 UQ 7월 3.5년 경로를 구분하고, 졸업 후 약사등록 준비기간을 확인합니다.',pagehero('호주 3년 약대, 빠른 만큼 확인할 것','3년 학위 완료와 약사등록 완료는 다릅니다. 압축 학사 일정과 졸업 후 준비를 함께 살펴보세요.','3년 약대')+article(fastitems))
 
-method_items=[('scope','이 사이트의 비교 범위','<p>한국 학생이 고교 졸업 후 학부 단계부터 약사 과정을 시작할 수 있는 대학을 중심으로 구성합니다. 대학원 전용 과정과 국제학생 대면 모집 확인이 안 된 상품을 확정 진학 옵션으로 표시하지 않습니다.</p>'),('status','정보 상태 읽는 방법',table([(status({'status':s}),t) for s,t in [('confirmed_2027','2027 공식 자료에서 해당 사실을 확인했습니다. 최종 입학허가를 뜻하지 않습니다.'),('latest_published','현재 확인한 최신 공개 자료입니다. 연도가 이전이면 명시하며 2027 확정으로 사용하지 않습니다.'),('pending_2027','2027 확인 중 상태입니다. 미발표, 접근 제한, 적용범위 미검증 또는 본 작업의 대조 미완료를 포함하며 공식 자료가 없다고 단정하지 않습니다.'),('source_conflict','공식 자료 간 수치·적용 범위 차이가 남아 있습니다. 자동 충족 판정에 사용하지 않습니다.')]],['상태','의미'],True)),('conflicts','자료 차이와 후속 확인',table([(E(c['summary']),E(c['decision'])) for c in D['conflicts']],responsive=True)),('order','자료 우선순위','<p>최신 대학 course page·official admissions guide, APC·Pharmacy Board, 정부 자료를 우선합니다. 일반 입학 최소기준을 약대 전용 기준으로 대체하지 않으며, 프로그램 코드가 바뀐 경우 이전 점수를 이식하지 않습니다.</p>'),('limits','현재 검증이 남은 범위','<p>여러 대학의 CSAT·SAT·IB·OSSD 환산, 내신·검정고시 인정, 준비과정별 진급조건, 장학 제외목록, 공식 숙소 요금이 확인 중입니다. 비교 결과에서는 해당 조건을 충족으로 간주하지 않습니다.</p><p>호주 전용 오픈채팅은 검증된 TNS 채널만 연결합니다.</p>')]
+method_items=[('scope','이 사이트의 비교 범위','<p>한국 학생이 고교 졸업 후 학부 단계부터 약사 과정을 시작할 수 있는 대학을 중심으로 구성합니다. 대학원 전용 과정과 국제학생 대면 모집 확인이 안 된 상품을 확정 진학 옵션으로 표시하지 않습니다.</p>'),('status','정보 상태 읽는 방법',table([(status({'status':s},force=True),t) for s,t in [('confirmed_2027','2027 공식 자료에서 해당 사실을 확인했습니다. 최종 입학허가를 뜻하지 않습니다.'),('latest_published','현재 확인한 최신 공개 자료입니다. 연도가 이전이면 명시하며 2027 확정으로 사용하지 않습니다.'),('pending_2027','2027 확인 중 상태입니다. 미발표, 접근 제한, 적용범위 미검증 또는 본 작업의 대조 미완료를 포함하며 공식 자료가 없다고 단정하지 않습니다.'),('source_conflict','공식 자료 간 수치·적용 범위 차이가 남아 있습니다. 자동 충족 판정에 사용하지 않습니다.')]],['상태','의미'],True)),('conflicts','자료 차이와 후속 확인',table([(E(c['summary']),E(c['decision'])) for c in D['conflicts']],responsive=True)),('order','자료 우선순위','<p>최신 대학 course page·official admissions guide, APC·Pharmacy Board, 정부 자료를 우선합니다. 일반 입학 최소기준을 약대 전용 기준으로 대체하지 않으며, 프로그램 코드가 바뀐 경우 이전 점수를 이식하지 않습니다.</p>'),('limits','현재 검증이 남은 범위','<p>여러 대학의 CSAT·SAT·IB·OSSD 환산, 내신·검정고시 인정, 준비과정별 진급조건, 장학 제외목록, 공식 숙소 요금이 확인 중입니다. 비교 결과에서는 해당 조건을 충족으로 간주하지 않습니다.</p><p>호주 전용 오픈채팅은 검증된 TNS 채널만 연결합니다.</p>')]
 register('/methodology/','자료 기준·2027 업데이트 상태 | TNS 호주약대','호주 약대 정보의 출처 우선순위, 2027 확정·참고·확인 중·자료 차이 상태와 검증이 남은 범위를 설명합니다.',pagehero('자료 기준과 업데이트 상태','비교에 쓰이는 숫자가 어느 연도, 어느 과정의 조건인지 확인할 수 있도록 관리합니다.','자료 기준')+article(method_items))
 
 consult_items=[('prepare','상담 전에 준비하면 좋은 정보','<p>성적표 전체를 공개 공간에 올릴 필요는 없습니다. 먼저 아래 항목을 정리하고, 구체적인 서류 제출은 상담 채널에서 안내받으세요.</p><ul><li>최종 학력과 졸업 예정일</li><li>수능·IB·SAT·A-level·내신 등 보유 성적</li><li>화학·수학·생물·물리 이수 과목과 성적</li><li>영어시험 종류·시험일·overall·각 영역 점수</li><li>희망 입학시기, 준비과정 가능 여부, 예산</li></ul>'),('summary','상담 메모 만들기','<p>아래 메모는 브라우저에서만 작성됩니다. 복사 후 원하는 상담 채널에 직접 전달하세요.</p><div class="consult-prep"><label for="consult-note">상담 메모<textarea id="consult-note">최종 학력 / 졸업 예정일:\n보유 학업 성적:\n수학·화학 등 이수 과목:\n영어 overall / 각 영역:\n희망 입학시기:\n관심 대학 / 입학방법:\n예산 / 궁금한 점:</textarea></label><div><button class="btn" id="copy-note">메모 복사</button></div><p class="small" id="copy-status" role="status"></p></div>')]
