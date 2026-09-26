@@ -18458,6 +18458,46 @@
       "source_year": 2027,
       "source_type": "official_scholarship",
       "verified_date": "2026-09-26"
+    },
+    {
+      "id": "korea-recognized-schools-20260602",
+      "title": "국시원 · 보건복지부장관이 인정하는 외국학교 현황 · 2026-06-02",
+      "url": "https://www.data.go.kr/data/15126577/fileData.do",
+      "source_year": 2026,
+      "source_type": "government",
+      "verified_date": "2026-09-26"
+    },
+    {
+      "id": "korea-foreign-school-process",
+      "title": "보건복지부 · 외국학교 졸업자의 보건의료인국가시험 응시절차",
+      "url": "https://www.mohw.go.kr/menu.es?mid=a10702020300",
+      "source_year": 2026,
+      "source_type": "government",
+      "verified_date": "2026-09-26"
+    },
+    {
+      "id": "korea-pharmacist-exam-current",
+      "title": "국시원 · 약사 직종별 시험정보 · 2026/2027 일정",
+      "url": "https://www.kuksiwon.or.kr/subcnt/c_2009/1/view.do?seq=7&itm_seq=06",
+      "source_year": 2026,
+      "source_type": "government",
+      "verified_date": "2026-09-26"
+    },
+    {
+      "id": "korea-pharmacist-exam-law",
+      "title": "약사법 시행령 · 약사예비시험/국가시험 과목·합격기준",
+      "url": "https://law.go.kr/lsLinkCommonInfo.do?chrClsCd=010202&lspttninfSeq=116746",
+      "source_year": 2026,
+      "source_type": "government",
+      "verified_date": "2026-09-26"
+    },
+    {
+      "id": "adelaide-new-entity-2026",
+      "title": "Adelaide University · new legal entity from UniSA and University of Adelaide",
+      "url": "https://adelaide.edu.au/about/organisational-structure/corporate/finance/suppliers-and-customers/",
+      "source_year": 2026,
+      "source_type": "official_university",
+      "verified_date": "2026-09-26"
     }
   ],
   "conflicts": [
