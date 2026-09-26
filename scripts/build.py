@@ -708,6 +708,110 @@ for u in D['universities']:
             seo=('2027 QUT 약대 · Rank76·Foundation·25% 장학·학비 | TNS','QUT 약대의 4년 과정, Selection Rank 76, Standard·Intensive Foundation, 2027 학비 A$46,200과 25% 장학을 정리합니다.')
         items=[('overview',titles[0],overview),('routes',titles[1],routes),('curriculum',titles[2],curriculum),('cost',titles[3],cost),('after',titles[4],after),('sources','자료 출처',sources(allids))]
         register(purl(p),seo[0],seo[1],body+article(items,'compact-detail'))
+    elif u['id'] in ['rmit','newcastle','canberra','unisq']:
+        uid=u['id']
+        if uid=='rmit':
+            overview='''<div class="monash-snapshot"><p class="lead"><strong>Bundoora에서 공부하는 4년 BPharm(Hons) 과정으로, 2027년 본과 학비는 A$49,920입니다.</strong></p><p>Direct와 Foundation 외에 2년 Associate Degree (Biomedicine)를 거쳐 약대 2학년으로 이어지는 별도 경로가 있습니다. 이 경로는 1년 Diploma가 아니라 총 5년 경로입니다.</p><div class="monash-keyline"><span>4년 BPharm(Hons)</span><span>2027 A$49,920</span><span>Foundation · Associate 경로</span></div></div>'''
+            routes='''<div class="monash-route-grid">
+<article><span class="route-label">DIRECT</span><h3>고졸 → 약대 1학년</h3><div class="route-criteria">
+<div><small>입학조건</small><strong>한국 고교 75% 또는 고교 졸업 + 수능 300 · Chemistry + Mathematics 필수</strong></div>
+<div><small>영어</small><strong>IELTS 7.0 · 각 6.5</strong></div>
+<div><small>입학시기</small><strong>2027년 3월 1일</strong></div>
+</div></article>
+<article><span class="route-label">FOUNDATION</span><h3>Foundation → 약대 1학년</h3><div class="route-criteria">
+<div><small>입학조건</small><strong>Year 11 동등학력 · 평균 50% 또는 Pass · Foundation 65% + Chemistry + Mathematics</strong></div>
+<div><small>영어</small><strong>IELTS 5.5 · 각 5.0</strong></div>
+<div><small>입학시기</small><strong>2월 · 7월</strong></div>
+</div></article>
+<article><span class="route-label">ASSOCIATE DEGREE</span><h3>2년 Associate Degree (Biomedicine) → 약대 2학년</h3><div class="route-criteria">
+<div><small>입학조건</small><strong>Biomedicine 과정 수료 · Pharmacy 진급조건 충족</strong></div>
+<div><small>영어</small><strong>IELTS 7.0 · 각 6.5</strong></div>
+<div><small>입학시기</small><strong>2027년 2월 8일</strong></div>
+</div></article>
+</div>'''
+            curriculum='''<div class="monash-curriculum-grid compact-three">
+<article><span class="year">4년</span><h3>약학·생명과학 기초부터 임상까지</h3><p>의약품과 인체과학의 기초를 바탕으로 조제, 환자 상담과 약물치료를 단계적으로 연결합니다.</p></article>
+<article><span class="year">과정 전반</span><h3>실험·실무 중심 학습</h3><p>실험실과 전문 실습 환경에서 약학 지식을 실제 환자 케어와 연결하는 훈련을 진행합니다.</p></article>
+<article><span class="year">졸업 후</span><h3>약사등록 인턴십</h3><p>4년 학사과정 이후 약사등록을 위한 internship과 등록 절차를 별도로 진행하는 구조입니다.</p></article>
+</div>'''
+            cost='''<div class="monash-money-grid">
+<div><small>2027 국제학생 학비</small><strong>A$49,920 / 년</strong><span>Bachelor of Pharmacy (Honours)</span></div>
+<div><small>RMIT Foundation</small><strong>A$34,250</strong><span>2027 전체 학비</span></div>
+<div><small>Associate Degree</small><strong>A$38,400 / 년</strong><span>2027 국제학생 연간 학비</span></div>
+<div><small>약대 신입생 장학금</small><strong>확인 중</strong><span>현재 확정 적용 장학 발표 대기</span></div>
+</div><div class="section-link-list compact-links">'''+link('/tuition-scholarships/','호주 약대 전체 학비·생활비 비교 →')+'''</div>'''
+            after='''<div class="monash-flow"><div><b>4년</b><strong>BPharm(Hons)</strong><span>Bundoora 학사과정</span></div><i>↓</i><div><b>졸업 후</b><strong>약사등록 인턴십</strong><span>학위 밖에서 진행</span></div><i>↓</i><div><b>등록요건</b><strong>시험·심사 완료</strong><span>Pharmacy Board 절차</span></div><i>↓</i><div><b>지역</b><strong>Melbourne</strong><span>Regional 추가 485 없음</span></div></div><div class="section-link-list compact-links">'''+link('/pharmacist-registration/','호주 약사등록 방법 →')+link('/korea-pharmacist/','한국 약사면허 취득 방법 →')+'''</div>'''
+            titles=('RMIT 약대 과정 구조','입학방법 3가지','4년 과정·실습','학비·Pathway 비용','4년 과정과 졸업 후')
+            seo=('2027 RMIT 약대 · 수능300·Foundation·Associate·학비 | TNS','RMIT대학교 약대의 4년 BPharm(Hons), 한국 학생 Direct, Foundation, 2년 Associate Degree 경로와 2027 학비를 정리합니다.')
+        elif uid=='newcastle':
+            overview='''<div class="monash-snapshot"><p class="lead"><strong>Newcastle에서 공부하는 4년 BPharm(Hons) 과정으로, 2027년 국제학생 학비는 A$51,665입니다.</strong></p><p>고졸 Direct 외에 Newcastle International College Foundation을 거쳐 약대 1학년으로 진학할 수 있습니다. Newcastle은 Regional Category 2 지역입니다.</p><div class="monash-keyline"><span>4년 BPharm(Hons)</span><span>2027 A$51,665</span><span>Foundation 경로</span></div></div>'''
+            routes='''<div class="monash-route-grid compact-route-grid two">
+<article><span class="route-label">DIRECT</span><h3>고졸 → 약대 1학년</h3><div class="route-criteria">
+<div><small>입학조건</small><strong>IB 28 · 기타 국제학력은 Newcastle 환산기준 적용</strong></div>
+<div><small>영어</small><strong>준비 기준 IELTS 7.0 · 각 7.0</strong></div>
+<div><small>입학시기</small><strong>2027년 2월 22일</strong></div>
+</div></article>
+<article><span class="route-label">FOUNDATION</span><h3>고2 → Foundation → 약대 1학년</h3><div class="route-criteria">
+<div><small>입학조건</small><strong>한국 고2 수료 · 진급 전체 65% + Academic English A&amp;B 평균 75%</strong></div>
+<div><small>영어</small><strong>IELTS 5.5 · 각 5.0</strong></div>
+<div><small>입학시기</small><strong>2027년 2월</strong></div>
+</div></article>
+</div><div class="monash-scholarship-note"><strong>영어점수는 지원 전 재확인</strong><span>공식자료 두 기준이 함께 공개 중</span><p>2027 Degree Guide와 영어정책표는 IELTS 6.5(각 6.5), 현재 국제학생 과정 페이지는 7.0(각 7.0)을 안내합니다. 현재는 안전하게 7.0(각 7.0)을 준비 기준으로 표시하고, 실제 지원 전 대학의 최종 적용기준을 다시 확인합니다.</p></div>'''
+            curriculum='''<div class="monash-curriculum-grid compact-three">
+<article><span class="year">4년</span><h3>약학 기초부터 임상실무까지</h3><p>기초과학과 의약품 지식을 시작으로 약물치료, 환자 상담과 임상적 의사결정을 단계적으로 배웁니다.</p></article>
+<article><span class="year">실무</span><h3>현장 중심 Pharmacy 학습</h3><p>실제 약학 환경과 연결된 학습을 통해 community와 hospital을 포함한 다양한 약사 역할을 준비합니다.</p></article>
+<article><span class="year">Honours</span><h3>연구와 전문역량</h3><p>Honours 학위 안에서 연구·근거기반 실무 역량을 함께 강화합니다.</p></article>
+</div>'''
+            cost='''<div class="monash-money-grid compact-three-money">
+<div><small>2027 국제학생 학비</small><strong>A$51,665 / 년</strong><span>공식 2027 International Guide</span></div>
+<div><small>CIE Foundation</small><strong>A$31,400</strong><span>2027 프로그램 학비</span></div>
+<div><small>International Excellence 20%</small><strong>Pharmacy 제외</strong><span>약대에는 적용하지 않음</span></div>
+</div><div class="section-link-list compact-links">'''+link('/tuition-scholarships/','호주 약대 전체 학비·생활비 비교 →')+'''</div>'''
+            after='''<div class="monash-flow"><div><b>4년</b><strong>BPharm(Hons)</strong><span>Newcastle 학사과정</span></div><i>↓</i><div><b>졸업 후</b><strong>약사등록 절차</strong><span>인턴·ITP 등 최종 요건 확인</span></div><i>↓</i><div><b>등록요건</b><strong>시험·심사 완료</strong><span>Pharmacy Board 절차</span></div><i>↓</i><div><b>지역</b><strong>Newcastle</strong><span>Regional Category 2</span></div></div><div class="section-link-list compact-links">'''+link('/pharmacist-registration/','호주 약사등록 방법 →')+link('/korea-pharmacist/','한국 약사면허 취득 방법 →')+'''</div>'''
+            titles=('Newcastle 약대 과정 구조','입학방법 2가지','4년 과정·실습','학비·Foundation','4년 과정과 졸업 후')
+            seo=('2027 Newcastle 약대 · IB28·Foundation·학비·영어 | TNS','뉴캐슬대학교 약대의 4년 BPharm(Hons), Direct·Foundation 입학, 2027 학비 A$51,665와 영어기준 공식자료 차이를 정리합니다.')
+        elif uid=='canberra':
+            overview='''<div class="monash-snapshot"><p class="lead"><strong>Canberra에서 공부하는 4년 Bachelor of Pharmacy 과정으로, 2027 Selection Rank는 75입니다.</strong></p><p>2027년 Semester 1에 시작하며 수학과 과학은 필수 prerequisite가 아니라 assumed knowledge로 안내됩니다. Canberra는 Regional Category 2 지역입니다.</p><div class="monash-keyline"><span>4년 Bachelor</span><span>Selection Rank 75</span><span>Canberra Regional</span></div></div>'''
+            routes='''<div class="monash-route-grid compact-route-grid"><article class="full"><span class="route-label">DIRECT</span><h3>고졸 → 약대 1학년</h3><div class="route-criteria">
+<div><small>입학조건</small><strong>Selection Rank 75 · Mathematics + Biology/Human Movement + Chemistry/Physics 선행지식</strong></div>
+<div><small>영어</small><strong>IELTS 7.0 · 각 7.0</strong></div>
+<div><small>입학시기</small><strong>2027년 2월 15일</strong></div>
+</div></article></div>'''
+            curriculum='''<div class="monash-curriculum-grid compact-three">
+<article><span class="year">4년</span><h3>약학과 임상역량 통합</h3><p>의약품과 인체과학을 배우고 환자 상담, 의약품 사용과 임상적 의사결정으로 학습을 확장합니다.</p></article>
+<article><span class="year">실습</span><h3>Clinical placement</h3><p>Community·Hospital과 다양한 보건환경에서 실제 실무를 경험하도록 현장실습이 포함됩니다.</p></article>
+<article><span class="year">선택</span><h3>Honours option</h3><p>학업 진행에 따라 Honours 경로를 선택할 수 있는 Bachelor of Pharmacy 구조입니다.</p></article>
+</div>'''
+            cost='''<div class="monash-money-grid compact-three-money">
+<div><small>2027 국제학생 학비</small><strong>확인 중</strong><span>2027 금액 발표 후 반영</span></div>
+<div><small>현재 공식 학비 참고</small><strong>A$42,500 / 년</strong><span>2026 Annual Fee</span></div>
+<div><small>2027 국제학생 장학금</small><strong>자동심사 · 10~30%</strong><span>입학 지원과 함께 심사</span></div>
+</div><div class="section-link-list compact-links">'''+link('/tuition-scholarships/','호주 약대 전체 학비·생활비 비교 →')+'''</div>'''
+            after='''<div class="monash-flow"><div><b>4년</b><strong>Bachelor of Pharmacy</strong><span>Canberra 학사과정</span></div><i>↓</i><div><b>졸업 후</b><strong>약사등록 절차</strong><span>최종 등록요건 확인</span></div><i>↓</i><div><b>등록요건</b><strong>시험·심사 완료</strong><span>Pharmacy Board 절차</span></div><i>↓</i><div><b>지역</b><strong>Canberra</strong><span>Regional Category 2</span></div></div><div class="section-link-list compact-links">'''+link('/pharmacist-registration/','호주 약사등록 방법 →')+link('/korea-pharmacist/','한국 약사면허 취득 방법 →')+'''</div>'''
+            titles=('Canberra 약대 과정 구조','입학방법','4년 과정·실습','학비·장학금','4년 과정과 졸업 후')
+            seo=('2027 Canberra 약대 · Rank75·IELTS7.0·장학금 | TNS','캔버라대학교 약대의 4년 Bachelor of Pharmacy, 2027 Selection Rank 75, IELTS 7.0, assumed knowledge와 국제학생 장학을 정리합니다.')
+        else:
+            overview='''<div class="monash-snapshot"><p class="lead"><strong>2027년 국제학생은 Toowoomba에서 4년 BPharm(Hons)으로 시작합니다. 3년 Accelerated Pharmacy는 2028년부터입니다.</strong></p><p>이론 일부는 유연하게 온라인으로 공부할 수 있지만, on-campus residential school과 임상실습이 포함돼 있어 완전 온라인 약대는 아닙니다.</p><div class="monash-keyline"><span>2027은 4년</span><span>2028부터 3년 Accelerated</span><span>Toowoomba Regional</span></div></div>'''
+            routes='''<div class="monash-route-grid compact-route-grid"><article class="full"><span class="route-label">DIRECT</span><h3>고졸 → 약대 1학년</h3><div class="route-criteria">
+<div><small>입학조건</small><strong>Mathematics + Biology/Chemistry/Physics 중 1과목 선행지식</strong></div>
+<div><small>영어</small><strong>IELTS 7.0 · Speaking/Reading/Listening 7.0 · Writing 6.5</strong></div>
+<div><small>입학시기</small><strong>2027년 2월 15일</strong></div>
+</div></article></div>'''
+            curriculum='''<div class="monash-curriculum-grid compact-three">
+<article><span class="year">32 units</span><h3>4년 Honours 과정</h3><p>2027 과정은 32 units를 4년에 이수하는 Bachelor of Pharmacy (Honours) 구조입니다.</p></article>
+<article><span class="year">유연한 학습</span><h3>온라인 이론 + 캠퍼스 집중수업</h3><p>온라인 학습을 활용하지만 trimester별 on-campus residential school에서 실험·실습을 진행해야 합니다.</p></article>
+<article><span class="year">현장</span><h3>Clinical placement</h3><p>약학 실무를 실제 환경에서 경험하는 placement가 포함되며, 학위만 온라인으로 끝내는 과정은 아닙니다.</p></article>
+</div>'''
+            cost='''<div class="monash-money-grid compact-three-money">
+<div><small>2027 국제학생 학비</small><strong>확인 중</strong><span>공식 2027 금액 발표 후 반영</span></div>
+<div><small>현재 공식 학비 참고</small><strong>A$34,280 / 년</strong><span>2026 estimated annual fee</span></div>
+<div><small>2027 International Student Support</small><strong>자동심사 · 10%</strong><span>학업기간 학비 감면</span></div>
+</div><div class="section-link-list compact-links">'''+link('/tuition-scholarships/','호주 약대 전체 학비·생활비 비교 →')+'''</div>'''
+            after='''<div class="monash-flow"><div><b>2027</b><strong>4년 BPharm(Hons)</strong><span>Toowoomba</span></div><i>↓</i><div><b>졸업 후</b><strong>약사등록 인턴십</strong><span>학위 밖에서 진행</span></div><i>↓</i><div><b>등록요건</b><strong>시험·심사 완료</strong><span>Pharmacy Board 절차</span></div><i>↓</i><div><b>지역</b><strong>Toowoomba</strong><span>Regional Category 3</span></div></div><div class="monash-scholarship-note"><strong>3년 과정은 2028년부터</strong><span>2027 신입생에게 적용하지 않음</span><p>Accelerated Pharmacy는 2028년부터 시작합니다. 2027 국제학생 입학은 4년 과정으로 안내합니다.</p></div><div class="section-link-list compact-links">'''+link('/pharmacist-registration/','호주 약사등록 방법 →')+link('/korea-pharmacist/','한국 약사면허 취득 방법 →')+'''</div>'''
+            titles=('UniSQ 약대 과정 구조','입학방법','4년 과정·실습','학비·장학금','2027 과정과 졸업 후')
+            seo=('2027 UniSQ 약대 · 4년·2028 3년 Accelerated·10% 장학 | TNS','UniSQ 약대의 2027년 4년 BPharm(Hons), 2028년 3년 Accelerated 전환, 온라인·캠퍼스 집중수업 구조, 영어와 10% 장학을 정리합니다.')
+        items=[('overview',titles[0],overview),('routes',titles[1],routes),('curriculum',titles[2],curriculum),('cost',titles[3],cost),('after',titles[4],after),('sources','자료 출처',sources(allids))]
+        register(purl(p),seo[0],seo[1],body+article(items,'compact-detail'))
     else:
         items=[('overview','이 약대 핵심',intro),('structure','과정·학위 구조',anatomy),('routes','입학방법',routes_html),('admission','Direct 입학조건','<h3>학력·성적</h3>'+qtable(pid)+'<h3>선수과목</h3>'+requirements_html+'<h3>영어</h3>'+english_html+'<h3>입학시기</h3>'+fv(it['label'])+'<p class="small">Foundation·Diploma 일정은 위 ‘입학방법’에서 바로 볼 수 있습니다.</p>'),('cost','학비·장학금·생활비','<h3>학비</h3>'+fees+'<h3>장학금</h3>'+scholarcards(ss)+'<h3>기숙사·숙소</h3>'+housingcards(hh)+'<h3>1년 예산</h3>'+costcalculator()),('poststudy','졸업 후 485·지역',poststudy_html(u)),('registration','호주 약사등록',registration_html),('korea','한국 약사면허','<p>호주 약대 졸업만으로 한국 약사면허가 자동으로 나오지 않습니다. 대학 인정, 호주 면허, 예비시험·국가시험을 따로 거칩니다.</p>'+link('/korea-pharmacist/','한국 약사면허 확인 순서 →','btn text')),('faq','자주 묻는 질문',faq(fs)),('sources','자료 출처',sources(allids))]
         register(purl(p),f'2027 {u["name_ko"]} 약대 완전분석 · 입학·학비·485 | TNS',u['name']+' Pharmacy의 과정기간, 입학방법, 선수과목, 학비·장학금, 인턴십, 485 지역조건과 약사등록을 정리합니다.',body+article(items),fs)
