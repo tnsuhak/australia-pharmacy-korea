@@ -352,6 +352,15 @@ for u in D['universities']:
             intake_main='3월 · 7월'; intake_note='2026 공식 참고'; english_main='IELTS 7.0'
         scholar_main=('자동심사 · '+str(value(main_scholar['amount']))+'%') if main_scholar else '확인 중'
         scholar_note=(value(main_scholar['duration']) if main_scholar else '')
+        if u['id']=='utas':
+            scholar_main='30% 자동 · 최대 50%'
+            scholar_note='50% Aurora · 경쟁선발'
+        elif u['id']=='curtin':
+            scholar_main='20% 자동 · 최대 40%'
+            scholar_note='40% · CWA 95% 상당 · 자동심사'
+        elif u['id']=='griffith':
+            scholar_main='20% 자동 · 최대 50%'
+            scholar_note='50% Vice Chancellor · 경쟁선발'
         extra='''<div class="facts-grid monash-hero-facts">
 <div class="fact-tile"><small>과정</small><strong>'''+E(value(p['duration_label']))+'''</strong></div>
 <div class="fact-tile"><small>캠퍼스</small><strong>'''+E(value(u['campus']))+'''</strong></div>
@@ -450,7 +459,7 @@ for u in D['universities']:
         main_scholar=ss[0] if ss else None
         uid=u['id']
         if uid=='jcu':
-            overview='''<div class="monash-snapshot"><p class="lead"><strong>3년 Fast-track으로 학위를 마치고, 1학년부터 현장실습을 시작합니다.</strong></p><p>Townsville·Cairns·Mackay 세 캠퍼스에서 운영되며 전체 과정에 904시간의 placement가 포함됩니다.</p><div class="monash-keyline"><span>3년 Fast-track</span><span>904시간 Placement</span><span>Regional 3캠퍼스</span></div></div>'''
+            overview='''<div class="monash-snapshot"><p class="lead"><strong>3년 Fast-track으로 학위를 마치고, 1학년부터 현장실습을 시작합니다.</strong></p><p>Townsville·Cairns·Mackay 세 캠퍼스에서 운영되며 전체 과정에 904시간의 임상실습이 포함됩니다.</p><div class="monash-keyline"><span>3년 Fast-track</span><span>904시간 임상실습</span><span>Regional 3캠퍼스</span></div></div>'''
             routes='''<div class="monash-route-grid compact-route-grid"><article class="full"><span class="route-label">DIRECT</span><h3>고졸 → 약대 1학년</h3><div class="route-criteria">
 <div><small>입학조건</small><strong>ATAR / Rank 76 · IB 27 · SAT 1020 · General Mathematics 필수 · Chemistry 권장 · 한국 수능/내신 확인 중</strong></div>
 <div><small>영어</small><strong>IELTS 7.0 · 각 6.5</strong></div>
@@ -459,7 +468,7 @@ for u in D['universities']:
             curriculum='''<div class="monash-curriculum-grid compact-three">
 <article><span class="year">1학년</span><h3>과학·임상 기초 + 실습 시작</h3><p>Chemistry·Biology·Physiology·Pharmacology·Anatomy를 약국 실무와 연결합니다. 고교 Chemistry가 부족한 학생은 Preparatory Chemistry로 보완할 수 있습니다.</p></article>
 <article><span class="year">2학년부터</span><h3>임상적 판단 + 연구·실무</h3><p>각 trimester에서 practice-based·research-focused 학습을 결합해 임상적 추론과 일반 질환의 치료 판단을 강화합니다.</p></article>
-<article><span class="year">최종학년</span><h3>실제 임상현장 집중</h3><p>Community·Hospital·Regional·Remote 환경에서 실무를 경험합니다. 과정 전체 placement는 904시간입니다.</p></article>
+<article><span class="year">최종학년</span><h3>실제 임상현장 집중</h3><p>Community·Hospital·Regional·Remote 환경에서 실무를 경험합니다. 과정 전체 임상실습은 904시간입니다.</p></article>
 </div>'''
             cost='''<div class="monash-money-grid">
 <div><small>2027 국제학생 학비</small><strong>확인 중</strong><span>현재 공식 페이지: 2026 A$31,710 참고</span></div>
@@ -472,7 +481,7 @@ for u in D['universities']:
             seo=('2027 JCU 약대 · 3년 Fast-track·입학조건·장학금 | TNS','제임스쿡대학교 약대의 3년 Fast-track, 904시간 placement, Direct 입학조건, 국제학생 장학금과 졸업 후 등록을 정리합니다.')
         elif uid=='utas':
             standard=next(x for x in rs if x['id']=='utas-foundation-standard'); fast=next(x for x in rs if x['id']=='utas-foundation-fast')
-            overview='''<div class="monash-snapshot"><p class="lead"><strong>일반적인 4년 약학과 분량을 Semester 1·2와 Spring까지 활용해 3년에 마치는 Fast-track 과정입니다.</strong></p><p>Cradle Coast·Hobart·Launceston에서 운영되며, 1학년부터 시작하는 Professional Experience Placement가 최소 400시간 포함됩니다.</p><div class="monash-keyline"><span>3년 Fast-track</span><span>최소 400시간 PEP</span><span>Tasmania 3캠퍼스</span></div></div>'''
+            overview='''<div class="monash-snapshot"><p class="lead"><strong>일반적인 4년 약학과 분량을 Semester 1·2와 Spring까지 활용해 3년에 마치는 Fast-track 과정입니다.</strong></p><p>Cradle Coast·Hobart·Launceston에서 운영되며, 1학년부터 시작하는 현장실습(PEP)이 최소 400시간 포함됩니다.</p><div class="monash-keyline"><span>3년 Fast-track</span><span>최소 400시간 현장실습</span><span>Tasmania 3캠퍼스</span></div></div>'''
             routes='''<div class="monash-route-grid">
 <article><span class="route-label">DIRECT</span><h3>고졸 → 약대 1학년</h3><div class="route-criteria">
 <div><small>입학조건</small><strong>수능 305 · IB 25 · A-Level 8 · OSSD 70% · SAT 980 · Mathematics + Chemistry/Physical Sciences 필수</strong></div>
@@ -492,7 +501,7 @@ for u in D['universities']:
 </div>'''
             curriculum='''<div class="monash-curriculum-grid compact-three">
 <article><span class="year">3년 구조</span><h3>Semester 1 · 2 + Spring</h3><p>세 개 study period를 활용해 400 credit points의 약학 Honours 과정을 3년에 완료합니다.</p></article>
-<article><span class="year">1학년부터</span><h3>Community·Hospital 실습</h3><p>Professional Experience Placement가 첫해부터 시작되며 전체 과정에서 최소 400시간을 이수합니다.</p></article>
+<article><span class="year">1학년부터</span><h3>Community·Hospital 실습</h3><p>현장실습(PEP)이 첫해부터 시작되며 전체 과정에서 최소 400시간을 이수합니다.</p></article>
 <article><span class="year">최종학년</span><h3>현장집중 + 연구 프로젝트</h3><p>최종학년 두 번째 semester에는 장기간 PEP와 다학제 medication management, 실제 healthcare research project를 수행합니다.</p></article>
 </div>'''
             cost='''<div class="monash-money-grid">
@@ -500,13 +509,13 @@ for u in D['universities']:
 <div><small>예상 총학비</small><strong>A$198,050</strong><span>대학 공식 indicative total</span></div>
 <div><small>국제학생 장학금</small><strong>자동심사 · 30%</strong><span>Tasmanian International Merit</span></div>
 <div><small>기숙사 참고</small><strong>A$316 / 주</strong><span>Christ / John Fisher · 2027</span></div>
-</div><div class="section-link-list compact-links">'''+link('/tuition-scholarships/','호주 약대 전체 학비·생활비 비교 →')+'''</div>'''
-            after='''<div class="monash-flow"><div><b>3년</b><strong>BPharm(Hons)</strong><span>Fast-track 학사 완료</span></div><i>↓</i><div><b>졸업 후</b><strong>Paid internship</strong><span>Pre-registration intern year</span></div><i>↓</i><div><b>호주 약사등록</b><strong>등록요건 완료</strong><span>General Registration</span></div><i>↓</i><div><b>지역</b><strong>Tasmania</strong><span>Regional 체류조건 별도 확인</span></div></div><div class="section-link-list compact-links">'''+link('/pharmacist-registration/','호주 약사등록 방법 →')+link('/korea-pharmacist/','한국 약사면허 취득 방법 →')+'''</div>'''
+</div>'''+callout('<strong>최대 50% 경쟁 장학도 있습니다.</strong> Tasmanian Aurora Excellence Scholarship은 2027 신입 국제학생 대상이며 Pharmacy도 포함됩니다. 한국 학력표 기준 최소 CSAT 357이며, 초청 후 별도 지원·면접으로 경쟁 선발합니다.')+'''<div class="section-link-list compact-links">'''+link('/tuition-scholarships/','호주 약대 전체 학비·생활비 비교 →')+'''</div>'''
+            after='''<div class="monash-flow"><div><b>3년</b><strong>BPharm(Hons)</strong><span>Fast-track 학사 완료</span></div><i>↓</i><div><b>졸업 후</b><strong>유급 인턴십</strong><span>졸업 후 등록 인턴과정</span></div><i>↓</i><div><b>호주 약사등록</b><strong>등록요건 완료</strong><span>General Registration</span></div><i>↓</i><div><b>지역</b><strong>Tasmania</strong><span>Regional 체류조건 별도 확인</span></div></div><div class="section-link-list compact-links">'''+link('/pharmacist-registration/','호주 약사등록 방법 →')+link('/korea-pharmacist/','한국 약사면허 취득 방법 →')+'''</div>'''
             titles=('UTas 약대 과정 구조','입학방법 3가지','3년 커리큘럼·실습','학비·장학금·생활비','3년 과정과 졸업 후')
             seo=('2027 UTas 약대 · 3년 Fast-track·30% 장학·학비 | TNS','태즈메이니아대학교 약대의 3년 Fast-track, Direct·Foundation 입학조건, 2027 학비, 30% 국제학생 장학과 실습을 정리합니다.')
         elif uid=='curtin':
             diploma=next(x for x in rs if x['id']=='curtin-college')
-            overview='''<div class="monash-snapshot"><p class="lead"><strong>3년 9개월에 BPharm(Hons)을 마친 뒤, 약사등록을 위한 professional internship은 졸업 후 별도로 진행합니다.</strong></p><p>Direct 외에 Curtin College Pharmacy Diploma를 마치고 학점을 인정받아 약대 2학년으로 이어지는 경로가 분명한 학교입니다.</p><div class="monash-keyline"><span>3년 9개월</span><span>1학년 Diploma → 약대 2학년</span><span>Perth · Bentley</span></div></div>'''
+            overview='''<div class="monash-snapshot"><p class="lead"><strong>3년 9개월 BPharm(Hons) 후, 약사등록으로 가는 길이 두 가지입니다.</strong></p><p>졸업 후 기존 인턴십으로 가거나, 2029년부터 시작 예정인 1년 3개월 Doctor of Pharmacy로 이어갈 수 있습니다. Direct 외에 Curtin College Diploma를 거쳐 약대 2학년으로 진학하는 경로도 있습니다.</p><div class="monash-keyline"><span>3년 9개월</span><span>1학년 Diploma → 약대 2학년</span><span>2029 PharmD 선택경로</span></div></div>'''
             routes='''<div class="monash-route-grid compact-route-grid two">
 <article><span class="route-label">DIRECT</span><h3>고졸 → 약대 1학년</h3><div class="route-criteria">
 <div><small>입학조건</small><strong>ATAR / Rank 80 · Chemistry + Mathematics 필수 · Biology / Human Biology 권장</strong></div>
@@ -522,16 +531,27 @@ for u in D['universities']:
             curriculum='''<div class="monash-curriculum-grid compact-three">
 <article><span class="year">초반</span><h3>약학·인체과학 기초</h3><p>Biochemistry·Physiology와 Pharmacy Practice를 바탕으로 의약품과 환자 케어의 기초를 만듭니다.</p></article>
 <article><span class="year">과정 전반</span><h3>실험·시뮬레이션·실무 중심</h3><p>실험실 학습, simulated pharmacy와 hands-on project를 통해 실제 약국 업무와 임상적 판단을 연결합니다.</p></article>
-<article><span class="year">3년 9개월 후</span><h3>BPharm(Hons) 완료</h3><p>학사 완료 후 약사등록을 위한 professional internship을 별도로 진행하는 구조입니다.</p></article>
+<article><span class="year">최종학년</span><h3>8주 전문 현장실습</h3><p>1학년 반일 실습, 2·3학년 1주 실습을 거쳐 최종학년에 8주 professional placement를 진행합니다.</p></article>
 </div>'''
             cost='''<div class="monash-money-grid compact-three-money">
 <div><small>2027 본과 국제학생 학비</small><strong>확인 중</strong><span>공식 2027 본과 금액 발표 후 반영</span></div>
 <div><small>국제학생 장학금</small><strong>자동심사 · 20%</strong><span>Curtin Global Merit · 과정 기간</span></div>
 <div><small>Curtin College Stage 2</small><strong>A$44,900</strong><span>2027 Pharmacy Diploma 학비</span></div>
-</div><div class="section-link-list compact-links">'''+link('/tuition-scholarships/','호주 약대 전체 학비·생활비 비교 →')+'''</div>'''
-            after='''<div class="monash-flow"><div><b>3년 9개월</b><strong>BPharm(Hons)</strong><span>학사 완료</span></div><i>↓</i><div><b>졸업 후</b><strong>Professional internship</strong><span>등록용 internship·ITP는 학위 밖</span></div><i>↓</i><div><b>호주 약사등록</b><strong>시험·심사 완료</strong><span>General Registration</span></div><i>↓</i><div><b>지역</b><strong>Perth</strong><span>Regional Category 2</span></div></div><div class="section-link-list compact-links">'''+link('/pharmacist-registration/','호주 약사등록 방법 →')+link('/korea-pharmacist/','한국 약사면허 취득 방법 →')+'''</div>'''
-            titles=('커틴 약대 과정 구조','입학방법 2가지','3년 9개월 과정·실습','학비·장학금','3년 9개월 과정과 졸업 후')
-            seo=('2027 커틴 약대 · 3년9개월·Diploma·20% 장학 | TNS','커틴대학교 약대의 3년 9개월 과정, Direct와 Curtin College 2학년 진학, 20% 국제학생 장학과 졸업 후 인턴십을 정리합니다.')
+</div>'''+callout('<strong>성적이 매우 높다면 최대 40%.</strong> John Curtin Global Excellence Scholarship은 2027 WA 캠퍼스 국제학생을 자동심사하며 Pharmacy도 포함됩니다. 최근 학업 CWA 95% 또는 동등 성적이 기준입니다.')+'''<div class="section-link-list compact-links">'''+link('/tuition-scholarships/','호주 약대 전체 학비·생활비 비교 →')+'''</div>'''
+            after='''<div class="monash-route-grid compact-route-grid two">
+<article><span class="route-label">선택 1</span><h3>BPharm 졸업 → 기존 인턴 경로</h3><div class="route-criteria">
+<div><small>학위</small><strong>3년 9개월 BPharm(Hons)</strong></div>
+<div><small>졸업 후</small><strong>등록 인턴십 + 인턴 교육과정</strong></div>
+<div><small>마지막</small><strong>등록시험·요건 완료 → 정식 약사등록</strong></div>
+</div></article>
+<article><span class="route-label">선택 2 · 2029 시작 예정</span><h3>BPharm 졸업 → Doctor of Pharmacy</h3><div class="route-criteria">
+<div><small>기간</small><strong>1년 3개월 · 4 trimesters</strong></div>
+<div><small>실무</small><strong>1년 통합 인턴십 포함</strong></div>
+<div><small>현재 상태</small><strong>APC 인증·Pharmacy Board 승인 대기</strong></div>
+</div></article>
+</div>'''+callout('<strong>중요:</strong> Doctor of Pharmacy는 2029년 첫 intake가 예정돼 있지만 현재 인증·승인 절차가 진행 중입니다. 확정된 등록 면제 경로처럼 보지 않습니다.')+'''<div class="section-link-list compact-links">'''+link('/pharmacist-registration/','호주 약사등록 방법 →')+link('/korea-pharmacist/','한국 약사면허 취득 방법 →')+'''</div>'''
+            titles=('커틴 약대 과정 구조','입학방법 2가지','3년 9개월 과정·실습','학비·장학금','졸업 후 2가지 경로')
+            seo=('2027 커틴 약대 · 3년9개월·Diploma·2029 PharmD | TNS','커틴대학교 약대의 3년 9개월 과정, Curtin College 2학년 진학, 최대 40% 장학과 2029 Doctor of Pharmacy 선택경로를 정리합니다.')
         else:
             foundation=next(x for x in rs if x['id']=='griffith-foundation')
             diploma=next(x for x in rs if x['id']=='griffith-college')
@@ -552,7 +572,7 @@ for u in D['universities']:
 <div><small>영어</small><strong>IELTS 6.5 · 각 6.0</strong></div>
 <div><small>입학시기</small><strong>2027년 3월 1일 · 6월 27일 · 10월 5일</strong></div>
 </div></article>
-</div>'''
+</div>'''+callout('<strong>2027 Rank 76은 확정.</strong> 수능 331 · IB 28 · A-Level 7 · SAT 1080은 현재 공개된 국제학력 환산 기준을 참고한 값이며, 2027 국제학력 환산표가 갱신되면 다시 확인합니다.')+'''
             curriculum='''<div class="monash-curriculum-grid compact-three">
 <article><span class="year">4년</span><h3>총 320CP Honours 과정</h3><p>Gold Coast에서 운영되는 4년 Bachelor of Pharmacy (Honours) 과정입니다.</p></article>
 <article><span class="year">초반</span><h3>Health Science·생물화학 기초</h3><p>기초 건강과학과 Chemistry of Biological Systems 등을 바탕으로 Pharmacy 학습을 시작합니다.</p></article>
@@ -563,7 +583,7 @@ for u in D['universities']:
 <div><small>국제학생 장학금</small><strong>자동심사 · 20%</strong><span>International Academic Merit</span></div>
 <div><small>장학 성적기준</small><strong>GPA 4.5 / 7 상당</strong><span>별도 장학 신청 없음</span></div>
 <div><small>Gold Coast 숙소</small><strong>A$329.85 / 주부터</strong><span>Griffith University Village · 2027</span></div>
-</div><div class="section-link-list compact-links">'''+link('/tuition-scholarships/','호주 약대 전체 학비·생활비 비교 →')+'''</div>'''
+</div>'''+callout('<strong>최대 50% 경쟁 장학도 있습니다.</strong> Vice Chancellor’s International Scholarship은 2027 신입 국제학생이 별도 지원하는 장학으로, GPA 6.0/7 또는 동등 성적이 최소기준이며 Pharmacy도 제외과정이 아닙니다.')+'''<div class="section-link-list compact-links">'''+link('/tuition-scholarships/','호주 약대 전체 학비·생활비 비교 →')+'''</div>'''
             after='''<div class="monash-flow"><div><b>4년</b><strong>BPharm(Hons)</strong><span>학사 완료</span></div><i>↓</i><div><b>졸업 후</b><strong>등록 인턴십·ITP</strong><span>약사등록 요건 별도 이수</span></div><i>↓</i><div><b>호주 약사등록</b><strong>시험·심사 완료</strong><span>General Registration</span></div><i>↓</i><div><b>지역</b><strong>Gold Coast</strong><span>Regional Category 2</span></div></div><div class="section-link-list compact-links">'''+link('/pharmacist-registration/','호주 약사등록 방법 →')+link('/korea-pharmacist/','한국 약사면허 취득 방법 →')+'''</div>'''
             titles=('그리피스 약대 과정 구조','입학방법 3가지','4년 과정 한눈에 보기','학비·장학금·생활비','4년 과정과 졸업 후')
             seo=('2027 그리피스 약대 · Direct·Foundation·Diploma·20% 장학 | TNS','그리피스대학교 약대의 4년 과정, Direct 입학, Foundation→Diploma 경로, 1학년 Health Sciences Diploma→약대 2학년, 20% 국제학생 장학을 정리합니다.')

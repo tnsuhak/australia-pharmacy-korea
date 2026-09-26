@@ -547,7 +547,8 @@
         "why": [
           "3년 Fast-track",
           "Tasmania 지역혜택",
-          "2027 국제학생 장학 30% 자동심사"
+          "2027 국제학생 장학 30% 자동심사",
+          "최대 50% Aurora 경쟁 장학"
         ],
         "watch": [
           "3년 압축과정이라 학업 일정이 촘촘함",
@@ -662,21 +663,34 @@
         "Curtin College → 2학년",
         "Perth · Regional"
       ],
-      "editorial": "Curtin BPharm(Hons)은 3년 9개월 과정입니다. Direct 기준은 ATAR 80, Chemistry와 Mathematics, IELTS 7.0(각 7.0)입니다. 2027 본과 학비와 국제학생 시작일은 아직 미확정입니다.",
+      "editorial": "Curtin BPharm(Hons)은 3년 9개월 과정입니다. Direct와 Curtin College Diploma→약대 2학년 경로가 있고, 학사 졸업 후 일반 인턴 경로 또는 2029년부터 신설 예정인 1년 3개월 Doctor of Pharmacy 경로를 선택할 수 있습니다.",
       "review_items": [
         "2027 본과 학비",
-        "2027 국제학생 시작일"
+        "2027 국제학생 시작일",
+        "2029 Doctor of Pharmacy APC 인증·Board 승인"
       ],
       "decision_lens": {
         "why": [
           "3년 9개월",
           "Curtin College Diploma 후 약대 2학년",
-          "2027 Curtin College Stage 2 A$44,900"
+          "2029부터 1년 3개월 PharmD 선택경로"
         ],
         "watch": [
           "2027 본과 학비·시작일 미확정",
-          "Stage 1이 필요한 학생은 A$32,900 추가"
+          "Stage 1이 필요한 학생은 A$32,900 추가",
+          "PharmD는 APC 인증·Pharmacy Board 승인 대기"
         ]
+      },
+      "future_pathway": {
+        "value": "Doctor of Pharmacy · 1년 3개월 / 4 trimesters · 2029 첫 intake · 1년 통합 인턴십",
+        "academic_year": 2029,
+        "source_year": 2029,
+        "source_id": "curtin-pharmd-2029",
+        "source_url": "https://www.curtin.edu.au/study/offering/course-pg-doctor-of-pharmacy--mx-pharm/",
+        "source_type": "official_course",
+        "verified_date": "2026-09-27",
+        "status": "latest_published",
+        "note": "APC accreditation 및 Pharmacy Board approval 신청 중. 승인 전 확정 등록경로로 표현하지 않음."
       }
     },
     {
@@ -1040,7 +1054,8 @@
         "why": [
           "Griffith College Diploma → 약대 2학년",
           "Gold Coast Regional",
-          "2027 International Academic Merit 20%"
+          "2027 International Academic Merit 20%",
+          "최대 50% Vice Chancellor 경쟁 장학"
         ],
         "watch": [
           "Direct 점수는 현재 2026 공식값 사용",
@@ -15031,6 +15046,393 @@
         "note": ""
       },
       "note": "학비 100% 지원. 연 4명 경쟁선발."
+    },
+    {
+      "id": "utas-aurora",
+      "university_id": "utas",
+      "name": "Tasmanian Aurora Excellence Scholarship",
+      "amount": {
+        "value": 50,
+        "academic_year": 2027,
+        "source_year": 2027,
+        "source_id": "utas-aurora-2027",
+        "source_url": "https://www.utas.edu.au/study/scholarships-fees-and-costs/international-scholarships/tasmanian-aurora-excellence-scholarship",
+        "source_type": "official_scholarship",
+        "verified_date": "2026-09-27",
+        "status": "confirmed_2027",
+        "note": ""
+      },
+      "award_type": "percentage",
+      "assessment": "competitive",
+      "automatic_assessment": {
+        "value": false,
+        "academic_year": 2027,
+        "source_year": 2027,
+        "source_id": "utas-aurora-2027",
+        "source_url": "https://www.utas.edu.au/study/scholarships-fees-and-costs/international-scholarships/tasmanian-aurora-excellence-scholarship",
+        "source_type": "official_scholarship",
+        "verified_date": "2026-09-27",
+        "status": "confirmed_2027",
+        "note": ""
+      },
+      "separate_application": {
+        "value": true,
+        "academic_year": 2027,
+        "source_year": 2027,
+        "source_id": "utas-aurora-2027",
+        "source_url": "https://www.utas.edu.au/study/scholarships-fees-and-costs/international-scholarships/tasmanian-aurora-excellence-scholarship",
+        "source_type": "official_scholarship",
+        "verified_date": "2026-09-27",
+        "status": "confirmed_2027",
+        "note": ""
+      },
+      "competitive": {
+        "value": true,
+        "academic_year": 2027,
+        "source_year": 2027,
+        "source_id": "utas-aurora-2027",
+        "source_url": "https://www.utas.edu.au/study/scholarships-fees-and-costs/international-scholarships/tasmanian-aurora-excellence-scholarship",
+        "source_type": "official_scholarship",
+        "verified_date": "2026-09-27",
+        "status": "confirmed_2027",
+        "note": ""
+      },
+      "country_eligibility": {
+        "value": true,
+        "academic_year": 2027,
+        "source_year": 2027,
+        "source_id": "utas-aurora-2027",
+        "source_url": "https://www.utas.edu.au/study/scholarships-fees-and-costs/international-scholarships/tasmanian-aurora-excellence-scholarship",
+        "source_type": "official_scholarship",
+        "verified_date": "2026-09-27",
+        "status": "confirmed_2027",
+        "note": ""
+      },
+      "duration": {
+        "value": "학위 전체 기간 · 최대 5년",
+        "academic_year": 2027,
+        "source_year": 2027,
+        "source_id": "utas-aurora-2027",
+        "source_url": "https://www.utas.edu.au/study/scholarships-fees-and-costs/international-scholarships/tasmanian-aurora-excellence-scholarship",
+        "source_type": "official_scholarship",
+        "verified_date": "2026-09-27",
+        "status": "confirmed_2027",
+        "note": ""
+      },
+      "academic_threshold": {
+        "value": "한국 학력표 기준 CSAT 357 · 기타 학력은 Aurora 공식표 기준",
+        "academic_year": 2027,
+        "source_year": 2027,
+        "source_id": "utas-aurora-2027",
+        "source_url": "https://www.utas.edu.au/study/scholarships-fees-and-costs/international-scholarships/tasmanian-aurora-excellence-scholarship",
+        "source_type": "official_scholarship",
+        "verified_date": "2026-09-27",
+        "status": "confirmed_2027",
+        "note": ""
+      },
+      "renewal_condition": {
+        "value": "풀타임 등록·정상 학업진행 유지",
+        "academic_year": 2027,
+        "source_year": 2027,
+        "source_id": "utas-aurora-2027",
+        "source_url": "https://www.utas.edu.au/study/scholarships-fees-and-costs/international-scholarships/tasmanian-aurora-excellence-scholarship",
+        "source_type": "official_scholarship",
+        "verified_date": "2026-09-27",
+        "status": "confirmed_2027",
+        "note": ""
+      },
+      "number_available": {
+        "value": null,
+        "academic_year": 2027,
+        "source_year": 2027,
+        "source_id": "utas-aurora-2027",
+        "source_url": "https://www.utas.edu.au/study/scholarships-fees-and-costs/international-scholarships/tasmanian-aurora-excellence-scholarship",
+        "source_type": "official_scholarship",
+        "verified_date": "2026-09-27",
+        "status": "pending_2027",
+        "note": ""
+      },
+      "course_exclusion": {
+        "value": "Pharmacy 제외 아님 · 의대·일부 간호·해양 과정 등 제외",
+        "academic_year": 2027,
+        "source_year": 2027,
+        "source_id": "utas-aurora-2027",
+        "source_url": "https://www.utas.edu.au/study/scholarships-fees-and-costs/international-scholarships/tasmanian-aurora-excellence-scholarship",
+        "source_type": "official_scholarship",
+        "verified_date": "2026-09-27",
+        "status": "confirmed_2027",
+        "note": ""
+      },
+      "pharmacy_eligible": {
+        "value": true,
+        "academic_year": 2027,
+        "source_year": 2027,
+        "source_id": "utas-aurora-2027",
+        "source_url": "https://www.utas.edu.au/study/scholarships-fees-and-costs/international-scholarships/tasmanian-aurora-excellence-scholarship",
+        "source_type": "official_scholarship",
+        "verified_date": "2026-09-27",
+        "status": "confirmed_2027",
+        "note": ""
+      },
+      "note": "2027 신입 국제학생 대상. 높은 성적의 학생을 초청해 별도 지원·면접으로 경쟁 선발하며 다른 UTas 장학과 중복 적용하지 않음."
+    },
+    {
+      "id": "curtin-global-excellence",
+      "university_id": "curtin",
+      "name": "John Curtin Global Excellence Scholarship",
+      "amount": {
+        "value": 40,
+        "academic_year": 2027,
+        "source_year": 2027,
+        "source_id": "curtin-global-excellence-2027",
+        "source_url": "https://scholarships.curtin.edu.au/Scholarship/?id=7985",
+        "source_type": "official_scholarship",
+        "verified_date": "2026-09-27",
+        "status": "confirmed_2027",
+        "note": ""
+      },
+      "award_type": "percentage",
+      "assessment": "automatic",
+      "automatic_assessment": {
+        "value": true,
+        "academic_year": 2027,
+        "source_year": 2027,
+        "source_id": "curtin-global-excellence-2027",
+        "source_url": "https://scholarships.curtin.edu.au/Scholarship/?id=7985",
+        "source_type": "official_scholarship",
+        "verified_date": "2026-09-27",
+        "status": "confirmed_2027",
+        "note": ""
+      },
+      "separate_application": {
+        "value": false,
+        "academic_year": 2027,
+        "source_year": 2027,
+        "source_id": "curtin-global-excellence-2027",
+        "source_url": "https://scholarships.curtin.edu.au/Scholarship/?id=7985",
+        "source_type": "official_scholarship",
+        "verified_date": "2026-09-27",
+        "status": "confirmed_2027",
+        "note": ""
+      },
+      "competitive": {
+        "value": false,
+        "academic_year": 2027,
+        "source_year": 2027,
+        "source_id": "curtin-global-excellence-2027",
+        "source_url": "https://scholarships.curtin.edu.au/Scholarship/?id=7985",
+        "source_type": "official_scholarship",
+        "verified_date": "2026-09-27",
+        "status": "confirmed_2027",
+        "note": ""
+      },
+      "country_eligibility": {
+        "value": true,
+        "academic_year": 2027,
+        "source_year": 2027,
+        "source_id": "curtin-global-excellence-2027",
+        "source_url": "https://scholarships.curtin.edu.au/Scholarship/?id=7985",
+        "source_type": "official_scholarship",
+        "verified_date": "2026-09-27",
+        "status": "confirmed_2027",
+        "note": ""
+      },
+      "duration": {
+        "value": "학부 최대 4년",
+        "academic_year": 2027,
+        "source_year": 2027,
+        "source_id": "curtin-global-excellence-2027",
+        "source_url": "https://scholarships.curtin.edu.au/Scholarship/?id=7985",
+        "source_type": "official_scholarship",
+        "verified_date": "2026-09-27",
+        "status": "confirmed_2027",
+        "note": ""
+      },
+      "academic_threshold": {
+        "value": "최근 학업 CWA 95% 또는 동등 성적",
+        "academic_year": 2027,
+        "source_year": 2027,
+        "source_id": "curtin-global-excellence-2027",
+        "source_url": "https://scholarships.curtin.edu.au/Scholarship/?id=7985",
+        "source_type": "official_scholarship",
+        "verified_date": "2026-09-27",
+        "status": "confirmed_2027",
+        "note": ""
+      },
+      "renewal_condition": {
+        "value": "2번째 study period부터 CWA 70% + Good Standing 유지",
+        "academic_year": 2027,
+        "source_year": 2027,
+        "source_id": "curtin-global-excellence-2027",
+        "source_url": "https://scholarships.curtin.edu.au/Scholarship/?id=7985",
+        "source_type": "official_scholarship",
+        "verified_date": "2026-09-27",
+        "status": "confirmed_2027",
+        "note": ""
+      },
+      "number_available": {
+        "value": null,
+        "academic_year": 2027,
+        "source_year": 2027,
+        "source_id": "curtin-global-excellence-2027",
+        "source_url": "https://scholarships.curtin.edu.au/Scholarship/?id=7985",
+        "source_type": "official_scholarship",
+        "verified_date": "2026-09-27",
+        "status": "pending_2027",
+        "note": ""
+      },
+      "course_exclusion": {
+        "value": "Pharmacy 제외 아님 · 일부 Health Sciences 과정 제외",
+        "academic_year": 2027,
+        "source_year": 2027,
+        "source_id": "curtin-global-excellence-2027",
+        "source_url": "https://scholarships.curtin.edu.au/Scholarship/?id=7985",
+        "source_type": "official_scholarship",
+        "verified_date": "2026-09-27",
+        "status": "confirmed_2027",
+        "note": ""
+      },
+      "pharmacy_eligible": {
+        "value": true,
+        "academic_year": 2027,
+        "source_year": 2027,
+        "source_id": "curtin-global-excellence-2027",
+        "source_url": "https://scholarships.curtin.edu.au/Scholarship/?id=7985",
+        "source_type": "official_scholarship",
+        "verified_date": "2026-09-27",
+        "status": "confirmed_2027",
+        "note": ""
+      },
+      "note": "2027/2028 WA 캠퍼스 국제학생 대상. 별도 장학신청 없이 자동심사하며 자리가 소진되면 조기 종료될 수 있음."
+    },
+    {
+      "id": "griffith-vc-international",
+      "university_id": "griffith",
+      "name": "Vice Chancellor's International Scholarship",
+      "amount": {
+        "value": 50,
+        "academic_year": 2027,
+        "source_year": 2027,
+        "source_id": "griffith-vc-international-2027",
+        "source_url": "https://www.griffith.edu.au/international/scholarships-finance/scholarships/vice-chancellors-international-scholarship",
+        "source_type": "official_scholarship",
+        "verified_date": "2026-09-27",
+        "status": "confirmed_2027",
+        "note": ""
+      },
+      "award_type": "percentage",
+      "assessment": "competitive",
+      "automatic_assessment": {
+        "value": false,
+        "academic_year": 2027,
+        "source_year": 2027,
+        "source_id": "griffith-vc-international-2027",
+        "source_url": "https://www.griffith.edu.au/international/scholarships-finance/scholarships/vice-chancellors-international-scholarship",
+        "source_type": "official_scholarship",
+        "verified_date": "2026-09-27",
+        "status": "confirmed_2027",
+        "note": ""
+      },
+      "separate_application": {
+        "value": true,
+        "academic_year": 2027,
+        "source_year": 2027,
+        "source_id": "griffith-vc-international-2027",
+        "source_url": "https://www.griffith.edu.au/international/scholarships-finance/scholarships/vice-chancellors-international-scholarship",
+        "source_type": "official_scholarship",
+        "verified_date": "2026-09-27",
+        "status": "confirmed_2027",
+        "note": ""
+      },
+      "competitive": {
+        "value": true,
+        "academic_year": 2027,
+        "source_year": 2027,
+        "source_id": "griffith-vc-international-2027",
+        "source_url": "https://www.griffith.edu.au/international/scholarships-finance/scholarships/vice-chancellors-international-scholarship",
+        "source_type": "official_scholarship",
+        "verified_date": "2026-09-27",
+        "status": "confirmed_2027",
+        "note": ""
+      },
+      "country_eligibility": {
+        "value": true,
+        "academic_year": 2027,
+        "source_year": 2027,
+        "source_id": "griffith-vc-international-2027",
+        "source_url": "https://www.griffith.edu.au/international/scholarships-finance/scholarships/vice-chancellors-international-scholarship",
+        "source_type": "official_scholarship",
+        "verified_date": "2026-09-27",
+        "status": "confirmed_2027",
+        "note": ""
+      },
+      "duration": {
+        "value": "학위 전체 기간 · 인정학점 제외",
+        "academic_year": 2027,
+        "source_year": 2027,
+        "source_id": "griffith-vc-international-2027",
+        "source_url": "https://www.griffith.edu.au/international/scholarships-finance/scholarships/vice-chancellors-international-scholarship",
+        "source_type": "official_scholarship",
+        "verified_date": "2026-09-27",
+        "status": "confirmed_2027",
+        "note": ""
+      },
+      "academic_threshold": {
+        "value": "GPA 6.0/7 또는 동등 성적",
+        "academic_year": 2027,
+        "source_year": 2027,
+        "source_id": "griffith-vc-international-2027",
+        "source_url": "https://www.griffith.edu.au/international/scholarships-finance/scholarships/vice-chancellors-international-scholarship",
+        "source_type": "official_scholarship",
+        "verified_date": "2026-09-27",
+        "status": "confirmed_2027",
+        "note": ""
+      },
+      "renewal_condition": {
+        "value": "매 trimester 전 과목 통과·풀타임 및 정상 학업진행 유지",
+        "academic_year": 2027,
+        "source_year": 2027,
+        "source_id": "griffith-vc-international-2027",
+        "source_url": "https://www.griffith.edu.au/international/scholarships-finance/scholarships/vice-chancellors-international-scholarship",
+        "source_type": "official_scholarship",
+        "verified_date": "2026-09-27",
+        "status": "confirmed_2027",
+        "note": ""
+      },
+      "number_available": {
+        "value": null,
+        "academic_year": 2027,
+        "source_year": 2027,
+        "source_id": "griffith-vc-international-2027",
+        "source_url": "https://www.griffith.edu.au/international/scholarships-finance/scholarships/vice-chancellors-international-scholarship",
+        "source_type": "official_scholarship",
+        "verified_date": "2026-09-27",
+        "status": "pending_2027",
+        "note": ""
+      },
+      "course_exclusion": {
+        "value": "Pharmacy 제외 아님 · HDR·온라인·Diploma·일부 지정과정 제외",
+        "academic_year": 2027,
+        "source_year": 2027,
+        "source_id": "griffith-vc-international-2027",
+        "source_url": "https://www.griffith.edu.au/international/scholarships-finance/scholarships/vice-chancellors-international-scholarship",
+        "source_type": "official_scholarship",
+        "verified_date": "2026-09-27",
+        "status": "confirmed_2027",
+        "note": ""
+      },
+      "pharmacy_eligible": {
+        "value": true,
+        "academic_year": 2027,
+        "source_year": 2027,
+        "source_id": "griffith-vc-international-2027",
+        "source_url": "https://www.griffith.edu.au/international/scholarships-finance/scholarships/vice-chancellors-international-scholarship",
+        "source_type": "official_scholarship",
+        "verified_date": "2026-09-27",
+        "status": "confirmed_2027",
+        "note": ""
+      },
+      "note": "2027 시작 국제학생 지원 가능. Offer를 받은 뒤 별도 지원하며 인원 제한이 있는 경쟁 장학."
     }
   ],
   "accommodation": [
@@ -19305,6 +19707,38 @@
       "source_year": 2027,
       "source_type": "official_pathway",
       "verified_date": "2026-09-26"
+    },
+    {
+      "id": "utas-aurora-2027",
+      "title": "UTas Tasmanian Aurora Excellence Scholarship 2027",
+      "url": "https://www.utas.edu.au/study/scholarships-fees-and-costs/international-scholarships/tasmanian-aurora-excellence-scholarship",
+      "source_year": 2027,
+      "source_type": "official_scholarship",
+      "verified_date": "2026-09-27"
+    },
+    {
+      "id": "curtin-global-excellence-2027",
+      "title": "Curtin John Curtin Global Excellence Scholarship 2027",
+      "url": "https://scholarships.curtin.edu.au/Scholarship/?id=7985",
+      "source_year": 2027,
+      "source_type": "official_scholarship",
+      "verified_date": "2026-09-27"
+    },
+    {
+      "id": "curtin-pharmd-2029",
+      "title": "Curtin Doctor of Pharmacy",
+      "url": "https://www.curtin.edu.au/study/offering/course-pg-doctor-of-pharmacy--mx-pharm/",
+      "source_year": 2029,
+      "source_type": "official_course",
+      "verified_date": "2026-09-27"
+    },
+    {
+      "id": "griffith-vc-international-2027",
+      "title": "Griffith Vice Chancellor's International Scholarship 2027",
+      "url": "https://www.griffith.edu.au/international/scholarships-finance/scholarships/vice-chancellors-international-scholarship",
+      "source_year": 2027,
+      "source_type": "official_scholarship",
+      "verified_date": "2026-09-27"
     }
   ],
   "conflicts": [

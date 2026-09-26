@@ -58,10 +58,10 @@ for path in pages:
  for phrase in public_copy_banned:
   if phrase in text:errors.append(f'{path.relative_to(R/"dist")}: developer-style public copy remains: {phrase}')
 compact_batch={
- 'jcu-pharmacy':(1,['JCU 약대 과정 구조','904시간 Placement','ATAR / Rank 76','IELTS 7.0 · 각 6.5','2027년 2월','2026 A$31,710 참고','자동심사 · 25%','3년 커리큘럼·실습','호주 약사등록 방법 →']),
- 'utas-pharmacy':(3,['UTas 약대 과정 구조','최소 400시간 PEP','수능 305','한국 고2 60%','한국 고2 65% + General Mathematics','2027년 2월 22일 · 6월 21일 · 10월 11일','A$61,267 / 년','자동심사 · 30%','3년 커리큘럼·실습']),
- 'curtin-pharmacy':(2,['커틴 약대 과정 구조','3년 9개월','1학년 Diploma (Pharmacy) → 약대 2학년','한국 고3 Rank 6 또는 수능 280/600','Stage 2 · 2월','A$44,900','자동심사 · 20%','Professional internship']),
- 'griffith-pharmacy':(3,['그리피스 약대 과정 구조','입학방법 3가지','2027 Rank 76','수능 331','고2 → Foundation → 1학년 Diploma (Health Sciences) → 약대 2학년','한국 고2 Rank 7 · 수능 260 · 검정고시 평균 70','IELTS 5.5 · 각 5.0','3월 · 6월 · 10월','1학년 Diploma (Health Sciences) → 약대 2학년','한국 고3 Rank 6 또는 수능 280','2027년 3월 1일 · 6월 27일 · 10월 5일','자동심사 · 20%','A$329.85 / 주부터'])
+ 'jcu-pharmacy':(1,['JCU 약대 과정 구조','904시간 임상실습','ATAR / Rank 76','IELTS 7.0 · 각 6.5','2027년 2월','2026 A$31,710 참고','자동심사 · 25%','3년 커리큘럼·실습','호주 약사등록 방법 →']),
+ 'utas-pharmacy':(3,['UTas 약대 과정 구조','최소 400시간 현장실습','수능 305','한국 고2 60%','한국 고2 65% + General Mathematics','2027년 2월 22일 · 6월 21일 · 10월 11일','A$61,267 / 년','자동심사 · 30%','50% 경쟁 장학','3년 커리큘럼·실습']),
+ 'curtin-pharmacy':(2,['커틴 약대 과정 구조','3년 9개월','1학년 Diploma (Pharmacy) → 약대 2학년','한국 고3 Rank 6 또는 수능 280/600','Stage 2 · 2월','A$44,900','자동심사 · 20%','최대 40%','2029 Doctor of Pharmacy','1년 3개월 · 4 trimesters','1년 통합 인턴십','APC 인증·Pharmacy Board 승인 대기']),
+ 'griffith-pharmacy':(3,['그리피스 약대 과정 구조','입학방법 3가지','2027 Rank 76','수능 331','고2 → Foundation → 1학년 Diploma (Health Sciences) → 약대 2학년','한국 고2 Rank 7 · 수능 260 · 검정고시 평균 70','IELTS 5.5 · 각 5.0','3월 · 6월 · 10월','1학년 Diploma (Health Sciences) → 약대 2학년','한국 고3 Rank 6 또는 수능 280','2027년 3월 1일 · 6월 27일 · 10월 5일','자동심사 · 20%','50% 경쟁 장학','Rank 76은 2027 확정','A$329.85 / 주부터'])
 }
 for slug,(route_count,phrases) in compact_batch.items():
  page=R/f'dist/universities/{slug}/index.html'
@@ -77,6 +77,20 @@ for slug,(route_count,phrases) in compact_batch.items():
  for old_heading in ['<h2>Direct 입학조건</h2>','<h2>졸업 후 485·지역</h2>','<h2>호주 약사등록</h2>','<h2>자주 묻는 질문</h2>']:
   if old_heading in txt:errors.append(f'{slug}: old duplicate section remains {old_heading}')
  if 'id="cost-form"' in txt:errors.append(f'{slug}: per-school cost calculator should not render')
+# Batch 1 university-page QC: high-value current facts
+utas_aurora=next((x for x in D['scholarships'] if x['id']=='utas-aurora'),None)
+curtin_global_excellence=next((x for x in D['scholarships'] if x['id']=='curtin-global-excellence'),None)
+griffith_vc=next((x for x in D['scholarships'] if x['id']=='griffith-vc-international'),None)
+curtin_program=next((x for x in D['programs'] if x['id']=='curtin-bpharm-hons'),None)
+if not utas_aurora or utas_aurora['amount']['value']!=50 or utas_aurora['pharmacy_eligible']['value'] is not True or utas_aurora['competitive']['value'] is not True:
+ errors.append('batch1-qc: UTas Aurora 50% Pharmacy scholarship missing/wrong')
+if not curtin_global_excellence or curtin_global_excellence['amount']['value']!=40 or curtin_global_excellence['pharmacy_eligible']['value'] is not True or curtin_global_excellence['automatic_assessment']['value'] is not True:
+ errors.append('batch1-qc: Curtin 40% Global Excellence scholarship missing/wrong')
+if not griffith_vc or griffith_vc['amount']['value']!=50 or griffith_vc['pharmacy_eligible']['value'] is not True or griffith_vc['competitive']['value'] is not True:
+ errors.append('batch1-qc: Griffith Vice Chancellor 50% scholarship missing/wrong')
+if not curtin_program or '2029 첫 intake' not in str(curtin_program.get('future_pathway',{}).get('value')) or 'APC accreditation' not in str(curtin_program.get('future_pathway',{}).get('note')):
+ errors.append('batch1-qc: Curtin 2029 PharmD pathway/accreditation caveat missing')
+
 compact_batch_2={
  'uq-pharmacy':(3,['UQ 약대 과정 구조','입학방법 3가지','ATAR 80 · IB 30.25','수능 260 · 검정고시 65% · 고2 GPA 3(미)','수능 270 · 검정고시 70% · 고3 GPA 4(우)','A$60,952 / 년','A$36,280','A$24,940','경쟁선발 · 25%']),
  'adelaide-pharmacy':(3,['Adelaide 약대 과정 구조','입학방법 3가지','수능 340 · IB 30 · A-Level 10 · SAT 1220 · OSSD 80%','고2 → Foundation → 약대 1학년','IELTS 5.5 · 각 5.0','1학년 Diploma (Health Science) → 약대 1학년','IELTS 6.0 · 각 6.0','A$36,200','A$41,900','4년 과정·5년 Master 연계','자동심사 · 15%','A$320 / 주','A$380 / 주']),
