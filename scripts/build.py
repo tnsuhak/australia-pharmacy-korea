@@ -680,10 +680,10 @@ for u in D['universities']:
             seo=('2027 Adelaide 약대 · ATAR90·Foundation·최대50% 장학 | TNS','Adelaide University 약대의 2027 ATAR 90·IB 35.25, 2월·7월 입학, Eynesbury Foundation·Health Science Diploma, 5년 Master 연계와 최대 50% 장학을 정리합니다.')
         elif uid=='latrobe':
             lt_health=next(x for x in ss if x['id']=='latrobe-health-innovation-30')
-            overview='''<div class="monash-snapshot"><p class="lead"><strong>Bendigo에서 공부하는 4년 BPharm(Hons)이며, Direct 입학에 별도 과학 선수과목을 요구하지 않습니다.</strong></p><p>2027 가이드의 ATAR 기준은 75.05이며, La Trobe College Foundation을 거쳐 Bendigo 약대 1학년으로 진학할 수도 있습니다. 국제학생 대상 30% Health Innovation과 별도 지원형 50%/100% Vice Chancellor 장학이 있습니다.</p><div class="monash-keyline"><span>2027 ATAR 75.05</span><span>과학 선수과목 없음</span><span>최대 100% 장학</span></div></div>'''
+            overview='''<div class="monash-snapshot"><p class="lead"><strong>Bendigo에서 공부하는 4년 BPharm(Hons)이며, Direct 입학에 별도 과학 선수과목을 요구하지 않습니다.</strong></p><p>2027 Undergraduate Course Guide에는 ATAR 75.05가 표시됩니다. 다만 현재 과정 페이지는 이를 2026 lowest selection rank로 설명하므로, 2027 보장 컷이 아니라 지원 참고값으로 보는 것이 안전합니다. Foundation을 거쳐 Bendigo 약대 1학년으로 진학할 수도 있습니다.</p><div class="monash-keyline"><span>Guide 참고 ATAR 75.05</span><span>과학 선수과목 없음</span><span>최대 100% 장학</span></div></div>'''
             routes='''<div class="monash-route-grid compact-route-grid two">
 <article><span class="route-label">DIRECT</span><h3>고졸 → 약대 1학년</h3><div class="route-criteria">
-<div><small>입학조건</small><strong>2027 ATAR 75.05 · 별도 과학 선수과목 없음 · 국제학력은 La Trobe 환산</strong></div>
+<div><small>입학조건</small><strong>2027 Guide 참고 ATAR 75.05 · 별도 과학 선수과목 없음 · 국제학력은 La Trobe 환산</strong></div>
 <div><small>영어</small><strong>IELTS 6.5 · 각 6.5</strong></div>
 <div><small>입학시기</small><strong>2027년 3월</strong></div>
 </div></article>

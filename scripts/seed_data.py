@@ -115,6 +115,7 @@ source('unsw-english-current','UNSW · English language requirements · Pharmacy
 source('unsw-college-student-guide','UNSW College · Student Guide · Pharmacy Foundation progression','https://www.unswcollege.edu.au/content/dam/pdfs/unsw-college/college-student-guide.pdf',None,'official_pathway')
 source('unsw-college-standard-2027','UNSW College · Standard Foundation Program · 2027 fee','https://www.unswcollege.edu.au/study/standard-program',2027,'official_pathway')
 source('latrobe-2027-course','La Trobe Bachelor of Pharmacy (Honours) · 2027 start','https://www.latrobe.edu.au/courses/bachelor-of-pharmacy-honours',2027,'official_course')
+source('latrobe-ug-guide-2027','La Trobe University · 2027 Undergraduate Course Guide','https://www.latrobe.edu.au/__data/assets/pdf_file/0010/1819288/La-Trobe-University-Undergraduate-Course-Guide-2027.pdf',2027,'official_guide',verified_date='2026-09-27')
 source('curtin-pharmacy-current-guide','Curtin · Pharmacy English requirement guide','https://publications.curtin.edu.au/chinese-student-guide/page/28-29',None,'official_guide')
 source('newcastle-2027-course','University of Newcastle · Bachelor of Pharmacy (Honours) current 2027 entry','https://www.newcastle.edu.au/degrees/bachelor-of-pharmacy-honours',2027,'official_course')
 source('newcastle-nonstandard-english-2025','University of Newcastle · List of Non-Standard English Entry Programs · 28 Aug 2025','https://policies.newcastle.edu.au/download.php?associated=1&id=855&version=4',2025,'official_policy')
@@ -415,7 +416,7 @@ _adelaide_direct=next(x for x in routes if x['id']=='adelaide-bpharm-hons-direct
 _adelaide_direct['qualification']=fact('수능 340 · IB 30 · A-Level 10 · SAT 1220 · OSSD 80% + Biology/Chemistry/Physics 중 1과목','adelaide-pharmacy-current',status='latest_published')
 _adelaide_direct['intake']=fact('2월','adelaide-pharmacy-current',status='latest_published',note='7월은 학점 인정 국제학생만 case-by-case 심사')
 _latrobe_direct=next(x for x in routes if x['id']=='latrobe-bpharm-hons-direct')
-_latrobe_direct['qualification']=fact('고교졸업 + 영어 prerequisite · 별도 과학 선수과목 없음','latrobe-2027-course',year=2027,status='confirmed_2027')
+_latrobe_direct['qualification']=fact('2027 Guide 참고 ATAR 75.05 · 영어 prerequisite · 별도 과학 선수과목 없음 · 국제학력은 La Trobe 환산','latrobe-ug-guide-2027',year=2027,status='confirmed_2027',note='2027 Undergraduate Course Guide는 Pharmacy에 BEN ATAR 75.05를 표시합니다. 현재 live course page는 같은 75.05를 2026 lowest selection rank로 설명하므로, 보장 컷이 아닌 2027 지원 참고값으로만 사용합니다.')
 _qut_direct=next(x for x in routes if x['id']=='qut-bpharm-hons-direct')
 _qut_direct['qualification']=fact('Selection Rank 76 · Chemistry + Mathematical Methods/Specialist Mathematics는 assumed knowledge','qut',status='latest_published',note='Assumed knowledge는 prerequisite가 아니며 부족하면 bridging study 가능')
 
@@ -787,6 +788,7 @@ decision_lenses={
       "30% 자동장학 + 50%/100% Vice Chancellor 경쟁장학"
     ],
     "watch": [
+      "ATAR 75.05는 2027 Guide 참고값이며 live page상 2026 lowest selection rank",
       "30% 장학은 수량 제한·offer acceptance 순 확보 조건 확인",
       "Vice Chancellor는 Direct Entry 대상 · 별도 지원·경쟁선발",
       "2027 국제학생 학비 발표 대기"
@@ -942,10 +944,10 @@ public_program_copy = {
     decision_lens=dict(why=['Griffith College Diploma → 약대 2학년','Gold Coast Regional','2027 International Academic Merit 20%'],watch=['Direct 점수는 현재 2026 공식값 사용','2027 Direct 점수·본과 학비 미확정'])
   ),
   'latrobe-bpharm-hons': dict(
-    highlights=['Bendigo · Regional','4년','30% Health Innovation'],
-    editorial='Bendigo 캠퍼스 4년 약대이며 2027년 3월 시작입니다. 별도 과학 선수과목은 없고 IELTS는 6.5(각 6.5)입니다. 졸업 후 1년 supervised internship은 별도입니다.',
-    review_items=['2027 본과 학비'],
-    decision_lens=dict(why=['Bendigo Regional','과학 선수과목 별도 없음','30% 자동장학 + 50%/100% Vice Chancellor 경쟁장학'],watch=['30% 장학은 수량 제한 · 오퍼 수락 순','Vice Chancellor는 Direct Entry 대상 · 별도 지원·경쟁선발','2027 본과 학비 미확정'])
+    highlights=['Bendigo · Regional','2027 Guide 참고 ATAR 75.05','최대 100% 장학'],
+    editorial='Bendigo 캠퍼스 4년 약대이며 2027년 3월 시작입니다. 2027 Undergraduate Course Guide에는 ATAR 75.05가 표시되지만 live course page는 이를 2026 lowest selection rank로 설명하므로 보장 컷이 아닌 지원 참고값으로 봅니다. 별도 과학 선수과목은 없습니다.',
+    review_items=['2027 국제학생 학비','지원 시점 최종 selection rank'],
+    decision_lens=dict(why=['Bendigo Regional','과학 선수과목 별도 없음','30% 자동장학 + 50%/100% Vice Chancellor 경쟁장학'],watch=['ATAR 75.05는 2027 Guide 참고값이며 보장 컷 아님','30% 장학은 수량 제한 · 오퍼 수락 순','Vice Chancellor는 Direct Entry 대상 · 별도 지원·경쟁선발','2027 본과 학비 미확정'])
   ),
   'qut-bpharm-hons': dict(
     highlights=['4년','수학·화학 필수 아님','2027 학비 A$46,200'],

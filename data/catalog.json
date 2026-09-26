@@ -1168,12 +1168,13 @@
       },
       "highlights": [
         "Bendigo · Regional",
-        "2027 ATAR 75.05",
-        "30% Health Innovation"
+        "2027 Guide 참고 ATAR 75.05",
+        "최대 100% 장학"
       ],
-      "editorial": "Bendigo 캠퍼스 4년 약대이며 2027년 3월 시작입니다. 2027 가이드의 ATAR 기준은 75.05이고, 영어 외에 별도 과학 선수과목은 없습니다. 교내 실습약국과 실제 임상현장에서 실습하며, 졸업 후 약사등록을 위한 인턴과 시험 절차를 진행합니다.",
+      "editorial": "Bendigo 캠퍼스 4년 약대이며 2027년 3월 시작입니다. 2027 Undergraduate Course Guide에는 ATAR 75.05가 표시되지만 live course page는 이를 2026 lowest selection rank로 설명하므로 보장 컷이 아닌 지원 참고값으로 봅니다. 별도 과학 선수과목은 없습니다.",
       "review_items": [
-        "2027 본과 학비"
+        "2027 국제학생 학비",
+        "지원 시점 최종 selection rank"
       ],
       "decision_lens": {
         "why": [
@@ -1182,6 +1183,7 @@
           "30% 자동장학 + 50%/100% Vice Chancellor 경쟁장학"
         ],
         "watch": [
+          "ATAR 75.05는 2027 Guide 참고값이며 live page상 2026 lowest selection rank",
           "30% 장학은 수량 제한·offer acceptance 순 확보 조건 확인",
           "Vice Chancellor는 Direct Entry 대상 · 별도 지원·경쟁선발",
           "2027 국제학생 학비 발표 대기"
@@ -3526,7 +3528,7 @@
         "note": ""
       },
       "qualification": {
-        "value": "2027 ATAR 75.05 · 고교졸업 + 영어 prerequisite · 별도 과학 선수과목 없음 · 국제학력은 La Trobe 환산",
+        "value": "2027 Guide 참고 ATAR 75.05 · 영어 prerequisite · 별도 과학 선수과목 없음 · 국제학력은 La Trobe 환산",
         "academic_year": 2027,
         "source_year": 2027,
         "source_id": "latrobe-ug-guide-2027",
@@ -3534,7 +3536,7 @@
         "source_type": "official_guide",
         "verified_date": "2026-09-27",
         "status": "confirmed_2027",
-        "note": "2027 guide confirms ATAR 75.05 and English-only prerequisite; overseas qualifications are assessed through La Trobe equivalence."
+        "note": "2027 Undergraduate Course Guide는 Pharmacy에 BEN ATAR 75.05를 표시합니다. 현재 live course page는 같은 75.05를 2026 lowest selection rank로 설명하므로, 보장 컷이 아닌 2027 지원 참고값으로만 사용합니다."
       },
       "note": "",
       "intake_months": {
