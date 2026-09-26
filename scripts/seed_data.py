@@ -72,6 +72,7 @@ source('qut-scholarship-2027','QUT 2027 International Guide · International Mer
 source('uq-scholarship-2027','UQ International Excellence Scholarship 2027','https://scholarships.uq.edu.au/scholarship/uq-international-excellence-scholarship',2027,'official_scholarship')
 source('uq-guaranteed-atar-2027','UQ · 2027 Guaranteed ATAR · Pharmacy 80','https://study.uq.edu.au/admissions/undergraduate/review-entry-requirements/guaranteed-atar',2027,'official_admissions')
 source('uq-standard-foundation-2027','UQ College · Standard Foundation 2026/2027 dates and fees','https://uqcollege.uq.edu.au/study/pathways-uq/foundation-program/standard-foundation-program',2027,'official_pathway')
+source('uq-foundation-entry-current','UQ College · Foundation academic entry requirements · Korea','https://uqcollege.uq.edu.au/files/8781/uq-college-foundation-program-academic-requirements.pdf',2026,'official_pathway',verified_date='2026-09-26')
 source('curtin-scholarship-2027','Curtin Global Merit Scholarship · 2027 commencement','https://scholarships.curtin.edu.au/Scholarship/?id=7986',2027,'official_scholarship')
 source('curtin-college-fees-2027','Curtin College · 2027 international Diploma fees','https://www.curtincollege.edu.au/how-apply/international/fees-payment/',2027,'official_pathway')
 source('utas-scholarship-2027','UTas Tasmanian International Merit Scholarship · 2027 terms','https://www.utas.edu.au/study/scholarships-fees-and-costs/international-scholarships/tasmanian-international-merit-scholarship',2027,'official_scholarship')
@@ -341,7 +342,7 @@ for qt,val,scale,src,note,calc in [
  q=next(x for x in qualifications if x['program_id']=='rmit-bpharm-hons' and x['qualification']==qt); q.update(score=fact(val,src),scale=scale,calculation=calc); q['score']['note']=note
 qual('uwa','csat',329,'UWA 국제학력 환산점수'); qual('uwa','sat',1220,'1600'); qual('uwa','ib',30,'45'); qual('uwa','alevel',10,'UWA A-level 환산점수'); fee('uwa',46000,src='uwa-fee-2026',year=2026,load='48 points 기준')
 # Additional international qualification scores verified for 2027 site.
-for qt,val,scale in [('csat',345,'대학 공식 CSAT 기준'),('ib',30,'45'),('sat',1220,'1600'),('alevel',10,'UK / Global GCE A-level 환산점수'),('ossd',80,'Ontario Secondary School Diploma 평균 %')]:
+for qt,val,scale in [('csat',340,'대학 공식 CSAT 기준'),('ib',30,'45'),('sat',1220,'1600'),('alevel',10,'UK / Global GCE A-level 환산점수'),('ossd',80,'Ontario Secondary School Diploma 평균 %')]:
  q=next(x for x in qualifications if x['program_id']=='adelaide-bpharm-hons' and x['qualification']==qt); q.update(score=fact(val,'adelaide-pharmacy-current'),scale=scale)
 for qt,val,scale in [('ib',28,'45'),('sat',1130,'1600'),('alevel',11,'UC A-level aggregate'),('ossd',74,'Grade 12 U/M average %')]:
  q=next(x for x in qualifications if x['program_id']=='canberra-bpharm-hons' and x['qualification']==qt); q.update(score=fact(val,'canberra-intl-equiv'),scale=scale,calculation='UC Selection Rank 75 equivalent')
@@ -404,6 +405,14 @@ routes[-1]['english']=fact('IELTS 5.5 · 각 5.0','griffith-college-entry',statu
 routes[-1]['pathway_fee']=fact(None,'griffith-foundation-current',year=2027,status='pending_2027',note='2027 국제학생 Foundation 학비는 별도 검증 전 추정하지 않음.')
 routes[-1]['destination_label']='1학년 Diploma → 약대 2학년'
 
+_adelaide_direct=next(x for x in routes if x['id']=='adelaide-bpharm-hons-direct')
+_adelaide_direct['qualification']=fact('수능 340 · IB 30 · A-Level 10 · SAT 1220 · OSSD 80% + Biology/Chemistry/Physics 중 1과목','adelaide-pharmacy-current',status='latest_published')
+_adelaide_direct['intake']=fact('2월','adelaide-pharmacy-current',status='latest_published',note='7월은 학점 인정 국제학생만 case-by-case 심사')
+_latrobe_direct=next(x for x in routes if x['id']=='latrobe-bpharm-hons-direct')
+_latrobe_direct['qualification']=fact('고교졸업 + 영어 prerequisite · 별도 과학 선수과목 없음','latrobe-2027-course',year=2027,status='confirmed_2027')
+_qut_direct=next(x for x in routes if x['id']=='qut-bpharm-hons-direct')
+_qut_direct['qualification']=fact('Selection Rank 76 · Chemistry + Mathematical Methods/Specialist Mathematics는 assumed knowledge','qut',status='latest_published',note='Assumed knowledge는 prerequisite가 아니며 부족하면 bridging study 가능')
+
 dr=next(x for x in routes if x['id']=='griffith-bpharm-hons-direct')
 dr['intake']=fact('3월 · 7월 (2026 국제가이드 기준)','griffith-2026-guide')
 dr['intake_months']=fact([3,7],'griffith-2026-guide')
@@ -424,9 +433,12 @@ routes[-1]['pathway_fee']=fact(44900,'curtin-college-fees-2027',year=2027,note='
 route('uq','uq-standard-2027-entry','foundation','UQ College · Standard Foundation','uq-standard-foundation-2027',0,1,'약 10개월','2026-09-07 시작 → 2027-07-09 완료 · 본과 2027 Semester 2','BPharm 진급 GPA 5.0 · Academic English 5 · 선수과목 충족','2027년 7월 UQ Pharmacy 입학을 목표로 할 경우 Standard Foundation은 2026년 9월 시작 일정이 맞습니다. 2027년 2월 Standard 시작은 UQ 2028 Semester 1로 연결됩니다.')
 routes[-1]['intake_months']=fact([9],'uq-standard-foundation-2027',year=2026,status='latest_published',note='2027 BPharm Semester 2 연결용 Foundation 시작월')
 routes[-1]['progression']=fact('BPharm 진급 GPA 5.0 · Academic English 5 · 선수과목 충족','uq-foundation')
+routes[-1]['qualification']=fact('한국: 수능 260 · 검정고시 상위 4과목 평균 65% · 고2 상위 4과목 GPA 3(미)','uq-foundation-entry-current',year=2026,status='latest_published')
+routes[-1]['english']=fact('IELTS 5.5 · 각 5.0','uq-standard-foundation-2027',year=2027,status='confirmed_2027')
 routes[-1]['pathway_fee']=fact(36280,'uq-standard-foundation-2027',year=2027,note='2026/2027 offer 기준 tuition fee. Enrolment·Student Services·교재비 포함 총액은 A$39,172.')
 route('uq','uq-accelerated','foundation','UQ College · Accelerated Foundation','uq-accelerated',0,1,'약 4개월','2027-02-15 시작 → 07-09 완료 · 본과 07-26','BPharm 진급 GPA 5.0 · Academic English 5 · 선수과목 충족','2월 Foundation → 7월 BPharm 일정입니다. GPA·영어·필수과목을 충족해야 합니다.')
 routes[-1]['progression']=fact('BPharm 진급 GPA 5.0 · Academic English 5 · 선수과목 충족','uq-foundation')
+routes[-1]['qualification']=fact('한국: 수능 270 · 검정고시 상위 4과목 평균 70% · 고3 상위 4과목 GPA 4(우)','uq-foundation-entry-current',year=2026,status='latest_published')
 routes[-1]['english']=fact('IELTS 6.0 · Writing 6.0 · Speaking/Listening/Reading 5.5 이상','uq-accelerated')
 routes[-1]['pathway_fee']=fact(24940,'uq-accelerated',year=2027,note='2026/2027 offer 기준 tuition fee. Enrolment·Student Services·교재비 포함 총액은 A$27,490.')
 route('uwa','uwa-foundation-8','foundation','UWA College · Foundation 8개월','uwa-foundation-8-current',0,1,'8개월','UWA College 일정','UWA College Foundation 70 + Pharmacy 입학·영어조건','8개월 Foundation은 IELTS 6.0/각5.5가 필요합니다. 한국 학생의 최근 공개 country table(2025 brochure)은 검정고시 60%, CSAT 260, 고2 70%, 고3 60%를 안내합니다. 이 학력표는 2025 자료이므로 최신 공개 참고값으로 표시합니다.')
@@ -503,7 +515,7 @@ routes[-1]['intake']=fact('2월 · 6월','latrobe-foundation-current')
 routes[-1]['intake_months']=fact([2,6],'latrobe-foundation-current')
 routes[-1]['progression']=fact('Foundation 최소 WAM 60% + 해당 Bachelor 최소조건 · Pharmacy는 Advanced Mathematics 2 + Chemistry 2 이수 필요 · quota/추가조건 가능','latrobe-foundation-transfer',note='현재 transfer page의 공통 최소 WAM 60%와 Pharmacy study-plan 과목요건을 결합해 표시합니다. Pharmacy-specific 최종 WAM/정원은 지원 전 재확인합니다.')
 routes[-1]['english']=fact('Foundation 입학: IELTS 5.5 / 각 5.0 · PTE 42 / 각 36 · TOEFL iBT 55 / Writing 16','latrobe-foundation-english-2026')
-routes[-1]['qualification']=fact(None,'latrobe-foundation-current',status='pending_2027',note='한국 고교 11학년 등 country-specific 2027 Foundation 학력표는 별도 확인합니다.')
+routes[-1]['qualification']=fact('Year 11 동등학력 · 한국 학력은 La Trobe College 심사','latrobe-foundation-current',status='latest_published')
 routes[-1]['pathway_fee']=fact(29780,'latrobe-foundation-fee-2026',year=2026,note='2026 Foundation Studies international program fee · 2027 금액 아님')
 route('utas','utas-foundation-standard','foundation','UTas IPC · Foundation Studies Standard','utas-ipc-foundation',0,1,'8–9개월 · 2 semesters','2027년 2월 22일 · 6월 21일 · 10월 11일','Pharmacy: Physical Science stream · FCWAM 60% · Chemistry + Statistics · Foundation English 평균 65%, 각 60% 이상','한국 고2(Senior Year 2) 60%부터 입학 가능. Foundation 종료 후 다음 가능한 Pharmacy Health Study Period 1 입학시기에 맞춰 진학합니다.')
 routes[-1]['duration']=fact('8–9개월 · 2 semesters','utas-ipc-fees-2027')
@@ -1008,6 +1020,11 @@ route_notes = {
 }
 for r in routes:
     if r['id'] in route_notes:r['note']=route_notes[r['id']]
+
+_adelaide_scholar=next((x for x in scholarships if x['id']=='adelaide-merit'),None)
+if _adelaide_scholar:
+ _adelaide_scholar['academic_threshold']=fact('ATAR 75 또는 국제 동등성적','adelaide-scholarship',status='latest_published')
+ _adelaide_scholar['note']='Adelaide Merit Scholarship 15%. 국제학생은 입학 지원 시 자동심사되며 Pharmacy는 현재 제외과정 목록에 포함되지 않습니다.'
 
 scholarship_notes = {
  'griffith-merit':'한국 학생 대상. Pathway 패키지는 최종 성적 제출 후 심사.',
