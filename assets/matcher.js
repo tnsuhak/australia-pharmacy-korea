@@ -73,9 +73,15 @@
         else if(confirmed.some(h=>read(h.weekly_cost)<=350))matches.push('숙소 주 A$350 이하');
         else misses.push('숙소 주 A$350 이하');
       }else{
-        const eligible=p.scholarships.filter(s=>read(s.country_eligibility)===true&&read(s.pharmacy_eligible)===true);
-        const rates=s=>Array.isArray(read(s.amount))?Math.max(...read(s.amount)):read(s.amount);
-        if(eligible.some(s=>rates(s)!==null&&(f.cost!=='20'||rates(s)>=20)))matches.push('한국학생 약대 장학 심사대상');
+        const eligible=p.scholarships.filter(s=>read(s.country_eligibility)===true&&read(s.pharmacy_eligible)===true&&s.scope!=='scholars_program');
+        const amount=s=>read(s.amount);
+        if(f.cost==='20'){
+          const pct=eligible.filter(s=>s.award_type==='percentage');
+          const has20=pct.some(s=>{const v=amount(s);const rate=Array.isArray(v)?Math.max(...v):v;return rate!==null&&rate>=20;});
+          if(has20)matches.push('한국학생 약대 20% 이상 장학 심사대상');
+          else if(p.scholarships.some(s=>read(s.pharmacy_eligible)===null&&s.assessment!=='not_eligible'))unknown.push('약대 장학 적용 미확정');
+          else misses.push('한국학생 약대 20% 이상 장학');
+        }else if(eligible.some(s=>amount(s)!==null))matches.push('한국학생 약대 장학 심사대상');
         else if(p.scholarships.some(s=>read(s.pharmacy_eligible)===null&&s.assessment!=='not_eligible'))unknown.push('약대 장학 적용 미확정');
         else misses.push('한국학생 약대 장학');
       }
