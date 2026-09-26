@@ -11946,15 +11946,15 @@
     {
       "program_id": "monash-bpharm-hons",
       "annual": {
-        "value": 49740,
+        "value": 60100,
         "academic_year": 2027,
-        "source_year": 2027,
+        "source_year": 2026,
         "source_id": "monash-fee-2027",
-        "source_url": "https://www.monash.edu/study/courses/find-a-course/pharmacy-p6007",
-        "source_type": "official_course",
-        "verified_date": "2026-09-25",
-        "status": "confirmed_2027",
-        "note": ""
+        "source_url": "https://www.monash.edu/__data/assets/pdf_file/0005/3941744/undergraduate-international-course-guide.pdf",
+        "source_type": "official_course_guide",
+        "verified_date": "2026-09-26",
+        "status": "latest_published",
+        "note": "2027 International Undergraduate Course Guide의 Pharmacy 표에 기재된 2026 quoted fee. 가이드는 2027 입학 학비가 달라진다고 명시하므로 2027 확정값으로 사용하지 않음."
       },
       "official_total": {
         "value": null,
@@ -11971,15 +11971,15 @@
       "load_basis": {
         "value": "48 credit points 기준",
         "academic_year": 2027,
-        "source_year": 2027,
+        "source_year": 2026,
         "source_id": "monash-fee-2027",
-        "source_url": "https://www.monash.edu/study/courses/find-a-course/pharmacy-p6007",
-        "source_type": "official_course",
-        "verified_date": "2026-09-25",
-        "status": "confirmed_2027",
-        "note": ""
+        "source_url": "https://www.monash.edu/__data/assets/pdf_file/0005/3941744/undergraduate-international-course-guide.pdf",
+        "source_type": "official_course_guide",
+        "verified_date": "2026-09-26",
+        "status": "latest_published",
+        "note": "2026 quoted fee의 연간 표준 full-time load 기준"
       },
-      "increase_note": "연도별 인상 및 실제 수강량에 따라 달라질 수 있습니다."
+      "increase_note": "2027 국제학생 확정 학비는 재확인 필요. 2026 공식 국제학생 참고값은 A$60,100입니다."
     },
     {
       "program_id": "sydney-bpharm-hons",
@@ -12396,18 +12396,18 @@
     {
       "id": "monash-merit",
       "university_id": "monash",
-      "name": "Pharmacy and Pharmaceutical Science International Merit",
+      "name": "Pharmacy and Pharmaceutical Science International Merit · P6007 Scholars Program",
       "amount": {
         "value": [
           25,
           50
         ],
         "academic_year": 2027,
-        "source_year": null,
+        "source_year": 2026,
         "source_id": "monash-scholarship",
         "source_url": "https://www.monash.edu/study/fees-scholarships/scholarships/find-a-scholarship/pharmacy-international-merit-scholarship-5745",
         "source_type": "official_scholarship",
-        "verified_date": "2026-09-24",
+        "verified_date": "2026-09-26",
         "status": "latest_published",
         "note": ""
       },
@@ -12416,114 +12416,115 @@
       "automatic_assessment": {
         "value": true,
         "academic_year": 2027,
-        "source_year": null,
+        "source_year": 2026,
         "source_id": "monash-scholarship",
         "source_url": "https://www.monash.edu/study/fees-scholarships/scholarships/find-a-scholarship/pharmacy-international-merit-scholarship-5745",
         "source_type": "official_scholarship",
-        "verified_date": "2026-09-24",
+        "verified_date": "2026-09-26",
         "status": "latest_published",
         "note": ""
       },
       "separate_application": {
         "value": false,
         "academic_year": 2027,
-        "source_year": null,
+        "source_year": 2026,
         "source_id": "monash-scholarship",
         "source_url": "https://www.monash.edu/study/fees-scholarships/scholarships/find-a-scholarship/pharmacy-international-merit-scholarship-5745",
         "source_type": "official_scholarship",
-        "verified_date": "2026-09-24",
+        "verified_date": "2026-09-26",
         "status": "latest_published",
         "note": ""
       },
       "competitive": {
         "value": true,
         "academic_year": 2027,
-        "source_year": null,
+        "source_year": 2026,
         "source_id": "monash-scholarship",
         "source_url": "https://www.monash.edu/study/fees-scholarships/scholarships/find-a-scholarship/pharmacy-international-merit-scholarship-5745",
         "source_type": "official_scholarship",
-        "verified_date": "2026-09-24",
+        "verified_date": "2026-09-26",
         "status": "latest_published",
         "note": ""
       },
       "country_eligibility": {
         "value": true,
         "academic_year": 2027,
-        "source_year": null,
+        "source_year": 2026,
         "source_id": "monash-scholarship",
         "source_url": "https://www.monash.edu/study/fees-scholarships/scholarships/find-a-scholarship/pharmacy-international-merit-scholarship-5745",
         "source_type": "official_scholarship",
-        "verified_date": "2026-09-24",
+        "verified_date": "2026-09-26",
         "status": "latest_published",
-        "note": ""
+        "note": "해외 학력 보유 국제학생 또는 조건에 맞는 offshore Australian qualification 지원자"
       },
       "duration": {
         "value": "최소 졸업학점 이수까지",
         "academic_year": 2027,
-        "source_year": null,
+        "source_year": 2026,
         "source_id": "monash-scholarship",
         "source_url": "https://www.monash.edu/study/fees-scholarships/scholarships/find-a-scholarship/pharmacy-international-merit-scholarship-5745",
         "source_type": "official_scholarship",
-        "verified_date": "2026-09-24",
+        "verified_date": "2026-09-26",
         "status": "latest_published",
         "note": ""
       },
       "academic_threshold": {
         "value": "각 대상 과정군 최상위·차상위",
         "academic_year": 2027,
-        "source_year": null,
+        "source_year": 2026,
         "source_id": "monash-scholarship",
         "source_url": "https://www.monash.edu/study/fees-scholarships/scholarships/find-a-scholarship/pharmacy-international-merit-scholarship-5745",
         "source_type": "official_scholarship",
-        "verified_date": "2026-09-24",
+        "verified_date": "2026-09-26",
         "status": "latest_published",
         "note": ""
       },
       "renewal_condition": {
         "value": "매 학기 WAM 70 유지",
         "academic_year": 2027,
-        "source_year": null,
+        "source_year": 2026,
         "source_id": "monash-scholarship",
         "source_url": "https://www.monash.edu/study/fees-scholarships/scholarships/find-a-scholarship/pharmacy-international-merit-scholarship-5745",
         "source_type": "official_scholarship",
-        "verified_date": "2026-09-24",
+        "verified_date": "2026-09-26",
         "status": "latest_published",
         "note": ""
       },
       "number_available": {
         "value": 8,
         "academic_year": 2027,
-        "source_year": null,
+        "source_year": 2026,
         "source_id": "monash-scholarship",
         "source_url": "https://www.monash.edu/study/fees-scholarships/scholarships/find-a-scholarship/pharmacy-international-merit-scholarship-5745",
         "source_type": "official_scholarship",
-        "verified_date": "2026-09-24",
+        "verified_date": "2026-09-26",
         "status": "latest_published",
         "note": ""
       },
       "course_exclusion": {
-        "value": "공식 목록은 P6007 Scholars Program/Doctor of Pharmacy를 대상 과정으로 명시",
+        "value": "P6007은 Bachelor of Pharmacy (Honours) Scholars Program/Doctor of Pharmacy로 명시",
         "academic_year": 2027,
-        "source_year": null,
+        "source_year": 2026,
         "source_id": "monash-scholarship",
         "source_url": "https://www.monash.edu/study/fees-scholarships/scholarships/find-a-scholarship/pharmacy-international-merit-scholarship-5745",
         "source_type": "official_scholarship",
-        "verified_date": "2026-09-25",
+        "verified_date": "2026-09-26",
         "status": "latest_published",
         "note": ""
       },
       "pharmacy_eligible": {
-        "value": null,
+        "value": true,
         "academic_year": 2027,
-        "source_year": null,
+        "source_year": 2026,
         "source_id": "monash-scholarship",
         "source_url": "https://www.monash.edu/study/fees-scholarships/scholarships/find-a-scholarship/pharmacy-international-merit-scholarship-5745",
         "source_type": "official_scholarship",
-        "verified_date": "2026-09-24",
-        "status": "pending_2027",
+        "verified_date": "2026-09-26",
+        "status": "latest_published",
         "note": ""
       },
-      "note": "연 8명 선발. 50%는 과정군 최상위, 25%는 차상위."
+      "note": "P6007 Scholars Program 대상. 일반 P6007 학생 전체에 적용되는 장학금으로 표시하지 않음. 연 8명: 50% 4명, 25% 4명.",
+      "scope": "scholars_program"
     },
     {
       "id": "newcastle-excellence",
@@ -14340,6 +14341,264 @@
         "note": ""
       },
       "note": "30% 장학. 별도 신청 없이 심사되며 수량이 제한되어 오퍼 수락 순서가 중요합니다."
+    },
+    {
+      "id": "monash-international-merit",
+      "university_id": "monash",
+      "name": "Monash International Merit Scholarship",
+      "amount": {
+        "value": 15000,
+        "academic_year": 2027,
+        "source_year": 2026,
+        "source_id": "monash-international-merit-scholarship",
+        "source_url": "https://www.monash.edu/study/fees-scholarships/scholarships/find-a-scholarship/international-merit-5770",
+        "source_type": "official_scholarship",
+        "verified_date": "2026-09-26",
+        "status": "latest_published",
+        "note": "A$15,000 per 48 credit points per year for scholarships awarded from 2026"
+      },
+      "award_type": "aud_per_year",
+      "assessment": "competitive",
+      "automatic_assessment": {
+        "value": true,
+        "academic_year": 2027,
+        "source_year": 2026,
+        "source_id": "monash-international-merit-scholarship",
+        "source_url": "https://www.monash.edu/study/fees-scholarships/scholarships/find-a-scholarship/international-merit-5770",
+        "source_type": "official_scholarship",
+        "verified_date": "2026-09-26",
+        "status": "latest_published",
+        "note": ""
+      },
+      "separate_application": {
+        "value": false,
+        "academic_year": 2027,
+        "source_year": 2026,
+        "source_id": "monash-international-merit-scholarship",
+        "source_url": "https://www.monash.edu/study/fees-scholarships/scholarships/find-a-scholarship/international-merit-5770",
+        "source_type": "official_scholarship",
+        "verified_date": "2026-09-26",
+        "status": "latest_published",
+        "note": ""
+      },
+      "competitive": {
+        "value": true,
+        "academic_year": 2027,
+        "source_year": 2026,
+        "source_id": "monash-international-merit-scholarship",
+        "source_url": "https://www.monash.edu/study/fees-scholarships/scholarships/find-a-scholarship/international-merit-5770",
+        "source_type": "official_scholarship",
+        "verified_date": "2026-09-26",
+        "status": "latest_published",
+        "note": ""
+      },
+      "country_eligibility": {
+        "value": true,
+        "academic_year": 2027,
+        "source_year": 2026,
+        "source_id": "monash-international-merit-scholarship",
+        "source_url": "https://www.monash.edu/study/fees-scholarships/scholarships/find-a-scholarship/international-merit-5770",
+        "source_type": "official_scholarship",
+        "verified_date": "2026-09-26",
+        "status": "latest_published",
+        "note": "International students from all countries"
+      },
+      "duration": {
+        "value": "매년 · 최소 졸업학점 이수까지",
+        "academic_year": 2027,
+        "source_year": 2026,
+        "source_id": "monash-international-merit-scholarship",
+        "source_url": "https://www.monash.edu/study/fees-scholarships/scholarships/find-a-scholarship/international-merit-5770",
+        "source_type": "official_scholarship",
+        "verified_date": "2026-09-26",
+        "status": "latest_published",
+        "note": ""
+      },
+      "academic_threshold": {
+        "value": "학업성취도 기준 경쟁선발",
+        "academic_year": 2027,
+        "source_year": 2026,
+        "source_id": "monash-international-merit-scholarship",
+        "source_url": "https://www.monash.edu/study/fees-scholarships/scholarships/find-a-scholarship/international-merit-5770",
+        "source_type": "official_scholarship",
+        "verified_date": "2026-09-26",
+        "status": "latest_published",
+        "note": ""
+      },
+      "renewal_condition": {
+        "value": "매 학기 WAM 70 이상",
+        "academic_year": 2027,
+        "source_year": 2026,
+        "source_id": "monash-international-merit-scholarship",
+        "source_url": "https://www.monash.edu/study/fees-scholarships/scholarships/find-a-scholarship/international-merit-5770",
+        "source_type": "official_scholarship",
+        "verified_date": "2026-09-26",
+        "status": "latest_published",
+        "note": ""
+      },
+      "number_available": {
+        "value": 20,
+        "academic_year": 2027,
+        "source_year": 2026,
+        "source_id": "monash-international-merit-scholarship",
+        "source_url": "https://www.monash.edu/study/fees-scholarships/scholarships/find-a-scholarship/international-merit-5770",
+        "source_type": "official_scholarship",
+        "verified_date": "2026-09-26",
+        "status": "latest_published",
+        "note": ""
+      },
+      "course_exclusion": {
+        "value": "MD, Monash Pathway 등 공식 제외과정. P6007 Pharmacy는 제외목록에 없음",
+        "academic_year": 2027,
+        "source_year": 2026,
+        "source_id": "monash-international-merit-scholarship",
+        "source_url": "https://www.monash.edu/study/fees-scholarships/scholarships/find-a-scholarship/international-merit-5770",
+        "source_type": "official_scholarship",
+        "verified_date": "2026-09-26",
+        "status": "latest_published",
+        "note": ""
+      },
+      "pharmacy_eligible": {
+        "value": true,
+        "academic_year": 2027,
+        "source_year": 2026,
+        "source_id": "monash-international-merit-scholarship",
+        "source_url": "https://www.monash.edu/study/fees-scholarships/scholarships/find-a-scholarship/international-merit-5770",
+        "source_type": "official_scholarship",
+        "verified_date": "2026-09-26",
+        "status": "latest_published",
+        "note": ""
+      },
+      "note": "일반 국제학생 학부 오퍼 소지자는 별도 장학신청 없이 자동심사. 연 20명 경쟁선발."
+    },
+    {
+      "id": "monash-international-leadership",
+      "university_id": "monash",
+      "name": "Monash International Leadership Scholarship",
+      "amount": {
+        "value": 100,
+        "academic_year": 2027,
+        "source_year": 2026,
+        "source_id": "monash-international-leadership-scholarship",
+        "source_url": "https://www.monash.edu/study/fees-scholarships/scholarships/find-a-scholarship/monash-international-leadership-scholarship-5571Z",
+        "source_type": "official_scholarship",
+        "verified_date": "2026-09-26",
+        "status": "latest_published",
+        "note": ""
+      },
+      "award_type": "percentage",
+      "assessment": "competitive",
+      "automatic_assessment": {
+        "value": true,
+        "academic_year": 2027,
+        "source_year": 2026,
+        "source_id": "monash-international-leadership-scholarship",
+        "source_url": "https://www.monash.edu/study/fees-scholarships/scholarships/find-a-scholarship/monash-international-leadership-scholarship-5571Z",
+        "source_type": "official_scholarship",
+        "verified_date": "2026-09-26",
+        "status": "latest_published",
+        "note": ""
+      },
+      "separate_application": {
+        "value": false,
+        "academic_year": 2027,
+        "source_year": 2026,
+        "source_id": "monash-international-leadership-scholarship",
+        "source_url": "https://www.monash.edu/study/fees-scholarships/scholarships/find-a-scholarship/monash-international-leadership-scholarship-5571Z",
+        "source_type": "official_scholarship",
+        "verified_date": "2026-09-26",
+        "status": "latest_published",
+        "note": ""
+      },
+      "competitive": {
+        "value": true,
+        "academic_year": 2027,
+        "source_year": 2026,
+        "source_id": "monash-international-leadership-scholarship",
+        "source_url": "https://www.monash.edu/study/fees-scholarships/scholarships/find-a-scholarship/monash-international-leadership-scholarship-5571Z",
+        "source_type": "official_scholarship",
+        "verified_date": "2026-09-26",
+        "status": "latest_published",
+        "note": ""
+      },
+      "country_eligibility": {
+        "value": true,
+        "academic_year": 2027,
+        "source_year": 2026,
+        "source_id": "monash-international-leadership-scholarship",
+        "source_url": "https://www.monash.edu/study/fees-scholarships/scholarships/find-a-scholarship/monash-international-leadership-scholarship-5571Z",
+        "source_type": "official_scholarship",
+        "verified_date": "2026-09-26",
+        "status": "latest_published",
+        "note": "International students from all countries"
+      },
+      "duration": {
+        "value": "최소 졸업학점 이수까지",
+        "academic_year": 2027,
+        "source_year": 2026,
+        "source_id": "monash-international-leadership-scholarship",
+        "source_url": "https://www.monash.edu/study/fees-scholarships/scholarships/find-a-scholarship/monash-international-leadership-scholarship-5571Z",
+        "source_type": "official_scholarship",
+        "verified_date": "2026-09-26",
+        "status": "latest_published",
+        "note": ""
+      },
+      "academic_threshold": {
+        "value": "학업성취도 기준 최상위권 경쟁선발",
+        "academic_year": 2027,
+        "source_year": 2026,
+        "source_id": "monash-international-leadership-scholarship",
+        "source_url": "https://www.monash.edu/study/fees-scholarships/scholarships/find-a-scholarship/monash-international-leadership-scholarship-5571Z",
+        "source_type": "official_scholarship",
+        "verified_date": "2026-09-26",
+        "status": "latest_published",
+        "note": ""
+      },
+      "renewal_condition": {
+        "value": "매 학기 WAM 70 + Campus Ambassador Program 참여",
+        "academic_year": 2027,
+        "source_year": 2026,
+        "source_id": "monash-international-leadership-scholarship",
+        "source_url": "https://www.monash.edu/study/fees-scholarships/scholarships/find-a-scholarship/monash-international-leadership-scholarship-5571Z",
+        "source_type": "official_scholarship",
+        "verified_date": "2026-09-26",
+        "status": "latest_published",
+        "note": ""
+      },
+      "number_available": {
+        "value": 4,
+        "academic_year": 2027,
+        "source_year": 2026,
+        "source_id": "monash-international-leadership-scholarship",
+        "source_url": "https://www.monash.edu/study/fees-scholarships/scholarships/find-a-scholarship/monash-international-leadership-scholarship-5571Z",
+        "source_type": "official_scholarship",
+        "verified_date": "2026-09-26",
+        "status": "latest_published",
+        "note": ""
+      },
+      "course_exclusion": {
+        "value": "MD, Monash Pathway 등 공식 제외과정. P6007 Pharmacy는 제외목록에 없음",
+        "academic_year": 2027,
+        "source_year": 2026,
+        "source_id": "monash-international-leadership-scholarship",
+        "source_url": "https://www.monash.edu/study/fees-scholarships/scholarships/find-a-scholarship/monash-international-leadership-scholarship-5571Z",
+        "source_type": "official_scholarship",
+        "verified_date": "2026-09-26",
+        "status": "latest_published",
+        "note": ""
+      },
+      "pharmacy_eligible": {
+        "value": true,
+        "academic_year": 2027,
+        "source_year": 2026,
+        "source_id": "monash-international-leadership-scholarship",
+        "source_url": "https://www.monash.edu/study/fees-scholarships/scholarships/find-a-scholarship/monash-international-leadership-scholarship-5571Z",
+        "source_type": "official_scholarship",
+        "verified_date": "2026-09-26",
+        "status": "latest_published",
+        "note": ""
+      },
+      "note": "학비 100% 지원. 연 4명 경쟁선발."
     }
   ],
   "accommodation": [
@@ -17825,11 +18084,11 @@
     },
     {
       "id": "monash-fee-2027",
-      "title": "Monash · Pharmacy P6007 2027 fee",
-      "url": "https://www.monash.edu/study/courses/find-a-course/pharmacy-p6007",
-      "source_year": 2027,
-      "source_type": "official_course",
-      "verified_date": "2026-09-25"
+      "title": "Monash 2027 International Undergraduate Course Guide · Pharmacy fee note",
+      "url": "https://www.monash.edu/__data/assets/pdf_file/0005/3941744/undergraduate-international-course-guide.pdf",
+      "source_year": 2026,
+      "source_type": "official_course_guide",
+      "verified_date": "2026-09-26"
     },
     {
       "id": "jcu-fee-2026",
@@ -18501,6 +18760,22 @@
       "url": "https://www.monash.edu/pharm/future/courses/undergraduate-pharmacy-international",
       "source_year": 2027,
       "source_type": "official_course",
+      "verified_date": "2026-09-26"
+    },
+    {
+      "id": "monash-international-merit-scholarship",
+      "title": "Monash International Merit Scholarship",
+      "url": "https://www.monash.edu/study/fees-scholarships/scholarships/find-a-scholarship/international-merit-5770",
+      "source_year": 2026,
+      "source_type": "official_scholarship",
+      "verified_date": "2026-09-26"
+    },
+    {
+      "id": "monash-international-leadership-scholarship",
+      "title": "Monash International Leadership Scholarship",
+      "url": "https://www.monash.edu/study/fees-scholarships/scholarships/find-a-scholarship/monash-international-leadership-scholarship-5571Z",
+      "source_year": 2026,
+      "source_type": "official_scholarship",
       "verified_date": "2026-09-26"
     }
   ],
