@@ -17265,7 +17265,7 @@
     },
     {
       "id": "monash-foundation",
-      "title": "Monash Pathway Programs 2027 · Pharmacy section still shows legacy P6001",
+      "title": "Monash Pathway Programs 2027 · Pharmacy P6001 표기",
       "url": "https://www.monashcollege.edu.au/__data/assets/pdf_file/0005/4349102/2027-Monash-Pathway-Programs.pdf",
       "source_year": 2027,
       "source_type": "official_pathway",
@@ -18057,7 +18057,7 @@
     },
     {
       "id": "monash-foundation-p6007-current",
-      "title": "Monash College · Foundation Year destination degree · Pharmacy P6007",
+      "title": "Monash College · Foundation Year · Pharmacy P6007",
       "url": "https://www.monashcollege.edu.au/study/courses/foundation-year/fy-data/destination-degrees-2026-single-degrees/pharmacy-and-pharmaceutical-science",
       "source_year": null,
       "source_type": "official_pathway",
@@ -18519,8 +18519,8 @@
         "monash-foundation-p6007-current"
       ],
       "status": "source_conflict",
-      "summary": "2027 Pathway Programs PDF Pharmacy 표는 P6001을 유지하지만, 현재 Monash College destination-degree 페이지는 새 P6007과 75%/English 65%/Maths·Chemistry 50%를 표시",
-      "decision": "P6007 live 값을 최신 공개 참고값으로 보여주되 2027 확정 자동판정에는 사용하지 않음."
+      "summary": "2027 Pathway Programs PDF에는 Pharmacy가 P6001로, 현재 Monash College 웹페이지에는 P6007과 Foundation 75% · English 65% · Maths/Chemistry 50%로 표시됩니다.",
+      "decision": "현재 약대 과정은 P6007로 안내되지만 문서 간 과정코드가 달라 Foundation 진급점수는 최종 확정값으로 표시하지 않습니다."
     }
   ]
 }
