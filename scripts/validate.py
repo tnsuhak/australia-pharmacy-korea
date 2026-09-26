@@ -77,6 +77,11 @@ for slug,(route_count,phrases) in compact_batch.items():
  for old_heading in ['<h2>Direct 입학조건</h2>','<h2>졸업 후 485·지역</h2>','<h2>호주 약사등록</h2>','<h2>자주 묻는 질문</h2>']:
   if old_heading in txt:errors.append(f'{slug}: old duplicate section remains {old_heading}')
  if 'id="cost-form"' in txt:errors.append(f'{slug}: per-school cost calculator should not render')
+griffith_page=R/'dist/universities/griffith-pharmacy/index.html'
+if griffith_page.exists():
+ gt=griffith_page.read_text()
+ for phrase in ['(국제학력은 2026 공식 참고)','(2026 공식 참고)']:
+  if phrase in gt:errors.append(f'griffith-pharmacy: unnecessary source-year parenthetical remains {phrase}')
 for slug in ['jcu-pharmacy','utas-pharmacy','curtin-pharmacy','griffith-pharmacy']:
  page=R/f'dist/universities/{slug}/index.html'
  if page.exists():
