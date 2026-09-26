@@ -364,7 +364,7 @@ for u in D['universities']:
 <div><small>약대 장학금</small><strong>25% 또는 50%</strong><span>연 8명 · 경쟁선발</span></div>
 <div><small>장학 유지</small><strong>WAM 70</strong><span>별도 장학신청 없음</span></div>
 <div><small>Parkville 인근 쉐어</small><strong>A$290~380 / 주</strong><span>현재 공식 생활비 참고</span></div>
-</div><p class="small muted">전체 예산 계산은 대학별 비교 페이지에서 한 번만 제공합니다.</p>'''+link('/tuition-scholarships/','호주 약대 전체 학비·생활비 비교 →','btn text')
+</div>'''+link('/tuition-scholarships/','호주 약대 전체 학비·생활비 비교 →','btn text')
         monash_after='''<div class="monash-flow"><div><b>1~4년차</b><strong>BPharm(Hons)</strong><span>4년 후 학사로 졸업 가능</span></div><i>↓</i><div><b>5년차</b><strong>Doctor of Pharmacy</strong><span>유급 supervised practice + Intern Training Program</span></div><i>↓</i><div><b>호주 약사등록</b><strong>등록시험·심사 완료</strong><span>General Registration</span></div><i>↓</i><div><b>졸업비자</b><strong>기본 485 · 2년</strong><span>Melbourne은 Regional 추가기간 없음</span></div></div><div class="section-link-list compact-links">'''+link('/pharmacist-registration/','호주 약사등록 자세히 →')+link('/korea-pharmacist/','한국 약사면허 · 모나쉬는 기인정 대학 →')+'''</div>'''
         items=[('overview','모나쉬 약대 과정 구조',monash_overview),('routes','입학방법 3가지',monash_routes),('curriculum','5년 커리큘럼 한눈에 보기',monash_curriculum),('cost','학비·장학금·생활비',monash_cost),('after','5년 과정과 졸업 후',monash_after),('sources','자료 출처',sources(allids))]
         register(purl(p),'2027 모나쉬 약대 · 5년 PharmD·입학조건·학비 | TNS','모나쉬대학교 5년 Pharmacy/Doctor of Pharmacy 과정의 Direct·Foundation·Graduate Entry, 2027 학비·장학금과 졸업 후 약사등록을 간단히 정리합니다.',body+article(items,'monash-detail'))
