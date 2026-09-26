@@ -57,6 +57,16 @@ for path in pages:
  text=path.read_text()
  for phrase in public_copy_banned:
   if phrase in text:errors.append(f'{path.relative_to(R/"dist")}: developer-style public copy remains: {phrase}')
+monash_page=R/'dist/universities/monash-pharmacy/index.html'
+if not monash_page.exists():
+ errors.append('monash-page: compact pilot page missing')
+else:
+ mt=monash_page.read_text()
+ for phrase in ['모나쉬 약대 한눈에 보기','입학방법 3가지','2027 연간 학비','5년 과정과 졸업 후','4년 후 학사로 졸업 가능','25% 또는 50%']:
+  if phrase not in mt:errors.append(f'monash-page: compact pilot missing {phrase}')
+ for old_heading in ['<h2>과정·학위 구조</h2>','<h2>Direct 입학조건</h2>','<h2>졸업 후 485·지역</h2>','<h2>호주 약사등록</h2>','<h2>자주 묻는 질문</h2>']:
+  if old_heading in mt:errors.append(f'monash-page: old duplicate section remains {old_heading}')
+ if 'id="cost-form"' in mt:errors.append('monash-page: duplicated cost calculator should not render')
 korea_page=R/'dist/korea-pharmacist/index.html'
 if not korea_page.exists():
  errors.append('korea-pharmacist: page missing')
