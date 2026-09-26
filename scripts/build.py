@@ -271,7 +271,9 @@ def pathway_status(uid,t):
     if confirmed:
         r=confirmed[0]
         if t=='diploma' and r['entry_year']['value']==2:return '<strong class="yes">있음</strong><span>약대 2학년 진학</span>'
-        if t=='foundation':return '<strong class="yes">있음</strong><span>약대 1학년 진학</span>'
+        if t=='foundation':
+            destination=r.get('destination_label')
+            return '<strong class="yes">있음</strong><span>'+E(destination if destination else '약대 1학년 진학')+'</span>'
         if t=='graduate':return '<strong class="yes">있음</strong><span>'+E(r['title'])+'</span>'
         return '<strong class="yes">있음</strong>'
     if pending:return '<strong class="pending">2027 확인 중</strong>'
@@ -513,13 +515,19 @@ for u in D['universities']:
             titles=('커틴 약대 과정 구조','입학방법 2가지','3년 9개월 과정·실습','학비·장학금','3년 9개월 과정과 졸업 후')
             seo=('2027 커틴 약대 · 3년9개월·Diploma·20% 장학 | TNS','커틴대학교 약대의 3년 9개월 과정, Direct와 Curtin College 2학년 진학, 20% 국제학생 장학과 졸업 후 인턴십을 정리합니다.')
         else:
+            foundation=next(x for x in rs if x['id']=='griffith-foundation')
             diploma=next(x for x in rs if x['id']=='griffith-college')
-            overview='''<div class="monash-snapshot"><p class="lead"><strong>Gold Coast에서 공부하는 4년 BPharm(Hons) 과정이며, 2027 Guaranteed Admission rank는 76입니다.</strong></p><p>Direct 외에도 Griffith College Diploma of Health Sciences를 거쳐 약대 2학년으로 이어지는 경로가 있습니다.</p><div class="monash-keyline"><span>4년 학사</span><span>2027 Rank 76</span><span>1학년 Diploma → 약대 2학년</span></div></div>'''
-            routes='''<div class="monash-route-grid compact-route-grid two">
+            overview='''<div class="monash-snapshot"><p class="lead"><strong>Gold Coast에서 공부하는 4년 BPharm(Hons) 과정이며, 2027 Guaranteed Admission rank는 76입니다.</strong></p><p>고졸 Direct 외에 1학년 Diploma 경로가 있고, 고2 학생은 Foundation을 거쳐 Diploma로 진학한 뒤 약대 2학년으로 이어질 수 있습니다.</p><div class="monash-keyline"><span>4년 학사</span><span>2027 Rank 76</span><span>Foundation · Diploma 경로</span></div></div>'''
+            routes='''<div class="monash-route-grid">
 <article><span class="route-label">DIRECT</span><h3>고졸 → 약대 1학년</h3><div class="route-criteria">
 <div><small>입학조건</small><strong>2027 Rank 76 · 수능 331 · IB 28 · A-Level 7 · SAT 1080 (국제학력은 2026 공식 참고)</strong></div>
 <div><small>영어</small><strong>IELTS 7.0 overall · 영역별 2027 확인 중</strong></div>
 <div><small>입학시기</small><strong>3월 · 7월 (2026 공식 참고)</strong></div>
+</div></article>
+<article><span class="route-label">FOUNDATION</span><h3>고2 → Foundation → 1학년 Diploma (Health Sciences) → 약대 2학년</h3><div class="route-criteria">
+<div><small>입학조건</small><strong>한국 고2 Rank 7 · 수능 260 · 검정고시 평균 70</strong></div>
+<div><small>영어</small><strong>IELTS 5.5 · 각 5.0</strong></div>
+<div><small>입학시기</small><strong>3월 · 6월 · 10월</strong></div>
 </div></article>
 <article><span class="route-label">GRIFFITH COLLEGE</span><h3>1학년 Diploma (Health Sciences) → 약대 2학년</h3><div class="route-criteria">
 <div><small>입학조건</small><strong>한국 고3 Rank 6 또는 수능 280 · 검정고시 평균 80</strong></div>
@@ -539,8 +547,8 @@ for u in D['universities']:
 <div><small>Gold Coast 숙소</small><strong>A$329.85 / 주부터</strong><span>Griffith University Village · 2027</span></div>
 </div><div class="section-link-list compact-links">'''+link('/tuition-scholarships/','호주 약대 전체 학비·생활비 비교 →')+'''</div>'''
             after='''<div class="monash-flow"><div><b>4년</b><strong>BPharm(Hons)</strong><span>학사 완료</span></div><i>↓</i><div><b>졸업 후</b><strong>등록 인턴십·ITP</strong><span>약사등록 요건 별도 이수</span></div><i>↓</i><div><b>호주 약사등록</b><strong>시험·심사 완료</strong><span>General Registration</span></div><i>↓</i><div><b>지역</b><strong>Gold Coast</strong><span>Regional Category 2</span></div></div><div class="section-link-list compact-links">'''+link('/pharmacist-registration/','호주 약사등록 방법 →')+link('/korea-pharmacist/','한국 약사면허 취득 방법 →')+'''</div>'''
-            titles=('그리피스 약대 과정 구조','입학방법 2가지','4년 과정 한눈에 보기','학비·장학금·생활비','4년 과정과 졸업 후')
-            seo=('2027 그리피스 약대 · 4년·20% 장학·Diploma | TNS','그리피스대학교 약대의 4년 과정, 2027 Rank 76, Griffith College 80CP 진학, 20% 국제학생 장학과 Gold Coast 생활을 정리합니다.')
+            titles=('그리피스 약대 과정 구조','입학방법 3가지','4년 과정 한눈에 보기','학비·장학금·생활비','4년 과정과 졸업 후')
+            seo=('2027 그리피스 약대 · Direct·Foundation·Diploma·20% 장학 | TNS','그리피스대학교 약대의 4년 과정, Direct 입학, Foundation→Diploma 경로, 1학년 Health Sciences Diploma→약대 2학년, 20% 국제학생 장학을 정리합니다.')
         items=[('overview',titles[0],overview),('routes',titles[1],routes),('curriculum',titles[2],curriculum),('cost',titles[3],cost),('after',titles[4],after),('sources','자료 출처',sources(allids))]
         register(purl(p),seo[0],seo[1],body+article(items,'compact-detail'))
     else:
