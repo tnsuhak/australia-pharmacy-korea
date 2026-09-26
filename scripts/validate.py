@@ -58,12 +58,12 @@ for path in pages:
  for phrase in public_copy_banned:
   if phrase in text:errors.append(f'{path.relative_to(R/"dist")}: developer-style public copy remains: {phrase}')
 compact_batch={
- 'jcu-pharmacy':['JCU 약대 과정 구조','904시간 Placement','ATAR / Rank','2026 A$31,710 참고','자동심사 · 25%','3년 커리큘럼·실습','호주 약사등록 방법 →'],
- 'utas-pharmacy':['UTas 약대 과정 구조','최소 400시간 PEP','수능','305','Foundation','FCWAM 60%','A$61,267 / 년','자동심사 · 30%','3년 커리큘럼·실습'],
- 'curtin-pharmacy':['커틴 약대 과정 구조','3년 9개월','Pharmacy Diploma → 약대 2학년','CWA 70%','175 credits','A$44,900','자동심사 · 20%','Professional internship'],
- 'griffith-pharmacy':['그리피스 약대 과정 구조','2027 Rank','76','수능','331','Diploma of Health Sciences → 약대 2학년','80CP 인정','자동심사 · 20%','A$329.85 / 주부터']
+ 'jcu-pharmacy':(1,['JCU 약대 과정 구조','904시간 Placement','ATAR / Rank 76','IELTS 7.0 · 각 6.5','2027년 2월','2026 A$31,710 참고','자동심사 · 25%','3년 커리큘럼·실습','호주 약사등록 방법 →']),
+ 'utas-pharmacy':(3,['UTas 약대 과정 구조','최소 400시간 PEP','수능 305','한국 고2 60%','한국 고2 65% + General Mathematics','2027년 2월 22일 · 6월 21일 · 10월 11일','A$61,267 / 년','자동심사 · 30%','3년 커리큘럼·실습']),
+ 'curtin-pharmacy':(2,['커틴 약대 과정 구조','3년 9개월','Pharmacy Diploma → 약대 2학년','한국 고3 Rank 6 또는 수능 280/600','Stage 2 · 2월','A$44,900','자동심사 · 20%','Professional internship']),
+ 'griffith-pharmacy':(2,['그리피스 약대 과정 구조','2027 Rank 76','수능 331','Diploma of Health Sciences → 약대 2학년','한국 고3 Rank 6 또는 수능 280','2027년 3월 1일 · 6월 27일 · 10월 5일','자동심사 · 20%','A$329.85 / 주부터'])
 }
-for slug,phrases in compact_batch.items():
+for slug,(route_count,phrases) in compact_batch.items():
  page=R/f'dist/universities/{slug}/index.html'
  if not page.exists():
   errors.append(f'{slug}: compact detail page missing')
@@ -71,6 +71,9 @@ for slug,phrases in compact_batch.items():
  txt=page.read_text()
  for phrase in phrases:
   if phrase not in txt:errors.append(f'{slug}: compact detail missing {phrase}')
+ for label in ['입학조건','영어','입학시기']:
+  if txt.count(f'<small>{label}</small>')<route_count:
+   errors.append(f'{slug}: pathway cards not standardized for {label}')
  for old_heading in ['<h2>Direct 입학조건</h2>','<h2>졸업 후 485·지역</h2>','<h2>호주 약사등록</h2>','<h2>자주 묻는 질문</h2>']:
   if old_heading in txt:errors.append(f'{slug}: old duplicate section remains {old_heading}')
  if 'id="cost-form"' in txt:errors.append(f'{slug}: per-school cost calculator should not render')
@@ -79,8 +82,10 @@ if not monash_page.exists():
  errors.append('monash-page: compact pilot page missing')
 else:
  mt=monash_page.read_text()
- for phrase in ['모나쉬 약대 과정 구조','입학방법 3가지','수능','350','한국 내신','86%','A-Level','IB','AP','SAT','1290','한국 고교 60% 또는 수능 260','모나쉬 5년 PharmD 진급','Foundation 75%','English 65% · Maths 50% · Chemistry 50%','학사 평균 70%+','Higher-level Maths','Human Physiology','5년 커리큘럼 한눈에 보기','2~3학년','유급 실무훈련 + ITP','과정 전반의 핵심 역량','2027 국제학생 학비','A$63,640','일반 국제학생 Merit','A$15,000 / 년','Leadership','학비 100%','약대 전용 25%·50% 장학','2027 신설 PharmD 적용 확인 중','일반 신입생에게 확정 적용되는 장학금으로 표시하지 않습니다.','5년 과정과 졸업 후','4년 후 학사로 졸업 가능']:
+ for phrase in ['모나쉬 약대 과정 구조','입학방법 3가지','수능 350','한국 내신 86%','A-Level 12','IB 33','AP 8','SAT 1290','한국 고교 60% 또는 수능 260','관련 학사 · 최근 10년 이내 · 평균 70%+','Higher-level Maths','Human Physiology','1월 초 Summer intensive 시작','5년 커리큘럼 한눈에 보기','2~3학년','유급 실무훈련 + ITP','과정 전반의 핵심 역량','2027 국제학생 학비','A$63,640','일반 국제학생 Merit','A$15,000 / 년','Leadership','학비 100%','약대 전용 25%·50% 장학','2027 신설 PharmD 적용 확인 중','일반 신입생에게 확정 적용되는 장학금으로 표시하지 않습니다.','5년 과정과 졸업 후','4년 후 학사로 졸업 가능']:
   if phrase not in mt:errors.append(f'monash-page: compact pilot missing {phrase}')
+ for label in ['입학조건','영어','입학시기']:
+  if mt.count(f'<small>{label}</small>')<3:errors.append(f'monash-page: pathway cards not standardized for {label}')
  visible_mt=re.sub(r'<script\b.*?</script>|<style\b.*?</style>', '', mt, flags=re.I|re.S)
  visible_mt=re.sub(r'<[^>]+>', ' ', visible_mt)
  for code in ['P6007','P6001']:
