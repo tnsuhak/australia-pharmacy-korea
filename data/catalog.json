@@ -11946,15 +11946,15 @@
     {
       "program_id": "monash-bpharm-hons",
       "annual": {
-        "value": 60100,
+        "value": 63640,
         "academic_year": 2027,
-        "source_year": 2026,
+        "source_year": 2027,
         "source_id": "monash-fee-2027",
-        "source_url": "https://www.monash.edu/__data/assets/pdf_file/0005/3941744/undergraduate-international-course-guide.pdf",
-        "source_type": "official_course_guide",
+        "source_url": "https://www.monash.edu/study/courses/find-a-course/pharmacy-p6007",
+        "source_type": "official_course",
         "verified_date": "2026-09-26",
-        "status": "latest_published",
-        "note": "2027 International Undergraduate Course Guide의 Pharmacy 표에 기재된 2026 quoted fee. 가이드는 2027 입학 학비가 달라진다고 명시하므로 2027 확정값으로 사용하지 않음."
+        "status": "confirmed_2027",
+        "note": "Official P6007 page, International student view: 2027 fee per 48 credit points."
       },
       "official_total": {
         "value": null,
@@ -11971,15 +11971,15 @@
       "load_basis": {
         "value": "48 credit points 기준",
         "academic_year": 2027,
-        "source_year": 2026,
+        "source_year": 2027,
         "source_id": "monash-fee-2027",
-        "source_url": "https://www.monash.edu/__data/assets/pdf_file/0005/3941744/undergraduate-international-course-guide.pdf",
-        "source_type": "official_course_guide",
+        "source_url": "https://www.monash.edu/study/courses/find-a-course/pharmacy-p6007",
+        "source_type": "official_course",
         "verified_date": "2026-09-26",
-        "status": "latest_published",
-        "note": "2026 quoted fee의 연간 표준 full-time load 기준"
+        "status": "confirmed_2027",
+        "note": "Standard full-time course load for a year."
       },
-      "increase_note": "2027 국제학생 확정 학비는 재확인 필요. 2026 공식 국제학생 참고값은 A$60,100입니다."
+      "increase_note": "Fees are subject to change annually."
     },
     {
       "program_id": "sydney-bpharm-hons",
@@ -12396,7 +12396,7 @@
     {
       "id": "monash-merit",
       "university_id": "monash",
-      "name": "Pharmacy and Pharmaceutical Science International Merit · P6007 Scholars Program",
+      "name": "Pharmacy and Pharmaceutical Science International Merit",
       "amount": {
         "value": [
           25,
@@ -12502,29 +12502,29 @@
         "note": ""
       },
       "course_exclusion": {
-        "value": "P6007은 Bachelor of Pharmacy (Honours) Scholars Program/Doctor of Pharmacy로 명시",
+        "value": "현재 공식 대상과정: P2001/P3002, P3001/P6001, P6005, P6006 · P6007 미표기",
         "academic_year": 2027,
-        "source_year": 2026,
+        "source_year": null,
         "source_id": "monash-scholarship",
         "source_url": "https://www.monash.edu/study/fees-scholarships/scholarships/find-a-scholarship/pharmacy-international-merit-scholarship-5745",
         "source_type": "official_scholarship",
         "verified_date": "2026-09-26",
         "status": "latest_published",
-        "note": ""
+        "note": "P6007 적용 여부는 지원 전 Monash 확인 필요."
       },
       "pharmacy_eligible": {
-        "value": true,
+        "value": null,
         "academic_year": 2027,
-        "source_year": 2026,
+        "source_year": null,
         "source_id": "monash-scholarship",
         "source_url": "https://www.monash.edu/study/fees-scholarships/scholarships/find-a-scholarship/pharmacy-international-merit-scholarship-5745",
         "source_type": "official_scholarship",
         "verified_date": "2026-09-26",
-        "status": "latest_published",
-        "note": ""
+        "status": "pending_2027",
+        "note": "Current official scholarship page lists P3001/P6001/P2001/P3002/P6005/P6006. P6007 is not listed."
       },
-      "note": "P6007 Scholars Program 대상. 일반 P6007 학생 전체에 적용되는 장학금으로 표시하지 않음. 연 8명: 50% 4명, 25% 4명.",
-      "scope": "scholars_program"
+      "note": "25%/50%·연 8명 구조는 현재 공식 장학 페이지에 유지되지만, 대상 과정코드에 P6007이 아직 없으므로 2027 P6007 적용은 확인 중으로 표시.",
+      "scope": "p6007_not_confirmed"
     },
     {
       "id": "newcastle-excellence",
@@ -17560,7 +17560,7 @@
       "url": "https://www.monash.edu/study/fees-scholarships/scholarships/find-a-scholarship/pharmacy-international-merit-scholarship-5745",
       "source_year": null,
       "source_type": "official_scholarship",
-      "verified_date": "2026-09-24"
+      "verified_date": "2026-09-26"
     },
     {
       "id": "sydney-scholarship",
@@ -18084,10 +18084,10 @@
     },
     {
       "id": "monash-fee-2027",
-      "title": "Monash 2027 International Undergraduate Course Guide · Pharmacy fee note",
-      "url": "https://www.monash.edu/__data/assets/pdf_file/0005/3941744/undergraduate-international-course-guide.pdf",
-      "source_year": 2026,
-      "source_type": "official_course_guide",
+      "title": "Monash Pharmacy P6007 · 2027 international fee",
+      "url": "https://www.monash.edu/study/courses/find-a-course/pharmacy-p6007",
+      "source_year": 2027,
+      "source_type": "official_course",
       "verified_date": "2026-09-26"
     },
     {
