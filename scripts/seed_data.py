@@ -5,15 +5,15 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 DATE = '2026-09-25'
 sources = {}
-def source(key, title, url, year=None, kind='official_course'):
+def source(key, title, url, year=None, kind='official_course', verified_date=None):
     sources[key] = dict(id=key, title=title, url=url, source_year=year,
-                        source_type=kind, verified_date=DATE)
+                        source_type=kind, verified_date=verified_date or DATE)
     return key
 def fact(value=None, src=None, year=None, status=None, note=''):
     s=sources.get(src,{})
     return dict(value=value, academic_year=2027, source_year=year or s.get('source_year'),
                 source_id=src, source_url=s.get('url'), source_type=s.get('source_type'),
-                verified_date=DATE if src else None,
+                verified_date=s.get('verified_date') if src else None,
                 status=status or ('pending_2027' if value is None else 'confirmed_2027' if (year or s.get('source_year'))==2027 else 'latest_published'),
                 note=note)
 
@@ -100,7 +100,7 @@ source('qut-foundation-intensive-2027','QUT College · Intensive Program · 2027
 source('qut-college-merit-current','QUT College Merit Scholarship · South Korea criteria','https://www.qut.edu.au/study/fees-and-scholarships/scholarships/qut-college-merit-scholarship',None,'official_scholarship')
 source('qut-fee-2027','QUT · Bachelor of Pharmacy (Honours) 2027 fee','https://www.qut.edu.au/courses/bachelor-of-pharmacy-honours',2027,'official_course')
 source('newcastle-fee-2027','University of Newcastle · 2027 International Student Degree Guide · Pharmacy','https://www.newcastle.edu.au/__data/assets/pdf_file/0020/1102565/2025-1079-International-Prospectus-2027-ROW_V27.pdf',2027,'official_guide')
-source('monash-fee-2027','Monash · Pharmacy P6007 2027 fee','https://www.monash.edu/study/courses/find-a-course/pharmacy-p6007',2027,'official_course')
+source('monash-fee-2027','Monash 2027 International Undergraduate Course Guide · Pharmacy fee note','https://www.monash.edu/__data/assets/pdf_file/0005/3941744/undergraduate-international-course-guide.pdf',2026,'official_course_guide',verified_date='2026-09-26')
 source('monash-curriculum-2027','Monash · Undergraduate Pharmacy for International Students · 2027 curriculum','https://www.monash.edu/pharm/future/courses/undergraduate-pharmacy-international',2027,'official_course')
 source('jcu-fee-2026','JCU · Bachelor of Pharmacy (Honours) 2026 fee','https://www.jcu.edu.au/courses/bachelor-of-pharmacy-honours',2026,'official_course')
 source('unsw-fee-2026','UNSW · Pharmaceutical Medicine / Pharmacy 2026 fee','https://www.unsw.edu.au/study/undergraduate/bachelor-of-pharmaceutical-medicine-master-of-pharmacy',2026,'official_course')
@@ -185,7 +185,9 @@ source('newcastle-foundation-entry','Newcastle CIE · Foundation Studies entry r
 source('newcastle-foundation-fee-2027','Newcastle CIE · 2027 Foundation Studies fees','https://internationalcollege.newcastle.edu.au/fees',2027,'official_pathway')
 source('rmit-pathway','RMIT 2026 degree and diploma guide','https://www.rmit.edu.au/content/dam/rmit/au/en/docs/study/career-advisers/brochures/2026-degree-diploma-guide-rmit-university.pdf',2026,'official_guide')
 source('griffith-scholarship','Griffith International Academic Merit Scholarship','https://www.griffith.edu.au/international/scholarships-finance/scholarships/international-academic-merit-scholarship',2027,'official_scholarship')
-source('monash-scholarship','Monash Pharmacy and Pharmaceutical Science International Merit Scholarship','https://www.monash.edu/study/fees-scholarships/scholarships/find-a-scholarship/pharmacy-international-merit-scholarship-5745',None,'official_scholarship')
+source('monash-scholarship','Monash Pharmacy and Pharmaceutical Science International Merit Scholarship','https://www.monash.edu/study/fees-scholarships/scholarships/find-a-scholarship/pharmacy-international-merit-scholarship-5745',2026,'official_scholarship',verified_date='2026-09-26')
+source('monash-international-merit-scholarship','Monash International Merit Scholarship','https://www.monash.edu/study/fees-scholarships/scholarships/find-a-scholarship/international-merit-5770',2026,'official_scholarship',verified_date='2026-09-26')
+source('monash-international-leadership-scholarship','Monash International Leadership Scholarship','https://www.monash.edu/study/fees-scholarships/scholarships/find-a-scholarship/monash-international-leadership-scholarship-5571Z',2026,'official_scholarship',verified_date='2026-09-26')
 source('sydney-scholarship','Sydney International Student Award 2027','https://www.sydney.edu.au/study/fees-and-loans/scholarships/sydney-international-student-award.html',2027,'official_scholarship')
 source('sydney-usfp-fees-2027','Taylors College · University of Sydney Foundation Program · 2027 tuition fees','https://www.taylorssydney.edu.au/how-apply/fees/',2027,'official_pathway')
 source('sydney-usfp-dates-current','Taylors College · University of Sydney Foundation Program · current term dates','https://www.taylorssydney.edu.au/programs/term-dates/',None,'official_pathway')
@@ -304,7 +306,7 @@ setp('canberra',highlights=['Canberra','학부 약학 과정','모집 확인 중
 setp('unisq',highlights=['T1 only','Toowoomba','2027 개설표'],editorial='2027 국제학생 대면 수업은 Trimester 1에 표시됩니다. 개설 안내서는 9월 28일 확정 예정이므로 최종 일정 확인이 필요합니다.')
 intake('unisq',[2],'Trimester 1 · 2027년 2월 15일',src='unisq-pharmacy-current'); req('unisq','accepted','assumed','accepted','accepted','수학 + Biology/Chemistry/Physics 중 1과목에서 Year 12 C 수준 assumed knowledge',src='unisq-pharmacy-current'); eng('unisq',7.0,{'L':7,'R':7,'W':6.5,'S':7},src='unisq-pharmacy-current')
 setp('monash',highlights=['5년 PharmD','5년차 유급 인턴 통합','4년 BPharm(Hons) Exit'],editorial='P6007은 5년 Bachelor of Pharmacy (Honours) / Doctor of Pharmacy 통합과정입니다. 2~4학년에는 구조화된 실습이 있고 5학년에는 paid work-integrated learning과 Intern Training Program이 통합됩니다. 3년 144cp 후 Bachelor of Pharmacotherapeutics, 4년 192cp 후 BPharm(Hons), 5년에는 PharmD 또는 조건에 따라 BPharm(Hons)+Master of Pharmacy 대체 Exit가 있습니다. 2027 국내 Monash Guarantee ATAR는 80이지만 국제학력 Direct 점수로 자동 환산하지 않습니다. 관련 학사 졸업자는 Graduate Entry로 3학년 진입을 검토할 수 있습니다.')
-req('monash','required','required',grade='VCE Methods/Specialist Maths 25 + Chemistry 25. IB Math AA SL4 또는 AA/AI HL3, Chemistry SL4 또는 HL3.'); intake('monash',[2],'2월'); fee('monash',49740,src='monash-fee-2027',year=2027,load='48 credit points 기준'); eng('monash',6.5,{'L':6,'R':6,'W':6,'S':6},src='monash-pps-2026',pte=58,pte_each=50)
+req('monash','required','required',grade='VCE Methods/Specialist Maths 25 + Chemistry 25. IB Math AA SL4 또는 AA/AI HL3, Chemistry SL4 또는 HL3.'); intake('monash',[2],'2월'); fee('monash',60100,src='monash-fee-2027',year=2026,load='48 credit points 기준'); row(tuition,'monash')['increase_note']='2027 국제학생 확정 학비는 재확인 필요. 2026 공식 국제학생 참고값은 A$60,100입니다.'; eng('monash',6.5,{'L':6,'R':6,'W':6,'S':6},src='monash-pps-2026',pte=58,pte_each=50)
 setp('sydney',bachelor_award_year=fact(4,'sydney-structure'),four_year_exit=fact(True,'sydney-structure'),exit_degree=fact('Bachelor of Pharmacy (Honours)','sydney-structure'),highlights=['5년 통합','4년 BPharm(Hons) Exit','Mathematics prerequisite'],editorial='5년 Bachelor of Pharmacy (Honours) + Master of Pharmacy Practice 통합과정입니다. 현재 Course Resolutions는 1~4학년 192cp를 충족하면 Bachelor of Pharmacy (Honours)를 수여할 수 있고, 5학년 48cp가 Master of Pharmacy Practice임을 명시합니다. Mathematics는 공식 course prerequisite이며 Chemistry·Biology는 assumed knowledge, Physics는 recommended study입니다.',review_items=['USFP 수학 progression 조건'])
 eng('sydney',6.5,{'L':6,'R':6,'W':6,'S':6},src='sydney',toefl={'overall':85,'L':17,'R':17,'W':19,'S':17}); intake('sydney',[2],'2월',src='sydney'); fee('sydney',63600,src='sydney',year=2027); req('sydney','assumed','required','assumed','recommended','Mathematics Advanced Band 4 또는 Mathematics Extension 1/2 Band E3 상당 prerequisite · Chemistry와 Biology는 assumed knowledge · Physics 권장',src='sydney-prereqs-current')
 qual('sydney','csat',346,'표준점수 4개 합','국어 + 수학 + 사회/과학 탐구 상위 2개 과목의 표준점수 합. 등급이나 백분위 합계가 아닙니다.')
@@ -473,12 +475,16 @@ routes[-1]['english']=fact('입학 IELTS 6.0 / 각 5.0','utas-ipc-entry')
 routes[-1]['qualification']=fact('한국: Senior Year 2(고2) 65% · General Mathematics 또는 country-specific equivalent 필요','utas-ipc-entry')
 routes[-1]['pathway_fee']=fact(25450,'utas-ipc-fees-2027',year=2027,note='2027 University Pathway Program Fast Track tuition fee')
 
-def scholarship(i,id,name,src,pct=None,kind='pending',automatic=None,competitive=None,eligible=None,duration=None,threshold=None,renewal=None,number=None,exclude=None,note='',pharmacy=None,amount_status=None,pharmacy_src=None):
- scholarships.append(dict(id=id,university_id=i,name=name,amount=fact(pct,src,status=amount_status),award_type='percentage' if pct is not None else None,assessment=kind,
-  automatic_assessment=fact(automatic,src),separate_application=fact(not automatic,src) if automatic is not None else fact(None,src),competitive=fact(competitive,src),country_eligibility=fact(eligible,src),duration=fact(duration,src),academic_threshold=fact(threshold,src),renewal_condition=fact(renewal,src),number_available=fact(number,src),course_exclusion=fact(exclude,src),pharmacy_eligible=fact(pharmacy,pharmacy_src or src),note=note))
+def scholarship(i,id,name,src,pct=None,kind='pending',automatic=None,competitive=None,eligible=None,duration=None,threshold=None,renewal=None,number=None,exclude=None,note='',pharmacy=None,amount_status=None,pharmacy_src=None,award_type=None,scope=None):
+ row=dict(id=id,university_id=i,name=name,amount=fact(pct,src,status=amount_status),award_type=award_type or ('percentage' if pct is not None else None),assessment=kind,
+  automatic_assessment=fact(automatic,src),separate_application=fact(not automatic,src) if automatic is not None else fact(None,src),competitive=fact(competitive,src),country_eligibility=fact(eligible,src),duration=fact(duration,src),academic_threshold=fact(threshold,src),renewal_condition=fact(renewal,src),number_available=fact(number,src),course_exclusion=fact(exclude,src),pharmacy_eligible=fact(pharmacy,pharmacy_src or src),note=note)
+ if scope: row['scope']=scope
+ scholarships.append(row)
 scholarship('griffith','griffith-merit','International Academic Merit','griffith-scholarship',20,'automatic',True,False,True,'학위 잔여 기간 · 인정학점 제외','GPA 4.5/7 또는 동등 성적','매 학기 전 과목 통과·풀타임 유지',exclude='Diploma 자체 및 제휴기관 제공과정 등 제외',note='한국 국적 대상. Pathway 패키지는 최종 성적 제출 후 심사합니다.',pharmacy=True)
 scholarship('sydney','sydney-award','Sydney International Student Award','sydney-scholarship',20,'application',False,False,True,'과정 기간','입학조건 충족 + personal statement','미납 없음·허가 없는 파트타임 전환 금지·정해진 기간 이수',exclude='MBA/EMBA·교환·원격·일부 법학 복수과정 등',note='2027 한국 국적 포함. Personal statement는 3개 항목 각 최대 200단어입니다.',pharmacy=True)
-scholarship('monash','monash-merit','Pharmacy and Pharmaceutical Science International Merit','monash-scholarship',[25,50],'competitive',True,True,True,'최소 졸업학점 이수까지','각 대상 과정군 최상위·차상위','매 학기 WAM 70 유지',8,'공식 목록은 P6007 Scholars Program/Doctor of Pharmacy를 대상 과정으로 명시','연 8명 경쟁장학입니다. 50%는 각 과정군 최상위, 25%는 차상위에 수여됩니다. 일반 P6007 전원 적용 장학으로 표시하지 않습니다.',pharmacy=None)
+scholarship('monash','monash-merit','Pharmacy and Pharmaceutical Science International Merit · P6007 Scholars Program','monash-scholarship',[25,50],'competitive',True,True,True,'최소 졸업학점 이수까지','각 대상 과정군 최상위·차상위','매 학기 WAM 70 유지',8,'P6007은 Bachelor of Pharmacy (Honours) Scholars Program/Doctor of Pharmacy로 명시','P6007 Scholars Program 대상. 일반 P6007 학생 전체에 적용되는 장학금으로 표시하지 않음. 연 8명: 50% 4명, 25% 4명.',pharmacy=True,award_type='percentage',scope='scholars_program')
+scholarship('monash','monash-international-merit','Monash International Merit Scholarship','monash-international-merit-scholarship',15000,'competitive',True,True,True,'매년 · 최소 졸업학점 이수까지','학업성취도 기준 경쟁선발','매 학기 WAM 70 이상',20,'MD, Monash Pathway 등 공식 제외과정. P6007 Pharmacy는 제외목록에 없음','일반 국제학생 학부 오퍼 소지자는 별도 장학신청 없이 자동심사. 연 20명 경쟁선발.',pharmacy=True,award_type='aud_per_year')
+scholarship('monash','monash-international-leadership','Monash International Leadership Scholarship','monash-international-leadership-scholarship',100,'competitive',True,True,True,'최소 졸업학점 이수까지','학업성취도 기준 최상위권 경쟁선발','매 학기 WAM 70 + Campus Ambassador Program 참여',4,'MD, Monash Pathway 등 공식 제외과정. P6007 Pharmacy는 제외목록에 없음','학비 100% 지원. 연 4명 경쟁선발.',pharmacy=True,award_type='percentage')
 scholarship('jcu','jcu-excellence','International Excellence Scholarship','jcu-scholarship',25,'automatic',True,False,True,'학위 전체 기간','학부: ATAR 65 또는 동등 성적','매 학기 강한 GPA 유지',exclude='Medicine·Dentistry·Diploma·일부 비학위 과정',note='Bachelor of Pharmacy (Honours)는 공식 제외목록에 없습니다.',pharmacy=True)
 scholarship('utas','utas-tims','Tasmanian International Merit Scholarship','utas-scholarship-2027',30,'automatic',True,False,True,'학위 전체 기간 · 최대 5년','최종 학력 성적표 기준 merit 심사','정상 등록·학업진행 유지',note='2027 약대는 제외과정 목록에 없습니다. 다른 UTas 장학과 중복 수혜는 불가하며 더 높은 장학이 적용됩니다.',pharmacy=True)
 scholarship('curtin','curtin-global-merit','Curtin Global Merit Scholarship','curtin-scholarship-2027',20,'automatic',True,False,True,'학부 최대 4년','최근 학업성적 Distinction 수준','Offer·등록 조건 유지',exclude='공식 제외과정에 Pharmacy 없음',note='2027/2028 WA 캠퍼스 국제학생 대상.',pharmacy=True)
