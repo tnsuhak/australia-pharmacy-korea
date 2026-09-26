@@ -41,11 +41,14 @@ test('UTas Pharmacy Foundation은 2027 Standard와 Fast-track을 구분',()=>{co
 test('QUT 수학·화학은 필수 prerequisite가 아니라 assumed knowledge',()=>{const p=program('qut-bpharm-hons');assert.equal(p.requirements.chemistry.value,'assumed');assert.equal(p.requirements.mathematics.value,'assumed');assert.equal(check('qut-bpharm-hons',{chemistry:'no',route:'direct'}).state,'match');});
 test('UniSQ 2027 국제학생은 T1 2월 시작, accelerated는 2028부터',()=>{const p=program('unisq-bpharm-hons');assert.deepEqual(p.intakes.months.value,[2]);assert.equal(check('unisq-bpharm-hons',{intake:'2'}).state,'match');assert.equal(check('unisq-bpharm-hons',{duration:'fast'}).state,'excluded');});
 
-test('Adelaide 현재 국제학생 표의 CSAT 340 경계값과 2026 학비 연도 분리',()=>{
-  assert.equal(check('adelaide-bpharm-hons',{qualification:'csat',score:'340',route:'direct'}).state,'match');
-  assert.equal(check('adelaide-bpharm-hons',{qualification:'csat',score:'339',route:'direct'}).state,'excluded');
+test('Adelaide 2027 ATAR 90/IB 35.25는 확정하고 한국 CSAT 환산은 재사용하지 않음',()=>{
+  assert.equal(check('adelaide-bpharm-hons',{qualification:'csat',score:'999',route:'direct'}).state,'pending');
+  assert.equal(check('adelaide-bpharm-hons',{qualification:'ib',score:'35.25',route:'direct'}).state,'match');
+  const route=catalog.entry_routes.find(x=>x.id==='adelaide-bpharm-hons-direct');
+  assert.deepEqual(route.intake_months.value,[2,7]);
+  assert.match(route.qualification.value,/Guaranteed ATAR 90/);
   const t=catalog.tuition.find(x=>x.program_id==='adelaide-bpharm-hons');
-  assert.equal(t.annual.value,54300);
+  assert.equal(t.annual.value,52200);
   assert.equal(t.annual.source_year,2026);
   assert.equal(t.annual.status,'latest_published');
 });
