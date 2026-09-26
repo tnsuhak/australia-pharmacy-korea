@@ -17,6 +17,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
+      - run: python3 -m py_compile scripts/seed_data.py scripts/build.py scripts/validate.py
       - run: python3 scripts/build.py
         env:
           CONTEXT: deploy-preview
