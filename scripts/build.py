@@ -5,7 +5,7 @@ import json, os, re, shutil, sys
 from urllib.parse import urlparse
 
 ROOT=Path(__file__).resolve().parents[1]
-D=json.loads((ROOT/'data/catalog.json').read_text()); C=json.loads((ROOT/'data/site.json').read_text()); K=json.loads((ROOT/'data/korea_pharmacist.json').read_text())
+D=json.loads((ROOT/'data/catalog.json').read_text()); C=json.loads((ROOT/'data/site.json').read_text()); K=json.loads((ROOT/'data/korea_pharmacist.json').read_text()); REG=json.loads((ROOT/'data/pharmacist_registration.json').read_text())
 U={u['id']:u for u in D['universities']}; P={p['id']:p for p in D['programs']}; S={s['id']:s for s in D['sources']}
 DATE=D['verified_date']; MODE=os.getenv('CONTEXT','deploy-preview')
 PRODUCTION=MODE=='production'
@@ -960,8 +960,124 @@ for s in D['scholarships']:
 cost_items=[('tuition','대학별 1년 학비',table(fee_rows,['과정','연간 학비','대학 공개 예상 총학비'],True)+callout('대학마다 연간 수강량이 달라 단순히 1년 학비 × 과정기간으로 총학비를 계산하지 않습니다.')),('scholarship-types','장학금은 수여 방식이 다릅니다','<div class="process-grid"><div class="process-card"><span class="number">01</span><h3>조건 충족 시 자동</h3><p>UniSQ처럼 조건을 맞추면 Admissions가 자동으로 반영하는 장학이 있습니다.</p></div><div class="process-card"><span class="number">02</span><h3>자동심사</h3><p>JCU·QUT·UTas·Curtin·Adelaide·La Trobe처럼 입학 지원서로 장학을 함께 심사하는 대학이 있습니다.</p></div><div class="process-card"><span class="number">03</span><h3>경쟁 선발</h3><p>UQ·Monash처럼 성적이 좋아도 다른 지원자와 경쟁하는 장학이 있습니다.</p></div></div>'),('scholarships','대학별 장학금 한눈에 보기',table(scholarship_rows,['대학','장학금','금액','심사','약대'],True)+callout('Newcastle의 2027 International Excellence Scholarship 20%는 Bachelor of Pharmacy (Honours)가 제외과정입니다. UNSW International Student Award 20%는 현재 한국 국적이 대상 국가에 포함되지 않습니다.')),('housing','기숙사·숙소비',housingcards(D['accommodation'])+'<p class="small">금액이 공개된 숙소는 실제 주당·계약기간을 표시하고, 2027 요금이 아직 없는 학교는 최신 공식자료의 연도와 상태를 그대로 보여줍니다.</p>'),('calculator','1년 예산 계산',costcalculator()),('sources','자료 기준',sources(source_ids(D['tuition']+D['scholarships']+D['accommodation'])))]
 register('/tuition-scholarships/','2027 호주 약대 학비·장학금·숙소 비교 | TNS','16개 호주 약대의 1년 학비, 2027 국제학생 장학금, 기숙사·숙소비를 대학별로 정리하고 1년 예산을 계산합니다.',pagehero('호주 약대 학비·장학금','대학별 학비와 장학금, 실제 숙소비를 같은 페이지에서 확인하세요.','학비·장학금')+article(cost_items))
 
-reg_items=[('steps','호주 약사가 되는 순서','<p>재학 중 실습과 약사등록용 인턴십은 다릅니다. 학교에 따라 등록 준비 일부를 학위 안에서 끝낼 수 있습니다.</p><ol class="timeline">'+''.join(f'<li><strong>{t}</strong>{d}</li>' for t,d in [('승인된 학위·교육요건 확인','APC 인증·Pharmacy Board 승인 과정으로 졸업합니다.'),('Provisional registration','등록용 인턴십을 시작하기 전에 Provisional registration을 받습니다.'),('Supervised practice + Intern Training','감독 실무와 인정된 Intern Training Program을 이수합니다.'),('Written / Oral examinations','필요한 Written / Oral registration examination을 통과합니다.'),('General registration','교육·실무·시험 요건을 마치고 General Registration을 신청합니다.')])+'</ol>'+callout('인턴십 시간·시험·등록 영어기준은 졸업 시점의 Pharmacy Board 규정을 적용합니다.',True)),('integrated','5년 과정도 인턴십 방식이 다릅니다',table([(link('/universities/monash-pharmacy/','Monash'),'4년 학사 Exit · 5년 통합','5년차 supervised practice / ITP 통합 · 등록시험·심사 별도'),(link('/universities/sydney-pharmacy/','Sydney'),'5년 BPharm(Hons) / MPharmPractice','실무·인턴 과정 포함 · 4년 후 학사 Exit'),(link('/universities/unsw-pharmacy/','UNSW'),'2027 PharmD 명칭 전환','졸업 후 인턴십 따로'),(link('/universities/uq-pharmacy/#uq-pharmd','UQ 신설 PharmD'),'기존 BPharm과 별도 5년 과정','인턴십 통합 설계 · APC/Board 승인 아직 미획득')],['과정','학위구조','등록 준비'],True)),('accreditation','APC 인증 상태','<p>APC의 2026년 7월 8일 목록을 기준으로 합니다. ‘Accredited with conditions’도 정식 인증 상태이며 갱신 조건이 붙습니다.</p><p>UQ 신설 PharmD는 아직 APC·Pharmacy Board 승인을 받지 않았습니다. UNSW 새 PharmD 명칭과 Newcastle 갱신 상태는 최신 공식 목록에 맞춰 반영합니다.</p>'),('korea','한국 약사면허는 별도 절차','<p>호주 일반등록과 한국 약사면허는 다른 심사 체계입니다. 한국으로 돌아갈 계획이라면 입학 전에 대학 인정기준과 외국 면허·시험 요건을 따로 확인하세요.</p>'+link('/korea-pharmacist/','한국 약사면허 경로 →','btn text')+sources(['apc','apc-exam','board','monash','sydney-guide','unsw','uq-pharmd']))]
-register('/pharmacist-registration/','호주 약사 되는 과정 · 학위·인턴십·등록시험 | TNS','호주 약사등록의 학위, provisional registration, supervised practice, intern training, 시험과 general registration을 구분합니다.',pagehero('학위 취득부터 호주 약사등록까지','3년 학사, 4년 학사, 5년 통합학위가 등록 준비의 어느 단계까지 포함하는지 확인하세요.','호주 약사등록')+article(reg_items))
+sp=REG['supervised_practice']; wx=REG['written_exam']; ox=REG['oral_exam']; els=REG['english']; rf=REG['fees']
+num=lambda n: format(n, ',')
+reg_sources='<details class="sources"><summary>자료 출처 <span>'+E(REG['verified_date'])+' 기준</span></summary><ul>'+''.join('<li><a href="'+E(x['url'])+'" target="_blank" rel="noopener noreferrer">'+E(x['title'])+' ↗</a></li>' for x in REG['sources'])+'</ul></details>'
+
+reg_hero='''<div class="facts-grid monash-hero-facts">
+<div class="fact-tile"><small>승인 실습</small><strong>'''+num(sp['total_hours'])+'''시간</strong><span class="fact-note">General Registration 전 완료</span></div>
+<div class="fact-tile"><small>시험 응시 시점</small><strong>'''+num(sp['exam_eligibility_hours'])+'''시간</strong><span class="fact-note">전체의 75%</span></div>
+<div class="fact-tile"><small>Intern Written</small><strong>'''+str(wx['questions'])+'''문항 · '''+str(wx['duration_minutes'])+'''분</strong><span class="fact-note">APC 시행</span></div>
+<div class="fact-tile"><small>Oral Exam</small><strong>3파트 · 35분</strong><span class="fact-note">Pharmacy Board / Ahpra</span></div>
+<div class="fact-tile"><small>시험비만</small><strong>A$'''+num(rf['exam_total_aud'])+'''</strong><span class="fact-note">Written + Oral</span></div>
+<div class="fact-tile"><small>최종 단계</small><strong>General Registration</strong><span class="fact-note">정식 약사등록</span></div>
+</div>'''
+
+reg_flow='''<p class="lead"><strong>호주 약대 졸업 = 바로 정식 약사등록이 아닙니다.</strong> 일반적인 3년·4년 약대는 졸업 뒤 Provisional registration을 받고 인턴 실무를 시작한 다음, Written·Oral 두 시험과 Intern Training Program까지 마쳐야 General Registration으로 넘어갑니다.</p>
+<div class="process-grid three">
+<div class="process-card"><span class="number">01</span><h3>승인 약학과 졸업</h3><p>Pharmacy Board가 승인한 accredited program을 완료합니다.</p></div>
+<div class="process-card"><span class="number">02</span><h3>Provisional registration</h3><p>인턴으로 일하기 전에 등록과 supervised practice 장소·preceptor 승인을 받습니다.</p></div>
+<div class="process-card"><span class="number">03</span><h3>Supervised practice + ITP</h3><p>총 '''+num(sp['total_hours'])+'''시간의 승인 실습과 accredited Intern Training Program을 병행합니다.</p></div>
+<div class="process-card"><span class="number">04</span><h3>75%에서 시험 응시</h3><p>'''+num(sp['exam_eligibility_hours'])+'''시간에 도달하면 Intern Written과 Oral Exam 응시 단계로 들어갈 수 있습니다.</p></div>
+<div class="process-card"><span class="number">05</span><h3>남은 실습·ITP 완료</h3><p>시험에 합격해도 남은 supervised practice와 ITP를 끝내야 합니다.</p></div>
+<div class="process-card"><span class="number">06</span><h3>General Registration</h3><p>학위·실습·ITP·시험·등록기준을 모두 충족하면 정식 약사등록을 신청합니다.</p></div>
+</div>'''+callout('<strong>핵심:</strong> 시험은 인턴 1년을 전부 끝낸 뒤에만 보는 것이 아닙니다. 현재 기준으로 승인 실습의 75%, 즉 <strong>1,368시간</strong>을 채우면 시험 응시 단계로 들어갈 수 있습니다.')
+
+orgs='''<div class="difference-cards course-types">
+<article><span class="route-label">UNIVERSITY</span><h3>대학</h3><p>약학 학위와 재학 중 placement를 제공합니다. 재학 중 placement와 등록용 internship은 같은 개념이 아닙니다.</p></article>
+<article><span class="route-label">APC</span><h3>Australian Pharmacy Council</h3><p>약학교육 인증과 Intern Written Exam을 담당하고, Intern Training Program 인증에도 관여합니다.</p></article>
+<article><span class="route-label">BOARD / AHPRA</span><h3>Pharmacy Board · Ahpra</h3><p>등록기준과 Oral Exam을 관리하고, Ahpra가 신청·등록 행정을 지원합니다.</p></article>
+</div>'''
+
+intern_html='''<div class="monash-snapshot"><p class="lead"><strong>시험보다 먼저 필요한 것은 ‘승인된 인턴 실무’입니다.</strong></p><p>Provisional registration과 supervised practice 승인을 받기 전에 일한 시간은 등록용 '''+num(sp['total_hours'])+'''시간에 포함되지 않습니다.</p><div class="monash-keyline"><span>총 '''+num(sp['total_hours'])+'''시간</span><span>75% = '''+num(sp['exam_eligibility_hours'])+'''시간</span><span>ITP 병행</span></div></div>'''
+intern_html+=facts([
+ ('총 승인 실습',num(sp['total_hours'])+'시간'),
+ ('시험 응시선',num(sp['exam_eligibility_hours'])+'시간 · 전체의 '+str(sp['exam_eligibility_percent'])+'%'),
+ ('4주 동안 인정되는 시간','최소 '+str(sp['min_hours_per_four_weeks'])+'시간 · 최대 '+str(sp['max_hours_per_four_weeks'])+'시간'),
+ ('Approved preceptor 단위','원칙적으로 최소 '+str(sp['min_hours_per_approved_preceptor_period'])+'시간'),
+ ('Provisional registration',str(sp['provisional_registration_months'])+'개월 단위')
+])
+intern_html+=callout('계산상 주 38시간 기준이면 1,824시간은 약 48주, 1,368시간은 약 36주입니다. 실제 인정시간은 근무표가 아니라 Board가 승인한 supervised practice 규칙으로 계산합니다.')
+
+written_topics=table([(E(x['label']),str(x['percent'])+'%') for x in wx['content']],['평가 영역','대략적 비중'],True)
+written_html='''<div class="monash-snapshot"><p class="lead"><strong>필기시험은 단순 암기시험이 아니라 실제 약무 판단을 보는 2시간 시험입니다.</strong></p><p>컴퓨터 기반으로 진행되며 객관식과 계산형 빈칸 문제가 함께 나옵니다.</p><div class="monash-keyline"><span>'''+str(wx['questions'])+'''문항</span><span>'''+str(wx['duration_minutes'])+'''분</span><span>A$'''+num(wx['fee_aud'])+'''</span></div></div>'''
+written_html+=facts([
+ ('시행기관',E(wx['provider'])),
+ ('응시자격',E(wx['eligibility'])),
+ ('방식',E(wx['delivery'])),
+ ('문제형식',E(' · '.join(wx['question_types']))),
+ ('허용 교재','AMH + APF 각 1권의 원본 종이책'),
+ ('시험비','A$'+num(wx['fee_aud'])+' / 1회')
+])
+written_html+='<h3>무엇을 얼마나 보나요?</h3>'+written_topics
+written_html+=callout('<strong>현재 APC 2026 가이드는 고정된 몇 % 합격점수를 공개하지 않습니다.</strong> 여러 시험 버전의 난이도를 반영한 scaled standard를 사용하며, 75문항 중 약 90%는 채점문항, 약 10%는 calibration용 비채점문항입니다. 결과도 raw score가 아니라 기준 충족 여부로 통지됩니다.')
+written_html+='<p class="small">AMH와 APF는 간단한 highlighting·짧은 annotation·규격 내 tab은 허용되지만 loose paper나 과도한 필기는 허용되지 않습니다. 인터넷을 검색하면서 보는 open-book 시험으로 이해하면 안 됩니다. 2027 시험일정은 공식 발표 후 업데이트합니다.</p>'
+
+oral_rows=[(E(x['part']),E(x['title']),str(x['minutes'])+'분',E(x['format']),E(x['references']),E(x['focus'])) for x in ox['parts']]
+oral_html='''<div class="monash-snapshot"><p class="lead"><strong>구술시험은 ‘영어회화 시험’이 아니라 약사로서 판단하고 환자에게 설명하는 능력을 보는 실무시험입니다.</strong></p><p>총 3개 파트로 구성되고 역할극과 법·윤리 판단, 처방 문제 해결을 평가합니다.</p><div class="monash-keyline"><span>3파트 · 35분</span><span>75% 실습 후</span><span>A$'''+num(ox['fee_aud'])+'''</span></div></div>'''
+oral_html+=table(oral_rows,['파트','영역','시간','방식','자료','무엇을 보나'],True)
+oral_html+=facts([
+ ('시행',E(ox['provider'])),
+ ('응시자격',E(ox['eligibility'])),
+ ('운영 빈도','통상 연 '+str(ox['sessions_per_year'])+'회'),
+ ('시험비','A$'+num(ox['fee_aud'])+' / 1회'),
+ ('결과',E(ox['result']))
+])
+oral_html+=callout('<strong>Part A와 B는 참고자료를 볼 수 없고, Part C만 오프라인 또는 종이 참고자료를 사용할 수 있습니다.</strong> Part C에서도 인터넷 사용은 허용되지 않습니다. 2027 세부 일정은 공식 발표 후 업데이트합니다.')
+
+english_rows=[(E(x['test']),E(x['overall']),E(x['listening']),E(x['reading']),E(x['writing']),E(x['speaking'])) for x in els['tests']]
+english_html='''<div class="monash-snapshot"><p class="lead"><strong>대학 입학 영어점수와 약사등록 영어기준은 별개입니다.</strong></p><p>Ahpra English Language Skills standard는 호주에서 처음 등록할 때 적용됩니다. Provisional registration 단계에서 이미 충족했다면 General registration으로 넘어갈 때 같은 기준을 다시 증명하지 않습니다.</p></div>'''
+english_html+=table(english_rows,['시험','Overall','Listening','Reading','Writing','Speaking'],True)
+english_html+=callout('<strong>위 표는 2026년 4월 23일 이후 시험 기준입니다.</strong> IELTS는 Overall 7.0, Listening·Reading·Speaking 7.0, Writing 6.5입니다. PTE는 Overall 63이지만 Speaking 76이 필요하므로 대학 입학용 PTE 기준과 혼동하면 안 됩니다.')
+english_html+='<p>'+E(els['attempts'])+'. '+E(els['validity'])+'.</p>'
+english_html+='<p class="small">한국에서 중·고교를 마친 뒤 호주 약대만 이수한 학생은 자신의 전체 학력으로 education pathway를 충족하는지 확인해야 합니다. 충족하지 못하면 test pathway로 영어기준을 맞춰야 합니다.</p>'
+
+fee_rows=[
+ ('Provisional registration 신청비','A$'+num(rf['provisional_application_aud']),'인턴 시작 전'),
+ ('Provisional registration 등록비','A$'+num(rf['provisional_registration_aud']),'NSW A$'+num(rf['provisional_registration_nsw_aud'])),
+ ('Intern Written Exam','A$'+num(wx['fee_aud']),'1회 응시'),
+ ('Oral Exam (practice)','A$'+num(ox['fee_aud']),'1회 응시'),
+ ('General registration 신청비','A$'+num(rf['general_application_aud']),'최종 등록 신청'),
+ ('General registration 등록비','A$'+num(rf['general_registration_aud']),'NSW A$'+num(rf['general_registration_nsw_aud']))
+]
+fees_html=table(fee_rows,['항목','현재 금액','비고'],True)
+fees_html+=facts([
+ ('시험비 합계','A$'+num(rf['exam_total_aud'])),
+ ('시험+현재 공개 등록수수료 합계','약 A$'+num(rf['national_regulatory_exam_total_aud'])+' · NSW 제외'),
+ ('별도 비용','Intern Training Program · 영어시험 · AMH/APF · 재응시·갱신 등')
+])
+fees_html+=callout('수수료는 매년 바뀔 수 있습니다. 위 금액은 현재 공개된 APC 수수료와 Pharmacy Board/Ahpra 등록 양식 기준이며 2027 고정금액으로 표시하지 않습니다.')
+
+integrated=table([
+ (link('/universities/monash-pharmacy/','Monash'),'5년차에 paid supervised practice + ITP 통합','등록시험·최종 Board 심사는 남음'),
+ (link('/universities/sydney-pharmacy/','Sydney'),'5년차 Master 단계에 supervised practice + ITP 통합','등록시험·최종 Board 심사는 남음'),
+ (link('/universities/jcu-pharmacy/','JCU'),'3년 학위','졸업 후 등록 internship 별도'),
+ (link('/universities/utas-pharmacy/','UTas'),'3년 학위','졸업 후 등록 internship 별도'),
+ (link('/universities/uwa-pharmacy/','UWA'),'4년 Bachelor + PharmD','졸업 후 supervised internship 별도')
+],['예시','학위 안에서 끝나는 부분','졸업·등록 후 남는 부분'],True)+callout('<strong>5년 과정이라고 시험이 면제되는 것은 아닙니다.</strong> 학교에 따라 supervised practice와 ITP를 학위 안에서 진행할 수 있지만 Pharmacy Board가 요구하는 Written·Oral exam과 General Registration 요건은 별도로 충족해야 합니다.')
+
+reg_faq=faq([
+ ('약대를 졸업하면 바로 Pharmacist인가요?','아닙니다. 일반적인 3년·4년 약대는 졸업 후 Provisional registration, supervised practice, ITP, Written·Oral 시험을 거쳐 General Registration을 받아야 합니다.'),
+ ('1,824시간을 다 채워야 시험을 볼 수 있나요?','아닙니다. 현재 기준은 75%인 1,368시간입니다. 다만 시험에 합격해도 남은 실습과 ITP를 완료해야 General Registration을 신청할 수 있습니다.'),
+ ('3년 약대면 3년 만에 정식 약사가 되나요?','학위는 3년에 끝날 수 있지만 등록용 internship과 시험은 별도입니다. 학위기간과 정식 약사등록까지의 기간을 구분해야 합니다.'),
+ ('Written 시험 합격점이 65%인가요?','현재 APC 2026 가이드는 고정 raw percentage를 공개하지 않고 scaled standard를 사용합니다. 과거 자료의 65% 수치를 현재 시험의 확정 합격점으로 사용하지 않습니다.'),
+ ('5년 통합과정이면 시험을 안 봐도 되나요?','아닙니다. Monash·Sydney처럼 supervised practice와 ITP를 학위 안에 통합할 수는 있지만 Written·Oral 시험과 Board의 General Registration 절차는 남습니다.'),
+ ('대학 입학 때 IELTS를 냈으면 등록 영어는 자동으로 끝난 건가요?','자동으로 같다고 볼 수 없습니다. Ahpra의 English Language Skills standard는 별도 규정이며 본인의 전체 학력 또는 등록용 영어시험 결과로 충족해야 합니다.')
+])
+
+reg_items=[
+ ('overview','먼저 전체 구조부터 이해하기',reg_flow),
+ ('who','APC·Pharmacy Board·Ahpra는 무슨 차이인가요?',orgs),
+ ('intern','시험 전에 필요한 1,824시간과 ITP',intern_html),
+ ('written','Intern Written Exam',written_html),
+ ('oral','Oral Exam (practice)',oral_html),
+ ('english','약사등록 영어기준',english_html),
+ ('fees','시험·등록 비용',fees_html),
+ ('integrated','3년·4년·5년 약대에 따라 무엇이 달라지나?',integrated),
+ ('faq','처음 보는 학생이 가장 많이 묻는 질문',reg_faq),
+ ('sources','자료 출처',reg_sources)
+]
+register('/pharmacist-registration/','호주 약사 시험 · Intern Written·Oral·인턴 1,824시간 | TNS','호주 약대 졸업 후 Provisional registration, 1,824시간 supervised practice, Intern Written 75문항, Oral 3파트, ITP, 영어기준과 General Registration까지 쉽게 설명합니다.',pagehero('호주 약사 시험, 졸업 후 무엇을 해야 하나요?','Written·Oral 시험만 보는 것이 아닙니다. 인턴 실무 1,824시간, ITP, 등록 영어기준까지 처음 보는 학생 기준으로 순서대로 정리했습니다.','호주 약사등록',reg_hero)+article(reg_items,'compact-detail'))
 
 # Korean pharmacist licence: recognized Australian schools + current exam route.
 korea_school_rows=[]

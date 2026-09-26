@@ -3,7 +3,7 @@ from pathlib import Path
 from html.parser import HTMLParser
 from urllib.parse import urlsplit,unquote
 import json,collections,subprocess,os,re
-R=Path(__file__).resolve().parents[1];D=json.loads((R/'data/catalog.json').read_text());KD=json.loads((R/'data/korea_pharmacist.json').read_text());errors=[]
+R=Path(__file__).resolve().parents[1];D=json.loads((R/'data/catalog.json').read_text());KD=json.loads((R/'data/korea_pharmacist.json').read_text());REG=json.loads((R/'data/pharmacist_registration.json').read_text());errors=[]
 class Page(HTMLParser):
  def __init__(self,text):
   super().__init__();self.ids=[];self.tags=[];self.scripts=[];self.in_script=False;self.script='';self.title='';self.in_title=False;self.h1=0;self.feed(text)
@@ -329,6 +329,29 @@ if monash_scholarships.get('monash-merit',{}).get('scope')!='p6007_not_confirmed
 for sid in ['monash-international-merit','monash-international-leadership']:
  if sid not in monash_scholarships or monash_scholarships[sid]['pharmacy_eligible']['value'] is not True:
   errors.append(f'monash-data: missing verified general international scholarship {sid}')
+registration_page=R/'dist/pharmacist-registration/index.html'
+if not registration_page.exists():
+ errors.append('pharmacist-registration: page missing')
+else:
+ rt=registration_page.read_text()
+ for phrase in ['호주 약사 시험, 졸업 후 무엇을 해야 하나요?','1,824시간','1,368시간','75문항 · 120분','3파트 · 35분','A$1,279','Provisional registration','Intern Training Program','Intern Written Exam','Oral Exam (practice)','Primary Healthcare','Legal &amp; Ethical Practice','Problem Solving &amp; Communication','IELTS 7.0','Speaking 76','약 A$2,409','현재 APC 2026 가이드는 고정 raw percentage를 공개하지 않고 scaled standard']:
+  if phrase not in rt:errors.append(f'pharmacist-registration: missing {phrase}')
+ if '합격점 65%' in rt:
+  errors.append('pharmacist-registration: obsolete fixed 65% pass mark rendered as current')
+if REG['supervised_practice']['total_hours']!=1824 or REG['supervised_practice']['exam_eligibility_hours']!=1368:
+ errors.append('pharmacist-registration-data: supervised practice totals wrong')
+if REG['written_exam']['questions']!=75 or REG['written_exam']['duration_minutes']!=120 or REG['written_exam']['fee_aud']!=790:
+ errors.append('pharmacist-registration-data: written exam structure/fee wrong')
+if sum(x['minutes'] for x in REG['oral_exam']['parts'])!=35 or REG['oral_exam']['fee_aud']!=489:
+ errors.append('pharmacist-registration-data: oral exam structure/fee wrong')
+pte=next((x for x in REG['english']['tests'] if x['test']=='PTE Academic'),None)
+ielts=next((x for x in REG['english']['tests'] if x['test']=='IELTS Academic'),None)
+if not pte or pte['overall']!='63' or pte['speaking']!='76':
+ errors.append('pharmacist-registration-data: current PTE scores wrong')
+if not ielts or ielts['overall']!='7.0' or ielts['writing']!='6.5':
+ errors.append('pharmacist-registration-data: current IELTS scores wrong')
+if REG['fees']['exam_total_aud'] != REG['written_exam']['fee_aud'] + REG['oral_exam']['fee_aud']:
+ errors.append('pharmacist-registration-data: exam fee total mismatch')
 korea_page=R/'dist/korea-pharmacist/index.html'
 if not korea_page.exists():
  errors.append('korea-pharmacist: page missing')
