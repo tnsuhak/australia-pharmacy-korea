@@ -319,7 +319,14 @@ for u in D['universities']:
     rs=related('entry_routes',pid);ss=related('scholarships',u=u['id']);hh=related('accommodation',u=u['id'])
     extra='<div class="facts-grid">'+''.join(f'<div class="fact-tile"><small>{k}</small><strong>{v}</strong></div>' for k,v in [('과정',E(value(p['duration_label']))),('캠퍼스',E(value(u['campus']))),('입학시기',E(value(it['label']))),('유학생 모집',E(value(p['international_recruitment']))),('연간 학비',E(money(t['annual']))),('정보 기준일',DATE)])+'</div>'
     if u['id']=='monash':
-        extra='<div class="facts-grid monash-hero-facts">'+''.join(f'<div class="fact-tile"><small>{k}</small><strong>{v}</strong></div>' for k,v in [('과정','5년 PharmD'),('캠퍼스','Parkville'),('입학','2월'),('2027 학비',E(money(t['annual']))),('영어','IELTS 6.5 · 각 6.0'),('약대 장학','25% · 50%')])+'</div>'
+        extra='''<div class="facts-grid monash-hero-facts">
+<div class="fact-tile"><small>과정</small><strong>5년 PharmD</strong></div>
+<div class="fact-tile"><small>캠퍼스</small><strong>Parkville</strong></div>
+<div class="fact-tile"><small>입학</small><strong>2월</strong></div>
+<div class="fact-tile"><small>2027 학비</small><strong>'''+E(money(t['annual']))+'''</strong></div>
+<div class="fact-tile"><small>영어</small><strong>IELTS 6.5 · 각 6.0</strong></div>
+<div class="fact-tile"><small>장학금</small><strong>경쟁선발 · 연 8명</strong><span class="fact-note">25% 또는 50%</span></div>
+</div>'''
     body=pagehero(E(u['name_ko'])+' 약대',E(u['name'])+' · '+E(value(p['name'])),u['name_ko'],extra)
     intro='<p>'+E(p['editorial'])+'</p><div class="chips">'+''.join(f'<span class="chip">{E(h)}</span>' for h in p['highlights'])+'</div>'
     lens=p.get('decision_lens') or {}
@@ -361,7 +368,7 @@ for u in D['universities']:
 </div><div class="monash-curriculum-focus"><strong>과정 전반의 핵심 역량</strong><span>임상적 의사결정 · 환자 중심 치료 · 디지털 헬스</span></div>'''
         monash_cost='''<div class="monash-money-grid">
 <div><small>2027 연간 학비</small><strong>A$49,740</strong><span>48 credit points 기준</span></div>
-<div><small>약대 장학금</small><strong>25% 또는 50%</strong><span>연 8명 · 경쟁선발</span></div>
+<div><small>장학금 유형</small><strong>경쟁선발 · 연 8명</strong><span>25% 또는 50%</span></div>
 <div><small>장학 유지</small><strong>WAM 70</strong><span>별도 장학신청 없음</span></div>
 <div><small>Parkville 인근 쉐어</small><strong>A$290~380 / 주</strong><span>현재 공식 생활비 참고</span></div>
 </div>'''+link('/tuition-scholarships/','호주 약대 전체 학비·생활비 비교 →','btn text')
