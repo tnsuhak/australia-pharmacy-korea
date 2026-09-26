@@ -3,7 +3,7 @@ from pathlib import Path
 from html.parser import HTMLParser
 from urllib.parse import urlsplit,unquote
 import json,collections,subprocess,os
-R=Path(__file__).resolve().parents[1];D=json.loads((R/'data/catalog.json').read_text());errors=[]
+R=Path(__file__).resolve().parents[1];D=json.loads((R/'data/catalog.json').read_text());KD=json.loads((R/'data/korea_pharmacist.json').read_text());errors=[]
 class Page(HTMLParser):
  def __init__(self,text):
   super().__init__();self.ids=[];self.tags=[];self.scripts=[];self.in_script=False;self.script='';self.title='';self.in_title=False;self.h1=0;self.feed(text)
@@ -52,6 +52,16 @@ for name,seq in [('title',titles),('description',descriptions)]:
 if 'Disallow: /' not in (R/'dist/robots.txt').read_text():errors.append('preview robots is not blocked')
 if 'noindex' not in (R/'dist/_headers').read_text():errors.append('preview HTTP noindex missing')
 if not (R/'assets/og-image.png').exists():errors.append('OG raster asset missing')
+korea_page=R/'dist/korea-pharmacist/index.html'
+if not korea_page.exists():
+ errors.append('korea-pharmacist: page missing')
+else:
+ kt=korea_page.read_text()
+ if len(KD.get('recognized_schools',[]))!=13:errors.append('korea-pharmacist: recognized Australia school count is not 13')
+ for school in KD.get('recognized_schools',[]):
+  if school['en'] not in kt:errors.append(f'korea-pharmacist: missing recognized school {school["en"]}')
+ for phrase in ['보건복지부장관 인정 호주 약대 13곳','Adelaide University는 별도 확인이 필요합니다.','2026. 6. 28.(일)','220,000원','2027. 1. 21.(목)','약학 기초','생명약학','각 과목 만점의 40% 이상 + 전 과목 총점의 60% 이상']:
+  if phrase not in kt:errors.append(f'korea-pharmacist: missing exam/recognition content {phrase}')
 ids={p['id'] for p in D['programs']}
 for coll in ['requirements','english','tuition','intakes','professional_registration']:
  if {r['program_id'] for r in D[coll]}!=ids:errors.append(f'{coll}: program coverage differs')
