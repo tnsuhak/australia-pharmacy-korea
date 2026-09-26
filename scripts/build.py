@@ -575,7 +575,7 @@ for u in D['universities']:
             uq_std=next(x for x in rs if x['id']=='uq-standard-2027-entry')
             uq_acc=next(x for x in rs if x['id']=='uq-accelerated')
             uq_sch=next(x for x in ss if x['id']=='uq-excellence')
-            overview='''<div class="monash-snapshot"><p class="lead"><strong>2월 입학은 4년, 7월 입학은 약 3.5년에 BPharm(Hons)을 마치는 UQ 약대입니다.</strong></p><p>Dutton Park에서 공부하며, 별도로 2027년 신설 5년 PharmD 과정도 운영됩니다.</p><div class="monash-keyline"><span>2월 4년</span><span>7월 약 3.5년</span><span>Dutton Park</span></div></div><div class="monash-scholarship-note"><strong>별도 신설 과정</strong><span>5년 Pharmacy / Doctor of Pharmacy</span><p>기존 4년 BPharm(Hons)과 별도 과정입니다. 신설 PharmD의 인증·등록 상태는 별도로 확인합니다.</p></div>'''
+            overview='''<div class="monash-snapshot"><p class="lead"><strong>2월 입학은 4년, 7월 입학은 약 3.5년에 BPharm(Hons)을 마치는 UQ 약대입니다.</strong></p><p>Dutton Park에서 공부하며, 별도로 2027년 신설 5년 PharmD 과정도 운영됩니다.</p><div class="monash-keyline"><span>2월 4년</span><span>7월 약 3.5년</span><span>Dutton Park</span></div></div><div id="uq-pharmd" class="monash-scholarship-note"><strong>별도 신설 과정</strong><span>5년 Pharmacy / Doctor of Pharmacy</span><p>기존 4년 BPharm(Hons)과 별도 과정입니다. 신설 PharmD의 인증·등록 상태는 별도로 확인합니다.</p></div>'''
             routes='''<div class="monash-route-grid">
 <article><span class="route-label">DIRECT</span><h3>고졸 → 약대 1학년</h3><div class="route-criteria">
 <div><small>입학조건</small><strong>ATAR 80 · IB 30.25 · Mathematics + Chemistry 필수 · 해외학력은 UQ 환산</strong></div>
