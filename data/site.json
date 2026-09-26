@@ -23,9 +23,11 @@
     {
       "id": "australia-chat",
       "label": "호주 오픈채팅",
-      "detail": "승인된 호주 전용 링크 확인 중",
-      "url": null,
-      "source": null
+      "detail": "1,600명+ 참여중",
+      "url": "https://open.kakao.com/o/gvHG0TYf",
+      "source": "TNS Australia Kakao Open Chat · user-confirmed",
+      "last_verified": "2026-09-26",
+      "participant_count_floor": 1600
     },
     {
       "id": "cafe",
