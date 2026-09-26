@@ -336,6 +336,7 @@ for u in D['universities']:
     if u['id']=='jcu':allids|={'jcu-2027-campus'}
     if u['id']=='utas':allids|={'utas-2027-campus'}
     if u['id']=='uwa':allids|={'uwa-dpharm'}
+    if u['id']=='monash':allids|={'monash-curriculum-2027'}
     if u['id']=='monash':
         monash_overview='''<div class="monash-snapshot"><p class="lead"><strong>4년까지 공부하면 BPharm(Hons), 5년차까지 마치면 Doctor of Pharmacy입니다.</strong></p><p>5년차에는 유급 supervised practice와 Intern Training Program이 포함됩니다.</p><div class="monash-keyline"><span>4년 학사 Exit</span><span>5년 PharmD</span><span>5년차 유급 실무훈련</span></div></div>'''
         monash_routes='''<div class="monash-route-grid">
@@ -343,6 +344,12 @@ for u in D['universities']:
 <article><span class="route-label">FOUNDATION</span><h3>Foundation → 약대 1학년</h3><ul><li><strong>약 12개월 · 2월/8월 시작</strong></li><li>현재 안내: Foundation 75%</li><li>English 65% · Maths/Chemistry 50%</li><li>2027 문서의 과정코드 차이로 진급점수 최종확인</li></ul></article>
 <article><span class="route-label">GRADUATE ENTRY</span><h3>관련 학사 → 약대 3학년</h3><ul><li><strong>최근 10년 이내 관련 학사</strong></li><li>평균 70% 이상</li><li>대학 수준 Human Physiology</li><li>Summer intensive 후 3학년 진입</li></ul></article>
 </div>'''
+        monash_curriculum='''<div class="monash-curriculum-grid">
+<article><span class="year">1학년</span><h3>약학 기초 + 임상적 사고 시작</h3><p>의약품과 인체를 이해하는 기초를 쌓고, 환자 중심 치료와 임상적 의사결정의 기본 틀을 배웁니다.</p></article>
+<article><span class="year">2~3학년</span><h3>임상학습 + 현장실습</h3><p>Community·Hospital Pharmacy에서 구조화된 실습을 시작하고, 실제 환자 케어에 필요한 판단과 의사소통을 훈련합니다.</p></article>
+<article><span class="year">4학년</span><h3>실습 심화 + BPharm(Hons) 완성</h3><p>현장실습을 이어가며 학사과정을 마칩니다. 여기까지 이수하면 BPharm(Hons)로 졸업할 수 있습니다.</p></article>
+<article><span class="year">5학년</span><h3>유급 실무훈련 + ITP</h3><p>병원 또는 지역약국에서 유급 supervised practice를 진행하면서 Intern Training Program과 심화 선택과목을 이수합니다.</p></article>
+</div><div class="monash-curriculum-focus"><strong>과정 전체에서 강화되는 역량</strong><span>임상적 의사결정 · 환자 중심 치료 · 문화적 안전 · 지속가능성 · 디지털 헬스와 책임 있는 AI 활용</span></div><p class="small muted">2·3·4학년에는 Monash가 Community·Hospital Pharmacy 실습을 운영합니다. 5학년 supervised practice 자리는 학생이 직접 구합니다.</p>'''
         monash_cost='''<div class="monash-money-grid">
 <div><small>2027 연간 학비</small><strong>A$49,740</strong><span>48 credit points 기준</span></div>
 <div><small>약대 장학금</small><strong>25% 또는 50%</strong><span>연 8명 · 경쟁선발</span></div>
@@ -350,7 +357,7 @@ for u in D['universities']:
 <div><small>Parkville 인근 쉐어</small><strong>A$290~380 / 주</strong><span>현재 공식 생활비 참고</span></div>
 </div><p class="small muted">전체 예산 계산은 대학별 비교 페이지에서 한 번만 제공합니다.</p>'''+link('/tuition-scholarships/','호주 약대 전체 학비·생활비 비교 →','btn text')
         monash_after='''<div class="monash-flow"><div><b>1~4년차</b><strong>BPharm(Hons)</strong><span>4년 후 학사로 졸업 가능</span></div><i>↓</i><div><b>5년차</b><strong>Doctor of Pharmacy</strong><span>유급 supervised practice + Intern Training Program</span></div><i>↓</i><div><b>호주 약사등록</b><strong>등록시험·심사 완료</strong><span>General Registration</span></div><i>↓</i><div><b>졸업비자</b><strong>기본 485 · 2년</strong><span>Melbourne은 Regional 추가기간 없음</span></div></div><div class="section-link-list compact-links">'''+link('/pharmacist-registration/','호주 약사등록 자세히 →')+link('/korea-pharmacist/','한국 약사면허 · 모나쉬는 기인정 대학 →')+'''</div>'''
-        items=[('overview','모나쉬 약대 한눈에 보기',monash_overview),('routes','입학방법 3가지',monash_routes),('cost','학비·장학금·생활비',monash_cost),('after','5년 과정과 졸업 후',monash_after),('sources','자료 출처',sources(allids))]
+        items=[('overview','모나쉬 약대 한눈에 보기',monash_overview),('routes','입학방법 3가지',monash_routes),('curriculum','5년 커리큘럼 한눈에 보기',monash_curriculum),('cost','학비·장학금·생활비',monash_cost),('after','5년 과정과 졸업 후',monash_after),('sources','자료 출처',sources(allids))]
         register(purl(p),'2027 모나쉬 약대 · 5년 PharmD·입학조건·학비 | TNS','모나쉬대학교 5년 Pharmacy/Doctor of Pharmacy 과정의 Direct·Foundation·Graduate Entry, 2027 학비·장학금과 졸업 후 약사등록을 간단히 정리합니다.',body+article(items))
     else:
         items=[('overview','이 약대 핵심',intro),('structure','과정·학위 구조',anatomy),('routes','입학방법',routes_html),('admission','Direct 입학조건','<h3>학력·성적</h3>'+qtable(pid)+'<h3>선수과목</h3>'+requirements_html+'<h3>영어</h3>'+english_html+'<h3>입학시기</h3>'+fv(it['label'])+'<p class="small">Foundation·Diploma 일정은 위 ‘입학방법’에서 바로 볼 수 있습니다.</p>'),('cost','학비·장학금·생활비','<h3>학비</h3>'+fees+'<h3>장학금</h3>'+scholarcards(ss)+'<h3>기숙사·숙소</h3>'+housingcards(hh)+'<h3>1년 예산</h3>'+costcalculator()),('poststudy','졸업 후 485·지역',poststudy_html(u)),('registration','호주 약사등록',registration_html),('korea','한국 약사면허','<p>호주 약대 졸업만으로 한국 약사면허가 자동으로 나오지 않습니다. 대학 인정, 호주 면허, 예비시험·국가시험을 따로 거칩니다.</p>'+link('/korea-pharmacist/','한국 약사면허 확인 순서 →','btn text')),('faq','자주 묻는 질문',faq(fs)),('sources','자료 출처',sources(allids))]
