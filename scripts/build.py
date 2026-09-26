@@ -572,7 +572,7 @@ for u in D['universities']:
 <div><small>영어</small><strong>IELTS 6.5 · 각 6.0</strong></div>
 <div><small>입학시기</small><strong>2027년 3월 1일 · 6월 27일 · 10월 5일</strong></div>
 </div></article>
-</div>'''+callout('<strong>2027 Rank 76은 확정.</strong> 수능 331 · IB 28 · A-Level 7 · SAT 1080은 현재 공개된 국제학력 환산 기준을 참고한 값이며, 2027 국제학력 환산표가 갱신되면 다시 확인합니다.')+'''
+</div>'''+callout('<strong>2027 Rank 76은 확정.</strong> 수능 331 · IB 28 · A-Level 7 · SAT 1080은 현재 공개된 국제학력 환산 기준을 참고한 값이며, 2027 국제학력 환산표가 갱신되면 다시 확인합니다.')
             curriculum='''<div class="monash-curriculum-grid compact-three">
 <article><span class="year">4년</span><h3>총 320CP Honours 과정</h3><p>Gold Coast에서 운영되는 4년 Bachelor of Pharmacy (Honours) 과정입니다.</p></article>
 <article><span class="year">초반</span><h3>Health Science·생물화학 기초</h3><p>기초 건강과학과 Chemistry of Biological Systems 등을 바탕으로 Pharmacy 학습을 시작합니다.</p></article>
