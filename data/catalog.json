@@ -3051,6 +3051,128 @@
       }
     },
     {
+      "id": "griffith-foundation",
+      "program_id": "griffith-bpharm-hons",
+      "type": "foundation",
+      "title": "Griffith College · Foundation → Health Sciences Diploma → Pharmacy",
+      "availability": {
+        "value": true,
+        "academic_year": 2027,
+        "source_year": 2027,
+        "source_id": "griffith-foundation-pathways",
+        "source_url": "https://www.griffithcollege.edu.au/study-options/foundation/pathway-options/",
+        "source_type": "official_pathway",
+        "verified_date": "2026-09-26",
+        "status": "confirmed_2027",
+        "note": "Foundation Program can be packaged with any Diploma pathway; Pharmacy is excluded from the direct Foundation-to-Bachelor health list."
+      },
+      "credit": {
+        "value": 0,
+        "academic_year": 2027,
+        "source_year": 2027,
+        "source_id": "griffith-foundation-pathways",
+        "source_url": "https://www.griffithcollege.edu.au/study-options/foundation/pathway-options/",
+        "source_type": "official_pathway",
+        "verified_date": "2026-09-26",
+        "status": "confirmed_2027",
+        "note": ""
+      },
+      "entry_year": {
+        "value": 2,
+        "academic_year": 2027,
+        "source_year": 2027,
+        "source_id": "griffith-college",
+        "source_url": "https://credit-precedent.sds.na.ce.griffith.edu.au/credit_detail.php?pk1=107343",
+        "source_type": "official_articulation",
+        "verified_date": "2026-09-26",
+        "status": "confirmed_2027",
+        "note": "Foundation 후 Health Sciences Diploma를 거쳐 Pharmacy 2학년으로 연결되는 최종 목적지."
+      },
+      "duration": {
+        "value": "Foundation 8개월 + 1학년 Diploma",
+        "academic_year": 2027,
+        "source_year": 2027,
+        "source_id": "griffith-foundation-current",
+        "source_url": "https://www.griffithcollege.edu.au/study-options/foundation/",
+        "source_type": "official_pathway",
+        "verified_date": "2026-09-26",
+        "status": "confirmed_2027",
+        "note": ""
+      },
+      "intake": {
+        "value": "2027년 3월 1일 · 6월 28일 · 10월 25일",
+        "academic_year": 2027,
+        "source_year": 2027,
+        "source_id": "griffith-college-dates-2027",
+        "source_url": "https://www.griffithcollege.edu.au/student-life/key-dates/",
+        "source_type": "official_pathway",
+        "verified_date": "2026-09-26",
+        "status": "confirmed_2027",
+        "note": ""
+      },
+      "intake_months": {
+        "value": [
+          3,
+          6,
+          10
+        ],
+        "academic_year": 2027,
+        "source_year": 2027,
+        "source_id": "griffith-college-dates-2027",
+        "source_url": "https://www.griffithcollege.edu.au/student-life/key-dates/",
+        "source_type": "official_pathway",
+        "verified_date": "2026-09-26",
+        "status": "confirmed_2027",
+        "note": ""
+      },
+      "progression": {
+        "value": "Foundation → Diploma of Health Sciences → Pharmacy 2학년",
+        "academic_year": 2027,
+        "source_year": 2027,
+        "source_id": "griffith-foundation-pathways",
+        "source_url": "https://www.griffithcollege.edu.au/study-options/foundation/pathway-options/",
+        "source_type": "official_pathway",
+        "verified_date": "2026-09-26",
+        "status": "confirmed_2027",
+        "note": "현재 Griffith College Foundation-to-Bachelor health pathways에서 Pharmacy는 direct 대상에서 제외되며, Foundation은 모든 Diploma pathway와 패키지 가능."
+      },
+      "qualification": {
+        "value": "한국 고2 4개 학업과목 평균 Rank 7 · 또는 수능 260 / 상위 3개 Stanine 7 · 또는 검정고시 평균 70",
+        "academic_year": 2027,
+        "source_year": null,
+        "source_id": "griffith-college-entry",
+        "source_url": "https://www.griffithcollege.edu.au/international-students/entry-requirements/",
+        "source_type": "official_pathway",
+        "verified_date": "2026-09-26",
+        "status": "latest_published",
+        "note": ""
+      },
+      "english": {
+        "value": "IELTS 5.5 · 각 5.0",
+        "academic_year": 2027,
+        "source_year": null,
+        "source_id": "griffith-college-entry",
+        "source_url": "https://www.griffithcollege.edu.au/international-students/entry-requirements/",
+        "source_type": "official_pathway",
+        "verified_date": "2026-09-26",
+        "status": "latest_published",
+        "note": ""
+      },
+      "pathway_fee": {
+        "value": null,
+        "academic_year": 2027,
+        "source_year": 2027,
+        "source_id": "griffith-foundation-current",
+        "source_url": "https://www.griffithcollege.edu.au/study-options/foundation/",
+        "source_type": "official_pathway",
+        "verified_date": "2026-09-26",
+        "status": "pending_2027",
+        "note": "2027 국제학생 Foundation 학비는 별도 검증 전 추정하지 않음."
+      },
+      "destination_label": "1학년 Diploma → 약대 2학년",
+      "note": "Foundation에서 Pharmacy 본과 1학년으로 바로 진학하는 경로로 표시하지 않습니다. Foundation 후 Diploma of Health Sciences를 거쳐 약대 2학년으로 연결합니다."
+    },
+    {
       "id": "latrobe-bpharm-hons-direct",
       "program_id": "latrobe-bpharm-hons",
       "type": "direct",
@@ -18876,6 +18998,22 @@
       "url": "https://www.monash.edu/pharm/future/courses/grad-pharmacy",
       "source_year": null,
       "source_type": "official_course",
+      "verified_date": "2026-09-26"
+    },
+    {
+      "id": "griffith-foundation-current",
+      "title": "Griffith College · Foundation Program",
+      "url": "https://www.griffithcollege.edu.au/study-options/foundation/",
+      "source_year": 2027,
+      "source_type": "official_pathway",
+      "verified_date": "2026-09-26"
+    },
+    {
+      "id": "griffith-foundation-pathways",
+      "title": "Griffith College · Foundation pathway options",
+      "url": "https://www.griffithcollege.edu.au/study-options/foundation/pathway-options/",
+      "source_year": 2027,
+      "source_type": "official_pathway",
       "verified_date": "2026-09-26"
     }
   ],
