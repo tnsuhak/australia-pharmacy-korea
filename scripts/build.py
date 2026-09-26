@@ -72,7 +72,15 @@ def faq(items):return '<div class="faq">'+''.join(f'<details><summary>{E(q)}</su
 def pagehero(title,desc,crumb='가이드',extra=''):
     return f'<section class="page-hero"><div class="wrap"><nav class="breadcrumbs" aria-label="현재 위치"><a href="/">홈</a><span>/</span><span>{E(crumb)}</span></nav><span class="eyebrow">2027 AUSTRALIA PHARMACY GUIDE</span><h1>{title}</h1><p>{desc}</p>{extra}</div></section>'
 def article(items,detail_class=''):
-    toc='<aside class="toc"><strong>이 페이지에서</strong>'+''.join(link('#'+id,E(title)) for id,title,_ in items)+'</aside>'
+    toc_short={
+        '모나쉬 약대 과정 구조':'과정 구조',
+        '입학방법 3가지':'입학방법',
+        '5년 커리큘럼 한눈에 보기':'5년 커리큘럼',
+        '학비·장학금·생활비':'비용·장학금',
+        '5년 과정과 졸업 후':'졸업 후',
+        '자료 출처':'자료 출처'
+    }
+    toc='<aside class="toc"><strong>이 페이지에서</strong>'+''.join('<a href="#'+id+'"><span class="toc-full">'+E(title)+'</span><span class="toc-short">'+E(toc_short.get(title,title))+'</span></a>' for id,title,_ in items)+'</aside>'
     section_class='section'+((' '+detail_class) if detail_class else '')
     return '<div class="'+section_class+'"><div class="wrap content-grid">'+toc+'<div>'+''.join(section(*x) for x in items)+'</div></div></div>'
 def register(path,title,desc,body,faqs=None):pages[path]=dict(title=title,description=desc,body=body,faqs=faqs or [])
