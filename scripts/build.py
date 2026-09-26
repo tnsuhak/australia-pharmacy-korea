@@ -407,7 +407,7 @@ for u in D['universities']:
     if u['id']=='uq':allids|={'uq-pharmd','uq-foundation','uq-calendar'}
     if u['id']=='adelaide':allids|={'adelaide-health-2027','adelaide-degree-chart-2026','adelaide-academic-excellence'}
     if u['id']=='latrobe':allids|={'latrobe-ug-guide-2027'}
-    if u['id']=='qut':allids|={'qut-college-merit'}
+    if u['id']=='qut':allids|={'qut-college-merit','qut-guaranteed-offers'}
     routes_html=pathway_matrix(u['id'])+routecards(rs)
     if u['id']=='uwa':routes_html+=callout('<strong>대졸자 별도 과정</strong><p>UWA에는 학사 졸업자가 지원하는 2년 Doctor of Pharmacy도 있습니다. 2027년 1월 시작, sWAM 65+와 Chemistry·Math/Statistics·Microbiology·Pharmacology가 필요합니다.</p>'+link('/graduate-entry/','UWA Graduate Entry 보기 →','btn text'))
     allids|={'homeaffairs-485','homeaffairs-second485','homeaffairs-regional'}
@@ -712,7 +712,7 @@ for u in D['universities']:
             overview='''<div class="monash-snapshot"><p class="lead"><strong>Gardens Point에서 공부하는 4년 BPharm(Hons)이며, Chemistry와 Mathematics는 필수 prerequisite가 아니라 assumed knowledge입니다.</strong></p><p>Direct 외에 QUT College Standard Foundation과 6개월 Intensive Program을 통해 약대 1학년으로 진학할 수 있습니다.</p><div class="monash-keyline"><span>4년</span><span>수학·화학 assumed knowledge</span><span>Foundation 2종</span></div></div>'''
             routes='''<div class="monash-route-grid">
 <article><span class="route-label">DIRECT</span><h3>고졸 → 약대 1학년</h3><div class="route-criteria">
-<div><small>입학조건</small><strong>Selection Rank 76 · Chemistry + Mathematical Methods/Specialist Mathematics는 선행지식</strong></div>
+<div><small>입학조건</small><strong>Selection Rank 76 · Offer Guarantee 78 · Chemistry + Mathematical Methods/Specialist Mathematics는 선행지식</strong></div>
 <div><small>영어</small><strong>IELTS 6.5 · 각 6.0</strong></div>
 <div><small>입학시기</small><strong>2월</strong></div>
 </div></article>

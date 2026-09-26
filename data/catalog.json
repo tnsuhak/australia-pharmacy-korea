@@ -3824,15 +3824,15 @@
         "note": ""
       },
       "qualification": {
-        "value": "Selection Rank 76 · Chemistry + Mathematical Methods/Specialist Mathematics는 assumed knowledge",
+        "value": "Selection Rank threshold 76 · Offer Guarantee 78 · Chemistry + Mathematical Methods/Specialist Mathematics는 assumed knowledge",
         "academic_year": 2027,
-        "source_year": null,
-        "source_id": "qut",
-        "source_url": "https://www.qut.edu.au/courses/bachelor-of-pharmacy-honours",
-        "source_type": "official_course",
-        "verified_date": "2026-09-26",
-        "status": "latest_published",
-        "note": "Assumed knowledge is not a prerequisite; bridging study can be used if missing."
+        "source_year": 2027,
+        "source_id": "qut-guaranteed-offers",
+        "source_url": "https://www.qut.edu.au/study/applying/guaranteed-course-offers",
+        "source_type": "official_admissions",
+        "verified_date": "2026-09-27",
+        "status": "confirmed_2027",
+        "note": "QUT guaranteed course offers page distinguishes the offer guarantee (78) from the threshold (76). Assumed knowledge is not a prerequisite."
       },
       "note": "수학·화학은 필수가 아니라 선행지식입니다. 부족하면 bridging study로 보완합니다.",
       "intake_months": {
@@ -19933,6 +19933,14 @@
       "url": "https://www.qut.edu.au/study/fees-and-scholarships/scholarships/qut-college-merit-scholarship",
       "source_year": 2027,
       "source_type": "official_scholarship",
+      "verified_date": "2026-09-27"
+    },
+    {
+      "id": "qut-guaranteed-offers",
+      "title": "QUT · Guaranteed course offers",
+      "url": "https://www.qut.edu.au/study/applying/guaranteed-course-offers",
+      "source_year": 2027,
+      "source_type": "official_admissions",
       "verified_date": "2026-09-27"
     }
   ],

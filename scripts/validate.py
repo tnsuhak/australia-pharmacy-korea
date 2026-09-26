@@ -95,7 +95,7 @@ compact_batch_2={
  'uq-pharmacy':(3,['UQ 약대 과정 구조','입학방법 3가지','ATAR 80 · IB 30.25','수능 260 · 검정고시 65% · 고2 GPA 3(미)','수능 270 · 검정고시 70% · 고3 GPA 4(우)','A$60,952 / 년','A$36,280','A$24,940','자동심사 · 경쟁선발','1~3학년 165시간 + 4~5학년 1,000시간+','APC 인증·Board 승인 대기']),
  'adelaide-pharmacy':(3,['Adelaide 약대 과정 구조','입학방법 3가지','2027 ATAR 90 · IB 35.25','한국 수능·SAT 등 2027 환산 확인 중','2월 · 7월','고2 → Foundation → 약대 1학년','IELTS 5.5 · 각 5.0','1학년 Diploma (Health Science) → 약대 1학년','IELTS 6.0 · 각 6.0','A$36,200','A$41,900','4년 과정·5년 Master 연계','자동심사 · 15%','경쟁선발 · 50%','2026 공식 A$52,200 참고','A$320 / 주','A$380 / 주']),
  'latrobe-pharmacy':(2,['La Trobe 약대 과정 구조','Bendigo','2027 ATAR 75.05','별도 과학 선수과목 없음','Foundation → 약대 1학년','IELTS 6.5 · 각 6.5','Health Innovation','30%','교내 실습약국 + 임상실습','약 1년 등록 인턴십','A$255 / 주부터']),
- 'qut-pharmacy':(3,['QUT 약대 과정 구조','Selection Rank 76','선행지식','12개월 Foundation → 약대 1학년','6개월 Intensive → 약대 1학년','A$46,200 / 년','자동심사 · 25%','A$25,536','A$12,768','College Merit Scholarship','첫 학기 학비의 25%','Year 11 Rank 5 이상 또는 평균 80% 이상','현장실습 시작'])
+ 'qut-pharmacy':(3,['QUT 약대 과정 구조','Selection Rank 76','Offer Guarantee 78','선행지식','12개월 Foundation → 약대 1학년','6개월 Intensive → 약대 1학년','A$46,200 / 년','자동심사 · 25%','A$25,536','A$12,768','College Merit Scholarship','첫 학기 학비의 25%','Year 11 Rank 5 이상 또는 평균 80% 이상','현장실습 시작'])
 }
 for slug,(route_count,phrases) in compact_batch_2.items():
  page=R/f'dist/universities/{slug}/index.html'
@@ -287,8 +287,8 @@ qut_standard=next((x for x in D['entry_routes'] if x['id']=='qut-foundation-stan
 if not qut_standard or '첫 학기 학비 25%' not in str(qut_standard.get('pathway_scholarship',{}).get('value')) or '평균 80%' not in str(qut_standard.get('pathway_scholarship',{}).get('value')):
  errors.append('qut-data: Korean QUT College Merit scholarship details missing')
 qut_direct=next((x for x in D['entry_routes'] if x['id']=='qut-bpharm-hons-direct'),None)
-if not qut_direct or 'Selection Rank 76' not in str(qut_direct['qualification']['value']) or 'assumed knowledge' not in str(qut_direct['qualification']['value']):
- errors.append('qut-data: Rank 76 / assumed knowledge distinction missing')
+if not qut_direct or 'Selection Rank threshold 76' not in str(qut_direct['qualification']['value']) or 'Offer Guarantee 78' not in str(qut_direct['qualification']['value']) or 'assumed knowledge' not in str(qut_direct['qualification']['value']):
+ errors.append('qut-data: threshold 76 / guarantee 78 / assumed knowledge distinction missing')
 
 griffith_page=R/'dist/universities/griffith-pharmacy/index.html'
 if griffith_page.exists():
