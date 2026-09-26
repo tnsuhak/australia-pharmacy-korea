@@ -334,7 +334,7 @@ if not registration_page.exists():
  errors.append('pharmacist-registration: page missing')
 else:
  rt=registration_page.read_text()
- for phrase in ['호주 약사 되는 법','현재 1,575시간','1,181시간','75%','시험 2개','필기 2시간','구술 35분','75문항','3파트','18개월 안에 모두 합격','A$1,279','약 A$2,409','약 A$2,514','정식 약사등록','인턴약사 등록 + 근무처·지도약사 승인','인턴 교육과정 (ITP)','기존 표준 1,824시간 · 현재 운영 1,575시간','고정 합격점(예: 65%)은 공개하지 않습니다.','모든 학생이 IELTS를 다시 보는 것은 아닙니다.','Cambridge C1 Advanced','Cambridge C2 Proficiency','현재 공개 2025/26']:
+ for phrase in ['호주 약사 되는 법','현재 1,575시간','1,181시간','75%','시험 2개','필기 2시간','구술 35분','75문항','3파트','18개월 안에 모두 합격','A$1,279','약 A$2,409','약 A$2,514','정식 약사등록','인턴약사 등록 + 근무처·지도약사 승인','인턴 교육과정 (ITP)','기존 표준 1,824시간 · 현재 운영 1,575시간','고정 합격점(예: 65%)은 공개하지 않습니다.','모든 학생이 IELTS를 다시 보는 것은 아닙니다.','한국은 Ahpra의 인정국가 목록에 포함되지 않기 때문에','Cambridge C1 Advanced','Cambridge C2 Proficiency','현재 공개 2025/26']:
   if phrase not in rt:errors.append(f'pharmacist-registration: missing {phrase}')
  for obsolete in ['총 1,824시간</strong>','75% = 1,368시간','1,368시간 · 전체의 75%','4주 동안 인정되는 시간</th><td>최소 80시간','Approved preceptor 단위']:
   if obsolete in rt:errors.append(f'pharmacist-registration: obsolete current-rule copy remains {obsolete}')
