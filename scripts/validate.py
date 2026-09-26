@@ -334,7 +334,7 @@ if not registration_page.exists():
  errors.append('pharmacist-registration: page missing')
 else:
  rt=registration_page.read_text()
- for phrase in ['호주 약대 졸업 후, 정식 약사까지 얼마나 걸리나요?','약대 3~5년','인턴 약 1년','총 1,824시간','1,368시간','시험 2개','필기 2시간','구술 35분','75문항','3파트','A$1,279','약 A$2,409','정식 약사등록','인턴약사 등록 + 근무처·지도약사 승인','인턴 교육과정 (ITP)','고정 합격점(예: 65%)은 공개하지 않습니다.','대학 입학 영어와 약사등록 영어는 다릅니다.','호주 정식 약사']:
+ for phrase in ['호주 약사 되는 법','약대 3~5년','인턴 약 1년','총 1,824시간','1,368시간','시험 2개','필기 2시간','구술 35분','75문항','3파트','A$1,279','약 A$2,409','정식 약사등록','인턴약사 등록 + 근무처·지도약사 승인','인턴 교육과정 (ITP)','고정 합격점(예: 65%)은 공개하지 않습니다.','대학 입학 영어와 약사등록 영어는 다릅니다.','호주 정식 약사']:
   if phrase not in rt:errors.append(f'pharmacist-registration: missing {phrase}')
  for hard_first_read in ['총 1,824시간의 supervised practice + ITP','Written 2시간 + Oral 35분','Provisional Registration + supervised practice 승인']:
   if hard_first_read in rt:errors.append(f'pharmacist-registration: first-read jargon remains {hard_first_read}')
