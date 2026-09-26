@@ -71,9 +71,10 @@ def sources(ids):
 def faq(items):return '<div class="faq">'+''.join(f'<details><summary>{E(q)}</summary><p>{E(a)}</p></details>' for q,a in items)+'</div>'
 def pagehero(title,desc,crumb='가이드',extra=''):
     return f'<section class="page-hero"><div class="wrap"><nav class="breadcrumbs" aria-label="현재 위치"><a href="/">홈</a><span>/</span><span>{E(crumb)}</span></nav><span class="eyebrow">2027 AUSTRALIA PHARMACY GUIDE</span><h1>{title}</h1><p>{desc}</p>{extra}</div></section>'
-def article(items):
+def article(items,detail_class=''):
     toc='<aside class="toc"><strong>이 페이지에서</strong>'+''.join(link('#'+id,E(title)) for id,title,_ in items)+'</aside>'
-    return '<div class="section"><div class="wrap content-grid">'+toc+'<div>'+''.join(section(*x) for x in items)+'</div></div></div>'
+    section_class='section'+((' '+detail_class) if detail_class else '')
+    return '<div class="'+section_class+'"><div class="wrap content-grid">'+toc+'<div>'+''.join(section(*x) for x in items)+'</div></div></div>'
 def register(path,title,desc,body,faqs=None):pages[path]=dict(title=title,description=desc,body=body,faqs=faqs or [])
 def logo():return '<svg class="brand-symbol" viewBox="0 0 48 48" aria-hidden="true"><path d="M24 1 47 24 24 47 1 24Z" fill="#e1b63f"/><text x="24" y="28" text-anchor="middle" font-size="12" font-weight="800" font-family="Arial,sans-serif" fill="#fff">TNS</text></svg>'
 def header(path):
@@ -357,8 +358,8 @@ for u in D['universities']:
 <div><small>Parkville 인근 쉐어</small><strong>A$290~380 / 주</strong><span>현재 공식 생활비 참고</span></div>
 </div><p class="small muted">전체 예산 계산은 대학별 비교 페이지에서 한 번만 제공합니다.</p>'''+link('/tuition-scholarships/','호주 약대 전체 학비·생활비 비교 →','btn text')
         monash_after='''<div class="monash-flow"><div><b>1~4년차</b><strong>BPharm(Hons)</strong><span>4년 후 학사로 졸업 가능</span></div><i>↓</i><div><b>5년차</b><strong>Doctor of Pharmacy</strong><span>유급 supervised practice + Intern Training Program</span></div><i>↓</i><div><b>호주 약사등록</b><strong>등록시험·심사 완료</strong><span>General Registration</span></div><i>↓</i><div><b>졸업비자</b><strong>기본 485 · 2년</strong><span>Melbourne은 Regional 추가기간 없음</span></div></div><div class="section-link-list compact-links">'''+link('/pharmacist-registration/','호주 약사등록 자세히 →')+link('/korea-pharmacist/','한국 약사면허 · 모나쉬는 기인정 대학 →')+'''</div>'''
-        items=[('overview','모나쉬 약대 한눈에 보기',monash_overview),('routes','입학방법 3가지',monash_routes),('curriculum','5년 커리큘럼 한눈에 보기',monash_curriculum),('cost','학비·장학금·생활비',monash_cost),('after','5년 과정과 졸업 후',monash_after),('sources','자료 출처',sources(allids))]
-        register(purl(p),'2027 모나쉬 약대 · 5년 PharmD·입학조건·학비 | TNS','모나쉬대학교 5년 Pharmacy/Doctor of Pharmacy 과정의 Direct·Foundation·Graduate Entry, 2027 학비·장학금과 졸업 후 약사등록을 간단히 정리합니다.',body+article(items))
+        items=[('overview','모나쉬 약대 과정 구조',monash_overview),('routes','입학방법 3가지',monash_routes),('curriculum','5년 커리큘럼 한눈에 보기',monash_curriculum),('cost','학비·장학금·생활비',monash_cost),('after','5년 과정과 졸업 후',monash_after),('sources','자료 출처',sources(allids))]
+        register(purl(p),'2027 모나쉬 약대 · 5년 PharmD·입학조건·학비 | TNS','모나쉬대학교 5년 Pharmacy/Doctor of Pharmacy 과정의 Direct·Foundation·Graduate Entry, 2027 학비·장학금과 졸업 후 약사등록을 간단히 정리합니다.',body+article(items,'monash-detail'))
     else:
         items=[('overview','이 약대 핵심',intro),('structure','과정·학위 구조',anatomy),('routes','입학방법',routes_html),('admission','Direct 입학조건','<h3>학력·성적</h3>'+qtable(pid)+'<h3>선수과목</h3>'+requirements_html+'<h3>영어</h3>'+english_html+'<h3>입학시기</h3>'+fv(it['label'])+'<p class="small">Foundation·Diploma 일정은 위 ‘입학방법’에서 바로 볼 수 있습니다.</p>'),('cost','학비·장학금·생활비','<h3>학비</h3>'+fees+'<h3>장학금</h3>'+scholarcards(ss)+'<h3>기숙사·숙소</h3>'+housingcards(hh)+'<h3>1년 예산</h3>'+costcalculator()),('poststudy','졸업 후 485·지역',poststudy_html(u)),('registration','호주 약사등록',registration_html),('korea','한국 약사면허','<p>호주 약대 졸업만으로 한국 약사면허가 자동으로 나오지 않습니다. 대학 인정, 호주 면허, 예비시험·국가시험을 따로 거칩니다.</p>'+link('/korea-pharmacist/','한국 약사면허 확인 순서 →','btn text')),('faq','자주 묻는 질문',faq(fs)),('sources','자료 출처',sources(allids))]
         register(purl(p),f'2027 {u["name_ko"]} 약대 완전분석 · 입학·학비·485 | TNS',u['name']+' Pharmacy의 과정기간, 입학방법, 선수과목, 학비·장학금, 인턴십, 485 지역조건과 약사등록을 정리합니다.',body+article(items),fs)
