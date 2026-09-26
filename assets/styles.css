@@ -427,3 +427,28 @@
     padding-top:22px;
   }
 }
+
+
+/* Pharmacist registration page · student-friendly terminology */
+.pharmacist-registration-detail .term-en{
+  display:block;
+  margin-top:4px;
+  color:var(--muted);
+  font-size:10.5px;
+  font-weight:500;
+  line-height:1.45;
+}
+.pharmacist-registration-detail #exams .route-label{
+  letter-spacing:.03em;
+}
+.pharmacist-registration-detail #overview .monash-flow span{
+  line-height:1.65;
+}
+@media(max-width:780px){
+  .pharmacist-registration-detail #overview .monash-flow>div{
+    padding:18px;
+  }
+  .pharmacist-registration-detail #overview .monash-flow strong{
+    font-size:16px;
+  }
+}
