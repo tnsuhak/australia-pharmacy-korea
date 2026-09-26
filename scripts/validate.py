@@ -62,7 +62,7 @@ if not monash_page.exists():
  errors.append('monash-page: compact pilot page missing')
 else:
  mt=monash_page.read_text()
- for phrase in ['모나쉬 약대 한눈에 보기','입학방법 3가지','5년 커리큘럼 한눈에 보기','2~3학년','유급 실무훈련 + ITP','디지털 헬스와 책임 있는 AI 활용','2027 연간 학비','5년 과정과 졸업 후','4년 후 학사로 졸업 가능','25% 또는 50%']:
+ for phrase in ['모나쉬 약대 과정 구조','입학방법 3가지','5년 커리큘럼 한눈에 보기','2~3학년','유급 실무훈련 + ITP','디지털 헬스와 책임 있는 AI 활용','2027 연간 학비','5년 과정과 졸업 후','4년 후 학사로 졸업 가능','25% 또는 50%']:
   if phrase not in mt:errors.append(f'monash-page: compact pilot missing {phrase}')
  for old_heading in ['<h2>과정·학위 구조</h2>','<h2>Direct 입학조건</h2>','<h2>졸업 후 485·지역</h2>','<h2>호주 약사등록</h2>','<h2>자주 묻는 질문</h2>']:
   if old_heading in mt:errors.append(f'monash-page: old duplicate section remains {old_heading}')
