@@ -803,6 +803,215 @@ decision_lenses={
 for p in programs:
  if p['university_id'] in decision_lenses:p['decision_lens']=decision_lenses[p['university_id']]
 
+
+# Public-copy layer: keep provenance/internal notes in data, but write student-facing summaries
+# in short, decisive language. This runs after all factual records are assembled.
+public_program_copy = {
+  'jcu-bpharm-hons': dict(
+    highlights=['3년 과정','Townsville · Cairns · Mackay','수학 필수 · 화학 권장'],
+    editorial='2027 JCU Pharmacy는 Townsville·Cairns·Mackay에서 모두 2월 시작, 3년 과정입니다. 현재 공개 학비 A$31,710은 2026 금액이라 2027 학비에는 사용하지 않습니다.',
+    review_items=['2027 본과 학비','한국 학력 Direct 점수','JCU Prep 국제학생 연계 여부'],
+    decision_lens=dict(why=['3년 만에 학위 완료','세 캠퍼스 모두 Regional','화학은 권장, 수학은 필수'],watch=['2027 본과 학비 미확정','JCU Prep의 한국 국제학생 연계는 아직 미확정'])
+  ),
+  'utas-bpharm-hons': dict(
+    highlights=['3년 과정','Cradle Coast · Hobart · Launceston','2027 학비 · 30% 장학'],
+    editorial='Cradle Coast·Hobart·Launceston에서 모두 3년 만에 약학 학위를 마칩니다. 일반 4년 과정 분량을 3년에 압축한 과정이라 연간 학업량이 많습니다.',
+    review_items=[],
+    decision_lens=dict(why=['3년 Fast-track','Tasmania 지역혜택','2027 국제학생 장학 30% 자동심사'],watch=['3년 압축과정이라 학업 일정이 촘촘함','Foundation 시작월에 따라 Pharmacy 입학연도가 달라짐'])
+  ),
+  'curtin-bpharm-hons': dict(
+    highlights=['3년 9개월','Curtin College → 2학년','Perth · Regional'],
+    editorial='Curtin BPharm(Hons)은 3년 9개월 과정입니다. Direct 기준은 ATAR 80, Chemistry와 Mathematics, IELTS 7.0(각 7.0)입니다. 2027 본과 학비와 국제학생 시작일은 아직 미확정입니다.',
+    review_items=['2027 본과 학비','2027 국제학생 시작일'],
+    decision_lens=dict(why=['3년 9개월','Curtin College Diploma 후 약대 2학년','2027 Curtin College Stage 2 A$44,900'],watch=['2027 본과 학비·시작일 미확정','Stage 1이 필요한 학생은 A$32,900 추가'])
+  ),
+  'uq-bpharm-hons': dict(
+    highlights=['2월 4년 · 7월 3.5년','2027 ATAR 80','Foundation → 7월 입학'],
+    editorial='UQ BPharm(Hons)은 2월 입학 4년, 7월 입학 약 3.5년입니다. 2027 ATAR 기준은 80이며 해외학력은 UQ 환산점수로 평가합니다. 별도로 2027 신설 5년 PharmD가 있습니다.',
+    review_items=[],
+    decision_lens=dict(why=['2월 4년 · 7월 약 3.5년','2027 ATAR 80','Standard·Accelerated Foundation 모두 7월 BPharm 연결'],watch=['해외학력은 UQ 환산점수로 평가','신설 5년 PharmD는 별도 과정이며 승인 상태도 따로 봄'])
+  ),
+  'adelaide-bpharm-hons': dict(
+    highlights=['4년 BPharm(Hons)','수능 345','5년 Master 연계'],
+    editorial='Direct 신입은 2월 시작입니다. 7월은 학점 인정 학생만 개별 심사합니다. 4년 과정 안에 약 12주 실습이 있고, 졸업 후 등록 인턴십은 별도입니다. 5년 연계 Master 과정은 인턴십과 Intern Training Program을 마지막 해에 통합합니다.',
+    review_items=['2027 본과 학비'],
+    decision_lens=dict(why=['4년 BPharm(Hons) + 약 12주 실습','5년 Master 연계 시 인턴십·ITP 통합','Adelaide Regional'],watch=['7월은 고졸 신입 Direct 입학월이 아님','A$54,300은 2026 학비 · 2027 학비 미확정'])
+  ),
+  'griffith-bpharm-hons': dict(
+    highlights=['Griffith College → 80CP','Gold Coast · Regional','Direct 점수는 2026 참고'],
+    editorial='Direct 입학과 Griffith College Diploma 두 경로가 있습니다. 현재 Direct 참고점수는 2026 기준 수능 331 · IB 28 · SAT 1080 · A-level 7입니다. Griffith College Diploma를 마치면 80CP를 인정받고 약대 2학년으로 진학합니다.',
+    review_items=['2027 Direct 국제학력 점수','2027 본과 학비','약대 선수과목 최신표'],
+    decision_lens=dict(why=['Griffith College Diploma → 약대 2학년','Gold Coast Regional','2027 International Academic Merit 20%'],watch=['Direct 점수는 현재 2026 공식값 사용','2027 Direct 점수·본과 학비 미확정'])
+  ),
+  'latrobe-bpharm-hons': dict(
+    highlights=['Bendigo · Regional','4년','30% Health Innovation'],
+    editorial='Bendigo 캠퍼스 4년 약대이며 2027년 3월 시작입니다. 별도 과학 선수과목은 없고 IELTS는 6.5(각 6.5)입니다. 졸업 후 1년 supervised internship은 별도입니다.',
+    review_items=['2027 본과 학비'],
+    decision_lens=dict(why=['Bendigo Regional','과학 선수과목 별도 없음','2027 Health Innovation 30%'],watch=['30% 장학은 수량 제한 · 오퍼 수락 순','2027 본과 학비 미확정'])
+  ),
+  'qut-bpharm-hons': dict(
+    highlights=['4년','수학·화학 필수 아님','2027 학비 A$46,200'],
+    editorial='QUT Pharmacy는 Chemistry와 수학을 필수 선수과목으로 요구하지 않습니다. 대신 선행지식으로 권장하며, 부족한 학생은 bridging study로 보완합니다. QUT College는 Standard 12개월과 Intensive 6개월 Foundation을 운영합니다.',
+    review_items=[],
+    decision_lens=dict(why=['수학·화학이 필수 선수과목 아님','Standard 12개월 · Intensive 6개월 Foundation','2027 International Merit 25%'],watch=['Foundation 패키지의 약대 진급조건 충족 필요','Brisbane은 지역 추가 485 없음'])
+  ),
+  'rmit-bpharm-hons': dict(
+    highlights=['4년','2027 학비 A$49,920','Foundation · Associate 경로'],
+    editorial='Bundoora 캠퍼스 4년 과정입니다. 2027년 3월 1일 시작, 학비 A$49,920, IELTS 7.0(각 6.5)입니다. Foundation은 약대 1학년, Biomedicine Associate Degree는 96CP를 인정받아 약대 본과 3년이 남습니다.',
+    review_items=[],
+    decision_lens=dict(why=['한국 고교 75% 또는 고교 졸업 + 수능 300부터 Direct','RMIT Foundation → 약대 1학년','2027 학비 A$49,920'],watch=['Chemistry + Mathematics 필수','Associate Degree는 1년 Diploma와 다른 경로','한국에서 바로 지원하는 일반 학생용 약대 학비장학은 현재 없음'])
+  ),
+  'newcastle-bpharm-hons': dict(
+    highlights=['4년','2027 학비 A$51,665','Foundation A$31,400'],
+    editorial='Newcastle의 영어 공식자료가 두 값으로 엇갈립니다. 2027 Degree Guide와 정책 목록은 IELTS 6.5(각 6.5), 현재 국제학생 과정 페이지는 7.0(각 7.0)입니다. 지원 준비는 안전하게 7.0(각 7.0) 기준으로 잡습니다.',
+    review_items=['영어 최종 적용점수','2027 한국·SAT·A-level·OSSD Direct 점수','2027 이후 APC 인증 갱신'],
+    decision_lens=dict(why=['2027 학비 A$51,665','Newcastle Regional','Foundation 2027 A$31,400'],watch=['영어 준비기준은 IELTS 7.0(각 7.0)','2027 International Excellence 20%는 Pharmacy 제외'])
+  ),
+  'canberra-bpharm-hons': dict(
+    highlights=['4년','Selection Rank 75','Canberra · Regional'],
+    editorial='2027 Semester 1에 시작하는 4년 Bachelor of Pharmacy입니다. Selection Rank 75, IELTS 7.0(각 7.0)이며 국제학력은 UC 환산표로 평가합니다. UC 국제장학금 10~30%는 입학 지원과 함께 심사합니다.',
+    review_items=[],
+    decision_lens=dict(why=['4년 Bachelor of Pharmacy','국제장학금 10~30% 자동심사','Canberra Regional'],watch=['A$42,500은 2026 학비','장학 유지조건은 Course GPA 5.0 이상'])
+  ),
+  'unisq-bpharm-hons': dict(
+    highlights=['2027은 4년','2월 15일 시작','Toowoomba · Regional'],
+    editorial='2027 국제학생은 Trimester 1 한 번만 입학하며 2월 15일 시작, 4년 과정입니다. 3년 Accelerated Pharmacy는 2028년부터 시작합니다.',
+    review_items=['2027 본과 학비'],
+    decision_lens=dict(why=['Toowoomba Category 3','2027년 2월 15일 시작','2027 국제장학금 10%'],watch=['3년 과정은 2028년부터','2027 본과 학비 미확정'])
+  ),
+  'monash-bpharm-hons': dict(
+    highlights=['5년 PharmD','5년차 유급 인턴십','4년 BPharm(Hons) Exit'],
+    editorial='Monash P6007은 5년 통합 PharmD 과정입니다. 4년을 마치면 BPharm(Hons)로 졸업할 수 있고, 5년차에는 유급 supervised practice와 Intern Training Program이 들어갑니다. 관련 학사 졸업자는 Graduate Entry로 3학년 진입을 준비할 수 있습니다.',
+    review_items=[],
+    decision_lens=dict(why=['5년 BPharm(Hons) / Doctor of Pharmacy','5년차 유급 supervised practice + ITP','관련 학사 졸업자는 Graduate Entry 가능'],watch=['Foundation 진급표의 과정코드가 웹과 2027 PDF에서 다름','2027 ATAR 80은 호주 국내 Monash Guarantee','Melbourne은 지역 추가 485 없음'])
+  ),
+  'sydney-bpharm-hons': dict(
+    highlights=['5년 통합','4년 BPharm(Hons) Exit','수학 필수'],
+    editorial='5년 Bachelor of Pharmacy (Honours) + Master of Pharmacy Practice 통합과정입니다. 4년을 마치면 BPharm(Hons)로 졸업할 수 있고 5년차에 Master of Pharmacy Practice를 이수합니다. 수학은 필수, Chemistry·Biology는 선행지식, Physics는 권장입니다.',
+    review_items=[],
+    decision_lens=dict(why=['5년 BPharm(Hons) / Master of Pharmacy Practice','2027 수능 346 · IB 31 · SAT 1300 · A-level 14','USFP Standard A$49,800 · Intensive A$47,690'],watch=['USFP 진급: GPA 7.3 + English C + Mathematics','Foundation 시작월에 따라 본과는 2028 입학','Sydney는 지역 추가 485 없음'])
+  ),
+  'unsw-bpharm-hons': dict(
+    highlights=['2027 Doctor of Pharmacy','5년','IELTS 7.0 · 각 6.0'],
+    editorial='UNSW는 2027부터 Bachelor of Pharmaceutical Medicine / Doctor of Pharmacy로 바뀝니다. 5년 통합과정이며 Direct 기준은 International ATAR 87 · IB 33, 영어는 IELTS 7.0(각 6.0)입니다.',
+    review_items=['새 Doctor of Pharmacy 명칭의 APC·Board 등재','2027 본과 학비'],
+    decision_lens=dict(why=['2027부터 Doctor of Pharmacy','5년 통합과정','IELTS 7.0 · 각 6.0'],watch=['UNSW College 진급표는 아직 기존 Master 명칭 사용','졸업 후 등록 인턴십 별도','2027 본과 학비 미확정'])
+  ),
+  'uq-pharmd': dict(
+    highlights=['2027 신설 5년','2027 학비 A$60,952','700+시간 실습 + 인턴훈련'],
+    editorial='2027 신설 5년 Doctor of Pharmacy입니다. 2월·7월 입학, 2027 국제학생 학비 A$60,952이며 2학년부터 700시간 이상의 임상실습, 4~5학년 compulsory intern training이 포함됩니다. APC·Pharmacy Board 승인은 아직 받지 않았습니다.',
+    review_items=['APC·Pharmacy Board 승인','CSAT·IB·SAT 등 해외학력 Direct 점수','중간 Exit 여부'],
+    decision_lens=dict(why=['2027 국제학생 모집 · 2월/7월','5년 안에 700+시간 실습 + intern training','2027 학비 A$60,952'],watch=['APC·Pharmacy Board 승인 전','해외학력 Direct 점수 미확정','중간 Exit 여부 미확정'])
+  ),
+  'uwa-bpharm-hons': dict(
+    highlights=['4년 Bachelor + PharmD','ATAR 85','2027 장학 10~20%'],
+    editorial='고교 졸업 후 4년 동안 Bachelor of Human Sciences (Pharmaceutical Health) + Doctor of Pharmacy를 함께 이수합니다. 입학 기준은 ATAR 85이며, combined degree 안에서 Doctor of Pharmacy 진급 보장은 WAM 65%입니다. 졸업 후 등록 인턴십과 Pharmacy Board 시험은 별도입니다.',
+    review_items=['2027 본과 학비'],
+    decision_lens=dict(why=['고교 졸업 후 4년 Bachelor + PharmD','UWA College Foundation 8개월 / 12개월','Perth Regional'],watch=['Foundation 한국 학력점수는 현재 2025 공식표 사용','졸업 후 등록 인턴십 별도','2027 본과 학비 미확정'])
+  )
+}
+for p in programs:
+    if p['id'] in public_program_copy:
+        p.update(public_program_copy[p['id']])
+
+route_notes = {
+ 'jcu-bpharm-hons-direct':'',
+ 'utas-bpharm-hons-direct':'수학 1과목과 Chemistry 또는 Physical Sciences 1과목을 충족해야 합니다.',
+ 'curtin-bpharm-hons-direct':'Direct 기준은 ATAR 80, Chemistry, Mathematics Applications, IELTS 7.0(각 7.0)입니다.',
+ 'uq-bpharm-hons-direct':'2027 ATAR 80 기준이며 해외학력은 UQ 환산점수로 평가합니다.',
+ 'adelaide-bpharm-hons-direct':'고졸 Direct는 2월 시작입니다. 7월은 학점 인정 학생만 개별 심사합니다.',
+ 'griffith-bpharm-hons-direct':'현재 표시 점수는 2026 국제가이드 기준입니다. 2027 점수 발표 후 교체합니다.',
+ 'latrobe-bpharm-hons-direct':'',
+ 'uwa-foundation-8':'8개월 과정은 IELTS 6.0(각 5.5). 한국 학력점수는 2025 공식표를 사용합니다.',
+ 'uwa-foundation-12':'12개월 과정은 IELTS 5.5(각 5.0). 한국 학력점수는 2025 공식표를 사용합니다.',
+ 'qut-bpharm-hons-direct':'수학·화학은 필수가 아니라 선행지식입니다. 부족하면 bridging study로 보완합니다.',
+ 'qut-foundation-standard':'12개월 Foundation 후 약대 패키지의 진급조건을 충족하면 본과 1학년으로 갑니다.',
+ 'qut-foundation-intensive':'고3 동등학력을 마치고 QUT 학사 입학기준에 거의 도달한 학생을 위한 6개월 과정입니다.',
+ 'rmit-bpharm-hons-direct':'2027년 3월 1일 시작. 한국 학력기준 + Chemistry·Mathematics + 영어조건을 모두 충족해야 합니다.',
+ 'newcastle-bpharm-hons-direct':'2027년 2월 22일 시작, IB 28입니다. 영어 준비기준은 안전하게 IELTS 7.0(각 7.0)으로 잡습니다.',
+ 'canberra-bpharm-hons-direct':'2027년 2월 15일 시작. 해외학력은 UC Selection Rank로 환산합니다.',
+ 'unisq-bpharm-hons-direct':'2027년은 2월 15일 한 번만 입학하며 4년 과정입니다. 3년 과정은 2028년부터입니다.',
+ 'sydney-usfp':'2027 Standard 학비 A$49,800. 시작월에 따라 Sydney Pharmacy 본과 입학은 2028년이 됩니다.',
+ 'sydney-usfp-intensive':'2027 Intensive 학비 A$47,690. Pharmacy 본과 2월 입학에 맞춰 Foundation 일정을 잡아야 합니다.',
+ 'monash-bpharm-hons-direct':'',
+ 'sydney-bpharm-hons-direct':'한국 일반고 졸업장만으로는 Direct가 되지 않습니다. 수능 등 인정 학력과 Mathematics 조건을 함께 충족해야 합니다.',
+ 'unsw-bpharm-hons-direct':'2027부터 Doctor of Pharmacy 명칭을 사용합니다. 새 명칭의 APC·Board 등재는 아직 미확정입니다.',
+ 'uq-pharmd-direct':'2027 국제학생 모집은 시작됐지만 APC·Pharmacy Board 승인은 아직 받지 않았습니다.',
+ 'griffith-college':'Diploma를 마치면 80CP를 인정받고 Pharmacy 2학년으로 진학합니다. T1 진학 시 본과 3년, T2 진학 시 약 3.5년이 남습니다.',
+ 'curtin-college':'Diploma 후 175 credits를 인정받고 PHAR1002를 추가 이수한 뒤 Pharmacy 2학년으로 진학합니다.',
+ 'uq-standard-2027-entry':'2026년 9월 시작 → 2027년 7월 BPharm 입학. 2027년 2월 Standard 시작은 2028년 본과로 연결됩니다.',
+ 'uq-accelerated':'2027년 2월 시작 → 7월 BPharm 입학. GPA·영어·필수과목 진급기준을 충족해야 합니다.',
+ 'unsw-foundation-standard':'현재 공개 진급기준은 GPA 7.6 · Academic English B · Life Science/Physical Science입니다. 표에는 아직 기존 Master of Pharmacy 과정명이 남아 있습니다.',
+ 'monash-foundation':'현재 웹페이지는 P6007 기준 Foundation 75% · English 65%를 안내합니다. 2027 PDF에는 이전 코드 P6001이 남아 있어 최종 진급기준은 미확정입니다.',
+ 'newcastle-foundation':'Foundation 수료 후 Pharmacy 1학년으로 진학합니다. 2027 학비 A$31,400.',
+ 'monash-ge':'최소요건 충족자 중 경쟁 선발합니다.',
+ 'rmit-associate':'Biomedicine Associate Degree 완료 후 96CP를 인정받아 Pharmacy 본과 3년이 남습니다.',
+ 'latrobe-foundation':'Foundation 수료 후 Bendigo Pharmacy 1학년으로 진학합니다. 현재 공개 학비 A$29,780은 2026 금액입니다.',
+ 'uwa-bpharm-hons-direct':'고교 졸업 후 4년 combined degree로 시작합니다. Doctor of Pharmacy 진급보장은 WAM 65%, 졸업 후 등록 인턴십은 별도입니다.',
+ 'rmit-foundation':'2027 Foundation 학비 A$34,250. Foundation에서 Chemistry·Mathematics 조건을 채우고 Pharmacy 1학년으로 진학합니다.',
+ 'utas-foundation-standard':'한국 고2 평균 60%부터 입학. 수료 후 다음 Pharmacy 입학시기에 맞춰 진학합니다.',
+ 'utas-foundation-fast':'한국 고2 평균 65%부터 입학. General Mathematics가 필요하며 Standard보다 빠른 일정입니다.'
+}
+for r in routes:
+    if r['id'] in route_notes:r['note']=route_notes[r['id']]
+
+scholarship_notes = {
+ 'griffith-merit':'한국 학생 대상. Pathway 패키지는 최종 성적 제출 후 심사.',
+ 'sydney-award':'한국 학생 대상. Personal statement 3문항, 각 200단어 이내.',
+ 'monash-merit':'연 8명 선발. 50%는 과정군 최상위, 25%는 차상위.',
+ 'newcastle-excellence':'Bachelor of Pharmacy (Honours)는 2027 20% 장학 제외과정.',
+ 'jcu-excellence':'Pharmacy도 25% 장학 대상. 입학 지원과 함께 자동심사, 수혜 후 성적 유지조건 적용.',
+ 'unsw-award':'현재 한국 국적은 대상 국가가 아닙니다.',
+ 'curtin-global-merit':'2027/2028 WA 캠퍼스 국제학생 대상. Pharmacy도 포함.',
+ 'qut-merit':'2027 International Merit Scholarship. Pharmacy 포함, 입학 지원과 함께 심사.',
+ 'latrobe-high-achiever':'Bendigo Bachelor of Pharmacy (Honours)도 대상 과정.',
+ 'canberra-international-2027':'입학 지원과 함께 자동심사. 10·20·30% 중 선발되며 재학 중 Course GPA 5.0 이상 유지.',
+ 'unisq-support':'2027 학비 10% 감면. Pharmacy 포함, 다른 UniSQ 학비장학과 중복 불가.',
+ 'utas-tims':'Pharmacy 포함. 다른 UTas 장학과 중복되지 않으며 더 높은 장학 하나만 적용.',
+ 'uq-excellence':'별도 신청 없이 자동심사. 다른 UQ 학비감면과 중복 불가.',
+ 'adelaide-merit':'Bachelor of Pharmacy (Honours)도 대상 과정.',
+ 'rmit-pending':'한국에서 바로 지원하는 일반 학생용 Pharmacy 학비장학은 현재 공개된 것이 없습니다. Medibank A$20,000 장학은 호주에서 Year 12/IB를 이수하고 VTAC로 지원하는 국제학생 대상입니다.',
+ 'uwa-global-excellence':'모든 국가 대상. Eligible combined degree 포함, 별도 신청 없이 성적으로 자동심사.',
+ 'latrobe-health-innovation-30':'30% 장학. 별도 신청 없이 심사되며 수량이 제한되어 오퍼 수락 순서가 중요합니다.'
+}
+for x in scholarships:
+    if x['id'] in scholarship_notes:x['note']=scholarship_notes[x['id']]
+
+housing_notes = {
+ 'utas-christ':'2027 요금 · 42주 계약.',
+ 'utas-john':'2027 요금.',
+ 'latrobe-units':'Semester 계약 · 공과금 포함 · A$255/주부터.',
+ 'latrobe-villas':'Semester 계약 · 공과금 포함 · A$270/주부터.',
+ 'jcu-townsville-2026':'2026 일반 장기체류 참고요금. Pharmacy 장기체류는 academic rate가 따로 적용됩니다.',
+ 'jcu-cairns-2026':'2026 일반 장기체류 참고요금. Pharmacy 장기체류는 academic rate가 따로 적용됩니다.',
+ 'uq-kev-carmody':'현재 공개 최저가. Pharmacy Dutton Park 캠퍼스까지 통학합니다.',
+ 'uq-walcott':'현재 공개 최저가. Pharmacy Dutton Park 캠퍼스까지 통학합니다.',
+ 'adelaide-mattanya-2027':'2027 연 A$16,640 / 52주 · 전기·가스·수도·인터넷 포함.',
+ 'adelaide-village-2027':'2027 연 A$19,760 / 52주 · 전기·가스·수도·인터넷 포함.',
+ 'griffith-village-2027':'2027 full-year shared apartment A$329.85/주부터.',
+ 'curtin-perth-housing':'캠퍼스 도보 5~10분. 2026 표준 full-year 계약은 48주였습니다.',
+ 'qut-brisbane-guide':'QUT 생활비 가이드: student apartment A$1,600~2,200/월, catered accommodation A$2,400~2,650/월.',
+ 'rmit-walert-2027':'2027 4-bedroom apartment 1인실 A$14,260 / 46주 · Bundoora 캠퍼스 인근.',
+ 'newcastle-2027':'2027 self-catered A$249.45~465.93/주 · 식사 포함형 A$334.45~580.93/주.',
+ 'canberra-campus-west-2027':'2027 12-bedroom apartment room A$210.50/주 · 공과금 포함.',
+ 'canberra-weeden-2027':'3~7 bedroom apartment room A$221~252/주 · 공과금 포함.',
+ 'unisq-rescollege':'현재 약 A$155~220/주. Single-bedroom unit은 약 A$275~290+/주.',
+ 'monash-parkville-share':'Parkville shared accommodation 약 A$290~380/주.',
+ 'sydney-qmb-2026':'2026 48주 Standard Room A$382/주.',
+ 'sydney-regiment-2026':'2026 Standard Room A$408/주.',
+ 'unsw-2027-status':'Barker Street Apartments는 2027년 운영하지 않습니다.',
+ 'uwa-trinity-2027':'2027 Standard Room A$595/주 · 3식, 공과금, Wi-Fi, 방 청소 포함.'
+}
+for x in accommodation:
+    if x['id'] in housing_notes:x['note']=housing_notes[x['id']]
+
+for r in registration:
+    if r['program_id']=='uwa-bpharm-hons':
+        r['note']='졸업 후 supervised internship과 Pharmacy Board 등록시험을 마쳐야 General Registration을 받을 수 있습니다.'
+    else:
+        r['note']='학위에 포함된 실습 범위와 별개로, Pharmacy Board가 요구하는 등록 절차를 마쳐야 General Registration을 받을 수 있습니다.'
+
+
 data=dict(schema_version='1.0.0',academic_year=2027,verified_date=DATE,universities=universities,programs=programs,entry_routes=routes,qualifications=qualifications,requirements=requirements,english=english,intakes=intakes,tuition=tuition,scholarships=scholarships,accommodation=accommodation,professional_registration=registration,sources=list(sources.values()),conflicts=conflicts)
 (ROOT/'data/catalog.json').write_text(json.dumps(data,ensure_ascii=False,indent=2)+'\n')
 config=dict(site_name='호주약대 가이드',brand='TNS',language='ko',academic_year=2027,production_url=None,production_approved=False,
