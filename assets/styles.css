@@ -391,3 +391,39 @@
   .compact-detail .toc{gap:8px}
   .compact-detail .toc a{min-height:46px;padding:11px;font-size:12px}
 }
+
+
+/* Pharmacist registration page · mobile vertical rhythm */
+.pharmacist-registration-detail #intern .monash-keyline{
+  margin:24px 0 26px;
+  gap:14px;
+}
+.pharmacist-registration-detail #intern .fact-table{
+  margin:0 0 26px;
+}
+.pharmacist-registration-detail #intern .callout{
+  margin:28px 0 32px;
+}
+.pharmacist-registration-detail #intern .advanced{
+  margin-top:30px;
+  padding-top:20px;
+}
+@media(max-width:780px){
+  .pharmacist-registration-detail #intern .monash-keyline{
+    gap:16px;
+    margin:24px 0 28px;
+  }
+  .pharmacist-registration-detail #intern .monash-keyline span{
+    padding:20px 16px;
+  }
+  .pharmacist-registration-detail #intern .fact-table{
+    margin:0 0 28px;
+  }
+  .pharmacist-registration-detail #intern .callout{
+    margin:28px 0 34px;
+  }
+  .pharmacist-registration-detail #intern .advanced{
+    margin-top:34px;
+    padding-top:22px;
+  }
+}
