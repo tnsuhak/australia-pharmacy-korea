@@ -331,6 +331,33 @@ for u in D['universities']:
 <div class="fact-tile"><small>영어</small><strong>IELTS 6.5 · 각 6.0</strong></div>
 <div class="fact-tile"><small>장학금</small><strong>경쟁선발</strong><span class="fact-note">Merit '''+E(money(monash_general_merit['amount']))+'''/년 · 연 '''+E(value(monash_general_merit['number_available']))+'''명</span></div>
 </div>'''
+    elif u['id'] in ['jcu','utas','curtin','griffith']:
+        main_scholar=ss[0] if ss else None
+        fee_main=money(t['annual']) if t['annual'].get('source_year')==2027 and t['annual'].get('value') is not None else '2027 확인 중'
+        if t['annual'].get('value') is not None and t['annual'].get('source_year')!=2027:
+            fee_note=str(t['annual'].get('source_year'))+' 공식 '+money(t['annual'])+' 참고'
+        elif t['annual'].get('value') is None:
+            fee_note='공식 학비 발표 대기'
+        else:
+            fee_note=value(t['load_basis'])
+        if u['id']=='jcu':
+            intake_main='2월'; intake_note='2027 공식'; english_main='IELTS 7.0 · 각 6.5'
+        elif u['id']=='utas':
+            intake_main='Semester 1'; intake_note='3개 캠퍼스'; english_main='IELTS 6.5 · 각 6.0'
+        elif u['id']=='curtin':
+            intake_main='확인 중'; intake_note='2027 국제학생 Direct'; english_main='IELTS 7.0 · 각 7.0'
+        else:
+            intake_main='3월 · 7월'; intake_note='2026 공식 참고'; english_main='IELTS 7.0'
+        scholar_main=('자동심사 · '+str(value(main_scholar['amount']))+'%') if main_scholar else '확인 중'
+        scholar_note=(value(main_scholar['duration']) if main_scholar else '')
+        extra='''<div class="facts-grid monash-hero-facts">
+<div class="fact-tile"><small>과정</small><strong>'''+E(value(p['duration_label']))+'''</strong></div>
+<div class="fact-tile"><small>캠퍼스</small><strong>'''+E(value(u['campus']))+'''</strong></div>
+<div class="fact-tile"><small>입학</small><strong>'''+E(intake_main)+'''</strong><span class="fact-note">'''+E(intake_note)+'''</span></div>
+<div class="fact-tile"><small>국제학생 학비</small><strong>'''+E(fee_main)+'''</strong><span class="fact-note">'''+E(fee_note)+'''</span></div>
+<div class="fact-tile"><small>영어</small><strong>'''+E(english_main)+'''</strong></div>
+<div class="fact-tile"><small>장학금</small><strong>'''+E(scholar_main)+'''</strong><span class="fact-note">'''+E(scholar_note)+'''</span></div>
+</div>'''
     body=pagehero(E(u['name_ko'])+' 약대',E(u['name'])+' · '+E(value(p['name'])),u['name_ko'],extra)
     intro='<p>'+E(p['editorial'])+'</p><div class="chips">'+''.join(f'<span class="chip">{E(h)}</span>' for h in p['highlights'])+'</div>'
     lens=p.get('decision_lens') or {}
