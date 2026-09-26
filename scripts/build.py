@@ -1044,7 +1044,7 @@ finish_html='''<div class="monash-money-grid">
 <div><small>시험 + 등록 수수료</small><strong>약 A$'''+num(rf['national_regulatory_exam_total_aud'])+'''</strong><span>현재 공개 2025/26 · NSW 제외</span></div>
 <div><small>NSW 기준</small><strong>약 A$'''+num(rf['nsw_regulatory_exam_total_aud'])+'''</strong><span>현재 공개 2025/26 · 인턴교육/영어시험 별도</span></div>
 </div>'''
-finish_html+=callout('<strong>모든 학생이 IELTS를 다시 보는 것은 아닙니다.</strong> Ahpra 약사등록 영어기준에는 학력으로 충족하는 경로와 영어시험으로 충족하는 경로가 있습니다. 대학 입학 영어점수와 약사등록 영어기준은 별개이므로 본인의 전체 학력에 따라 어떤 경로가 적용되는지 확인해야 합니다.')
+finish_html+=callout('<strong>모든 학생이 IELTS를 다시 보는 것은 아닙니다.</strong> Ahpra 약사등록 영어기준에는 학력으로 충족하는 경로와 영어시험으로 충족하는 경로가 있습니다. 다만 <strong>한국은 Ahpra의 인정국가 목록에 포함되지 않기 때문에</strong>, 한국에서 중·고교를 마치고 호주 약대만 졸업한 학생은 호주 학위만으로 영어기준이 자동 충족된다고 보면 안 됩니다. 본인의 전체 학력 조합으로 교육경로를 충족하지 못하면 영어시험 경로가 필요합니다.')
 finish_html+='<details class="advanced"><summary>약사등록 영어시험 점수 보기</summary>'+table(english_rows,['시험','Overall','Listening','Reading','Writing','Speaking'],True)+'<p>'+E(els['attempts'])+'. '+E(els['validity'])+'.</p><p class="small">위 점수는 2026년 4월 23일 이후 시험 기준입니다. Cambridge C1 Advanced와 C2 Proficiency도 현재 인정됩니다.</p></details>'
 fee_rows=[
  ('인턴약사 등록 신청비','A$'+num(rf['provisional_application_aud']),'현재 공개 2025/26'),
