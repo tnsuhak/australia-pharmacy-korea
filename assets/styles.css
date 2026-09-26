@@ -88,6 +88,11 @@
 .monash-flow span{font-size:11px;color:var(--muted);line-height:1.55;margin-top:7px}
 .monash-flow i{font-style:normal;align-self:center;color:var(--muted);font-weight:800}
 .compact-links{margin-top:18px}
+.monash-scholarship-note{margin-top:14px;padding:14px 16px;border:1px solid var(--line);border-radius:12px;background:#fff}
+.monash-scholarship-note strong,.monash-scholarship-note span{display:block}
+.monash-scholarship-note strong{font-size:12px;color:var(--ink)}
+.monash-scholarship-note span{margin-top:5px;font-size:13px;font-weight:800;color:var(--teal)}
+.monash-scholarship-note p{margin:5px 0 0;font-size:11px;line-height:1.55;color:var(--muted)}
 @media(max-width:780px){
  .monash-hero-facts{grid-template-columns:repeat(2,minmax(0,1fr))}
  .monash-keyline,.monash-route-grid,.monash-money-grid{grid-template-columns:1fr}
