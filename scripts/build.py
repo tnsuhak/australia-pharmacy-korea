@@ -520,9 +520,9 @@ for u in D['universities']:
             overview='''<div class="monash-snapshot"><p class="lead"><strong>Gold Coast에서 공부하는 4년 BPharm(Hons) 과정이며, 2027 Guaranteed Admission rank는 76입니다.</strong></p><p>고졸 Direct 외에 1학년 Diploma 경로가 있고, 고2 학생은 Foundation을 거쳐 Diploma로 진학한 뒤 약대 2학년으로 이어질 수 있습니다.</p><div class="monash-keyline"><span>4년 학사</span><span>2027 Rank 76</span><span>Foundation · Diploma 경로</span></div></div>'''
             routes='''<div class="monash-route-grid">
 <article><span class="route-label">DIRECT</span><h3>고졸 → 약대 1학년</h3><div class="route-criteria">
-<div><small>입학조건</small><strong>2027 Rank 76 · 수능 331 · IB 28 · A-Level 7 · SAT 1080 (국제학력은 2026 공식 참고)</strong></div>
+<div><small>입학조건</small><strong>2027 Rank 76 · 수능 331 · IB 28 · A-Level 7 · SAT 1080</strong></div>
 <div><small>영어</small><strong>IELTS 7.0 overall · 영역별 2027 확인 중</strong></div>
-<div><small>입학시기</small><strong>3월 · 7월 (2026 공식 참고)</strong></div>
+<div><small>입학시기</small><strong>3월 · 7월</strong></div>
 </div></article>
 <article><span class="route-label">FOUNDATION</span><h3>고2 → Foundation → 1학년 Diploma (Health Sciences) → 약대 2학년</h3><div class="route-criteria">
 <div><small>입학조건</small><strong>한국 고2 Rank 7 · 수능 260 · 검정고시 평균 70</strong></div>
