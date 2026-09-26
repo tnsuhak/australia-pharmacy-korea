@@ -62,13 +62,27 @@ if not monash_page.exists():
  errors.append('monash-page: compact pilot page missing')
 else:
  mt=monash_page.read_text()
- for phrase in ['모나쉬 약대 과정 구조','입학방법 3가지','5년 커리큘럼 한눈에 보기','2~3학년','유급 실무훈련 + ITP','과정 전반의 핵심 역량','2027 국제학생 학비','A$63,640','일반 국제학생 Merit','A$15,000 / 년','Leadership','학비 100%','약대 전용 25%·50% 장학','P6007 적용 확인 중','2027 P6007 학생 장학금으로는 확정하지 않습니다.','5년 과정과 졸업 후','4년 후 학사로 졸업 가능']:
+ for phrase in ['모나쉬 약대 과정 구조','입학방법 3가지','수능','350','한국 내신','86%','A-Level','IB','AP','SAT','1290','한국 고교 60% 또는 수능 260','Foundation 75%','English 65% · Maths 50% · Chemistry 50%','학사 평균 70%+','Higher-level Maths','Human Physiology','5년 커리큘럼 한눈에 보기','2~3학년','유급 실무훈련 + ITP','과정 전반의 핵심 역량','2027 국제학생 학비','A$63,640','일반 국제학생 Merit','A$15,000 / 년','Leadership','학비 100%','약대 전용 25%·50% 장학','P6007 적용 확인 중','2027 P6007 학생 장학금으로는 확정하지 않습니다.','5년 과정과 졸업 후','4년 후 학사로 졸업 가능']:
   if phrase not in mt:errors.append(f'monash-page: compact pilot missing {phrase}')
  if 'A$49,740' in mt:errors.append('monash-page: domestic full-fee incorrectly shown as international tuition')
  if '2026 공식 A$60,100' in mt:errors.append('monash-page: old 2026 fee reference remains after 2027 fee confirmation')
  for old_heading in ['<h2>과정·학위 구조</h2>','<h2>Direct 입학조건</h2>','<h2>졸업 후 485·지역</h2>','<h2>호주 약사등록</h2>','<h2>자주 묻는 질문</h2>']:
   if old_heading in mt:errors.append(f'monash-page: old duplicate section remains {old_heading}')
  if 'id="cost-form"' in mt:errors.append('monash-page: duplicated cost calculator should not render')
+monash_direct=next((x for x in D['entry_routes'] if x['id']=='monash-bpharm-hons-direct'),None)
+if not monash_direct or not monash_direct.get('direct_scores'):
+ errors.append('monash-data: detailed Direct score set missing')
+else:
+ expected={'csat':350,'korean_high_school':86,'alevel':12,'ib':33,'ap':8,'sat':1290}
+ for key,val in expected.items():
+  if monash_direct['direct_scores'].get(key,{}).get('value')!=val:
+   errors.append(f'monash-data: Direct score mismatch {key}')
+monash_foundation=next((x for x in D['entry_routes'] if x['id']=='monash-foundation'),None)
+if not monash_foundation or '한국 고교 60% 또는 수능 260' not in str(monash_foundation['qualification'].get('value')) or 'Foundation 75%' not in str(monash_foundation['progression'].get('value')):
+ errors.append('monash-data: Foundation Korea entry/progression criteria missing')
+monash_grad=next((x for x in D['entry_routes'] if x['id']=='monash-ge'),None)
+if not monash_grad or '70%' not in str(monash_grad['progression'].get('value')) or 'Human Physiology' not in str(monash_grad['progression'].get('value')):
+ errors.append('monash-data: Graduate Entry criteria missing')
 monash_tuition=next((x for x in D['tuition'] if x['program_id']=='monash-bpharm-hons'),None)
 if not monash_tuition or monash_tuition['annual']['value']!=63640 or monash_tuition['annual']['source_year']!=2027 or monash_tuition['annual']['status']!='confirmed_2027':
  errors.append('monash-data: 2027 international tuition must be official A$63,640 per 48 credit points')
