@@ -1055,13 +1055,13 @@ reg_faq=faq([
 ])
 
 reg_items=[
- ('overview','호주 약사가 되는 과정 · 숫자로 10초 정리',reg_overview),
- ('duration','약대 3년·4년·5년이면 총 얼마나 걸리나요?',course_note),
- ('intern','인턴 약 1년 · 1,824시간',intern_html),
- ('exams','시험 2개 · Written 2시간 + Oral 35분',exam_html),
- ('finish','마지막 체크 · 영어와 비용',finish_html),
- ('faq','자주 묻는 질문',reg_faq),
- ('sources','자료 출처',reg_sources)
+ ('overview','전체 과정',reg_overview),
+ ('duration','3·4·5년 총기간',course_note),
+ ('intern','인턴 1년',intern_html),
+ ('exams','시험 2개',exam_html),
+ ('finish','영어 · 비용',finish_html),
+ ('faq','FAQ',reg_faq),
+ ('sources','출처',reg_sources)
 ]
 register('/pharmacist-registration/','호주 약사 되는 법 · 약대 3~5년 + 인턴 약 1년 + 시험 2개 | TNS','호주 약대 졸업 후 정식 약사가 되는 과정을 숫자로 설명합니다. 약대 3~5년, 인턴 1,824시간 약 1년, Written·Oral 시험 2개, General Registration까지 확인하세요.',pagehero('호주 약대 졸업 후, 정식 약사까지 얼마나 걸리나요?','약대 3~5년 → 인턴 약 1년(1,824시간) → 시험 2개 → General Registration. 먼저 숫자로 전체 구조를 이해하고 아래에서 필요한 세부내용만 확인하세요.','호주 약사등록',reg_hero)+article(reg_items,'compact-detail'))
 
