@@ -609,26 +609,40 @@ for u in D['universities']:
             seo=('2027 UQ 약대 · 4년·3.5년·Foundation·25% 장학 | TNS','퀸즐랜드대학교 약대의 2월 4년·7월 3.5년 과정, Direct·Standard·Accelerated Foundation, 2027 학비와 25% 장학을 정리합니다.')
         elif uid=='adelaide':
             ad_sch=next(x for x in ss if x['id']=='adelaide-merit')
-            overview='''<div class="monash-snapshot"><p class="lead"><strong>4년 BPharm(Hons)으로 졸업하거나, 5년 BPharm(Hons) + Master of Pharmacy 연계과정을 선택할 수 있습니다.</strong></p><p>4년 학사에는 임상·현장실습이 포함되고, 5년 연계과정은 마지막 Master 단계에서 supervised internship과 Intern Training Program을 통합합니다.</p><div class="monash-keyline"><span>4년 BPharm(Hons)</span><span>5년 Master 연계</span><span>Adelaide</span></div></div>'''
-            routes='''<div class="monash-route-grid compact-route-grid"><article class="full"><span class="route-label">DIRECT</span><h3>고졸 → 약대 1학년</h3><div class="route-criteria">
+            overview='''<div class="monash-snapshot"><p class="lead"><strong>4년 BPharm(Hons)으로 졸업하거나, 5년 BPharm(Hons) + Master of Pharmacy 연계과정을 선택할 수 있습니다.</strong></p><p>Direct 외에 Eynesbury Foundation과 Health Science Diploma 경로가 있습니다. Adelaide의 Diploma는 약대 2학년 직행이 아니라 약대 1학년으로 진학하는 구조입니다.</p><div class="monash-keyline"><span>4년 BPharm(Hons)</span><span>Foundation · Diploma</span><span>5년 Master 연계</span></div></div>'''
+            routes='''<div class="monash-route-grid">
+<article><span class="route-label">DIRECT</span><h3>고졸 → 약대 1학년</h3><div class="route-criteria">
 <div><small>입학조건</small><strong>수능 340 · IB 30 · A-Level 10 · SAT 1220 · OSSD 80% · Biology/Chemistry/Physics 중 1과목</strong></div>
 <div><small>영어</small><strong>IELTS 6.5 · 각 6.0</strong></div>
 <div><small>입학시기</small><strong>2월</strong></div>
-</div></article></div>'''
+</div></article>
+<article><span class="route-label">FOUNDATION</span><h3>고2 → Foundation → 약대 1학년</h3><div class="route-criteria">
+<div><small>입학조건</small><strong>고2 또는 Year 11 동등학력</strong></div>
+<div><small>영어</small><strong>IELTS 5.5 · 각 5.0</strong></div>
+<div><small>입학시기</small><strong>2월 · 6월 · 10월</strong></div>
+</div></article>
+<article><span class="route-label">EYNESBURY COLLEGE</span><h3>1학년 Diploma (Health Science) → 약대 1학년</h3><div class="route-criteria">
+<div><small>입학조건</small><strong>고3 또는 Year 12 동등학력 · Physics/Biology/Chemistry 중 1과목</strong></div>
+<div><small>영어</small><strong>IELTS 6.0 · 각 6.0</strong></div>
+<div><small>입학시기</small><strong>2월 · 6월 · 10월</strong></div>
+</div></article>
+</div>'''
             curriculum='''<div class="monash-curriculum-grid compact-three">
 <article><span class="year">1~2학년</span><h3>약학·생명과학 기초</h3><p>의약품과 인체, 질환을 이해하는 기초과학을 바탕으로 약학 전문학습을 시작합니다.</p></article>
 <article><span class="year">3~4학년</span><h3>임상·Work Integrated Learning</h3><p>Community와 Hospital을 포함한 실제 약학 환경에서 실습하며 환자 중심 약료 역량을 강화합니다.</p></article>
 <article><span class="year">선택 5년차</span><h3>Master + Internship + ITP</h3><p>연계 Master of Pharmacy를 선택하면 supervised internship과 Intern Training Program을 Master 단계에서 함께 진행합니다.</p></article>
 </div>'''
-            cost='''<div class="monash-money-grid">
+            cost='''<div class="monash-money-grid compact-three-money">
 <div><small>2027 국제학생 학비</small><strong>확인 중</strong><span>현재 공식 2026 학비 A$54,300</span></div>
 <div><small>Adelaide Merit</small><strong>자동심사 · 15%</strong><span>ATAR 75 또는 국제 동등성적</span></div>
+<div><small>Eynesbury Foundation</small><strong>A$36,200</strong><span>2027 전체 학비</span></div>
+<div><small>Health Science Diploma</small><strong>A$41,900</strong><span>2027 Stage 2 학비</span></div>
 <div><small>Mattanya Shared House</small><strong>A$320 / 주</strong><span>2027 · 공과금 포함</span></div>
 <div><small>University Village</small><strong>A$380 / 주</strong><span>2027 · 공과금 포함</span></div>
 </div><div class="section-link-list compact-links">'''+link('/tuition-scholarships/','호주 약대 전체 학비·생활비 비교 →')+'''</div>'''
             after='''<div class="monash-flow"><div><b>4년</b><strong>BPharm(Hons)</strong><span>학사과정 완료</span></div><i>↓</i><div><b>등록 경로</b><strong>졸업 후 인턴십 또는 5년차 Master</strong><span>Master는 supervised internship + ITP 통합</span></div><i>↓</i><div><b>등록요건</b><strong>시험·심사 완료</strong><span>Pharmacy Board 절차</span></div><i>↓</i><div><b>결과</b><strong>General Registration</strong><span>호주 약사등록</span></div></div><div class="section-link-list compact-links">'''+link('/pharmacist-registration/','호주 약사등록 방법 →')+link('/korea-pharmacist/','한국 약사면허 취득 방법 →')+'''</div>'''
-            titles=('Adelaide 약대 과정 구조','입학방법','4년 과정·5년 Master 연계','학비·장학금·생활비','졸업 후 약사등록')
-            seo=('2027 Adelaide 약대 · 수능340·4년·5년 Master·15% 장학 | TNS','Adelaide University 약대의 4년 BPharm(Hons), 5년 Master 연계, 수능 340 등 입학조건과 15% 자동심사 장학을 정리합니다.')
+            titles=('Adelaide 약대 과정 구조','입학방법 3가지','4년 과정·5년 Master 연계','학비·장학금·생활비','졸업 후 약사등록')
+            seo=('2027 Adelaide 약대 · 수능340·Foundation·Diploma·15% 장학 | TNS','Adelaide University 약대의 Direct, Eynesbury Foundation·Health Science Diploma, 4년 BPharm(Hons), 5년 Master 연계와 15% 장학을 정리합니다.')
         elif uid=='latrobe':
             lt_health=next(x for x in ss if x['id']=='latrobe-health-innovation-30')
             overview='''<div class="monash-snapshot"><p class="lead"><strong>Bendigo에서 공부하는 4년 BPharm(Hons)이며, Direct 입학에 별도 과학 선수과목을 요구하지 않습니다.</strong></p><p>La Trobe College Foundation을 거쳐 Bendigo 약대 1학년으로 진학할 수도 있고, 국제학생 대상 Health Innovation 30% 장학이 있습니다.</p><div class="monash-keyline"><span>Bendigo Regional</span><span>과학 선수과목 없음</span><span>30% Health Innovation</span></div></div>'''
@@ -698,14 +712,14 @@ for u in D['universities']:
         items=[('overview','이 약대 핵심',intro),('structure','과정·학위 구조',anatomy),('routes','입학방법',routes_html),('admission','Direct 입학조건','<h3>학력·성적</h3>'+qtable(pid)+'<h3>선수과목</h3>'+requirements_html+'<h3>영어</h3>'+english_html+'<h3>입학시기</h3>'+fv(it['label'])+'<p class="small">Foundation·Diploma 일정은 위 ‘입학방법’에서 바로 볼 수 있습니다.</p>'),('cost','학비·장학금·생활비','<h3>학비</h3>'+fees+'<h3>장학금</h3>'+scholarcards(ss)+'<h3>기숙사·숙소</h3>'+housingcards(hh)+'<h3>1년 예산</h3>'+costcalculator()),('poststudy','졸업 후 485·지역',poststudy_html(u)),('registration','호주 약사등록',registration_html),('korea','한국 약사면허','<p>호주 약대 졸업만으로 한국 약사면허가 자동으로 나오지 않습니다. 대학 인정, 호주 면허, 예비시험·국가시험을 따로 거칩니다.</p>'+link('/korea-pharmacist/','한국 약사면허 확인 순서 →','btn text')),('faq','자주 묻는 질문',faq(fs)),('sources','자료 출처',sources(allids))]
         register(purl(p),f'2027 {u["name_ko"]} 약대 완전분석 · 입학·학비·485 | TNS',u['name']+' Pharmacy의 과정기간, 입학방법, 선수과목, 학비·장학금, 인턴십, 485 지역조건과 약사등록을 정리합니다.',body+article(items),fs)
 
-pathway_items=[('overview','호주 약대 입학방법 3가지','<p>고등학생은 보통 Foundation, Diploma, Direct Entry 세 가지 방법으로 시작합니다.</p><div class="admission-grid"><article class="admission-card"><span class="route-label">FOUNDATION</span><h3>고2 → Foundation → 약대 1학년</h3><p>고2 수료 후 Foundation을 마치고 약대 1학년으로 진학합니다.</p><a href="/foundation/">Foundation 자세히 →</a></article><article class="admission-card"><span class="route-label">DIPLOMA / IYO</span><h3>1학년 Diploma → 약대 2학년</h3><p>Griffith·Curtin은 1학년 과정의 Diploma를 거쳐 약대 2학년으로 진학합니다.</p><p class="route-exception">Adelaide: 학점 인정 학생 → 7월 입학 심사</p><a href="/diploma/">Diploma 자세히 →</a></article><article class="admission-card"><span class="route-label">DIRECT ENTRY</span><h3>성적으로 바로 약대 1학년</h3><p>수능·IB·A-level·SAT·OSSD와 선수과목·영어로 바로 지원합니다.</p><a href="/direct-entry/">Direct 대학 보기 →</a></article></div>'),('profiles','내 학력에서 바로 찾기',table([('고2 수료','Foundation'),('고3 졸업','Direct / Diploma'),('검정고시','Diploma / 일부 Direct'),('수능·IB·A-level·SAT·OSSD','Direct Entry')],['현재 학력','먼저 볼 방법'],True)),('graduate','대학 졸업자','<p>Graduate Entry는 일부 대학만 운영합니다. 학사학위와 대학 선수과목이 필요합니다.</p>'+link('/graduate-entry/','Graduate Entry 보기 →','btn text'))]
+pathway_items=[('overview','호주 약대 입학방법 3가지','<p>고등학생은 보통 Foundation, Diploma, Direct Entry 세 가지 방법으로 시작합니다.</p><div class="admission-grid"><article class="admission-card"><span class="route-label">FOUNDATION</span><h3>고2 → Foundation → 약대 1학년</h3><p>고2 수료 후 Foundation을 마치고 약대 1학년으로 진학합니다.</p><a href="/foundation/">Foundation 자세히 →</a></article><article class="admission-card"><span class="route-label">DIPLOMA / IYO</span><h3>1학년 Diploma → 약대 2학년</h3><p>Griffith·Curtin은 1학년 과정의 Diploma를 거쳐 약대 2학년으로 진학합니다.</p><p class="route-exception">Adelaide: 1학년 Diploma → 약대 1학년(일부 과목 인정)</p><a href="/diploma/">Diploma 자세히 →</a></article><article class="admission-card"><span class="route-label">DIRECT ENTRY</span><h3>성적으로 바로 약대 1학년</h3><p>수능·IB·A-level·SAT·OSSD와 선수과목·영어로 바로 지원합니다.</p><a href="/direct-entry/">Direct 대학 보기 →</a></article></div>'),('profiles','내 학력에서 바로 찾기',table([('고2 수료','Foundation'),('고3 졸업','Direct / Diploma'),('검정고시','Diploma / 일부 Direct'),('수능·IB·A-level·SAT·OSSD','Direct Entry')],['현재 학력','먼저 볼 방법'],True)),('graduate','대학 졸업자','<p>Graduate Entry는 일부 대학만 운영합니다. 학사학위와 대학 선수과목이 필요합니다.</p>'+link('/graduate-entry/','Graduate Entry 보기 →','btn text'))]
 register('/admission-pathways/','2027 호주 약대 입학방법 · Foundation·Diploma·Direct | TNS','호주 약대에 진학하는 대표적인 세 가지 방법인 Foundation, 1학년 Diploma/IYO, Direct Entry를 학력별로 비교하고 대졸자 특수경로를 구분합니다.',pagehero('호주 약대 입학방법','내 학력에 맞는 입학방법을 고르면 지원 가능한 대학이 빠르게 좁혀집니다.','입학방법')+article(pathway_items))
 
 direct_rows=[]
 for p in D['programs']:
     u=U[p['university_id']];rq=one('requirements',p['id']);en=one('english',p['id']);it=one('intakes',p['id'])
     direct_rows.append((link(purl(p),E(u['short'])+(' · 신설 PharmD' if p['id']=='uq-pharmd' else '')),E(value(p['duration_label'])),fv(it['label']),fv(rq['chemistry']),fv(rq['mathematics']),fv(en['ielts_overall'])))
-direct_items=[('schools','Direct 입학 가능한 약대',table(direct_rows,['대학','기간','입학월','화학','수학','IELTS'],True)),('scores','대학별 Direct 점수 보기','<p>수능·IB·A-level·SAT·OSSD 기준은 대학마다 다릅니다. 대학명을 누르면 해당 학교 점수표가 바로 열립니다.</p>'+link('/admission-requirements/','학력별 성적·선수과목 설명 →','btn text')),('other','Direct가 어렵다면','<div class="section-link-list"><a href="/foundation/">Foundation → 약대 1학년</a><a href="/diploma/">1학년 Diploma → 약대 2학년</a><a href="/graduate-entry/">Graduate Entry</a></div>')]
+direct_items=[('schools','Direct 입학 가능한 약대',table(direct_rows,['대학','기간','입학월','화학','수학','IELTS'],True)),('scores','대학별 Direct 점수 보기','<p>수능·IB·A-level·SAT·OSSD 기준은 대학마다 다릅니다. 대학명을 누르면 해당 학교 점수표가 바로 열립니다.</p>'+link('/admission-requirements/','학력별 성적·선수과목 설명 →','btn text')),('other','Direct가 어렵다면','<div class="section-link-list"><a href="/foundation/">Foundation → 약대 1학년</a><a href="/diploma/">Diploma 경로 비교</a><a href="/graduate-entry/">Graduate Entry</a></div>')]
 register('/direct-entry/','2027 호주 약대 Direct 입학 · 대학별 수능·IB·선수과목 | TNS','호주 약대 Direct Entry를 대학별 기간, 입학월, 화학·수학 선수과목과 IELTS 기준으로 비교하고 각 대학 상세페이지로 연결합니다.',pagehero('고졸 Direct로 호주 약대 가기','수능·IB·A-level·SAT·OSSD로 약대 1학년에 바로 지원하는 대학을 한눈에 봅니다.','Direct Entry')+article(direct_items))
 
 admission_rows=[]
