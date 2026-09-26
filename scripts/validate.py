@@ -2,7 +2,7 @@
 from pathlib import Path
 from html.parser import HTMLParser
 from urllib.parse import urlsplit,unquote
-import json,collections,subprocess,os
+import json,collections,subprocess,os,re
 R=Path(__file__).resolve().parents[1];D=json.loads((R/'data/catalog.json').read_text());KD=json.loads((R/'data/korea_pharmacist.json').read_text());errors=[]
 class Page(HTMLParser):
  def __init__(self,text):
