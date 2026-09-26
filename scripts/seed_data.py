@@ -180,6 +180,10 @@ source('uq-calendar','UQ College · Academic calendar','https://uqcollege.uq.edu
 source('monash-foundation','Monash Pathway Programs 2027 · Pharmacy P6001 표기','https://www.monashcollege.edu.au/__data/assets/pdf_file/0005/4349102/2027-Monash-Pathway-Programs.pdf',2027,'official_pathway')
 source('monash-foundation-p6007-current','Monash College · Foundation Year · Pharmacy P6007','https://www.monashcollege.edu.au/study/courses/foundation-year/fy-data/destination-degrees-2026-single-degrees/pharmacy-and-pharmaceutical-science',None,'official_pathway')
 source('monash-foundation-dates-2027','Monash College · Foundation Year 2027 dates','https://www.monashcollege.edu.au/study/courses/foundation-year/dates-and-fees',2027,'official_pathway')
+source('monash-direct-2027-guide','Monash 2027 International Undergraduate Course Guide · Pharmacy entry scores','https://www.monash.edu/__data/assets/pdf_file/0005/3941744/undergraduate-international-course-guide.pdf',2027,'official_guide',verified_date='2026-09-26')
+source('monash-foundation-korea-current','Monash College Foundation Year · South Korea entry requirements','https://www.monashcollege.edu.au/study/courses/foundation-year/fy-data/2025/mufy-country-data/academic-entry-requirements-by-country2/south-korea',None,'official_pathway',verified_date='2026-09-26')
+source('monash-foundation-english-current','Monash College Foundation Year Standard · English entry requirements','https://www.monashcollege.edu.au/study/courses/foundation-year/foundation-year-standard',None,'official_pathway',verified_date='2026-09-26')
+source('monash-grad-entry-current','Monash Graduate Entry Pharmacy · current eligibility','https://www.monash.edu/pharm/future/courses/grad-pharmacy',None,'official_course',verified_date='2026-09-26')
 source('newcastle-foundation','University of Newcastle College of International Education · Foundation Studies','https://internationalcollege.newcastle.edu.au/foundation-studies',None,'official_pathway')
 source('newcastle-foundation-entry','Newcastle CIE · Foundation Studies entry requirements','https://internationalcollege.newcastle.edu.au/entry-requirements',None,'official_pathway')
 source('newcastle-foundation-fee-2027','Newcastle CIE · 2027 Foundation Studies fees','https://internationalcollege.newcastle.edu.au/fees',2027,'official_pathway')
@@ -307,6 +311,16 @@ setp('unisq',highlights=['T1 only','Toowoomba','2027 개설표'],editorial='2027
 intake('unisq',[2],'Trimester 1 · 2027년 2월 15일',src='unisq-pharmacy-current'); req('unisq','accepted','assumed','accepted','accepted','수학 + Biology/Chemistry/Physics 중 1과목에서 Year 12 C 수준 assumed knowledge',src='unisq-pharmacy-current'); eng('unisq',7.0,{'L':7,'R':7,'W':6.5,'S':7},src='unisq-pharmacy-current')
 setp('monash',highlights=['5년 PharmD','5년차 유급 인턴 통합','4년 BPharm(Hons) Exit'],editorial='P6007은 5년 Bachelor of Pharmacy (Honours) / Doctor of Pharmacy 통합과정입니다. 2~4학년에는 구조화된 실습이 있고 5학년에는 paid work-integrated learning과 Intern Training Program이 통합됩니다. 3년 144cp 후 Bachelor of Pharmacotherapeutics, 4년 192cp 후 BPharm(Hons), 5년에는 PharmD 또는 조건에 따라 BPharm(Hons)+Master of Pharmacy 대체 Exit가 있습니다. 2027 국내 Monash Guarantee ATAR는 80이지만 국제학력 Direct 점수로 자동 환산하지 않습니다. 관련 학사 졸업자는 Graduate Entry로 3학년 진입을 검토할 수 있습니다.')
 req('monash','required','required',grade='VCE Methods/Specialist Maths 25 + Chemistry 25. IB Math AA SL4 또는 AA/AI HL3, Chemistry SL4 또는 HL3.'); intake('monash',[2],'2월'); fee('monash',63640,src='monash-fee-2027',year=2027,load='48 credit points 기준'); row(tuition,'monash')['increase_note']='Fees are subject to change annually.'; eng('monash',6.5,{'L':6,'R':6,'W':6,'S':6},src='monash-pps-2026',pte=58,pte_each=50)
+for qt,val,scale,calc in [
+ ('csat',350,'표준점수 상위 4과목 합','한국사·영어·직업탐구 제외'),
+ ('korean_high_school',86,'Grade 10–12 academic subjects 평균 %','낙제 포함 학업과목 평균 · 비학업과목 제외'),
+ ('alevel',12,'Monash GCE A Level 환산점수','Monash 공식 환산방식 적용'),
+ ('ib',33,'45','IB Diploma 최종 총점'),
+ ('sat',1290,'1600','SAT Evidence-Based Reading and Writing + Math')
+]:
+ q=next(x for x in qualifications if x['program_id']=='monash-bpharm-hons' and x['qualification']==qt)
+ q['score']=fact(val,'monash-direct-2027-guide',year=2027,status='latest_published',note='2027 International Undergraduate Course Guide의 Pharmacy 5-year international entry table 기준. 가이드에는 기존 P6001 명칭이 남아 있어 P6007 live selector와 지원 전 재확인.')
+ q['scale']=scale;q['calculation']=calc
 setp('sydney',bachelor_award_year=fact(4,'sydney-structure'),four_year_exit=fact(True,'sydney-structure'),exit_degree=fact('Bachelor of Pharmacy (Honours)','sydney-structure'),highlights=['5년 통합','4년 BPharm(Hons) Exit','Mathematics prerequisite'],editorial='5년 Bachelor of Pharmacy (Honours) + Master of Pharmacy Practice 통합과정입니다. 현재 Course Resolutions는 1~4학년 192cp를 충족하면 Bachelor of Pharmacy (Honours)를 수여할 수 있고, 5학년 48cp가 Master of Pharmacy Practice임을 명시합니다. Mathematics는 공식 course prerequisite이며 Chemistry·Biology는 assumed knowledge, Physics는 recommended study입니다.',review_items=['USFP 수학 progression 조건'])
 eng('sydney',6.5,{'L':6,'R':6,'W':6,'S':6},src='sydney',toefl={'overall':85,'L':17,'R':17,'W':19,'S':17}); intake('sydney',[2],'2월',src='sydney'); fee('sydney',63600,src='sydney',year=2027); req('sydney','assumed','required','assumed','recommended','Mathematics Advanced Band 4 또는 Mathematics Extension 1/2 Band E3 상당 prerequisite · Chemistry와 Biology는 assumed knowledge · Physics 권장',src='sydney-prereqs-current')
 qual('sydney','csat',346,'표준점수 4개 합','국어 + 수학 + 사회/과학 탐구 상위 2개 과목의 표준점수 합. 등급이나 백분위 합계가 아닙니다.')
@@ -361,6 +375,20 @@ routes.append(dict(id='uq-pharmd-direct',program_id='uq-pharmd',type='direct',ti
 def route(i,id,type,title,src,credit=None,entry=None,duration=None,intake=None,progression=None,note='',verified=True):
  r=dict(id=id,program_id=i+'-bpharm-hons',type=type,title=title,availability=fact(True if verified else None,src),credit=fact(credit,src),entry_year=fact(entry,src),duration=fact(duration,src),intake=fact(intake,src),progression=fact(progression,src),english=fact(None,src),qualification=fact(None,src),note=note)
  routes.append(r);return r
+mdr=next(x for x in routes if x['id']=='monash-bpharm-hons-direct')
+mdr['qualification']=fact('수능 350 · 한국 고교 86% · A-Level 12 · IB 33 · AP 8 · SAT 1290','monash-direct-2027-guide',year=2027,status='latest_published',note='2027 국제학생 가이드 Pharmacy 5-year 기준. 인쇄 가이드의 과정명은 P6001로 남아 있어 P6007 live selector와 지원 전 재확인.')
+mdr['english']=fact('IELTS 6.5 · 각 6.0','monash',year=2027,status='confirmed_2027')
+mdr['progression']=fact('Maths + Chemistry 필수','monash',year=2027,status='confirmed_2027')
+mdr['direct_scores']={
+ 'csat':fact(350,'monash-direct-2027-guide',year=2027,status='latest_published',note='표준점수 상위 4과목 합 · 한국사·영어·직업탐구 제외'),
+ 'korean_high_school':fact(86,'monash-direct-2027-guide',year=2027,status='latest_published',note='Grade 10–12 academic subjects 평균'),
+ 'alevel':fact(12,'monash-direct-2027-guide',year=2027,status='latest_published',note='Monash 환산점수'),
+ 'ib':fact(33,'monash-direct-2027-guide',year=2027,status='latest_published',note='IB Diploma /45'),
+ 'ap':fact(8,'monash-direct-2027-guide',year=2027,status='latest_published',note='가장 높은 AP 2개 합 · 각 AP 최소 3'),
+ 'sat':fact(1290,'monash-direct-2027-guide',year=2027,status='latest_published',note='1600점 만점')
+}
+mdr['note']='2027 국제학생 가이드의 Pharmacy 5-year 기준을 사용합니다. 가이드 과정명은 P6001로 남아 있어 신설 P6007의 live qualification selector와 지원 전 최종 재확인합니다.'
+
 dr=next(x for x in routes if x['id']=='griffith-bpharm-hons-direct')
 dr['intake']=fact('3월 · 7월 (2026 국제가이드 기준)','griffith-2026-guide')
 dr['intake_months']=fact([3,7],'griffith-2026-guide')
@@ -422,18 +450,22 @@ routes[-1]['intake']=fact('4월 · 10월','unsw-college-standard-2027')
 routes[-1]['intake_months']=fact([4,10],'unsw-college-standard-2027')
 routes[-1]['progression']=fact('현재 3895 progression: GPA 7.6 · Academic English B · Life Science/Physical Science · Term 1','unsw-college-student-guide',status='latest_published',note='College 표에는 아직 기존 Master of Pharmacy 명칭이 남아 있습니다. 2027 Doctor of Pharmacy 명칭 전용 progression table 발표 후 재확인합니다.')
 routes[-1]['pathway_fee']=fact(43650,'unsw-college-standard-2027',year=2027,note='2027 Standard Foundation tuition only · 기타 compulsory fee 별도')
-route('monash','monash-foundation','foundation','Monash University Foundation Year','monash-foundation-p6007-current',0,1,'Standard 약 12개월','2월 · 8월','P6007: Foundation score 75% · English 65% · Maths 50% + Chemistry 50%','현재 Monash College destination-degree 페이지는 새 P6007을 75%/English 65%로 안내하지만, 2027 Pathway Programs PDF의 Pharmacy 표에는 아직 P6001이 남아 있어 2027 확정 자동판정에는 사용하지 않습니다.')
+route('monash','monash-foundation','foundation','Monash University Foundation Year','monash-foundation-p6007-current',0,1,'Standard 약 12개월','2월 · 8월','P6007: Foundation 75% · English 65% · Maths 50% + Chemistry 50%','약 12개월 Standard 기준. 2027 시작일은 2월·8월이며, P6007 진급은 현재 Monash College destination degree 기준을 사용합니다.')
 routes[-1]['availability']=fact(True,'monash-foundation-p6007-current')
 routes[-1]['duration']=fact('Standard 약 12개월','monash-foundation-dates-2027')
 routes[-1]['intake']=fact('2월 · 8월','monash-foundation-dates-2027')
 routes[-1]['intake_months']=fact([2,8],'monash-foundation-dates-2027')
-routes[-1]['progression']=fact('P6007: Foundation score 75% · English 65% · Maths 50% + Chemistry 50%','monash-foundation-p6007-current',status='source_conflict',note='2027 Pathway Programs PDF는 Pharmacy 표에 legacy P6001을 유지하고 있어 P6007 live page와 코드가 불일치합니다.')
-routes[-1]['english']=fact('P6007 진급 English 65%','monash-foundation-p6007-current',status='source_conflict',note='Foundation 입학 영어조건이 아니라 Monash University Pharmacy 진급용 Foundation English 점수입니다.')
+routes[-1]['progression']=fact('P6007: Foundation 75% · English 65% · Maths 50% · Chemistry 50%','monash-foundation-p6007-current',year=2026,status='latest_published',note='현재 Monash College destination degree 표가 P6007을 직접 명시')
+routes[-1]['english']=fact('IELTS 5.5 · 각 5.0','monash-foundation-english-current',status='latest_published',note='Foundation Year Standard 입학 영어')
+routes[-1]['qualification']=fact('한국 고교 60% 또는 수능 260','monash-foundation-korea-current',status='latest_published',note='Foundation Year Standard 입학 기준')
 route('newcastle','newcastle-foundation','foundation','Newcastle CIE · Foundation Studies','newcastle-foundation',0,1,'11개월 · Pharmacy 목적 2월 시작','2월 · Pharmacy는 본과 중간입학 없음','전체 평균 65%+ · Academic English A&B 평균 75%+','Foundation을 마치면 Bachelor of Pharmacy (Honours) 1학년으로 진학합니다. 2027 Foundation Studies 학비는 A$31,400입니다.')
 routes[-1]['english']=fact('Foundation 입학: IELTS 5.5 / 각 5.0 · 본과 진급: Academic English A&B 평균 75%+','newcastle-foundation-entry')
 routes[-1]['qualification']=fact('한국: 고2 수료(pass grades)부터 Foundation Studies 입학 가능','newcastle-foundation-entry')
 routes[-1]['pathway_fee']=fact(31400,'newcastle-foundation-fee-2027',year=2027,note='2027 Foundation Studies program fee · 10 courses')
-route('monash','monash-ge','graduate','Monash · Graduate Entry','monash',None,3,'관련 학위 + 여름 집중과정 후 3학년 진입',None,'최근 10년 이내 관련 학사 · 평균 70% 이상 · 대학 수준 Human Physiology','최소 기준을 충족한 뒤 경쟁 선발합니다.')
+route('monash','monash-ge','graduate','Monash · Graduate Entry','monash-grad-entry-current',None,3,'Summer intensive 후 3학년 진입',None,'학사 평균 70%+ · Chemistry · Higher-level Maths · 대학 수준 Human Physiology','최소요건 충족자 중 경쟁선발 · Summer intensive 이수 후 약대 3학년 진입')
+routes[-1]['qualification']=fact('관련 학사 · 최근 10년 이내','monash-grad-entry-current',status='latest_published',note='Biomedicine, Pharmaceutical Sciences, Science 등 관련 science-based degree')
+routes[-1]['progression']=fact('학사 평균 70%+ · Chemistry · Higher-level Maths · 대학 수준 Human Physiology','monash-grad-entry-current',status='latest_published',note='Human Physiology는 최소 1과목을 tertiary level에서 이수')
+routes[-1]['english']=fact('영어수업 학사 또는 IELTS 6.5 · 각 6.0','monash-grad-entry-current',status='latest_published',note='English Level A')
 route('rmit','rmit-foundation','foundation','RMIT Foundation Studies','rmit-foundation-equiv',0,1,'1년','2월 · 7월','Foundation 65% + Pharmacy Chemistry·Mathematics prerequisite 동등과목 충족','Foundation 후 Pharmacy 1학년으로 지원합니다. 2027 Foundation Studies 총학비는 A$34,250이며 Pharmacy의 Chemistry·Mathematics prerequisite를 Foundation에서 충족해야 합니다.')
 routes[-1]['duration']=fact('1년','rmit-foundation-2027')
 routes[-1]['intake']=fact('Semester 1 · 2월 1일 / Semester 2 · 7월','rmit-foundation-2027')
