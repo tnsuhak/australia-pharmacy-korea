@@ -62,18 +62,19 @@ if not monash_page.exists():
  errors.append('monash-page: compact pilot page missing')
 else:
  mt=monash_page.read_text()
- for phrase in ['모나쉬 약대 과정 구조','입학방법 3가지','5년 커리큘럼 한눈에 보기','2~3학년','유급 실무훈련 + ITP','과정 전반의 핵심 역량','2027 국제학생 학비','2026 공식 A$60,100','일반 국제학생 Merit','A$15,000 / 년','Leadership','학비 100%','Scholars Program 별도 장학','25% 또는 50%','일반 P6007 약대 학생 전체 대상 장학금은 아닙니다.','5년 과정과 졸업 후','4년 후 학사로 졸업 가능']:
+ for phrase in ['모나쉬 약대 과정 구조','입학방법 3가지','5년 커리큘럼 한눈에 보기','2~3학년','유급 실무훈련 + ITP','과정 전반의 핵심 역량','2027 국제학생 학비','A$63,640','일반 국제학생 Merit','A$15,000 / 년','Leadership','학비 100%','약대 전용 25%·50% 장학','P6007 적용 확인 중','2027 P6007 학생 장학금으로는 확정하지 않습니다.','5년 과정과 졸업 후','4년 후 학사로 졸업 가능']:
   if phrase not in mt:errors.append(f'monash-page: compact pilot missing {phrase}')
  if 'A$49,740' in mt:errors.append('monash-page: domestic full-fee incorrectly shown as international tuition')
+ if '2026 공식 A$60,100' in mt:errors.append('monash-page: old 2026 fee reference remains after 2027 fee confirmation')
  for old_heading in ['<h2>과정·학위 구조</h2>','<h2>Direct 입학조건</h2>','<h2>졸업 후 485·지역</h2>','<h2>호주 약사등록</h2>','<h2>자주 묻는 질문</h2>']:
   if old_heading in mt:errors.append(f'monash-page: old duplicate section remains {old_heading}')
  if 'id="cost-form"' in mt:errors.append('monash-page: duplicated cost calculator should not render')
 monash_tuition=next((x for x in D['tuition'] if x['program_id']=='monash-bpharm-hons'),None)
-if not monash_tuition or monash_tuition['annual']['value']!=60100 or monash_tuition['annual']['source_year']!=2026 or monash_tuition['annual']['status']!='latest_published':
- errors.append('monash-data: international tuition must remain 2026 official A$60,100 reference until 2027 fee is verified')
+if not monash_tuition or monash_tuition['annual']['value']!=63640 or monash_tuition['annual']['source_year']!=2027 or monash_tuition['annual']['status']!='confirmed_2027':
+ errors.append('monash-data: 2027 international tuition must be official A$63,640 per 48 credit points')
 monash_scholarships={x['id']:x for x in D['scholarships'] if x['university_id']=='monash'}
-if monash_scholarships.get('monash-merit',{}).get('scope')!='scholars_program':
- errors.append('monash-data: 25/50% Pharmacy scholarship must stay scoped to Scholars Program')
+if monash_scholarships.get('monash-merit',{}).get('scope')!='p6007_not_confirmed' or monash_scholarships.get('monash-merit',{}).get('pharmacy_eligible',{}).get('value') is not None:
+ errors.append('monash-data: 25/50% Pharmacy scholarship must remain pending for P6007 until officially listed')
 for sid in ['monash-international-merit','monash-international-leadership']:
  if sid not in monash_scholarships or monash_scholarships[sid]['pharmacy_eligible']['value'] is not True:
   errors.append(f'monash-data: missing verified general international scholarship {sid}')
