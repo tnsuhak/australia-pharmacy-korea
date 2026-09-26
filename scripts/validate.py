@@ -79,7 +79,7 @@ for slug,(route_count,phrases) in compact_batch.items():
  if 'id="cost-form"' in txt:errors.append(f'{slug}: per-school cost calculator should not render')
 compact_batch_2={
  'uq-pharmacy':(3,['UQ 약대 과정 구조','입학방법 3가지','ATAR 80 · IB 30.25','수능 260 · 검정고시 65% · 고2 GPA 3(미)','수능 270 · 검정고시 70% · 고3 GPA 4(우)','A$60,952 / 년','A$36,280','A$24,940','경쟁선발 · 25%']),
- 'adelaide-pharmacy':(1,['Adelaide 약대 과정 구조','수능 340 · IB 30 · A-Level 10 · SAT 1220 · OSSD 80%','IELTS 6.5 · 각 6.0','4년 과정·5년 Master 연계','자동심사 · 15%','A$320 / 주','A$380 / 주']),
+ 'adelaide-pharmacy':(3,['Adelaide 약대 과정 구조','입학방법 3가지','수능 340 · IB 30 · A-Level 10 · SAT 1220 · OSSD 80%','고2 → Foundation → 약대 1학년','IELTS 5.5 · 각 5.0','1학년 Diploma (Health Science) → 약대 1학년','IELTS 6.0 · 각 6.0','A$36,200','A$41,900','4년 과정·5년 Master 연계','자동심사 · 15%','A$320 / 주','A$380 / 주']),
  'latrobe-pharmacy':(2,['La Trobe 약대 과정 구조','Bendigo','별도 과학 선수과목 없음','Foundation → 약대 1학년','IELTS 6.5 · 각 6.5','Health Innovation','30%','A$255 / 주부터']),
  'qut-pharmacy':(3,['QUT 약대 과정 구조','Selection Rank 76','선행지식','12개월 Foundation → 약대 1학년','6개월 Intensive → 약대 1학년','A$46,200 / 년','자동심사 · 25%','A$25,536','A$12,768'])
 }
@@ -105,6 +105,12 @@ for slug,(route_count,phrases) in compact_batch_2.items():
   if old_heading in txt:errors.append(f'{slug}: old duplicate section remains {old_heading}')
  if 'id="cost-form"' in txt:errors.append(f'{slug}: per-school cost calculator should not render')
 
+adelaide_foundation=next((x for x in D['entry_routes'] if x['id']=='adelaide-eynesbury-foundation'),None)
+adelaide_diploma=next((x for x in D['entry_routes'] if x['id']=='adelaide-eynesbury-diploma'),None)
+if not adelaide_foundation or adelaide_foundation['entry_year']['value']!=1 or adelaide_foundation['pathway_fee']['value']!=36200:
+ errors.append('adelaide-data: Eynesbury Foundation pathway missing or wrong')
+if not adelaide_diploma or adelaide_diploma['entry_year']['value']!=1 or adelaide_diploma['credit']['value']!=4 or adelaide_diploma['pathway_fee']['value']!=41900:
+ errors.append('adelaide-data: Health Science Diploma pathway must remain Pharmacy Year 1 with 4 courses credit')
 adelaide_csat=next((x for x in D['qualifications'] if x['program_id']=='adelaide-bpharm-hons' and x['qualification']=='csat'),None)
 if not adelaide_csat or adelaide_csat['score']['value']!=340:
  errors.append('adelaide-data: current official South Korea CSAT must be 340')
