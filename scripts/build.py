@@ -245,7 +245,8 @@ def routecards(rs):
             fields=[('진학 가능',fv(r['availability'])),('기간 / 시작월',fv(r['duration'])+'<br>'+fv(r['intake'])),('약대 진급조건',fv(r['progression'])),('입학 학력',fv(r['qualification'])),('영어',fv(r['english']))]
         if r.get('pathway_fee'):fields.append(('준비과정 학비',fv(r['pathway_fee'],money)))
         if isinstance(r['credit']['value'],(int,float)) and r['credit']['value']>0:fields.insert(1,('약대 인정학점',fv(r['credit'])+(' CP' if r['program_id'].startswith('griffith') else ' credits')))
-        html+=f'<article class="route-detail"><span class="pill-label">{ROUTE[r["type"]]}</span><h3>{E(r["title"])}</h3><dl>'+''.join(f'<dt>{k}</dt><dd>{v}</dd>' for k,v in fields)+f'</dl><p>{E(r["note"])}</p></article>'
+        note_html=f'<p>{E(r["note"])}</p>' if r.get('note') else ''
+        html+=f'<article class="route-detail"><span class="pill-label">{ROUTE[r["type"]]}</span><h3>{E(r["title"])}</h3><dl>'+''.join(f'<dt>{k}</dt><dd>{v}</dd>' for k,v in fields)+f'</dl>{note_html}</article>'
     return '<div class="route-cards">'+html+'</div>'
 def pathway_status(uid,t):
     rr=[r for r in university_routes(uid) if r['type']==t]
@@ -273,7 +274,8 @@ def scholarcards(ss):
         fields=[('장학금',fv(s['amount'],lambda _:amount)),('심사방식',ASSESS[s['assessment']])]
         optional=[('자동심사',s['automatic_assessment']),('별도 신청',s['separate_application']),('경쟁 선발',s['competitive']),('적용 기간',s['duration']),('성적 기준',s['academic_threshold']),('유지 조건',s['renewal_condition']),('한국 학생',s['country_eligibility']),('약대 적용',s['pharmacy_eligible']),('선발 인원',s['number_available']),('제외 과정',s['course_exclusion'])]
         fields += [(label,fv(f)) for label,f in optional if f.get('value') is not None]
-        out+=f'<article class="route-detail scholarship-card"><span class="pill-label">{ASSESS[s["assessment"]]}</span><h3>{E(s["name"])}</h3><dl>'+''.join(f'<dt>{k}</dt><dd>{v}</dd>' for k,v in fields)+f'</dl><p>{E(s["note"])}</p></article>'
+        note_html=f'<p>{E(s["note"])}</p>' if s.get('note') else ''
+        out+=f'<article class="route-detail scholarship-card"><span class="pill-label">{ASSESS[s["assessment"]]}</span><h3>{E(s["name"])}</h3><dl>'+''.join(f'<dt>{k}</dt><dd>{v}</dd>' for k,v in fields)+f'</dl>{note_html}</article>'
     return '<div class="route-cards">'+out+'</div>'
 def housingcards(hh):
     out=''
@@ -286,7 +288,8 @@ def housingcards(hh):
         if h['meals']['value'] is not None:fields.append(('식사 포함',fv(h['meals'])))
         if h['campus_distance']['value'] is not None:fields.append(('위치',fv(h['campus_distance'])))
         content=facts(fields) if fields else ''
-        out+=f'<article class="route-detail housing-card"><h3>{E(h["name"])}</h3>{content}<p>{E(h["note"])}</p></article>'
+        note_html=f'<p>{E(h["note"])}</p>' if h.get('note') else ''
+        out+=f'<article class="route-detail housing-card"><h3>{E(h["name"])}</h3>{content}{note_html}</article>'
     return '<div class="route-cards">'+out+'</div>'
 def structure(pid):
     p=P[pid];r=one('professional_registration',pid)
