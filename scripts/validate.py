@@ -77,6 +77,50 @@ for slug,(route_count,phrases) in compact_batch.items():
  for old_heading in ['<h2>Direct 입학조건</h2>','<h2>졸업 후 485·지역</h2>','<h2>호주 약사등록</h2>','<h2>자주 묻는 질문</h2>']:
   if old_heading in txt:errors.append(f'{slug}: old duplicate section remains {old_heading}')
  if 'id="cost-form"' in txt:errors.append(f'{slug}: per-school cost calculator should not render')
+compact_batch_2={
+ 'uq-pharmacy':(3,['UQ 약대 과정 구조','입학방법 3가지','ATAR 80 · IB 30.25','수능 260 · 검정고시 65% · 고2 GPA 3(미)','수능 270 · 검정고시 70% · 고3 GPA 4(우)','A$60,952 / 년','A$36,280','A$24,940','경쟁선발 · 25%']),
+ 'adelaide-pharmacy':(1,['Adelaide 약대 과정 구조','수능 340 · IB 30 · A-Level 10 · SAT 1220 · OSSD 80%','IELTS 6.5 · 각 6.0','4년 과정·5년 Master 연계','자동심사 · 15%','A$320 / 주','A$380 / 주']),
+ 'latrobe-pharmacy':(2,['La Trobe 약대 과정 구조','Bendigo','별도 과학 선수과목 없음','Foundation → 약대 1학년','IELTS 6.5 · 각 6.5','Health Innovation','30%','A$255 / 주부터']),
+ 'qut-pharmacy':(3,['QUT 약대 과정 구조','Selection Rank 76','선행지식','12개월 Foundation → 약대 1학년','6개월 Intensive → 약대 1학년','A$46,200 / 년','자동심사 · 25%','A$25,536','A$12,768'])
+}
+for slug,(route_count,phrases) in compact_batch_2.items():
+ page=R/f'dist/universities/{slug}/index.html'
+ if not page.exists():
+  errors.append(f'{slug}: compact batch 2 page missing')
+  continue
+ txt=page.read_text()
+ for phrase in phrases:
+  if phrase not in txt:errors.append(f'{slug}: compact batch 2 missing {phrase}')
+ for label in ['입학조건','영어','입학시기']:
+  if txt.count(f'<small>{label}</small>')<route_count:
+   errors.append(f'{slug}: pathway cards not standardized for {label}')
+ routes_match=re.search(r'<section class="article-section" id="routes">.*?</section>',txt,re.S)
+ if routes_match:
+  rt=routes_match.group(0)
+  if '<p class="monash-route-meta">' in rt:errors.append(f'{slug}: pathway card secondary microcopy remains')
+  if re.search(r'<div class="route-criteria">.*?<span>',rt,re.S):errors.append(f'{slug}: pathway criteria still contains secondary small copy')
+  for clutter in ['(2026 공식 참고)','(국제학력은 2026 공식 참고)']:
+   if clutter in rt:errors.append(f'{slug}: source-year card clutter remains {clutter}')
+ for old_heading in ['<h2>Direct 입학조건</h2>','<h2>졸업 후 485·지역</h2>','<h2>호주 약사등록</h2>','<h2>자주 묻는 질문</h2>']:
+  if old_heading in txt:errors.append(f'{slug}: old duplicate section remains {old_heading}')
+ if 'id="cost-form"' in txt:errors.append(f'{slug}: per-school cost calculator should not render')
+
+adelaide_csat=next((x for x in D['qualifications'] if x['program_id']=='adelaide-bpharm-hons' and x['qualification']=='csat'),None)
+if not adelaide_csat or adelaide_csat['score']['value']!=340:
+ errors.append('adelaide-data: current official South Korea CSAT must be 340')
+uq_std=next((x for x in D['entry_routes'] if x['id']=='uq-standard-2027-entry'),None)
+uq_acc=next((x for x in D['entry_routes'] if x['id']=='uq-accelerated'),None)
+if not uq_std or '수능 260' not in str(uq_std['qualification']['value']) or uq_std['english']['value']!='IELTS 5.5 · 각 5.0':
+ errors.append('uq-data: Standard Foundation Korea entry/English missing')
+if not uq_acc or '수능 270' not in str(uq_acc['qualification']['value']) or 'Writing 6.0' not in str(uq_acc['english']['value']):
+ errors.append('uq-data: Accelerated Foundation Korea entry/English missing')
+latrobe_foundation=next((x for x in D['entry_routes'] if x['id']=='latrobe-foundation'),None)
+if not latrobe_foundation or latrobe_foundation['entry_year']['value']!=1 or 'Year 11' not in str(latrobe_foundation['qualification']['value']):
+ errors.append('latrobe-data: Foundation to Pharmacy Year 1 route missing')
+qut_direct=next((x for x in D['entry_routes'] if x['id']=='qut-bpharm-hons-direct'),None)
+if not qut_direct or 'Selection Rank 76' not in str(qut_direct['qualification']['value']) or 'assumed knowledge' not in str(qut_direct['qualification']['value']):
+ errors.append('qut-data: Rank 76 / assumed knowledge distinction missing')
+
 griffith_page=R/'dist/universities/griffith-pharmacy/index.html'
 if griffith_page.exists():
  gt=griffith_page.read_text()
