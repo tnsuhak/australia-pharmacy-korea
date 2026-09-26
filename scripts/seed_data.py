@@ -101,6 +101,7 @@ source('qut-college-merit-current','QUT College Merit Scholarship · South Korea
 source('qut-fee-2027','QUT · Bachelor of Pharmacy (Honours) 2027 fee','https://www.qut.edu.au/courses/bachelor-of-pharmacy-honours',2027,'official_course')
 source('newcastle-fee-2027','University of Newcastle · 2027 International Student Degree Guide · Pharmacy','https://www.newcastle.edu.au/__data/assets/pdf_file/0020/1102565/2025-1079-International-Prospectus-2027-ROW_V27.pdf',2027,'official_guide')
 source('monash-fee-2027','Monash · Pharmacy P6007 2027 fee','https://www.monash.edu/study/courses/find-a-course/pharmacy-p6007',2027,'official_course')
+source('monash-curriculum-2027','Monash · Undergraduate Pharmacy for International Students · 2027 curriculum','https://www.monash.edu/pharm/future/courses/undergraduate-pharmacy-international',2027,'official_course')
 source('jcu-fee-2026','JCU · Bachelor of Pharmacy (Honours) 2026 fee','https://www.jcu.edu.au/courses/bachelor-of-pharmacy-honours',2026,'official_course')
 source('unsw-fee-2026','UNSW · Pharmaceutical Medicine / Pharmacy 2026 fee','https://www.unsw.edu.au/study/undergraduate/bachelor-of-pharmaceutical-medicine-master-of-pharmacy',2026,'official_course')
 source('uwa-fee-2026','UWA · 2026 international undergraduate fees CM039','https://www.fees.uwa.edu.au/Browse/BrowseCourses?feeType=INTUG&feeYear=2026',2026,'official_fee')
