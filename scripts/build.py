@@ -356,10 +356,32 @@ for u in D['universities']:
     if u['id']=='monash':allids|={'monash-curriculum-2027'}
     if u['id']=='monash':
         monash_overview='''<div class="monash-snapshot"><p class="lead"><strong>4년까지 공부하면 BPharm(Hons), 5년차까지 마치면 Doctor of Pharmacy입니다.</strong></p><p>5년차에는 유급 supervised practice와 Intern Training Program이 포함됩니다.</p><div class="monash-keyline"><span>4년 학사 Exit</span><span>5년 PharmD</span><span>5년차 유급 실무훈련</span></div></div>'''
+        monash_direct=next(x for x in rs if x['id']=='monash-bpharm-hons-direct')
+        monash_foundation=next(x for x in rs if x['id']=='monash-foundation')
+        monash_grad=next(x for x in rs if x['id']=='monash-ge')
+        mds=monash_direct['direct_scores']
         monash_routes='''<div class="monash-route-grid">
-<article><span class="route-label">DIRECT</span><h3>고졸 → 약대 1학년</h3><ul><li><strong>2월 입학</strong></li><li>Chemistry + Mathematics 필수</li><li>IELTS 6.5 · 각 6.0</li><li>2027 국제학력 환산점수 확인 중</li></ul></article>
-<article><span class="route-label">FOUNDATION</span><h3>Foundation → 약대 1학년</h3><ul><li><strong>약 12개월 · 2월/8월 시작</strong></li><li>현재 안내: Foundation 75%</li><li>English 65% · Maths/Chemistry 50%</li><li>2027 문서의 과정코드 차이로 진급점수 최종확인</li></ul></article>
-<article><span class="route-label">GRADUATE ENTRY</span><h3>관련 학사 → 약대 3학년</h3><ul><li><strong>최근 10년 이내 관련 학사</strong></li><li>평균 70% 이상</li><li>대학 수준 Human Physiology</li><li>Summer intensive 후 3학년 진입</li></ul></article>
+<article class="monash-direct-card"><span class="route-label">DIRECT</span><h3>고졸 → 약대 1학년</h3>
+<div class="monash-score-grid">
+<span><small>수능</small><strong>'''+E(value(mds['csat']))+'''</strong></span>
+<span><small>한국 내신</small><strong>'''+E(value(mds['korean_high_school']))+'''%</strong></span>
+<span><small>A-Level</small><strong>'''+E(value(mds['alevel']))+'''</strong></span>
+<span><small>IB</small><strong>'''+E(value(mds['ib']))+'''</strong></span>
+<span><small>AP</small><strong>'''+E(value(mds['ap']))+'''</strong></span>
+<span><small>SAT</small><strong>'''+E(value(mds['sat']))+'''</strong></span>
+</div>
+<ul><li>Maths + Chemistry 필수</li><li>IELTS 6.5 · 각 6.0</li><li><strong>2월 입학</strong></li></ul>
+<p class="monash-route-meta">수능은 표준점수 상위 4과목 합 · AP는 최고 2개 시험 합산 · 2027 국제 가이드 Pharmacy 기준</p>
+</article>
+<article><span class="route-label">FOUNDATION</span><h3>Foundation → 약대 1학년</h3>
+<div class="monash-path-step"><small>Foundation 입학</small><strong>한국 고교 60% 또는 수능 260</strong><span>IELTS 5.5 · 각 5.0</span></div>
+<div class="monash-path-arrow">↓</div>
+<div class="monash-path-step"><small>P6007 진급</small><strong>Foundation 75%</strong><span>English 65% · Maths 50% · Chemistry 50%</span></div>
+<p class="monash-route-meta">Standard 약 12개월 · 2월/8월 시작</p>
+</article>
+<article><span class="route-label">GRADUATE ENTRY</span><h3>관련 학사 → 약대 3학년</h3>
+<ul><li><strong>관련 학사 · 최근 10년 이내</strong></li><li>학사 평균 70%+</li><li>Chemistry + Higher-level Maths</li><li>대학 수준 Human Physiology 최소 1과목</li><li>영어수업 학사 또는 IELTS 6.5 · 각 6.0</li><li>Summer intensive 후 3학년 진입</li></ul>
+</article>
 </div>'''
         monash_curriculum='''<div class="monash-curriculum-grid">
 <article><span class="year">1학년</span><h3>약학 기초 + 임상적 사고 시작</h3><p>의약품과 인체를 이해하는 기초를 쌓고, 환자 중심 치료와 임상적 의사결정의 기본 틀을 배웁니다.</p></article>
