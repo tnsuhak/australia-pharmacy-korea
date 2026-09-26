@@ -1,0 +1,40 @@
+{
+  "site_name": "호주약대 가이드",
+  "brand": "TNS",
+  "language": "ko",
+  "academic_year": 2027,
+  "production_url": null,
+  "production_approved": false,
+  "channels": [
+    {
+      "id": "kakao",
+      "label": "카카오톡 상담",
+      "detail": "내 조건으로 1:1 상담",
+      "url": "https://open.kakao.com/o/slehLvKi",
+      "source": "tnsuhak/xjtlu-korea main index.html"
+    },
+    {
+      "id": "phone",
+      "label": "전화 상담",
+      "detail": "02-3288-1733",
+      "url": "tel:0232881733",
+      "source": "tnsuhak/xjtlu-korea main index.html"
+    },
+    {
+      "id": "australia-chat",
+      "label": "호주 오픈채팅",
+      "detail": "1,600명+ 참여중",
+      "url": "https://open.kakao.com/o/gvHG0TYf",
+      "source": "TNS Australia Kakao Open Chat · user-confirmed",
+      "last_verified": "2026-09-26",
+      "participant_count_floor": 1600
+    },
+    {
+      "id": "cafe",
+      "label": "네이버 카페",
+      "detail": "TNS 유학 커뮤니티",
+      "url": "https://cafe.naver.com/tnsuhak.cafe",
+      "source": "tnsuhak/xjtlu-korea main index.html"
+    }
+  ]
+}

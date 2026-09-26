@@ -1,0 +1,18 @@
+[build]
+  command = "python3 scripts/build.py"
+  publish = "dist"
+
+[build.environment]
+  PYTHON_VERSION = "3.11"
+
+[context.deploy-preview.environment]
+  CONTEXT = "deploy-preview"
+
+[context.branch-deploy.environment]
+  CONTEXT = "branch-deploy"
+
+[context.production.environment]
+  CONTEXT = "production"
+
+# Production builds fail until user approval AND data/site.json approval are set.
+# Do not change this gate to obtain a deploy preview.

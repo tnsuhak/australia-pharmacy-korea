@@ -1,0 +1,208 @@
+{
+  "verified_date": "2026-09-26",
+  "supervised_practice": {
+    "total_hours": 1575,
+    "registration_standard_hours": 1824,
+    "exam_eligibility_percent": 75,
+    "exam_eligibility_hours": 1181,
+    "max_hours_per_four_weeks": 180,
+    "provisional_registration_months": 12,
+    "current_basis": "Pharmacy Board internship variation currently maintained pending a revised supervised-practice registration standard",
+    "standard_conflict_note": "The underlying supervised-practice registration standard and some Board forms still display 1,824 hours. Current Board internship guidance maintains the reduced 1,575-hour requirement until a revised standard is implemented.",
+    "waived_requirements": [
+      "minimum 80 supervised-practice hours in any four consecutive calendar weeks",
+      "minimum 152 hours under an individual approved preceptor"
+    ]
+  },
+  "written_exam": {
+    "provider": "Australian Pharmacy Council (APC)",
+    "questions": 75,
+    "duration_minutes": 120,
+    "delivery": "컴퓨터 기반 · 원칙적으로 승인된 시험센터에서 대면 응시",
+    "eligibility": "Provisional registration + 시험일까지 승인된 supervised practice 75% 완료",
+    "fee_aud": 790,
+    "sessions_per_year": 3,
+    "references": [
+      "Australian Medicines Handbook (AMH)",
+      "Australian Pharmaceutical Formulary and Handbook (APF)"
+    ],
+    "question_types": [
+      "객관식(MCQ)",
+      "계산형 빈칸 입력(Fill in the blank)"
+    ],
+    "scored_percent": 90,
+    "unscored_percent": 10,
+    "result": "합격 기준 충족 여부만 통지 · raw score/percentage 비공개",
+    "content": [
+      {
+        "label": "법·규정에 맞는 약무",
+        "percent": 8
+      },
+      {
+        "label": "환자 중심 medication management 접근",
+        "percent": 20
+      },
+      {
+        "label": "약물치료 계획 실행",
+        "percent": 28
+      },
+      {
+        "label": "약물치료 모니터링·평가",
+        "percent": 28
+      },
+      {
+        "label": "조제·제제(Compounding)",
+        "percent": 8
+      },
+      {
+        "label": "건강증진",
+        "percent": 8
+      }
+    ]
+  },
+  "oral_exam": {
+    "provider": "Pharmacy Board of Australia / Ahpra",
+    "fee_aud": 489,
+    "sessions_per_year": 3,
+    "eligibility": "시험기간 첫날까지 승인된 supervised practice 75% 완료",
+    "parts": [
+      {
+        "part": "A",
+        "minutes": 10,
+        "title": "Primary Healthcare",
+        "format": "환자 역할극",
+        "references": "불가",
+        "focus": "증상 파악 · OTC/생활관리 · 의뢰 판단 · 환자 설명"
+      },
+      {
+        "part": "B",
+        "minutes": 5,
+        "title": "Legal & Ethical Practice",
+        "format": "상황 설명형",
+        "references": "불가",
+        "focus": "법·윤리 문제 파악 · 최종 조치 · 재발 방지"
+      },
+      {
+        "part": "C",
+        "minutes": 20,
+        "title": "Problem Solving & Communication",
+        "format": "환자/처방자 역할극",
+        "references": "오프라인/종이만 가능",
+        "focus": "처방 문제 발견 · 정보수집 · 임상 판단 · 커뮤니케이션"
+      }
+    ],
+    "result": "Board 또는 위임자가 결과를 ratify한 뒤 이메일 통지 · 불합격자는 feedback meeting 안내"
+  },
+  "english": {
+    "applies_at": "호주에서 처음 등록할 때 적용. Provisional registration에서 이미 충족했다면 General registration 전환 때 다시 충족할 필요는 없음",
+    "effective_date": "2026-04-23",
+    "tests": [
+      {
+        "test": "IELTS Academic",
+        "overall": "7.0",
+        "listening": "7.0",
+        "reading": "7.0",
+        "writing": "6.5",
+        "speaking": "7.0"
+      },
+      {
+        "test": "PTE Academic",
+        "overall": "63",
+        "listening": "58",
+        "reading": "59",
+        "writing": "60",
+        "speaking": "76"
+      },
+      {
+        "test": "TOEFL iBT",
+        "overall": "91",
+        "listening": "22",
+        "reading": "22",
+        "writing": "23",
+        "speaking": "24"
+      },
+      {
+        "test": "OET",
+        "overall": "—",
+        "listening": "350",
+        "reading": "360",
+        "writing": "350",
+        "speaking": "360"
+      },
+      {
+        "test": "Cambridge C1 Advanced",
+        "overall": "178",
+        "listening": "175",
+        "reading": "179",
+        "writing": "180",
+        "speaking": "194"
+      },
+      {
+        "test": "Cambridge C2 Proficiency",
+        "overall": "185",
+        "listening": "185",
+        "reading": "185",
+        "writing": "176",
+        "speaking": "185"
+      }
+    ],
+    "attempts": "한 번 또는 12개월 안 최대 두 번의 시험 결과를 조합할 수 있으나 서로 다른 시험기관 결과는 혼합할 수 없음",
+    "validity": "시험 결과는 일반적으로 등록 신청 전 2년 이내. 연속 학업·근무 등 공식 예외 규정이 있음",
+    "note": "대학 입학 영어조건과 Ahpra 등록 영어기준은 별도입니다. 모든 지원자가 영어시험을 다시 치르는 것은 아니며, Ahpra의 교육·시험 등 적용 가능한 충족 경로를 본인 학력에 따라 확인해야 합니다."
+  },
+  "fees": {
+    "provisional_application_aud": 162,
+    "provisional_registration_aud": 242,
+    "provisional_registration_nsw_aud": 248,
+    "general_application_aud": 242,
+    "general_registration_aud": 484,
+    "general_registration_nsw_aud": 583,
+    "exam_total_aud": 1279,
+    "national_regulatory_exam_total_aud": 2409,
+    "note": "현재 공개 2025/26 양식·수수료 기준. ITP, 영어시험, 교재, 갱신·재응시 비용은 제외하며 2027 금액으로 확정 표시하지 않음",
+    "nsw_regulatory_exam_total_aud": 2514,
+    "fee_schedule_label": "현재 공개 2025/26 수수료"
+  },
+  "sources": [
+    {
+      "title": "Australian Pharmacy Council · Intern Written Exam Guide and Sample Content",
+      "url": "https://www.pharmacycouncil.org.au/resources/intern-written-exam-guide-and-sample-content/"
+    },
+    {
+      "title": "Australian Pharmacy Council · Skills assessment fees",
+      "url": "https://www.pharmacycouncil.org.au/pharmacist/skills-assessment-fees/"
+    },
+    {
+      "title": "Australian Pharmacy Council · Organising supervised practice",
+      "url": "https://www.pharmacycouncil.org.au/pharmacist/How-to-become-a-pharmacist-in-Australia/Organising-supervised-practice/"
+    },
+    {
+      "title": "Pharmacy Board of Australia · Registration Examination",
+      "url": "https://www.pharmacyboard.gov.au/Registration/Registration-Examination"
+    },
+    {
+      "title": "Pharmacy Board of Australia · Internships",
+      "url": "https://www.pharmacyboard.gov.au/Registration/Internships.aspx"
+    },
+    {
+      "title": "Ahpra · English language skills registration standard",
+      "url": "https://www.ahpra.gov.au/Registration/Registration-Standards/English-language-skills/English-language-skills-registration-standard"
+    },
+    {
+      "title": "Ahpra · Accepted English language tests",
+      "url": "https://www.ahpra.gov.au/Registration/Registration-Standards/English-language-skills/Accepted-English-language-tests"
+    },
+    {
+      "title": "Pharmacy Board of Australia · April 2024 newsletter (internship modifications)",
+      "url": "https://www.pharmacyboard.gov.au/News/Newsletters/April-2024"
+    },
+    {
+      "title": "Pharmacy Board of Australia · Registration fees",
+      "url": "https://www.pharmacyboard.gov.au/Registration/Fees.aspx"
+    },
+    {
+      "title": "Pharmacy Board of Australia · Supervised practice registration standard",
+      "url": "https://www.pharmacyboard.gov.au/Registration-Standards/Supervised-practice-arrangements.aspx"
+    }
+  ]
+}

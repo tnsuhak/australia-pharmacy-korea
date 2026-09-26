@@ -1,0 +1,7 @@
+dist/
+offline-preview/
+__pycache__/
+node_modules/
+.netlify/
+.env*
+*.zip
