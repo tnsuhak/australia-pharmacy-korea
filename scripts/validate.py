@@ -334,7 +334,7 @@ if not registration_page.exists():
  errors.append('pharmacist-registration: page missing')
 else:
  rt=registration_page.read_text()
- for phrase in ['30초만에 이해하는 호주 약사 되는 과정','호주 약대 졸업','인턴약사로 등록','인턴 실무 + ITP + 시험','정식 약사등록','내가 다닌 약대에 따라 마지막 단계가 달라집니다','몇 년짜리 약대인가?','호주 약대 졸업 후, 어떻게 약사가 되나요?','1,824시간','1,368시간','75문항','120분','3파트 · 35분','A$1,279','Provisional registration','Intern Training Program','Intern Written Exam','Oral Exam (practice)','Primary Healthcare','Legal &amp; Ethical Practice','Problem Solving &amp; Communication','IELTS 7.0','Speaking 76','약 A$2,409','현재 APC 2026 가이드는 고정 raw percentage를 공개하지 않고 scaled standard']:
+ for phrase in ['호주 약대 졸업 후, 정식 약사까지 얼마나 걸리나요?','약대 3~5년','인턴 약 1년','1,824시간','1,368시간','시험 2개','Written 2시간 + Oral 35분','75문항','120분','3파트','35분','A$1,279','약 A$2,409','General Registration','3년 약대','대략 4년+','4년 약대','대략 5년+','IELTS 7.0','Writing 6.5']:
   if phrase not in rt:errors.append(f'pharmacist-registration: missing {phrase}')
  if '합격점 65%' in rt:
   errors.append('pharmacist-registration: obsolete fixed 65% pass mark rendered as current')
@@ -352,6 +352,7 @@ if not ielts or ielts['overall']!='7.0' or ielts['writing']!='6.5':
  errors.append('pharmacist-registration-data: current IELTS scores wrong')
 if REG['fees']['exam_total_aud'] != REG['written_exam']['fee_aud'] + REG['oral_exam']['fee_aud']:
  errors.append('pharmacist-registration-data: exam fee total mismatch')
+
 korea_page=R/'dist/korea-pharmacist/index.html'
 if not korea_page.exists():
  errors.append('korea-pharmacist: page missing')
