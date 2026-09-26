@@ -360,6 +360,24 @@ for u in D['universities']:
 <div class="fact-tile"><small>영어</small><strong>'''+E(english_main)+'''</strong></div>
 <div class="fact-tile"><small>장학금</small><strong>'''+E(scholar_main)+'''</strong><span class="fact-note">'''+E(scholar_note)+'''</span></div>
 </div>'''
+    elif u['id'] in ['uq','adelaide','latrobe','qut']:
+        if u['id']=='uq':
+            hero_duration='2월 4년 · 7월 3.5년'; hero_intake='2월 · 7월'; hero_english='IELTS 6.5 · 각 6.0'; hero_scholar='경쟁선발 · 25%'
+        elif u['id']=='adelaide':
+            hero_duration='4년 BPharm(Hons)'; hero_intake='2월'; hero_english='IELTS 6.5 · 각 6.0'; hero_scholar='자동심사 · 15%'
+        elif u['id']=='latrobe':
+            hero_duration='4년'; hero_intake='3월'; hero_english='IELTS 6.5 · 각 6.5'; hero_scholar='Health Innovation · 30%'
+        else:
+            hero_duration='4년'; hero_intake='2월'; hero_english='IELTS 6.5 · 각 6.0'; hero_scholar='자동심사 · 25%'
+        hero_fee=money(t['annual']) if t['annual'].get('source_year')==2027 and t['annual'].get('value') is not None else '2027 확인 중'
+        extra='''<div class="facts-grid monash-hero-facts">
+<div class="fact-tile"><small>과정</small><strong>'''+E(hero_duration)+'''</strong></div>
+<div class="fact-tile"><small>캠퍼스</small><strong>'''+E(value(u['campus']))+'''</strong></div>
+<div class="fact-tile"><small>입학</small><strong>'''+E(hero_intake)+'''</strong></div>
+<div class="fact-tile"><small>2027 국제학생 학비</small><strong>'''+E(hero_fee)+'''</strong></div>
+<div class="fact-tile"><small>영어</small><strong>'''+E(hero_english)+'''</strong></div>
+<div class="fact-tile"><small>장학금</small><strong>'''+E(hero_scholar)+'''</strong></div>
+</div>'''
     body=pagehero(E(u['name_ko'])+' 약대',E(u['name'])+' · '+E(value(p['name'])),u['name_ko'],extra)
     intro='<p>'+E(p['editorial'])+'</p><div class="chips">'+''.join(f'<span class="chip">{E(h)}</span>' for h in p['highlights'])+'</div>'
     lens=p.get('decision_lens') or {}
@@ -549,6 +567,131 @@ for u in D['universities']:
             after='''<div class="monash-flow"><div><b>4년</b><strong>BPharm(Hons)</strong><span>학사 완료</span></div><i>↓</i><div><b>졸업 후</b><strong>등록 인턴십·ITP</strong><span>약사등록 요건 별도 이수</span></div><i>↓</i><div><b>호주 약사등록</b><strong>시험·심사 완료</strong><span>General Registration</span></div><i>↓</i><div><b>지역</b><strong>Gold Coast</strong><span>Regional Category 2</span></div></div><div class="section-link-list compact-links">'''+link('/pharmacist-registration/','호주 약사등록 방법 →')+link('/korea-pharmacist/','한국 약사면허 취득 방법 →')+'''</div>'''
             titles=('그리피스 약대 과정 구조','입학방법 3가지','4년 과정 한눈에 보기','학비·장학금·생활비','4년 과정과 졸업 후')
             seo=('2027 그리피스 약대 · Direct·Foundation·Diploma·20% 장학 | TNS','그리피스대학교 약대의 4년 과정, Direct 입학, Foundation→Diploma 경로, 1학년 Health Sciences Diploma→약대 2학년, 20% 국제학생 장학을 정리합니다.')
+        items=[('overview',titles[0],overview),('routes',titles[1],routes),('curriculum',titles[2],curriculum),('cost',titles[3],cost),('after',titles[4],after),('sources','자료 출처',sources(allids))]
+        register(purl(p),seo[0],seo[1],body+article(items,'compact-detail'))
+    elif u['id'] in ['uq','adelaide','latrobe','qut']:
+        uid=u['id']
+        if uid=='uq':
+            uq_std=next(x for x in rs if x['id']=='uq-standard-2027-entry')
+            uq_acc=next(x for x in rs if x['id']=='uq-accelerated')
+            uq_sch=next(x for x in ss if x['id']=='uq-excellence')
+            overview='''<div class="monash-snapshot"><p class="lead"><strong>2월 입학은 4년, 7월 입학은 약 3.5년에 BPharm(Hons)을 마치는 UQ 약대입니다.</strong></p><p>Dutton Park에서 공부하며, 별도로 2027년 신설 5년 PharmD 과정도 운영됩니다.</p><div class="monash-keyline"><span>2월 4년</span><span>7월 약 3.5년</span><span>Dutton Park</span></div></div><div class="monash-scholarship-note"><strong>별도 신설 과정</strong><span>5년 Pharmacy / Doctor of Pharmacy</span><p>기존 4년 BPharm(Hons)과 별도 과정입니다. 신설 PharmD의 인증·등록 상태는 별도로 확인합니다.</p></div>'''
+            routes='''<div class="monash-route-grid">
+<article><span class="route-label">DIRECT</span><h3>고졸 → 약대 1학년</h3><div class="route-criteria">
+<div><small>입학조건</small><strong>ATAR 80 · IB 30.25 · Mathematics + Chemistry 필수 · 해외학력은 UQ 환산</strong></div>
+<div><small>영어</small><strong>IELTS 6.5 · 각 6.0</strong></div>
+<div><small>입학시기</small><strong>2월 22일 · 7월 26일</strong></div>
+</div></article>
+<article><span class="route-label">STANDARD FOUNDATION</span><h3>Foundation → 약대 1학년</h3><div class="route-criteria">
+<div><small>입학조건</small><strong>수능 260 · 검정고시 65% · 고2 GPA 3(미)</strong></div>
+<div><small>영어</small><strong>IELTS 5.5 · 각 5.0</strong></div>
+<div><small>입학시기</small><strong>2026년 9월 시작 → 2027년 7월 약대</strong></div>
+</div></article>
+<article><span class="route-label">ACCELERATED FOUNDATION</span><h3>빠른 Foundation → 약대 1학년</h3><div class="route-criteria">
+<div><small>입학조건</small><strong>수능 270 · 검정고시 70% · 고3 GPA 4(우)</strong></div>
+<div><small>영어</small><strong>IELTS 6.0 · Writing 6.0 · 나머지 5.5</strong></div>
+<div><small>입학시기</small><strong>2027년 2월 15일 → 7월 약대</strong></div>
+</div></article>
+</div>'''
+            curriculum='''<div class="monash-curriculum-grid compact-three">
+<article><span class="year">기초</span><h3>Pharmaceutical sciences</h3><p>의약품의 작용과 제형, 인체와 질환을 이해하는 과학기초를 약학 실무와 함께 배웁니다.</p></article>
+<article><span class="year">임상</span><h3>Consultation · dispensing</h3><p>환자 상담, 조제, medicines management를 실제 사례와 연결해 학습합니다.</p></article>
+<article><span class="year">통합</span><h3>환자 중심 약료</h3><p>사회약학과 보건시스템, 다학제 협업을 포함해 실무 중심의 임상 의사결정 능력을 완성합니다.</p></article>
+</div>'''
+            cost='''<div class="monash-money-grid">
+<div><small>2027 국제학생 학비</small><strong>A$60,952 / 년</strong><span>16 units 기준</span></div>
+<div><small>국제학생 장학금</small><strong>경쟁선발 · 25%</strong><span>UQ International Excellence</span></div>
+<div><small>Standard Foundation</small><strong>A$36,280</strong><span>tuition fee</span></div>
+<div><small>Accelerated Foundation</small><strong>A$24,940</strong><span>tuition fee</span></div>
+</div><div class="section-link-list compact-links">'''+link('/tuition-scholarships/','호주 약대 전체 학비·생활비 비교 →')+'''</div>'''
+            after='''<div class="monash-flow"><div><b>본과</b><strong>BPharm(Hons)</strong><span>2월 4년 · 7월 약 3.5년</span></div><i>↓</i><div><b>졸업 후</b><strong>등록 인턴십</strong><span>학위 밖에서 진행</span></div><i>↓</i><div><b>등록요건</b><strong>시험·심사 완료</strong><span>Pharmacy Board 절차</span></div><i>↓</i><div><b>결과</b><strong>General Registration</strong><span>호주 약사등록</span></div></div><div class="section-link-list compact-links">'''+link('/pharmacist-registration/','호주 약사등록 방법 →')+link('/korea-pharmacist/','한국 약사면허 취득 방법 →')+'''</div>'''
+            titles=('UQ 약대 과정 구조','입학방법 3가지','4년 과정 한눈에 보기','학비·장학금·Foundation','졸업 후 약사등록')
+            seo=('2027 UQ 약대 · 4년·3.5년·Foundation·25% 장학 | TNS','퀸즐랜드대학교 약대의 2월 4년·7월 3.5년 과정, Direct·Standard·Accelerated Foundation, 2027 학비와 25% 장학을 정리합니다.')
+        elif uid=='adelaide':
+            ad_sch=next(x for x in ss if x['id']=='adelaide-merit')
+            overview='''<div class="monash-snapshot"><p class="lead"><strong>4년 BPharm(Hons)으로 졸업하거나, 5년 BPharm(Hons) + Master of Pharmacy 연계과정을 선택할 수 있습니다.</strong></p><p>4년 학사에는 임상·현장실습이 포함되고, 5년 연계과정은 마지막 Master 단계에서 supervised internship과 Intern Training Program을 통합합니다.</p><div class="monash-keyline"><span>4년 BPharm(Hons)</span><span>5년 Master 연계</span><span>Adelaide</span></div></div>'''
+            routes='''<div class="monash-route-grid compact-route-grid"><article class="full"><span class="route-label">DIRECT</span><h3>고졸 → 약대 1학년</h3><div class="route-criteria">
+<div><small>입학조건</small><strong>수능 340 · IB 30 · A-Level 10 · SAT 1220 · OSSD 80% · Biology/Chemistry/Physics 중 1과목</strong></div>
+<div><small>영어</small><strong>IELTS 6.5 · 각 6.0</strong></div>
+<div><small>입학시기</small><strong>2월</strong></div>
+</div></article></div>'''
+            curriculum='''<div class="monash-curriculum-grid compact-three">
+<article><span class="year">1~2학년</span><h3>약학·생명과학 기초</h3><p>의약품과 인체, 질환을 이해하는 기초과학을 바탕으로 약학 전문학습을 시작합니다.</p></article>
+<article><span class="year">3~4학년</span><h3>임상·Work Integrated Learning</h3><p>Community와 Hospital을 포함한 실제 약학 환경에서 실습하며 환자 중심 약료 역량을 강화합니다.</p></article>
+<article><span class="year">선택 5년차</span><h3>Master + Internship + ITP</h3><p>연계 Master of Pharmacy를 선택하면 supervised internship과 Intern Training Program을 Master 단계에서 함께 진행합니다.</p></article>
+</div>'''
+            cost='''<div class="monash-money-grid">
+<div><small>2027 국제학생 학비</small><strong>확인 중</strong><span>현재 공식 2026 학비 A$54,300</span></div>
+<div><small>Adelaide Merit</small><strong>자동심사 · 15%</strong><span>ATAR 75 또는 국제 동등성적</span></div>
+<div><small>Mattanya Shared House</small><strong>A$320 / 주</strong><span>2027 · 공과금 포함</span></div>
+<div><small>University Village</small><strong>A$380 / 주</strong><span>2027 · 공과금 포함</span></div>
+</div><div class="section-link-list compact-links">'''+link('/tuition-scholarships/','호주 약대 전체 학비·생활비 비교 →')+'''</div>'''
+            after='''<div class="monash-flow"><div><b>4년</b><strong>BPharm(Hons)</strong><span>학사과정 완료</span></div><i>↓</i><div><b>등록 경로</b><strong>졸업 후 인턴십 또는 5년차 Master</strong><span>Master는 supervised internship + ITP 통합</span></div><i>↓</i><div><b>등록요건</b><strong>시험·심사 완료</strong><span>Pharmacy Board 절차</span></div><i>↓</i><div><b>결과</b><strong>General Registration</strong><span>호주 약사등록</span></div></div><div class="section-link-list compact-links">'''+link('/pharmacist-registration/','호주 약사등록 방법 →')+link('/korea-pharmacist/','한국 약사면허 취득 방법 →')+'''</div>'''
+            titles=('Adelaide 약대 과정 구조','입학방법','4년 과정·5년 Master 연계','학비·장학금·생활비','졸업 후 약사등록')
+            seo=('2027 Adelaide 약대 · 수능340·4년·5년 Master·15% 장학 | TNS','Adelaide University 약대의 4년 BPharm(Hons), 5년 Master 연계, 수능 340 등 입학조건과 15% 자동심사 장학을 정리합니다.')
+        elif uid=='latrobe':
+            lt_health=next(x for x in ss if x['id']=='latrobe-health-innovation-30')
+            overview='''<div class="monash-snapshot"><p class="lead"><strong>Bendigo에서 공부하는 4년 BPharm(Hons)이며, Direct 입학에 별도 과학 선수과목을 요구하지 않습니다.</strong></p><p>La Trobe College Foundation을 거쳐 Bendigo 약대 1학년으로 진학할 수도 있고, 국제학생 대상 Health Innovation 30% 장학이 있습니다.</p><div class="monash-keyline"><span>Bendigo Regional</span><span>과학 선수과목 없음</span><span>30% Health Innovation</span></div></div>'''
+            routes='''<div class="monash-route-grid compact-route-grid two">
+<article><span class="route-label">DIRECT</span><h3>고졸 → 약대 1학년</h3><div class="route-criteria">
+<div><small>입학조건</small><strong>고교졸업 · 별도 과학 선수과목 없음 · 국제학력은 La Trobe 환산</strong></div>
+<div><small>영어</small><strong>IELTS 6.5 · 각 6.5</strong></div>
+<div><small>입학시기</small><strong>2027년 3월</strong></div>
+</div></article>
+<article><span class="route-label">FOUNDATION</span><h3>Foundation → 약대 1학년</h3><div class="route-criteria">
+<div><small>입학조건</small><strong>Year 11 동등학력 · 한국 학력은 La Trobe College 심사</strong></div>
+<div><small>영어</small><strong>IELTS 5.5 · 각 5.0</strong></div>
+<div><small>입학시기</small><strong>2월 · 6월</strong></div>
+</div></article>
+</div>'''
+            curriculum='''<div class="monash-curriculum-grid compact-three">
+<article><span class="year">기초</span><h3>Biochemistry · Pharmacology</h3><p>인체와 질환, 약물의 작용을 이해하는 기초과학과 약학 전문지식을 쌓습니다.</p></article>
+<article><span class="year">실무</span><h3>Training pharmacy + clinical placement</h3><p>교내 training pharmacy와 실제 임상환경을 오가며 조제·상담·환자케어를 연습합니다.</p></article>
+<article><span class="year">최종학년</span><h3>Honours · 실무 심화</h3><p>연구와 임상적 의사결정을 심화하고 졸업 후 약사등록 인턴십을 준비합니다.</p></article>
+</div>'''
+            cost='''<div class="monash-money-grid">
+<div><small>2027 국제학생 학비</small><strong>확인 중</strong><span>대학 최신 금액 발표 후 반영</span></div>
+<div><small>Health Innovation</small><strong>30%</strong><span>Minimum WAM 75+</span></div>
+<div><small>High Achiever</small><strong>20% · 25%</strong><span>입학성적 기준</span></div>
+<div><small>Bendigo 숙소</small><strong>A$255 / 주부터</strong><span>공과금 포함</span></div>
+</div><div class="section-link-list compact-links">'''+link('/tuition-scholarships/','호주 약대 전체 학비·생활비 비교 →')+'''</div>'''
+            after='''<div class="monash-flow"><div><b>4년</b><strong>BPharm(Hons)</strong><span>Bendigo 학사과정</span></div><i>↓</i><div><b>졸업 후</b><strong>1년 supervised internship</strong><span>등록용 실무훈련</span></div><i>↓</i><div><b>등록요건</b><strong>Pharmacy Board exams</strong><span>시험·심사 완료</span></div><i>↓</i><div><b>결과</b><strong>General Registration</strong><span>호주 약사등록</span></div></div><div class="section-link-list compact-links">'''+link('/pharmacist-registration/','호주 약사등록 방법 →')+link('/korea-pharmacist/','한국 약사면허 취득 방법 →')+'''</div>'''
+            titles=('La Trobe 약대 과정 구조','입학방법 2가지','4년 과정·실습','학비·장학금·생활비','졸업 후 약사등록')
+            seo=('2027 La Trobe 약대 · Bendigo·Foundation·30% 장학 | TNS','La Trobe 약대의 Bendigo 4년 과정, Direct·Foundation 입학, IELTS 6.5 각 6.5, Health Innovation 30% 장학을 정리합니다.')
+        else:
+            qut_sch=next(x for x in ss if x['id']=='qut-merit')
+            overview='''<div class="monash-snapshot"><p class="lead"><strong>Gardens Point에서 공부하는 4년 BPharm(Hons)이며, Chemistry와 Mathematics는 필수 prerequisite가 아니라 assumed knowledge입니다.</strong></p><p>Direct 외에 QUT College Standard Foundation과 6개월 Intensive Program을 통해 약대 1학년으로 진학할 수 있습니다.</p><div class="monash-keyline"><span>4년</span><span>수학·화학 assumed knowledge</span><span>Foundation 2종</span></div></div>'''
+            routes='''<div class="monash-route-grid">
+<article><span class="route-label">DIRECT</span><h3>고졸 → 약대 1학년</h3><div class="route-criteria">
+<div><small>입학조건</small><strong>Selection Rank 76 · Chemistry + Mathematical Methods/Specialist Mathematics는 선행지식</strong></div>
+<div><small>영어</small><strong>IELTS 6.5 · 각 6.0</strong></div>
+<div><small>입학시기</small><strong>2월</strong></div>
+</div></article>
+<article><span class="route-label">STANDARD FOUNDATION</span><h3>12개월 Foundation → 약대 1학년</h3><div class="route-criteria">
+<div><small>입학조건</small><strong>Year 11 또는 Year 12 동등학력 · 한국 학력은 QUT 심사</strong></div>
+<div><small>영어</small><strong>IELTS 5.5 · 각 5.0</strong></div>
+<div><small>입학시기</small><strong>2월 · 7월</strong></div>
+</div></article>
+<article><span class="route-label">INTENSIVE</span><h3>6개월 Intensive → 약대 1학년</h3><div class="route-criteria">
+<div><small>입학조건</small><strong>Year 12 동등학력 · Bachelor 입학기준에 거의 도달한 학생</strong></div>
+<div><small>영어</small><strong>IELTS 6.0 · 각 5.0</strong></div>
+<div><small>입학시기</small><strong>2월 · 7월</strong></div>
+</div></article>
+</div>'''
+            curriculum='''<div class="monash-curriculum-grid compact-three">
+<article><span class="year">1학년</span><h3>Science + Pharmacy foundations</h3><p>의약품과 인체과학을 배우며 실험실과 simulation 환경에서 약학의 기초를 익힙니다.</p></article>
+<article><span class="year">2학년부터</span><h3>Professional placement 시작</h3><p>Hospital·Community pharmacy와 다양한 보건환경에서 professional placement를 시작합니다.</p></article>
+<article><span class="year">Honours</span><h3>연구·리더십 역량</h3><p>최종 과정에서 연구능력과 임상적 의사결정을 심화해 약사 실무와 리더십을 준비합니다.</p></article>
+</div>'''
+            cost='''<div class="monash-money-grid">
+<div><small>2027 국제학생 학비</small><strong>A$46,200 / 년</strong><span>96 credit points 기준</span></div>
+<div><small>International Merit</small><strong>자동심사 · 25%</strong><span>학위 전체 기간</span></div>
+<div><small>Standard Foundation</small><strong>A$25,536</strong><span>2027 · 96 credit points</span></div>
+<div><small>Intensive Program</small><strong>A$12,768</strong><span>2027 · 48 credit points</span></div>
+</div><div class="section-link-list compact-links">'''+link('/tuition-scholarships/','호주 약대 전체 학비·생활비 비교 →')+'''</div>'''
+            after='''<div class="monash-flow"><div><b>4년</b><strong>BPharm(Hons)</strong><span>Gardens Point</span></div><i>↓</i><div><b>졸업 후</b><strong>등록 인턴십·ITP</strong><span>Pharmacy Board 요건</span></div><i>↓</i><div><b>등록요건</b><strong>시험·심사 완료</strong><span>필기·구술 등</span></div><i>↓</i><div><b>결과</b><strong>General Registration</strong><span>호주 약사등록</span></div></div><div class="section-link-list compact-links">'''+link('/pharmacist-registration/','호주 약사등록 방법 →')+link('/korea-pharmacist/','한국 약사면허 취득 방법 →')+'''</div>'''
+            titles=('QUT 약대 과정 구조','입학방법 3가지','4년 과정·실습','학비·장학금·Foundation','졸업 후 약사등록')
+            seo=('2027 QUT 약대 · Rank76·Foundation·25% 장학·학비 | TNS','QUT 약대의 4년 과정, Selection Rank 76, Standard·Intensive Foundation, 2027 학비 A$46,200과 25% 장학을 정리합니다.')
         items=[('overview',titles[0],overview),('routes',titles[1],routes),('curriculum',titles[2],curriculum),('cost',titles[3],cost),('after',titles[4],after),('sources','자료 출처',sources(allids))]
         register(purl(p),seo[0],seo[1],body+article(items,'compact-detail'))
     else:
