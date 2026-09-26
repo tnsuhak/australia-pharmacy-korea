@@ -60,8 +60,8 @@ for path in pages:
 compact_batch={
  'jcu-pharmacy':(1,['JCU 약대 과정 구조','904시간 Placement','ATAR / Rank 76','IELTS 7.0 · 각 6.5','2027년 2월','2026 A$31,710 참고','자동심사 · 25%','3년 커리큘럼·실습','호주 약사등록 방법 →']),
  'utas-pharmacy':(3,['UTas 약대 과정 구조','최소 400시간 PEP','수능 305','한국 고2 60%','한국 고2 65% + General Mathematics','2027년 2월 22일 · 6월 21일 · 10월 11일','A$61,267 / 년','자동심사 · 30%','3년 커리큘럼·실습']),
- 'curtin-pharmacy':(2,['커틴 약대 과정 구조','3년 9개월','Pharmacy Diploma → 약대 2학년','한국 고3 Rank 6 또는 수능 280/600','Stage 2 · 2월','A$44,900','자동심사 · 20%','Professional internship']),
- 'griffith-pharmacy':(2,['그리피스 약대 과정 구조','2027 Rank 76','수능 331','Diploma of Health Sciences → 약대 2학년','한국 고3 Rank 6 또는 수능 280','2027년 3월 1일 · 6월 27일 · 10월 5일','자동심사 · 20%','A$329.85 / 주부터'])
+ 'curtin-pharmacy':(2,['커틴 약대 과정 구조','3년 9개월','1학년 Diploma (Pharmacy) → 약대 2학년','한국 고3 Rank 6 또는 수능 280/600','Stage 2 · 2월','A$44,900','자동심사 · 20%','Professional internship']),
+ 'griffith-pharmacy':(2,['그리피스 약대 과정 구조','2027 Rank 76','수능 331','1학년 Diploma (Health Sciences) → 약대 2학년','한국 고3 Rank 6 또는 수능 280','2027년 3월 1일 · 6월 27일 · 10월 5일','자동심사 · 20%','A$329.85 / 주부터'])
 }
 for slug,(route_count,phrases) in compact_batch.items():
  page=R/f'dist/universities/{slug}/index.html'
