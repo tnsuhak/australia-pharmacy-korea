@@ -64,7 +64,8 @@ else:
  mt=monash_page.read_text()
  for phrase in ['모나쉬 약대 과정 구조','입학방법 3가지','수능','350','한국 내신','86%','A-Level','IB','AP','SAT','1290','한국 고교 60% 또는 수능 260','모나쉬 5년 PharmD 진급','Foundation 75%','English 65% · Maths 50% · Chemistry 50%','학사 평균 70%+','Higher-level Maths','Human Physiology','5년 커리큘럼 한눈에 보기','2~3학년','유급 실무훈련 + ITP','과정 전반의 핵심 역량','2027 국제학생 학비','A$63,640','일반 국제학생 Merit','A$15,000 / 년','Leadership','학비 100%','약대 전용 25%·50% 장학','2027 신설 PharmD 적용 확인 중','일반 신입생에게 확정 적용되는 장학금으로 표시하지 않습니다.','5년 과정과 졸업 후','4년 후 학사로 졸업 가능']:
   if phrase not in mt:errors.append(f'monash-page: compact pilot missing {phrase}')
- visible_mt=re.sub(r'(?:href|src)="[^"]*"', '', mt, flags=re.I)
+ visible_mt=re.sub(r'<script\b.*?</script>|<style\b.*?</style>', '', mt, flags=re.I|re.S)
+ visible_mt=re.sub(r'<[^>]+>', ' ', visible_mt)
  for code in ['P6007','P6001']:
   if code in visible_mt:errors.append(f'monash-page: internal course code leaked into student-facing visible copy {code}')
  if 'A$49,740' in mt:errors.append('monash-page: domestic full-fee incorrectly shown as international tuition')
