@@ -32,7 +32,19 @@ for path,p in pages.items():
  ds=[a['content'] for a in metas if a.get('name')=='description'];descriptions+=ds
  if len(ds)!=1:errors.append(f'{rel}: description missing/duplicate')
  if not any(a.get('name')=='robots' and 'noindex' in a.get('content','') for a in metas):errors.append(f'{rel}: preview indexing enabled')
- if not any(t=='link' and a.get('rel')=='canonical' for t,a in p.tags):errors.append(f'{rel}: missing canonical')
+ canonicals=[a.get('href') for t,a in p.tags if t=='link' and a.get('rel')=='canonical']
+ if len(canonicals)!=1:errors.append(f'{rel}: canonical missing/duplicate')
+ og={a.get('property'):a.get('content') for a in metas if a.get('property')}
+ for prop in ['og:title','og:description','og:url','og:image']:
+  if not og.get(prop):errors.append(f'{rel}: missing {prop}')
+ if not any(a.get('name')=='twitter:card' and a.get('content')=='summary_large_image' for a in metas):errors.append(f'{rel}: twitter card missing/wrong')
+ raw=path.read_text()
+ if 'type="application/ld+json"' not in raw:errors.append(f'{rel}: JSON-LD missing')
+ if rel=='index.html':
+  if '"@type": "WebSite"' not in raw:errors.append(f'{rel}: WebSite schema missing')
+ else:
+  if '"@type": "WebPage"' not in raw:errors.append(f'{rel}: WebPage schema missing')
+  if '"@type": "BreadcrumbList"' not in raw:errors.append(f'{rel}: Breadcrumb schema missing')
  for tag,a in p.tags:
   url=a.get('href') if tag in ['a','link'] else a.get('src') if tag=='script' else None
   if not url:continue
@@ -51,6 +63,21 @@ for name,seq in [('title',titles),('description',descriptions)]:
  if len(set(seq))!=len(seq):errors.append(f'duplicate {name}')
 if 'Disallow: /' not in (R/'dist/robots.txt').read_text():errors.append('preview robots is not blocked')
 if 'noindex' not in (R/'dist/_headers').read_text():errors.append('preview HTTP noindex missing')
+sitemap_path=R/'dist/sitemap.xml'
+if not sitemap_path.exists():
+ errors.append('sitemap.xml missing')
+else:
+ sitemap=sitemap_path.read_text()
+ expected=[]
+ for path,p in pages.items():
+  rel=str(path.relative_to(R/'dist'))
+  if rel=='404/index.html':continue
+  canonicals=[a.get('href') for t,a in p.tags if t=='link' and a.get('rel')=='canonical']
+  if len(canonicals)==1:expected.append(canonicals[0])
+ if sitemap.count('<loc>')!=len(expected):errors.append(f'sitemap URL count mismatch: {sitemap.count("<loc>")} vs {len(expected)}')
+ for canonical in expected:
+  if sitemap.count(f'<loc>{canonical}</loc>')!=1:errors.append(f'sitemap canonical missing/duplicate: {canonical}')
+ if '/404/' in sitemap:errors.append('404 page must not be in sitemap')
 if not (R/'assets/og-image.png').exists():errors.append('OG raster asset missing')
 public_copy_banned=['자동판정','legacy P6001','live page','승격하지','자료를 대조 중']
 for path in pages:
