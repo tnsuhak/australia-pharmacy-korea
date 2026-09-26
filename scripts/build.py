@@ -5,7 +5,7 @@ import json, os, re, shutil, sys
 from urllib.parse import urlparse
 
 ROOT=Path(__file__).resolve().parents[1]
-D=json.loads((ROOT/'data/catalog.json').read_text()); C=json.loads((ROOT/'data/site.json').read_text())
+D=json.loads((ROOT/'data/catalog.json').read_text()); C=json.loads((ROOT/'data/site.json').read_text()); K=json.loads((ROOT/'data/korea_pharmacist.json').read_text())
 U={u['id']:u for u in D['universities']}; P={p['id']:p for p in D['programs']}; S={s['id']:s for s in D['sources']}
 DATE=D['verified_date']; MODE=os.getenv('CONTEXT','deploy-preview')
 PRODUCTION=MODE=='production'
@@ -377,13 +377,59 @@ register('/tuition-scholarships/','2027 호주 약대 학비·장학금·숙소 
 reg_items=[('steps','호주 약사가 되는 순서','<p>대학 실습과 등록을 위한 supervised practice는 같은 항목이 아닙니다. 통합학위에서는 아래 일부 단계가 재학 중 진행될 수 있습니다.</p><ol class="timeline">'+''.join(f'<li><strong>{t}</strong>{d}</li>' for t,d in [('승인된 학위·교육요건 확인','APC 인증과 Pharmacy Board 승인 학위명·캠퍼스를 확인합니다.'),('Provisional registration','등록용 supervised practice 시작에 필요한 등록 및 실습 승인 절차를 확인합니다.'),('Supervised practice + Intern Training','인정되는 감독 실무와 accredited intern training을 이수합니다.'),('Written / Oral examinations','응시요건 충족 후 등록시험을 진행합니다. 학위만으로 시험이 면제된다고 가정하지 않습니다.'),('General registration','모든 교육·실무·시험·등록 적합성 요건을 충족한 후 일반등록을 신청합니다.')])+'</ol>'+callout('인턴십 시간·시험 시점·등록 영어점수는 시행 시점의 Pharmacy Board 기준을 따릅니다. 확인되지 않은 숫자는 넣지 않았습니다.',True)),('integrated','5년 과정도 인턴십 방식이 다릅니다',table([(link('/universities/monash-pharmacy/','Monash'),'4년 학사 Exit · 5년 통합','5년차 supervised practice / ITP 통합 · 등록시험·심사 별도'),(link('/universities/sydney-pharmacy/','Sydney'),'5년 BPharm(Hons) / MPharmPractice','실무·인턴 과정 포함 · 4년 후 학사 Exit'),(link('/universities/unsw-pharmacy/','UNSW'),'2027 PharmD 명칭 전환','졸업 후 인턴십 따로'),(link('/universities/uq-pharmacy/#uq-pharmd','UQ 신설 PharmD'),'기존 BPharm과 별도 5년 과정','인턴십 통합 설계 · APC/Board 승인 아직 미획득')],['과정','학위구조','등록 준비'],True)),('accreditation','APC 인증 상태','<p>APC의 2026년 7월 8일 목록을 기준으로 했습니다. ‘Accredited with conditions’도 인증 과정이며 조건과 갱신 시점이 붙어 있습니다.</p><p>UQ 신설 PharmD는 아직 승인 대기입니다. UNSW 새 PharmD와 Newcastle 인증 갱신도 최신 상태로 업데이트합니다.</p>'),('korea','한국 약사면허는 별도 절차','<p>호주 일반등록과 한국 약사면허는 다른 심사 체계입니다. 한국으로 돌아갈 계획이라면 입학 전에 대학 인정기준과 외국 면허·시험 요건을 따로 확인하세요.</p>'+link('/korea-pharmacist/','한국 약사면허 경로 →','btn text')+sources(['apc','apc-exam','board','monash','sydney-guide','unsw','uq-pharmd']))]
 register('/pharmacist-registration/','호주 약사 되는 과정 · 학위·인턴십·등록시험 | TNS','호주 약사등록의 학위, provisional registration, supervised practice, intern training, 시험과 general registration을 구분합니다.',pagehero('학위 취득부터 호주 약사등록까지','3년 학사, 4년 학사, 5년 통합학위가 등록 준비의 어느 단계까지 포함하는지 확인하세요.','호주 약사등록')+article(reg_items))
 
-korea_items=[('law','먼저 확인할 법적 요건','<p>2026년 9월 11일 시행 약사법 제3조는 외국 약학대학 졸업자의 경로에서 대학의 인정기준, 외국 약사면허, 약사예비시험과 약사국가시험 합격을 요구합니다. 호주 약대를 졸업했다는 사실만으로 한국 응시자격을 확정할 수 없습니다.</p>'),('checks','입학 전 체크 순서','<ol class="timeline"><li><strong>정확한 대학·학위·캠퍼스 특정</strong>학교 이름뿐 아니라 입학연도, 최종 학위명, 실제 교육과정과 이수 방식을 준비합니다.</li><li><strong>외국대학 인정기준·심사 확인</strong>보건복지부 고시와 국시원의 해당 절차에 따라 인정 여부를 확인합니다.</li><li><strong>호주 현지 약사면허 취득 경로 확인</strong>학위 후 필요한 인턴십·시험·등록을 봅니다.</li><li><strong>예비시험·국가시험 응시자격 확인</strong>해당 연도 서류, 한국어 요건 등 세부 절차를 국시원 공식 공고로 확인합니다.</li></ol>'),('schools','대학별 ‘가능’ 표시를 하지 않는 이유',callout('이 사이트는 확인되지 않은 대학을 ‘한국 약사면허 가능’으로 분류하지 않습니다. 학위명 변경이나 교육과정 개편이 있는 2027 과정은 과거 인정 사례를 그대로 적용하지 않습니다.',True)),('documents','확인을 위해 준비할 자료','<ul><li>입학 예정 과정명·코드·캠퍼스·학업 방식</li><li>학년별 교육과정·실습 구조·수업 및 이수 기간</li><li>수여되는 학사/석사/Doctor 학위명</li><li>호주 등록용 supervised practice·ITP·시험 경로</li><li>본인 학력·성적·면허 및 졸업 관련 증빙</li></ul><p>국시원 약사 직종의 해당 연도 세부 공고·개별 인정 결과 확인은 별도로 필요합니다.</p>'+sources(['korea-law','kuksiwon']))]
-register('/korea-pharmacist/','호주 약대 졸업 후 한국 약사면허 · 확인 절차 | TNS','외국 약대 졸업자가 한국 약사면허를 받는 순서를 약사법 기준으로 설명합니다. 대학 인정, 외국 면허, 예비시험·국가시험이 필요합니다.',pagehero('호주 약대에서 한국 약사면허까지','호주 약대 졸업만으로 한국 약사면허가 자동으로 나오지 않습니다. 필요한 절차를 순서대로 정리했습니다.','한국 약사면허')+article(korea_items))
+# Korean pharmacist licence: recognized Australian schools + current exam route.
+korea_school_rows=[]
+for i,s in enumerate(K['recognized_schools'],1):
+    ko=E(s['ko']);en=E(s['en'])
+    if s.get('id') in U:
+        school=link('/universities/'+U[s['id']]['slug']+'/',f'<strong>{ko}</strong><br><span class="small">{en}</span>')
+    else:
+        school=f'<strong>{ko}</strong><br><span class="small">{en}</span>'
+    if s.get('legacy'):school+=f'<br><span class="fact-note">기인정 데이터의 과거 교명: {E(s["legacy"])}</span>'
+    if s.get('note'):school+=f'<br><span class="fact-note">{E(s["note"])}</span>'
+    korea_school_rows.append((str(i),school))
+
+recognized_html='<p><strong>공식 명칭은 “보건복지부장관이 인정하는 외국학교”입니다.</strong> 2026년 6월 2일 국시원 공개 데이터에서 호주 약사 직종의 기인정 학교로 정리되는 13개 대학을 아래에 표시합니다.</p>'
+recognized_html+=callout('<strong>기인정 학교 졸업 + 해당 국가 약사면허 취득</strong>이 확인되면 외국학교 인정심사를 새로 거치지 않고 약사 예비시험·국가시험 절차를 준비할 수 있습니다. 목록 미등재 학교도 응시 불가로 단정할 수 없으며, 먼저 외국학교 인정심사를 신청할 수 있습니다.')
+recognized_html+=table(korea_school_rows,['번호','기인정 호주 약대'],True)
+recognized_html+=callout('<strong>Adelaide University는 별도 확인이 필요합니다.</strong><br>2026년 6월 2일 기인정 목록에는 University of South Australia가 포함되어 있지만, Adelaide University는 2026년 UniSA와 The University of Adelaide의 합병으로 출범한 <strong>새 법인</strong>입니다. 따라서 2027 Adelaide University Pharmacy 학위를 기존 UniSA 인정과 자동으로 동일하게 보지 않고 국시원에 과정·학위 기준으로 확인하는 것이 안전합니다.',True)
+
+roadmap_html='<p>한국 약사면허는 호주 약대 졸업만으로 자동 부여되지 않습니다. <strong>인정 대학 → 호주 약사면허 → 약사 예비시험 → 약사 국가시험 → 한국 면허</strong> 순으로 봐야 합니다.</p>'
+roadmap_html+='<ol class="timeline"><li><strong>기인정 호주 약대 또는 외국학교 인정심사</strong>학교·학위·캠퍼스와 실제 이수과정을 기준으로 인정 여부를 확인합니다.</li><li><strong>호주 약사면허 취득</strong>호주에서 요구하는 supervised practice·ITP·시험·General Registration을 완료합니다.</li><li><strong>약사 예비시험 합격</strong>약학 기초와 한국어 요건을 충족합니다.</li><li><strong>약사 국가시험 합격</strong>생명약학·산업약학·임상·실무약학·보건·의약 관계 법규를 응시합니다.</li><li><strong>한국 약사면허 교부</strong>국시원·보건복지부의 해당 연도 서류와 면허교부 절차를 따릅니다.</li></ol>'
+
+pre=K['preliminary_exam']
+prelim_rows=[
+ ('응시원서 접수',E(pre['application']),f'응시수수료 {E(pre["fee"])}'),
+ ('시험',E(pre['exam_date']),E(pre['locations'])),
+ ('합격자 발표',E(pre['result_date']),'국시원 홈페이지 합격자조회')
+]
+prelim_html=f'<p><strong>{E(pre["title"])}</strong> 기준 일정입니다.</p>'+table(prelim_rows,['구분','일정','비고'],True)
+prelim_html+=facts([('시험과목',E(' · '.join(pre['subjects']))),('합격기준',E(pre['pass_rule']))])
+prelim_html+='<p class="small">한국어 과목은 국시원이 지정하는 한국어 능력평가에서 기준 이상을 충족하거나, 법령상 한국어 과목 면제 요건에 해당하는 방식으로 증명합니다. 개인별 제출서류는 실제 응시연도 공고를 확인해야 합니다.</p>'
+
+nat=K['national_exam']
+national_rows=[
+ ('응시원서 접수',E(nat['application']),'외국대학 졸업자는 약사 예비시험 합격자에 한해 인터넷 접수 가능'),
+ ('시험',E(nat['exam_date']),'시험장소는 국시원 별도 공고'),
+ ('최종합격자 발표',E(nat['result_date']),'국시원 홈페이지 합격자조회')
+]
+national_html=f'<p><strong>{E(nat["title"])}</strong> 현재 공개 일정입니다.</p>'+table(national_rows,['구분','일정','비고'],True)
+national_html+=facts([('시험과목',E(' · '.join(nat['subjects']))),('합격기준',E(nat['pass_rule']))])
+national_html+=callout('약사 예비시험에 합격하면 다음 회의 약사국가시험부터 예비시험이 면제됩니다. 국가시험 일정과 수수료·시험장은 국시원의 해당 연도 공고가 최종 기준입니다.')
+
+korea_items=[
+ ('recognized','보건복지부장관 인정 호주 약대 13곳',recognized_html),
+ ('roadmap','호주 약대에서 한국 약사면허까지',roadmap_html),
+ ('preliminary','약사 예비시험 · 2026 일정과 합격기준',prelim_html),
+ ('national','약사 국가시험 · 2027 일정과 시험과목',national_html),
+ ('documents','입학 전·응시 전 확인할 자료','<ul><li>입학 예정 대학의 정확한 법인명·학위명·캠퍼스·입학연도</li><li>학년별 교육과정과 실제 이수 방식</li><li>호주 약사 General Registration 및 면허 증빙</li><li>외국학교 인정심사 필요 여부</li><li>예비시험 한국어 요건과 해당 연도 원서접수 서류</li></ul><p>기인정 목록은 인정심사 신청 당시의 국가·교명을 바탕으로 만들어져 현재 교명과 다를 수 있고, 인정심사 기간 중 학교가 추가될 수도 있습니다.</p>'+sources(['korea-recognized-schools-20260602','korea-foreign-school-process','korea-pharmacist-exam-current','korea-pharmacist-exam-law','korea-law','adelaide-new-entity-2026']))
+]
+register('/korea-pharmacist/','보건복지부 인정 호주 약대 13곳 · 약사 예비시험·국가시험 | TNS','2026년 6월 2일 국시원 공개자료 기준 보건복지부장관 인정 호주 약대 13곳과 호주 약사면허 취득 후 한국 약사 예비시험·국가시험 일정과 합격기준을 정리합니다.',pagehero('보건복지부 인정 호주 약대와 한국 약사면허','기인정 호주 약대 13곳, 호주 약사면허, 약사 예비시험과 국가시험까지 한국 복귀 경로를 순서대로 확인하세요.','한국 약사면허')+article(korea_items))
 
 fastitems=[('programs','3년 Fast-track · JCU와 UTas','<p>JCU와 UTas는 4년 약학과를 3년에 압축해 공부합니다. 1년 수강량이 많고 학업 일정이 빠릅니다.</p><div class="card-grid">'+card(P['jcu-bpharm-hons'])+card(P['utas-bpharm-hons'])+'</div>'),('uq','UQ의 7월 약 3.5년과 구분','<p>UQ 기존 BPharm은 2월 4년, 7월 약 3.5년입니다. 3년 Fast-track과 동일한 상품이 아니며, 수학·화학 요건과 7월 모집 여부를 함께 봐야 합니다.</p>'),('registration','학업기간 이후의 등록 준비','<p>3년 학위 수료 후에도 등록용 인턴십과 ITP·등록시험 등 요구가 남습니다. 5년 통합과 비교할 때는 학위만의 기간과 전체 등록 준비기간을 구분하세요.</p>'+link('/pharmacist-registration/','등록 구조 자세히 →','btn text')+sources(['jcu-guide','utas','uq','apc']))]
 register('/3-year-pharmacy/','호주 3년 약대 · JCU·UTas Fast-track 비교 | TNS','호주 3년 약대 JCU·UTas의 압축 학사와 UQ 7월 3.5년 경로를 구분하고, 졸업 후 약사등록 준비기간을 확인합니다.',pagehero('호주 3년 약대, 빠른 만큼 확인할 것','3년 학위 완료와 약사등록 완료는 다릅니다. 압축 학사 일정과 졸업 후 준비를 함께 살펴보세요.','3년 약대')+article(fastitems))
 
-method_items=[('scope','이 사이트의 비교 범위','<p>한국 학생이 고교 졸업 후 학부 단계부터 약사 과정을 시작할 수 있는 대학을 중심으로 구성합니다. 대학원 전용 과정과 국제학생 대면 모집 확인이 안 된 상품을 확정 진학 옵션으로 표시하지 않습니다.</p>'),('status','정보 상태 읽는 방법',table([(status({'status':s}),t) for s,t in [('confirmed_2027','2027 공식 자료에서 해당 사실을 확인했습니다. 최종 입학허가를 뜻하지 않습니다.'),('latest_published','현재 확인한 최신 공개 자료입니다. 연도가 이전이면 명시하며 2027 확정으로 사용하지 않습니다.'),('pending_2027','2027 확인 중 상태입니다. 미발표, 접근 제한, 적용범위 미검증 또는 본 작업의 대조 미완료를 포함하며 공식 자료가 없다고 단정하지 않습니다.'),('source_conflict','공식 자료 간 수치·적용 범위 차이가 남아 있습니다. 자동 충족 판정에 사용하지 않습니다.')]],['상태','의미'],True)),('conflicts','자료 차이와 후속 확인',table([(E(c['summary']),E(c['decision'])) for c in D['conflicts']],responsive=True)),('order','자료 우선순위','<p>최신 대학 course page·official admissions guide, APC·Pharmacy Board, 정부 자료를 우선합니다. 일반 입학 최소기준을 약대 전용 기준으로 대체하지 않으며, 프로그램 코드가 바뀐 경우 이전 점수를 이식하지 않습니다.</p>'),('limits','현재 검증이 남은 범위','<p>여러 대학의 CSAT·SAT·IB·OSSD 환산, 내신·검정고시 인정, 준비과정별 진급조건, 장학 제외목록, 공식 숙소 요금이 확인 중입니다. 비교 결과에서는 해당 조건을 충족으로 간주하지 않습니다.</p><p>호주 전용 TNS 오픈채팅은 승인된 링크가 확보될 때까지 연결하지 않습니다. 참여자 수는 검증되지 않아 게시하지 않습니다.</p>')]
+method_items=[('scope','이 사이트의 비교 범위','<p>한국 학생이 고교 졸업 후 학부 단계부터 약사 과정을 시작할 수 있는 대학을 중심으로 구성합니다. 대학원 전용 과정과 국제학생 대면 모집 확인이 안 된 상품을 확정 진학 옵션으로 표시하지 않습니다.</p>'),('status','정보 상태 읽는 방법',table([(status({'status':s}),t) for s,t in [('confirmed_2027','2027 공식 자료에서 해당 사실을 확인했습니다. 최종 입학허가를 뜻하지 않습니다.'),('latest_published','현재 확인한 최신 공개 자료입니다. 연도가 이전이면 명시하며 2027 확정으로 사용하지 않습니다.'),('pending_2027','2027 확인 중 상태입니다. 미발표, 접근 제한, 적용범위 미검증 또는 본 작업의 대조 미완료를 포함하며 공식 자료가 없다고 단정하지 않습니다.'),('source_conflict','공식 자료 간 수치·적용 범위 차이가 남아 있습니다. 자동 충족 판정에 사용하지 않습니다.')]],['상태','의미'],True)),('conflicts','자료 차이와 후속 확인',table([(E(c['summary']),E(c['decision'])) for c in D['conflicts']],responsive=True)),('order','자료 우선순위','<p>최신 대학 course page·official admissions guide, APC·Pharmacy Board, 정부 자료를 우선합니다. 일반 입학 최소기준을 약대 전용 기준으로 대체하지 않으며, 프로그램 코드가 바뀐 경우 이전 점수를 이식하지 않습니다.</p>'),('limits','현재 검증이 남은 범위','<p>여러 대학의 CSAT·SAT·IB·OSSD 환산, 내신·검정고시 인정, 준비과정별 진급조건, 장학 제외목록, 공식 숙소 요금이 확인 중입니다. 비교 결과에서는 해당 조건을 충족으로 간주하지 않습니다.</p><p>호주 전용 TNS 오픈채팅은 검증된 링크와 보수적으로 표시한 참여자 수를 사이트 설정에서 관리합니다.</p>')]
 register('/methodology/','자료 기준·2027 업데이트 상태 | TNS 호주약대','호주 약대 정보의 출처 우선순위, 2027 확정·참고·확인 중·자료 차이 상태와 검증이 남은 범위를 설명합니다.',pagehero('자료 기준과 업데이트 상태','비교에 쓰이는 숫자가 어느 연도, 어느 과정의 조건인지 확인할 수 있도록 관리합니다.','자료 기준')+article(method_items))
 
 consult_items=[('prepare','상담 전에 준비하면 좋은 정보','<p>성적표 전체를 공개 공간에 올릴 필요는 없습니다. 먼저 아래 항목을 정리하고, 구체적인 서류 제출은 상담 채널에서 안내받으세요.</p><ul><li>최종 학력과 졸업 예정일</li><li>수능·IB·SAT·A-level·내신 등 보유 성적</li><li>화학·수학·생물·물리 이수 과목과 성적</li><li>영어시험 종류·시험일·overall·각 영역 점수</li><li>희망 입학시기, 준비과정 가능 여부, 예산</li></ul>'),('summary','상담 메모 만들기','<p>아래 메모는 브라우저에서만 작성됩니다. 복사 후 원하는 상담 채널에 직접 전달하세요.</p><div class="consult-prep"><label for="consult-note">상담 메모<textarea id="consult-note">최종 학력 / 졸업 예정일:\n보유 학업 성적:\n수학·화학 등 이수 과목:\n영어 overall / 각 영역:\n희망 입학시기:\n관심 대학 / 입학방법:\n예산 / 궁금한 점:</textarea></label><div><button class="btn" id="copy-note">메모 복사</button></div><p class="small" id="copy-status" role="status"></p></div>')]
