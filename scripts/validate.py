@@ -98,7 +98,7 @@ for slug,(route_count,phrases) in compact_batch_2.items():
  if routes_match:
   rt=routes_match.group(0)
   if '<p class="monash-route-meta">' in rt:errors.append(f'{slug}: pathway card secondary microcopy remains')
-  if re.search(r'<div class="route-criteria">.*?<span>',rt,re.S):errors.append(f'{slug}: pathway criteria still contains secondary small copy')
+  if any('<span' in criteria for criteria in re.findall(r'<div class="route-criteria">(.*?)</div></article>',rt,re.S)):errors.append(f'{slug}: pathway criteria still contains secondary small copy')
   for clutter in ['(2026 공식 참고)','(국제학력은 2026 공식 참고)']:
    if clutter in rt:errors.append(f'{slug}: source-year card clutter remains {clutter}')
  for old_heading in ['<h2>Direct 입학조건</h2>','<h2>졸업 후 485·지역</h2>','<h2>호주 약사등록</h2>','<h2>자주 묻는 질문</h2>']:
@@ -127,7 +127,7 @@ for slug,(route_count,phrases) in compact_batch_3.items():
  if routes_match:
   rt=routes_match.group(0)
   if '<p class="monash-route-meta">' in rt:errors.append(f'{slug}: pathway card secondary microcopy remains')
-  if re.search(r'<div class="route-criteria">.*?<span>',rt,re.S):errors.append(f'{slug}: pathway criteria still contains secondary small copy')
+  if any('<span' in criteria for criteria in re.findall(r'<div class="route-criteria">(.*?)</div></article>',rt,re.S)):errors.append(f'{slug}: pathway criteria still contains secondary small copy')
   for clutter in ['(2026 공식 참고)','(국제학력은 2026 공식 참고)']:
    if clutter in rt:errors.append(f'{slug}: source-year card clutter remains {clutter}')
  for old_heading in ['<h2>Direct 입학조건</h2>','<h2>졸업 후 485·지역</h2>','<h2>호주 약사등록</h2>','<h2>자주 묻는 질문</h2>']:
@@ -225,7 +225,7 @@ else:
  if routes_match:
   rt=routes_match.group(0)
   if '<p class="monash-route-meta">' in rt:errors.append('monash-page: pathway card secondary microcopy remains')
-  if re.search(r'<div class="route-criteria">.*?<span>',rt,re.S):errors.append('monash-page: pathway criteria still contains secondary small copy')
+  if any('<span' in criteria for criteria in re.findall(r'<div class="route-criteria">(.*?)</div></article>',rt,re.S)):errors.append('monash-page: pathway criteria still contains secondary small copy')
  visible_mt=re.sub(r'<script\b.*?</script>|<style\b.*?</style>', '', mt, flags=re.I|re.S)
  visible_mt=re.sub(r'<[^>]+>', ' ', visible_mt)
  for code in ['P6007','P6001']:
