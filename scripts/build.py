@@ -376,7 +376,7 @@ for u in D['universities']:
 <article><span class="route-label">FOUNDATION</span><h3>Foundation → 약대 1학년</h3>
 <div class="monash-path-step"><small>Foundation 입학</small><strong>한국 고교 60% 또는 수능 260</strong><span>IELTS 5.5 · 각 5.0</span></div>
 <div class="monash-path-arrow">↓</div>
-<div class="monash-path-step"><small>P6007 진급</small><strong>Foundation 75%</strong><span>English 65% · Maths 50% · Chemistry 50%</span></div>
+<div class="monash-path-step"><small>모나쉬 5년 PharmD 진급</small><strong>Foundation 75%</strong><span>English 65% · Maths 50% · Chemistry 50%</span></div>
 <p class="monash-route-meta">Standard 약 12개월 · 2월/8월 시작</p>
 </article>
 <article><span class="route-label">GRADUATE ENTRY</span><h3>관련 학사 → 약대 3학년</h3>
@@ -397,7 +397,7 @@ for u in D['universities']:
 <div><small>일반 국제학생 Merit</small><strong>'''+E(money(monash_general_merit['amount']))+''' / 년</strong><span>연 '''+E(value(monash_general_merit['number_available']))+'''명 · 자동심사 · 경쟁선발</span></div>
 <div><small>Leadership</small><strong>학비 '''+E(str(value(monash_leadership['amount'])))+'''%</strong><span>연 '''+E(value(monash_leadership['number_available']))+'''명 · 자동심사 · 경쟁선발</span></div>
 <div><small>Parkville 인근 쉐어</small><strong>A$290~380 / 주</strong><span>현재 공식 생활비 참고</span></div>
-</div><div class="monash-scholarship-note"><strong>약대 전용 25%·50% 장학</strong><span>P6007 적용 확인 중</span><p>현재 공식 장학 페이지에는 기존 P3001/P6001 등이 대상 과정으로 표시되고 P6007은 아직 없습니다. 따라서 2027 P6007 학생 장학금으로는 확정하지 않습니다.</p></div><div class="section-link-list compact-links">'''+link('/tuition-scholarships/','호주 약대 전체 학비·생활비 비교 →')+'''</div>'''
+</div><div class="monash-scholarship-note"><strong>약대 전용 25%·50% 장학</strong><span>2027 신설 PharmD 적용 확인 중</span><p>현재 공식 장학 페이지의 대상과정 목록에는 2027 신설 5년 PharmD 과정이 아직 반영되지 않았습니다. 따라서 일반 신입생에게 확정 적용되는 장학금으로 표시하지 않습니다.</p></div><div class="section-link-list compact-links">'''+link('/tuition-scholarships/','호주 약대 전체 학비·생활비 비교 →')+'''</div>'''
         monash_after='''<div class="monash-flow"><div><b>1~4년차</b><strong>BPharm(Hons)</strong><span>4년 후 학사로 졸업 가능</span></div><i>↓</i><div><b>5년차</b><strong>Doctor of Pharmacy</strong><span>유급 supervised practice + Intern Training Program</span></div><i>↓</i><div><b>호주 약사등록</b><strong>등록시험·심사 완료</strong><span>General Registration</span></div><i>↓</i><div><b>졸업비자</b><strong>기본 485 · 2년</strong><span>Melbourne은 Regional 추가기간 없음</span></div></div><div class="section-link-list compact-links">'''+link('/pharmacist-registration/','호주 약사등록 방법 →')+link('/korea-pharmacist/','한국 약사면허 취득 방법 →')+'''</div>'''
         items=[('overview','모나쉬 약대 과정 구조',monash_overview),('routes','입학방법 3가지',monash_routes),('curriculum','5년 커리큘럼 한눈에 보기',monash_curriculum),('cost','학비·장학금·생활비',monash_cost),('after','5년 과정과 졸업 후',monash_after),('sources','자료 출처',sources(allids))]
         register(purl(p),'2027 모나쉬 약대 · 5년 PharmD·입학조건·학비 | TNS','모나쉬대학교 5년 Pharmacy/Doctor of Pharmacy 과정의 Direct·Foundation·Graduate Entry, 2027 학비·장학금과 졸업 후 약사등록을 간단히 정리합니다.',body+article(items,'monash-detail'))
@@ -431,7 +431,7 @@ foundation_routes=[r for r in D['entry_routes'] if r['type']=='foundation']
 foundation_items=[('difference','Foundation은 약대 입학 전 준비과정입니다','<p>고2 수료 후 Foundation을 마치고 약대 1학년으로 진학합니다. Foundation 입학조건과 약대 진급조건은 서로 다릅니다.</p><div class="route-mini"><span>Foundation 입학</span>→<span>지정 과목·영어 이수</span>→<span>약대 진급 기준 충족</span>→<span>약대 1학년</span></div>'),
  ('routes','어느 대학으로 연결되나요?',routecards(foundation_routes)),
  ('uq','UQ · 2월 Foundation → 7월 약대','<p>UQ College Accelerated Foundation은 2027년 2월 15일 시작해 7월 9일 끝납니다. UQ BPharm은 7월 26일 시작합니다.</p>'+callout('Foundation 입학, 필수과목, GPA·영어 기준을 모두 충족해야 약대로 올라갑니다.')+'<p>BPharm 공개 진급 기준은 GPA 5.0, Academic English 5입니다. 새 UQ PharmD로 같은 조건이 적용된다고 가정하지 않습니다.</p>'),
- ('monash','Monash · 2027 새 과정 코드 확인','<p>Monash Foundation의 새 약대 과정은 P6007입니다. 현재 웹페이지는 Foundation 75%·English 65%를 안내하지만 2027 PDF에는 이전 코드 P6001이 남아 있어, 이 점수는 최종 진급기준으로 확정하지 않았습니다.</p>'),
+ ('monash','Monash · 2027 신설 PharmD 진급 기준','<p>Monash College의 현재 웹페이지는 신설 5년 PharmD 진급 기준을 Foundation 75%·English 65%로 안내합니다. 다만 2027 PDF에는 이전 과정 정보가 일부 남아 있어, 실제 지원 전 최신 진급기준을 다시 확인합니다.</p>'),
  ('check','준비할 것','<ul><li>고교 졸업/재학 증명과 학년별 성적표</li><li>희망 약대에 필요한 수학·과학 과목 조합</li><li>Foundation 영어조건과 약대 진급 영어조건</li><li>Foundation 시작일, 약대 시작일, 성적 발표일</li><li>Foundation과 약대의 학비·숙소 예산</li></ul>'+sources(source_ids(foundation_routes)|{'uq-calendar','uq-foundation','uq'}))]
 register('/foundation/','호주 약대 파운데이션 · 2027 대학별 진급조건 | TNS','UQ Accelerated Foundation, Sydney USFP, Monash 등 Foundation 진급 성적·영어·과목·약대 시작시기를 정리합니다.',pagehero('Foundation으로 호주 약대 준비하기','고교 성적이나 선수과목이 부족하다면 Foundation부터 약대 진급까지 한 번에 보세요.','Foundation')+article(foundation_items))
 
