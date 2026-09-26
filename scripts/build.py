@@ -358,7 +358,7 @@ for u in D['universities']:
 <article><span class="year">2~3학년</span><h3>임상학습 + 현장실습</h3><p>Community·Hospital Pharmacy에서 구조화된 실습을 시작하고, 실제 환자 케어에 필요한 판단과 의사소통을 훈련합니다.</p></article>
 <article><span class="year">4학년</span><h3>실습 심화 + BPharm(Hons) 완성</h3><p>현장실습을 이어가며 학사과정을 마칩니다. 여기까지 이수하면 BPharm(Hons)로 졸업할 수 있습니다.</p></article>
 <article><span class="year">5학년</span><h3>유급 실무훈련 + ITP</h3><p>병원 또는 지역약국에서 유급 supervised practice를 진행하면서 Intern Training Program과 심화 선택과목을 이수합니다.</p></article>
-</div><div class="monash-curriculum-focus"><strong>과정 전체에서 강화되는 역량</strong><span>임상적 의사결정 · 환자 중심 치료 · 문화적 안전 · 지속가능성 · 디지털 헬스와 책임 있는 AI 활용</span></div><p class="small muted">2·3·4학년에는 Monash가 Community·Hospital Pharmacy 실습을 운영합니다. 5학년 supervised practice 자리는 학생이 직접 구합니다.</p>'''
+</div><div class="monash-curriculum-focus"><strong>과정 전반의 핵심 역량</strong><span>임상적 의사결정 · 환자 중심 치료 · 디지털 헬스</span></div>'''
         monash_cost='''<div class="monash-money-grid">
 <div><small>2027 연간 학비</small><strong>A$49,740</strong><span>48 credit points 기준</span></div>
 <div><small>약대 장학금</small><strong>25% 또는 50%</strong><span>연 8명 · 경쟁선발</span></div>
