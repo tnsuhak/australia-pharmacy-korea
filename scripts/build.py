@@ -965,23 +965,19 @@ num=lambda n: format(n, ',')
 reg_sources='<details class="sources"><summary>자료 출처 <span>'+E(REG['verified_date'])+' 기준</span></summary><ul>'+''.join('<li><a href="'+E(x['url'])+'" target="_blank" rel="noopener noreferrer">'+E(x['title'])+' ↗</a></li>' for x in REG['sources'])+'</ul></details>'
 
 reg_hero='''<div class="facts-grid monash-hero-facts">
-<div class="fact-tile"><small>승인 실습</small><strong>'''+num(sp['total_hours'])+'''시간</strong><span class="fact-note">General Registration 전 완료</span></div>
-<div class="fact-tile"><small>시험 응시 시점</small><strong>'''+num(sp['exam_eligibility_hours'])+'''시간</strong><span class="fact-note">전체의 75%</span></div>
-<div class="fact-tile"><small>Intern Written</small><strong>'''+str(wx['questions'])+'''문항 · '''+str(wx['duration_minutes'])+'''분</strong><span class="fact-note">APC 시행</span></div>
-<div class="fact-tile"><small>Oral Exam</small><strong>3파트 · 35분</strong><span class="fact-note">Pharmacy Board / Ahpra</span></div>
-<div class="fact-tile"><small>시험비만</small><strong>A$'''+num(rf['exam_total_aud'])+'''</strong><span class="fact-note">Written + Oral</span></div>
-<div class="fact-tile"><small>최종 단계</small><strong>General Registration</strong><span class="fact-note">정식 약사등록</span></div>
+<div class="fact-tile"><small>STEP 1</small><strong>호주 약대 졸업</strong><span class="fact-note">학위 취득</span></div>
+<div class="fact-tile"><small>STEP 2</small><strong>인턴약사 등록</strong><span class="fact-note">Provisional Registration</span></div>
+<div class="fact-tile"><small>STEP 3</small><strong>인턴 실무 + 시험</strong><span class="fact-note">ITP · Written · Oral</span></div>
+<div class="fact-tile"><small>STEP 4</small><strong>정식 약사등록</strong><span class="fact-note">General Registration</span></div>
 </div>'''
 
-reg_flow='''<p class="lead"><strong>호주 약대 졸업 = 바로 정식 약사등록이 아닙니다.</strong> 일반적인 3년·4년 약대는 졸업 뒤 Provisional registration을 받고 인턴 실무를 시작한 다음, Written·Oral 두 시험과 Intern Training Program까지 마쳐야 General Registration으로 넘어갑니다.</p>
-<div class="process-grid three">
-<div class="process-card"><span class="number">01</span><h3>승인 약학과 졸업</h3><p>Pharmacy Board가 승인한 accredited program을 완료합니다.</p></div>
-<div class="process-card"><span class="number">02</span><h3>Provisional registration</h3><p>인턴으로 일하기 전에 등록과 supervised practice 장소·preceptor 승인을 받습니다.</p></div>
-<div class="process-card"><span class="number">03</span><h3>Supervised practice + ITP</h3><p>총 '''+num(sp['total_hours'])+'''시간의 승인 실습과 accredited Intern Training Program을 병행합니다.</p></div>
-<div class="process-card"><span class="number">04</span><h3>75%에서 시험 응시</h3><p>'''+num(sp['exam_eligibility_hours'])+'''시간에 도달하면 Intern Written과 Oral Exam 응시 단계로 들어갈 수 있습니다.</p></div>
-<div class="process-card"><span class="number">05</span><h3>남은 실습·ITP 완료</h3><p>시험에 합격해도 남은 supervised practice와 ITP를 끝내야 합니다.</p></div>
-<div class="process-card"><span class="number">06</span><h3>General Registration</h3><p>학위·실습·ITP·시험·등록기준을 모두 충족하면 정식 약사등록을 신청합니다.</p></div>
-</div>'''+callout('<strong>핵심:</strong> 시험은 인턴 1년을 전부 끝낸 뒤에만 보는 것이 아닙니다. 현재 기준으로 승인 실습의 75%, 즉 <strong>1,368시간</strong>을 채우면 시험 응시 단계로 들어갈 수 있습니다.')
+reg_flow='''<div class="monash-snapshot"><p class="lead"><strong>먼저 이것만 이해하면 됩니다. 호주 약대를 졸업했다고 바로 ‘정식 약사’가 되는 것은 아닙니다.</strong></p><p>일반적인 3년·4년 약대는 졸업 후 인턴약사로 등록하고, 대체로 약 1년 규모의 supervised practice와 Intern Training Program을 진행하면서 Written·Oral 시험을 통과한 뒤 General Registration을 받아야 합니다.</p></div>
+<div class="monash-flow" style="margin-top:22px">
+<div><b>STEP 1</b><strong>호주 약대 졸업</strong><span>승인된 Pharmacy degree를 마칩니다.</span></div><i>→</i>
+<div><b>STEP 2</b><strong>인턴약사로 등록</strong><span>Provisional Registration을 받고 승인된 인턴 실무를 시작합니다.</span></div><i>→</i>
+<div><b>STEP 3</b><strong>인턴 실무 + ITP + 시험</strong><span>실무를 하면서 Intern Training Program과 Written·Oral 시험을 진행합니다.</span></div><i>→</i>
+<div><b>STEP 4</b><strong>정식 약사등록</strong><span>모든 요건을 마치면 General Registration을 신청합니다.</span></div>
+</div>'''+callout('<strong>한 줄로:</strong> 호주 약대 졸업 → 인턴약사 → 약 1년 규모의 실무·교육·시험 → 정식 약사등록입니다. 학교에 따라 이 인턴 과정 일부가 5년차 학위 안에 포함되기도 합니다.')
 
 orgs='''<div class="difference-cards course-types">
 <article><span class="route-label">UNIVERSITY</span><h3>대학</h3><p>약학 학위와 재학 중 placement를 제공합니다. 재학 중 placement와 등록용 internship은 같은 개념이 아닙니다.</p></article>
@@ -1048,13 +1044,18 @@ fees_html+=facts([
 ])
 fees_html+=callout('수수료는 매년 바뀔 수 있습니다. 위 금액은 현재 공개된 APC 수수료와 Pharmacy Board/Ahpra 등록 양식 기준이며 2027 고정금액으로 표시하지 않습니다.')
 
-integrated=table([
- (link('/universities/monash-pharmacy/','Monash'),'5년차에 paid supervised practice + ITP 통합','등록시험·최종 Board 심사는 남음'),
- (link('/universities/sydney-pharmacy/','Sydney'),'5년차 Master 단계에 supervised practice + ITP 통합','등록시험·최종 Board 심사는 남음'),
- (link('/universities/jcu-pharmacy/','JCU'),'3년 학위','졸업 후 등록 internship 별도'),
- (link('/universities/utas-pharmacy/','UTas'),'3년 학위','졸업 후 등록 internship 별도'),
- (link('/universities/uwa-pharmacy/','UWA'),'4년 Bachelor + PharmD','졸업 후 supervised internship 별도')
-],['예시','학위 안에서 끝나는 부분','졸업·등록 후 남는 부분'],True)+callout('<strong>5년 과정이라고 시험이 면제되는 것은 아닙니다.</strong> 학교에 따라 supervised practice와 ITP를 학위 안에서 진행할 수 있지만 Pharmacy Board가 요구하는 Written·Oral exam과 General Registration 요건은 별도로 충족해야 합니다.')
+integrated='''<p class="lead"><strong>학생이 가장 헷갈리는 부분은 “인턴을 졸업 후에 따로 하느냐, 5년차 학위 안에서 하느냐”입니다.</strong></p>
+<div class="difference-cards course-types">
+<article class="course-type-card"><strong>일반적인 3년·4년 약대</strong><b>졸업 후 인턴 단계가 따로 있음</b><span>JCU·UTas 같은 3년 과정도 학위가 3년에 끝나는 것이지, 3년 만에 General Registration까지 끝나는 것은 아닙니다.</span></article>
+<article class="course-type-card"><strong>일부 5년 통합과정</strong><b>인턴 실무·ITP 일부를 5년차에 통합</b><span>Monash·Sydney처럼 supervised practice와 ITP를 학위 안에 넣은 과정도 있습니다.</span></article>
+<article class="course-type-card"><strong>공통점</strong><b>최종 등록은 Pharmacy Board 기준</b><span>과정 구조가 달라도 필요한 Written·Oral 시험과 General Registration 요건은 별도로 확인해야 합니다.</span></article>
+</div>'''+table([
+ (link('/universities/jcu-pharmacy/','JCU'),'3년 학위','졸업 후 internship · ITP · 시험'),
+ (link('/universities/utas-pharmacy/','UTas'),'3년 학위','졸업 후 internship · ITP · 시험'),
+ (link('/universities/uwa-pharmacy/','UWA'),'4년 Bachelor + PharmD','졸업 후 supervised internship · 시험'),
+ (link('/universities/monash-pharmacy/','Monash'),'5년차 supervised practice + ITP 통합','시험·General Registration'),
+ (link('/universities/sydney-pharmacy/','Sydney'),'5년차 Master 단계 supervised practice + ITP 통합','시험·General Registration')
+],['예시','대학 안에서 마치는 부분','그 다음 남는 단계'],True)+callout('<strong>즉, “몇 년짜리 약대인가?”와 “몇 년 뒤 정식 약사가 되는가?”는 같은 질문이 아닙니다.</strong>')
 
 reg_faq=faq([
  ('약대를 졸업하면 바로 Pharmacist인가요?','아닙니다. 일반적인 3년·4년 약대는 졸업 후 Provisional registration, supervised practice, ITP, Written·Oral 시험을 거쳐 General Registration을 받아야 합니다.'),
@@ -1066,18 +1067,18 @@ reg_faq=faq([
 ])
 
 reg_items=[
- ('overview','먼저 전체 구조부터 이해하기',reg_flow),
- ('who','APC·Pharmacy Board·Ahpra는 무슨 차이인가요?',orgs),
- ('intern','시험 전에 필요한 1,824시간과 ITP',intern_html),
- ('written','Intern Written Exam',written_html),
- ('oral','Oral Exam (practice)',oral_html),
+ ('overview','30초만에 이해하는 호주 약사 되는 과정',reg_flow),
+ ('integrated','내가 다닌 약대에 따라 마지막 단계가 달라집니다',integrated),
+ ('intern','여기서부터 자세히: 인턴 실무 1,824시간과 ITP',intern_html),
+ ('written','Intern Written Exam 자세히',written_html),
+ ('oral','Oral Exam 자세히',oral_html),
  ('english','약사등록 영어기준',english_html),
  ('fees','시험·등록 비용',fees_html),
- ('integrated','3년·4년·5년 약대에 따라 무엇이 달라지나?',integrated),
+ ('who','APC·Pharmacy Board·Ahpra는 무슨 차이인가요?',orgs),
  ('faq','처음 보는 학생이 가장 많이 묻는 질문',reg_faq),
  ('sources','자료 출처',reg_sources)
 ]
-register('/pharmacist-registration/','호주 약사 시험 · Intern Written·Oral·인턴 1,824시간 | TNS','호주 약대 졸업 후 Provisional registration, 1,824시간 supervised practice, Intern Written 75문항, Oral 3파트, ITP, 영어기준과 General Registration까지 쉽게 설명합니다.',pagehero('호주 약사 시험, 졸업 후 무엇을 해야 하나요?','Written·Oral 시험만 보는 것이 아닙니다. 인턴 실무 1,824시간, ITP, 등록 영어기준까지 처음 보는 학생 기준으로 순서대로 정리했습니다.','호주 약사등록',reg_hero)+article(reg_items,'compact-detail'))
+register('/pharmacist-registration/','호주 약사 되는 법 · 약대 졸업 후 인턴·시험·등록 | TNS','호주 약대 졸업 후 인턴약사 등록, supervised practice와 ITP, Intern Written·Oral 시험, General Registration까지 처음 보는 학생도 이해하기 쉽게 설명합니다.',pagehero('호주 약대 졸업 후, 어떻게 약사가 되나요?','먼저 전체 흐름을 30초 안에 이해하고, 그 다음 인턴 1,824시간·Written·Oral 시험·영어기준 같은 세부사항을 확인하세요.','호주 약사등록',reg_hero)+article(reg_items,'compact-detail'))
 
 # Korean pharmacist licence: recognized Australian schools + current exam route.
 korea_school_rows=[]
