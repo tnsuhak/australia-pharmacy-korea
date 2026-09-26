@@ -105,6 +105,66 @@ for slug,(route_count,phrases) in compact_batch_2.items():
   if old_heading in txt:errors.append(f'{slug}: old duplicate section remains {old_heading}')
  if 'id="cost-form"' in txt:errors.append(f'{slug}: per-school cost calculator should not render')
 
+
+compact_batch_3={
+ 'rmit-pharmacy':(3,['RMIT 약대 과정 구조','2027 A$49,920','한국 고교 75% 또는 고교 졸업 + 수능 300','Foundation → 약대 1학년','IELTS 5.5 · 각 5.0','2년 Associate Degree (Biomedicine) → 약대 2학년','A$34,250','A$38,400 / 년','약대 신입생 장학금','4년 과정과 졸업 후']),
+ 'newcastle-pharmacy':(2,['Newcastle 약대 과정 구조','A$51,665','IB 28','준비 기준 IELTS 7.0 · 각 7.0','고2 → Foundation → 약대 1학년','한국 고2 수료','A&amp;B 평균 75%','A$31,400','Pharmacy 제외','공식자료 두 기준이 함께 공개 중','Regional Category 2']),
+ 'canberra-pharmacy':(1,['Canberra 약대 과정 구조','Selection Rank 75','Biology/Human Movement + Chemistry/Physics 선행지식','IELTS 7.0 · 각 7.0','2027년 2월 15일','2027 국제학생 학비','A$42,500 / 년','2026 Annual Fee','자동심사 · 10~30%','Regional Category 2']),
+ 'unisq-pharmacy':(1,['UniSQ 약대 과정 구조','2027은 4년','2028부터 3년 Accelerated','온라인 이론 + 캠퍼스 집중수업','Mathematics + Biology/Chemistry/Physics 중 1과목 선행지식','Writing 6.5','2027년 2월 15일','A$34,280 / 년','자동심사 · 10%','Regional Category 3'])
+}
+for slug,(route_count,phrases) in compact_batch_3.items():
+ page=R/f'dist/universities/{slug}/index.html'
+ if not page.exists():
+  errors.append(f'{slug}: compact batch 3 page missing')
+  continue
+ txt=page.read_text()
+ for phrase in phrases:
+  if phrase not in txt:errors.append(f'{slug}: compact batch 3 missing {phrase}')
+ for label in ['입학조건','영어','입학시기']:
+  if txt.count(f'<small>{label}</small>')<route_count:
+   errors.append(f'{slug}: pathway cards not standardized for {label}')
+ routes_match=re.search(r'<section class="article-section" id="routes">.*?</section>',txt,re.S)
+ if routes_match:
+  rt=routes_match.group(0)
+  if '<p class="monash-route-meta">' in rt:errors.append(f'{slug}: pathway card secondary microcopy remains')
+  if re.search(r'<div class="route-criteria">.*?<span>',rt,re.S):errors.append(f'{slug}: pathway criteria still contains secondary small copy')
+  for clutter in ['(2026 공식 참고)','(국제학력은 2026 공식 참고)']:
+   if clutter in rt:errors.append(f'{slug}: source-year card clutter remains {clutter}')
+ for old_heading in ['<h2>Direct 입학조건</h2>','<h2>졸업 후 485·지역</h2>','<h2>호주 약사등록</h2>','<h2>자주 묻는 질문</h2>']:
+  if old_heading in txt:errors.append(f'{slug}: old duplicate section remains {old_heading}')
+ if 'id="cost-form"' in txt:errors.append(f'{slug}: per-school cost calculator should not render')
+
+rmit_direct=next((x for x in D['entry_routes'] if x['id']=='rmit-bpharm-hons-direct'),None)
+rmit_foundation=next((x for x in D['entry_routes'] if x['id']=='rmit-foundation'),None)
+rmit_associate=next((x for x in D['entry_routes'] if x['id']=='rmit-associate'),None)
+if not rmit_direct or '수능 300' not in str(rmit_direct['qualification']['value']) or 'Chemistry + Mathematics' not in str(rmit_direct['qualification']['value']):
+ errors.append('rmit-data: Direct Korea score/prerequisites missing')
+if not rmit_foundation or rmit_foundation.get('pathway_fee',{}).get('value')!=34250 or rmit_foundation['entry_year']['value']!=1:
+ errors.append('rmit-data: 2027 Foundation fee/destination missing')
+if not rmit_associate or rmit_associate.get('pathway_fee',{}).get('value')!=38400 or rmit_associate['entry_year']['value']!=2:
+ errors.append('rmit-data: Associate pathway fee/Pharmacy Year 2 destination missing')
+
+newcastle_tuition=next((x for x in D['tuition'] if x['program_id']=='newcastle-bpharm-hons'),None)
+newcastle_english=next((x for x in D['english'] if x['program_id']=='newcastle-bpharm-hons'),None)
+newcastle_foundation=next((x for x in D['entry_routes'] if x['id']=='newcastle-foundation'),None)
+if not newcastle_tuition or newcastle_tuition['annual']['value']!=51665 or newcastle_tuition['annual']['status']!='confirmed_2027':
+ errors.append('newcastle-data: 2027 tuition must remain A$51,665 confirmed')
+if not newcastle_english or newcastle_english['ielts_overall']['status']!='source_conflict':
+ errors.append('newcastle-data: English conflict must remain explicit')
+if not newcastle_foundation or newcastle_foundation.get('pathway_fee',{}).get('value')!=31400 or 'Academic English A&B' not in str(newcastle_foundation['progression']['value']):
+ errors.append('newcastle-data: Foundation fee/progression missing')
+
+canberra_tuition=next((x for x in D['tuition'] if x['program_id']=='canberra-bpharm-hons'),None)
+if not canberra_tuition or canberra_tuition['annual']['value']!=42500 or canberra_tuition['annual']['source_year']!=2026 or canberra_tuition['annual']['status']=='confirmed_2027':
+ errors.append('canberra-data: A$42,500 must remain a 2026 reference, not 2027 tuition')
+
+unisq_program=next((x for x in D['programs'] if x['id']=='unisq-bpharm-hons'),None)
+unisq_tuition=next((x for x in D['tuition'] if x['program_id']=='unisq-bpharm-hons'),None)
+if not unisq_program or unisq_program['duration_years']['value']!=4 or unisq_program['duration_years']['source_year']!=2027:
+ errors.append('unisq-data: 2027 international Pharmacy must remain 4 years')
+if not unisq_tuition or unisq_tuition['annual']['value']!=34280 or unisq_tuition['annual']['source_year']!=2026:
+ errors.append('unisq-data: A$34,280 must remain a 2026 fee reference')
+
 adelaide_foundation=next((x for x in D['entry_routes'] if x['id']=='adelaide-eynesbury-foundation'),None)
 adelaide_diploma=next((x for x in D['entry_routes'] if x['id']=='adelaide-eynesbury-diploma'),None)
 if not adelaide_foundation or adelaide_foundation['entry_year']['value']!=1 or adelaide_foundation['pathway_fee']['value']!=36200:
