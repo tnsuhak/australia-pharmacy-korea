@@ -57,6 +57,23 @@ for path in pages:
  text=path.read_text()
  for phrase in public_copy_banned:
   if phrase in text:errors.append(f'{path.relative_to(R/"dist")}: developer-style public copy remains: {phrase}')
+compact_batch={
+ 'jcu-pharmacy':['JCU 약대 과정 구조','904시간 Placement','ATAR / Rank','2026 A$31,710 참고','자동심사 · 25%','3년 커리큘럼·실습','호주 약사등록 방법 →'],
+ 'utas-pharmacy':['UTas 약대 과정 구조','최소 400시간 PEP','수능','305','Foundation','FCWAM 60%','A$61,267 / 년','자동심사 · 30%','3년 커리큘럼·실습'],
+ 'curtin-pharmacy':['커틴 약대 과정 구조','3년 9개월','Pharmacy Diploma → 약대 2학년','CWA 70%','175 credits','A$44,900','자동심사 · 20%','Professional internship'],
+ 'griffith-pharmacy':['그리피스 약대 과정 구조','2027 Rank','76','수능','331','Diploma of Health Sciences → 약대 2학년','80CP 인정','자동심사 · 20%','A$329.85 / 주부터']
+}
+for slug,phrases in compact_batch.items():
+ page=R/f'dist/universities/{slug}/index.html'
+ if not page.exists():
+  errors.append(f'{slug}: compact detail page missing')
+  continue
+ txt=page.read_text()
+ for phrase in phrases:
+  if phrase not in txt:errors.append(f'{slug}: compact detail missing {phrase}')
+ for old_heading in ['<h2>Direct 입학조건</h2>','<h2>졸업 후 485·지역</h2>','<h2>호주 약사등록</h2>','<h2>자주 묻는 질문</h2>']:
+  if old_heading in txt:errors.append(f'{slug}: old duplicate section remains {old_heading}')
+ if 'id="cost-form"' in txt:errors.append(f'{slug}: per-school cost calculator should not render')
 monash_page=R/'dist/universities/monash-pharmacy/index.html'
 if not monash_page.exists():
  errors.append('monash-page: compact pilot page missing')
