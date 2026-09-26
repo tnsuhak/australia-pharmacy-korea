@@ -391,27 +391,21 @@ for u in D['universities']:
         monash_grad=next(x for x in rs if x['id']=='monash-ge')
         mds=monash_direct['direct_scores']
         monash_routes='''<div class="monash-route-grid">
-<article class="monash-direct-card"><span class="route-label">DIRECT</span><h3>고졸 → 약대 1학년</h3>
-<div class="monash-score-grid">
-<span><small>수능</small><strong>'''+E(value(mds['csat']))+'''</strong></span>
-<span><small>한국 내신</small><strong>'''+E(value(mds['korean_high_school']))+'''%</strong></span>
-<span><small>A-Level</small><strong>'''+E(value(mds['alevel']))+'''</strong></span>
-<span><small>IB</small><strong>'''+E(value(mds['ib']))+'''</strong></span>
-<span><small>AP</small><strong>'''+E(value(mds['ap']))+'''</strong></span>
-<span><small>SAT</small><strong>'''+E(value(mds['sat']))+'''</strong></span>
-</div>
-<ul><li>Maths + Chemistry 필수</li><li>IELTS 6.5 · 각 6.0</li><li><strong>2월 입학</strong></li></ul>
-<p class="monash-route-meta">수능은 표준점수 상위 4과목 합 · AP는 최고 2개 시험 합산 · 2027 국제 가이드 Pharmacy 기준</p>
-</article>
-<article><span class="route-label">FOUNDATION</span><h3>Foundation → 약대 1학년</h3>
-<div class="monash-path-step"><small>Foundation 입학</small><strong>한국 고교 60% 또는 수능 260</strong><span>IELTS 5.5 · 각 5.0</span></div>
-<div class="monash-path-arrow">↓</div>
-<div class="monash-path-step"><small>모나쉬 5년 PharmD 진급</small><strong>Foundation 75%</strong><span>English 65% · Maths 50% · Chemistry 50%</span></div>
-<p class="monash-route-meta">Standard 약 12개월 · 2월/8월 시작</p>
-</article>
-<article><span class="route-label">GRADUATE ENTRY</span><h3>관련 학사 → 약대 3학년</h3>
-<ul><li><strong>관련 학사 · 최근 10년 이내</strong></li><li>학사 평균 70%+</li><li>Chemistry + Higher-level Maths</li><li>대학 수준 Human Physiology 최소 1과목</li><li>영어수업 학사 또는 IELTS 6.5 · 각 6.0</li><li>Summer intensive 후 3학년 진입</li></ul>
-</article>
+<article><span class="route-label">DIRECT</span><h3>고졸 → 약대 1학년</h3><div class="route-criteria">
+<div><small>입학조건</small><strong>수능 '''+E(value(mds['csat']))+''' · 한국 내신 '''+E(value(mds['korean_high_school']))+'''% · A-Level '''+E(value(mds['alevel']))+''' · IB '''+E(value(mds['ib']))+''' · AP '''+E(value(mds['ap']))+''' · SAT '''+E(value(mds['sat']))+'''</strong><span>Maths + Chemistry 필수</span></div>
+<div><small>영어</small><strong>IELTS 6.5 · 각 6.0</strong></div>
+<div><small>입학시기</small><strong>2월</strong></div>
+</div><p class="monash-route-meta">수능은 표준점수 상위 4과목 합 · AP는 최고 2개 시험 합산</p></article>
+<article><span class="route-label">FOUNDATION</span><h3>Foundation → 약대 1학년</h3><div class="route-criteria">
+<div><small>입학조건</small><strong>한국 고교 60% 또는 수능 260</strong></div>
+<div><small>영어</small><strong>IELTS 5.5 · 각 5.0</strong></div>
+<div><small>입학시기</small><strong>2월 · 8월</strong></div>
+</div><p class="monash-route-meta">Standard 약 12개월 · 약대 진급조건은 Foundation 이수 후 별도 적용</p></article>
+<article><span class="route-label">GRADUATE ENTRY</span><h3>관련 학사 → 약대 3학년</h3><div class="route-criteria">
+<div><small>입학조건</small><strong>관련 학사 · 최근 10년 이내 · 평균 70%+</strong><span>Chemistry · Higher-level Maths · 대학 수준 Human Physiology</span></div>
+<div><small>영어</small><strong>영어수업 학사 또는 IELTS 6.5 · 각 6.0</strong></div>
+<div><small>입학시기</small><strong>1월 초 Summer intensive 시작</strong></div>
+</div></article>
 </div>'''
         monash_curriculum='''<div class="monash-curriculum-grid">
 <article><span class="year">1학년</span><h3>약학 기초 + 임상적 사고 시작</h3><p>의약품과 인체를 이해하는 기초를 쌓고, 환자 중심 치료와 임상적 의사결정의 기본 틀을 배웁니다.</p></article>
@@ -437,12 +431,11 @@ for u in D['universities']:
         uid=u['id']
         if uid=='jcu':
             overview='''<div class="monash-snapshot"><p class="lead"><strong>3년 Fast-track으로 학위를 마치고, 1학년부터 현장실습을 시작합니다.</strong></p><p>Townsville·Cairns·Mackay 세 캠퍼스에서 운영되며 전체 과정에 904시간의 placement가 포함됩니다.</p><div class="monash-keyline"><span>3년 Fast-track</span><span>904시간 Placement</span><span>Regional 3캠퍼스</span></div></div>'''
-            routes='''<div class="monash-route-grid compact-route-grid"><article class="full"><span class="route-label">DIRECT</span><h3>고졸 → 약대 1학년</h3><div class="monash-score-grid four">
-<span><small>ATAR / Rank</small><strong>76</strong></span>
-<span><small>IB</small><strong>27</strong><em>2025 국제가이드 참고</em></span>
-<span><small>SAT</small><strong>1020</strong><em>2025 국제가이드 참고</em></span>
-<span><small>한국 수능·내신</small><strong>확인 중</strong></span>
-</div><ul><li><strong>General Mathematics 필수</strong></li><li>Chemistry는 권장 · 필수 아님</li><li>IELTS 7.0 · 각 6.5</li><li>PTE 65 · 각 58 / TOEFL 94 · 각 23</li><li>2027년 2월 시작</li></ul><p class="monash-route-meta">IB·SAT는 현재 확인 가능한 JCU 국제학생 공식 환산표의 최신 참고값입니다. 한국 학력의 2027 약대 Direct 환산점수는 확인 전까지 숫자를 만들지 않습니다.</p></article></div>'''
+            routes='''<div class="monash-route-grid compact-route-grid"><article class="full"><span class="route-label">DIRECT</span><h3>고졸 → 약대 1학년</h3><div class="route-criteria">
+<div><small>입학조건</small><strong>ATAR / Rank 76 · IB 27 · SAT 1020</strong><span>General Mathematics 필수 · Chemistry 권장 · 한국 수능/내신 환산은 확인 중</span></div>
+<div><small>영어</small><strong>IELTS 7.0 · 각 6.5</strong><span>PTE 65 · 각 58 / TOEFL 94 · 각 23</span></div>
+<div><small>입학시기</small><strong>2027년 2월</strong></div>
+</div><p class="monash-route-meta">IB·SAT는 2025 JCU 국제학생 공식 환산표 참고값입니다.</p></article></div>'''
             curriculum='''<div class="monash-curriculum-grid compact-three">
 <article><span class="year">1학년</span><h3>과학·임상 기초 + 실습 시작</h3><p>Chemistry·Biology·Physiology·Pharmacology·Anatomy를 약국 실무와 연결합니다. 고교 Chemistry가 부족한 학생은 Preparatory Chemistry로 보완할 수 있습니다.</p></article>
 <article><span class="year">2학년부터</span><h3>임상적 판단 + 연구·실무</h3><p>각 trimester에서 practice-based·research-focused 학습을 결합해 임상적 추론과 일반 질환의 치료 판단을 강화합니다.</p></article>
@@ -461,9 +454,21 @@ for u in D['universities']:
             standard=next(x for x in rs if x['id']=='utas-foundation-standard'); fast=next(x for x in rs if x['id']=='utas-foundation-fast')
             overview='''<div class="monash-snapshot"><p class="lead"><strong>일반적인 4년 약학과 분량을 Semester 1·2와 Spring까지 활용해 3년에 마치는 Fast-track 과정입니다.</strong></p><p>Cradle Coast·Hobart·Launceston에서 운영되며, 1학년부터 시작하는 Professional Experience Placement가 최소 400시간 포함됩니다.</p><div class="monash-keyline"><span>3년 Fast-track</span><span>최소 400시간 PEP</span><span>Tasmania 3캠퍼스</span></div></div>'''
             routes='''<div class="monash-route-grid">
-<article><span class="route-label">DIRECT</span><h3>고졸 → 약대 1학년</h3><div class="monash-score-grid"><span><small>수능</small><strong>305</strong></span><span><small>IB</small><strong>25</strong></span><span><small>A-Level</small><strong>8</strong></span><span><small>OSSD</small><strong>70%</strong></span><span><small>SAT</small><strong>980</strong></span><span><small>한국 고교졸업장만</small><strong>Direct 아님</strong></span></div><ul><li>Mathematics 필수</li><li>Chemistry 또는 Physical Sciences 필수</li><li>IELTS 6.5 · 각 6.0</li></ul><p class="monash-route-meta">국제학력 환산점수는 UTas가 현재 연결하는 공식 equivalency table 기준입니다.</p></article>
-<article><span class="route-label">FOUNDATION</span><h3>Standard → 약대 1학년</h3><div class="monash-path-step"><small>Foundation 입학</small><strong>한국 고2 60%</strong><span>IELTS 5.5 · 각 5.0</span></div><div class="monash-path-arrow">↓</div><div class="monash-path-step"><small>약대 진급</small><strong>FCWAM 60%</strong><span>Chemistry + Statistics · Foundation English 평균 65%, 각 60%</span></div><p class="monash-route-meta">8~9개월 · 2027 학비 A$21,975</p></article>
-<article><span class="route-label">FAST-TRACK FOUNDATION</span><h3>빠른 준비과정 → 약대 1학년</h3><div class="monash-path-step"><small>입학</small><strong>한국 고2 65%</strong><span>General Mathematics 필요 · IELTS 6.0, 각 5.0</span></div><div class="monash-path-arrow">↓</div><div class="monash-path-step"><small>약대 진급</small><strong>FCWAM 60%</strong><span>Chemistry + Statistics · Foundation English 평균 65%, 각 60%</span></div><p class="monash-route-meta">4~5개월 · 2027 학비 A$25,450</p></article>
+<article><span class="route-label">DIRECT</span><h3>고졸 → 약대 1학년</h3><div class="route-criteria">
+<div><small>입학조건</small><strong>수능 305 · IB 25 · A-Level 8 · OSSD 70% · SAT 980</strong><span>Mathematics + Chemistry 또는 Physical Sciences 필수</span></div>
+<div><small>영어</small><strong>IELTS 6.5 · 각 6.0</strong></div>
+<div><small>입학시기</small><strong>Semester 1</strong></div>
+</div><p class="monash-route-meta">한국 고교졸업장만으로는 Direct 기준이 아닙니다.</p></article>
+<article><span class="route-label">FOUNDATION</span><h3>Standard → 약대 1학년</h3><div class="route-criteria">
+<div><small>입학조건</small><strong>한국 고2 60%</strong></div>
+<div><small>영어</small><strong>IELTS 5.5 · 각 5.0</strong></div>
+<div><small>입학시기</small><strong>2027년 2월 22일 · 6월 21일 · 10월 11일</strong></div>
+</div><p class="monash-route-meta">8~9개월 · 2027 학비 A$21,975</p></article>
+<article><span class="route-label">FAST-TRACK FOUNDATION</span><h3>빠른 준비과정 → 약대 1학년</h3><div class="route-criteria">
+<div><small>입학조건</small><strong>한국 고2 65% + General Mathematics</strong></div>
+<div><small>영어</small><strong>IELTS 6.0 · 각 5.0</strong></div>
+<div><small>입학시기</small><strong>2027년 2월 22일 · 6월 21일 · 10월 11일</strong></div>
+</div><p class="monash-route-meta">4~5개월 · 2027 학비 A$25,450</p></article>
 </div>'''
             curriculum='''<div class="monash-curriculum-grid compact-three">
 <article><span class="year">3년 구조</span><h3>Semester 1 · 2 + Spring</h3><p>세 개 study period를 활용해 400 credit points의 약학 Honours 과정을 3년에 완료합니다.</p></article>
@@ -483,8 +488,16 @@ for u in D['universities']:
             diploma=next(x for x in rs if x['id']=='curtin-college')
             overview='''<div class="monash-snapshot"><p class="lead"><strong>3년 9개월에 BPharm(Hons)을 마친 뒤, 약사등록을 위한 professional internship은 졸업 후 별도로 진행합니다.</strong></p><p>Direct 외에 Curtin College Pharmacy Diploma를 마치고 학점을 인정받아 약대 2학년으로 이어지는 경로가 분명한 학교입니다.</p><div class="monash-keyline"><span>3년 9개월</span><span>Diploma → 2학년</span><span>Perth · Bentley</span></div></div>'''
             routes='''<div class="monash-route-grid compact-route-grid two">
-<article><span class="route-label">DIRECT</span><h3>고졸 → 약대 1학년</h3><div class="monash-score-grid"><span><small>ATAR / Rank</small><strong>80</strong></span><span><small>국제학력 환산</small><strong>확인 중</strong></span></div><ul><li><strong>Chemistry + Mathematics 필수</strong></li><li>Biology / Human Biology 권장</li><li>IELTS 7.0 · 각 7.0</li><li>2027 국제학생 Direct 시작일 확인 중</li></ul></article>
-<article><span class="route-label">CURTIN COLLEGE</span><h3>Pharmacy Diploma → 약대 2학년</h3><div class="monash-path-step"><small>한국 학생 Stage 2 입학</small><strong>고3 Rank 6 또는 수능 280/600</strong><span>Mathematics + Chemistry · IELTS 6.5, 각 6.0</span></div><div class="monash-path-arrow">↓</div><div class="monash-path-step"><small>약대 진급</small><strong>CWA 70% + 추가 약학과목</strong><span>175 credits 인정 · 약대 2학년 연결</span></div><p class="monash-route-meta">Stage 2 2027 학비 A$44,900 · Stage 2는 2월 시작</p></article>
+<article><span class="route-label">DIRECT</span><h3>고졸 → 약대 1학년</h3><div class="route-criteria">
+<div><small>입학조건</small><strong>ATAR / Rank 80</strong><span>Chemistry + Mathematics 필수 · Biology / Human Biology 권장</span></div>
+<div><small>영어</small><strong>IELTS 7.0 · 각 7.0</strong></div>
+<div><small>입학시기</small><strong>2027 국제학생 Direct 확인 중</strong></div>
+</div></article>
+<article><span class="route-label">CURTIN COLLEGE</span><h3>Pharmacy Diploma → 약대 2학년</h3><div class="route-criteria">
+<div><small>입학조건</small><strong>한국 고3 Rank 6 또는 수능 280/600</strong><span>Mathematics + Chemistry 필수</span></div>
+<div><small>영어</small><strong>IELTS 6.5 · 각 6.0</strong><span>PTE 58 · 각 50</span></div>
+<div><small>입학시기</small><strong>Stage 2 · 2월</strong><span>Stage 1이 필요한 경우 2월/6월</span></div>
+</div><p class="monash-route-meta">Stage 2 2027 학비 A$44,900</p></article>
 </div>'''
             curriculum='''<div class="monash-curriculum-grid compact-three">
 <article><span class="year">초반</span><h3>약학·인체과학 기초</h3><p>Biochemistry·Physiology와 Pharmacy Practice를 바탕으로 의약품과 환자 케어의 기초를 만듭니다.</p></article>
@@ -501,10 +514,18 @@ for u in D['universities']:
             seo=('2027 커틴 약대 · 3년9개월·Diploma·20% 장학 | TNS','커틴대학교 약대의 3년 9개월 과정, Direct와 Curtin College 2학년 진학, 20% 국제학생 장학과 졸업 후 인턴십을 정리합니다.')
         else:
             diploma=next(x for x in rs if x['id']=='griffith-college')
-            overview='''<div class="monash-snapshot"><p class="lead"><strong>Gold Coast에서 공부하는 4년 BPharm(Hons) 과정이며, 2027 Guaranteed Admission rank는 76입니다.</strong></p><p>Direct 외에도 Griffith College Diploma of Health Sciences를 통해 80CP를 인정받고 약대 2학년 과정으로 이어지는 경로가 있습니다.</p><div class="monash-keyline"><span>4년 학사</span><span>2027 Rank 76</span><span>Diploma 80CP 인정</span></div></div>'''
+            overview='''<div class="monash-snapshot"><p class="lead"><strong>Gold Coast에서 공부하는 4년 BPharm(Hons) 과정이며, 2027 Guaranteed Admission rank는 76입니다.</strong></p><p>Direct 외에도 Griffith College Diploma of Health Sciences를 거쳐 약대 2학년으로 이어지는 경로가 있습니다.</p><div class="monash-keyline"><span>4년 학사</span><span>2027 Rank 76</span><span>Diploma → 약대 2학년</span></div></div>'''
             routes='''<div class="monash-route-grid compact-route-grid two">
-<article><span class="route-label">DIRECT</span><h3>고졸 → 약대 1학년</h3><div class="monash-score-grid"><span><small>2027 Rank</small><strong>76</strong></span><span><small>수능</small><strong>331</strong><em>2026 환산 참고</em></span><span><small>IB</small><strong>28</strong><em>2026 참고</em></span><span><small>A-Level</small><strong>7</strong><em>2026 참고</em></span><span><small>SAT</small><strong>1080</strong><em>미국 고교졸업 동반</em></span><span><small>영어</small><strong>IELTS 7.0</strong></span></div><ul><li>Gold Coast</li><li>3월·7월 입학은 2026 국제가이드 기준</li></ul><p class="monash-route-meta">Rank 76은 2027 Guaranteed Admission 공식값입니다. 국제학력 환산점수는 2027 표가 확인되기 전까지 2026 공식 H1 기준을 참고값으로 표시합니다.</p></article>
-<article><span class="route-label">GRIFFITH COLLEGE</span><h3>Diploma of Health Sciences → 약대 2학년</h3><div class="monash-path-step"><small>한국 학생 Diploma 입학</small><strong>고3 Rank 6 또는 수능 280</strong><span>검정고시 평균 80도 현재 공식 입학표에 포함</span></div><div class="monash-path-arrow">↓</div><div class="monash-path-step"><small>약대 진학</small><strong>80CP 인정</strong><span>Pharmacy progression quota · 정원 초과 시 Diploma GPA 순</span></div><p class="monash-route-meta">IELTS 6.5 · 각 6.0 · 2027 T1/T2/T3 시작</p></article>
+<article><span class="route-label">DIRECT</span><h3>고졸 → 약대 1학년</h3><div class="route-criteria">
+<div><small>입학조건</small><strong>2027 Rank 76 · 수능 331 · IB 28 · A-Level 7 · SAT 1080</strong><span>국제학력 환산점수는 2026 공식 기준 참고 · SAT는 미국 고교졸업 자격 동반</span></div>
+<div><small>영어</small><strong>IELTS 7.0 overall</strong><span>각 영역 기준은 2027 과정자료 추가 확인</span></div>
+<div><small>입학시기</small><strong>3월 · 7월</strong><span>2026 국제가이드 참고</span></div>
+</div></article>
+<article><span class="route-label">GRIFFITH COLLEGE</span><h3>Diploma of Health Sciences → 약대 2학년</h3><div class="route-criteria">
+<div><small>입학조건</small><strong>한국 고3 Rank 6 또는 수능 280</strong><span>검정고시 평균 80도 인정</span></div>
+<div><small>영어</small><strong>IELTS 6.5 · 각 6.0</strong><span>PTE 58 · 각 50 / TOEFL 79 · 각 19</span></div>
+<div><small>입학시기</small><strong>2027년 3월 1일 · 6월 27일 · 10월 5일</strong></div>
+</div></article>
 </div>'''
             curriculum='''<div class="monash-curriculum-grid compact-three">
 <article><span class="year">4년</span><h3>총 320CP Honours 과정</h3><p>Gold Coast에서 운영되는 4년 Bachelor of Pharmacy (Honours) 과정입니다.</p></article>
