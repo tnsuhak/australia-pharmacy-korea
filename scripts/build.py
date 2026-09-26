@@ -966,7 +966,7 @@ reg_sources='<details class="sources"><summary>자료 출처 <span>'+E(REG['veri
 
 reg_hero='''<div class="facts-grid monash-hero-facts">
 <div class="fact-tile"><small>약대</small><strong>3~5년</strong><span class="fact-note">대학·과정에 따라 다름</span></div>
-<div class="fact-tile"><small>인턴</small><strong>약 1년</strong><span class="fact-note">총 1,824시간</span></div>
+<div class="fact-tile"><small>인턴</small><strong>약 1년</strong><span class="fact-note">현재 1,575시간</span></div>
 <div class="fact-tile"><small>등록시험</small><strong>2개</strong><span class="fact-note">필기 + 구술</span></div>
 <div class="fact-tile"><small>마지막</small><strong>정식 약사등록</strong><span class="fact-note">호주 약사로 등록</span></div>
 </div>'''
@@ -974,31 +974,33 @@ reg_hero='''<div class="facts-grid monash-hero-facts">
 reg_overview='''<div class="monash-snapshot"><p class="lead"><strong>호주 약사가 되는 과정은 이것만 먼저 기억하면 됩니다.</strong></p><p><strong>약대 졸업 → 인턴 약 1년 → 시험 2개 → 정식 약사등록</strong>. 처음에는 이 네 단계만 이해하면 됩니다.</p></div>
 <div class="monash-flow" style="margin-top:22px">
 <div><b>1</b><strong>호주 약대 졸업</strong><span>약대 과정은 보통 3년·4년·5년입니다.</span></div><i>→</i>
-<div><b>2</b><strong>인턴 약 1년</strong><span>총 1,824시간의 인턴 실무와 인턴 교육과정을 진행합니다.</span></div><i>→</i>
-<div><b>3</b><strong>시험 2개</strong><span>필기 2시간 + 구술 35분. 인턴 75%인 1,368시간부터 응시 가능합니다.</span></div><i>→</i>
-<div><b>완료</b><strong>정식 약사등록</strong><span>남은 인턴 요건까지 마치면 호주 정식 약사등록을 신청합니다.</span></div>
+<div><b>2</b><strong>인턴 약 1년</strong><span>현재 기준 1,575시간의 인턴 실무와 인턴 교육과정을 진행합니다.</span></div><i>→</i>
+<div><b>3</b><strong>시험 2개</strong><span>필기 2시간 + 구술 35분. 인턴의 75%인 1,181시간부터 응시 가능합니다.</span></div><i>→</i>
+<div><b>완료</b><strong>정식 약사등록</strong><span>남은 인턴 요건까지 마치면 정식 약사등록을 신청합니다.</span></div>
 </div>'''+callout('<strong>숫자로 보면:</strong> 3년 약대는 대략 4년+, 4년 약대는 대략 5년+를 생각하면 이해가 쉽습니다. 실제 등록 시점은 시험 일정과 심사기간에 따라 더 늦어질 수 있습니다.')
 
 course_note='''<p><strong>약대 몇 년을 다니는지와, 정식 약사가 되기까지 몇 년이 걸리는지는 다릅니다.</strong></p>
 <div class="process-grid">
 <div class="process-card"><span class="number">3<small>년</small></span><h3>3년 약대</h3><p>약대 3년 + 인턴 약 1년 → <strong>정식 약사까지 대략 4년+</strong></p></div>
 <div class="process-card"><span class="number">4<small>년</small></span><h3>4년 약대</h3><p>약대 4년 + 인턴 약 1년 → <strong>정식 약사까지 대략 5년+</strong></p></div>
-<div class="process-card"><span class="number">5<small>년</small></span><h3>일부 5년 통합과정</h3><p>Monash·Sydney는 5년차에 인턴 실무와 인턴 교육과정 일부가 포함됩니다. → <strong>대략 5년+</strong></p></div>
+<div class="process-card"><span class="number">5<small>년</small></span><h3>일부 5년 통합과정</h3><p>Monash·Sydney처럼 마지막 해에 인턴 실무·인턴 교육 일부를 학위 안에 넣은 과정도 있습니다. → <strong>대략 5년+</strong></p></div>
 </div>'''+callout('위 기간은 전체 구조를 쉽게 이해하기 위한 대략적인 기준입니다. 시험 일정, 인턴 승인, 최종 등록 심사에 따라 실제 기간은 달라질 수 있습니다.')
 
-intern_html='''<div class="monash-snapshot"><p class="lead"><strong>인턴은 “약 1년”이라고 이해하면 됩니다.</strong></p><p>정확한 규정은 기간이 아니라 <strong>1,824시간</strong>입니다. 주 38시간으로 단순 계산하면 약 48주라서 학생 입장에서는 약 1년으로 이해하면 가장 쉽습니다.</p><div class="monash-keyline"><span>약 1년</span><span>총 1,824시간</span><span>75% = 1,368시간</span></div></div>'''
+intern_html='''<div class="monash-snapshot"><p class="lead"><strong>인턴은 “약 1년”이라고 이해하면 됩니다.</strong></p><p>현재 Pharmacy Board 운영기준은 <strong>1,575시간</strong>입니다. 12개월의 인턴약사 등록기간 안에서 이 시간을 채우는 구조로 이해하면 쉽습니다.</p><div class="monash-keyline"><span>약 1년</span><span>현재 1,575시간</span><span>75% = 1,181시간</span></div></div>'''
 intern_html+=facts([
  ('인턴 시작 전','인턴약사 등록 + 근무처·지도약사 승인'),
- ('인턴 실무','총 1,824시간'),
- ('시험 응시 가능','1,368시간 · 전체의 75%'),
+ ('인턴 실무','현재 총 1,575시간'),
+ ('시험 응시 가능','1,181시간 · 전체의 75%'),
  ('인턴과 함께','인턴 교육과정 (ITP)')
 ])
-intern_html+=callout('<strong>중요:</strong> 시험을 보려고 1,824시간을 전부 끝낼 필요는 없습니다. <strong>1,368시간(75%)</strong>을 채우면 필기·구술시험을 볼 수 있고, 시험 뒤에 남은 인턴 실무와 교육과정을 마칩니다.')
-intern_html+='<details class="advanced"><summary>인턴 시간 규정 자세히 보기</summary>'+facts([
- ('4주 동안 인정되는 시간','최소 '+str(sp['min_hours_per_four_weeks'])+'시간 · 최대 '+str(sp['max_hours_per_four_weeks'])+'시간'),
- ('지도약사와 근무하는 단위','원칙적으로 최소 '+str(sp['min_hours_per_approved_preceptor_period'])+'시간'),
- ('인턴약사 등록','보통 '+str(sp['provisional_registration_months'])+'개월 단위')
-])+'<p class="small">공식명칭은 Provisional Registration(인턴약사 등록), supervised practice(승인된 인턴 실무), preceptor(지도약사)입니다. 인턴약사 등록과 실무 승인을 받기 전에 일한 시간은 등록용 1,824시간에 포함되지 않습니다.</p></details>'
+intern_html+=callout('<strong>중요:</strong> 시험을 보려고 1,575시간을 전부 끝낼 필요는 없습니다. <strong>1,181시간(75%)</strong>을 채우면 필기·구술시험 응시요건을 갖출 수 있고, 시험 뒤 남은 인턴 실무와 교육과정을 마칩니다.')
+intern_html+='<div class="callout warn"><strong>왜 어떤 자료에는 1,824시간이라고 나오나요?</strong><br>기존 Pharmacy Board 등록표준과 일부 양식에는 아직 1,824시간이 남아 있지만, Board는 인턴십 운영기준을 1,575시간으로 낮춘 변경사항을 현재 유지하고 있습니다. 이 기준은 향후 새 등록표준이 시행되면 바뀔 수 있으므로 실제 졸업·인턴 시작 시점에 다시 확인해야 합니다.</div>'
+intern_html+='<details class="advanced"><summary>인턴 규정 자세히 보기</summary>'+facts([
+ ('4주간 인정 가능한 최대시간','180시간'),
+ ('공식명칭','Provisional Registration = 인턴약사 등록'),
+ ('지도약사','Preceptor = Board가 승인한 지도약사'),
+ ('기존 표준과 현재 운영기준','기존 표준 1,824시간 · 현재 운영 1,575시간')
+])+'<p class="small">기존 표준의 “4주 최소 80시간” 및 “한 지도약사 아래 최소 152시간” 조건은 현재 운영 변경사항에서 완화돼 있습니다. 실무시간은 인턴약사 등록과 supervised practice 승인을 받은 뒤부터 계산됩니다.</p></details>'
 
 written_topics=table([(E(x['label']),str(x['percent'])+'%') for x in wx['content']],['평가 영역','대략적 비중'],True)
 oral_title_ko={'Primary Healthcare':'환자 상담','Legal & Ethical Practice':'법·윤리','Problem Solving & Communication':'문제 해결·의사소통'}
@@ -1022,44 +1024,47 @@ exam_html='''<div class="monash-route-grid compact-route-grid two">
 <div><small>응시료</small><strong>A$'''+num(ox['fee_aud'])+'''</strong></div>
 </div><p class="small">환자 상담 + 법·윤리 + 문제 해결 <span class="term-en">Oral Exam</span></p></article>
 </div>'''
-exam_html+=callout('<strong>시험비 합계: 현재 A$'+num(rf['exam_total_aud'])+'</strong> · 필기 A$'+num(wx['fee_aud'])+' + 구술 A$'+num(ox['fee_aud']))
+exam_html+=callout('<strong>시험 2개는 18개월 안에 모두 합격해야 합니다.</strong> 현재 응시료는 필기 A$'+num(wx['fee_aud'])+' + 구술 A$'+num(ox['fee_aud'])+' = <strong>A$'+num(rf['exam_total_aud'])+'</strong>입니다.')
 exam_html+='<details class="advanced"><summary>필기시험 자세히 보기</summary>'+facts([
- ('언제 볼 수 있나','인턴 실무 1,368시간(75%) 완료 후'),
- ('시험 방식','컴퓨터로 응시'),
+ ('언제 볼 수 있나','인턴 실무 1,181시간(75%) 완료 후'),
+ ('시험 방식','시험센터에서 컴퓨터로 응시'),
  ('문제 형식','객관식 + 계산형 빈칸 문제'),
- ('볼 수 있는 책','AMH + APF 종이책 각 1권')
-])+'<h3>출제 비중</h3>'+written_topics+callout('<strong>고정 합격점(예: 65%)은 공개하지 않습니다.</strong> 시험 난이도를 반영한 기준으로 합격 여부를 판단하고, 응시자에게는 raw 점수나 백분율 대신 합격 여부를 통지합니다.')+'<p class="small">75문항 중 일부는 시험 품질을 점검하기 위한 문항으로 최종 점수에 반영되지 않습니다. 2027 시험일정은 공식 발표 후 업데이트합니다.</p></details>'
+ ('볼 수 있는 책','AMH + APF 원본 종이책 각 1권')
+])+'<h3>출제 비중</h3>'+written_topics+callout('<strong>고정 합격점(예: 65%)은 공개하지 않습니다.</strong> 시험 난이도를 반영한 기준으로 합격 여부를 판단하고, 응시자에게는 raw 점수나 백분율 대신 합격 여부를 알려줍니다.')+'<p class="small">75문항 중 약 90%는 실제 점수에 반영되고, 약 10%는 시험 품질 점검용 문항입니다. 2027 시험일정은 공식 발표 후 업데이트합니다.</p></details>'
 exam_html+='<details class="advanced"><summary>구술시험 자세히 보기</summary>'+table(oral_rows,['파트','무엇을 보나','시간','방식','자료','평가 내용'],True)+facts([
- ('언제 볼 수 있나','인턴 실무 1,368시간(75%) 완료 후'),
+ ('언제 볼 수 있나','인턴 실무 1,181시간(75%) 완료 후'),
  ('시험 횟수','통상 연 '+str(ox['sessions_per_year'])+'회'),
  ('결과 통지','최종 확인 후 이메일로 안내')
 ])+callout('<strong>1부와 2부는 참고자료를 볼 수 없고, 3부만 종이·오프라인 참고자료를 사용할 수 있습니다.</strong>')+'</details>'
 
 english_rows=[(E(x['test']),E(x['overall']),E(x['listening']),E(x['reading']),E(x['writing']),E(x['speaking'])) for x in els['tests']]
 finish_html='''<div class="monash-money-grid">
-<div><small>약사등록 영어</small><strong>IELTS 7.0</strong><span>Writing 6.5 · 나머지 7.0</span></div>
+<div><small>영어시험 경로 예시</small><strong>IELTS 7.0</strong><span>Writing 6.5 · 나머지 7.0</span></div>
 <div><small>시험 2개 비용</small><strong>A$'''+num(rf['exam_total_aud'])+'''</strong><span>필기 + 구술</span></div>
-<div><small>시험 + 등록 수수료</small><strong>약 A$'''+num(rf['national_regulatory_exam_total_aud'])+'''</strong><span>NSW 제외 · 인턴교육/영어시험 별도</span></div>
-<div><small>최종</small><strong>호주 정식 약사</strong><span class="term-en">General Registration</span></div>
+<div><small>시험 + 등록 수수료</small><strong>약 A$'''+num(rf['national_regulatory_exam_total_aud'])+'''</strong><span>현재 공개 2025/26 · NSW 제외</span></div>
+<div><small>NSW 기준</small><strong>약 A$'''+num(rf['nsw_regulatory_exam_total_aud'])+'''</strong><span>현재 공개 2025/26 · 인턴교육/영어시험 별도</span></div>
 </div>'''
-finish_html+=callout('<strong>대학 입학 영어와 약사등록 영어는 다릅니다.</strong> 약대 입학 때 영어조건을 충족했더라도, 정식 약사등록에 필요한 영어기준을 별도로 확인해야 합니다.')
-finish_html+='<details class="advanced"><summary>약사등록 영어점수 자세히 보기</summary>'+table(english_rows,['시험','Overall','Listening','Reading','Writing','Speaking'],True)+'<p>'+E(els['attempts'])+'. '+E(els['validity'])+'.</p><p class="small">위 점수는 2026년 4월 23일 이후 적용되는 현재 등록기준입니다.</p></details>'
+finish_html+=callout('<strong>모든 학생이 IELTS를 다시 보는 것은 아닙니다.</strong> Ahpra 약사등록 영어기준에는 학력으로 충족하는 경로와 영어시험으로 충족하는 경로가 있습니다. 대학 입학 영어점수와 약사등록 영어기준은 별개이므로 본인의 전체 학력에 따라 어떤 경로가 적용되는지 확인해야 합니다.')
+finish_html+='<details class="advanced"><summary>약사등록 영어시험 점수 보기</summary>'+table(english_rows,['시험','Overall','Listening','Reading','Writing','Speaking'],True)+'<p>'+E(els['attempts'])+'. '+E(els['validity'])+'.</p><p class="small">위 점수는 2026년 4월 23일 이후 시험 기준입니다. Cambridge C1 Advanced와 C2 Proficiency도 현재 인정됩니다.</p></details>'
 fee_rows=[
- ('인턴약사 등록 신청비','A$'+num(rf['provisional_application_aud']),'인턴 시작 전'),
+ ('인턴약사 등록 신청비','A$'+num(rf['provisional_application_aud']),'현재 공개 2025/26'),
  ('인턴약사 등록비','A$'+num(rf['provisional_registration_aud']),'NSW A$'+num(rf['provisional_registration_nsw_aud'])),
  ('필기시험','A$'+num(wx['fee_aud']),'1회'),
  ('구술시험','A$'+num(ox['fee_aud']),'1회'),
- ('정식 약사등록 신청비','A$'+num(rf['general_application_aud']),'최종 등록 신청'),
+ ('정식 약사등록 신청비','A$'+num(rf['general_application_aud']),'현재 공개 2025/26'),
  ('정식 약사 등록비','A$'+num(rf['general_registration_aud']),'NSW A$'+num(rf['general_registration_nsw_aud']))
 ]
-finish_html+='<details class="advanced"><summary>시험·등록 수수료 자세히 보기</summary>'+table(fee_rows,['항목','현재 금액','비고'],True)+'<p class="small">인턴 교육과정(ITP), 영어시험, 교재, 재응시·갱신 비용은 포함하지 않습니다. 수수료는 매년 바뀔 수 있으며 2027 고정금액으로 보지 않습니다.</p></details>'
+finish_html+='<details class="advanced"><summary>시험·등록 수수료 자세히 보기</summary>'+table(fee_rows,['항목','현재 금액','비고'],True)+'<p class="small">위 금액은 현재 공개된 2025/26 수수료입니다. 인턴 교육과정(ITP), 영어시험, 교재, 재응시·갱신 비용은 포함하지 않으며 2027 금액으로 확정 표시하지 않습니다.</p></details>'
 
 reg_faq=faq([
  ('약대를 졸업하면 바로 호주 약사인가요?','아닙니다. 일반적인 3년·4년 약대는 졸업 후 약 1년의 인턴 실무와 인턴 교육과정을 진행하고, 필기·구술시험을 통과한 뒤 정식 약사등록을 받아야 합니다.'),
- ('인턴은 정확히 1년인가요?','정확한 규정은 1년이 아니라 1,824시간입니다. 주 38시간으로 단순 계산하면 약 48주라서 약 1년으로 이해하면 쉽습니다.'),
- ('시험은 인턴을 다 끝낸 뒤 보나요?','아닙니다. 인턴 실무의 75%인 1,368시간을 마치면 필기·구술시험을 볼 수 있습니다. 시험 뒤 남은 인턴 요건을 마칩니다.'),
+ ('인턴은 정확히 1년인가요?','현재 운영기준은 1,575시간입니다. 인턴약사 등록은 보통 12개월 단위라서 학생에게는 약 1년이라고 설명하면 이해하기 쉽습니다.'),
+ ('1,824시간이라는 자료도 보이는데 무엇이 맞나요?','기존 Pharmacy Board 등록표준과 일부 양식에는 1,824시간이 남아 있습니다. 하지만 Board가 별도로 적용해 온 인턴십 변경사항은 1,575시간이며, 새 등록표준이 시행될 때까지 현재 운영기준으로 안내되고 있습니다. 실제 인턴 시작 시점에 최신 Board 기준을 다시 확인해야 합니다.'),
+ ('시험은 인턴을 다 끝낸 뒤 보나요?','아닙니다. 현재 인턴 실무의 75%인 1,181시간을 마치면 필기·구술시험 응시요건을 갖출 수 있습니다. 시험 뒤 남은 인턴 요건을 마칩니다.'),
+ ('필기와 구술시험은 언제까지 합격해야 하나요?','두 등록시험의 합격 결과는 18개월 안에 맞춰야 합니다. 한 시험에 먼저 합격했다면 다른 시험도 그 유효기간 안에 통과해야 합니다.'),
  ('3년 약대면 약 4년 만에 약사가 되나요?','큰 구조는 3년 약대 + 인턴 약 1년이므로 대략 4년+로 이해할 수 있습니다. 다만 시험 일정과 최종 등록 심사 때문에 실제 기간은 더 길어질 수 있습니다.'),
- ('5년 통합과정이면 시험을 안 봐도 되나요?','아닙니다. 일부 5년 과정은 인턴 실무와 인턴 교육과정 일부를 5년차에 포함하지만, 필요한 등록시험과 최종 약사등록 기준은 별도로 충족해야 합니다.')
+ ('5년 통합과정이면 시험을 안 봐도 되나요?','아닙니다. 일부 5년 과정은 인턴 실무와 인턴 교육과정 일부를 5년차에 포함하지만, 필요한 등록시험과 최종 약사등록 기준은 별도로 충족해야 합니다.'),
+ ('대학 입학 때 IELTS를 냈으면 약사등록 영어도 끝난 건가요?','항상 그런 것은 아닙니다. Ahpra 약사등록 영어기준은 별도이며, 학력으로 충족하는 경로와 영어시험으로 충족하는 경로가 있으므로 본인 학력을 기준으로 확인해야 합니다.')
 ])
 
 reg_items=[
@@ -1071,7 +1076,7 @@ reg_items=[
  ('faq','FAQ',reg_faq),
  ('sources','출처',reg_sources)
 ]
-register('/pharmacist-registration/','호주 약사 되는 법 · 약대 3~5년 + 인턴 약 1년 + 시험 2개 | TNS','호주 약대 졸업 후 정식 약사가 되는 과정을 숫자로 설명합니다. 약대 3~5년, 인턴 1,824시간 약 1년, 필기·구술시험 2개, 정식 약사등록까지 확인하세요.',pagehero('호주 약사 되는 법','약대 3~5년 → 인턴 약 1년(1,824시간) → 시험 2개 → 정식 약사등록. 먼저 숫자로 전체 구조를 이해하고 아래에서 필요한 세부내용만 확인하세요.','호주 약사등록',reg_hero)+article(reg_items,'compact-detail pharmacist-registration-detail'))
+register('/pharmacist-registration/','호주 약사 되는 법 · 약대 3~5년 + 인턴 약 1년 + 시험 2개 | TNS','호주 약대 졸업 후 정식 약사가 되는 과정을 숫자로 설명합니다. 약대 3~5년, 현재 인턴 1,575시간 약 1년, 필기·구술시험 2개, 정식 약사등록까지 확인하세요.',pagehero('호주 약사 되는 법','약대 3~5년 → 인턴 약 1년(현재 1,575시간) → 시험 2개 → 정식 약사등록. 먼저 숫자로 전체 구조를 이해하고 아래에서 필요한 세부내용만 확인하세요.','호주 약사등록',reg_hero)+article(reg_items,'compact-detail pharmacist-registration-detail'))
 
 # Korean pharmacist licence: recognized Australian schools + current exam route.
 korea_school_rows=[]

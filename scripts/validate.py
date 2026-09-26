@@ -334,26 +334,36 @@ if not registration_page.exists():
  errors.append('pharmacist-registration: page missing')
 else:
  rt=registration_page.read_text()
- for phrase in ['호주 약사 되는 법','약대 3~5년','인턴 약 1년','총 1,824시간','1,368시간','시험 2개','필기 2시간','구술 35분','75문항','3파트','A$1,279','약 A$2,409','정식 약사등록','인턴약사 등록 + 근무처·지도약사 승인','인턴 교육과정 (ITP)','고정 합격점(예: 65%)은 공개하지 않습니다.','대학 입학 영어와 약사등록 영어는 다릅니다.','호주 정식 약사']:
+ for phrase in ['호주 약사 되는 법','현재 1,575시간','1,181시간','75%','시험 2개','필기 2시간','구술 35분','75문항','3파트','18개월 안에 모두 합격','A$1,279','약 A$2,409','약 A$2,514','정식 약사등록','인턴약사 등록 + 근무처·지도약사 승인','인턴 교육과정 (ITP)','기존 표준 1,824시간 · 현재 운영 1,575시간','고정 합격점(예: 65%)은 공개하지 않습니다.','모든 학생이 IELTS를 다시 보는 것은 아닙니다.','Cambridge C1 Advanced','Cambridge C2 Proficiency','현재 공개 2025/26']:
   if phrase not in rt:errors.append(f'pharmacist-registration: missing {phrase}')
- for hard_first_read in ['총 1,824시간의 supervised practice + ITP','Written 2시간 + Oral 35분','Provisional Registration + supervised practice 승인']:
-  if hard_first_read in rt:errors.append(f'pharmacist-registration: first-read jargon remains {hard_first_read}')
+ for obsolete in ['총 1,824시간</strong>','75% = 1,368시간','1,368시간 · 전체의 75%','4주 동안 인정되는 시간</th><td>최소 80시간','Approved preceptor 단위']:
+  if obsolete in rt:errors.append(f'pharmacist-registration: obsolete current-rule copy remains {obsolete}')
  if '합격점 65%' in rt:
   errors.append('pharmacist-registration: obsolete fixed 65% pass mark rendered as current')
-if REG['supervised_practice']['total_hours']!=1824 or REG['supervised_practice']['exam_eligibility_hours']!=1368:
- errors.append('pharmacist-registration-data: supervised practice totals wrong')
+if REG['supervised_practice']['total_hours']!=1575 or REG['supervised_practice']['registration_standard_hours']!=1824 or REG['supervised_practice']['exam_eligibility_hours']!=1181:
+ errors.append('pharmacist-registration-data: current variation / underlying standard hours wrong')
+if REG['supervised_practice'].get('waived_requirements') is None or len(REG['supervised_practice']['waived_requirements'])<2:
+ errors.append('pharmacist-registration-data: current internship waivers not recorded')
 if REG['written_exam']['questions']!=75 or REG['written_exam']['duration_minutes']!=120 or REG['written_exam']['fee_aud']!=790:
  errors.append('pharmacist-registration-data: written exam structure/fee wrong')
 if sum(x['minutes'] for x in REG['oral_exam']['parts'])!=35 or REG['oral_exam']['fee_aud']!=489:
  errors.append('pharmacist-registration-data: oral exam structure/fee wrong')
 pte=next((x for x in REG['english']['tests'] if x['test']=='PTE Academic'),None)
 ielts=next((x for x in REG['english']['tests'] if x['test']=='IELTS Academic'),None)
+c1=next((x for x in REG['english']['tests'] if x['test']=='Cambridge C1 Advanced'),None)
+c2=next((x for x in REG['english']['tests'] if x['test']=='Cambridge C2 Proficiency'),None)
 if not pte or pte['overall']!='63' or pte['speaking']!='76':
  errors.append('pharmacist-registration-data: current PTE scores wrong')
 if not ielts or ielts['overall']!='7.0' or ielts['writing']!='6.5':
  errors.append('pharmacist-registration-data: current IELTS registration scores wrong')
+if not c1 or c1['overall']!='178' or c1['speaking']!='194':
+ errors.append('pharmacist-registration-data: Cambridge C1 scores wrong')
+if not c2 or c2['overall']!='185' or c2['writing']!='176':
+ errors.append('pharmacist-registration-data: Cambridge C2 scores wrong')
 if REG['fees']['exam_total_aud'] != REG['written_exam']['fee_aud'] + REG['oral_exam']['fee_aud']:
  errors.append('pharmacist-registration-data: exam fee total mismatch')
+if REG['fees'].get('national_regulatory_exam_total_aud')!=2409 or REG['fees'].get('nsw_regulatory_exam_total_aud')!=2514:
+ errors.append('pharmacist-registration-data: current published fee totals wrong')
 
 korea_page=R/'dist/korea-pharmacist/index.html'
 if not korea_page.exists():
