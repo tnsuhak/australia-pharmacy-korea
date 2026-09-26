@@ -18494,6 +18494,14 @@
       "source_year": 2026,
       "source_type": "official_university",
       "verified_date": "2026-09-26"
+    },
+    {
+      "id": "monash-curriculum-2027",
+      "title": "Monash · Undergraduate Pharmacy for International Students · 2027 curriculum",
+      "url": "https://www.monash.edu/pharm/future/courses/undergraduate-pharmacy-international",
+      "source_year": 2027,
+      "source_type": "official_course",
+      "verified_date": "2026-09-26"
     }
   ],
   "conflicts": [
