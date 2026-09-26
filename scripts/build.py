@@ -812,6 +812,104 @@ for u in D['universities']:
             seo=('2027 UniSQ 약대 · 4년·2028 3년 Accelerated·10% 장학 | TNS','UniSQ 약대의 2027년 4년 BPharm(Hons), 2028년 3년 Accelerated 전환, 온라인·캠퍼스 집중수업 구조, 영어와 10% 장학을 정리합니다.')
         items=[('overview',titles[0],overview),('routes',titles[1],routes),('curriculum',titles[2],curriculum),('cost',titles[3],cost),('after',titles[4],after),('sources','자료 출처',sources(allids))]
         register(purl(p),seo[0],seo[1],body+article(items,'compact-detail'))
+    elif u['id'] in ['sydney','unsw','uwa']:
+        uid=u['id']
+        if uid=='sydney':
+            overview='''<div class="monash-snapshot"><p class="lead"><strong>5년 동안 Bachelor of Pharmacy (Honours)와 Master of Pharmacy Practice를 연결해 이수하는 Sydney 약대입니다.</strong></p><p>4년차까지 마치면 BPharm(Hons)로 졸업할 수 있고, 5년차 Master 단계에는 약사등록용 supervised practice와 Intern Training Program이 통합돼 있습니다.</p><div class="monash-keyline"><span>5년 통합</span><span>4년 BPharm(Hons) Exit</span><span>등록 실무·ITP 통합</span></div></div>'''
+            routes='''<div class="monash-route-grid">
+<article><span class="route-label">DIRECT</span><h3>고졸 → 약대 1학년</h3><div class="route-criteria">
+<div><small>입학조건</small><strong>수능 346 · IB 31 · A-Level 14 · SAT 1300 · Mathematics 필수</strong></div>
+<div><small>영어</small><strong>IELTS 6.5 · 각 6.0</strong></div>
+<div><small>입학시기</small><strong>2월</strong></div>
+</div></article>
+<article><span class="route-label">USFP STANDARD</span><h3>12개월 Foundation → 약대 1학년</h3><div class="route-criteria">
+<div><small>입학조건</small><strong>Foundation 입학학력 확인 중 · Pharmacy 진급 GPA 7.3 + English C + Mathematics</strong></div>
+<div><small>영어</small><strong>2027 Foundation 입학기준 확인 중</strong></div>
+<div><small>입학시기</small><strong>1월 · 7월</strong></div>
+</div></article>
+<article><span class="route-label">USFP INTENSIVE</span><h3>9개월 Intensive Foundation → 약대 1학년</h3><div class="route-criteria">
+<div><small>입학조건</small><strong>Foundation 입학학력 확인 중 · Pharmacy 진급 GPA 7.3 + English C + Mathematics</strong></div>
+<div><small>영어</small><strong>2027 Foundation 입학기준 확인 중</strong></div>
+<div><small>입학시기</small><strong>4월 · 10월</strong></div>
+</div></article>
+</div><div class="monash-scholarship-note"><strong>Foundation 시작과 본과 시작 연도는 다를 수 있습니다.</strong><span>Sydney Pharmacy 본과는 2월 시작</span><p>2027년에 Foundation을 시작하면 일정에 따라 Pharmacy 본과 입학은 2028년이 됩니다. 진급에는 USFP GPA 7.3, English C와 Mathematics 조건이 적용됩니다.</p></div>'''
+            curriculum='''<div class="monash-curriculum-grid compact-three">
+<article><span class="year">1~4학년</span><h3>Bachelor of Pharmacy (Honours)</h3><p>약학·약리학·환자 중심 실무를 배우고 1학년부터 다양한 외부 placement를 경험합니다.</p></article>
+<article><span class="year">4학년</span><h3>Honours + 학사 Exit</h3><p>Honours 연구가 통합되어 있으며, 4년 학사요건을 마친 뒤 BPharm(Hons)로 졸업하는 Exit도 가능합니다.</p></article>
+<article><span class="year">5학년</span><h3>Master of Pharmacy Practice</h3><p>최종 Master 단계에서 세 차례 10주 외부 placement 등 professional practice를 진행하며 등록 실무를 완성합니다.</p></article>
+</div>'''
+            cost='''<div class="monash-money-grid">
+<div><small>2027 국제학생 학비</small><strong>A$63,600 / 년</strong><span>Pharmacy undergraduate 2027 fee guide</span></div>
+<div><small>USFP Standard</small><strong>A$49,800</strong><span>2027 · 12개월</span></div>
+<div><small>USFP Intensive</small><strong>A$47,690</strong><span>2027 · 9개월</span></div>
+<div><small>Sydney International Student Award</small><strong>20%</strong><span>한국 학생 대상 · 별도 신청</span></div>
+</div><div class="section-link-list compact-links">'''+link('/tuition-scholarships/','호주 약대 전체 학비·생활비 비교 →')+'''</div>'''
+            after='''<div class="monash-flow"><div><b>4년</b><strong>BPharm(Hons)</strong><span>학사 Exit 가능</span></div><i>↓</i><div><b>5년차</b><strong>Master + supervised practice + ITP</strong><span>등록 실무를 학위 안에 통합</span></div><i>↓</i><div><b>등록요건</b><strong>Pharmacy Board 시험·기준 충족</strong><span>별도 등록심사</span></div><i>↓</i><div><b>지역</b><strong>Sydney</strong><span>Regional 추가 485 없음</span></div></div><div class="section-link-list compact-links">'''+link('/pharmacist-registration/','호주 약사등록 방법 →')+link('/korea-pharmacist/','한국 약사면허 취득 방법 →')+'''</div>'''
+            titles=('Sydney 약대 과정 구조','입학방법 3가지','5년 과정·실습','학비·장학금·Foundation','5년 통합과정과 졸업 후')
+            seo=('2027 시드니대 약대 · 수능346·Foundation·20% 장학 | TNS','시드니대학교 약대의 5년 Bachelor+Master 통합과정, 수능 346 Direct, USFP Foundation, 2027 학비와 20% 국제학생 장학을 정리합니다.')
+        elif uid=='unsw':
+            overview='''<div class="monash-snapshot"><p class="lead"><strong>2027년부터 Bachelor of Pharmaceutical Medicine / Doctor of Pharmacy 명칭으로 모집하는 5년 통합 약대입니다.</strong></p><p>Direct와 UNSW College Foundation 경로가 있으며, 2027 국제학생 Direct 기준은 International ATAR 87 · IB 33입니다. 새 Doctor of Pharmacy 명칭의 규제기관 목록 반영은 계속 확인합니다.</p><div class="monash-keyline"><span>5년 PharmD 통합</span><span>2027 IB 33</span><span>UNSW College Foundation</span></div></div><div class="monash-scholarship-note"><strong>과정명 변경 확인사항</strong><span>2027 Doctor of Pharmacy</span><p>UNSW 공식 2027 자료는 Doctor of Pharmacy 명칭과 약사등록 자격과정임을 안내합니다. 다만 APC의 현재 공개 목록에는 기존 Master of Pharmacy 명칭이 남아 있어 최신 regulator 반영을 지원 전에 다시 확인합니다.</p></div>'''
+            routes='''<div class="monash-route-grid compact-route-grid two">
+<article><span class="route-label">DIRECT</span><h3>고졸 → 약대 1학년</h3><div class="route-criteria">
+<div><small>입학조건</small><strong>International ATAR 87 · IB 33 · A-Level 15 · Chemistry + Mathematics Advanced 선행지식</strong></div>
+<div><small>영어</small><strong>IELTS 7.0 · 각 6.0</strong></div>
+<div><small>입학시기</small><strong>2027 Term 1</strong></div>
+</div></article>
+<article><span class="route-label">UNSW COLLEGE</span><h3>9개월 Standard Foundation → 약대 1학년</h3><div class="route-criteria">
+<div><small>입학조건</small><strong>Foundation 입학학력 확인 중 · 진급 GPA 7.6 + Academic English B + Science</strong></div>
+<div><small>영어</small><strong>2027 Foundation 입학기준 확인 중</strong></div>
+<div><small>입학시기</small><strong>4월 · 10월</strong></div>
+</div></article>
+</div><div class="monash-scholarship-note"><strong>Foundation 진급표도 과정명 업데이트 확인 중</strong><span>현재 공개표는 기존 Master 명칭 사용</span><p>현재 College 진급표의 3895 Pharmacy 기준은 GPA 7.6, Academic English B와 Life Science/Physical Science입니다. Doctor of Pharmacy 명칭 전용 2027 진급표가 공개되면 다시 대조합니다.</p></div>'''
+            curriculum='''<div class="monash-curriculum-grid compact-three">
+<article><span class="year">5년</span><h3>Pharmaceutical Medicine + PharmD</h3><p>pharmaceutical sciences, pharmacy practice와 management를 연결해 임상 약사 역할까지 준비하는 통합과정입니다.</p></article>
+<article><span class="year">실무</span><h3>Experiential learning</h3><p>환자 중심 임상학습과 실무 경험을 통해 조제뿐 아니라 medication management와 확장된 약사 역할을 준비합니다.</p></article>
+<article><span class="year">졸업 후</span><h3>등록 인턴십 별도</h3><p>학위과정의 실습과 별개로 Pharmacy Board가 요구하는 졸업 후 등록 인턴십과 시험 절차를 진행합니다.</p></article>
+</div>'''
+            cost='''<div class="monash-money-grid compact-three-money">
+<div><small>2027 국제학생 학비</small><strong>확인 중</strong><span>공식 2027 금액 발표 후 반영</span></div>
+<div><small>현재 공식 학비 참고</small><strong>A$63,000 / 년</strong><span>2026 indicative first-year fee</span></div>
+<div><small>UNSW College Standard</small><strong>A$43,650</strong><span>2027 tuition · compulsory fee 별도</span></div>
+<div><small>International Student Award 20%</small><strong>한국 국적 대상 아님</strong><span>현재 대상국 기준</span></div>
+</div><div class="section-link-list compact-links">'''+link('/tuition-scholarships/','호주 약대 전체 학비·생활비 비교 →')+'''</div>'''
+            after='''<div class="monash-flow"><div><b>5년</b><strong>Bachelor + Doctor of Pharmacy</strong><span>Kensington</span></div><i>↓</i><div><b>졸업 후</b><strong>등록 인턴십</strong><span>학위 밖에서 진행</span></div><i>↓</i><div><b>등록요건</b><strong>필기·구술시험 및 심사</strong><span>Pharmacy Board 절차</span></div><i>↓</i><div><b>지역</b><strong>Sydney</strong><span>Regional 추가 485 없음</span></div></div><div class="section-link-list compact-links">'''+link('/pharmacist-registration/','호주 약사등록 방법 →')+link('/korea-pharmacist/','한국 약사면허 취득 방법 →')+'''</div>'''
+            titles=('UNSW 약대 과정 구조','입학방법 2가지','5년 PharmD 과정·실습','학비·Foundation','5년 과정과 졸업 후')
+            seo=('2027 UNSW 약대 · PharmD·IB33·Foundation·학비 | TNS','UNSW의 2027 Bachelor of Pharmaceutical Medicine / Doctor of Pharmacy 5년 과정, Direct·Foundation 입학과 학비·인증 확인사항을 정리합니다.')
+        else:
+            overview='''<div class="monash-snapshot"><p class="lead"><strong>고교 졸업 후 4년 만에 Bachelor of Human Sciences (Pharmaceutical Health)와 Doctor of Pharmacy를 함께 마치는 UWA 통합과정입니다.</strong></p><p>입학기준은 ATAR 85 상당이며, combined degree 안에서 Doctor of Pharmacy로 이어지는 assurance 기준은 WAM 65%입니다. Perth는 Regional Category 2 지역입니다.</p><div class="monash-keyline"><span>4년 Bachelor + PharmD</span><span>ATAR 85</span><span>2027 장학 10~20%</span></div></div>'''
+            routes='''<div class="monash-route-grid">
+<article><span class="route-label">DIRECT</span><h3>고졸 → 4년 Bachelor + PharmD</h3><div class="route-criteria">
+<div><small>입학조건</small><strong>수능 329 · IB 30 · A-Level 10 · SAT 1220 · Chemistry/Mathematics 선행지식</strong></div>
+<div><small>영어</small><strong>IELTS 7.0 · 각 7.0</strong></div>
+<div><small>입학시기</small><strong>Semester 1 · 2월</strong></div>
+</div></article>
+<article><span class="route-label">FOUNDATION 8개월</span><h3>8개월 Foundation → 통합과정 1학년</h3><div class="route-criteria">
+<div><small>입학조건</small><strong>검정고시 60% · 수능 260 · 고2 70% · 고3 60% · 진급 Foundation 70</strong></div>
+<div><small>영어</small><strong>IELTS 6.0 · 각 5.5</strong></div>
+<div><small>입학시기</small><strong>UWA College 일정</strong></div>
+</div></article>
+<article><span class="route-label">FOUNDATION 12개월</span><h3>12개월 Foundation → 통합과정 1학년</h3><div class="route-criteria">
+<div><small>입학조건</small><strong>검정고시 60% · 수능 230 · 고2 65% · 고3 60% · 진급 Foundation 70</strong></div>
+<div><small>영어</small><strong>IELTS 5.5 · 각 5.0</strong></div>
+<div><small>입학시기</small><strong>UWA College 일정</strong></div>
+</div></article>
+</div>'''
+            curriculum='''<div class="monash-curriculum-grid compact-three">
+<article><span class="year">4년</span><h3>Bachelor + Doctor of Pharmacy</h3><p>216 points의 combined degree를 4년에 이수하고 Bachelor와 Doctor of Pharmacy 두 학위를 받는 구조입니다.</p></article>
+<article><span class="year">실무</span><h3>다양한 Pharmacy 환경</h3><p>community, hospital, general practice와 aged care 등에서 임상·환자케어 역량을 쌓도록 실무학습이 포함됩니다.</p></article>
+<article><span class="year">진급</span><h3>Doctor of Pharmacy assurance</h3><p>ATAR 85 상당으로 combined degree에 입학한 뒤, Doctor of Pharmacy 단계 assurance를 위해 WAM 65% 기준을 유지해야 합니다.</p></article>
+</div>'''
+            cost='''<div class="monash-money-grid">
+<div><small>2027 국제학생 학비</small><strong>확인 중</strong><span>공식 2027 fee table 발표 후 반영</span></div>
+<div><small>현재 공식 학비 참고</small><strong>A$46,000 / 년</strong><span>2026 · 48 points 기준</span></div>
+<div><small>Global Excellence 2027</small><strong>자동심사 · 10% / 20%</strong><span>ATAR 85~89.95 = 10% · ATAR 90+ = 20%</span></div>
+<div><small>Foundation</small><strong>8개월 · 12개월</strong><span>학비는 최신 offer 기준으로 확인</span></div>
+</div><div class="section-link-list compact-links">'''+link('/tuition-scholarships/','호주 약대 전체 학비·생활비 비교 →')+'''</div>'''
+            after='''<div class="monash-flow"><div><b>4년</b><strong>Bachelor + Doctor of Pharmacy</strong><span>Crawley</span></div><i>↓</i><div><b>졸업 후</b><strong>Supervised internship</strong><span>학위 밖에서 진행</span></div><i>↓</i><div><b>등록요건</b><strong>시험·심사 완료</strong><span>Pharmacy Board 절차</span></div><i>↓</i><div><b>지역</b><strong>Perth</strong><span>Regional Category 2</span></div></div><div class="section-link-list compact-links">'''+link('/pharmacist-registration/','호주 약사등록 방법 →')+link('/korea-pharmacist/','한국 약사면허 취득 방법 →')+'''</div>'''
+            titles=('UWA 약대 과정 구조','입학방법 3가지','4년 통합과정·실습','학비·장학금·Foundation','4년 과정과 졸업 후')
+            seo=('2027 UWA 약대 · 4년 PharmD·수능329·Foundation·20% 장학 | TNS','UWA 약대의 4년 Bachelor+Doctor of Pharmacy 통합과정, 수능 329 Direct, UWA College Foundation과 2027 10~20% 장학을 정리합니다.')
+        items=[('overview',titles[0],overview),('routes',titles[1],routes),('curriculum',titles[2],curriculum),('cost',titles[3],cost),('after',titles[4],after),('sources','자료 출처',sources(allids))]
+        register(purl(p),seo[0],seo[1],body+article(items,'compact-detail'))
     else:
         items=[('overview','이 약대 핵심',intro),('structure','과정·학위 구조',anatomy),('routes','입학방법',routes_html),('admission','Direct 입학조건','<h3>학력·성적</h3>'+qtable(pid)+'<h3>선수과목</h3>'+requirements_html+'<h3>영어</h3>'+english_html+'<h3>입학시기</h3>'+fv(it['label'])+'<p class="small">Foundation·Diploma 일정은 위 ‘입학방법’에서 바로 볼 수 있습니다.</p>'),('cost','학비·장학금·생활비','<h3>학비</h3>'+fees+'<h3>장학금</h3>'+scholarcards(ss)+'<h3>기숙사·숙소</h3>'+housingcards(hh)+'<h3>1년 예산</h3>'+costcalculator()),('poststudy','졸업 후 485·지역',poststudy_html(u)),('registration','호주 약사등록',registration_html),('korea','한국 약사면허','<p>호주 약대 졸업만으로 한국 약사면허가 자동으로 나오지 않습니다. 대학 인정, 호주 면허, 예비시험·국가시험을 따로 거칩니다.</p>'+link('/korea-pharmacist/','한국 약사면허 확인 순서 →','btn text')),('faq','자주 묻는 질문',faq(fs)),('sources','자료 출처',sources(allids))]
         register(purl(p),f'2027 {u["name_ko"]} 약대 완전분석 · 입학·학비·485 | TNS',u['name']+' Pharmacy의 과정기간, 입학방법, 선수과목, 학비·장학금, 인턴십, 485 지역조건과 약사등록을 정리합니다.',body+article(items),fs)
