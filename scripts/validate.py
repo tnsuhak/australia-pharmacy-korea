@@ -52,6 +52,11 @@ for name,seq in [('title',titles),('description',descriptions)]:
 if 'Disallow: /' not in (R/'dist/robots.txt').read_text():errors.append('preview robots is not blocked')
 if 'noindex' not in (R/'dist/_headers').read_text():errors.append('preview HTTP noindex missing')
 if not (R/'assets/og-image.png').exists():errors.append('OG raster asset missing')
+public_copy_banned=['자동판정','legacy P6001','live page','destination-degree','승격하지','자료를 대조 중']
+for path in pages:
+ text=path.read_text()
+ for phrase in public_copy_banned:
+  if phrase in text:errors.append(f'{path.relative_to(R/"dist")}: developer-style public copy remains: {phrase}')
 korea_page=R/'dist/korea-pharmacist/index.html'
 if not korea_page.exists():
  errors.append('korea-pharmacist: page missing')
@@ -60,7 +65,7 @@ else:
  if len(KD.get('recognized_schools',[]))!=13:errors.append('korea-pharmacist: recognized Australia school count is not 13')
  for school in KD.get('recognized_schools',[]):
   if school['en'] not in kt:errors.append(f'korea-pharmacist: missing recognized school {school["en"]}')
- for phrase in ['보건복지부장관 인정 호주 약대 13곳','Adelaide University는 별도 확인이 필요합니다.','2026. 6. 28.(일)','220,000원','2027. 1. 21.(목)','약학 기초','생명약학','각 과목 만점의 40% 이상 + 전 과목 총점의 60% 이상']:
+ for phrase in ['보건복지부장관 인정 호주 약대 13곳','Adelaide University는 기존 UniSA 인정과 자동으로 같지 않습니다.','2026. 6. 28.(일)','220,000원','2027. 1. 21.(목)','약학 기초','생명약학','각 과목 만점의 40% 이상 + 전 과목 총점의 60% 이상']:
   if phrase not in kt:errors.append(f'korea-pharmacist: missing exam/recognition content {phrase}')
 ids={p['id'] for p in D['programs']}
 for coll in ['requirements','english','tuition','intakes','professional_registration']:
