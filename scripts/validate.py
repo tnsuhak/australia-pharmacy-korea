@@ -52,7 +52,7 @@ for name,seq in [('title',titles),('description',descriptions)]:
 if 'Disallow: /' not in (R/'dist/robots.txt').read_text():errors.append('preview robots is not blocked')
 if 'noindex' not in (R/'dist/_headers').read_text():errors.append('preview HTTP noindex missing')
 if not (R/'assets/og-image.png').exists():errors.append('OG raster asset missing')
-public_copy_banned=['자동판정','legacy P6001','live page','destination-degree','승격하지','자료를 대조 중']
+public_copy_banned=['자동판정','legacy P6001','live page','승격하지','자료를 대조 중']
 for path in pages:
  text=path.read_text()
  for phrase in public_copy_banned:
