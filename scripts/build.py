@@ -324,7 +324,7 @@ for u in D['universities']:
 <div class="fact-tile"><small>과정</small><strong>5년 PharmD</strong></div>
 <div class="fact-tile"><small>캠퍼스</small><strong>Parkville</strong></div>
 <div class="fact-tile"><small>입학</small><strong>2월</strong></div>
-<div class="fact-tile"><small>2027 국제학생 학비</small><strong>확인 중</strong><span class="fact-note">2026 공식 '''+E(money(t['annual']))+''' 참고</span></div>
+<div class="fact-tile"><small>2027 국제학생 학비</small><strong>'''+E(money(t['annual']))+'''</strong><span class="fact-note">48 credit points 기준</span></div>
 <div class="fact-tile"><small>영어</small><strong>IELTS 6.5 · 각 6.0</strong></div>
 <div class="fact-tile"><small>장학금</small><strong>경쟁선발</strong><span class="fact-note">Merit '''+E(money(monash_general_merit['amount']))+'''/년 · 연 '''+E(value(monash_general_merit['number_available']))+'''명</span></div>
 </div>'''
@@ -371,11 +371,11 @@ for u in D['universities']:
         monash_leadership=next(x for x in ss if x['id']=='monash-international-leadership')
         monash_scholars=next(x for x in ss if x['id']=='monash-merit')
         monash_cost='''<div class="monash-money-grid">
-<div><small>2027 국제학생 학비</small><strong>확인 중</strong><span>2026 공식 '''+E(money(t['annual']))+''' · 48 credit points 참고</span></div>
+<div><small>2027 국제학생 학비</small><strong>'''+E(money(t['annual']))+'''</strong><span>48 credit points 기준</span></div>
 <div><small>일반 국제학생 Merit</small><strong>'''+E(money(monash_general_merit['amount']))+''' / 년</strong><span>연 '''+E(value(monash_general_merit['number_available']))+'''명 · 자동심사 · 경쟁선발</span></div>
 <div><small>Leadership</small><strong>학비 '''+E(str(value(monash_leadership['amount'])))+'''%</strong><span>연 '''+E(value(monash_leadership['number_available']))+'''명 · 자동심사 · 경쟁선발</span></div>
 <div><small>Parkville 인근 쉐어</small><strong>A$290~380 / 주</strong><span>현재 공식 생활비 참고</span></div>
-</div><div class="monash-scholarship-note"><strong>Scholars Program 별도 장학</strong><span>25% 또는 50% · 연 '''+E(value(monash_scholars['number_available']))+'''명</span><p>P6007 Scholars Program 대상입니다. 일반 P6007 약대 학생 전체 대상 장학금은 아닙니다.</p></div><div class="section-link-list compact-links">'''+link('/tuition-scholarships/','호주 약대 전체 학비·생활비 비교 →')+'''</div>'''
+</div><div class="monash-scholarship-note"><strong>약대 전용 25%·50% 장학</strong><span>P6007 적용 확인 중</span><p>현재 공식 장학 페이지에는 기존 P3001/P6001 등이 대상 과정으로 표시되고 P6007은 아직 없습니다. 따라서 2027 P6007 학생 장학금으로는 확정하지 않습니다.</p></div><div class="section-link-list compact-links">'''+link('/tuition-scholarships/','호주 약대 전체 학비·생활비 비교 →')+'''</div>'''
         monash_after='''<div class="monash-flow"><div><b>1~4년차</b><strong>BPharm(Hons)</strong><span>4년 후 학사로 졸업 가능</span></div><i>↓</i><div><b>5년차</b><strong>Doctor of Pharmacy</strong><span>유급 supervised practice + Intern Training Program</span></div><i>↓</i><div><b>호주 약사등록</b><strong>등록시험·심사 완료</strong><span>General Registration</span></div><i>↓</i><div><b>졸업비자</b><strong>기본 485 · 2년</strong><span>Melbourne은 Regional 추가기간 없음</span></div></div><div class="section-link-list compact-links">'''+link('/pharmacist-registration/','호주 약사등록 방법 →')+link('/korea-pharmacist/','한국 약사면허 취득 방법 →')+'''</div>'''
         items=[('overview','모나쉬 약대 과정 구조',monash_overview),('routes','입학방법 3가지',monash_routes),('curriculum','5년 커리큘럼 한눈에 보기',monash_curriculum),('cost','학비·장학금·생활비',monash_cost),('after','5년 과정과 졸업 후',monash_after),('sources','자료 출처',sources(allids))]
         register(purl(p),'2027 모나쉬 약대 · 5년 PharmD·입학조건·학비 | TNS','모나쉬대학교 5년 Pharmacy/Doctor of Pharmacy 과정의 Direct·Foundation·Graduate Entry, 2027 학비·장학금과 졸업 후 약사등록을 간단히 정리합니다.',body+article(items,'monash-detail'))
