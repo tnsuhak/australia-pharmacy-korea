@@ -111,3 +111,88 @@
  .monash-curriculum-grid{grid-template-columns:1fr}
  .monash-curriculum-grid article{padding:16px}
 }
+
+
+/* Monash visual section rhythm */
+.monash-detail .article-section{
+  margin:0;
+  padding:44px 0 50px;
+  border-top:1px solid #dce5dd;
+}
+.monash-detail .article-section:first-child{
+  border-top:0;
+  padding-top:4px;
+}
+.monash-detail .article-section:last-child{
+  padding-bottom:0;
+}
+.monash-detail .article-section h2{
+  border-bottom:0;
+  padding-bottom:0;
+  margin:0 0 28px;
+  font-size:28px;
+}
+.monash-detail #overview h2::before,
+.monash-detail #routes h2::before,
+.monash-detail #curriculum h2::before,
+.monash-detail #cost h2::before,
+.monash-detail #after h2::before{
+  display:block;
+  margin-bottom:9px;
+  font-size:10px;
+  line-height:1.2;
+  font-weight:800;
+  letter-spacing:.12em;
+  color:var(--teal);
+}
+.monash-detail #overview h2::before{content:"01 · COURSE STRUCTURE"}
+.monash-detail #routes h2::before{content:"02 · ADMISSION"}
+.monash-detail #curriculum h2::before{content:"03 · CURRICULUM"}
+.monash-detail #cost h2::before{content:"04 · COST"}
+.monash-detail #after h2::before{content:"05 · AFTER GRADUATION"}
+.monash-detail .article-section:nth-child(even):not(#sources){
+  margin:16px -30px;
+  padding:34px 30px 38px;
+  border:1px solid #dfe8e0;
+  border-radius:18px;
+  background:#f6f8f5;
+}
+.monash-detail .article-section:nth-child(even):not(#sources) + .article-section{
+  border-top:0;
+}
+.monash-detail #sources{
+  padding-top:36px;
+}
+.monash-detail #sources h2{
+  margin-bottom:10px;
+  font-size:18px;
+  color:var(--muted);
+}
+.monash-detail #sources .sources{
+  margin-top:0;
+  padding-top:0;
+  border-top:0;
+}
+@media(max-width:780px){
+  .monash-detail .article-section{
+    padding:36px 0 42px;
+  }
+  .monash-detail .article-section:first-child{
+    padding-top:0;
+  }
+  .monash-detail .article-section h2{
+    margin-bottom:24px;
+    font-size:23px;
+    line-height:1.35;
+  }
+  .monash-detail .article-section:nth-child(even):not(#sources){
+    margin:10px -16px;
+    padding:28px 16px 32px;
+    border-left:0;
+    border-right:0;
+    border-radius:0;
+  }
+  .monash-detail #sources{
+    padding-top:30px;
+  }
+}
