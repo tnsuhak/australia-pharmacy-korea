@@ -165,6 +165,77 @@ if not unisq_program or unisq_program['duration_years']['value']!=4 or unisq_pro
 if not unisq_tuition or unisq_tuition['annual']['value']!=34280 or unisq_tuition['annual']['source_year']!=2026:
  errors.append('unisq-data: A$34,280 must remain a 2026 fee reference')
 
+
+compact_batch_4={
+ 'sydney-pharmacy':(3,['Sydney 약대 과정 구조','5년 통합','4년 BPharm(Hons) Exit','수능 346 · IB 31 · A-Level 14 · SAT 1300','12개월 Foundation → 약대 1학년','9개월 Intensive Foundation → 약대 1학년','GPA 7.3 + English C + Mathematics','A$63,600 / 년','A$49,800','A$47,690','Sydney International Student Award','20%','Master + supervised practice + ITP']),
+ 'unsw-pharmacy':(2,['UNSW 약대 과정 구조','2027년부터 Bachelor of Pharmaceutical Medicine / Doctor of Pharmacy','International ATAR 87 · IB 33 · A-Level 15','IELTS 7.0 · 각 6.0','9개월 Standard Foundation → 약대 1학년','GPA 7.6 + Academic English B + Science','A$63,000 / 년','A$43,650','한국 국적 대상 아님','과정명 변경 확인사항','5년 PharmD 과정·실습']),
+ 'uwa-pharmacy':(3,['UWA 약대 과정 구조','4년 Bachelor + PharmD','수능 329 · IB 30 · A-Level 10 · SAT 1220','8개월 Foundation → 통합과정 1학년','수능 260 · 고2 70% · 고3 60%','12개월 Foundation → 통합과정 1학년','수능 230 · 고2 65% · 고3 60%','IELTS 7.0 · 각 7.0','A$46,000 / 년','자동심사 · 10% / 20%','WAM 65%','Regional Category 2'])
+}
+for slug,(route_count,phrases) in compact_batch_4.items():
+ page=R/f'dist/universities/{slug}/index.html'
+ if not page.exists():
+  errors.append(f'{slug}: compact batch 4 page missing')
+  continue
+ txt=page.read_text()
+ for phrase in phrases:
+  if phrase not in txt:errors.append(f'{slug}: compact batch 4 missing {phrase}')
+ for label in ['입학조건','영어','입학시기']:
+  if txt.count(f'<small>{label}</small>')<route_count:
+   errors.append(f'{slug}: pathway cards not standardized for {label}')
+ routes_match=re.search(r'<section class="article-section" id="routes">.*?</section>',txt,re.S)
+ if routes_match:
+  rt=routes_match.group(0)
+  if '<p class="monash-route-meta">' in rt:errors.append(f'{slug}: pathway card secondary microcopy remains')
+  if any('<span' in criteria for criteria in re.findall(r'<div class="route-criteria">(.*?)</div></article>',rt,re.S)):errors.append(f'{slug}: pathway criteria still contains secondary small copy')
+  for clutter in ['(2026 공식 참고)','(2025 공식 참고)','(국제학력은 2026 공식 참고)']:
+   if clutter in rt:errors.append(f'{slug}: source-year card clutter remains {clutter}')
+ for old_heading in ['<h2>Direct 입학조건</h2>','<h2>졸업 후 485·지역</h2>','<h2>호주 약사등록</h2>','<h2>자주 묻는 질문</h2>']:
+  if old_heading in txt:errors.append(f'{slug}: old duplicate section remains {old_heading}')
+ if 'id="cost-form"' in txt:errors.append(f'{slug}: per-school cost calculator should not render')
+
+sydney_direct=next((x for x in D['entry_routes'] if x['id']=='sydney-bpharm-hons-direct'),None)
+sydney_std=next((x for x in D['entry_routes'] if x['id']=='sydney-usfp'),None)
+sydney_int=next((x for x in D['entry_routes'] if x['id']=='sydney-usfp-intensive'),None)
+sydney_tuition=next((x for x in D['tuition'] if x['program_id']=='sydney-bpharm-hons'),None)
+sydney_reg=next((x for x in D['professional_registration'] if x['program_id']=='sydney-bpharm-hons'),None)
+if not sydney_direct or 'CSAT 346' not in str(sydney_direct['qualification']['value']) or 'Mathematics prerequisite' not in str(sydney_direct['qualification']['value']):
+ errors.append('sydney-data: 2027 Direct score/Mathematics requirement missing')
+if not sydney_std or sydney_std.get('pathway_fee',{}).get('value')!=49800 or not sydney_int or sydney_int.get('pathway_fee',{}).get('value')!=47690:
+ errors.append('sydney-data: 2027 USFP Standard/Intensive fees missing')
+if not sydney_tuition or sydney_tuition['annual']['value']!=63600 or sydney_tuition['annual']['status']!='confirmed_2027':
+ errors.append('sydney-data: 2027 Pharmacy tuition must remain A$63,600 confirmed')
+if not sydney_reg or sydney_reg['itp_in_degree']['value'] is not True or sydney_reg['post_graduation_internship']['value'] is not False:
+ errors.append('sydney-data: integrated ITP/supervised practice must remain distinct from post-graduation internship')
+
+unsw_direct=next((x for x in D['entry_routes'] if x['id']=='unsw-bpharm-hons-direct'),None)
+unsw_foundation=next((x for x in D['entry_routes'] if x['id']=='unsw-foundation-standard'),None)
+unsw_tuition=next((x for x in D['tuition'] if x['program_id']=='unsw-bpharm-hons'),None)
+unsw_program=next((x for x in D['programs'] if x['id']=='unsw-bpharm-hons'),None)
+if not unsw_direct or 'IB 33' not in str(unsw_direct['qualification']['value']) or 'assumed knowledge' not in str(unsw_direct['qualification']['value']):
+ errors.append('unsw-data: 2027 IB 33 / assumed knowledge Direct data missing')
+if not unsw_foundation or unsw_foundation.get('pathway_fee',{}).get('value')!=43650 or 'GPA 7.6' not in str(unsw_foundation['progression']['value']):
+ errors.append('unsw-data: 2027 Standard Foundation fee/progression missing')
+if not unsw_tuition or unsw_tuition['annual']['value']!=63000 or unsw_tuition['annual']['source_year']!=2026 or unsw_tuition['annual']['status']=='confirmed_2027':
+ errors.append('unsw-data: A$63,000 must remain a 2026 fee reference, not 2027 tuition')
+if not unsw_program or 'Doctor of Pharmacy' not in str(unsw_program['name']['value']) or 'Doctor of Pharmacy' not in str(unsw_program['accreditation']['note']):
+ errors.append('unsw-data: 2027 PharmD naming/regulator follow-up must remain explicit')
+
+uwa_direct=next((x for x in D['entry_routes'] if x['id']=='uwa-bpharm-hons-direct'),None)
+uwa_f8=next((x for x in D['entry_routes'] if x['id']=='uwa-foundation-8'),None)
+uwa_f12=next((x for x in D['entry_routes'] if x['id']=='uwa-foundation-12'),None)
+uwa_tuition=next((x for x in D['tuition'] if x['program_id']=='uwa-bpharm-hons'),None)
+uwa_sch=next((x for x in D['scholarships'] if x['id']=='uwa-global-excellence'),None)
+if not uwa_direct or 'CSAT 329' not in str(uwa_direct['qualification']['value']) or 'WAM 65%' not in str(uwa_direct['progression']['value']):
+ errors.append('uwa-data: Direct CSAT 329 / WAM 65 assurance missing')
+if not uwa_f8 or 'CSAT 260' not in str(uwa_f8['qualification']['value']) or uwa_f8['english']['value']!='IELTS 6.0 / 각 5.5':
+ errors.append('uwa-data: 8-month Foundation Korea/English criteria missing')
+if not uwa_f12 or 'CSAT 230' not in str(uwa_f12['qualification']['value']) or uwa_f12['english']['value']!='IELTS 5.5 / 각 5.0':
+ errors.append('uwa-data: 12-month Foundation Korea/English criteria missing')
+if not uwa_tuition or uwa_tuition['annual']['value']!=46000 or uwa_tuition['annual']['source_year']!=2026:
+ errors.append('uwa-data: A$46,000 must remain a 2026 fee reference')
+if not uwa_sch or uwa_sch['amount']['value']!=[10,20] or uwa_sch['pharmacy_eligible']['value'] is not True or uwa_sch['automatic_assessment']['value'] is not True:
+ errors.append('uwa-data: 2027 Global Excellence 10/20% Pharmacy eligibility missing')
+
 adelaide_foundation=next((x for x in D['entry_routes'] if x['id']=='adelaide-eynesbury-foundation'),None)
 adelaide_diploma=next((x for x in D['entry_routes'] if x['id']=='adelaide-eynesbury-diploma'),None)
 if not adelaide_foundation or adelaide_foundation['entry_year']['value']!=1 or adelaide_foundation['pathway_fee']['value']!=36200:
