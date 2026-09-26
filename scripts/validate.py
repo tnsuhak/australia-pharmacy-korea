@@ -92,10 +92,10 @@ if not curtin_program or '2029 첫 intake' not in str(curtin_program.get('future
  errors.append('batch1-qc: Curtin 2029 PharmD pathway/accreditation caveat missing')
 
 compact_batch_2={
- 'uq-pharmacy':(3,['UQ 약대 과정 구조','입학방법 3가지','ATAR 80 · IB 30.25','수능 260 · 검정고시 65% · 고2 GPA 3(미)','수능 270 · 검정고시 70% · 고3 GPA 4(우)','A$60,952 / 년','A$36,280','A$24,940','경쟁선발 · 25%']),
- 'adelaide-pharmacy':(3,['Adelaide 약대 과정 구조','입학방법 3가지','수능 340 · IB 30 · A-Level 10 · SAT 1220 · OSSD 80%','고2 → Foundation → 약대 1학년','IELTS 5.5 · 각 5.0','1학년 Diploma (Health Science) → 약대 1학년','IELTS 6.0 · 각 6.0','A$36,200','A$41,900','4년 과정·5년 Master 연계','자동심사 · 15%','A$320 / 주','A$380 / 주']),
- 'latrobe-pharmacy':(2,['La Trobe 약대 과정 구조','Bendigo','별도 과학 선수과목 없음','Foundation → 약대 1학년','IELTS 6.5 · 각 6.5','Health Innovation','30%','A$255 / 주부터']),
- 'qut-pharmacy':(3,['QUT 약대 과정 구조','Selection Rank 76','선행지식','12개월 Foundation → 약대 1학년','6개월 Intensive → 약대 1학년','A$46,200 / 년','자동심사 · 25%','A$25,536','A$12,768'])
+ 'uq-pharmacy':(3,['UQ 약대 과정 구조','입학방법 3가지','ATAR 80 · IB 30.25','수능 260 · 검정고시 65% · 고2 GPA 3(미)','수능 270 · 검정고시 70% · 고3 GPA 4(우)','A$60,952 / 년','A$36,280','A$24,940','자동심사 · 경쟁선발','1~3학년 165시간 + 4~5학년 1,000시간+','APC 인증·Board 승인 대기']),
+ 'adelaide-pharmacy':(3,['Adelaide 약대 과정 구조','입학방법 3가지','2027 ATAR 90 · IB 35.25','한국 수능·SAT 등 2027 환산 확인 중','2월 · 7월','고2 → Foundation → 약대 1학년','IELTS 5.5 · 각 5.0','1학년 Diploma (Health Science) → 약대 1학년','IELTS 6.0 · 각 6.0','A$36,200','A$41,900','4년 과정·5년 Master 연계','자동심사 · 15%','경쟁선발 · 50%','2026 공식 A$52,200 참고','A$320 / 주','A$380 / 주']),
+ 'latrobe-pharmacy':(2,['La Trobe 약대 과정 구조','Bendigo','2027 ATAR 75.05','별도 과학 선수과목 없음','Foundation → 약대 1학년','IELTS 6.5 · 각 6.5','Health Innovation','30%','교내 실습약국 + 임상실습','약 1년 등록 인턴십','A$255 / 주부터']),
+ 'qut-pharmacy':(3,['QUT 약대 과정 구조','Selection Rank 76','선행지식','12개월 Foundation → 약대 1학년','6개월 Intensive → 약대 1학년','A$46,200 / 년','자동심사 · 25%','A$25,536','A$12,768','College Merit Scholarship','첫 학기 학비의 25%','Year 11 Rank 5 이상 또는 평균 80% 이상','현장실습 시작'])
 }
 for slug,(route_count,phrases) in compact_batch_2.items():
  page=R/f'dist/universities/{slug}/index.html'
@@ -257,8 +257,20 @@ if not adelaide_foundation or adelaide_foundation['entry_year']['value']!=1 or a
 if not adelaide_diploma or adelaide_diploma['entry_year']['value']!=1 or adelaide_diploma['credit']['value']!=4 or adelaide_diploma['pathway_fee']['value']!=41900:
  errors.append('adelaide-data: Health Science Diploma pathway must remain Pharmacy Year 1 with 4 courses credit')
 adelaide_csat=next((x for x in D['qualifications'] if x['program_id']=='adelaide-bpharm-hons' and x['qualification']=='csat'),None)
-if not adelaide_csat or adelaide_csat['score']['value']!=340:
- errors.append('adelaide-data: current official South Korea CSAT must be 340')
+adelaide_ib=next((x for x in D['qualifications'] if x['program_id']=='adelaide-bpharm-hons' and x['qualification']=='ib'),None)
+adelaide_direct=next((x for x in D['entry_routes'] if x['id']=='adelaide-bpharm-hons-direct'),None)
+adelaide_tuition=next((x for x in D['tuition'] if x['program_id']=='adelaide-bpharm-hons'),None)
+adelaide_50=next((x for x in D['scholarships'] if x['id']=='adelaide-academic-excellence'),None)
+if not adelaide_csat or adelaide_csat['score']['value'] is not None or adelaide_csat['score']['status']!='pending_2027':
+ errors.append('adelaide-data: 2027 CSAT conversion must remain pending, not reuse an older threshold')
+if not adelaide_ib or adelaide_ib['score']['value']!=35.25 or adelaide_ib['score']['status']!='confirmed_2027':
+ errors.append('adelaide-data: 2027 IB 35.25 missing')
+if not adelaide_direct or 'Guaranteed ATAR 90' not in str(adelaide_direct['qualification']['value']) or adelaide_direct['intake_months']['value']!=[2,7]:
+ errors.append('adelaide-data: 2027 ATAR 90 / Feb+Jul direct entry missing')
+if not adelaide_tuition or adelaide_tuition['annual']['value']!=52200 or adelaide_tuition['annual']['source_year']!=2026:
+ errors.append('adelaide-data: A$52,200 must remain the 2026 fee reference while 2027 is pending')
+if not adelaide_50 or adelaide_50['amount']['value']!=50 or adelaide_50['pharmacy_eligible']['value'] is not True or adelaide_50['separate_application']['value'] is not True:
+ errors.append('adelaide-data: 50% Academic Excellence Pharmacy scholarship missing/wrong')
 uq_std=next((x for x in D['entry_routes'] if x['id']=='uq-standard-2027-entry'),None)
 uq_acc=next((x for x in D['entry_routes'] if x['id']=='uq-accelerated'),None)
 if not uq_std or '수능 260' not in str(uq_std['qualification']['value']) or uq_std['english']['value']!='IELTS 5.5 · 각 5.0':
@@ -268,6 +280,12 @@ if not uq_acc or '수능 270' not in str(uq_acc['qualification']['value']) or 'W
 latrobe_foundation=next((x for x in D['entry_routes'] if x['id']=='latrobe-foundation'),None)
 if not latrobe_foundation or latrobe_foundation['entry_year']['value']!=1 or 'Year 11' not in str(latrobe_foundation['qualification']['value']):
  errors.append('latrobe-data: Foundation to Pharmacy Year 1 route missing')
+latrobe_direct=next((x for x in D['entry_routes'] if x['id']=='latrobe-bpharm-hons-direct'),None)
+if not latrobe_direct or '2027 ATAR 75.05' not in str(latrobe_direct['qualification']['value']) or '별도 과학 선수과목 없음' not in str(latrobe_direct['qualification']['value']):
+ errors.append('latrobe-data: 2027 ATAR 75.05 / no science prerequisite distinction missing')
+qut_standard=next((x for x in D['entry_routes'] if x['id']=='qut-foundation-standard'),None)
+if not qut_standard or '첫 학기 학비 25%' not in str(qut_standard.get('pathway_scholarship',{}).get('value')) or '평균 80%' not in str(qut_standard.get('pathway_scholarship',{}).get('value')):
+ errors.append('qut-data: Korean QUT College Merit scholarship details missing')
 qut_direct=next((x for x in D['entry_routes'] if x['id']=='qut-bpharm-hons-direct'),None)
 if not qut_direct or 'Selection Rank 76' not in str(qut_direct['qualification']['value']) or 'assumed knowledge' not in str(qut_direct['qualification']['value']):
  errors.append('qut-data: Rank 76 / assumed knowledge distinction missing')

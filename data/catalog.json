@@ -918,22 +918,23 @@
       },
       "highlights": [
         "4년 BPharm(Hons)",
-        "수능 345",
-        "5년 Master 연계"
+        "2027 ATAR 90 · IB 35.25",
+        "2월 · 7월 입학"
       ],
-      "editorial": "Direct 신입은 2월 시작입니다. 7월은 학점 인정 학생만 개별 심사합니다. 4년 과정 안에 약 12주 실습이 있고, 졸업 후 등록 인턴십은 별도입니다. 5년 연계 Master 과정은 인턴십과 Intern Training Program을 마지막 해에 통합합니다.",
+      "editorial": "4년 BPharm(Hons)은 2027년 2월·7월 입학이 가능하며, 2027 Guaranteed Entry는 ATAR 90(IB 35.25)입니다. Biology·Chemistry·Physics 중 1과목이 필요하고, 약 12주 현장실습이 포함됩니다. 5년 연계 Master 과정은 인턴십과 인턴 교육과정을 마지막 해에 통합합니다.",
       "review_items": [
-        "2027 본과 학비"
+        "2027 본과 학비",
+        "2027 한국 수능·SAT 등 국제학력 환산점수"
       ],
       "decision_lens": {
         "why": [
-          "4년 BPharm(Hons) + 약 12주 실습",
-          "5년 Master 연계 시 인턴십·ITP 통합",
-          "Adelaide Regional"
+          "2027 ATAR 90 · IB 35.25",
+          "2월·7월 입학",
+          "4년 BPharm + 약 12주 실습 · 5년 Master 연계 가능"
         ],
         "watch": [
-          "7월은 고졸 신입 Direct 입학월이 아님",
-          "A$54,300은 2026 학비 · 2027 학비 미확정"
+          "2027 한국 수능·SAT 등 국제학력 환산은 확인 중",
+          "2027 본과 학비 미확정 · 2026 A$52,200 참고"
         ]
       }
     },
@@ -1167,15 +1168,16 @@
       },
       "highlights": [
         "Bendigo · Regional",
-        "4년",
+        "2027 ATAR 75.05",
         "30% Health Innovation"
       ],
-      "editorial": "Bendigo 캠퍼스 4년 약대이며 2027년 3월 시작입니다. 별도 과학 선수과목은 없고 IELTS는 6.5(각 6.5)입니다. 졸업 후 1년 supervised internship은 별도입니다.",
+      "editorial": "Bendigo 캠퍼스 4년 약대이며 2027년 3월 시작입니다. 2027 가이드의 ATAR 기준은 75.05이고, 영어 외에 별도 과학 선수과목은 없습니다. 교내 실습약국과 실제 임상현장에서 실습하며, 졸업 후 약사등록을 위한 인턴과 시험 절차를 진행합니다.",
       "review_items": [
         "2027 본과 학비"
       ],
       "decision_lens": {
         "why": [
+          "2027 ATAR 75.05",
           "Bendigo Regional",
           "과학 선수과목 별도 없음",
           "2027 Health Innovation 30%"
@@ -2274,7 +2276,7 @@
         "2027 학비 A$60,952",
         "700+시간 실습 + 인턴훈련"
       ],
-      "editorial": "2027 신설 5년 Doctor of Pharmacy입니다. 2월·7월 입학, 2027 국제학생 학비 A$60,952이며 2학년부터 700시간 이상의 임상실습, 4~5학년 compulsory intern training이 포함됩니다. APC·Pharmacy Board 승인은 아직 받지 않았습니다.",
+      "editorial": "2027 신설 5년 Doctor of Pharmacy입니다. 2월·7월 입학, 2027 국제학생 학비 A$60,952입니다. 공식 상세 실습 안내는 1~3학년 165시간의 실습과 4~5학년 1,000시간 이상의 실무 몰입을 명시하며, 인턴훈련이 학위 안에 포함됩니다. 다만 APC 인증과 Pharmacy Board 승인은 아직 받지 않았습니다.",
       "review_items": [
         "APC·Pharmacy Board 승인",
         "CSAT·IB·SAT 등 해외학력 Direct 점수",
@@ -2291,6 +2293,17 @@
           "해외학력 Direct 점수 미확정",
           "중간 Exit 여부 미확정"
         ]
+      },
+      "placement_detail": {
+        "value": "1~3학년 165시간 + 4~5학년 1,000시간+ 실무 몰입",
+        "academic_year": 2027,
+        "source_year": 2027,
+        "source_id": "uq-pharmd",
+        "source_url": "https://study.uq.edu.au/study-options/programs/bachelor-pharmaceutics-and-therapeutic-science-doctor-pharmacy-2577?year=2027",
+        "source_type": "official_course",
+        "verified_date": "2026-09-27",
+        "status": "confirmed_2027",
+        "note": "Official placements section; program overview separately states 700+ supervised clinical placement from Year 2."
       }
     },
     {
@@ -2898,15 +2911,15 @@
         "note": ""
       },
       "intake": {
-        "value": "2월",
+        "value": "2월 · 7월",
         "academic_year": 2027,
-        "source_year": null,
-        "source_id": "adelaide-pharmacy-current",
-        "source_url": "https://adelaide.edu.au/study/degrees/bachelor-of-pharmacy-honours/",
-        "source_type": "official_course",
-        "verified_date": "2026-09-26",
-        "status": "latest_published",
-        "note": "July may be available only to international students with credit on a case-by-case basis."
+        "source_year": 2027,
+        "source_id": "adelaide-health-2027",
+        "source_url": "https://adelaideuni.edu.au/content/dam/adelaideuniversity/documents/study/pdfs/study-guides/dom/2027/health-study-guide.pdf",
+        "source_type": "official_guide",
+        "verified_date": "2026-09-27",
+        "status": "confirmed_2027",
+        "note": ""
       },
       "progression": {
         "value": null,
@@ -2931,28 +2944,29 @@
         "note": ""
       },
       "qualification": {
-        "value": "수능 340 · IB 30 · A-Level 10 · SAT 1220 · OSSD 80% + Biology/Chemistry/Physics 중 1과목",
+        "value": "2027 Guaranteed ATAR 90 · IB 35.25 · Biology/Chemistry/Physics 중 1과목 · 한국 수능·SAT 등 2027 환산 확인 중",
         "academic_year": 2027,
-        "source_year": null,
-        "source_id": "adelaide-pharmacy-current",
-        "source_url": "https://adelaide.edu.au/study/degrees/bachelor-of-pharmacy-honours/",
-        "source_type": "official_course",
-        "verified_date": "2026-09-26",
-        "status": "latest_published",
-        "note": ""
+        "source_year": 2027,
+        "source_id": "adelaide-health-2027",
+        "source_url": "https://adelaideuni.edu.au/content/dam/adelaideuniversity/documents/study/pdfs/study-guides/dom/2027/health-study-guide.pdf",
+        "source_type": "official_guide",
+        "verified_date": "2026-09-27",
+        "status": "confirmed_2027",
+        "note": "2027 Health guide confirms ATAR 90 / IB 35.25 and prerequisite; country-specific conversions are not asserted as 2027 until published."
       },
-      "note": "고졸 Direct는 2월 시작입니다. 7월은 학점 인정 학생만 개별 심사합니다.",
+      "note": "2027 공식 Health Guide 기준 2월·7월 입학. 한국 수능·SAT 등 국제학력 환산점수는 2027 표가 확인될 때까지 별도 확인합니다.",
       "intake_months": {
         "value": [
-          2
+          2,
+          7
         ],
         "academic_year": 2027,
-        "source_year": null,
-        "source_id": "adelaide",
-        "source_url": "https://adelaide.edu.au/study/degrees/bachelor-of-pharmacy-honours/",
-        "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "latest_published",
+        "source_year": 2027,
+        "source_id": "adelaide-health-2027",
+        "source_url": "https://adelaideuni.edu.au/content/dam/adelaideuniversity/documents/study/pdfs/study-guides/dom/2027/health-study-guide.pdf",
+        "source_type": "official_guide",
+        "verified_date": "2026-09-27",
+        "status": "confirmed_2027",
         "note": ""
       }
     },
@@ -3512,15 +3526,15 @@
         "note": ""
       },
       "qualification": {
-        "value": "고교졸업 + 영어 prerequisite · 별도 과학 선수과목 없음",
+        "value": "2027 ATAR 75.05 · 고교졸업 + 영어 prerequisite · 별도 과학 선수과목 없음 · 국제학력은 La Trobe 환산",
         "academic_year": 2027,
         "source_year": 2027,
-        "source_id": "latrobe-2027-course",
-        "source_url": "https://www.latrobe.edu.au/courses/bachelor-of-pharmacy-honours",
-        "source_type": "official_course",
-        "verified_date": "2026-09-26",
+        "source_id": "latrobe-ug-guide-2027",
+        "source_url": "https://www.latrobe.edu.au/__data/assets/pdf_file/0010/1819288/La-Trobe-University-Undergraduate-Course-Guide-2027.pdf",
+        "source_type": "official_guide",
+        "verified_date": "2026-09-27",
         "status": "confirmed_2027",
-        "note": ""
+        "note": "2027 guide confirms ATAR 75.05 and English-only prerequisite; overseas qualifications are assessed through La Trobe equivalence."
       },
       "note": "",
       "intake_months": {
@@ -3953,6 +3967,17 @@
         "verified_date": "2026-09-26",
         "status": "confirmed_2027",
         "note": "2027 Standard Foundation 전체 96 credit points 학비"
+      },
+      "pathway_scholarship": {
+        "value": "첫 학기 학비 25% · 자동심사 · 한국 Foundation 기준 Year 11 Rank 5 또는 평균 80% 이상",
+        "academic_year": 2027,
+        "source_year": 2027,
+        "source_id": "qut-college-merit",
+        "source_url": "https://www.qut.edu.au/study/fees-and-scholarships/scholarships/qut-college-merit-scholarship",
+        "source_type": "official_scholarship",
+        "verified_date": "2026-09-27",
+        "status": "confirmed_2027",
+        "note": "Must also meet program entry/English requirements and be in an eligible QUT College course."
       }
     },
     {
@@ -7472,15 +7497,15 @@
       "program_id": "adelaide-bpharm-hons",
       "qualification": "csat",
       "score": {
-        "value": 340,
+        "value": null,
         "academic_year": 2027,
-        "source_year": null,
-        "source_id": "adelaide-pharmacy-current",
-        "source_url": "https://adelaide.edu.au/study/degrees/bachelor-of-pharmacy-honours/",
-        "source_type": "official_course",
-        "verified_date": "2026-09-26",
-        "status": "latest_published",
-        "note": "Current Adelaide University international course page South Korea CSAT requirement."
+        "source_year": 2027,
+        "source_id": "adelaide-health-2027",
+        "source_url": "https://adelaideuni.edu.au/content/dam/adelaideuniversity/documents/study/pdfs/study-guides/dom/2027/health-study-guide.pdf",
+        "source_type": "official_guide",
+        "verified_date": "2026-09-27",
+        "status": "pending_2027",
+        "note": "2027 Pharmacy guaranteed entry is ATAR 90 / IB 35.25, but this qualification's 2027 country-specific conversion is not yet asserted."
       },
       "scale": "대학 공식 CSAT 기준",
       "calculation": "College Scholastic Ability Test (CSAT)"
@@ -7490,15 +7515,15 @@
       "program_id": "adelaide-bpharm-hons",
       "qualification": "sat",
       "score": {
-        "value": 1220,
+        "value": null,
         "academic_year": 2027,
-        "source_year": null,
-        "source_id": "adelaide-pharmacy-current",
-        "source_url": "https://adelaide.edu.au/study/degrees/bachelor-of-pharmacy-honours/",
-        "source_type": "official_course",
-        "verified_date": "2026-09-25",
-        "status": "latest_published",
-        "note": ""
+        "source_year": 2027,
+        "source_id": "adelaide-health-2027",
+        "source_url": "https://adelaideuni.edu.au/content/dam/adelaideuniversity/documents/study/pdfs/study-guides/dom/2027/health-study-guide.pdf",
+        "source_type": "official_guide",
+        "verified_date": "2026-09-27",
+        "status": "pending_2027",
+        "note": "2027 Pharmacy guaranteed entry is ATAR 90 / IB 35.25, but this qualification's 2027 country-specific conversion is not yet asserted."
       },
       "scale": "1600",
       "calculation": ""
@@ -7508,14 +7533,14 @@
       "program_id": "adelaide-bpharm-hons",
       "qualification": "ib",
       "score": {
-        "value": 30,
+        "value": 35.25,
         "academic_year": 2027,
-        "source_year": null,
-        "source_id": "adelaide-pharmacy-current",
-        "source_url": "https://adelaide.edu.au/study/degrees/bachelor-of-pharmacy-honours/",
-        "source_type": "official_course",
-        "verified_date": "2026-09-25",
-        "status": "latest_published",
+        "source_year": 2027,
+        "source_id": "adelaide-health-2027",
+        "source_url": "https://adelaideuni.edu.au/content/dam/adelaideuniversity/documents/study/pdfs/study-guides/dom/2027/health-study-guide.pdf",
+        "source_type": "official_guide",
+        "verified_date": "2026-09-27",
+        "status": "confirmed_2027",
         "note": ""
       },
       "scale": "45",
@@ -7526,15 +7551,15 @@
       "program_id": "adelaide-bpharm-hons",
       "qualification": "alevel",
       "score": {
-        "value": 10,
+        "value": null,
         "academic_year": 2027,
-        "source_year": null,
-        "source_id": "adelaide-pharmacy-current",
-        "source_url": "https://adelaide.edu.au/study/degrees/bachelor-of-pharmacy-honours/",
-        "source_type": "official_course",
-        "verified_date": "2026-09-25",
-        "status": "latest_published",
-        "note": ""
+        "source_year": 2027,
+        "source_id": "adelaide-health-2027",
+        "source_url": "https://adelaideuni.edu.au/content/dam/adelaideuniversity/documents/study/pdfs/study-guides/dom/2027/health-study-guide.pdf",
+        "source_type": "official_guide",
+        "verified_date": "2026-09-27",
+        "status": "pending_2027",
+        "note": "2027 Pharmacy guaranteed entry is ATAR 90 / IB 35.25, but this qualification's 2027 country-specific conversion is not yet asserted."
       },
       "scale": "UK / Global GCE A-level 환산점수",
       "calculation": ""
@@ -7544,15 +7569,15 @@
       "program_id": "adelaide-bpharm-hons",
       "qualification": "ossd",
       "score": {
-        "value": 80,
+        "value": null,
         "academic_year": 2027,
-        "source_year": null,
-        "source_id": "adelaide-pharmacy-current",
-        "source_url": "https://adelaide.edu.au/study/degrees/bachelor-of-pharmacy-honours/",
-        "source_type": "official_course",
-        "verified_date": "2026-09-25",
-        "status": "latest_published",
-        "note": ""
+        "source_year": 2027,
+        "source_id": "adelaide-health-2027",
+        "source_url": "https://adelaideuni.edu.au/content/dam/adelaideuniversity/documents/study/pdfs/study-guides/dom/2027/health-study-guide.pdf",
+        "source_type": "official_guide",
+        "verified_date": "2026-09-27",
+        "status": "pending_2027",
+        "note": "2027 Pharmacy guaranteed entry is ATAR 90 / IB 35.25, but this qualification's 2027 country-specific conversion is not yet asserted."
       },
       "scale": "Ontario Secondary School Diploma 평균 %",
       "calculation": ""
@@ -11571,26 +11596,27 @@
       "route_id": "adelaide-bpharm-hons-direct",
       "months": {
         "value": [
-          2
+          2,
+          7
         ],
         "academic_year": 2027,
-        "source_year": null,
-        "source_id": "adelaide",
-        "source_url": "https://adelaide.edu.au/study/degrees/bachelor-of-pharmacy-honours/",
-        "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "latest_published",
+        "source_year": 2027,
+        "source_id": "adelaide-health-2027",
+        "source_url": "https://adelaideuni.edu.au/content/dam/adelaideuniversity/documents/study/pdfs/study-guides/dom/2027/health-study-guide.pdf",
+        "source_type": "official_guide",
+        "verified_date": "2026-09-27",
+        "status": "confirmed_2027",
         "note": ""
       },
       "label": {
-        "value": "2월 · 7월은 학점 인정 시 개별 심사",
+        "value": "2월 · 7월",
         "academic_year": 2027,
-        "source_year": null,
-        "source_id": "adelaide",
-        "source_url": "https://adelaide.edu.au/study/degrees/bachelor-of-pharmacy-honours/",
-        "source_type": "official_course",
-        "verified_date": "2026-09-24",
-        "status": "latest_published",
+        "source_year": 2027,
+        "source_id": "adelaide-health-2027",
+        "source_url": "https://adelaideuni.edu.au/content/dam/adelaideuniversity/documents/study/pdfs/study-guides/dom/2027/health-study-guide.pdf",
+        "source_type": "official_guide",
+        "verified_date": "2026-09-27",
+        "status": "confirmed_2027",
         "note": ""
       }
     },
@@ -12089,15 +12115,15 @@
     {
       "program_id": "adelaide-bpharm-hons",
       "annual": {
-        "value": 54300,
+        "value": 52200,
         "academic_year": 2027,
         "source_year": 2026,
-        "source_id": "adelaide-fee-current",
-        "source_url": "https://adelaide.edu.au/study/degrees/bachelor-of-pharmacy-honours/",
-        "source_type": "official_course",
-        "verified_date": "2026-09-25",
+        "source_id": "adelaide-degree-chart-2026",
+        "source_url": "https://adelaideuni.edu.au/content/dam/adelaideuniversity/documents/study/pdfs/Adelaide%20University_2026%20Degree%20Charts_A4_July%202025_WEB.pdf",
+        "source_type": "official_guide",
+        "verified_date": "2026-09-27",
         "status": "latest_published",
-        "note": "Official international course page states this A$54,300 fee is for students starting in 2026. Do not treat as 2027 tuition."
+        "note": "2026 international annual fee for Bachelor of Pharmacy (Honours); 2027 fee not yet confirmed."
       },
       "official_total": {
         "value": null,
@@ -12112,15 +12138,15 @@
       },
       "currency": "AUD",
       "load_basis": {
-        "value": "full-time annual load",
+        "value": "2026 국제학생 연간 학비",
         "academic_year": 2027,
         "source_year": 2026,
-        "source_id": "adelaide-fee-current",
-        "source_url": "https://adelaide.edu.au/study/degrees/bachelor-of-pharmacy-honours/",
-        "source_type": "official_course",
-        "verified_date": "2026-09-25",
+        "source_id": "adelaide-degree-chart-2026",
+        "source_url": "https://adelaideuni.edu.au/content/dam/adelaideuniversity/documents/study/pdfs/Adelaide%20University_2026%20Degree%20Charts_A4_July%202025_WEB.pdf",
+        "source_type": "official_guide",
+        "verified_date": "2026-09-27",
         "status": "latest_published",
-        "note": "2026 published international annual full-time fee basis."
+        "note": "2027 금액 아님"
       },
       "increase_note": "연도별 인상 및 실제 수강량에 따라 달라질 수 있습니다."
     },
@@ -15433,6 +15459,135 @@
         "note": ""
       },
       "note": "2027 시작 국제학생 지원 가능. Offer를 받은 뒤 별도 지원하며 인원 제한이 있는 경쟁 장학."
+    },
+    {
+      "id": "adelaide-academic-excellence",
+      "university_id": "adelaide",
+      "name": "Adelaide Academic Excellence Scholarship",
+      "amount": {
+        "value": 50,
+        "academic_year": 2027,
+        "source_year": 2025,
+        "source_id": "adelaide-academic-excellence",
+        "source_url": "https://adelaideuni.edu.au/content/dam/adelaideuniversity/documents/study/pdfs/adelaide-academic-excellence-scholarship.pdf",
+        "source_type": "official_scholarship",
+        "verified_date": "2026-09-27",
+        "status": "latest_published",
+        "note": ""
+      },
+      "award_type": "percentage",
+      "assessment": "competitive",
+      "automatic_assessment": {
+        "value": false,
+        "academic_year": 2027,
+        "source_year": 2025,
+        "source_id": "adelaide-academic-excellence",
+        "source_url": "https://adelaideuni.edu.au/content/dam/adelaideuniversity/documents/study/pdfs/adelaide-academic-excellence-scholarship.pdf",
+        "source_type": "official_scholarship",
+        "verified_date": "2026-09-27",
+        "status": "latest_published",
+        "note": ""
+      },
+      "separate_application": {
+        "value": true,
+        "academic_year": 2027,
+        "source_year": 2025,
+        "source_id": "adelaide-academic-excellence",
+        "source_url": "https://adelaideuni.edu.au/content/dam/adelaideuniversity/documents/study/pdfs/adelaide-academic-excellence-scholarship.pdf",
+        "source_type": "official_scholarship",
+        "verified_date": "2026-09-27",
+        "status": "latest_published",
+        "note": ""
+      },
+      "competitive": {
+        "value": true,
+        "academic_year": 2027,
+        "source_year": 2025,
+        "source_id": "adelaide-academic-excellence",
+        "source_url": "https://adelaideuni.edu.au/content/dam/adelaideuniversity/documents/study/pdfs/adelaide-academic-excellence-scholarship.pdf",
+        "source_type": "official_scholarship",
+        "verified_date": "2026-09-27",
+        "status": "latest_published",
+        "note": ""
+      },
+      "country_eligibility": {
+        "value": true,
+        "academic_year": 2027,
+        "source_year": 2025,
+        "source_id": "adelaide-academic-excellence",
+        "source_url": "https://adelaideuni.edu.au/content/dam/adelaideuniversity/documents/study/pdfs/adelaide-academic-excellence-scholarship.pdf",
+        "source_type": "official_scholarship",
+        "verified_date": "2026-09-27",
+        "status": "latest_published",
+        "note": ""
+      },
+      "duration": {
+        "value": "학위 표준기간 전체",
+        "academic_year": 2027,
+        "source_year": 2025,
+        "source_id": "adelaide-academic-excellence",
+        "source_url": "https://adelaideuni.edu.au/content/dam/adelaideuniversity/documents/study/pdfs/adelaide-academic-excellence-scholarship.pdf",
+        "source_type": "official_scholarship",
+        "verified_date": "2026-09-27",
+        "status": "latest_published",
+        "note": ""
+      },
+      "academic_threshold": {
+        "value": "학부 ATAR 99 또는 국제 동등성적 · 또는 GPA 6.7/7 상당",
+        "academic_year": 2027,
+        "source_year": 2025,
+        "source_id": "adelaide-academic-excellence",
+        "source_url": "https://adelaideuni.edu.au/content/dam/adelaideuniversity/documents/study/pdfs/adelaide-academic-excellence-scholarship.pdf",
+        "source_type": "official_scholarship",
+        "verified_date": "2026-09-27",
+        "status": "latest_published",
+        "note": ""
+      },
+      "renewal_condition": {
+        "value": "Program Term GPA 5.5/7 유지",
+        "academic_year": 2027,
+        "source_year": 2025,
+        "source_id": "adelaide-academic-excellence",
+        "source_url": "https://adelaideuni.edu.au/content/dam/adelaideuniversity/documents/study/pdfs/adelaide-academic-excellence-scholarship.pdf",
+        "source_type": "official_scholarship",
+        "verified_date": "2026-09-27",
+        "status": "latest_published",
+        "note": ""
+      },
+      "number_available": {
+        "value": null,
+        "academic_year": 2027,
+        "source_year": 2025,
+        "source_id": "adelaide-academic-excellence",
+        "source_url": "https://adelaideuni.edu.au/content/dam/adelaideuniversity/documents/study/pdfs/adelaide-academic-excellence-scholarship.pdf",
+        "source_type": "official_scholarship",
+        "verified_date": "2026-09-27",
+        "status": "pending_2027",
+        "note": "Limited places; exact 2027 count not stated."
+      },
+      "course_exclusion": {
+        "value": "Pharmacy 제외 아님",
+        "academic_year": 2027,
+        "source_year": 2025,
+        "source_id": "adelaide-academic-excellence",
+        "source_url": "https://adelaideuni.edu.au/content/dam/adelaideuniversity/documents/study/pdfs/adelaide-academic-excellence-scholarship.pdf",
+        "source_type": "official_scholarship",
+        "verified_date": "2026-09-27",
+        "status": "latest_published",
+        "note": ""
+      },
+      "pharmacy_eligible": {
+        "value": true,
+        "academic_year": 2027,
+        "source_year": 2025,
+        "source_id": "adelaide-academic-excellence",
+        "source_url": "https://adelaideuni.edu.au/content/dam/adelaideuniversity/documents/study/pdfs/adelaide-academic-excellence-scholarship.pdf",
+        "source_type": "official_scholarship",
+        "verified_date": "2026-09-27",
+        "status": "latest_published",
+        "note": ""
+      },
+      "note": "50% tuition reduction. Separate application and competitive selection. Pharmacy is not listed among excluded programs."
     }
   ],
   "accommodation": [
@@ -19736,6 +19891,46 @@
       "id": "griffith-vc-international-2027",
       "title": "Griffith Vice Chancellor's International Scholarship 2027",
       "url": "https://www.griffith.edu.au/international/scholarships-finance/scholarships/vice-chancellors-international-scholarship",
+      "source_year": 2027,
+      "source_type": "official_scholarship",
+      "verified_date": "2026-09-27"
+    },
+    {
+      "id": "adelaide-health-2027",
+      "title": "Adelaide University · Study Health in 2027",
+      "url": "https://adelaideuni.edu.au/content/dam/adelaideuniversity/documents/study/pdfs/study-guides/dom/2027/health-study-guide.pdf",
+      "source_year": 2027,
+      "source_type": "official_guide",
+      "verified_date": "2026-09-27"
+    },
+    {
+      "id": "adelaide-degree-chart-2026",
+      "title": "Adelaide University · 2026 International Degree Chart",
+      "url": "https://adelaideuni.edu.au/content/dam/adelaideuniversity/documents/study/pdfs/Adelaide%20University_2026%20Degree%20Charts_A4_July%202025_WEB.pdf",
+      "source_year": 2026,
+      "source_type": "official_guide",
+      "verified_date": "2026-09-27"
+    },
+    {
+      "id": "adelaide-academic-excellence",
+      "title": "Adelaide Academic Excellence Scholarship · Terms and Conditions",
+      "url": "https://adelaideuni.edu.au/content/dam/adelaideuniversity/documents/study/pdfs/adelaide-academic-excellence-scholarship.pdf",
+      "source_year": 2025,
+      "source_type": "official_scholarship",
+      "verified_date": "2026-09-27"
+    },
+    {
+      "id": "latrobe-ug-guide-2027",
+      "title": "La Trobe University · 2027 Undergraduate Course Guide",
+      "url": "https://www.latrobe.edu.au/__data/assets/pdf_file/0010/1819288/La-Trobe-University-Undergraduate-Course-Guide-2027.pdf",
+      "source_year": 2027,
+      "source_type": "official_guide",
+      "verified_date": "2026-09-27"
+    },
+    {
+      "id": "qut-college-merit",
+      "title": "QUT College Merit Scholarship",
+      "url": "https://www.qut.edu.au/study/fees-and-scholarships/scholarships/qut-college-merit-scholarship",
       "source_year": 2027,
       "source_type": "official_scholarship",
       "verified_date": "2026-09-27"
