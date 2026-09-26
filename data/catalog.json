@@ -2942,6 +2942,248 @@
       }
     },
     {
+      "id": "adelaide-eynesbury-foundation",
+      "program_id": "adelaide-bpharm-hons",
+      "type": "foundation",
+      "title": "Eynesbury · Foundation Studies → Pharmacy 1학년",
+      "availability": {
+        "value": true,
+        "academic_year": 2027,
+        "source_year": 2027,
+        "source_id": "eynesbury-foundation-2027",
+        "source_url": "https://www.eynesbury.edu.au/programs/international/foundation-studies-program/",
+        "source_type": "official_pathway",
+        "verified_date": "2026-09-26",
+        "status": "confirmed_2027",
+        "note": ""
+      },
+      "credit": {
+        "value": 0,
+        "academic_year": 2027,
+        "source_year": 2027,
+        "source_id": "eynesbury-foundation-2027",
+        "source_url": "https://www.eynesbury.edu.au/programs/international/foundation-studies-program/",
+        "source_type": "official_pathway",
+        "verified_date": "2026-09-26",
+        "status": "confirmed_2027",
+        "note": ""
+      },
+      "entry_year": {
+        "value": 1,
+        "academic_year": 2027,
+        "source_year": 2027,
+        "source_id": "eynesbury-foundation-2027",
+        "source_url": "https://www.eynesbury.edu.au/programs/international/foundation-studies-program/",
+        "source_type": "official_pathway",
+        "verified_date": "2026-09-26",
+        "status": "confirmed_2027",
+        "note": ""
+      },
+      "duration": {
+        "value": "8 또는 12개월",
+        "academic_year": 2027,
+        "source_year": 2027,
+        "source_id": "eynesbury-foundation-2027",
+        "source_url": "https://www.eynesbury.edu.au/programs/international/foundation-studies-program/",
+        "source_type": "official_pathway",
+        "verified_date": "2026-09-26",
+        "status": "confirmed_2027",
+        "note": ""
+      },
+      "intake": {
+        "value": "2027년 2월 22일 · 6월 21일 · 10월 11일",
+        "academic_year": 2027,
+        "source_year": 2027,
+        "source_id": "eynesbury-dates-2027",
+        "source_url": "https://www.eynesbury.edu.au/current-students/essential-information/important-dates/",
+        "source_type": "official_pathway",
+        "verified_date": "2026-09-26",
+        "status": "confirmed_2027",
+        "note": ""
+      },
+      "intake_months": {
+        "value": [
+          2,
+          6,
+          10
+        ],
+        "academic_year": 2027,
+        "source_year": 2027,
+        "source_id": "eynesbury-dates-2027",
+        "source_url": "https://www.eynesbury.edu.au/current-students/essential-information/important-dates/",
+        "source_type": "official_pathway",
+        "verified_date": "2026-09-26",
+        "status": "confirmed_2027",
+        "note": ""
+      },
+      "progression": {
+        "value": "Foundation 395/500 + Pharmacy prerequisite 충족 → Bachelor of Pharmacy (Honours) 1학년",
+        "academic_year": 2027,
+        "source_year": 2026,
+        "source_id": "eynesbury-foundation-progression-2026",
+        "source_url": "https://www.eynesbury.edu.au/wp-content/uploads/2026-Eynesbury-Adelaide-University-FSP-Scores-Flyer-v5-FAW-WEB.pdf",
+        "source_type": "official_pathway",
+        "verified_date": "2026-09-26",
+        "status": "latest_published",
+        "note": ""
+      },
+      "qualification": {
+        "value": "Australian Year 11 또는 동등 학력",
+        "academic_year": 2027,
+        "source_year": 2027,
+        "source_id": "eynesbury-foundation-2027",
+        "source_url": "https://www.eynesbury.edu.au/programs/international/foundation-studies-program/",
+        "source_type": "official_pathway",
+        "verified_date": "2026-09-26",
+        "status": "confirmed_2027",
+        "note": ""
+      },
+      "english": {
+        "value": "IELTS 5.5 · 각 5.0",
+        "academic_year": 2027,
+        "source_year": 2027,
+        "source_id": "eynesbury-foundation-2027",
+        "source_url": "https://www.eynesbury.edu.au/programs/international/foundation-studies-program/",
+        "source_type": "official_pathway",
+        "verified_date": "2026-09-26",
+        "status": "confirmed_2027",
+        "note": ""
+      },
+      "pathway_fee": {
+        "value": 36200,
+        "academic_year": 2027,
+        "source_year": 2027,
+        "source_id": "eynesbury-foundation-2027",
+        "source_url": "https://www.eynesbury.edu.au/programs/international/foundation-studies-program/",
+        "source_type": "official_pathway",
+        "verified_date": "2026-09-26",
+        "status": "confirmed_2027",
+        "note": ""
+      },
+      "note": "Foundation 후 Adelaide University Bachelor of Pharmacy (Honours) 1학년 진학 경로. Pharmacy progression score는 현재 공개된 2026 requirement 395/500을 내부 검증값으로 보관."
+    },
+    {
+      "id": "adelaide-eynesbury-diploma",
+      "program_id": "adelaide-bpharm-hons",
+      "type": "diploma",
+      "title": "Eynesbury · Diploma of Health Science → Pharmacy 1학년",
+      "availability": {
+        "value": true,
+        "academic_year": 2027,
+        "source_year": 2027,
+        "source_id": "eynesbury-health-diploma-2027",
+        "source_url": "https://www.eynesbury.edu.au/programs/international/diploma-programs/health-science/",
+        "source_type": "official_pathway",
+        "verified_date": "2026-09-26",
+        "status": "confirmed_2027",
+        "note": ""
+      },
+      "credit": {
+        "value": 4,
+        "academic_year": 2027,
+        "source_year": 2027,
+        "source_id": "eynesbury-health-diploma-2027",
+        "source_url": "https://www.eynesbury.edu.au/programs/international/diploma-programs/health-science/",
+        "source_type": "official_pathway",
+        "verified_date": "2026-09-26",
+        "status": "confirmed_2027",
+        "note": "Pharmacy에 4 Adelaide University courses granted; full Year 2 entry가 아님."
+      },
+      "entry_year": {
+        "value": 1,
+        "academic_year": 2027,
+        "source_year": 2027,
+        "source_id": "eynesbury-health-diploma-2027",
+        "source_url": "https://www.eynesbury.edu.au/programs/international/diploma-programs/health-science/",
+        "source_type": "official_pathway",
+        "verified_date": "2026-09-26",
+        "status": "confirmed_2027",
+        "note": "공식 pathway table은 4 courses granted와 4 years remaining을 명시."
+      },
+      "duration": {
+        "value": "Stage 2 · 8 또는 12개월",
+        "academic_year": 2027,
+        "source_year": 2027,
+        "source_id": "eynesbury-health-diploma-2027",
+        "source_url": "https://www.eynesbury.edu.au/programs/international/diploma-programs/health-science/",
+        "source_type": "official_pathway",
+        "verified_date": "2026-09-26",
+        "status": "confirmed_2027",
+        "note": ""
+      },
+      "intake": {
+        "value": "2027년 2월 22일 · 6월 21일 · 10월 11일",
+        "academic_year": 2027,
+        "source_year": 2027,
+        "source_id": "eynesbury-dates-2027",
+        "source_url": "https://www.eynesbury.edu.au/current-students/essential-information/important-dates/",
+        "source_type": "official_pathway",
+        "verified_date": "2026-09-26",
+        "status": "confirmed_2027",
+        "note": ""
+      },
+      "intake_months": {
+        "value": [
+          2,
+          6,
+          10
+        ],
+        "academic_year": 2027,
+        "source_year": 2027,
+        "source_id": "eynesbury-dates-2027",
+        "source_url": "https://www.eynesbury.edu.au/current-students/essential-information/important-dates/",
+        "source_type": "official_pathway",
+        "verified_date": "2026-09-26",
+        "status": "confirmed_2027",
+        "note": ""
+      },
+      "progression": {
+        "value": "Diploma GPA 5.0 → Pharmacy 1학년 · 4과목 인정 · 본과 4년 remaining",
+        "academic_year": 2027,
+        "source_year": 2027,
+        "source_id": "eynesbury-health-diploma-2027",
+        "source_url": "https://www.eynesbury.edu.au/programs/international/diploma-programs/health-science/",
+        "source_type": "official_pathway",
+        "verified_date": "2026-09-26",
+        "status": "confirmed_2027",
+        "note": ""
+      },
+      "qualification": {
+        "value": "Australian Year 12 또는 동등 학력 + Physics/Biology/Chemistry 중 1과목",
+        "academic_year": 2027,
+        "source_year": null,
+        "source_id": "eynesbury-entry-current",
+        "source_url": "https://www.eynesbury.edu.au/how-apply/international/entry-requirements/",
+        "source_type": "official_pathway",
+        "verified_date": "2026-09-26",
+        "status": "latest_published",
+        "note": ""
+      },
+      "english": {
+        "value": "IELTS 6.0 · 각 6.0",
+        "academic_year": 2027,
+        "source_year": null,
+        "source_id": "eynesbury-entry-current",
+        "source_url": "https://www.eynesbury.edu.au/how-apply/international/entry-requirements/",
+        "source_type": "official_pathway",
+        "verified_date": "2026-09-26",
+        "status": "latest_published",
+        "note": ""
+      },
+      "pathway_fee": {
+        "value": 41900,
+        "academic_year": 2027,
+        "source_year": 2027,
+        "source_id": "eynesbury-health-diploma-2027",
+        "source_url": "https://www.eynesbury.edu.au/programs/international/diploma-programs/health-science/",
+        "source_type": "official_pathway",
+        "verified_date": "2026-09-26",
+        "status": "confirmed_2027",
+        "note": "2027 Stage 2 international fee"
+      },
+      "note": "Griffith/Curtin과 달리 Pharmacy 2학년 직행이 아닙니다. Diploma 후 Pharmacy 1학년으로 진학하며 4개 과목만 인정됩니다."
+    },
+    {
       "id": "griffith-bpharm-hons-direct",
       "program_id": "griffith-bpharm-hons",
       "type": "direct",
@@ -19021,6 +19263,46 @@
       "title": "UQ College · Foundation academic entry requirements · Korea",
       "url": "https://uqcollege.uq.edu.au/files/8781/uq-college-foundation-program-academic-requirements.pdf",
       "source_year": 2026,
+      "source_type": "official_pathway",
+      "verified_date": "2026-09-26"
+    },
+    {
+      "id": "eynesbury-foundation-2027",
+      "title": "Eynesbury · Foundation Studies Program · 2027",
+      "url": "https://www.eynesbury.edu.au/programs/international/foundation-studies-program/",
+      "source_year": 2027,
+      "source_type": "official_pathway",
+      "verified_date": "2026-09-26"
+    },
+    {
+      "id": "eynesbury-foundation-progression-2026",
+      "title": "Eynesbury · Adelaide University Foundation progression requirements · Pharmacy",
+      "url": "https://www.eynesbury.edu.au/wp-content/uploads/2026-Eynesbury-Adelaide-University-FSP-Scores-Flyer-v5-FAW-WEB.pdf",
+      "source_year": 2026,
+      "source_type": "official_pathway",
+      "verified_date": "2026-09-26"
+    },
+    {
+      "id": "eynesbury-health-diploma-2027",
+      "title": "Eynesbury · Diploma of Health Science · Adelaide Pharmacy pathway",
+      "url": "https://www.eynesbury.edu.au/programs/international/diploma-programs/health-science/",
+      "source_year": 2027,
+      "source_type": "official_pathway",
+      "verified_date": "2026-09-26"
+    },
+    {
+      "id": "eynesbury-entry-current",
+      "title": "Eynesbury · International entry requirements",
+      "url": "https://www.eynesbury.edu.au/how-apply/international/entry-requirements/",
+      "source_year": null,
+      "source_type": "official_pathway",
+      "verified_date": "2026-09-26"
+    },
+    {
+      "id": "eynesbury-dates-2027",
+      "title": "Eynesbury · 2027 Diploma and Foundation key dates",
+      "url": "https://www.eynesbury.edu.au/current-students/essential-information/important-dates/",
+      "source_year": 2027,
       "source_type": "official_pathway",
       "verified_date": "2026-09-26"
     }
