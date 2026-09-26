@@ -788,7 +788,7 @@ decision_lenses={
       "30% 자동장학 + 50%/100% Vice Chancellor 경쟁장학"
     ],
     "watch": [
-      "ATAR 75.05는 2027 Guide 참고값이며 live page상 2026 lowest selection rank",
+      "ATAR 75.05는 2027 Guide 참고값이며 현재 공식 과정 페이지상 2026 lowest selection rank",
       "30% 장학은 수량 제한·offer acceptance 순 확보 조건 확인",
       "Vice Chancellor는 Direct Entry 대상 · 별도 지원·경쟁선발",
       "2027 국제학생 학비 발표 대기"
@@ -858,7 +858,7 @@ decision_lenses={
       "관련 학사 졸업자는 Graduate Entry로 3학년 진입 가능"
     ],
     "watch": [
-      "Foundation live page는 P6007, 2027 Pathway PDF는 legacy P6001이라 진급표 버전 충돌",
+      "Foundation 현재 공식 페이지는 P6007, 2027 Pathway PDF는 legacy P6001이라 진급표 버전 충돌",
       "2027 ATAR 80은 국내 Monash Guarantee이며 국제학력 점수로 자동 환산하지 않음",
       "Melbourne은 지역 추가 485 대상 아님"
     ]
